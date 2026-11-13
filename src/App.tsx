@@ -144,7 +144,6 @@ export default function App() {
 
   const handleOpenSeries = (seriesId: string) => {
     setSelectedSeriesId(seriesId);
-    window.scrollTo({ top: 350, behavior: 'smooth' });
   };
 
   const handleBackToOverview = () => {
@@ -219,22 +218,13 @@ export default function App() {
         onOpenLightbox={handleOpenLightbox}
       />
 
-      {/* Main Content Body */}
+      {/* Main Content Body: Onepager bleibt stets klar definiert im Hintergrund */}
       <main className="flex-1 w-full">
-        {activeSeries ? (
-          /* Dedicated Series Subpage View */
-          <SeriesDetail
-            series={activeSeries}
-            onBack={handleBackToOverview}
-            onOpenLightbox={handleOpenLightbox}
-            currentLang={currentLang}
-          />
-        ) : (
-          /* =========================================================================
-              MODERN ONE-PAGER ARCHITECTURE:
-              All sections are accessible sequentially on one page with smooth scroll!
-             ========================================================================= */
-          <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
+        {/* =========================================================================
+            MODERN ONE-PAGER ARCHITECTURE:
+            All sections are accessible sequentially on one page with smooth scroll!
+           ========================================================================= */}
+        <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
             
             {/* -------------------------------------------------------------
                 SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
@@ -425,7 +415,6 @@ export default function App() {
             </section>
 
           </div>
-        )}
       </main>
 
       {/* Global Footer */}
@@ -434,6 +423,16 @@ export default function App() {
         onOpenLegal={handleOpenLegal}
         onOpenContact={() => setContactModalOpen(true)}
       />
+
+      {/* MODERN MUST-HAVES: Series Detail Overlay Kachel (bleibt als darüber liegende Kachel über dem Onepager) */}
+      {activeSeries && (
+        <SeriesDetail
+          series={activeSeries}
+          onBack={handleBackToOverview}
+          onOpenLightbox={handleOpenLightbox}
+          currentLang={currentLang}
+        />
+      )}
 
       {/* MODERN MUST-HAVES: Lightbox Modal */}
       <LightboxModal

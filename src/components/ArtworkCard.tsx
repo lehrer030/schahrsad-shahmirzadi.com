@@ -84,10 +84,10 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           <Images className="w-4 h-4" />
           <span>
             {currentLang === 'de'
-              ? `Serie ansehen (${series.photos.length} Werke)`
+              ? `${series.photos.length} Werke ansehen`
               : currentLang === 'fa'
-              ? `مشاهده کامل مجموعه (${series.photos.length} اثر)`
-              : `View Full Series (${series.photos.length} Works)`}
+              ? `مشاهده ${series.photos.length} اثر`
+              : `View ${series.photos.length} Works`}
           </span>
           <ArrowUpRight className="w-4 h-4" />
         </button>
@@ -121,10 +121,10 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               <span className="px-4 py-2 bg-white text-stone-900 border border-stone-200 rounded text-xs font-medium tracking-wide flex items-center gap-2">
                 <Images className="w-4 h-4 text-stone-700" />
                 {currentLang === 'de'
-                  ? 'Serie ansehen'
+                  ? `${series.photos.length} Werke ansehen`
                   : currentLang === 'fa'
-                  ? 'مشاهده مجموعه'
-                  : 'View Series'}
+                  ? `مشاهده ${series.photos.length} اثر`
+                  : `View ${series.photos.length} Works`}
               </span>
 
               <button
@@ -223,10 +223,10 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               className="flex-1 py-3 bg-stone-900 hover:bg-amber-800 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors shadow-xs text-center cursor-pointer"
             >
               {currentLang === 'de'
-                ? `Gesamte Serie öffnen (${series.photos.length} Photos)`
+                ? `${series.photos.length} Werke ansehen`
                 : currentLang === 'fa'
-                ? `مشاهده کامل مجموعه (${series.photos.length} عکس)`
-                : `Open Full Series (${series.photos.length} Photos)`}
+                ? `مشاهده ${series.photos.length} اثر`
+                : `View ${series.photos.length} Works`}
             </button>
             <button
               onClick={() => onOpenLightbox(series.photos, 0)}
