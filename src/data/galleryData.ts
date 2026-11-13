@@ -14,6 +14,7 @@ export interface GallerySectionData {
     videoSrcMp4: string;
     videoSrcMov: string;
     posterImage: string;
+    photos: PhotoItem[];
   };
   running: {
     titleDe: string;
@@ -54,7 +55,73 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     descriptionFa: 'شیرزن پیشینه‌ای درخشان به عنوان قهرمان جهان در کیک‌بوکسینگ دارد. برای او ورزش مدرسه تمرکز، انضباط و اراده است که در زیبایی‌شناسی سازش‌ناپذیر عکاسی او نیز متجلی می‌شود.',
     videoSrcMp4: './videos/kickboxing-training.mp4',
     videoSrcMov: './videos/1000035211.mov',
-    posterImage: './videos/kickboxing-poster.jpg'
+    posterImage: './videos/kickboxing-poster.jpg',
+    photos: [
+      {
+        id: 'kb-gallery-01',
+        src: './images/2025_11_vs-Sofia-Cavallo.webp',
+        alt: 'WKU-Weltmeisterschaftstitelkampf gegen Sofia Cavallo',
+        captionDe: 'WKU-Weltmeisterschaftstitelkampf gegen Sofia Cavallo auf Schloss Diedersdorf — Höchste Kampfkunst und Konzentration.',
+        captionEn: 'WKU World Championship Title Fight against Sofia Cavallo at Diedersdorf Castle — Peak athletic mastery and relentless focus.',
+        captionFa: 'مبارزه بر سر عنوان قهرمانی جهان WKU در برابر سوفیا کاوالو در کاخ دیدرزدورف — اوج هنر رزمی و تمرکز.'
+      },
+      {
+        id: 'kb-gallery-02',
+        src: './images/2025_11_vs.-Jessica-Marazzi.webp',
+        alt: 'WKU-Weltmeisterschaftstitelkampf gegen Jessica Marazzi',
+        captionDe: 'WKU-Weltmeisterschaftstitelkampf gegen Jessica Marazzi — Erfolgreiche Titelverteidigung im Schwergewicht/Mittelgewicht.',
+        captionEn: 'WKU World Championship Title Fight against Jessica Marazzi — Decisive title defense on the international stage.',
+        captionFa: 'مبارزه بر سر عنوان قهرمانی جهان WKU در برابر جسیکا مارازی — دفاع پیروزمندانه از عنوان قهرمانی جهان.'
+      },
+      {
+        id: 'kb-gallery-03',
+        src: './images/2025_07_DSC_0701.webp',
+        alt: 'Weltmeistergürtel & Pokal — Schloss Diedersdorf',
+        captionDe: 'Siegerehrung auf Schloss Diedersdorf: Weltmeistergürtel, Trophäe und Anerkennung für herausragende sportliche Disziplin.',
+        captionEn: 'Award Ceremony at Diedersdorf Castle: World championship belt, trophy, and international recognition.',
+        captionFa: 'مراسم اهدای جوایز در کاخ دیدرزدورف: کمربند قهرمانی جهان، جام قهرمانی و ارج‌نهادن به انضباط ورزشی.'
+      },
+      {
+        id: 'kb-gallery-04',
+        src: './images/2025_07_ode-an-den-sport-e1753264342920.webp',
+        alt: 'Ode an den Sport – Ehrung von Spitzensportlerinnen',
+        captionDe: '„Ode an den Sport“ — Feierliche Würdigung der Weltmeisterin für außergewöhnliche sportliche Vorbildfunktion.',
+        captionEn: '"Ode to Sports" — Celebratory tribute honoring the world champion as an empowering role model.',
+        captionFa: '«قصیده‌ای برای ورزش» — ادای احترام به قهرمان جهان به عنوان الگویی الهام‌بخش در ورزش قهرمانی.'
+      },
+      {
+        id: 'kb-gallery-05',
+        src: './images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-1152x1536.webp',
+        alt: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame',
+        captionDe: 'Kickboxing — Vom Kampf im Ring zur Energie im Bildkader: Ästhetik aus Kraft, Haltung und Licht.',
+        captionEn: 'Kickboxing — From Fighting in the Ring to Lightning in the Frame: An artistic synthesis of force and vision.',
+        captionFa: 'کیک‌بوکسینگ — از مبارزه در رینگ تا درخشش و انرژی در قاب تصویر: پیوند هنر، قدرت و نور.'
+      },
+      {
+        id: 'kb-gallery-06',
+        src: './images/2025_06_Snap-1.webp',
+        alt: 'Wettkampf & Kampfgeschehen im Ring',
+        captionDe: 'Wettkampf im Ring — Reines Reaktionsvermögen, Dynamik und millimetergenaue Präzision.',
+        captionEn: 'Action in the Ring — Instinctive timing, kinetic momentum, and split-second precision.',
+        captionFa: 'صحنه‌ای از مبارزه در رینگ — واکنش لحظه‌ای، پویایی و دقت میلی‌متری.'
+      },
+      {
+        id: 'kb-gallery-07',
+        src: './images/2025_06_ssh.webp',
+        alt: 'SchirZan im Kampfsport-Outfit',
+        captionDe: 'SchirZan im Wettkampf-Dress — Athletische Souveränität, mentale Standhaftigkeit und Charakter.',
+        captionEn: 'SchirZan in Official Competition Attire — Athletic sovereignty, mental fortitude, and character.',
+        captionFa: 'شیرزن با لباس مسابقه — صلابت ورزشی، استقامت ذهنی و شخصیت الهام‌بخش.'
+      },
+      {
+        id: 'kb-gallery-08',
+        src: './images/2025_06_Snap.webp',
+        alt: 'Sparring und Trainingsfokus',
+        captionDe: 'Sparring & Trainingsfokus — Intensive Vorbereitung auf internationale Titelkämpfe.',
+        captionEn: 'Sparring & Training Focus — Rigorous preparation for international championship title bouts.',
+        captionFa: 'تمرین و تمرکز تاکتیکی — آماده‌سازی دقیق برای رقابت‌های عنوان قهرمانی جهان.'
+      }
+    ]
   },
   running: {
     titleDe: 'Running – Berlin Marathon & Läufe für Menschenrechte',
@@ -137,6 +204,54 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         badgeDe: 'Spendenaufruf / Fundraising Run 2027 ✨',
         badgeEn: 'Fundraising Run for Human Rights 2027 ✨',
         badgeFa: 'فراخوان حمایت مالی حقوق بشر ۲۰۲۷ ✨'
+      },
+      {
+        id: 'run-gallery-09',
+        src: './images/2026_08_ecchr-human-rights-support-1-1152x1536.webp',
+        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation I',
+        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Vorbereitung und Streckeneindrücke für den Berliner Halbmarathon zugunsten des ECCHR.',
+        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: Training and route impressions for the Berlin Half Marathon supporting ECCHR.',
+        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: تمرین و آماده‌سازی برای نیمه‌ماراتن برلین در حمایت از ECCHR.'
+      },
+      {
+        id: 'run-gallery-10',
+        src: './images/2026_08_ecchr-human-rights-support-1152x1536.webp',
+        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation II',
+        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Sportlicher Einsatz für globale Menschenrechte und Rechtsstaatlichkeit.',
+        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: Athletic commitment to global human rights and international justice.',
+        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: تعهد ورزشی برای حقوق بشر جهانی و حاکمیت قانون.'
+      },
+      {
+        id: 'run-gallery-11',
+        src: './images/2026_08_ecchr-human-rights-support-3-1152x1536.webp',
+        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation III',
+        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Auf der Laufstrecke in Berlin mit klarer Botschaft für universelle Menschenwürde.',
+        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: On the Berlin running course with an unequivocal message for universal human dignity.',
+        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: در مسیر دویدن برلین با پیامی روشن برای کرامت انسانی.'
+      },
+      {
+        id: 'run-gallery-12',
+        src: './images/2026_08_ecchr-human-rights-768x792.webp',
+        alt: 'ECCHR – Engagement für Menschenrechte',
+        captionDe: 'ECCHR Partner-Initiative: Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
+        captionEn: 'ECCHR Partnership: Solidarity and worldwide legal action for survivors of human rights violations.',
+        captionFa: 'همکاری با ECCHR: همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.'
+      },
+      {
+        id: 'run-gallery-13',
+        src: './images/2025_07_image00001-768x1366.webp',
+        alt: 'Halbmarathons & Marathon Berlin 2025',
+        captionDe: 'Halbmarathons & Marathon Berlin: SchirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
+        captionEn: 'Half Marathons & Marathon Berlin: SchirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
+        captionFa: 'نیمه‌ماراتن‌ها و ماراتن برلین: شیرزن ۱۱ نیمه‌ماراتن و ماراتن کامل برلین را به نفع صلح و آزادی به پایان رساند.'
+      },
+      {
+        id: 'run-gallery-14',
+        src: './images/2025_10_image00001.webp',
+        alt: 'Herbstlauf Berlin – Galerie-Dokumentation',
+        captionDe: 'Herbstlauf Berlin — Ausdauer, Natur und mentale Stärke im Einklang mit sportlicher Konsequenz.',
+        captionEn: 'Autumn Run Berlin — Endurance, nature, and mental balance in harmony with athletic discipline.',
+        captionFa: 'دو پاییزه برلین — استقامت، هماهنگی با طبیعت و استواری ذهنی در پرتو انضباط ورزشی.'
       }
     ]
   },
@@ -198,8 +313,15 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionDe: 'IPA Winner Honorable Mention 2025 – Auszeichnung und Preismedaille im offiziellen Buch der International Photography Awards',
         captionEn: 'IPA Winner Honorable Mention 2025 – Official award and medal published in the International Photography Awards book',
         captionFa: 'برنده تقدیرنامه افتخاری IPA ۲۰۲۵ – مدال و گواهی رسمی در کتاب جوایز بین‌المللی عکاسی'
+      },
+      {
+        id: 'ipa-athens-07',
+        src: './images/2025_11_image01136-scaled.webp',
+        alt: 'IPA Gala & Photo-Fest Athen – Festliche Atmosphäre',
+        captionDe: 'International Photography Awards Gala 2025 Athen — Festliche Atmosphäre und internationale Begegnungen im House of Lucie.',
+        captionEn: 'International Photography Awards Gala 2025 Athens — Festive atmosphere and international artistic exchange at the House of Lucie.',
+        captionFa: 'مراسم گالا جوایز بین‌المللی عکاسی ۲۰۲۵ آتن — فضای جشن و تبادل هنری بین‌المللی در خانه لوسی.'
       }
     ]
   }
 };
-

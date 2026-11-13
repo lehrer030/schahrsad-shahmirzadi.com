@@ -128,6 +128,85 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
             </div>
 
           </div>
+
+          {/* Kickboxing Photo Gallery Grid */}
+          {kickboxing.photos && kickboxing.photos.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-stone-100">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
+                  <Trophy className="w-4 h-4 text-amber-600" />
+                  <span>
+                    {currentLang === 'de'
+                      ? 'Dokumentation & Titelkämpfe · WKU-Weltmeisterschaft'
+                      : currentLang === 'fa'
+                      ? 'مستندات و رقابت‌های قهرمانی · قهرمانی جهان WKU'
+                      : 'Documentary & Championship Bouts · WKU World Championship'}
+                  </span>
+                </div>
+                <span className="text-xs text-stone-500 font-medium">
+                  {currentLang === 'de'
+                    ? `${kickboxing.photos.length} Aufnahmen · Klicken zum Vergrößern`
+                    : currentLang === 'fa'
+                    ? `${kickboxing.photos.length} تصویر · برای بزرگنمایی کلیک کنید`
+                    : `${kickboxing.photos.length} photographs · Click to enlarge`}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+                {kickboxing.photos.map((photo, index) => {
+                  const caption =
+                    currentLang === 'de'
+                      ? photo.captionDe
+                      : currentLang === 'fa'
+                      ? photo.captionFa
+                      : photo.captionEn;
+
+                  return (
+                    <div
+                      key={photo.id}
+                      onClick={() => onOpenLightbox(kickboxing.photos, index)}
+                      className="group relative bg-white border border-stone-200 hover:border-stone-400 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer"
+                    >
+                      <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 group/img">
+                        <img
+                          src={resolveAsset(photo.src)}
+                          alt={photo.alt}
+                          loading="lazy"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 protected-art"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            if (target.src.endsWith('.webp')) {
+                              target.src = target.src.replace(/\.webp$/, '.jpg');
+                            }
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <div className="bg-white/90 backdrop-blur-sm text-stone-900 rounded-full p-2.5 shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <Eye className="w-5 h-5" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {caption && (
+                        <div className="p-3.5 flex-1 flex flex-col justify-between bg-white border-t border-stone-100">
+                          <p className="text-xs text-stone-800 leading-snug line-clamp-3 font-medium">
+                            {caption}
+                          </p>
+                          <span className="text-[11px] text-stone-400 mt-2 block">
+                            {currentLang === 'de'
+                              ? `Aufnahme ${index + 1} von ${kickboxing.photos.length} · Vergrößern`
+                              : currentLang === 'fa'
+                              ? `تصویر ${index + 1} از ${kickboxing.photos.length} · بزرگنمایی`
+                              : `Photo ${index + 1} of ${kickboxing.photos.length} · Enlarge`}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
 
