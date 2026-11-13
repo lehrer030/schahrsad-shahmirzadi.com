@@ -203,9 +203,6 @@ export default function App() {
               {/* Category Sticky Heading / Divider */}
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    01 / 04
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                   </h2>
@@ -257,9 +254,6 @@ export default function App() {
             <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    02 / 04
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
                   </h2>
@@ -290,9 +284,6 @@ export default function App() {
             <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    03 / 04
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                   </h2>
@@ -323,9 +314,6 @@ export default function App() {
             <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    04 / 04
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                   </h2>
@@ -356,9 +344,6 @@ export default function App() {
             <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    Dokumentation
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
                   </h2>
@@ -382,9 +367,6 @@ export default function App() {
             <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
-                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
-                    Publikationen
-                  </span>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                     {currentLang === 'de' ? 'Press & Media' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
                   </h2>
