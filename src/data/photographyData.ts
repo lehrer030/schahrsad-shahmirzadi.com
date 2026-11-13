@@ -56,7 +56,7 @@ export interface FurtherWork {
 }
 
 export interface CategoryInfo {
-  id: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits';
+  id: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press';
   titleDe: string;
   titleEn: string;
   titleFa: string;
@@ -71,7 +71,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Architecture',
     titleEn: 'Architecture',
     titleFa: 'معماری',
-    descriptionDe: 'Internationale prämierte Architektur-Fotografie mit Fokus auf Solitäre, Licht, Geometrie und urbane Abstraktion.',
+    descriptionDe: 'Internationale prämierte Architektur-Photographie mit Fokus auf Solitäre, Licht, Geometrie und urbane Abstraktion.',
     descriptionEn: 'Internationally awarded architectural photography focusing on solitaires, light, geometry, and urban abstraction.',
     descriptionFa: 'عکاسی معماری با جوایز بین‌المللی با تمرکز بر تک‌بناها، نور، هندسه و انتزاع شهری.'
   },
@@ -89,7 +89,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Social & Environmental Themes',
     titleEn: 'Social & Environmental Themes',
     titleFa: 'مضامین اجتماعی و زیست‌محیطی',
-    descriptionDe: 'Engagierte Fotografie für Menschenrechte, Vielfalt, Tierschutz und gesellschaftliche Verantwortung.',
+    descriptionDe: 'Engagierte Photographie für Menschenrechte, Vielfalt, Tierschutz und gesellschaftliche Verantwortung.',
     descriptionEn: 'Dedicated photography advocating for human rights, diversity, animal welfare, and social responsibility.',
     descriptionFa: 'عکاسی متعهد در دفاع از حقوق بشر، تنوع، حمایت از حیوانات و مسئولیت اجتماعی.'
   },
@@ -101,6 +101,24 @@ export const CATEGORIES: CategoryInfo[] = [
     descriptionDe: 'Ausdrucksstarke Porträts und Selbstporträts im Spannungsfeld von Stärke und Authentizität.',
     descriptionEn: 'Expressive portraits and self-portraits bridging strength, dynamism, and authenticity.',
     descriptionFa: 'پرتره‌ها و خودنگاره‌های بیانی پرشور در پیوند میان قدرت و اصالت.'
+  },
+  {
+    id: 'biography',
+    titleDe: 'Vita & Engagement',
+    titleEn: 'Vita & Commitment',
+    titleFa: 'زندگی‌نامه و تعهدات',
+    descriptionDe: 'Akademischer Bildungsweg, sportliche Erfolge (Weltmeisterin Kickboxen) und Engagement für Umweltschutz & Frieden.',
+    descriptionEn: 'Academic career, athletic achievements (World Champion Kickboxing), and commitment to environmental protection & peace.',
+    descriptionFa: 'مسیر آکادمیک، افتخارات ورزشی (قهرمان جهان در کیک‌بوکسینگ) و فعالیت برای حفاظت از محیط زیست و صلح.'
+  },
+  {
+    id: 'press',
+    titleDe: 'Press & Media',
+    titleEn: 'Press & Media',
+    titleFa: 'رسانه‌ها و مطبوعات',
+    descriptionDe: 'Internationale Publikationen, Medienberichte (121 Clicks, Kojaro) und offizielle Auszeichnungskataloge.',
+    descriptionEn: 'International publications, press features (121 Clicks, Kojaro), and official award catalogues.',
+    descriptionFa: 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای (۱۲۱ کلیکز، کجارو) و کتاب‌های برگزیدگان مسابقات.'
   }
 ];
 
@@ -739,5 +757,112 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش پرتره و سلف پرتره)',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26'
+  }
+];
+
+/* WordPress Content: Academic Vita, Environmental & Humanitarian Commitment, Press */
+export interface EducationMilestone {
+  period: string;
+  fieldDe: string;
+  fieldEn: string;
+  fieldFa: string;
+  institutionDe: string;
+  institutionEn: string;
+  institutionFa: string;
+  degreeDe: string;
+  degreeEn: string;
+  degreeFa: string;
+}
+
+export const ACADEMIC_MILESTONES: EducationMilestone[] = [
+  {
+    period: 'bis 2004',
+    fieldDe: 'Abitur',
+    fieldEn: 'Abitur / High School Diploma',
+    fieldFa: 'دیپلم متوسطه (Abitur)',
+    institutionDe: 'Ev. Gymnasium zum Grauen Kloster Berlin',
+    institutionEn: 'Gymnasium zum Grauen Kloster Berlin',
+    institutionFa: 'کالج مشهور گرائن کلوستر برلین',
+    degreeDe: 'Erfolgreich bestanden',
+    degreeEn: 'Successfully graduated',
+    degreeFa: 'فارغ‌التحصیلی با موفقیت'
+  },
+  {
+    period: '2005–2009',
+    fieldDe: 'Rechtswissenschaften',
+    fieldEn: 'Law / Jurisprudence',
+    fieldFa: 'حقوق و علوم قضایی',
+    institutionDe: 'Freie Universität Berlin (FU Berlin)',
+    institutionEn: 'Free University of Berlin (FU Berlin)',
+    institutionFa: 'دانشگاه آزاد برلین (FU Berlin)',
+    degreeDe: 'Grundstudium erfolgreich abgeschlossen',
+    degreeEn: 'Undergraduate legal studies completed',
+    degreeFa: 'پایان دوره مقدماتی حقوق'
+  },
+  {
+    period: '2010–2013',
+    fieldDe: 'Diplomverwaltungswirtin – Polizeivollzugsdienst',
+    fieldEn: 'Diploma in Public Administration (Police Service)',
+    fieldFa: 'دانشنامه مدیریت خدمات دولتی و پلیسی',
+    institutionDe: 'Hochschule für Wirtschaft und Recht Berlin (HWR Berlin)',
+    institutionEn: 'Berlin School of Economics and Law (HWR Berlin)',
+    institutionFa: 'دانشگاه اقتصاد و حقوق برلین',
+    degreeDe: 'Diplomverwaltungswirtin (FH)',
+    degreeEn: 'Diplomverwaltungswirtin (FH)',
+    degreeFa: 'کسب دانشنامه رسمی'
+  },
+  {
+    period: 'Seit 2024',
+    fieldDe: 'Umweltministerium & LAWA (Gewässerschutz)',
+    fieldEn: 'Ministry of Environment & LAWA (Water Conservation)',
+    fieldFa: 'وزارت محیط زیست پوتسدام و کارگروه حفاظت از آب (LAWA)',
+    institutionDe: 'Ministerium für Umwelt, Klimaschutz und Landwirtschaft Potsdam',
+    institutionEn: 'Ministry of Environment Potsdam',
+    institutionFa: 'وزارت محیط زیست ایالت براندنبورگ',
+    degreeDe: 'Referentin für Gewässerschutz & Wasserwirtschaft',
+    degreeEn: 'Officer for Water Issues and Conservation',
+    degreeFa: 'کارشناس ارشد حفاظت از منابع آب'
+  },
+  {
+    period: 'Berufsbegleitend',
+    fieldDe: 'Master of Science (M.Sc.) Applied Environmental Sciences',
+    fieldEn: 'Master of Science in Applied Environmental Sciences',
+    fieldFa: 'کارشناسی ارشد علوم محیط زیست کاربردی',
+    institutionDe: 'Universität Koblenz',
+    institutionEn: 'University of Koblenz',
+    institutionFa: 'دانشگاه کوبلنتس',
+    degreeDe: 'Masterstudium in Vertiefung',
+    degreeEn: 'Ongoing Master’s studies',
+    degreeFa: 'در حال تکمیل دوره کارشناسی ارشد'
+  }
+];
+
+export const PRESS_ITEMS = [
+  {
+    outlet: '121 CLICKS',
+    date: '17. Oktober 2026',
+    title: 'PERSPA Awards 2026: 47 Winning Photos That Reveal Architecture in a Whole New Light',
+    descriptionDe: '#3. Abstract – 2nd Place Winner: »The Solitaire as an Abstraction« by SchirZan, Germany',
+    descriptionEn: '#3. Abstract – 2nd Place Winner: "The Solitaire as an Abstraction" by SchirZan, Germany',
+    descriptionFa: 'رتبه دوم بخش معماری انتزاعی: تک‌بنا به مثابه انتزاع اثر شیرزن، آلمان',
+    link: 'https://121clicks.com/inspirations/2026-perspa-awards-winners-architecture/'
+  },
+  {
+    outlet: 'KOJARO (کجارو)',
+    date: '18. Oktober 2026',
+    title: 'از تئاتر تاریخی ایتالیا تا هندسه ساختمان‌ها؛ برندگان نخستین جایزه عکاسی معماری پرسپکتیو',
+    descriptionDe: 'Internationale Berichterstattung über die renommiertesten Architekturfotografien des Jahres – Auszeichnung für SchirZan (Werk Nr. 3).',
+    descriptionEn: 'International press coverage on the year’s finest architectural photography – Honour for SchirZan (Work No. 3).',
+    descriptionFa: 'پوشش مطبوعاتی بین‌المللی برترین آثار عکاسی معماری سال ۲۰۲۶ و درخشش شیرزن در میان برگزیدگان.',
+    link: 'https://www.kojaro.com/travel-photos/310932-best-architectural-photography-2026/'
+  },
+  {
+    outlet: 'Black & White Spider Awards',
+    date: '2025',
+    title: '20th Annual Architecture Photography Winners | Official Winners Book & Video',
+    descriptionDe: 'Würdigung der Arbeiten »Architectural Piano«, »Columns in the Here and Now« und »Black & White Solitaire«.',
+    descriptionEn: 'Recognition of "Architectural Piano", "Columns in the Here and Now", and "Black & White Solitaire".',
+    descriptionFa: 'تجلیل و انتشار آثار در کتاب رسمی و ویدیوی برگزیدگان بیستمین دوره جوایز اسپایدر.',
+    link: 'https://www.thespiderawards.com/'
   }
 ];

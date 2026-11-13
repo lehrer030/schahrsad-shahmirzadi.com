@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Globe, ExternalLink, Menu, X, Building2, Palette, Globe2, User } from 'lucide-react';
+import { Globe, ExternalLink, Menu, X, Building2, Palette, Globe2, User, GraduationCap, Newspaper } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface NavbarProps {
-  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits';
-  onSelectCategory: (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits') => void;
+  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press';
+  onSelectCategory: (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => void;
   currentLang: Language;
   onToggleLang: (lang: Language) => void;
   onGoHome: () => void;
@@ -19,38 +19,57 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const categories = [
+  // The 4 Core Art Categories as requested by client
+  const coreCategories = [
     {
       id: 'architecture' as const,
       labelDe: 'Architecture',
       labelEn: 'Architecture',
       labelFa: 'معماری',
-      icon: <Building2 className="w-4 h-4" />
+      icon: <Building2 className="w-3.5 h-3.5" />
     },
     {
       id: 'fine-art' as const,
       labelDe: 'Fine Art',
       labelEn: 'Fine Art',
       labelFa: 'هنرهای زیبا',
-      icon: <Palette className="w-4 h-4" />
+      icon: <Palette className="w-3.5 h-3.5" />
     },
     {
       id: 'social-environmental' as const,
       labelDe: 'Social Themes',
       labelEn: 'Social Themes',
       labelFa: 'مضامین اجتماعی',
-      icon: <Globe2 className="w-4 h-4" />
+      icon: <Globe2 className="w-3.5 h-3.5" />
     },
     {
       id: 'portraits' as const,
       labelDe: 'Portraits',
       labelEn: 'Portraits',
       labelFa: 'پرتره‌ها',
-      icon: <User className="w-4 h-4" />
+      icon: <User className="w-3.5 h-3.5" />
     }
   ];
 
-  const handleCategoryClick = (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits') => {
+  // Preserved WordPress sections
+  const secondarySections = [
+    {
+      id: 'biography' as const,
+      labelDe: 'Vita & Engagement',
+      labelEn: 'Vita & Activism',
+      labelFa: 'زندگی‌نامه و تعهدات',
+      icon: <GraduationCap className="w-3.5 h-3.5" />
+    },
+    {
+      id: 'press' as const,
+      labelDe: 'Press & Media',
+      labelEn: 'Press & Media',
+      labelFa: 'رسانه‌ها',
+      icon: <Newspaper className="w-3.5 h-3.5" />
+    }
+  ];
+
+  const handleSelect = (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => {
     onSelectCategory(catId);
     setMobileMenuOpen(false);
   };
@@ -69,7 +88,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               SchirZan
             </span>
             <span className="text-stone-300 text-sm hidden sm:inline">|</span>
-            <span className="text-stone-600 text-xs sm:text-sm tracking-wide font-medium hidden sm:inline">
+            <span className="text-stone-700 text-xs sm:text-sm tracking-wide font-medium hidden sm:inline">
               {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
             </span>
           </div>
@@ -82,17 +101,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           </p>
         </button>
 
-        {/* Desktop Category Navigation (Integrated single bar) */}
-        <nav className="hidden lg:flex items-center space-x-1.5 rtl:space-x-reverse">
-          {categories.map(cat => {
+        {/* Desktop Category Navigation: Core 4 Categories + Preserved WP Pages */}
+        <nav className="hidden xl:flex items-center space-x-1 rtl:space-x-reverse">
+          {coreCategories.map(cat => {
             const isActive = currentCategory === cat.id;
             return (
               <button
                 key={cat.id}
-                onClick={() => handleCategoryClick(cat.id)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
+                onClick={() => handleSelect(cat.id)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-stone-900 text-white shadow-sm'
+                    ? 'bg-stone-900 text-white shadow-xs'
                     : 'text-stone-600 hover:text-stone-900 hover:bg-stone-200/60'
                 }`}
               >
@@ -104,6 +123,56 @@ export const Navbar: React.FC<NavbarProps> = ({
                     ? cat.labelFa
                     : cat.labelEn}
                 </span>
+              </button>
+            );
+          })}
+
+          <span className="h-4 w-px bg-stone-300 mx-1" />
+
+          {secondarySections.map(sec => {
+            const isActive = currentCategory === sec.id;
+            return (
+              <button
+                key={sec.id}
+                onClick={() => handleSelect(sec.id)}
+                className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-amber-800 text-white shadow-xs'
+                    : 'text-stone-500 hover:text-stone-800 hover:bg-stone-200/50'
+                }`}
+              >
+                {sec.icon}
+                <span>
+                  {currentLang === 'de'
+                    ? sec.labelDe
+                    : currentLang === 'fa'
+                    ? sec.labelFa
+                    : sec.labelEn}
+                </span>
+              </button>
+            );
+          })}
+        </nav>
+
+        {/* Medium Screen Navbar Shortcut (Core 4 Categories) */}
+        <nav className="hidden lg:flex xl:hidden items-center space-x-1 rtl:space-x-reverse">
+          {coreCategories.map(cat => {
+            const isActive = currentCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => handleSelect(cat.id)}
+                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-stone-900 text-white'
+                    : 'text-stone-600 hover:text-stone-900 hover:bg-stone-200/60'
+                }`}
+              >
+                {currentLang === 'de'
+                  ? cat.labelDe
+                  : currentLang === 'fa'
+                  ? cat.labelFa
+                  : cat.labelEn}
               </button>
             );
           })}
@@ -180,34 +249,67 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer (Responsive dropdown inside single navigation) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-stone-200 bg-white/98 px-4 pt-3 pb-5 space-y-2 shadow-lg animate-in slide-in-from-top-2 duration-200">
-          <p className="text-[11px] uppercase tracking-wider font-mono text-stone-400 px-2 py-1 font-semibold">
-            {currentLang === 'de' ? 'Kategorien' : currentLang === 'fa' ? 'دسته‌بندی‌ها' : 'Categories'}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-            {categories.map(cat => {
-              const isActive = currentCategory === cat.id;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategoryClick(cat.id)}
-                  className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold transition-all text-left rtl:text-right cursor-pointer ${
-                    isActive
-                      ? 'bg-stone-900 text-white shadow-sm'
-                      : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950'
-                  }`}
-                >
-                  {cat.icon}
-                  <span>
-                    {currentLang === 'de'
-                      ? cat.labelDe
-                      : currentLang === 'fa'
-                      ? cat.labelFa
-                      : cat.labelEn}
-                  </span>
-                </button>
-              );
-            })}
+        <div className="lg:hidden border-t border-stone-200 bg-white/98 px-4 pt-3 pb-5 space-y-3 shadow-lg animate-in slide-in-from-top-2 duration-200">
+          <div>
+            <p className="text-[11px] uppercase tracking-wider font-mono text-stone-400 px-2 py-1 font-semibold">
+              {currentLang === 'de' ? 'Kategorien' : currentLang === 'fa' ? 'دسته‌بندی‌های اصلی' : 'Categories'}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+              {coreCategories.map(cat => {
+                const isActive = currentCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleSelect(cat.id)}
+                    className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all text-left rtl:text-right cursor-pointer ${
+                      isActive
+                        ? 'bg-stone-900 text-white shadow-xs'
+                        : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950'
+                    }`}
+                  >
+                    {cat.icon}
+                    <span>
+                      {currentLang === 'de'
+                        ? cat.labelDe
+                        : currentLang === 'fa'
+                        ? cat.labelFa
+                        : cat.labelEn}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-stone-100">
+            <p className="text-[11px] uppercase tracking-wider font-mono text-stone-400 px-2 py-1 font-semibold">
+              {currentLang === 'de' ? 'Künstlerin & Hintergrund' : currentLang === 'fa' ? 'پیشینه و مطبوعات' : 'Artist & Background'}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+              {secondarySections.map(sec => {
+                const isActive = currentCategory === sec.id;
+                return (
+                  <button
+                    key={sec.id}
+                    onClick={() => handleSelect(sec.id)}
+                    className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all text-left rtl:text-right cursor-pointer ${
+                      isActive
+                        ? 'bg-amber-800 text-white shadow-xs'
+                        : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950'
+                    }`}
+                  >
+                    {sec.icon}
+                    <span>
+                      {currentLang === 'de'
+                        ? sec.labelDe
+                        : currentLang === 'fa'
+                        ? sec.labelFa
+                        : sec.labelEn}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 px-2">

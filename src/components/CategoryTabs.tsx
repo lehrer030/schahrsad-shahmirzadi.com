@@ -3,8 +3,8 @@ import { CATEGORIES, type Language } from '../data/photographyData';
 import { Building2, Palette, Globe2, User } from 'lucide-react';
 
 interface CategoryTabsProps {
-  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits';
-  onSelectCategory: (id: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits') => void;
+  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press';
+  onSelectCategory: (id: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => void;
   currentLang: Language;
 }
 

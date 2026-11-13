@@ -4,6 +4,8 @@ import { HeaderIntro } from './components/HeaderIntro';
 import { ArtworkCard } from './components/ArtworkCard';
 import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
+import { ArtistVita } from './components/ArtistVita';
+import { PressSection } from './components/PressSection';
 import { Footer } from './components/Footer';
 import {
   CATEGORIES,
@@ -20,7 +22,7 @@ import {
 export function App() {
   const [currentLang, setCurrentLang] = useState<Language>('de');
   const [currentCategory, setCurrentCategory] = useState<
-    'architecture' | 'fine-art' | 'social-environmental' | 'portraits'
+    'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'
   >('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
 
@@ -49,7 +51,7 @@ export function App() {
     setSelectedSeriesId(null);
   };
 
-  const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits') => {
+  const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => {
     setCurrentCategory(cat);
     setSelectedSeriesId(null);
   };
@@ -83,7 +85,7 @@ export function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-              {currentLang === 'de' ? 'Aktive Kategorie' : currentLang === 'fa' ? 'دسته‌بندی فعال' : 'Active Category'}
+              {currentLang === 'de' ? 'Ausgewählter Bereich' : currentLang === 'fa' ? 'بخش انتخابی' : 'Selected Section'}
             </span>
             <h2 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold mt-0.5">
               {currentLang === 'de'
@@ -115,6 +117,8 @@ export function App() {
         ) : (
           /* Category Overview Content */
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+            
+            {/* 1. ARCHITECTURE (PRIMARY FOCUS) */}
             {currentCategory === 'architecture' && (
               <>
                 {/* Intro note for architecture */}
@@ -167,6 +171,7 @@ export function App() {
               </>
             )}
 
+            {/* 2. FINE ART */}
             {currentCategory === 'fine-art' && (
               <FurtherWorks
                 works={FINE_ART_WORKS}
@@ -177,6 +182,7 @@ export function App() {
               />
             )}
 
+            {/* 3. SOCIAL & ENVIRONMENTAL THEMES */}
             {currentCategory === 'social-environmental' && (
               <FurtherWorks
                 works={SOCIAL_ENVIRONMENTAL_WORKS}
@@ -187,6 +193,7 @@ export function App() {
               />
             )}
 
+            {/* 4. PORTRAITS */}
             {currentCategory === 'portraits' && (
               <FurtherWorks
                 works={PORTRAIT_WORKS}
@@ -196,6 +203,17 @@ export function App() {
                 sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
               />
             )}
+
+            {/* 5. PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT */}
+            {currentCategory === 'biography' && (
+              <ArtistVita currentLang={currentLang} />
+            )}
+
+            {/* 6. PRESERVED WORDPRESS CONTENT: PRESS & MEDIA */}
+            {currentCategory === 'press' && (
+              <PressSection currentLang={currentLang} />
+            )}
+
           </div>
         )}
       </main>
