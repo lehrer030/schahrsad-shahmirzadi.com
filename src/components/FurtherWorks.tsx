@@ -62,23 +62,37 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       }
                     }}
                   >
-                    <img
-                      src={work.previewImage}
-                      alt={work.titleDe}
-                      draggable={false}
-                      className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
-                      loading="lazy"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (target.dataset.triedFallback) return;
-                        target.dataset.triedFallback = 'true';
-                        if (target.src.endsWith('.webp')) {
-                          target.src = target.src.replace(/\.webp$/, '.jpeg');
-                        } else if (target.src.endsWith('.jpeg')) {
-                          target.src = target.src.replace(/\.jpeg$/, '.webp');
-                        }
-                      }}
-                    />
+                    <picture className="w-full h-full block">
+                      <source
+                        srcSet={work.previewImage.replace(/\.(jpeg|jpg)$/, '.webp')}
+                        type="image/webp"
+                      />
+                      <source
+                        srcSet={work.previewImage.replace(/\.webp$/, '.jpeg')}
+                        type="image/jpeg"
+                      />
+                      <img
+                        src={work.previewImage}
+                        alt={work.titleDe}
+                        draggable={false}
+                        className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
+                        loading="lazy"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          const count = parseInt(target.dataset.fallbackCount || '0', 10);
+                          target.dataset.fallbackCount = String(count + 1);
+                          if (count === 0) {
+                            if (target.src.endsWith('.webp')) {
+                              target.src = target.src.replace(/\.webp$/, '.jpeg');
+                            } else if (target.src.endsWith('.jpeg')) {
+                              target.src = target.src.replace(/\.jpeg$/, '.webp');
+                            }
+                          } else if (count === 1 && target.src.includes('-scaled')) {
+                            target.src = target.src.replace('-scaled', '');
+                          }
+                        }}
+                      />
+                    </picture>
                     <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
                     
                     {/* Photo count indicator */}
