@@ -22,3 +22,4 @@ if idx_136 != -1:
     with open(r'c:\Users\Emanu\.gemini\antigravity\scratch\schahrsad\raw_datenschutz.txt', 'w', encoding='utf-8') as out:
         out.write(content)
     print('Saved raw_datenschutz.txt, length:', len(content))
+

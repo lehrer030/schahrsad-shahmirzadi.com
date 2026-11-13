@@ -13,7 +13,6 @@ import { ContactModal } from './components/ContactModal';
 import { CookieBanner } from './components/CookieBanner';
 import { BackToTop } from './components/BackToTop';
 import {
-  CATEGORIES,
   SOLITAIRE_SERIES_1,
   SOLITAIRE_SERIES_2,
   FURTHER_WORKS_ARCHITECTURE,
@@ -24,8 +23,9 @@ import {
   type PhotoItem,
   type Language
 } from './data/photographyData';
+import { Building2, Palette, Globe2, User, GraduationCap, Newspaper } from 'lucide-react';
 
-export function App() {
+export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('de');
   const [currentCategory, setCurrentCategory] = useState<
     'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'
@@ -64,6 +64,39 @@ export function App() {
     }
   }, [currentLang]);
 
+  // One-Pager: ScrollSpy IntersectionObserver to track visible section on scroll
+  useEffect(() => {
+    if (selectedSeriesId) return;
+
+    const sectionIds: Array<'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'> = [
+      'architecture',
+      'fine-art',
+      'social-environmental',
+      'portraits',
+      'biography',
+      'press'
+    ];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 220;
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const id = sectionIds[i];
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            setCurrentCategory(id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [selectedSeriesId]);
+
   const seriesMap: Record<string, PhotoSeries> = {
     [SOLITAIRE_SERIES_1.id]: SOLITAIRE_SERIES_1,
     [SOLITAIRE_SERIES_2.id]: SOLITAIRE_SERIES_2
@@ -78,9 +111,18 @@ export function App() {
     setSelectedSeriesId(null);
   };
 
+  // One-Pager Smooth Scroll Action
   const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => {
     setCurrentCategory(cat);
     setSelectedSeriesId(null);
+
+    // Smooth scroll down to the targeted section
+    setTimeout(() => {
+      const el = document.getElementById(cat);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
   };
 
   const handleOpenLightbox = (photos: PhotoItem[], index: number) => {
@@ -111,7 +153,6 @@ export function App() {
   };
 
   const activeSeries = selectedSeriesId ? seriesMap[selectedSeriesId] : null;
-  const activeCatInfo = CATEGORIES.find(c => c.id === currentCategory);
 
   return (
     <div
@@ -132,33 +173,13 @@ export function App() {
         onOpenContact={() => setContactModalOpen(true)}
       />
 
-      {/* Main Header & Artist Intro Section */}
-      <HeaderIntro currentLang={currentLang} />
-
-      {/* Active Category Header Banner */}
-      <div className="bg-[#f5f2eb] border-b border-stone-200/80 py-5 sm:py-6 w-full">
-        <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-              {currentLang === 'de' ? 'Ausgewählter Bereich' : currentLang === 'fa' ? 'بخش انتخابی' : 'Selected Section'}
-            </span>
-            <h2 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold mt-0.5">
-              {currentLang === 'de'
-                ? activeCatInfo?.titleDe
-                : currentLang === 'fa'
-                ? activeCatInfo?.titleFa
-                : activeCatInfo?.titleEn}
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm text-stone-600 max-w-2xl font-light leading-relaxed">
-            {currentLang === 'de'
-              ? activeCatInfo?.descriptionDe
-              : currentLang === 'fa'
-              ? activeCatInfo?.descriptionFa
-              : activeCatInfo?.descriptionEn}
-          </p>
-        </div>
-      </div>
+      {/* Main Header & Artist Intro Section with prominent Steve Barret portrait & 4 Fanning Subheaders */}
+      <HeaderIntro 
+        currentLang={currentLang} 
+        currentCategory={currentCategory}
+        onSelectCategory={handleSelectCategory}
+        onOpenLightbox={handleOpenLightbox}
+      />
 
       {/* Main Content Body */}
       <main className="flex-1 w-full">
@@ -171,106 +192,273 @@ export function App() {
             currentLang={currentLang}
           />
         ) : (
-          /* Category Overview Content (Responsive for all screen sizes) */
-          <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-12">
+          /* =========================================================================
+              MODERN ONE-PAGER ARCHITECTURE:
+              All sections are accessible sequentially on one page with smooth scroll!
+              Clicking any header or subheader smoothly scrolls down directly to the section.
+             ========================================================================= */
+          <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
             
-            {/* 1. ARCHITECTURE (PRIMARY FOCUS) */}
-            {currentCategory === 'architecture' && (
-              <>
-                {/* Intro note for architecture */}
-                <div className="text-center max-w-3xl mx-auto">
-                  <span className="text-xs uppercase tracking-widest text-amber-800 font-mono font-bold">
-                    {currentLang === 'de'
-                      ? 'Fokus Architektur'
-                      : currentLang === 'fa'
-                      ? 'بخش معماری'
-                      : 'Architecture Focus'}
-                  </span>
-                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 mt-1 font-bold">
-                    {currentLang === 'de'
-                      ? 'Die Solitaire-Serien'
-                      : currentLang === 'fa'
-                      ? 'مجموعه‌های تک‌بنا (Solitaire)'
-                      : 'The Solitaire Series'}
-                  </h3>
-                  <p className="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
-                    {currentLang === 'de'
-                      ? 'Klicken Sie auf das jeweilige Titelbild, um die gesamte Serie in Ruhe und ohne ablenkende Auszeichnungen zu betrachten.'
-                      : currentLang === 'fa'
-                      ? 'برای مشاهده کامل مجموعه عکس‌ها در فضایی آرام و بدون نشان‌های جایزه بر روی تصویر کلیک فرمایید.'
-                      : 'Click any cover photo to explore the complete series cleanly without distracting badges.'}
-                  </p>
+            {/* -------------------------------------------------------------
+                SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
+               ------------------------------------------------------------- */}
+            <section id="architecture" className="scroll-mt-24 pt-4">
+              
+              {/* Category Sticky Heading / Divider */}
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-stone-900 text-white shadow-xs">
+                    <Building2 className="w-5 h-5 text-amber-300" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+                      {currentLang === 'de' ? 'Unterheader 01 · Hauptkategorie' : currentLang === 'fa' ? 'زیرمجموعه ۱ · بخش اصلی' : 'Subheader 01 · Main Category'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
+                    </h2>
+                  </div>
                 </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Internationale prämierte Architektur-Photographie mit Fokus auf Solitäre, Licht, Geometrie und urbane Abstraktion.'
+                    : currentLang === 'fa'
+                    ? 'عکاسی معماری با جوایز بین‌المللی با تمرکز بر تک‌بناها، نور، هندسه و انتزاع شهری.'
+                    : 'Internationally awarded architectural photography focusing on solitaires, light, geometry, and urban abstraction.'}
+                </p>
+              </div>
 
-                {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
+              {/* Intro note for architecture Solitaire series */}
+              <div className="text-center max-w-3xl mx-auto mb-10">
+                <span className="text-xs uppercase tracking-widest text-amber-800 font-mono font-bold">
+                  {currentLang === 'de'
+                    ? 'Fokus Architektur'
+                    : currentLang === 'fa'
+                    ? 'بخش معماری'
+                    : 'Architecture Focus'}
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
+                  {currentLang === 'de'
+                    ? 'Die Solitaire-Serien'
+                    : currentLang === 'fa'
+                    ? 'مجموعه‌های تک‌بنا (Solitaire)'
+                    : 'The Solitaire Series'}
+                </h3>
+                <p className="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
+                  {currentLang === 'de'
+                    ? 'Klicken Sie auf das jeweilige Titelbild, um die gesamte Serie in Ruhe und ohne ablenkende Auszeichnungen zu betrachten.'
+                    : currentLang === 'fa'
+                    ? 'برای مشاهده کامل مجموعه عکس‌ها در فضایی آرام و بدون نشان‌های جایزه بر روی تصویر کلیک فرمایید.'
+                    : 'Click any cover photo to explore the complete series cleanly without distracting badges.'}
+                </p>
+              </div>
+
+              {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
+              <div className="mb-12">
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_1}
                   onOpenSeries={handleOpenSeries}
                   onOpenLightbox={handleOpenLightbox}
                   currentLang={currentLang}
                 />
+              </div>
 
-                {/* Series 2: The Solitaire as an Abstraction (Revised) (5 photos) */}
+              {/* Series 2: The Solitaire as an Abstraction (Revised) (5 photos) */}
+              <div className="mb-12">
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_2}
                   onOpenSeries={handleOpenSeries}
                   onOpenLightbox={handleOpenLightbox}
                   currentLang={currentLang}
                 />
+              </div>
 
-                {/* Further Works in Architecture (Title and Badges only, NO images!) */}
-                <FurtherWorks
-                  works={FURTHER_WORKS_ARCHITECTURE}
-                  currentLang={currentLang}
-                  sectionTitleDe="Further Works (Architektur)"
-                  sectionTitleEn="Further Works (Architecture)"
-                  sectionTitleFa="سایر آثار معماری و جوایز بین‌المللی"
-                />
-              </>
-            )}
+              {/* Further Works in Architecture */}
+              <FurtherWorks
+                works={FURTHER_WORKS_ARCHITECTURE}
+                currentLang={currentLang}
+                sectionTitleDe="Further Works (Architektur)"
+                sectionTitleEn="Further Works (Architecture)"
+                sectionTitleFa="سایر آثار معماری و جوایز بین‌المللی"
+                onOpenLightbox={handleOpenLightbox}
+              />
+            </section>
 
-            {/* 2. FINE ART */}
-            {currentCategory === 'fine-art' && (
+
+            {/* -------------------------------------------------------------
+                SECTION 2: FINE ART
+               ------------------------------------------------------------- */}
+            <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-amber-900 text-white shadow-xs">
+                    <Palette className="w-5 h-5 text-amber-200" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+                      {currentLang === 'de' ? 'Unterheader 02 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۲ · گروه آثار' : 'Subheader 02 · Art Group'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Künstlerische Erkundungen von Form, Raum, Zeit und Poesie des Lichts.'
+                    : currentLang === 'fa'
+                    ? 'کاوش‌های هنری در فرم، فضا، زمان و شعر بصری نور.'
+                    : 'Artistic explorations of form, space, time, and the poetry of light.'}
+                </p>
+              </div>
+
               <FurtherWorks
                 works={FINE_ART_WORKS}
                 currentLang={currentLang}
                 sectionTitleDe="Fine Art – Ausgezeichnete Werkserien"
                 sectionTitleEn="Fine Art – Award-Winning Series"
                 sectionTitleFa="هنرهای زیبا – مجموعه‌های برنده جوایز"
+                onOpenLightbox={handleOpenLightbox}
               />
-            )}
+            </section>
 
-            {/* 3. SOCIAL & ENVIRONMENTAL THEMES */}
-            {currentCategory === 'social-environmental' && (
+
+            {/* -------------------------------------------------------------
+                SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
+               ------------------------------------------------------------- */}
+            <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-emerald-900 text-white shadow-xs">
+                    <Globe2 className="w-5 h-5 text-emerald-200" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-800 font-bold">
+                      {currentLang === 'de' ? 'Unterheader 03 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۳ · گروه آثار' : 'Subheader 03 · Art Group'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Fotografische Arbeiten zu Menschenrechten, Frieden, gesellschaftlicher Vielfalt und Respekt vor Natur und Tier.'
+                    : currentLang === 'fa'
+                    ? 'آثار عکاسی متعهد به حقوق بشر، صلح، تنوع اجتماعی و احترام به طبیعت و حیات حیوانات.'
+                    : 'Photographic works dedicated to human rights, peace, diversity, and environmental and animal respect.'}
+                </p>
+              </div>
+
               <FurtherWorks
                 works={SOCIAL_ENVIRONMENTAL_WORKS}
                 currentLang={currentLang}
                 sectionTitleDe="Social and Environmental Themes – Prämierte Werke"
                 sectionTitleEn="Social and Environmental Themes – Awarded Works"
                 sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – آثار برگزیده"
+                onOpenLightbox={handleOpenLightbox}
               />
-            )}
+            </section>
 
-            {/* 4. PORTRAITS */}
-            {currentCategory === 'portraits' && (
+
+            {/* -------------------------------------------------------------
+                SECTION 4: PORTRAITS
+               ------------------------------------------------------------- */}
+            <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-amber-950 text-white shadow-xs">
+                    <User className="w-5 h-5 text-amber-300" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+                      {currentLang === 'de' ? 'Unterheader 04 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۴ · گروه آثار' : 'Subheader 04 · Art Group'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Ausdrucksstarke Porträts und Selbstporträts im Spannungsfeld von Stärke und Authentizität.'
+                    : currentLang === 'fa'
+                    ? 'پرتره‌ها و خودنگاره‌های بیانی پرشور در پیوند میان قدرت و اصالت.'
+                    : 'Expressive portraits and self-portraits bridging strength, dynamism, and authenticity.'}
+                </p>
+              </div>
+
               <FurtherWorks
                 works={PORTRAIT_WORKS}
                 currentLang={currentLang}
-                sectionTitleDe="Portraits &amp; Self-Portraits"
-                sectionTitleEn="Portraits &amp; Self-Portraits"
+                sectionTitleDe="Portraits & Self-Portraits"
+                sectionTitleEn="Portraits & Self-Portraits"
                 sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
+                onOpenLightbox={handleOpenLightbox}
               />
-            )}
+            </section>
 
-            {/* 5. PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT */}
-            {currentCategory === 'biography' && (
+
+            {/* -------------------------------------------------------------
+                SECTION 5: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
+               ------------------------------------------------------------- */}
+            <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-amber-800 text-white shadow-xs">
+                    <GraduationCap className="w-5 h-5 text-amber-200" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+                      {currentLang === 'de' ? 'Künstlerin & Werdegang' : currentLang === 'fa' ? 'سوابق و فعالیت‌ها' : 'Artist & Background'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Akademischer Bildungsweg, sportliche Erfolge (Weltmeisterin Kickboxen) und Engagement für Umweltschutz & Frieden.'
+                    : currentLang === 'fa'
+                    ? 'مسیر آکادمیک، افتخارات ورزشی (قهرمان جهان در کیک‌بوکسینگ) و فعالیت برای حفاظت از محیط زیست و صلح.'
+                    : 'Academic career, athletic achievements (World Champion Kickboxing), and commitment to environmental protection & peace.'}
+                </p>
+              </div>
+
               <ArtistVita currentLang={currentLang} />
-            )}
+            </section>
 
-            {/* 6. PRESERVED WORDPRESS CONTENT: PRESS & MEDIA */}
-            {currentCategory === 'press' && (
+
+            {/* -------------------------------------------------------------
+                SECTION 6: PRESERVED WORDPRESS CONTENT: PRESS & MEDIA
+               ------------------------------------------------------------- */}
+            <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
+              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="p-2.5 rounded-2xl bg-stone-800 text-white shadow-xs">
+                    <Newspaper className="w-5 h-5 text-stone-300" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-mono uppercase tracking-widest text-stone-600 font-bold">
+                      {currentLang === 'de' ? 'Medien & Publikationen' : currentLang === 'fa' ? 'رسانه‌ها و انتشارات' : 'Media & Publications'}
+                    </span>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                      {currentLang === 'de' ? 'Press & Media' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                  {currentLang === 'de'
+                    ? 'Internationale Publikationen, Medienberichte (121 Clicks, Kojaro) und offizielle Auszeichnungskataloge.'
+                    : currentLang === 'fa'
+                    ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای (۱۲۱ کلیکز، کجارو) و کتاب‌های برگزیدگان مسابقات.'
+                    : 'International publications, press features (121 Clicks, Kojaro), and official award catalogues.'}
+                </p>
+              </div>
+
               <PressSection currentLang={currentLang} />
-            )}
+            </section>
 
           </div>
         )}
@@ -293,31 +481,29 @@ export function App() {
         currentLang={currentLang}
       />
 
-      {/* MODERN MUST-HAVES: Legal Modal (Impressum / Datenschutz) */}
+      {/* MODERN MUST-HAVES: Legal Modal (Impressum & Datenschutz) */}
       <LegalModal
-        type={legalModal.type}
         isOpen={legalModal.isOpen}
+        type={legalModal.type}
         onClose={handleCloseLegal}
         currentLang={currentLang}
       />
 
-      {/* MODERN MUST-HAVES: Quick Contact Modal */}
+      {/* MODERN MUST-HAVES: Direct Contact Modal */}
       <ContactModal
         isOpen={contactModalOpen}
         onClose={() => setContactModalOpen(false)}
         currentLang={currentLang}
       />
 
-      {/* MODERN MUST-HAVES: GDPR/DSGVO Cookie Banner */}
+      {/* MODERN MUST-HAVES: GDPR / DSGVO Cookie Banner */}
       <CookieBanner
-        onOpenLegal={handleOpenLegal}
         currentLang={currentLang}
+        onOpenLegal={handleOpenLegal}
       />
 
-      {/* MODERN MUST-HAVES: Floating Back to Top */}
+      {/* MODERN MUST-HAVES: Back to Top Floating Action Button */}
       <BackToTop />
     </div>
   );
 }
-
-export default App;

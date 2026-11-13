@@ -53,6 +53,8 @@ export interface FurtherWork {
   awardsFa: string;
   badgeNames: string[];
   link?: string;
+  previewImage?: string;
+  galleryPhotos?: PhotoItem[];
 }
 
 export interface CategoryInfo {
@@ -461,7 +463,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Honorable Mention & Official Selection · AMP 2026 — Honorable Mention · PERSPA 2026 — Honorable Mention',
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 HM', 'AMP 2026 HM', 'PERSPA 2026 HM'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26',
+    previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'echoes-water-tower-01',
+        src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+        alt: 'Echoes of a Water Tower – Schahrsad Shahmirzadi',
+        captionDe: 'Echoes of a Water Tower – SchirZan',
+        captionEn: 'Echoes of a Water Tower – SchirZan',
+        captionFa: 'پژواک برج آب – شیرزن'
+      }
+    ]
   },
   {
     id: 'architectural-piano',
@@ -474,7 +487,42 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'Black & White Spider Awards 2025 — HM & Nominee · AMP 2026 — HM · IPA 2026 — Official Selection · LICC 2025 — Official Selection',
     awardsFa: 'Spider Awards 2025 — نامزد و تقدیر · AMP 2026 — تقدیر · IPA 2026 — برگزیده رسمی · LICC 2025 — برگزیده رسمی',
     badgeNames: ['Spider Awards 2025 HM', 'AMP 2026 HM', 'IPA 2026 OS', 'LICC 2025 OS'],
-    link: 'https://architectureprize.com/'
+    link: 'https://architectureprize.com/',
+    previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'architectural-piano-01',
+        src: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
+        alt: 'Architectural Piano 01 – Schahrsad Shahmirzadi',
+        captionDe: 'Architectural Piano I – SchirZan',
+        captionEn: 'Architectural Piano I – SchirZan',
+        captionFa: 'پیانوی معماری ۱ – شیرزن'
+      },
+      {
+        id: 'architectural-piano-02',
+        src: '/images/2026_10_amp-2026-architectural-piano-02-scaled.webp',
+        alt: 'Architectural Piano 02 – Schahrsad Shahmirzadi',
+        captionDe: 'Architectural Piano II – SchirZan',
+        captionEn: 'Architectural Piano II – SchirZan',
+        captionFa: 'پیانوی معماری ۲ – شیرزن'
+      },
+      {
+        id: 'architectural-piano-03',
+        src: '/images/2026_10_amp-2026-architectural-piano-03-scaled.webp',
+        alt: 'Architectural Piano 03 – Schahrsad Shahmirzadi',
+        captionDe: 'Architectural Piano III – SchirZan',
+        captionEn: 'Architectural Piano III – SchirZan',
+        captionFa: 'پیانوی معماری ۳ – شیرزن'
+      },
+      {
+        id: 'architectural-piano-04',
+        src: '/images/2026_10_amp-2026-architectural-piano-04-scaled.webp',
+        alt: 'Architectural Piano 04 – Schahrsad Shahmirzadi',
+        captionDe: 'Architectural Piano IV – SchirZan',
+        captionEn: 'Architectural Piano IV – SchirZan',
+        captionFa: 'پیانوی معماری ۴ – شیرزن'
+      }
+    ]
   },
   {
     id: 'elegance-of-structure',
@@ -487,7 +535,50 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — HM (Interior Details) · BIFA 2026 — HM · PERSPA 2026 — Editor’s Choice · IPA 2026 — Official Selection',
     awardsFa: 'AMP 2026 — تقدیر جزئیات داخلی · BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['AMP 2026 HM', 'BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
-    link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/'
+    link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
+    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'elegance-structure-bw-01',
+        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        alt: 'Elegance of Structure – Black and White',
+        captionDe: 'Elegance of Structure – Black and White',
+        captionEn: 'Elegance of Structure – Black and White',
+        captionFa: 'شکوه و ظرافت ساختار – سیاه و سفید'
+      },
+      {
+        id: 'elegance-interior-01',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-01-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines I',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines I',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines I',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۱'
+      },
+      {
+        id: 'elegance-interior-02',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-02-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines II',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines II',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines II',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۲'
+      },
+      {
+        id: 'elegance-interior-03',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-03-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines III',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines III',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines III',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۳'
+      },
+      {
+        id: 'elegance-interior-04',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-04-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۴'
+      }
+    ]
   },
   {
     id: 'cloud-mirror-architecture',
@@ -500,20 +591,82 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — 2 × Honorable Mention (Heaven’s Bridge & Stormy Sea B&W)',
     awardsFa: 'AMP 2026 — ۲ بار تقدیر ویژه (پل بهشت و دریای طوفانی)',
     badgeNames: ['AMP 2026 HM (Heaven’s Bridge)', 'AMP 2026 HM (Stormy Sea)'],
-    link: 'https://architectureprize.com/'
+    link: 'https://architectureprize.com/',
+    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'cloud-mirror-i-01',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 01',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت'
+      },
+      {
+        id: 'cloud-mirror-i-02',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 02',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge II',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge II',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت ۲'
+      },
+      {
+        id: 'cloud-mirror-ii-bw-01',
+        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-01-scaled.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید)'
+      },
+      {
+        id: 'cloud-mirror-ii-bw-02',
+        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-02-scaled.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی ۲'
+      }
+    ]
   },
   {
     id: 'black-red-gold',
     titleDe: 'Black Red Gold – Office of the Federal President of Germany',
     titleEn: 'Black Red Gold – Office of the Federal President of Germany',
-    titleFa: 'Black Red Gold – Office of the Federal President of Germany',
+    titleFa: 'Black Red Gold – Office of the Federal President of Germany (سیاه سرخ طلایی)',
     category: 'Architecture / Exterior',
     categoryFa: 'معماری / سازه‌های بیرونی',
     awardsDe: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsFa: 'AMP 2026 — تقدیر ویژه سازه‌های بیرونی',
     badgeNames: ['AMP 2026 HM'],
-    link: 'https://architectureprize.com/'
+    link: 'https://architectureprize.com/',
+    previewImage: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'black-red-gold-01',
+        src: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 01',
+        captionDe: 'Black Red Gold – Office of the Federal President I',
+        captionEn: 'Black Red Gold – Office of the Federal President I',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۱'
+      },
+      {
+        id: 'black-red-gold-02',
+        src: '/images/2026_10_amp-2026-black-red-gold-02-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 02',
+        captionDe: 'Black Red Gold – Office of the Federal President II',
+        captionEn: 'Black Red Gold – Office of the Federal President II',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۲'
+      },
+      {
+        id: 'black-red-gold-03',
+        src: '/images/2026_10_amp-2026-black-red-gold-03-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 03',
+        captionDe: 'Black Red Gold – Office of the Federal President III',
+        captionEn: 'Black Red Gold – Office of the Federal President III',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۳'
+      }
+    ]
   },
   {
     id: 'mirrored-series',
@@ -526,7 +679,26 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — HM & Official Selection · AMP 2026 — 2 × Honorable Mention',
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — ۲ بار تقدیر ویژه',
     badgeNames: ['IPA 2026 HM & OS', 'AMP 2026 HM (Urban)', 'AMP 2026 HM (B&W)'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26',
+    previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'mirrored-ii-01',
+        src: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
+        alt: 'Mirrored II – Schahrsad Shahmirzadi',
+        captionDe: 'Mirrored II – Urban Landscape',
+        captionEn: 'Mirrored II – Urban Landscape',
+        captionFa: 'بازتاب ۲ – چشم‌انداز شهری'
+      },
+      {
+        id: 'mirrored-iii-bw-01',
+        src: '/images/2026_10_amp-2026-mirrored-iii-bw-01-scaled.webp',
+        alt: 'Mirrored III (Black & White) – Schahrsad Shahmirzadi',
+        captionDe: 'Mirrored III (Black & White)',
+        captionEn: 'Mirrored III (Black & White)',
+        captionFa: 'بازتاب ۳ (سیاه و سفید)'
+      }
+    ]
   },
   {
     id: 'steps-of-sustainability',
@@ -552,20 +724,98 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'BIFA 2026 — Honorable Mention · PERSPA 2026 — Editor’s Choice · IPA 2026 — Official Selection',
     awardsFa: 'BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
-    link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/'
+    link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/',
+    previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'hephaestus-01',
+        src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.jpeg',
+        alt: 'Hephaestus’ Legacy I',
+        captionDe: 'Hephaestus’ Legacy I',
+        captionEn: 'Hephaestus’ Legacy I',
+        captionFa: 'میراث هفائستوس ۱'
+      },
+      {
+        id: 'hephaestus-02',
+        src: '/images/2026_09_os-06-hephaestus-legacy-02-scaled.jpeg',
+        alt: 'Hephaestus’ Legacy II',
+        captionDe: 'Hephaestus’ Legacy II',
+        captionEn: 'Hephaestus’ Legacy II',
+        captionFa: 'میراث هفائستوس ۲'
+      },
+      {
+        id: 'hephaestus-03',
+        src: '/images/2026_09_os-06-hephaestus-legacy-03-scaled.jpeg',
+        alt: 'Hephaestus’ Legacy III',
+        captionDe: 'Hephaestus’ Legacy III',
+        captionEn: 'Hephaestus’ Legacy III',
+        captionFa: 'میراث هفائستوس ۳'
+      }
+    ]
   },
   {
     id: 'razor-pull-berlin',
     titleDe: 'Razor Pull Berlin',
     titleEn: 'Razor Pull Berlin',
-    titleFa: 'Razor Pull Berlin',
+    titleFa: 'Razor Pull Berlin (ریزر پول برلین)',
     category: 'Architecture / Exterior',
     categoryFa: 'معماری / سازه‌های بیرونی',
     awardsDe: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
-    link: 'https://architectureprize.com/'
+    link: 'https://architectureprize.com/',
+    previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'razor-pull-01',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+        alt: 'Razor Pull Berlin 01',
+        captionDe: 'Razor Pull Berlin I',
+        captionEn: 'Razor Pull Berlin I',
+        captionFa: 'ریزر پول برلین ۱'
+      },
+      {
+        id: 'razor-pull-02',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-02-scaled.webp',
+        alt: 'Razor Pull Berlin 02',
+        captionDe: 'Razor Pull Berlin II',
+        captionEn: 'Razor Pull Berlin II',
+        captionFa: 'ریزر پول برلین ۲'
+      },
+      {
+        id: 'razor-pull-03',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+        alt: 'Razor Pull Berlin 03',
+        captionDe: 'Razor Pull Berlin III',
+        captionEn: 'Razor Pull Berlin III',
+        captionFa: 'ریزر پول برلین ۳'
+      },
+      {
+        id: 'razor-pull-04',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-04-scaled.webp',
+        alt: 'Razor Pull Berlin 04',
+        captionDe: 'Razor Pull Berlin IV',
+        captionEn: 'Razor Pull Berlin IV',
+        captionFa: 'ریزر پول برلین ۴'
+      },
+      {
+        id: 'razor-pull-05',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-05-scaled.webp',
+        alt: 'Razor Pull Berlin 05',
+        captionDe: 'Razor Pull Berlin V',
+        captionEn: 'Razor Pull Berlin V',
+        captionFa: 'ریزر پول برلین ۵'
+      },
+      {
+        id: 'razor-pull-06',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-06-scaled.webp',
+        alt: 'Razor Pull Berlin 06',
+        captionDe: 'Razor Pull Berlin VI',
+        captionEn: 'Razor Pull Berlin VI',
+        captionFa: 'ریزر پول برلین ۶'
+      }
+    ]
   },
   {
     id: 'dimensions-of-sustainability',
@@ -578,7 +828,34 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25',
+    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'dimensions-01',
+        src: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+        alt: 'Dimensions of Sustainability I',
+        captionDe: 'Dimensions of Sustainability I',
+        captionEn: 'Dimensions of Sustainability I',
+        captionFa: 'ابعاد پایداری ۱'
+      },
+      {
+        id: 'dimensions-02',
+        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
+        alt: 'Dimensions of Sustainability II',
+        captionDe: 'Dimensions of Sustainability II',
+        captionEn: 'Dimensions of Sustainability II',
+        captionFa: 'ابعاد پایداری ۲'
+      },
+      {
+        id: 'dimensions-03',
+        src: '/images/2026_09_os-07-dimensions-of-sustainability-03-scaled.jpeg',
+        alt: 'Dimensions of Sustainability III',
+        captionDe: 'Dimensions of Sustainability III',
+        captionEn: 'Dimensions of Sustainability III',
+        captionFa: 'ابعاد پایداری ۳'
+      }
+    ]
   },
   {
     id: 'fragments-of-memory',
@@ -591,7 +868,26 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25',
+    previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'fragments-01',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.jpeg',
+        alt: 'Fragments of Memory I',
+        captionDe: 'Fragments of Memory I',
+        captionEn: 'Fragments of Memory I',
+        captionFa: 'خرده‌های خاطره ۱'
+      },
+      {
+        id: 'fragments-02',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-02-scaled.jpeg',
+        alt: 'Fragments of Memory II',
+        captionDe: 'Fragments of Memory II',
+        captionEn: 'Fragments of Memory II',
+        captionFa: 'خرده‌های خاطره ۲'
+      }
+    ]
   },
   {
     id: 'symmetric-networks',
@@ -604,7 +900,26 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25',
+    previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'symmetric-01',
+        src: '/images/2026_09_os-11-symmetric-networks-01-scaled.jpeg',
+        alt: 'Symmetric Networks I',
+        captionDe: 'Symmetric Networks I',
+        captionEn: 'Symmetric Networks I',
+        captionFa: 'شبکه‌های متقارن ۱'
+      },
+      {
+        id: 'symmetric-02',
+        src: '/images/2026_09_os-11-symmetric-networks-02-scaled.jpeg',
+        alt: 'Symmetric Networks II',
+        captionDe: 'Symmetric Networks II',
+        captionEn: 'Symmetric Networks II',
+        captionFa: 'شبکه‌های متقارن ۲'
+      }
+    ]
   },
   {
     id: 'prismatic-berlin',
@@ -659,7 +974,18 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Honorable Mention & Official Selection · AMP 2026 — Honorable Mention · PERSPA 2026 — Honorable Mention',
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 HM', 'AMP 2026 HM', 'PERSPA 2026 HM'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26',
+    previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'echoes-fineart-01',
+        src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+        alt: 'Echoes of a Water Tower',
+        captionDe: 'Echoes of a Water Tower – SchirZan',
+        captionEn: 'Echoes of a Water Tower – SchirZan',
+        captionFa: 'پژواک برج آب – شیرزن'
+      }
+    ]
   },
   {
     id: 'between-space-time',
@@ -672,7 +998,34 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection · LICC 2025 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی · LICC 2025 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS', 'LICC 2025 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25',
+    previewImage: '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'between-space-time-01',
+        src: '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
+        alt: 'Between Space and Time I',
+        captionDe: 'Between Space and Time I',
+        captionEn: 'Between Space and Time I',
+        captionFa: 'میان فضا و زمان ۱'
+      },
+      {
+        id: 'between-space-time-02',
+        src: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+        alt: 'Between Space and Time II',
+        captionDe: 'Between Space and Time II',
+        captionEn: 'Between Space and Time II',
+        captionFa: 'میان فضا و زمان ۲'
+      },
+      {
+        id: 'between-space-time-03',
+        src: '/images/2026_09_os-10-between-space-and-time-03-scaled.jpeg',
+        alt: 'Between Space and Time III',
+        captionDe: 'Between Space and Time III',
+        captionEn: 'Between Space and Time III',
+        captionFa: 'میان فضا و زمان ۳'
+      }
+    ]
   },
   {
     id: 'blessed-are-those-who-mourn',
@@ -714,7 +1067,34 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection (Special / Other)',
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش ویژه)',
     badgeNames: ['IPA 2026 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26',
+    previewImage: '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'iran-freedom-01',
+        src: '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+        alt: 'LIFE – LOVE – FREEDOM · IRAN 01',
+        captionDe: 'LIFE – LOVE – FREEDOM · IRAN I',
+        captionEn: 'LIFE – LOVE – FREEDOM · IRAN I',
+        captionFa: 'زن، زندگی، آزادی · ایران ۱'
+      },
+      {
+        id: 'iran-freedom-02',
+        src: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+        alt: 'LIFE – LOVE – FREEDOM · IRAN 02',
+        captionDe: 'LIFE – LOVE – FREEDOM · IRAN II',
+        captionEn: 'LIFE – LOVE – FREEDOM · IRAN II',
+        captionFa: 'زن، زندگی، آزادی · ایران ۲'
+      },
+      {
+        id: 'iran-freedom-03',
+        src: '/images/2026_09_os-01-life-love-freedom-iran-03-scaled.jpeg',
+        alt: 'LIFE – LOVE – FREEDOM · IRAN 03',
+        captionDe: 'LIFE – LOVE – FREEDOM · IRAN III',
+        captionEn: 'LIFE – LOVE – FREEDOM · IRAN III',
+        captionFa: 'زن، زندگی، آزادی · ایران ۳'
+      }
+    ]
   },
   {
     id: 'dignity-of-animal',
@@ -740,7 +1120,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
     awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
     badgeNames: ['URBAN Photo Awards 2026 Selected'],
-    link: 'https://www.urbanphotoawards.com/'
+    link: 'https://www.urbanphotoawards.com/',
+    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+    galleryPhotos: [
+      {
+        id: 'in-between-spaces-01',
+        src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+        alt: 'In-Between Spaces – Schahrsad Shahmirzadi',
+        captionDe: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        captionEn: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        captionFa: 'فضاهای میانی – شیرزن (منتخب مسابقه URBAN 2026)'
+      }
+    ]
   }
 ];
 
@@ -756,7 +1147,18 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection (People / Self-Portrait)',
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش پرتره و سلف پرتره)',
     badgeNames: ['IPA 2026 OS'],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26'
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26',
+    previewImage: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'kickboxing-portrait-01',
+        src: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
+        alt: 'Kickboxing – Self-Portrait (Schahrsad Shahmirzadi / SchirZan)',
+        captionDe: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
+        captionEn: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
+        captionFa: 'کیک‌بوکسینگ – از مبارزه در رینگ تا آذرخش در قاب تصویر (برگزیده رسمی IPA 2026)'
+      }
+    ]
   }
 ];
 

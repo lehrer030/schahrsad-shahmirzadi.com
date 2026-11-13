@@ -134,3 +134,4 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
     </div>
   );
 };
+

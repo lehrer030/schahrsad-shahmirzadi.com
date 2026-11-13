@@ -22,3 +22,47 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Raw backup and database dumps (do NOT push to GitHub - sensitive credentials & huge file sizes)
+*.sql
+*.wpress
+*.tar
+*.gz
+*.zip
+extract_*.py
+inspect_*.py
+list_*.py
+search_*.py
+test_*.py
+find_*.py
+check_*.py
+raw_*.txt
+
+# Ignore the extra 1.4 GB unreferenced WordPress media thumbnails/backups in public/images
+# Keep all curated portfolio images, series, and badges
+public/images/*
+!public/images/email_badges
+!public/images/email_badges/**
+!public/images/badges_custom
+!public/images/badges_custom/**
+!public/images/2025_07_photoart.jpg
+!public/images/2026_07_In-Between-Spaces-scaled.jpg
+!public/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-*-scaled.webp
+!public/images/2026_10_amp-2026-winner-solitaire-revised-*-scaled.webp
+!public/images/2026_10_amp-2026-architectural-piano-*-scaled.webp
+!public/images/2026_10_amp-2026-black-red-gold-*-scaled.webp
+!public/images/2026_10_amp-2026-cloud-mirror-i-*-scaled.webp
+!public/images/2026_10_amp-2026-cloud-mirror-ii-bw-*-scaled.webp
+!public/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp
+!public/images/2026_10_amp-2026-elegance-interior-symphony-*-scaled.webp
+!public/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp
+!public/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp
+!public/images/2026_10_amp-2026-mirrored-iii-bw-01-scaled.webp
+!public/images/2026_10_amp-2026-razor-pull-berlin-*-scaled.webp
+!public/images/2026_09_os-01-life-love-freedom-iran-*-scaled.jpeg
+!public/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg
+!public/images/2026_09_os-06-hephaestus-legacy-*-scaled.jpeg
+!public/images/2026_09_os-07-dimensions-of-sustainability-*-scaled.jpeg
+!public/images/2026_09_os-09-fragments-of-memory-fragments-of-time-*-scaled.jpeg
+!public/images/2026_09_os-10-between-space-and-time-*-scaled.jpeg
+!public/images/2026_09_os-11-symmetric-networks-*-scaled.jpeg

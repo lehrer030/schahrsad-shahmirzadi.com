@@ -93,3 +93,4 @@ export const CookieBanner: React.FC<CookieBannerProps> = ({
     </aside>
   );
 };
+

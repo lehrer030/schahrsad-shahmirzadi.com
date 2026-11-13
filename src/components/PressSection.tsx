@@ -143,3 +143,4 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
     </div>
   );
 };
+

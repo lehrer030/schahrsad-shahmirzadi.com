@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Globe, ExternalLink, Menu, X, Building2, Palette, Globe2, User, GraduationCap, Newspaper } from 'lucide-react';
+import { Globe, Menu, X, Building2, Palette, Globe2, User, GraduationCap, Newspaper, ArrowDown } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface NavbarProps {
@@ -125,6 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     ? cat.labelFa
                     : cat.labelEn}
                 </span>
+                <ArrowDown className={`w-3 h-3 transition-opacity ${isActive ? 'opacity-80' : 'opacity-30'}`} />
               </button>
             );
           })}
@@ -164,92 +165,81 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 key={cat.id}
                 onClick={() => handleSelect(cat.id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                   isActive
                     ? 'bg-stone-900 text-white'
                     : 'text-stone-600 hover:text-stone-900 hover:bg-stone-200/60'
                 }`}
               >
-                {currentLang === 'de'
-                  ? cat.labelDe
-                  : currentLang === 'fa'
-                  ? cat.labelFa
-                  : cat.labelEn}
+                <span>
+                  {currentLang === 'de'
+                    ? cat.labelDe
+                    : currentLang === 'fa'
+                    ? cat.labelFa
+                    : cat.labelEn}
+                </span>
               </button>
             );
           })}
         </nav>
 
-        {/* Right Controls: Domain & Language Switcher & Mobile Menu Button */}
-        <div className="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
+        {/* Right Action Bar: Language Switcher (DE / EN / FA) & Contact Button */}
+        <div className="flex items-center space-x-2.5 rtl:space-x-reverse">
           
-          {/* Contact Button */}
-          <button
-            onClick={onOpenContact}
-            className="hidden md:flex items-center gap-1.5 text-xs text-stone-700 hover:text-stone-950 bg-white border border-stone-200/90 px-3.5 py-1.5 rounded-full shadow-2xs hover:border-amber-700 transition-colors font-medium cursor-pointer"
-          >
-            <span>{currentLang === 'fa' ? 'ارتباط' : 'Kontakt'}</span>
-          </button>
-
-          {/* Domain Shortcut */}
-          <div className="hidden sm:flex items-center text-xs text-stone-600 bg-white border border-stone-200/90 px-3 py-1.5 rounded-full shadow-2xs hover:border-amber-700 transition-colors">
-            <a
-              href="https://schirzan.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-amber-800 transition-colors flex items-center gap-1 font-medium"
-            >
-              <span>schirzan.com</span>
-              <ExternalLink className="w-3 h-3 text-stone-400" />
-            </a>
-          </div>
-
-          {/* Language Switcher: DE | EN | FA */}
-          <div className="flex items-center bg-white border border-stone-200 rounded-full p-1 shadow-2xs">
-            <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-1 rtl:ml-1 rtl:mr-1.5" />
+          {/* Trilingual Toggle Pill */}
+          <div className="flex items-center bg-stone-200/70 p-1 rounded-full text-xs border border-stone-300/60 shadow-2xs">
+            <Globe className="w-3.5 h-3.5 mx-1.5 text-stone-500" />
             
             <button
               onClick={() => onToggleLang('de')}
-              title="Deutsch"
-              className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-full font-medium transition-all cursor-pointer ${
                 currentLang === 'de'
-                  ? 'bg-amber-700 text-white shadow-xs'
+                  ? 'bg-white text-stone-900 shadow-2xs font-bold'
                   : 'text-stone-600 hover:text-stone-900'
               }`}
+              title="Deutsch (Original)"
             >
               DE
             </button>
 
             <button
               onClick={() => onToggleLang('en')}
-              title="English"
-              className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-full font-medium transition-all cursor-pointer ${
                 currentLang === 'en'
-                  ? 'bg-amber-700 text-white shadow-xs'
+                  ? 'bg-white text-stone-900 shadow-2xs font-bold'
                   : 'text-stone-600 hover:text-stone-900'
               }`}
+              title="English (International)"
             >
               EN
             </button>
 
             <button
               onClick={() => onToggleLang('fa')}
-              title="فارسی"
-              className={`px-2.5 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${
+              className={`px-2.5 py-1 rounded-full font-medium transition-all cursor-pointer font-sans ${
                 currentLang === 'fa'
-                  ? 'bg-amber-700 text-white shadow-xs'
+                  ? 'bg-amber-800 text-white shadow-2xs font-bold'
                   : 'text-stone-600 hover:text-stone-900'
               }`}
+              title="فارسی (فرهنگ و ریشه‌ها)"
             >
-              فا
+              فارسی
             </button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Contact Button */}
+          <button
+            onClick={onOpenContact}
+            className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-800 hover:bg-amber-900 text-white text-xs font-semibold tracking-wide transition-all shadow-2xs hover:shadow-xs cursor-pointer"
+          >
+            <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+          </button>
+
+          {/* Mobile Navigation Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-stone-700 hover:text-stone-950 hover:bg-stone-200/60 rounded-xl transition-colors cursor-pointer"
-            aria-label="Navigation öffnen"
+            className="lg:hidden p-2 rounded-xl text-stone-700 hover:text-stone-900 hover:bg-stone-200/60 transition-colors cursor-pointer"
+            aria-label="Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -257,24 +247,24 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       </div>
 
-      {/* Mobile Drawer (Responsive dropdown inside single navigation) */}
+      {/* Mobile Dropdown Menu (Full coverage for smartphones) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-stone-200 bg-white/98 px-4 pt-3 pb-5 space-y-3 shadow-lg animate-in slide-in-from-top-2 duration-200">
+        <div className="lg:hidden bg-[#faf8f5] border-b border-stone-300/80 px-4 pt-3 pb-6 space-y-4 shadow-lg animate-fadeIn">
           <div>
-            <p className="text-[11px] uppercase tracking-wider font-mono text-stone-400 px-2 py-1 font-semibold">
-              {currentLang === 'de' ? 'Kategorien' : currentLang === 'fa' ? 'دسته‌بندی‌های اصلی' : 'Categories'}
+            <p className="text-[10px] uppercase tracking-widest text-amber-800 font-mono font-bold mb-2">
+              {currentLang === 'de' ? 'Kunst & Werkgruppen' : currentLang === 'fa' ? 'دسته‌بندی‌های هنری' : 'Art Categories'}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+            <div className="grid grid-cols-2 gap-2">
               {coreCategories.map(cat => {
                 const isActive = currentCategory === cat.id;
                 return (
                   <button
                     key={cat.id}
                     onClick={() => handleSelect(cat.id)}
-                    className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all text-left rtl:text-right cursor-pointer ${
+                    className={`flex items-center gap-2 p-2.5 rounded-xl text-xs font-semibold transition-all text-left rtl:text-right cursor-pointer ${
                       isActive
                         ? 'bg-stone-900 text-white shadow-xs'
-                        : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950'
+                        : 'bg-white border border-stone-200 text-stone-800 hover:bg-stone-100'
                     }`}
                   >
                     {cat.icon}
@@ -291,21 +281,21 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          <div className="pt-2 border-t border-stone-100">
-            <p className="text-[11px] uppercase tracking-wider font-mono text-stone-400 px-2 py-1 font-semibold">
-              {currentLang === 'de' ? 'Künstlerin & Hintergrund' : currentLang === 'fa' ? 'پیشینه و مطبوعات' : 'Artist & Background'}
+          <div>
+            <p className="text-[10px] uppercase tracking-widest text-stone-500 font-mono font-bold mb-2">
+              {currentLang === 'de' ? 'Vita & Archiv' : currentLang === 'fa' ? 'سوابق و آرشیو' : 'Vita & Archive'}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+            <div className="grid grid-cols-2 gap-2">
               {secondarySections.map(sec => {
                 const isActive = currentCategory === sec.id;
                 return (
                   <button
                     key={sec.id}
                     onClick={() => handleSelect(sec.id)}
-                    className={`flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all text-left rtl:text-right cursor-pointer ${
+                    className={`flex items-center gap-2 p-2.5 rounded-xl text-xs font-medium transition-all text-left rtl:text-right cursor-pointer ${
                       isActive
                         ? 'bg-amber-800 text-white shadow-xs'
-                        : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950'
+                        : 'bg-white border border-stone-200 text-stone-700 hover:bg-stone-100'
                     }`}
                   >
                     {sec.icon}
@@ -322,17 +312,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          <div className="pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 px-2">
-            <span>{currentLang === 'fa' ? 'دامنه رسمی' : 'Official website'}</span>
-            <a
-              href="https://schirzan.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-800 font-medium flex items-center gap-1 hover:underline"
+          <div className="pt-2 border-t border-stone-200 flex items-center justify-between">
+            <button
+              onClick={() => {
+                onOpenContact();
+                setMobileMenuOpen(false);
+              }}
+              className="w-full text-center py-2.5 rounded-xl bg-amber-800 text-white text-xs font-semibold shadow-xs"
             >
-              <span>schirzan.com</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
+              {currentLang === 'de' ? 'Kontakt aufnehmen' : currentLang === 'fa' ? 'تماس با هنرمند' : 'Get in Touch'}
+            </button>
           </div>
         </div>
       )}
