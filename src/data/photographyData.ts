@@ -73,54 +73,54 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Architecture',
     titleEn: 'Architecture',
     titleFa: 'معماری',
-    descriptionDe: 'Internationale prämierte Architektur-Photographie mit Fokus auf Solitäre, Licht, Geometrie und urbane Abstraktion.',
-    descriptionEn: 'Internationally awarded architectural photography focusing on solitaires, light, geometry, and urban abstraction.',
-    descriptionFa: 'عکاسی معماری با جوایز بین‌المللی با تمرکز بر تک‌بناها، نور، هندسه و انتزاع شهری.'
+    descriptionDe: 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.',
+    descriptionEn: 'Award-winning architectural photography focusing on solitary structures and geometric forms.',
+    descriptionFa: 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
   },
   {
     id: 'fine-art',
     titleDe: 'Fine Art',
     titleEn: 'Fine Art',
     titleFa: 'هنرهای زیبا (فاین آرت)',
-    descriptionDe: 'Künstlerische Erkundungen von Form, Raum, Zeit und Poesie des Lichts.',
-    descriptionEn: 'Artistic explorations of form, space, time, and the poetry of light.',
-    descriptionFa: 'کاوش‌های هنری در فرم، فضا، زمان و شعر بصری نور.'
+    descriptionDe: 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.',
+    descriptionEn: 'Photographic works in fine art and visual composition.',
+    descriptionFa: 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
   },
   {
     id: 'social-environmental',
     titleDe: 'Social & Environmental Themes',
     titleEn: 'Social & Environmental Themes',
     titleFa: 'مضامین اجتماعی و زیست‌محیطی',
-    descriptionDe: 'Engagierte Photographie für Menschenrechte, Vielfalt, Tierschutz und gesellschaftliche Verantwortung.',
-    descriptionEn: 'Dedicated photography advocating for human rights, diversity, animal welfare, and social responsibility.',
-    descriptionFa: 'عکاسی متعهد در دفاع از حقوق بشر، تنوع، حمایت از حیوانات و مسئولیت اجتماعی.'
+    descriptionDe: 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.',
+    descriptionEn: 'Photographic documentation on human rights, social issues, and animal welfare.',
+    descriptionFa: 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
   },
   {
     id: 'portraits',
     titleDe: 'Portraits',
     titleEn: 'Portraits',
     titleFa: 'پرتره‌ها',
-    descriptionDe: 'Porträts und Selbstporträts mit Schwerpunkt auf persönlichem Ausdruck, Charakter und fotografischer Präsenz.',
-    descriptionEn: 'Portraits and self-portraits focusing on personal expression, character, and photographic presence.',
-    descriptionFa: 'پرتره‌ها و خودنگاره‌ها با تأکید بر بیان فردی، شخصیت و حضور عکاسانه.'
+    descriptionDe: 'Fotografische Porträts und Selbstporträts.',
+    descriptionEn: 'Photographic portraits and self-portraits.',
+    descriptionFa: 'پرتره‌ها و خودنگاره‌های عکاسی.'
   },
   {
     id: 'biography',
     titleDe: 'Vita & Engagement',
     titleEn: 'Vita & Commitment',
     titleFa: 'زندگی‌نامه و تعهدات',
-    descriptionDe: 'Akademischer Bildungsweg, sportliche Erfolge (Weltmeisterin Kickboxen) und Engagement für Umweltschutz & Frieden.',
-    descriptionEn: 'Academic career, athletic achievements (World Champion Kickboxing), and commitment to environmental protection & peace.',
-    descriptionFa: 'مسیر آکادمیک، افتخارات ورزشی (قهرمان جهان در کیک‌بوکسینگ) و فعالیت برای حفاظت از محیط زیست و صلح.'
+    descriptionDe: 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.',
+    descriptionEn: 'Biography, academic career, kickboxing achievements, and community engagement.',
+    descriptionFa: 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
   },
   {
     id: 'press',
     titleDe: 'Press & Media',
     titleEn: 'Press & Media',
     titleFa: 'رسانه‌ها و مطبوعات',
-    descriptionDe: 'Internationale Publikationen, Medienberichte (121 Clicks, Kojaro) und offizielle Auszeichnungskataloge.',
-    descriptionEn: 'International publications, press features (121 Clicks, Kojaro), and official award catalogues.',
-    descriptionFa: 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای (۱۲۱ کلیکز، کجارو) و کتاب‌های برگزیدگان مسابقات.'
+    descriptionDe: 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.',
+    descriptionEn: 'International publications, press features, and official award catalogues.',
+    descriptionFa: 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
   }
 ];
 

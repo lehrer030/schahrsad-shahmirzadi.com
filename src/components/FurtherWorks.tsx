@@ -14,9 +14,9 @@ interface FurtherWorksProps {
 export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   works,
   currentLang,
-  sectionTitleDe = 'Further Works (Weitere prämierte Werke)',
-  sectionTitleEn = 'Further Works (Additional Awarded Works)',
-  sectionTitleFa = 'سایر آثار برگزیده و دارای افتخارات بین‌المللی',
+  sectionTitleDe = 'Weitere Werke',
+  sectionTitleEn = 'Further Works',
+  sectionTitleFa = 'سایر آثار',
   onOpenLightbox
 }) => {
   return (

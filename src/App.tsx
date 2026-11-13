@@ -209,10 +209,10 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Internationale prämierte Architektur-Photographie mit Fokus auf Solitäre, Licht, Geometrie und urbane Abstraktion.'
+                    ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
                     : currentLang === 'fa'
-                    ? 'عکاسی معماری با جوایز بین‌المللی با تمرکز بر تک‌بناها، نور، هندسه و انتزاع شهری.'
-                    : 'Internationally awarded architectural photography focusing on solitaires, light, geometry, and urban abstraction.'}
+                    ? 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
+                    : 'Award-winning architectural photography focusing on solitary structures and geometric forms.'}
                 </p>
               </div>
 
@@ -240,9 +240,9 @@ export default function App() {
               <FurtherWorks
                 works={FURTHER_WORKS_ARCHITECTURE}
                 currentLang={currentLang}
-                sectionTitleDe="Further Works (Architektur)"
+                sectionTitleDe="Weitere Arbeiten (Architektur)"
                 sectionTitleEn="Further Works (Architecture)"
-                sectionTitleFa="سایر آثار معماری و جوایز بین‌المللی"
+                sectionTitleFa="سایر آثار معماری"
                 onOpenLightbox={handleOpenLightbox}
               />
             </section>
@@ -260,19 +260,19 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Künstlerische Erkundungen von Form, Raum, Zeit und Poesie des Lichts.'
+                    ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
                     : currentLang === 'fa'
-                    ? 'کاوش‌های هنری در فرم، فضا، زمان و شعر بصری نور.'
-                    : 'Artistic explorations of form, space, time, and the poetry of light.'}
+                    ? 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
+                    : 'Photographic works in fine art and visual composition.'}
                 </p>
               </div>
 
               <FurtherWorks
                 works={FINE_ART_WORKS}
                 currentLang={currentLang}
-                sectionTitleDe="Fine Art – Ausgezeichnete Werkserien"
-                sectionTitleEn="Fine Art – Award-Winning Series"
-                sectionTitleFa="هنرهای زیبا – مجموعه‌های برنده جوایز"
+                sectionTitleDe="Fine Art – Werkserien"
+                sectionTitleEn="Fine Art – Series"
+                sectionTitleFa="هنرهای زیبا – مجموعه‌ها"
                 onOpenLightbox={handleOpenLightbox}
               />
             </section>
@@ -290,19 +290,19 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Fotografische Arbeiten zu Menschenrechten, Frieden, gesellschaftlicher Vielfalt und Respekt vor Natur und Tier.'
+                    ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
                     : currentLang === 'fa'
-                    ? 'آثار عکاسی متعهد به حقوق بشر، صلح، تنوع اجتماعی و احترام به طبیعت و حیات حیوانات.'
-                    : 'Photographic works dedicated to human rights, peace, diversity, and environmental and animal respect.'}
+                    ? 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
+                    : 'Photographic documentation on human rights, social issues, and animal welfare.'}
                 </p>
               </div>
 
               <FurtherWorks
                 works={SOCIAL_ENVIRONMENTAL_WORKS}
                 currentLang={currentLang}
-                sectionTitleDe="Social and Environmental Themes – Prämierte Werke"
-                sectionTitleEn="Social and Environmental Themes – Awarded Works"
-                sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – آثار برگزیده"
+                sectionTitleDe="Social & Environmental Themes – Werkserien"
+                sectionTitleEn="Social and Environmental Themes – Series"
+                sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – مجموعه‌ها"
                 onOpenLightbox={handleOpenLightbox}
               />
             </section>
@@ -320,17 +320,17 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Porträts und Selbstporträts mit Schwerpunkt auf persönlichem Ausdruck, Charakter und fotografischer Präsenz.'
+                    ? 'Fotografische Porträts und Selbstporträts.'
                     : currentLang === 'fa'
-                    ? 'پرتره‌ها و خودنگاره‌ها با تأکید بر بیان فردی، شخصیت و حضور عکاسانه.'
-                    : 'Portraits and self-portraits focusing on personal expression, character, and photographic presence.'}
+                    ? 'پرتره‌ها و خودنگاره‌های عکاسی.'
+                    : 'Photographic portraits and self-portraits.'}
                 </p>
               </div>
 
               <FurtherWorks
                 works={PORTRAIT_WORKS}
                 currentLang={currentLang}
-                sectionTitleDe="Portraits & Self-Portraits"
+                sectionTitleDe="Porträts & Selbstporträts"
                 sectionTitleEn="Portraits & Self-Portraits"
                 sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
                 onOpenLightbox={handleOpenLightbox}
@@ -350,10 +350,10 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Akademischer Bildungsweg, sportliche Erfolge (Weltmeisterin Kickboxen) und Engagement für Umweltschutz & Frieden.'
+                    ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
                     : currentLang === 'fa'
-                    ? 'مسیر آکادمیک، افتخارات ورزشی (قهرمان جهان در کیک‌بوکسینگ) و فعالیت برای حفاظت از محیط زیست و صلح.'
-                    : 'Academic career, athletic achievements (World Champion Kickboxing), and commitment to environmental protection & peace.'}
+                    ? 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
+                    : 'Biography, academic career, kickboxing achievements, and community engagement.'}
                 </p>
               </div>
 
@@ -373,10 +373,10 @@ export default function App() {
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Internationale Publikationen, Medienberichte (121 Clicks, Kojaro) und offizielle Auszeichnungskataloge.'
+                    ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
                     : currentLang === 'fa'
-                    ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای (۱۲۱ کلیکز، کجارو) و کتاب‌های برگزیدگان مسابقات.'
-                    : 'International publications, press features (121 Clicks, Kojaro), and official award catalogues.'}
+                    ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
+                    : 'International publications, press features, and official award catalogues.'}
                 </p>
               </div>
 
