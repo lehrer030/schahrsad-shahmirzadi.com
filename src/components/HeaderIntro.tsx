@@ -129,3 +129,4 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
     </section>
   );
 };
+

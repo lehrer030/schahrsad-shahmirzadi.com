@@ -148,8 +148,8 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       id: 'amp-2025-winner',
       name: 'Architecture MasterPrize 2025',
       year: '2025',
-      award: 'Winner (Other Exterior)',
-      badgeImage: '/images/2026_01_winners_badge-AMP-2025-300x139.png',
+      award: 'Student Photography Winner (Other Exterior)',
+      badgeImage: '/images/email_badges/amp_2025_winner.png',
       link: 'https://architectureprize.com/winners/winner.php?id=8533',
       position: 'top-left' // STRICT CLIENT RULE: AMP ALWAYS TOP-LEFT
     },
@@ -158,25 +158,25 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       name: 'Prix de la Perspective Architecturale 2026',
       year: '2026',
       award: 'Honorable Mention & Editor’s Choice',
-      badgeImage: '/images/2026_10_perspa-awards-2026-honourable-mention-abstract-300x300.png',
+      badgeImage: '/images/email_badges/perspa_2026_silver.png',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-132',
-      position: 'top-right'
+      position: 'bottom-left'
     },
     {
       id: 'bifa-2026-hm',
       name: 'Budapest International Foto Awards 2026',
       year: '2026',
-      award: 'Honorable Mention · Global Lens Editor’s Choice',
-      badgeImage: '/images/2026_04_LICC2025-298x300.jpg', // fallback high res badge
+      award: 'Honorable Mention 2026',
+      badgeImage: '/images/email_badges/bifa_2026_gold.png',
       link: 'https://budapestfotoawards.com/',
-      position: 'bottom-left'
+      position: 'top-right'
     },
     {
       id: 'ipa-2026-hm',
       name: 'International Photography Awards 2026',
       year: '2026',
-      award: 'Honorable Mention & Official Selection',
-      badgeImage: '/images/2025_09_ipa-1-300x184.jpg',
+      award: 'Honorable Mention & Official Selection (Non-Professional)',
+      badgeImage: '/images/email_badges/ipa_2026_hm_ribbon.png',
       link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25',
       position: 'bottom-right' // STRICT CLIENT RULE: IPA ALWAYS BOTTOM-RIGHT
     }
@@ -251,8 +251,8 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       id: 'amp-2026-winner',
       name: 'Architecture MasterPrize 2026',
       year: '2026',
-      award: 'Winner (Architecture Abstract)',
-      badgeImage: '/images/2026_10_winners_badge-AMP-2026-300x139.png',
+      award: 'Student Photography Winner 2026',
+      badgeImage: '/images/email_badges/amp_2026_winner.png',
       link: 'https://architectureprize.com/',
       position: 'top-left' // STRICT CLIENT RULE: AMP ALWAYS TOP-LEFT
     },
@@ -260,17 +260,17 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       id: 'perspa-2026-2nd',
       name: 'Prix de la Perspective Architecturale 2026',
       year: '2026',
-      award: '2nd Place (Abstract Architecture)',
-      badgeImage: '/images/2026_10_perspa-awards-2026-second-prize-abstract-300x300.png',
+      award: 'Second Prize (Abstract)',
+      badgeImage: '/images/email_badges/perspa_2026_second.png',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-412',
-      position: 'top-right'
+      position: 'bottom-left'
     },
     {
       id: 'ipa-2026-os',
       name: 'International Photography Awards 2026',
       year: '2026',
-      award: 'Official Selection (Architecture / Abstract)',
-      badgeImage: '/images/2025_09_ipa-23-300x184.jpg',
+      award: 'Official Selection (Non-Professional)',
+      badgeImage: '/images/email_badges/ipa_2026_os_ribbon.png',
       link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722617898-26',
       position: 'bottom-right' // STRICT CLIENT RULE: IPA ALWAYS BOTTOM-RIGHT
     }
@@ -595,3 +595,4 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26'
   }
 ];
+

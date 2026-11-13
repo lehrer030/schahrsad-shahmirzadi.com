@@ -73,3 +73,4 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
     </div>
   );
 };
+

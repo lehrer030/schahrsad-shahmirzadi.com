@@ -17,10 +17,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
   const ampBadge = series.badges.find(b => b.position === 'top-left' || b.name.includes('AMP'));
   const ipaBadge = series.badges.find(b => b.position === 'bottom-right' || b.name.includes('IPA'));
   const otherBadges = series.badges.filter(b => b !== ampBadge && b !== ipaBadge);
-  const topRightBadge = otherBadges[0] || null;
-  const bottomLeftBadge = otherBadges[1] || null;
+  const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
+  const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
 
-  const renderBadgeItem = (badge: AwardBadge | null | undefined) => {
+  const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
     if (!badge) return null;
     return (
       <a
@@ -28,14 +28,16 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={`${badge.name}: ${badge.award}`}
-        className="group relative flex flex-col items-center justify-center w-24 h-14 sm:w-28 sm:h-16 p-1.5 bg-neutral-900/95 hover:bg-neutral-800/95 border border-neutral-700/80 hover:border-amber-400 rounded-lg shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 z-20 cursor-pointer"
+        className={`group flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-neutral-900/90 hover:bg-neutral-850 border border-neutral-700/80 hover:border-amber-400 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer ${
+          alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
+        }`}
       >
         <img
           src={badge.badgeImage}
           alt={badge.name}
-          className="max-h-8 sm:max-h-10 max-w-full object-contain filter drop-shadow group-hover:brightness-110"
+          className="max-h-9 sm:max-h-12 max-w-full object-contain filter drop-shadow group-hover:brightness-110"
         />
-        <span className="text-[9px] text-neutral-400 group-hover:text-amber-300 font-sans tracking-tight truncate w-full text-center mt-0.5 flex items-center justify-center gap-0.5">
+        <span className="text-[10px] text-neutral-400 group-hover:text-amber-300 font-sans tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100" />
         </span>
@@ -97,8 +99,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         {/* 3. PHOTO SECTION */}
         <div className="pt-6 space-y-16">
           
-          {/* PHOTO 1: SURROUNDED BY ALL AWARDS (AMP top-left, IPA bottom-right) */}
-          <div className="space-y-4">
+          {/* PHOTO 1: SURROUNDED BY ALL AWARDS MATCHING HER EMAIL MOCKUP */}
+          <div className="space-y-4 max-w-xl mx-auto">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-wider text-amber-400">
                 {currentLang === 'de' ? 'Hauptwerk / Bild 01 (Prämiert)' : 'Lead Work / Image 01 (Awarded)'}
@@ -108,42 +110,32 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               </span>
             </div>
 
-            {/* Desktop framing with badges */}
-            <div className="w-full relative max-w-2xl mx-auto">
-              
-              {/* Desktop Badges */}
-              <div className="hidden sm:block absolute -top-4 -left-6 z-20">
-                {renderBadgeItem(ampBadge)}
-              </div>
-              <div className="hidden sm:block absolute -top-4 -right-6 z-20">
-                {renderBadgeItem(topRightBadge)}
-              </div>
-              <div className="hidden sm:block absolute -bottom-4 -left-6 z-20">
-                {renderBadgeItem(bottomLeftBadge)}
-              </div>
-              <div className="hidden sm:block absolute -bottom-4 -right-6 z-20">
-                {renderBadgeItem(ipaBadge)}
-              </div>
+            {/* TOP: AMP ALWAYS TOP-LEFT */}
+            <div className="w-full flex justify-start">
+              {renderBadgeItem(ampBadge, 'left')}
+            </div>
 
-              {/* Photo 1 Container */}
-              <div className="rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800 shadow-2xl relative">
-                <img
-                  src={firstPhoto.src}
-                  alt={firstPhoto.alt}
-                  className="w-full h-auto max-h-[640px] object-contain mx-auto"
-                />
-                <div className="absolute bottom-3 right-3 text-[11px] tracking-wider text-white/50 font-serif pointer-events-none select-none drop-shadow">
-                  © SchirZan
-                </div>
+            {/* PHOTO 1 CONTAINER */}
+            <div className="rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800 shadow-2xl relative">
+              <img
+                src={firstPhoto.src}
+                alt={firstPhoto.alt}
+                className="w-full h-auto max-h-[640px] object-contain mx-auto"
+              />
+              <div className="absolute bottom-3 right-3 text-[11px] tracking-wider text-white/50 font-serif pointer-events-none select-none drop-shadow">
+                © SchirZan
               </div>
             </div>
 
-            {/* Mobile Badges (2x2 grid, NO vertical stacking) */}
-            <div className="sm:hidden grid grid-cols-2 gap-2.5 max-w-xs mx-auto mt-4">
-              <div className="flex justify-center">{renderBadgeItem(ampBadge)}</div>
-              <div className="flex justify-center">{renderBadgeItem(topRightBadge)}</div>
-              <div className="flex justify-center">{renderBadgeItem(bottomLeftBadge)}</div>
-              <div className="flex justify-center">{renderBadgeItem(ipaBadge)}</div>
+            {/* BOTTOM ROW: PERSPA (left), BIFA (center if present), IPA (right) */}
+            <div className="w-full pt-2 flex items-center justify-between flex-wrap gap-3">
+              <div>{renderBadgeItem(perspaBadge, 'left')}</div>
+              {bifaBadge && (
+                <div className="flex-1 flex justify-center">
+                  {renderBadgeItem(bifaBadge, 'center')}
+                </div>
+              )}
+              <div className="ml-auto">{renderBadgeItem(ipaBadge, 'right')}</div>
             </div>
 
             {firstPhoto.captionDe && (
