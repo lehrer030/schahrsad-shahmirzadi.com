@@ -19,6 +19,13 @@ export interface PhotoItem {
   captionDe?: string;
   captionEn?: string;
   captionFa?: string;
+  externalLink?: string;
+  externalLinkTextDe?: string;
+  externalLinkTextEn?: string;
+  externalLinkTextFa?: string;
+  badgeDe?: string;
+  badgeEn?: string;
+  badgeFa?: string;
 }
 
 export interface PhotoSeries {
@@ -1219,15 +1226,31 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
     link: 'https://licc.uk/',
-    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+    previewImage: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'dignity-animal-01',
-        src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
-        alt: 'The Dignity of the Animal is Inviolable',
-        captionDe: 'The Dignity of the Animal is Inviolable – SchirZan',
-        captionEn: 'The Dignity of the Animal is Inviolable – SchirZan',
-        captionFa: 'حرمت حیوان خدشه‌ناپذیر است – شیرزن'
+        src: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
+        alt: 'The Dignity of the Animal is Inviolable I',
+        captionDe: 'The Dignity of the Animal is Inviolable I – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable I – SchirZan (LICC 2025 Official Selection)',
+        captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۱ – شیرزن'
+      },
+      {
+        id: 'dignity-animal-02',
+        src: '/images/2026_04_f921f50c9aeb75ce30ac79453121ddda-scaled.jpeg',
+        alt: 'The Dignity of the Animal is Inviolable II',
+        captionDe: 'The Dignity of the Animal is Inviolable II – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable II – SchirZan (LICC 2025 Official Selection)',
+        captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۲ – شیرزن'
+      },
+      {
+        id: 'dignity-animal-03',
+        src: '/images/2026_04_4bacafa6404a9d91da6e9374e3feb98e-scaled.jpeg',
+        alt: 'The Dignity of the Animal is Inviolable III',
+        captionDe: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
+        captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۳ – شیرزن'
       }
     ]
   },
@@ -1388,5 +1411,239 @@ export const PRESS_ITEMS = [
     descriptionEn: 'Recognition of "Architectural Piano", "Columns in the Here and Now", and "Black & White Solitaire".',
     descriptionFa: 'تجلیل و انتشار آثار در کتاب رسمی و ویدیوی برگزیدگان بیستمین دوره جوایز اسپایدر.',
     link: 'https://www.thespiderawards.com/'
+  }
+];
+
+export interface ExhibitionItem {
+  id: string;
+  titleDe: string;
+  titleEn: string;
+  titleFa: string;
+  festivalDe: string;
+  festivalEn: string;
+  festivalFa: string;
+  venue: string;
+  address: string;
+  datesDe: string;
+  datesEn: string;
+  datesFa: string;
+  featuredWorkDe: string;
+  featuredWorkEn: string;
+  featuredWorkFa: string;
+  link?: string;
+  festivalLink?: string;
+}
+
+export const EXHIBITIONS_DATA: ExhibitionItem[] = [
+  {
+    id: 'trieste-photo-days-2026',
+    titleDe: 'Urban Photographs: Trieste and the Cities of the World',
+    titleEn: 'Urban Photographs: Trieste and the Cities of the World',
+    titleFa: 'عکس‌های شهری: تریست و شهرهای جهان',
+    festivalDe: 'Trieste Photo Days 2026 (Gruppenausstellung)',
+    festivalEn: 'Trieste Photo Days 2026 (Group Exhibition)',
+    festivalFa: 'روزهای عکاسی تریست ۲۰۲۶ (نمایشگاه گروهی)',
+    venue: 'Mercato Coperto',
+    address: 'Via Giosuè Carducci, 36 – Triest, Italien',
+    datesDe: '5. Oktober 2026 – 21. November 2026',
+    datesEn: 'Monday, October 5 – Saturday, November 21, 2026',
+    datesFa: '۵ اکتبر تا ۲۱ نوامبر ۲۰۲۶',
+    featuredWorkDe: 'In-Between Spaces (Area 14)',
+    featuredWorkEn: 'In-Between Spaces (Area 14)',
+    featuredWorkFa: 'فضاهای میانی (In-Between Spaces – Area 14)',
+    link: 'https://www.urbanphotoawards.com/en/photonew/?id=333556%2Fschirzan%2Fin-between-spaces',
+    festivalLink: 'https://www.triestephotodays.com/en/events/urban-photographs-trieste-and-the-cities-of-the-world/'
+  },
+  {
+    id: 'trieste-photo-fringe-2026',
+    titleDe: 'Trieste Photo Fringe 2026',
+    titleEn: 'Trieste Photo Fringe 2026',
+    titleFa: 'فستیوال فرینج عکاسی تریست ۲۰۲۶',
+    festivalDe: 'Trieste Photo Days – Widespread Festival',
+    festivalEn: 'Trieste Photo Days – Widespread Festival',
+    festivalFa: 'روزهای عکاسی تریست – فستیوال فرینج',
+    venue: 'La Preferita',
+    address: 'Viale XX Settembre, 29 – Triest, Italien',
+    datesDe: '10. Oktober 2026 – 30. November 2026',
+    datesEn: 'Saturday, October 10 – Monday, November 30, 2026',
+    datesFa: '۱۰ اکتبر تا ۳۰ نوامبر ۲۰۲۶',
+    featuredWorkDe: 'Elegance of Structure – Black and White',
+    featuredWorkEn: 'Elegance of Structure – Black and White',
+    featuredWorkFa: 'شکوه ساختار – سیاه و سفید (Elegance of Structure)',
+    link: 'https://www.triestephotodays.com/en/events/la-preferita-2026/',
+    festivalLink: 'https://www.triestephotodays.com/en/exhibitions/'
+  }
+];
+
+export interface PublicationItem {
+  id: string;
+  titleDe: string;
+  titleEn: string;
+  titleFa: string;
+  subtitleDe: string;
+  subtitleEn: string;
+  subtitleFa: string;
+  publisher: string;
+  detailsDe?: string;
+  detailsEn?: string;
+  detailsFa?: string;
+  link: string;
+  linkTextDe: string;
+  linkTextEn: string;
+  linkTextFa: string;
+  type: 'book' | 'ebook' | 'video' | 'editors-choice';
+  coverImage?: string;
+}
+
+export const PUBLICATIONS_DATA: PublicationItem[] = [
+  {
+    id: 'perspa-book-2026',
+    titleDe: 'PERSPA Awards 2026 Book – Architectural Perspective',
+    titleEn: 'PERSPA Awards 2026 Book – Architectural Perspective',
+    titleFa: 'کتاب جوایز PERSPA فرانسه ۲۰۲۶ – چشم‌انداز معماری',
+    subtitleDe: 'Offizielles Hardcover & E-Book Kompendium',
+    subtitleEn: 'Official Hardcover & E-Book Compendium',
+    subtitleFa: 'کتاب رسمی جلد سخت و نسخه دیجیتال',
+    publisher: 'PRIX DE LA PERSPECTIVE ARCHITECTURALE (Bourges, France)',
+    detailsDe: 'Hardcover ISBN: 979-1044810359 · SchirZans Werke auf den Seiten 20–21, 26, 41 und 168.',
+    detailsEn: 'Hardcover ISBN: 979-1044810359 · SchirZan featured on pages 20–21, 26, 41, and 168.',
+    detailsFa: 'شابک رسمی: 979-1044810359 · انتشار آثار شیرزن در صفحات ۲۰–۲۱، ۲۶، ۴۱ و ۱۶۸.',
+    link: 'https://perspa.fr/book/#cover',
+    linkTextDe: 'E-Book & Buchkatalog öffnen →',
+    linkTextEn: 'Open E-Book & Catalogue →',
+    linkTextFa: 'مشاهده کتاب دیجیتال ←',
+    type: 'book',
+    coverImage: '/images/2026_07_perspa-1186x2048.jpg'
+  },
+  {
+    id: 'ipa-annual-book-2026',
+    titleDe: 'The 2026 Annual International Photography Awards (IPA) Book',
+    titleEn: 'The 2026 Annual International Photography Awards (IPA) Book',
+    titleFa: 'کتاب سالانه جوایز بین‌المللی عکاسی (IPA) ۲۰۲۶',
+    subtitleDe: 'Offizielles Jahrbuch der IPA Preisträger',
+    subtitleEn: 'Official Annual IPA Winners Book',
+    subtitleFa: 'کتاب رسمی برگزیدگان جوایز بین‌المللی عکاسی',
+    publisher: 'International Photography Awards (IPA / Lucie Awards)',
+    detailsDe: 'Offizieller PDF-Katalog mit den prämierten Architekturserien.',
+    detailsEn: 'Official annual commemorative publication featuring awarded architectural series.',
+    detailsFa: 'انتشار رسمی کاتالوگ آثار برگزیده معماری.',
+    link: 'https://www.photoawards.com/ebook/IPA-2026-ebook.pdf',
+    linkTextDe: 'IPA 2026 E-Book (PDF) →',
+    linkTextEn: 'IPA 2026 E-Book (PDF) →',
+    linkTextFa: 'دریافت کتاب سالانه IPA ۲۰۲۶ (PDF) ←',
+    type: 'ebook',
+    coverImage: '/images/2026_10_seite-1-1152x1536.jpg'
+  },
+  {
+    id: 'ipa-annual-book-2025',
+    titleDe: 'The 2025 Annual International Photography Awards (IPA) Book',
+    titleEn: 'The 2025 Annual International Photography Awards (IPA) Book',
+    titleFa: 'کتاب سالانه جوایز بین‌المللی عکاسی (IPA) ۲۰۲۵',
+    subtitleDe: 'Offizielles Jahrbuch der IPA Preisträger 2025',
+    subtitleEn: 'Official Annual IPA Winners Book 2025',
+    subtitleFa: 'کتاب رسمی برگزیدگان سال ۲۰۲۵',
+    publisher: 'International Photography Awards (IPA / Lucie Awards)',
+    detailsDe: 'Preisträger-Publikation inklusive »The Solitaire as an Abstraction«.',
+    detailsEn: 'Award winner edition featuring "The Solitaire as an Abstraction".',
+    detailsFa: 'چاپ اثر شاخص تک‌بنا به عنوان یک انتزاع.',
+    link: 'https://www.photoawards.com/books/IPA-2025-EBOOK.pdf',
+    linkTextDe: 'IPA 2025 E-Book (PDF) →',
+    linkTextEn: 'IPA 2025 E-Book (PDF) →',
+    linkTextFa: 'دریافت کتاب سالانه IPA ۲۰۲۵ (PDF) ←',
+    type: 'ebook',
+    coverImage: '/images/2026_06_ebook-01-1152x1536.jpg'
+  },
+  {
+    id: 'bw-spider-book-2026',
+    titleDe: 'Black & White Spider Awards: The Curated Collection 2026',
+    titleEn: 'Black & White Spider Awards: The Curated Collection 2026',
+    titleFa: 'جوایز بین‌المللی عکاسی اسپایدر: مجموعه برگزیده ۲۰۲۶',
+    subtitleDe: 'Amateur Edition & Best of Show Official Awards Book',
+    subtitleEn: 'Amateur Edition & Best of Show Official Awards Book',
+    subtitleFa: 'کتاب رسمی برگزیدگان عکاسی سیاه و سفید',
+    publisher: 'Black & White Spider Awards',
+    detailsDe: 'SchirZans prämierte Arbeit »Piano« publiziert auf Seite 37.',
+    detailsEn: 'SchirZan’s awarded work "Piano" published on page 37.',
+    detailsFa: 'اثر پیانوی معماری در صفحه ۳۷ کتاب رسمی.',
+    link: 'https://www.thespiderawards.com/publications/CC26/a/#page=37',
+    linkTextDe: 'Katalog auf Seite 37 öffnen →',
+    linkTextEn: 'Open Book on Page 37 →',
+    linkTextFa: 'مشاهده صفحه ۳۷ در کتاب آنلاین ←',
+    type: 'book',
+    coverImage: '/images/2026_10_bwspider1-1157x1536.jpg'
+  },
+  {
+    id: 'spider-awards-video',
+    titleDe: '20th Annual Architecture Photography Showcase Film',
+    titleEn: '20th Annual Architecture Photography Showcase Film',
+    titleFa: 'فیلم رسمی برگزیدگان بیستمین دوره عکاسی معماری اسپایدر',
+    subtitleDe: 'Offizielles Gewinner-Video der Spider Awards (Vimeo HD)',
+    subtitleEn: 'Official Spider Awards Winners Video Showcase (Vimeo HD)',
+    subtitleFa: 'ویدیوی رسمی معرفی آثار برگزیده',
+    publisher: 'Black & White Spider Awards',
+    detailsDe: 'Internationale Präsentation der prämierten Architekturphotographien.',
+    detailsEn: 'International showcase reel featuring the winning architecture photographs.',
+    detailsFa: 'پخش رسمی ویدیوهای برگزیدگان بین‌المللی در ویمئو.',
+    link: 'https://vimeo.com/1196875037?fl=pl&fe=sh',
+    linkTextDe: 'Film auf Vimeo ansehen →',
+    linkTextEn: 'Watch Film on Vimeo →',
+    linkTextFa: 'تماشای فیلم در ویمئو ←',
+    type: 'video'
+  },
+  {
+    id: 'apmp-magcloud-2025',
+    titleDe: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
+    titleEn: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
+    titleFa: 'کتاب برگزیدگان مسترپرایز عکاسی معماری ۲۰۲۵ (APMP)',
+    subtitleDe: 'Offizielle MagCloud-Katalogpublikation',
+    subtitleEn: 'Official MagCloud Print & Digital Edition',
+    subtitleFa: 'چاپ رسمی کاتالوگ بین‌المللی مسترپرایز معماری',
+    publisher: 'Architecture MasterPrize (AMP / APMP)',
+    detailsDe: 'Gewinnerin in Exterior Architecture Photography – Other Exterior.',
+    detailsEn: 'Winner in Exterior Architecture Photography – Other Exterior.',
+    detailsFa: 'برنده جایزه عکاسی معماری نمای بیرونی.',
+    link: 'https://www.magcloud.com/browse/issue/3262571',
+    linkTextDe: 'MagCloud Magazin ansehen →',
+    linkTextEn: 'View MagCloud Issue →',
+    linkTextFa: 'مشاهده در مگ‌کلود ←',
+    type: 'book'
+  },
+  {
+    id: 'globallens-editors-choice',
+    titleDe: 'Global Lens Photography Awards (GL) 2026 – Editor’s Choice',
+    titleEn: 'Global Lens Photography Awards (GL) 2026 – Editor’s Choice',
+    titleFa: 'انتخاب سردبیر جوایز جهانی عکس گلوبال لنز ۲۰۲۶',
+    subtitleDe: 'Besondere Würdigung »The Solitaire as Abstraction – In Harmony with Nature«',
+    subtitleEn: 'Recognition: "The Solitaire as Abstraction – In Harmony with Nature"',
+    subtitleFa: 'برگزیده ویژه سردبیر برای تک‌بنا در هماهنگی با طبیعت',
+    publisher: 'Global Lens Photography Awards (GL)',
+    detailsDe: 'Besondere redaktionelle Auszeichnung und Feature der Serie.',
+    detailsEn: 'Special editorial recognition and feature for the Solitaire series.',
+    detailsFa: 'انتخاب ویژه هیئت داوران و سردبیر.',
+    link: 'https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/',
+    linkTextDe: 'Editor’s Choice Profil ansehen →',
+    linkTextEn: 'View Editor’s Choice Feature →',
+    linkTextFa: 'مشاهده اثر در سایت گلوبال لنز ←',
+    type: 'editors-choice',
+    coverImage: '/images/2026_07_tsaaihwn-1008x2048.jpg'
+  },
+  {
+    id: 'perspa-editors-choice',
+    titleDe: 'PERSPA 2026 – Editor’s Choice Galerie (Bourges, Frankreich)',
+    titleEn: 'PERSPA 2026 – Editor’s Choice Gallery (Bourges, France)',
+    titleFa: 'گالری برگزیدگان سردبیر PERSPA فرانسه ۲۰۲۶',
+    subtitleDe: 'Auswahl für Solitaire, Elegance of Structure & Hephaestus’ Legacy',
+    subtitleEn: 'Triple Selection: Solitaire, Elegance of Structure & Hephaestus’ Legacy',
+    subtitleFa: 'انتخاب سه‌گانه آثار برجسته معماری',
+    publisher: 'PRIX DE LA PERSPECTIVE ARCHITECTURALE',
+    detailsDe: 'Ausgewählt für die kuratierte offizielle Editor’s Choice Galerie in Frankreich.',
+    detailsEn: 'Selected for the official curated gallery showcase in France.',
+    detailsFa: 'نمایش در گالری برگزیدگان رسمی در فرانسه.',
+    link: 'https://perspa.fr/editor-choice/',
+    linkTextDe: 'PERSPA Galerie öffnen →',
+    linkTextEn: 'Open PERSPA Gallery →',
+    linkTextFa: 'مشاهده گالری رسمی PERSPA ←',
+    type: 'editors-choice',
+    coverImage: '/images/2026_07_haphaestus-1214x2048.jpg'
   }
 ];

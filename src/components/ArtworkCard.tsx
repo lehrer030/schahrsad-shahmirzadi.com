@@ -1,6 +1,7 @@
 import React from 'react';
 import type { PhotoSeries, AwardBadge, Language } from '../data/photographyData';
 import { ExternalLink, Images, ArrowUpRight, Maximize2, Award } from 'lucide-react';
+import { resolveAsset } from '../utils/resolveAsset';
 
 interface ArtworkCardProps {
   series: PhotoSeries;
@@ -43,7 +44,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={`${badge.badgeImage}?v=2`}
+          src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
           className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
@@ -110,7 +111,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             className="group/img relative rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer w-full transition-all duration-300"
           >
             <img
-              src={series.coverImage}
+              src={resolveAsset(series.coverImage)}
               alt={series.titleEn}
               draggable={false}
               className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-500 group-hover/img:scale-[1.01] select-none"

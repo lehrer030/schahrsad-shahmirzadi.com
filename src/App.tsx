@@ -6,6 +6,7 @@ import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
 import { ArtistVita } from './components/ArtistVita';
 import { PressSection } from './components/PressSection';
+import { GallerySection } from './components/GallerySection';
 import { Footer } from './components/Footer';
 import { LightboxModal } from './components/LightboxModal';
 import { LegalModal } from './components/LegalModal';
@@ -53,7 +54,7 @@ const getInitialLanguage = (): Language => {
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>(getInitialLanguage);
   const [currentCategory, setCurrentCategory] = useState<
-    'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'
+    'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery'
   >('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
 
@@ -146,13 +147,14 @@ export default function App() {
   useEffect(() => {
     if (selectedSeriesId) return;
 
-    const sectionIds: Array<'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'> = [
+    const sectionIds: Array<'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery'> = [
       'architecture',
       'fine-art',
       'social-environmental',
       'portraits',
       'biography',
-      'press'
+      'press',
+      'gallery'
     ];
 
     const handleScroll = () => {
@@ -189,7 +191,7 @@ export default function App() {
   };
 
   // One-Pager Smooth Scroll Action
-  const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => {
+  const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery') => {
     setCurrentCategory(cat);
     setSelectedSeriesId(null);
 
@@ -451,6 +453,14 @@ export default function App() {
 
               <PressSection currentLang={currentLang} />
             </section>
+
+            {/* -------------------------------------------------------------
+                SECTION 7: GALLERY (WORDPRESS ORIGINAL: KICKBOXING VIDEO, RUNNING & IPA ATHENS GALA)
+               ------------------------------------------------------------- */}
+            <GallerySection
+              currentLang={currentLang}
+              onOpenLightbox={handleOpenLightbox}
+            />
 
           </div>
       </main>

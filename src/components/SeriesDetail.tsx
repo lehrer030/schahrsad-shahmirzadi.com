@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import type { PhotoSeries, AwardBadge, Language } from '../data/photographyData';
 import { ExternalLink, ShieldCheck, Maximize2, X, ArrowLeft, ArrowRight } from 'lucide-react';
+import { resolveAsset } from '../utils/resolveAsset';
 
 interface SeriesDetailProps {
   series: PhotoSeries;
@@ -56,7 +57,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={`${badge.badgeImage}?v=2`}
+          src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
           className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover:brightness-105"
         />
@@ -200,7 +201,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 className="group/first relative rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md cursor-pointer"
               >
                 <img
-                  src={firstPhoto.src}
+                  src={resolveAsset(firstPhoto.src)}
                   alt={firstPhoto.alt}
                   draggable={false}
                   className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/first:scale-[1.01] select-none"
@@ -260,7 +261,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   className="group/photo relative rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md max-w-xl mx-auto cursor-pointer"
                 >
                   <img
-                    src={photo.src}
+                    src={resolveAsset(photo.src)}
                     alt={photo.alt}
                     draggable={false}
                     className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/photo:scale-[1.01] select-none"

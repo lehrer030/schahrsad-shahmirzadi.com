@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, ShieldCheck, Heart, ExternalLink } from 'lucide-react';
 import type { PhotoItem, Language } from '../data/photographyData';
+import { resolveAsset } from '../utils/resolveAsset';
 
 interface LightboxModalProps {
   photos: PhotoItem[];
@@ -94,10 +95,16 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       >
         <div className="relative rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl">
           <img
-            src={currentPhoto.src}
+            src={resolveAsset(currentPhoto.src)}
             alt={currentPhoto.alt}
             draggable={false}
             className="max-h-[75vh] w-auto max-w-full object-contain mx-auto select-none"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src.endsWith('.webp')) {
+                target.src = target.src.replace(/\.webp$/, '.jpg');
+              }
+            }}
           />
 
           {/* Transparent Protective Shield against right click & drag */}
@@ -114,7 +121,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         </div>
 
         {/* Caption */}
-        {(currentPhoto.captionDe || currentPhoto.captionFa) && (
+        {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
           <p className="text-center text-xs sm:text-sm text-stone-300 font-sans tracking-wide mt-3 max-w-2xl px-4 font-normal">
             {currentLang === 'de'
               ? currentPhoto.captionDe
@@ -122,6 +129,29 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
               ? currentPhoto.captionFa
               : currentPhoto.captionEn}
           </p>
+        )}
+
+        {/* Optional External Donation / Fundraising Link */}
+        {currentPhoto.externalLink && (
+          <div className="mt-3 flex justify-center">
+            <a
+              href={currentPhoto.externalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded text-xs sm:text-sm font-semibold transition-colors shadow-lg"
+            >
+              <Heart className="w-4 h-4 fill-white" />
+              <span>
+                {currentLang === 'de'
+                  ? (currentPhoto.externalLinkTextDe || 'Support the fundraising run →')
+                  : currentLang === 'fa'
+                  ? (currentPhoto.externalLinkTextFa || 'Support the fundraising run →')
+                  : (currentPhoto.externalLinkTextEn || 'Support the fundraising run →')}
+              </span>
+              <ExternalLink className="w-3.5 h-3.5 opacity-90" />
+            </a>
+          </div>
         )}
       </div>
 

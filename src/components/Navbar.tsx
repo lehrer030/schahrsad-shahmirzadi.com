@@ -3,8 +3,8 @@ import { Globe, Menu, X } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface NavbarProps {
-  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press';
-  onSelectCategory: (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => void;
+  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery';
+  onSelectCategory: (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery') => void;
   currentLang: Language;
   onToggleLang: (lang: Language) => void;
   onGoHome: () => void;
@@ -62,10 +62,16 @@ export const Navbar: React.FC<NavbarProps> = ({
       labelDe: 'Presse & Medien',
       labelEn: 'Press & Media',
       labelFa: 'رسانه‌ها'
+    },
+    {
+      id: 'gallery' as const,
+      labelDe: 'Galerie & Momente',
+      labelEn: 'Gallery',
+      labelFa: 'گالری'
     }
   ];
 
-  const handleSelect = (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => {
+  const handleSelect = (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery') => {
     onSelectCategory(catId);
     setMobileMenuOpen(false);
   };
@@ -246,7 +252,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <p className="text-[10px] uppercase tracking-widest text-stone-500 font-mono font-medium mb-2">
               {currentLang === 'de' ? 'Information' : currentLang === 'fa' ? 'اطلاعات' : 'Information'}
             </p>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               {secondarySections.map(sec => {
                 const isActive = currentCategory === sec.id;
                 return (

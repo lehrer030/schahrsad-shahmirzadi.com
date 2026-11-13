@@ -1,6 +1,7 @@
 import React from 'react';
 import type { FurtherWork, Language, PhotoItem } from '../data/photographyData';
 import { ExternalLink, Image as ImageIcon, Eye } from 'lucide-react';
+import { resolveAsset } from '../utils/resolveAsset';
 
 interface FurtherWorksProps {
   works: FurtherWork[];
@@ -62,37 +63,29 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       }
                     }}
                   >
-                    <picture className="w-full h-full block">
-                      <source
-                        srcSet={work.previewImage.replace(/\.(jpeg|jpg)$/, '.webp')}
-                        type="image/webp"
-                      />
-                      <source
-                        srcSet={work.previewImage.replace(/\.webp$/, '.jpeg')}
-                        type="image/jpeg"
-                      />
-                      <img
-                        src={work.previewImage}
-                        alt={work.titleDe}
-                        draggable={false}
-                        className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
-                        loading="lazy"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          const count = parseInt(target.dataset.fallbackCount || '0', 10);
-                          target.dataset.fallbackCount = String(count + 1);
-                          if (count === 0) {
-                            if (target.src.endsWith('.webp')) {
-                              target.src = target.src.replace(/\.webp$/, '.jpeg');
-                            } else if (target.src.endsWith('.jpeg')) {
-                              target.src = target.src.replace(/\.jpeg$/, '.webp');
-                            }
-                          } else if (count === 1 && target.src.includes('-scaled')) {
-                            target.src = target.src.replace('-scaled', '');
+                    <img
+                      src={resolveAsset(work.previewImage)}
+                      alt={work.titleDe}
+                      draggable={false}
+                      className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
+                      loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        const count = parseInt(target.dataset.fallbackCount || '0', 10);
+                        target.dataset.fallbackCount = String(count + 1);
+                        if (count === 0) {
+                          if (target.src.endsWith('.webp')) {
+                            target.src = target.src.replace(/\.webp$/, '.jpg');
+                          } else if (target.src.endsWith('.jpg')) {
+                            target.src = target.src.replace(/\.jpg$/, '.jpeg');
+                          } else if (target.src.endsWith('.jpeg')) {
+                            target.src = target.src.replace(/\.jpeg$/, '.webp');
                           }
-                        }}
-                      />
-                    </picture>
+                        } else if (count === 1 && target.src.includes('-scaled')) {
+                          target.src = target.src.replace('-scaled', '');
+                        }
+                      }}
+                    />
                     <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
                     
                     {/* Photo count indicator */}
