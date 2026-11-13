@@ -555,33 +555,97 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'cloud-mirror-i-01',
         src: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 01',
-        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge',
-        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge',
-        captionFa: 'معماری آینه ابرها ۱: پل بهشت'
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 01)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 01)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۱)'
       },
       {
         id: 'cloud-mirror-i-02',
         src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 02',
-        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge II',
-        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge II',
-        captionFa: 'معماری آینه ابرها ۱: پل بهشت ۲'
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 02)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 02)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۲)'
+      },
+      {
+        id: 'cloud-mirror-i-03',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-03-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 03',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 03)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 03)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۳)'
+      },
+      {
+        id: 'cloud-mirror-i-04',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 04',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 04)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 04)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۴)'
+      },
+      {
+        id: 'cloud-mirror-i-05',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-05-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 05',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 05)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 05)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۵)'
+      },
+      {
+        id: 'cloud-mirror-i-06',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-06-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 06',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 06)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 06)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۶)'
+      },
+      {
+        id: 'cloud-mirror-i-07',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-07-scaled.webp',
+        alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 07',
+        captionDe: 'Cloud Mirror Architecture I: Heaven’s Bridge (Werk 07)',
+        captionEn: 'Cloud Mirror Architecture I: Heaven’s Bridge (Work 07)',
+        captionFa: 'معماری آینه ابرها ۱: پل بهشت (اثر ۰۷)'
       },
       {
         id: 'cloud-mirror-ii-bw-01',
         src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-01-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
-        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
-        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
-        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید)'
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 01',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (B&W Werk 01)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (B&W Work 01)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید ۱)'
       },
       {
         id: 'cloud-mirror-ii-bw-02',
         src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-02-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
-        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
-        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) II',
-        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی ۲'
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 02',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (B&W Werk 02)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (B&W Work 02)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید ۲)'
+      },
+      {
+        id: 'cloud-mirror-ii-bw-03',
+        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-03-scaled.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 03',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (B&W Werk 03)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (B&W Work 03)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید ۳)'
+      },
+      {
+        id: 'cloud-mirror-ii-bw-04',
+        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-04-scaled.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 04',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (B&W Werk 04)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (B&W Work 04)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید ۴)'
+      },
+      {
+        id: 'cloud-mirror-ii-bw-05',
+        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-05-scaled.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 05',
+        captionDe: 'Cloud Mirror Architecture II: Stormy Sea (B&W Werk 05)',
+        captionEn: 'Cloud Mirror Architecture II: Stormy Sea (B&W Work 05)',
+        captionFa: 'معماری آینه ابرها ۲: دریای طوفانی (سیاه و سفید ۵)'
       }
     ]
   },
@@ -622,6 +686,30 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         captionDe: 'Black Red Gold – Office of the Federal President III',
         captionEn: 'Black Red Gold – Office of the Federal President III',
         captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۳'
+      },
+      {
+        id: 'black-red-gold-04',
+        src: '/images/2026_10_amp-2026-black-red-gold-04-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 04',
+        captionDe: 'Black Red Gold – Office of the Federal President IV',
+        captionEn: 'Black Red Gold – Office of the Federal President IV',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۴'
+      },
+      {
+        id: 'black-red-gold-05',
+        src: '/images/2026_10_amp-2026-black-red-gold-05-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 05',
+        captionDe: 'Black Red Gold – Office of the Federal President V',
+        captionEn: 'Black Red Gold – Office of the Federal President V',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۵'
+      },
+      {
+        id: 'black-red-gold-06',
+        src: '/images/2026_10_amp-2026-black-red-gold-06-scaled.webp',
+        alt: 'Black Red Gold – Office of the Federal President of Germany 06',
+        captionDe: 'Black Red Gold – Office of the Federal President VI',
+        captionEn: 'Black Red Gold – Office of the Federal President VI',
+        captionFa: 'سیاه سرخ طلایی – دفتر ریاست‌جمهوری آلمان ۶'
       }
     ]
   },
@@ -693,31 +781,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/',
-    previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.jpeg',
+    previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'hephaestus-01',
-        src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.jpeg',
-        alt: 'Hephaestus’ Legacy I',
+        src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+        alt: 'Hephaestus’ Legacy 01',
         captionDe: 'Hephaestus’ Legacy I',
         captionEn: 'Hephaestus’ Legacy I',
         captionFa: 'میراث هفائستوس ۱'
       },
       {
         id: 'hephaestus-02',
-        src: '/images/2026_09_os-06-hephaestus-legacy-02-scaled.jpeg',
-        alt: 'Hephaestus’ Legacy II',
+        src: '/images/2026_09_os-06-hephaestus-legacy-02-scaled.webp',
+        alt: 'Hephaestus’ Legacy 02',
         captionDe: 'Hephaestus’ Legacy II',
         captionEn: 'Hephaestus’ Legacy II',
         captionFa: 'میراث هفائستوس ۲'
       },
       {
         id: 'hephaestus-03',
-        src: '/images/2026_09_os-06-hephaestus-legacy-03-scaled.jpeg',
-        alt: 'Hephaestus’ Legacy III',
+        src: '/images/2026_09_os-06-hephaestus-legacy-03-scaled.webp',
+        alt: 'Hephaestus’ Legacy 03',
         captionDe: 'Hephaestus’ Legacy III',
         captionEn: 'Hephaestus’ Legacy III',
         captionFa: 'میراث هفائستوس ۳'
+      },
+      {
+        id: 'hephaestus-04',
+        src: '/images/2026_09_os-06-hephaestus-legacy-04-scaled.webp',
+        alt: 'Hephaestus’ Legacy 04',
+        captionDe: 'Hephaestus’ Legacy IV',
+        captionEn: 'Hephaestus’ Legacy IV',
+        captionFa: 'میراث هفائستوس ۴'
+      },
+      {
+        id: 'hephaestus-05',
+        src: '/images/2026_09_os-06-hephaestus-legacy-05-scaled.webp',
+        alt: 'Hephaestus’ Legacy 05',
+        captionDe: 'Hephaestus’ Legacy V',
+        captionEn: 'Hephaestus’ Legacy V',
+        captionFa: 'میراث هفائستوس ۵'
       }
     ]
   },
@@ -837,11 +941,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25',
-    previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.jpeg',
+    previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'fragments-01',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.jpeg',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
         alt: 'Fragments of Memory I',
         captionDe: 'Fragments of Memory I',
         captionEn: 'Fragments of Memory I',
@@ -849,11 +953,35 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       },
       {
         id: 'fragments-02',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-02-scaled.jpeg',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-02-scaled.webp',
         alt: 'Fragments of Memory II',
         captionDe: 'Fragments of Memory II',
         captionEn: 'Fragments of Memory II',
         captionFa: 'خرده‌های خاطره ۲'
+      },
+      {
+        id: 'fragments-03',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-03-scaled.webp',
+        alt: 'Fragments of Memory III',
+        captionDe: 'Fragments of Memory III',
+        captionEn: 'Fragments of Memory III',
+        captionFa: 'خرده‌های خاطره ۳'
+      },
+      {
+        id: 'fragments-04',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-04-scaled.webp',
+        alt: 'Fragments of Memory IV',
+        captionDe: 'Fragments of Memory IV',
+        captionEn: 'Fragments of Memory IV',
+        captionFa: 'خرده‌های خاطره ۴'
+      },
+      {
+        id: 'fragments-05',
+        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-05-scaled.webp',
+        alt: 'Fragments of Memory V',
+        captionDe: 'Fragments of Memory V',
+        captionEn: 'Fragments of Memory V',
+        captionFa: 'خرده‌های خاطره ۵'
       }
     ]
   },
@@ -869,11 +997,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25',
-    previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.jpeg',
+    previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'symmetric-01',
-        src: '/images/2026_09_os-11-symmetric-networks-01-scaled.jpeg',
+        src: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
         alt: 'Symmetric Networks I',
         captionDe: 'Symmetric Networks I',
         captionEn: 'Symmetric Networks I',
@@ -881,11 +1009,43 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       },
       {
         id: 'symmetric-02',
-        src: '/images/2026_09_os-11-symmetric-networks-02-scaled.jpeg',
+        src: '/images/2026_09_os-11-symmetric-networks-02-scaled.webp',
         alt: 'Symmetric Networks II',
         captionDe: 'Symmetric Networks II',
         captionEn: 'Symmetric Networks II',
         captionFa: 'شبکه‌های متقارن ۲'
+      },
+      {
+        id: 'symmetric-03',
+        src: '/images/2026_09_os-11-symmetric-networks-03-scaled.webp',
+        alt: 'Symmetric Networks III',
+        captionDe: 'Symmetric Networks III',
+        captionEn: 'Symmetric Networks III',
+        captionFa: 'شبکه‌های متقارن ۳'
+      },
+      {
+        id: 'symmetric-04',
+        src: '/images/2026_09_os-11-symmetric-networks-04-scaled.webp',
+        alt: 'Symmetric Networks IV',
+        captionDe: 'Symmetric Networks IV',
+        captionEn: 'Symmetric Networks IV',
+        captionFa: 'شبکه‌های متقارن ۴'
+      },
+      {
+        id: 'symmetric-05',
+        src: '/images/2026_09_os-11-symmetric-networks-05-scaled.webp',
+        alt: 'Symmetric Networks V',
+        captionDe: 'Symmetric Networks V',
+        captionEn: 'Symmetric Networks V',
+        captionFa: 'شبکه‌های متقارن ۵'
+      },
+      {
+        id: 'symmetric-06',
+        src: '/images/2026_09_os-11-symmetric-networks-06-scaled.webp',
+        alt: 'Symmetric Networks VI',
+        captionDe: 'Symmetric Networks VI',
+        captionEn: 'Symmetric Networks VI',
+        captionFa: 'شبکه‌های متقارن ۶'
       }
     ]
   },
@@ -1648,3 +1808,65 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     type: 'book'
   }
 ];
+
+// Helper to convert any FurtherWork into a full PhotoSeries for SeriesDetail modal viewing
+function furtherWorkToSeries(
+  work: FurtherWork,
+  category: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits'
+): PhotoSeries {
+  return {
+    id: work.id,
+    category,
+    titleDe: work.titleDe,
+    titleEn: work.titleEn,
+    titleFa: work.titleFa,
+    subtitleDe: `${work.category} (${work.galleryPhotos?.length || 1} Werke)`,
+    subtitleEn: `${work.category} (${work.galleryPhotos?.length || 1} Works)`,
+    subtitleFa: `${work.categoryFa || work.category} (${work.galleryPhotos?.length || 1} اثر)`,
+    descriptionDe: work.awardsDe,
+    descriptionEn: work.awardsEn,
+    descriptionFa: work.awardsFa,
+    coverImage: work.previewImage || (work.galleryPhotos && work.galleryPhotos[0]?.src) || '',
+    photos: work.galleryPhotos || [],
+    badges: (work.badgeNames || []).map((name, idx) => ({
+      id: `${work.id}-badge-${idx}`,
+      name,
+      award: name,
+      year: '2026',
+      badgeImage: '/images/2026_10_winners_badge-1024x474.webp',
+      link: work.link || 'https://schahrsad-shahmirzadi.com',
+      position: 'inline' as const
+    }))
+  };
+}
+
+// Complete series registry enabling viewing full photo series for EVERY artwork on the website
+export const ALL_SERIES_MAP: Record<string, PhotoSeries> = {
+  [SOLITAIRE_SERIES_1.id]: SOLITAIRE_SERIES_1,
+  [SOLITAIRE_SERIES_2.id]: SOLITAIRE_SERIES_2,
+};
+
+FURTHER_WORKS_ARCHITECTURE.forEach(w => {
+  if (w.galleryPhotos && w.galleryPhotos.length > 0) {
+    ALL_SERIES_MAP[w.id] = furtherWorkToSeries(w, 'architecture');
+  }
+});
+
+FINE_ART_WORKS.forEach(w => {
+  if (w.galleryPhotos && w.galleryPhotos.length > 0) {
+    ALL_SERIES_MAP[w.id] = furtherWorkToSeries(w, 'fine-art');
+  }
+});
+
+SOCIAL_ENVIRONMENTAL_WORKS.forEach(w => {
+  if (w.galleryPhotos && w.galleryPhotos.length > 0) {
+    ALL_SERIES_MAP[w.id] = furtherWorkToSeries(w, 'social-environmental');
+  }
+});
+
+PORTRAIT_WORKS.forEach(w => {
+  if (w.galleryPhotos && w.galleryPhotos.length > 0) {
+    ALL_SERIES_MAP[w.id] = furtherWorkToSeries(w, 'portraits');
+  }
+});
+

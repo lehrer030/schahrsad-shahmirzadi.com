@@ -10,6 +10,7 @@ interface FurtherWorksProps {
   sectionTitleEn?: string;
   sectionTitleFa?: string;
   onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
+  onOpenSeries?: (seriesId: string) => void;
 }
 
 export const FurtherWorks: React.FC<FurtherWorksProps> = ({
@@ -18,7 +19,8 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   sectionTitleDe = 'Weitere Werke',
   sectionTitleEn = 'Further Works',
   sectionTitleFa = 'سایر آثار',
-  onOpenLightbox
+  onOpenLightbox,
+  onOpenSeries
 }) => {
   return (
     <section className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-stone-200 w-full">
@@ -137,26 +139,47 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 </p>
               </div>
 
-              {/* Clean External link without badges */}
-              {work.link && (
-                <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-end">
+              {/* Action Bar: View full photo series and official award link */}
+              <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (onOpenSeries) {
+                      onOpenSeries(work.id);
+                    } else if (onOpenLightbox && work.galleryPhotos) {
+                      onOpenLightbox(work.galleryPhotos, 0);
+                    }
+                  }}
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors cursor-pointer group/btn"
+                >
+                  <span className="group-hover/btn:underline">
+                    {currentLang === 'fa'
+                      ? `مشاهده سری کامل (${work.galleryPhotos?.length || 1} اثر) ←`
+                      : currentLang === 'de'
+                      ? `Serie ansehen (${work.galleryPhotos?.length || 1} Fotos) →`
+                      : `View Series (${work.galleryPhotos?.length || 1} Photos) →`}
+                  </span>
+                </button>
+
+                {work.link && (
                   <a
                     href={work.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-stone-600 hover:text-stone-900 transition-colors"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-stone-500 hover:text-stone-900 transition-colors shrink-0"
+                    title="Offizielle Verifikation ansehen"
                   >
                     <span>
                       {currentLang === 'de'
-                        ? 'Wettbewerb ansehen'
+                        ? 'Award'
                         : currentLang === 'fa'
-                        ? 'مشاهده مسابقه'
-                        : 'View Competition'}
+                        ? 'جایزه'
+                        : 'Award'}
                     </span>
                     <ExternalLink className="w-3 h-3 text-stone-400" />
                   </a>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           ))}
         </div>

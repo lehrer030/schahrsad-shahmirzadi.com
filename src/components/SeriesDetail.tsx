@@ -35,9 +35,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
   }, [onBack]);
 
   // Badges for Image 1 (strictly AMP top-left, IPA bottom-right)
-  const ampBadge = series.badges.find(b => b.position === 'top-left' || b.name.includes('AMP'));
-  const ipaBadge = series.badges.find(b => b.position === 'bottom-right' || b.name.includes('IPA'));
-  const otherBadges = series.badges.filter(b => b !== ampBadge && b !== ipaBadge);
+  const badges = series.badges || [];
+  const ampBadge = badges.find(b => b.position === 'top-left' || b.name.includes('AMP'));
+  const ipaBadge = badges.find(b => b.position === 'bottom-right' || b.name.includes('IPA'));
+  const otherBadges = badges.filter(b => b !== ampBadge && b !== ipaBadge);
   const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
   const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
 

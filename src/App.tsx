@@ -5,6 +5,7 @@ import { ArtworkCard } from './components/ArtworkCard';
 import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
 import { KickboxingFullSection } from './components/KickboxingFullSection';
+import { AwardReferencesSection } from './components/AwardReferencesSection';
 import { ArtistVita } from './components/ArtistVita';
 import { PressSection } from './components/PressSection';
 import { GallerySection } from './components/GallerySection';
@@ -22,6 +23,7 @@ import {
   FINE_ART_WORKS,
   SOCIAL_ENVIRONMENTAL_WORKS,
   PORTRAIT_WORKS,
+  ALL_SERIES_MAP,
   type PhotoSeries,
   type PhotoItem,
   type Language
@@ -200,6 +202,17 @@ export default function App() {
         const el = document.getElementById('engagement') || document.getElementById('social-environmental');
         if (el) el.scrollIntoView({ behavior: 'smooth' });
       }
+      // 10. Award References & Photoart routes
+      else if (
+        pathname.includes('/international-photography-award-references') ||
+        pathname.includes('/photoart') ||
+        hash === '#award-references' ||
+        hash === '#photoart'
+      ) {
+        setCurrentCategory('press');
+        const el = document.getElementById('award-references') || document.getElementById('press');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
     };
 
     handleRouting();
@@ -246,10 +259,8 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [selectedSeriesId]);
 
-  const seriesMap: Record<string, PhotoSeries> = {
-    [SOLITAIRE_SERIES_1.id]: SOLITAIRE_SERIES_1,
-    [SOLITAIRE_SERIES_2.id]: SOLITAIRE_SERIES_2
-  };
+  // Comprehensive series map including all core and further works across all 4 categories
+  const seriesMap: Record<string, PhotoSeries> = ALL_SERIES_MAP;
 
   const handleOpenSeries = (seriesId: string) => {
     setSelectedSeriesId(seriesId);
@@ -384,6 +395,7 @@ export default function App() {
                 sectionTitleEn="Further Works (Architecture)"
                 sectionTitleFa="سایر آثار معماری"
                 onOpenLightbox={handleOpenLightbox}
+                onOpenSeries={handleOpenSeries}
               />
             </section>
 
@@ -414,6 +426,7 @@ export default function App() {
                 sectionTitleEn="Fine Art – Series"
                 sectionTitleFa="هنرهای زیبا – مجموعه‌ها"
                 onOpenLightbox={handleOpenLightbox}
+                onOpenSeries={handleOpenSeries}
               />
             </section>
 
@@ -444,6 +457,7 @@ export default function App() {
                 sectionTitleEn="Social and Environmental Themes – Series"
                 sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – مجموعه‌ها"
                 onOpenLightbox={handleOpenLightbox}
+                onOpenSeries={handleOpenSeries}
               />
             </section>
 
@@ -474,6 +488,7 @@ export default function App() {
                 sectionTitleEn="Portraits & Self-Portraits"
                 sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
                 onOpenLightbox={handleOpenLightbox}
+                onOpenSeries={handleOpenSeries}
               />
             </section>
 
@@ -527,6 +542,15 @@ export default function App() {
               </div>
 
               <PressSection currentLang={currentLang} />
+            </section>
+
+
+            {/* -------------------------------------------------------------
+                SECTION: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
+               ------------------------------------------------------------- */}
+            <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
+              <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
+              <AwardReferencesSection currentLang={currentLang} />
             </section>
 
             {/* -------------------------------------------------------------
