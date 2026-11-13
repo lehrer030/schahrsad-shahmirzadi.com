@@ -74,7 +74,13 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     {work.galleryPhotos && work.galleryPhotos.length > 1 && (
                       <div className="absolute bottom-2 right-2 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
                         <ImageIcon className="w-3 h-3 text-stone-300" />
-                        <span>{work.galleryPhotos.length} Fotos</span>
+                        <span>
+                          {currentLang === 'fa'
+                            ? `${work.galleryPhotos.length} تصویر`
+                            : currentLang === 'de'
+                            ? `${work.galleryPhotos.length} Fotos`
+                            : `${work.galleryPhotos.length} Photos`}
+                        </span>
                       </div>
                     )}
 

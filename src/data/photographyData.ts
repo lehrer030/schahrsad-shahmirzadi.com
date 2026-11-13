@@ -70,7 +70,7 @@ export interface CategoryInfo {
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'architecture',
-    titleDe: 'Architecture',
+    titleDe: 'Architektur',
     titleEn: 'Architecture',
     titleFa: 'معماری',
     descriptionDe: 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.',
@@ -88,7 +88,7 @@ export const CATEGORIES: CategoryInfo[] = [
   },
   {
     id: 'social-environmental',
-    titleDe: 'Social & Environmental Themes',
+    titleDe: 'Gesellschaft & Umwelt',
     titleEn: 'Social & Environmental Themes',
     titleFa: 'مضامین اجتماعی و زیست‌محیطی',
     descriptionDe: 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.',
@@ -97,7 +97,7 @@ export const CATEGORIES: CategoryInfo[] = [
   },
   {
     id: 'portraits',
-    titleDe: 'Portraits',
+    titleDe: 'Porträts',
     titleEn: 'Portraits',
     titleFa: 'پرتره‌ها',
     descriptionDe: 'Fotografische Porträts und Selbstporträts.',
@@ -115,7 +115,7 @@ export const CATEGORIES: CategoryInfo[] = [
   },
   {
     id: 'press',
-    titleDe: 'Press & Media',
+    titleDe: 'Presse & Medien',
     titleEn: 'Press & Media',
     titleFa: 'رسانه‌ها و مطبوعات',
     descriptionDe: 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.',
@@ -126,6 +126,7 @@ export const CATEGORIES: CategoryInfo[] = [
 
 export const INTRO_CONTENT = {
   mainHeader: 'Photography – Works – International Awards',
+  mainHeaderDe: 'Photographie – Werke – Internationale Auszeichnungen',
   mainHeaderFa: 'عکاسی – آثار – جوایز بین‌المللی',
   subtitleDe: 'Fotografie & Kunst · Mehrfach international ausgezeichnet & prämiert',
   subtitleEn: 'Photography & Art · Internationally awarded & recognized multiple times',
@@ -195,7 +196,7 @@ Her deliberate use of the traditional German spelling "Photographie," with "ph" 
 export const SOLITAIRE_SERIES_1: PhotoSeries = {
   id: 'the-solitaire-as-abstraction-in-harmony-with-nature',
   category: 'architecture',
-  titleDe: 'The Solitaire as Abstraction – In Harmony with Nature',
+  titleDe: 'Der Solitär als Abstraktion – Im Einklang mit der Natur',
   titleEn: 'The Solitaire as Abstraction – In Harmony with Nature',
   titleFa: 'The Solitaire as Abstraction – In Harmony with Nature (تک‌بنا به مثابه انتزاع – در هماهنگی با طبیعت)',
   subtitleDe: 'Architektur / Sonstige Außenaufnahmen (7 Werke)',
@@ -310,7 +311,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
 export const SOLITAIRE_SERIES_2: PhotoSeries = {
   id: 'the-solitaire-as-an-abstraction-revised',
   category: 'architecture',
-  titleDe: 'The Solitaire as an Abstraction (Revised)',
+  titleDe: 'Der Solitär als Abstraktion (Überarbeitete Fassung)',
   titleEn: 'The Solitaire as an Abstraction (Revised)',
   titleFa: 'The Solitaire as an Abstraction (Revised) (تک‌بنا به مثابه انتزاع - نسخه بازنگری‌شده)',
   subtitleDe: 'Architektur / Abstrakt (5 Werke)',

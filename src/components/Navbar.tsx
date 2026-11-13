@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const coreCategories = [
     {
       id: 'architecture' as const,
-      labelDe: 'Architecture',
+      labelDe: 'Architektur',
       labelEn: 'Architecture',
       labelFa: 'معماری'
     },
@@ -37,13 +37,13 @@ export const Navbar: React.FC<NavbarProps> = ({
     },
     {
       id: 'social-environmental' as const,
-      labelDe: 'Social Themes',
+      labelDe: 'Gesellschaft & Umwelt',
       labelEn: 'Social Themes',
       labelFa: 'مضامین اجتماعی'
     },
     {
       id: 'portraits' as const,
-      labelDe: 'Portraits',
+      labelDe: 'Porträts',
       labelEn: 'Portraits',
       labelFa: 'پرتره‌ها'
     }
@@ -53,13 +53,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   const secondarySections = [
     {
       id: 'biography' as const,
-      labelDe: 'Vita',
+      labelDe: 'Vita & Engagement',
       labelEn: 'Vita',
       labelFa: 'زندگی‌نامه'
     },
     {
       id: 'press' as const,
-      labelDe: 'Press & Media',
+      labelDe: 'Presse & Medien',
       labelEn: 'Press & Media',
       labelFa: 'رسانه‌ها'
     }

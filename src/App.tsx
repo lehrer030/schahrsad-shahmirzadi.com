@@ -24,8 +24,33 @@ import {
   type Language
 } from './data/photographyData';
 
+const getInitialLanguage = (): Language => {
+  if (typeof window !== 'undefined') {
+    // 1. URL search parameter (?lang=de / ?lang=en / ?lang=fa)
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get('lang');
+    if (urlLang === 'de' || urlLang === 'en' || urlLang === 'fa') {
+      return urlLang;
+    }
+    // 2. Saved user selection in localStorage
+    const saved = localStorage.getItem('schirzan_preferred_lang');
+    if (saved === 'de' || saved === 'en' || saved === 'fa') {
+      return saved as Language;
+    }
+    // 3. Autonomous detection from browser / system language
+    const browserLanguages = navigator.languages || [navigator.language || ''];
+    for (const lang of browserLanguages) {
+      const lower = lang.toLowerCase();
+      if (lower.startsWith('fa')) return 'fa';
+      if (lower.startsWith('de')) return 'de';
+      if (lower.startsWith('en')) return 'en';
+    }
+  }
+  return 'de';
+};
+
 export default function App() {
-  const [currentLang, setCurrentLang] = useState<Language>('de');
+  const [currentLang, setCurrentLang] = useState<Language>(getInitialLanguage);
   const [currentCategory, setCurrentCategory] = useState<
     'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'
   >('architecture');
@@ -52,7 +77,7 @@ export default function App() {
 
   const [contactModalOpen, setContactModalOpen] = useState(false);
 
-  // Sync RTL / LTR direction and html lang attribute
+  // Sync RTL / LTR direction, html lang attribute, and persist language selection
   useEffect(() => {
     if (currentLang === 'fa') {
       document.documentElement.setAttribute('dir', 'rtl');
@@ -61,7 +86,23 @@ export default function App() {
       document.documentElement.setAttribute('dir', 'ltr');
       document.documentElement.setAttribute('lang', currentLang);
     }
+    localStorage.setItem('schirzan_preferred_lang', currentLang);
   }, [currentLang]);
+
+  // Autonomous listener for browser language changes
+  useEffect(() => {
+    const handleLangChange = () => {
+      const browserLanguages = navigator.languages || [navigator.language || ''];
+      for (const lang of browserLanguages) {
+        const lower = lang.toLowerCase();
+        if (lower.startsWith('fa')) { setCurrentLang('fa'); return; }
+        if (lower.startsWith('de')) { setCurrentLang('de'); return; }
+        if (lower.startsWith('en')) { setCurrentLang('en'); return; }
+      }
+    };
+    window.addEventListener('languagechange', handleLangChange);
+    return () => window.removeEventListener('languagechange', handleLangChange);
+  }, []);
 
   // One-Pager: ScrollSpy IntersectionObserver to track visible section on scroll
   useEffect(() => {
@@ -204,7 +245,7 @@ export default function App() {
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                    {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
+                    {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
@@ -285,7 +326,7 @@ export default function App() {
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                    {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
+                    {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
@@ -315,7 +356,7 @@ export default function App() {
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                    {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
+                    {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
@@ -368,7 +409,7 @@ export default function App() {
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                    {currentLang === 'de' ? 'Press & Media' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
+                    {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">

@@ -48,7 +48,11 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
             {/* Main Header as requested by client: "Photography – Works – International Awards" */}
             <div className="space-y-3">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold">
-                {currentLang === 'fa' ? INTRO_CONTENT.mainHeaderFa : INTRO_CONTENT.mainHeader}
+                {currentLang === 'de'
+                  ? (INTRO_CONTENT.mainHeaderDe || 'Photographie – Werke – Internationale Auszeichnungen')
+                  : currentLang === 'fa'
+                  ? INTRO_CONTENT.mainHeaderFa
+                  : INTRO_CONTENT.mainHeader}
               </h1>
 
               {/* Subtitle */}
