@@ -112,7 +112,8 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             <img
               src={series.coverImage}
               alt={series.titleEn}
-              className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-500 group-hover/img:scale-[1.01]"
+              draggable={false}
+              className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-500 group-hover/img:scale-[1.01] select-none"
               loading="lazy"
             />
 

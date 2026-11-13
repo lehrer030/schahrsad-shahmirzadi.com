@@ -65,7 +65,8 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     <img
                       src={work.previewImage}
                       alt={work.titleDe}
-                      className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out"
+                      draggable={false}
+                      className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />

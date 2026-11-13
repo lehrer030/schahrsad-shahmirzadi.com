@@ -96,7 +96,14 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           <img
             src={currentPhoto.src}
             alt={currentPhoto.alt}
-            className="max-h-[75vh] w-auto max-w-full object-contain mx-auto"
+            draggable={false}
+            className="max-h-[75vh] w-auto max-w-full object-contain mx-auto select-none"
+          />
+
+          {/* Transparent Protective Shield against right click & drag */}
+          <div 
+            className="absolute inset-0 z-10 select-none cursor-default" 
+            onContextMenu={(e) => e.preventDefault()} 
           />
 
           {/* Protective Watermark */}

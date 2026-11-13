@@ -12,6 +12,7 @@ import { LegalModal } from './components/LegalModal';
 import { ContactModal } from './components/ContactModal';
 import { CookieBanner } from './components/CookieBanner';
 import { BackToTop } from './components/BackToTop';
+import { ImageProtectionToast } from './components/ImageProtectionToast';
 import {
   SOLITAIRE_SERIES_1,
   SOLITAIRE_SERIES_2,
@@ -76,6 +77,43 @@ export default function App() {
   });
 
   const [contactModalOpen, setContactModalOpen] = useState(false);
+  const [protectionToastOpen, setProtectionToastOpen] = useState(false);
+
+  // Bild-Kopierschutz: Verhindert Rechtsklick / "Bild speichern unter" und Drag&Drop Download
+  useEffect(() => {
+    const handleContextMenu = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      const isArtworkImage = 
+        target.tagName === 'IMG' || 
+        target.closest('img') || 
+        target.closest('.group\\/img') || 
+        target.closest('.group\\/photo') || 
+        target.closest('.group\\/first') ||
+        target.classList.contains('protected-art');
+
+      if (isArtworkImage) {
+        e.preventDefault();
+        setProtectionToastOpen(true);
+      }
+    };
+
+    const handleDragStart = (e: DragEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === 'IMG' || target.closest('img'))) {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('contextmenu', handleContextMenu);
+    window.addEventListener('dragstart', handleDragStart);
+
+    return () => {
+      window.removeEventListener('contextmenu', handleContextMenu);
+      window.removeEventListener('dragstart', handleDragStart);
+    };
+  }, []);
 
   // Sync RTL / LTR direction, html lang attribute, and persist language selection
   useEffect(() => {
@@ -467,6 +505,14 @@ export default function App() {
 
       {/* MODERN MUST-HAVES: Back to Top Floating Action Button */}
       <BackToTop />
+
+      {/* MODERN MUST-HAVES: Digital Copyright Protection Toast */}
+      <ImageProtectionToast
+        isOpen={protectionToastOpen}
+        onClose={() => setProtectionToastOpen(false)}
+        onOpenContact={() => setContactModalOpen(true)}
+        currentLang={currentLang}
+      />
     </div>
   );
 }

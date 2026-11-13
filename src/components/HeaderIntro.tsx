@@ -76,7 +76,8 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   <img
                     src="/images/2025_07_photoart_bw.jpg"
                     alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
-                    className="w-full h-full object-cover object-center"
+                    draggable={false}
+                    className="w-full h-full object-cover object-center select-none"
                     loading="eager"
                   />
                   <div className="absolute top-2.5 right-2.5 bg-white/90 text-stone-700 p-1.5 rounded shadow-xs">
@@ -171,7 +172,8 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   <img
                     src="/images/2025_07_photoart_bw.jpg"
                     alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
-                    className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out"
+                    draggable={false}
+                    className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out select-none"
                     loading="eager"
                   />
                   

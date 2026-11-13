@@ -22,6 +22,29 @@
     font-weight: 400 !important;
   }
 
+  /* Bild-Kopierschutz: Verhindert Ziehen, Textauswahl und langes Antippen auf Mobilgeräten */
+  img, .protected-art {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* Druckschutz: Copyright-Wasserzeichen beim Drucken */
+  @media print {
+    body::before {
+      content: "© Schahrsad Shahmirzadi (SchirZan) · Urheberrechtlich geschützte Werke · https://schahrsad-shahmirzadi.com";
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 13pt;
+      margin-bottom: 20px;
+      color: #000;
+    }
+  }
+
   [dir="rtl"] {
     font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
   }

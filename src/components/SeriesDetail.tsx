@@ -202,7 +202,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 <img
                   src={firstPhoto.src}
                   alt={firstPhoto.alt}
-                  className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/first:scale-[1.01]"
+                  draggable={false}
+                  className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/first:scale-[1.01] select-none"
                 />
 
                 <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/first:opacity-100 transition-opacity flex items-center justify-center">
@@ -261,7 +262,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   <img
                     src={photo.src}
                     alt={photo.alt}
-                    className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/photo:scale-[1.01]"
+                    draggable={false}
+                    className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/photo:scale-[1.01] select-none"
                     loading="lazy"
                   />
 
