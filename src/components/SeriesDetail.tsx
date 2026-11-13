@@ -1,11 +1,11 @@
 import React from 'react';
-import type { PhotoSeries, AwardBadge } from '../data/photographyData';
-import { ArrowLeft, ExternalLink, ShieldCheck } from 'lucide-react';
+import type { PhotoSeries, AwardBadge, Language } from '../data/photographyData';
+import { ArrowLeft, ArrowRight, ExternalLink, ShieldCheck } from 'lucide-react';
 
 interface SeriesDetailProps {
   series: PhotoSeries;
   onBack: () => void;
-  currentLang: 'de' | 'en';
+  currentLang: Language;
 }
 
 export const SeriesDetail: React.FC<SeriesDetailProps> = ({
@@ -22,12 +22,14 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
   const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
     if (!badge) return null;
+
+    const awardText = currentLang === 'fa' && badge.awardFa ? badge.awardFa : badge.award;
     return (
       <a
         href={badge.link}
         target="_blank"
         rel="noopener noreferrer"
-        title={`${badge.name}: ${badge.award}`}
+        title={`${badge.name}: ${awardText}`}
         className={`group flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-neutral-900/90 hover:bg-neutral-850 border border-neutral-700/80 hover:border-amber-400 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer ${
           alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
         }`}
@@ -47,6 +49,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
   const firstPhoto = series.photos[0];
   const subsequentPhotos = series.photos.slice(1);
+  const isRtl = currentLang === 'fa';
 
   return (
     <div className="py-8 md:py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +59,14 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           onClick={onBack}
           className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 hover:text-amber-400 border border-neutral-800 rounded-full text-xs font-semibold tracking-wider uppercase transition-colors cursor-pointer"
         >
-          <ArrowLeft className="w-4 h-4" />
-          <span>{currentLang === 'de' ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+          {isRtl ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
+          <span>
+            {currentLang === 'de'
+              ? 'Zurück zur Übersicht'
+              : currentLang === 'fa'
+              ? 'بازگشت به نمای کلی'
+              : 'Back to Overview'}
+          </span>
         </button>
       </div>
 
@@ -67,22 +76,38 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         {/* 1. HEADLINE */}
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-amber-500 font-medium">
-            {currentLang === 'de' ? series.subtitleDe : series.subtitleEn}
+            {currentLang === 'de'
+              ? series.subtitleDe
+              : currentLang === 'fa'
+              ? series.subtitleFa
+              : series.subtitleEn}
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-neutral-100 mt-2 leading-tight">
-            {currentLang === 'de' ? series.titleDe : series.titleEn}
+            {currentLang === 'de'
+              ? series.titleDe
+              : currentLang === 'fa'
+              ? series.titleFa
+              : series.titleEn}
           </h1>
         </div>
 
         {/* 2. TEXT (Description & Personal Dedication) */}
         <div className="bg-neutral-900/60 border border-neutral-800/80 rounded-2xl p-6 sm:p-8 backdrop-blur-sm space-y-4">
           <p className="text-neutral-200 leading-relaxed text-base sm:text-lg font-light">
-            {currentLang === 'de' ? series.descriptionDe : series.descriptionEn}
+            {currentLang === 'de'
+              ? series.descriptionDe
+              : currentLang === 'fa'
+              ? series.descriptionFa
+              : series.descriptionEn}
           </p>
 
-          {series.personalNoteDe && (
+          {(series.personalNoteDe || series.personalNoteFa) && (
             <div className="pt-3 border-t border-neutral-800/80 text-sm text-amber-300/90 italic font-serif">
-              {currentLang === 'de' ? series.personalNoteDe : series.personalNoteEn}
+              {currentLang === 'de'
+                ? series.personalNoteDe
+                : currentLang === 'fa'
+                ? series.personalNoteFa
+                : series.personalNoteEn}
             </div>
           )}
 
@@ -91,6 +116,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
             <span>
               {currentLang === 'de'
                 ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan) · Signatur geschützt'
+                : currentLang === 'fa'
+                ? 'مالکیت اثر: شهزاد شاهمیرزادی (شیرزن) · کلیه حقوق و امضای اثر محفوظ است'
                 : 'Copyright: Schahrsad Shahmirzadi (SchirZan) · Signature protected'}
             </span>
           </div>
@@ -103,7 +130,11 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           <div className="space-y-4 max-w-xl mx-auto">
             <div className="flex items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-wider text-amber-400">
-                {currentLang === 'de' ? 'Hauptwerk / Bild 01 (Prämiert)' : 'Lead Work / Image 01 (Awarded)'}
+                {currentLang === 'de'
+                  ? 'Hauptwerk / Bild 01 (Prämiert)'
+                  : currentLang === 'fa'
+                  ? 'اثر اصلی / تصویر ۰۱ (برنده جوایز)'
+                  : 'Lead Work / Image 01 (Awarded)'}
               </span>
               <span className="text-xs text-neutral-400">
                 1 / {series.photos.length}
@@ -138,19 +169,27 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               <div className="ml-auto">{renderBadgeItem(ipaBadge, 'right')}</div>
             </div>
 
-            {firstPhoto.captionDe && (
+            {(firstPhoto.captionDe || firstPhoto.captionFa) && (
               <p className="text-center text-xs text-neutral-400 font-sans tracking-wide pt-2">
-                {currentLang === 'de' ? firstPhoto.captionDe : firstPhoto.captionEn}
+                {currentLang === 'de'
+                  ? firstPhoto.captionDe
+                  : currentLang === 'fa'
+                  ? firstPhoto.captionFa
+                  : firstPhoto.captionEn}
               </p>
             )}
           </div>
 
-          {/* SUBSEQUENT PHOTOS: CLEAN, UNINTERRUPTED, STRICTLY NO BADGES (as requested!) */}
+          {/* SUBSEQUENT PHOTOS: CLEAN, UNINTERRUPTED, STRICTLY NO BADGES */}
           {subsequentPhotos.map((photo, index) => (
             <div key={photo.id} className="space-y-3 pt-6 border-t border-neutral-800/60">
               <div className="flex items-center justify-between text-xs text-neutral-400">
                 <span className="font-mono text-amber-500/80">
-                  {currentLang === 'de' ? `Bild 0${index + 2}` : `Image 0${index + 2}`}
+                  {currentLang === 'de'
+                    ? `Bild 0${index + 2}`
+                    : currentLang === 'fa'
+                    ? `تصویر ۰${index + 2}`
+                    : `Image 0${index + 2}`}
                 </span>
                 <span>
                   {index + 2} / {series.photos.length}
@@ -169,9 +208,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
               </div>
 
-              {photo.captionDe && (
+              {(photo.captionDe || photo.captionFa) && (
                 <p className="text-center text-xs text-neutral-400 font-sans tracking-wide pt-2">
-                  {currentLang === 'de' ? photo.captionDe : photo.captionEn}
+                  {currentLang === 'de'
+                    ? photo.captionDe
+                    : currentLang === 'fa'
+                    ? photo.captionFa
+                    : photo.captionEn}
                 </p>
               )}
             </div>
@@ -187,8 +230,14 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           onClick={onBack}
           className="inline-flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 rounded-full text-xs font-bold tracking-wider uppercase transition-colors shadow-lg shadow-amber-500/20 cursor-pointer"
         >
-          <ArrowLeft className="w-4 h-4" />
-          <span>{currentLang === 'de' ? 'Zurück zur Übersicht' : 'Back to Overview'}</span>
+          {isRtl ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
+          <span>
+            {currentLang === 'de'
+              ? 'Zurück zur Übersicht'
+              : currentLang === 'fa'
+              ? 'بازگشت به نمای کلی'
+              : 'Back to Overview'}
+          </span>
         </button>
       </div>
     </div>

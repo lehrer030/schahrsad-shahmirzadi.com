@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { INTRO_CONTENT } from '../data/photographyData';
+import { INTRO_CONTENT, type Language } from '../data/photographyData';
 import { Award, ChevronDown, ChevronUp, Sparkles, Feather } from 'lucide-react';
 
 interface HeaderIntroProps {
-  currentLang: 'de' | 'en';
+  currentLang: Language;
 }
 
 export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
@@ -24,18 +24,24 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
               <span>
                 {currentLang === 'de'
                   ? 'Offizielles Portfolio & Werkverzeichnis'
+                  : currentLang === 'fa'
+                  ? 'مجموعه رسمی آثار و جوایز بین‌المللی'
                   : 'Official Portfolio & Works Catalog'}
               </span>
             </div>
 
-            {/* Main Header as requested by client */}
+            {/* Main Header */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif tracking-tight text-neutral-100 leading-tight">
-              {INTRO_CONTENT.mainHeader}
+              {currentLang === 'fa' ? INTRO_CONTENT.mainHeaderFa : INTRO_CONTENT.mainHeader}
             </h1>
 
             {/* Subtitle */}
             <p className="text-lg md:text-xl text-neutral-300 font-light max-w-3xl leading-relaxed">
-              {currentLang === 'de' ? INTRO_CONTENT.subtitleDe : INTRO_CONTENT.subtitleEn}
+              {currentLang === 'de'
+                ? INTRO_CONTENT.subtitleDe
+                : currentLang === 'fa'
+                ? INTRO_CONTENT.subtitleFa
+                : INTRO_CONTENT.subtitleEn}
             </p>
 
             {/* Competition Recognition Badges / Ticker */}
@@ -45,6 +51,8 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
                 <span>
                   {currentLang === 'de'
                     ? 'Internationale Wettbewerbe & Auszeichnungen'
+                    : currentLang === 'fa'
+                    ? 'مسابقات و افتخارات بین‌المللی'
                     : 'International Competitions & Recognition'}
                 </span>
               </p>
@@ -70,6 +78,8 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
                 <span>
                   {currentLang === 'de'
                     ? INTRO_CONTENT.artistSectionTitleDe
+                    : currentLang === 'fa'
+                    ? INTRO_CONTENT.artistSectionTitleFa
                     : INTRO_CONTENT.artistSectionTitleEn}
                 </span>
                 {showPhilosophy ? (
@@ -93,10 +103,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-80" />
                 <div className="absolute bottom-3 left-4 right-4">
                   <p className="text-white font-serif text-base font-semibold">
-                    Schahrsad Shahmirzadi
+                    {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
                   </p>
                   <p className="text-amber-400 text-xs tracking-wider">
-                    SchirZan · Artist &amp; Photographer
+                    {currentLang === 'fa' ? 'شیرزن (SchirZan) · هنرمند و عکاس' : 'SchirZan · Artist & Photographer'}
                   </p>
                   <p className="text-[11px] text-neutral-400 mt-1">
                     {INTRO_CONTENT.photoCredit}
@@ -115,11 +125,15 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
               <h3 className="text-xl font-serif text-amber-300">
                 {currentLang === 'de'
                   ? 'Künstlername SchirZan & Die Philosophie des Lichts'
+                  : currentLang === 'fa'
+                  ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
                   : 'Artist Name SchirZan & The Philosophy of Light'}
               </h3>
               <div className="text-neutral-300 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-light">
                 {currentLang === 'de'
                   ? INTRO_CONTENT.artistExplanationDe
+                  : currentLang === 'fa'
+                  ? INTRO_CONTENT.artistExplanationFa
                   : INTRO_CONTENT.artistExplanationEn}
               </div>
             </div>
@@ -129,4 +143,3 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
     </section>
   );
 };
-

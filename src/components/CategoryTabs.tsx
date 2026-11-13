@@ -1,11 +1,11 @@
 import React from 'react';
-import { CATEGORIES } from '../data/photographyData';
+import { CATEGORIES, type Language } from '../data/photographyData';
 import { Building2, Palette, Globe2, User } from 'lucide-react';
 
 interface CategoryTabsProps {
   currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits';
   onSelectCategory: (id: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits') => void;
-  currentLang: 'de' | 'en';
+  currentLang: Language;
 }
 
 export const CategoryTabs: React.FC<CategoryTabsProps> = ({
@@ -28,23 +28,29 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
     }
   };
 
+  const activeCat = CATEGORIES.find(c => c.id === currentCategory);
+
   return (
     <div className="w-full bg-neutral-950 border-b border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <span className="text-xs font-semibold tracking-wider uppercase text-amber-500">
-              {currentLang === 'de' ? 'Kategorien' : 'Categories'}
+            <span className="text-xs font-semibold tracking-wider uppercase text-amber-500 font-mono">
+              {currentLang === 'de' ? 'Kategorien' : currentLang === 'fa' ? 'دسته‌بندی‌ها' : 'Categories'}
             </span>
-            <h2 className="text-2xl font-serif text-neutral-100">
+            <h2 className="text-2xl font-serif text-neutral-100 mt-0.5">
               {currentLang === 'de'
-                ? CATEGORIES.find(c => c.id === currentCategory)?.titleDe
-                : CATEGORIES.find(c => c.id === currentCategory)?.titleEn}
+                ? activeCat?.titleDe
+                : currentLang === 'fa'
+                ? activeCat?.titleFa
+                : activeCat?.titleEn}
             </h2>
-            <p className="text-xs text-neutral-400 mt-1 max-w-xl">
+            <p className="text-xs text-neutral-400 mt-1 max-w-xl font-light">
               {currentLang === 'de'
-                ? CATEGORIES.find(c => c.id === currentCategory)?.descriptionDe
-                : CATEGORIES.find(c => c.id === currentCategory)?.descriptionEn}
+                ? activeCat?.descriptionDe
+                : currentLang === 'fa'
+                ? activeCat?.descriptionFa
+                : activeCat?.descriptionEn}
             </p>
           </div>
 
@@ -56,14 +62,20 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
                 <button
                   key={cat.id}
                   onClick={() => onSelectCategory(cat.id)}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
+                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all cursor-pointer ${
                     isActive
                       ? 'bg-amber-500 text-neutral-950 font-semibold shadow-lg shadow-amber-500/20'
                       : 'bg-neutral-900 text-neutral-300 hover:bg-neutral-800 hover:text-white border border-neutral-800'
                   }`}
                 >
                   {getIcon(cat.id)}
-                  <span>{currentLang === 'de' ? cat.titleDe : cat.titleEn}</span>
+                  <span>
+                    {currentLang === 'de'
+                      ? cat.titleDe
+                      : currentLang === 'fa'
+                      ? cat.titleFa
+                      : cat.titleEn}
+                  </span>
                 </button>
               );
             })}
@@ -73,4 +85,3 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
     </div>
   );
 };
-

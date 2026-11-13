@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeaderIntro } from './components/HeaderIntro';
 import { CategoryTabs } from './components/CategoryTabs';
@@ -13,15 +13,27 @@ import {
   FINE_ART_WORKS,
   SOCIAL_ENVIRONMENTAL_WORKS,
   PORTRAIT_WORKS,
-  type PhotoSeries
+  type PhotoSeries,
+  type Language
 } from './data/photographyData';
 
 export function App() {
-  const [currentLang, setCurrentLang] = useState<'de' | 'en'>('de');
+  const [currentLang, setCurrentLang] = useState<Language>('de');
   const [currentCategory, setCurrentCategory] = useState<
     'architecture' | 'fine-art' | 'social-environmental' | 'portraits'
   >('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
+
+  // Sync RTL / LTR direction with current language
+  useEffect(() => {
+    if (currentLang === 'fa') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'fa');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', currentLang);
+    }
+  }, [currentLang]);
 
   const seriesMap: Record<string, PhotoSeries> = {
     [SOLITAIRE_SERIES_1.id]: SOLITAIRE_SERIES_1,
@@ -45,8 +57,11 @@ export function App() {
   const activeSeries = selectedSeriesId ? seriesMap[selectedSeriesId] : null;
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-amber-500 selection:text-neutral-950">
-      {/* Top Navigation */}
+    <div
+      dir={currentLang === 'fa' ? 'rtl' : 'ltr'}
+      className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-amber-500 selection:text-neutral-950"
+    >
+      {/* Top Navigation with DE | EN | FA Switcher */}
       <Navbar
         currentLang={currentLang}
         onToggleLang={setCurrentLang}
@@ -85,14 +100,24 @@ export function App() {
                 {/* Intro note for architecture */}
                 <div className="text-center max-w-2xl mx-auto">
                   <span className="text-xs uppercase tracking-widest text-amber-500 font-mono font-medium">
-                    {currentLang === 'de' ? 'Fokus Architektur' : 'Architecture Focus'}
+                    {currentLang === 'de'
+                      ? 'Fokus Architektur'
+                      : currentLang === 'fa'
+                      ? 'بخش معماری'
+                      : 'Architecture Focus'}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-serif text-neutral-100 mt-1">
-                    {currentLang === 'de' ? 'Die Solitaire-Serien' : 'The Solitaire Series'}
+                    {currentLang === 'de'
+                      ? 'Die Solitaire-Serien'
+                      : currentLang === 'fa'
+                      ? 'مجموعه‌های تک‌بنا (Solitaire)'
+                      : 'The Solitaire Series'}
                   </h3>
-                  <p className="text-neutral-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                  <p className="text-neutral-400 text-xs sm:text-sm mt-2 leading-relaxed font-light">
                     {currentLang === 'de'
                       ? 'Klicken Sie auf das jeweilige Titelbild, um die gesamte Serie in Ruhe und ohne ablenkende Auszeichnungen zu betrachten.'
+                      : currentLang === 'fa'
+                      ? 'برای مشاهده کامل مجموعه عکس‌ها در فضایی آرام و بدون نشان‌های جایزه بر روی تصویر کلیک فرمایید.'
                       : 'Click any cover photo to explore the complete series cleanly without distracting badges.'}
                   </p>
                 </div>
@@ -117,6 +142,7 @@ export function App() {
                   currentLang={currentLang}
                   sectionTitleDe="Further Works (Architektur)"
                   sectionTitleEn="Further Works (Architecture)"
+                  sectionTitleFa="سایر آثار معماری و جوایز بین‌المللی"
                 />
               </>
             )}
@@ -127,6 +153,7 @@ export function App() {
                 currentLang={currentLang}
                 sectionTitleDe="Fine Art – Ausgezeichnete Werkserien"
                 sectionTitleEn="Fine Art – Award-Winning Series"
+                sectionTitleFa="هنرهای زیبا – مجموعه‌های برنده جوایز"
               />
             )}
 
@@ -136,6 +163,7 @@ export function App() {
                 currentLang={currentLang}
                 sectionTitleDe="Social and Environmental Themes – Prämierte Werke"
                 sectionTitleEn="Social and Environmental Themes – Awarded Works"
+                sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – آثار برگزیده"
               />
             )}
 
@@ -145,6 +173,7 @@ export function App() {
                 currentLang={currentLang}
                 sectionTitleDe="Portraits &amp; Self-Portraits"
                 sectionTitleEn="Portraits &amp; Self-Portraits"
+                sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
               />
             )}
           </div>

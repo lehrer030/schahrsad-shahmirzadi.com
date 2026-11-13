@@ -1,11 +1,11 @@
 import React from 'react';
-import type { PhotoSeries, AwardBadge } from '../data/photographyData';
+import type { PhotoSeries, AwardBadge, Language } from '../data/photographyData';
 import { ExternalLink, Images, ArrowUpRight } from 'lucide-react';
 
 interface ArtworkCardProps {
   series: PhotoSeries;
   onOpenSeries: (seriesId: string) => void;
-  currentLang: 'de' | 'en';
+  currentLang: Language;
 }
 
 export const ArtworkCard: React.FC<ArtworkCardProps> = ({
@@ -26,12 +26,15 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
     if (!badge) return null;
 
+    const awardText = currentLang === 'fa' && badge.awardFa ? badge.awardFa : badge.award;
+    const titleHint = `${badge.name}: ${awardText}`;
+
     return (
       <a
         href={badge.link}
         target="_blank"
         rel="noopener noreferrer"
-        title={`${badge.name}: ${badge.award} (${currentLang === 'de' ? 'Offizielle Wettbewerbsseite öffnen' : 'Open official competition page'})`}
+        title={titleHint}
         className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-neutral-900/90 hover:bg-neutral-850 border border-neutral-700/80 hover:border-amber-400 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer ${
           alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
         }`}
@@ -57,10 +60,18 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
       <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-neutral-800/80 pb-5">
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-amber-500 font-medium">
-            {currentLang === 'de' ? series.subtitleDe : series.subtitleEn}
+            {currentLang === 'de'
+              ? series.subtitleDe
+              : currentLang === 'fa'
+              ? series.subtitleFa
+              : series.subtitleEn}
           </span>
           <h3 className="text-2xl sm:text-3xl font-serif text-neutral-100 mt-1">
-            {currentLang === 'de' ? series.titleDe : series.titleEn}
+            {currentLang === 'de'
+              ? series.titleDe
+              : currentLang === 'fa'
+              ? series.titleFa
+              : series.titleEn}
           </h3>
         </div>
 
@@ -72,6 +83,8 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           <span>
             {currentLang === 'de'
               ? `Serie ansehen (${series.photos.length} Werke)`
+              : currentLang === 'fa'
+              ? `مشاهده کامل مجموعه (${series.photos.length} اثر)`
               : `View Full Series (${series.photos.length} Works)`}
           </span>
           <ArrowUpRight className="w-3.5 h-3.5" />
@@ -102,7 +115,11 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <span className="px-5 py-2.5 bg-neutral-900/90 text-amber-300 border border-amber-400/50 rounded-full text-xs font-medium tracking-wider backdrop-blur-sm shadow-xl flex items-center gap-2">
               <Images className="w-4 h-4 text-amber-400" />
-              {currentLang === 'de' ? 'Klicken, um gesamte Serie zu öffnen' : 'Click to view full series'}
+              {currentLang === 'de'
+                ? 'Klicken, um gesamte Serie zu öffnen'
+                : currentLang === 'fa'
+                ? 'کلیک کنید تا کل مجموعه باز شود'
+                : 'Click to view full series'}
             </span>
           </div>
 
@@ -113,7 +130,6 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         </div>
 
         {/* BOTTOM ROW: Equal Proportion Badges exactly as in her email mockups */}
-        {/* Left: PERSPA, Center: BIFA (if present), Right: IPA */}
         <div className="w-full mt-4 flex items-center justify-between flex-wrap gap-3">
           {/* Bottom-Left: PERSPA */}
           <div>
@@ -137,7 +153,11 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
       {/* Brief Series Preview Description */}
       <div className="mt-8 pt-5 border-t border-neutral-800/80 text-sm text-neutral-400 line-clamp-2 font-light">
-        {currentLang === 'de' ? series.descriptionDe : series.descriptionEn}
+        {currentLang === 'de'
+          ? series.descriptionDe
+          : currentLang === 'fa'
+          ? series.descriptionFa
+          : series.descriptionEn}
       </div>
 
     </article>

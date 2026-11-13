@@ -1,19 +1,21 @@
 import React from 'react';
-import type { FurtherWork } from '../data/photographyData';
+import type { FurtherWork, Language } from '../data/photographyData';
 import { Award, ExternalLink, Sparkles } from 'lucide-react';
 
 interface FurtherWorksProps {
   works: FurtherWork[];
-  currentLang: 'de' | 'en';
+  currentLang: Language;
   sectionTitleDe?: string;
   sectionTitleEn?: string;
+  sectionTitleFa?: string;
 }
 
 export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   works,
   currentLang,
   sectionTitleDe = 'Further Works (Weitere prämierte Werke)',
-  sectionTitleEn = 'Further Works (Additional Awarded Works)'
+  sectionTitleEn = 'Further Works (Additional Awarded Works)',
+  sectionTitleFa = 'سایر آثار برگزیده و دارای افتخارات بین‌المللی'
 }) => {
   return (
     <section className="mt-16 pt-12 border-t border-neutral-800">
@@ -23,15 +25,27 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-amber-400 text-xs font-mono uppercase tracking-wider mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>{currentLang === 'de' ? 'Werkverzeichnis & Auszeichnungen' : 'Works & Recognition Catalog'}</span>
+            <span>
+              {currentLang === 'de'
+                ? 'Werkverzeichnis & Auszeichnungen'
+                : currentLang === 'fa'
+                ? 'فهرست آثار و افتخارات بین‌المللی'
+                : 'Works & Recognition Catalog'}
+            </span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-serif text-neutral-100">
-            {currentLang === 'de' ? sectionTitleDe : sectionTitleEn}
+            {currentLang === 'de'
+              ? sectionTitleDe
+              : currentLang === 'fa'
+              ? sectionTitleFa
+              : sectionTitleEn}
           </h2>
           <p className="text-xs text-neutral-400 mt-1 max-w-2xl font-light">
             {currentLang === 'de'
               ? 'Kompaktübersicht mit Werktiteln, Auszeichnungen und direkter Verlinkung zu den internationalen Wettbewerben (ohne Vorschaubilder gemäß Portfolio-Vorgabe).'
-              : 'Compact overview with artwork titles, international awards, and verified links to competition registries.'}
+              : currentLang === 'fa'
+              ? 'نمای کلی و فشرده با عناوین آثار، جوایز بین‌المللی و لینک مستقیم به سامانه‌های ثبت مسابقات جهانی (بدون پیش‌نمایش تصویر بر اساس ساختار اختصاصی پورتفولیو).'
+              : 'Compact overview with artwork titles, international awards, and verified links to competition registries (without preview images as specified).'}
           </p>
         </div>
 
@@ -47,15 +61,25 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                   <span className="text-amber-500 font-semibold">
                     #{String(idx + 1).padStart(2, '0')}
                   </span>
-                  <span className="truncate max-w-[200px]">{work.category}</span>
+                  <span className="truncate max-w-[200px]">
+                    {currentLang === 'fa' && work.categoryFa ? work.categoryFa : work.category}
+                  </span>
                 </div>
 
                 <h4 className="text-base sm:text-lg font-serif text-neutral-100 group-hover:text-amber-300 transition-colors font-medium">
-                  {currentLang === 'de' ? work.titleDe : work.titleEn}
+                  {currentLang === 'de'
+                    ? work.titleDe
+                    : currentLang === 'fa'
+                    ? work.titleFa
+                    : work.titleEn}
                 </h4>
 
                 <p className="text-xs text-neutral-300 mt-2 leading-relaxed">
-                  {currentLang === 'de' ? work.awardsDe : work.awardsEn}
+                  {currentLang === 'de'
+                    ? work.awardsDe
+                    : currentLang === 'fa'
+                    ? work.awardsFa
+                    : work.awardsEn}
                 </p>
               </div>
 
@@ -80,7 +104,13 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[11px] font-medium text-amber-400 hover:text-amber-300 transition-colors"
                   >
-                    <span>{currentLang === 'de' ? 'Wettbewerb' : 'Competition'}</span>
+                    <span>
+                      {currentLang === 'de'
+                        ? 'Wettbewerb'
+                        : currentLang === 'fa'
+                        ? 'مشاهده مسابقه'
+                        : 'Competition'}
+                    </span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 )}
