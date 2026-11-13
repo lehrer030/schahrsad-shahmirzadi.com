@@ -15,7 +15,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
   const artistPhotoItem: PhotoItem = {
     id: 'steve-barret-portrait',
-    src: '/images/2025_07_photoart.jpg',
+    src: '/images/2025_07_photoart_bw.jpg',
     alt: 'SchirZan – Schahrsad Shahmirzadi. Photographiert von Steve Barret',
     captionDe: 'Schahrsad Shahmirzadi (SchirZan) – Porträt photographiert von Steve Barret',
     captionEn: 'Schahrsad Shahmirzadi (SchirZan) – Portrait by Steve Barret',
@@ -74,7 +74,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   title={currentLang === 'de' ? 'Vollbild' : 'Full size'}
                 >
                   <img
-                    src="/images/2025_07_photoart.jpg"
+                    src="/images/2025_07_photoart_bw.jpg"
                     alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
                     className="w-full h-full object-cover object-center"
                     loading="eager"
@@ -169,7 +169,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   title={currentLang === 'de' ? 'Vollbild' : 'Full size'}
                 >
                   <img
-                    src="/images/2025_07_photoart.jpg"
+                    src="/images/2025_07_photoart_bw.jpg"
                     alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
                     className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out"
                     loading="eager"
