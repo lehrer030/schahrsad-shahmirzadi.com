@@ -1,0 +1,9 @@
+# Robots.txt for https://schahrsad-shahmirzadi.com
+User-agent: *
+Allow: /
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://schahrsad-shahmirzadi.com/sitemap.xml
+Sitemap: https://schirzan.com/sitemap.xml
+

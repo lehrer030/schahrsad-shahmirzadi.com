@@ -94,7 +94,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         </div>
 
         {/* 2. TEXT (Description & Personal Dedication) */}
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-6 sm:p-8 shadow-xs space-y-4">
+        <div className="bg-white border border-stone-200 rounded p-6 sm:p-8 space-y-4">
           <p className="text-stone-700 leading-relaxed text-base sm:text-lg font-light">
             {currentLang === 'de'
               ? series.descriptionDe
@@ -104,7 +104,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           </p>
 
           {(series.personalNoteDe || series.personalNoteFa) && (
-            <div className="pt-3 border-t border-stone-100 text-sm text-amber-900/90 italic font-serif">
+            <div className="pt-3 border-t border-stone-100 text-sm text-stone-700 italic font-serif">
               {currentLang === 'de'
                 ? series.personalNoteDe
                 : currentLang === 'fa'
@@ -114,13 +114,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           )}
 
           <div className="flex items-center gap-2 text-xs text-stone-500 pt-1">
-            <ShieldCheck className="w-4 h-4 text-amber-800" />
+            <ShieldCheck className="w-4 h-4 text-stone-600" />
             <span>
               {currentLang === 'de'
-                ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan) · Signatur geschützt'
+                ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan)'
                 : currentLang === 'fa'
-                ? 'مالکیت اثر: شهزاد شاهمیرزادی (شیرزن) · کلیه حقوق و امضای اثر محفوظ است'
-                : 'Copyright: Schahrsad Shahmirzadi (SchirZan) · Signature protected'}
+                ? 'مالکیت اثر: شهزاد شاهمیرزادی (شیرزن)'
+                : 'Copyright: Schahrsad Shahmirzadi (SchirZan)'}
             </span>
           </div>
         </div>
