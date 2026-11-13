@@ -43,7 +43,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <img
-          src={badge.badgeImage}
+          src={`${badge.badgeImage}?v=2`}
           alt={badge.name}
           className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover/badge:brightness-105"
         />

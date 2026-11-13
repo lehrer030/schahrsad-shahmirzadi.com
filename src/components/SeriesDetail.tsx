@@ -37,7 +37,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         }`}
       >
         <img
-          src={badge.badgeImage}
+          src={`${badge.badgeImage}?v=2`}
           alt={badge.name}
           className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover:brightness-105"
         />
