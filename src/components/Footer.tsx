@@ -58,16 +58,39 @@ export const Footer: React.FC<FooterProps> = ({
                 Berlin · Potsdam · Germany
               </li>
               <li className="pt-2">
-                <a
-                  href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fschahrsad-shahmirzadi.com%2F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
-                  title="Auf LinkedIn teilen"
-                >
-                  <Share2 className="w-3 h-3 text-stone-500" />
-                  <span>{currentLang === 'de' ? 'Portfolio teilen' : currentLang === 'fa' ? 'اشتراک‌گذاری' : 'Share'}</span>
-                </a>
+                <span className="text-[10px] uppercase font-mono text-stone-500 block mb-1">
+                  {currentLang === 'de' ? 'Portfolio teilen:' : currentLang === 'fa' ? 'اشتراک‌گذاری:' : 'Share:'}
+                </span>
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <a
+                    href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fschahrsad-shahmirzadi.com%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
+                    title="Auf LinkedIn teilen"
+                  >
+                    <Share2 className="w-2.5 h-2.5 text-stone-500" />
+                    <span>LinkedIn</span>
+                  </a>
+                  <a
+                    href="https://api.whatsapp.com/send?text=SchirZan%20-%20Photography%20%26%20Awards%3A%20https%3A%2F%2Fschahrsad-shahmirzadi.com%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
+                    title="Per WhatsApp teilen"
+                  >
+                    <span>WhatsApp</span>
+                  </a>
+                  <a
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fschahrsad-shahmirzadi.com%2F&text=SchirZan%20-%20Photography%20%26%20Awards"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
+                    title="Auf X teilen"
+                  >
+                    <span>X</span>
+                  </a>
+                </div>
               </li>
             </ul>
           </div>

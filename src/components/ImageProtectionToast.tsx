@@ -81,3 +81,4 @@ export const ImageProtectionToast: React.FC<ImageProtectionToastProps> = ({
     </div>
   );
 };
+
