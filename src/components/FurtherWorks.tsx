@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { FurtherWork, Language, PhotoItem } from '../data/photographyData';
-import { Award, ExternalLink, Sparkles, Image as ImageIcon, Eye, Layers } from 'lucide-react';
+import { Award, ExternalLink, Image as ImageIcon, Eye, Layers } from 'lucide-react';
 
 interface FurtherWorksProps {
   works: FurtherWork[];
@@ -31,33 +31,16 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
         {/* Section Header */}
         <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-mono uppercase tracking-wider mb-2 font-bold">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-              <span>
-                {currentLang === 'de'
-                  ? 'Werkverzeichnis & Auszeichnungen'
-                  : currentLang === 'fa'
-                  ? 'فهرست آثار و افتخارات بین‌المللی'
-                  : 'Works & Recognition Catalog'}
-              </span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+            <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
               {currentLang === 'de'
                 ? sectionTitleDe
                 : currentLang === 'fa'
                 ? sectionTitleFa
                 : sectionTitleEn}
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-3xl font-light leading-relaxed">
-              {currentLang === 'de'
-                ? 'Originalgetreue Gliederung mit Werktiteln, Auszeichnungen und Verlinkungen. Nutzen Sie den Foto-Modus, um die Originalfotografien dieser Serien einzublenden.'
-                : currentLang === 'fa'
-                ? 'ساختار منطبق با درخواست با عناوین آثار، جوایز و پیوندها. در صورت تمایل می‌توانید پیش‌نمایش عکاسی‌های این مجموعه‌ها را فعال فرمایید.'
-                : 'As requested: titles, awards, and verified links. Toggle photo mode to display the original photographs for these series.'}
-            </p>
+            </h3>
           </div>
 
-          {/* Optional Visual Gallery Mode Switcher (Respects client request by default: text only, but allows viewing all photos!) */}
+          {/* Visual Gallery Mode Switcher */}
           {worksWithPhotosCount > 0 && (
             <div className="shrink-0 flex items-center gap-2 bg-white border border-stone-200/90 rounded-2xl p-1.5 shadow-2xs">
               <button
@@ -67,7 +50,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     ? 'bg-amber-100/80 text-amber-950 font-semibold shadow-2xs'
                     : 'text-stone-600 hover:text-stone-900'
                 }`}
-                title={currentLang === 'de' ? 'Vorgabe der Kundin: Titel & Badges ohne Bilder' : 'Text & Badges only'}
+                title={currentLang === 'de' ? 'Kompakte Übersicht' : 'Compact view'}
               >
                 <Layers className="w-3.5 h-3.5" />
                 <span>
@@ -86,7 +69,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     ? 'bg-amber-800 text-white font-semibold shadow-2xs'
                     : 'text-stone-600 hover:text-stone-900'
                 }`}
-                title={currentLang === 'de' ? 'Alle Originalbilder aus dem WordPress-Archiv einblenden' : 'Show all photos'}
+                title={currentLang === 'de' ? 'Fotogalerie einblenden' : 'Show photo gallery'}
               >
                 <ImageIcon className="w-3.5 h-3.5" />
                 <span>

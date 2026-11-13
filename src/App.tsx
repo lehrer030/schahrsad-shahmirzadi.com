@@ -173,11 +173,9 @@ export default function App() {
         onOpenContact={() => setContactModalOpen(true)}
       />
 
-      {/* Main Header & Artist Intro Section with prominent Steve Barret portrait & 4 Fanning Subheaders */}
+      {/* Main Header & Artist Intro Section with prominent Steve Barret portrait */}
       <HeaderIntro 
         currentLang={currentLang} 
-        currentCategory={currentCategory}
-        onSelectCategory={handleSelectCategory}
         onOpenLightbox={handleOpenLightbox}
       />
 
@@ -195,7 +193,6 @@ export default function App() {
           /* =========================================================================
               MODERN ONE-PAGER ARCHITECTURE:
               All sections are accessible sequentially on one page with smooth scroll!
-              Clicking any header or subheader smoothly scrolls down directly to the section.
              ========================================================================= */
           <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
             
@@ -211,9 +208,6 @@ export default function App() {
                     <Building2 className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                      {currentLang === 'de' ? 'Unterheader 01 · Hauptkategorie' : currentLang === 'fa' ? 'زیرمجموعه ۱ · بخش اصلی' : 'Subheader 01 · Main Category'}
-                    </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                       {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                     </h2>
@@ -225,31 +219,6 @@ export default function App() {
                     : currentLang === 'fa'
                     ? 'عکاسی معماری با جوایز بین‌المللی با تمرکز بر تک‌بناها، نور، هندسه و انتزاع شهری.'
                     : 'Internationally awarded architectural photography focusing on solitaires, light, geometry, and urban abstraction.'}
-                </p>
-              </div>
-
-              {/* Intro note for architecture Solitaire series */}
-              <div className="text-center max-w-3xl mx-auto mb-10">
-                <span className="text-xs uppercase tracking-widest text-amber-800 font-mono font-bold">
-                  {currentLang === 'de'
-                    ? 'Fokus Architektur'
-                    : currentLang === 'fa'
-                    ? 'بخش معماری'
-                    : 'Architecture Focus'}
-                </span>
-                <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
-                  {currentLang === 'de'
-                    ? 'Die Solitaire-Serien'
-                    : currentLang === 'fa'
-                    ? 'مجموعه‌های تک‌بنا (Solitaire)'
-                    : 'The Solitaire Series'}
-                </h3>
-                <p className="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
-                  {currentLang === 'de'
-                    ? 'Klicken Sie auf das jeweilige Titelbild, um die gesamte Serie in Ruhe und ohne ablenkende Auszeichnungen zu betrachten.'
-                    : currentLang === 'fa'
-                    ? 'برای مشاهده کامل مجموعه عکس‌ها در فضایی آرام و بدون نشان‌های جایزه بر روی تصویر کلیک فرمایید.'
-                    : 'Click any cover photo to explore the complete series cleanly without distracting badges.'}
                 </p>
               </div>
 
@@ -295,9 +264,6 @@ export default function App() {
                     <Palette className="w-5 h-5 text-amber-200" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                      {currentLang === 'de' ? 'Unterheader 02 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۲ · گروه آثار' : 'Subheader 02 · Art Group'}
-                    </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                       {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
                     </h2>
@@ -333,9 +299,6 @@ export default function App() {
                     <Globe2 className="w-5 h-5 text-emerald-200" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-800 font-bold">
-                      {currentLang === 'de' ? 'Unterheader 03 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۳ · گروه آثار' : 'Subheader 03 · Art Group'}
-                    </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                       {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                     </h2>
@@ -371,9 +334,6 @@ export default function App() {
                     <User className="w-5 h-5 text-amber-300" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                      {currentLang === 'de' ? 'Unterheader 04 · Werkgruppe' : currentLang === 'fa' ? 'زیرمجموعه ۴ · گروه آثار' : 'Subheader 04 · Art Group'}
-                    </span>
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
                       {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                     </h2>

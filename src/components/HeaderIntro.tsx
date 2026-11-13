@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { INTRO_CONTENT, type Language, type PhotoItem } from '../data/photographyData';
-import { Award, ChevronDown, ChevronUp, Feather, Maximize2, ShieldCheck, Building2, Palette, Globe2, User, GraduationCap, Newspaper, ArrowDown } from 'lucide-react';
+import { Award, ChevronDown, ChevronUp, Feather, Maximize2 } from 'lucide-react';
 
 interface HeaderIntroProps {
   currentLang: Language;
-  currentCategory: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press';
-  onSelectCategory: (catId: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press') => void;
   onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
 }
 
 export const HeaderIntro: React.FC<HeaderIntroProps> = ({
   currentLang,
-  currentCategory,
-  onSelectCategory,
   onOpenLightbox
 }) => {
   const [showPhilosophy, setShowPhilosophy] = useState(false);
@@ -26,78 +22,13 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
     captionFa: 'شهزاد شاهمیرزادی (شیرزن) – پرتره عکاسی‌شده توسط استیو بارت'
   };
 
-  // 4 Core Subheaders requested by client
-  const coreSubheaders = [
-    {
-      id: 'architecture' as const,
-      labelDe: 'Architecture',
-      labelEn: 'Architecture',
-      labelFa: 'معماری',
-      taglineDe: 'Solitäre & Urbane Geometrie',
-      taglineEn: 'Solitaires & Urban Geometry',
-      taglineFa: 'تک‌بناها و هندسه شهری',
-      badgeCount: 'AMP · IPA · PERSPA · BIFA',
-      icon: <Building2 className="w-4 h-4" />
-    },
-    {
-      id: 'fine-art' as const,
-      labelDe: 'Fine Art',
-      labelEn: 'Fine Art',
-      labelFa: 'هنرهای زیبا',
-      taglineDe: 'Poesie des Lichts & Zeit',
-      taglineEn: 'Poetry of Light & Time',
-      taglineFa: 'شعر نور و زمان',
-      badgeCount: 'IPA · LICC · PERSPA',
-      icon: <Palette className="w-4 h-4" />
-    },
-    {
-      id: 'social-environmental' as const,
-      labelDe: 'Social & Environmental Themes',
-      labelEn: 'Social & Environmental Themes',
-      labelFa: 'مضامین اجتماعی و زیست‌محیطی',
-      taglineDe: 'Menschenrechte, Frieden & Natur',
-      taglineEn: 'Human Rights, Peace & Nature',
-      taglineFa: 'حقوق بشر، صلح و طبیعت',
-      badgeCount: 'BIFA · IPA · URBAN · LICC',
-      icon: <Globe2 className="w-4 h-4" />
-    },
-    {
-      id: 'portraits' as const,
-      labelDe: 'Portraits',
-      labelEn: 'Portraits',
-      labelFa: 'پرتره‌ها',
-      taglineDe: 'Stärke, Dynamik & Authentizität',
-      taglineEn: 'Strength & Authenticity',
-      taglineFa: 'قدرت، پویایی و اصالت',
-      badgeCount: 'IPA 2026 Winner',
-      icon: <User className="w-4 h-4" />
-    }
-  ];
-
-  const secondaryTabs = [
-    {
-      id: 'biography' as const,
-      labelDe: 'Vita & Engagement',
-      labelEn: 'Vita & Activism',
-      labelFa: 'زندگی‌نامه و تعهدات',
-      icon: <GraduationCap className="w-3.5 h-3.5" />
-    },
-    {
-      id: 'press' as const,
-      labelDe: 'Press & Media',
-      labelEn: 'Press & Media',
-      labelFa: 'رسانه‌ها و مطبوعات',
-      icon: <Newspaper className="w-3.5 h-3.5" />
-    }
-  ];
-
   return (
     <header className="relative overflow-hidden bg-gradient-to-b from-[#fbfbfa] via-[#f7f3eb] to-[#faf8f5] text-stone-900 border-b border-stone-200/90 w-full">
       {/* Subtle warm architectural ambient glow */}
       <div className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-amber-200/25 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-stone-300/20 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 pt-8 sm:pt-12 pb-8 sm:pb-10 relative z-10">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 pt-8 sm:pt-12 pb-8 sm:pb-12 relative z-10">
         
         {/* Main Grid: Exhibition Hero Presentation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center">
@@ -106,8 +37,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
           <div className="lg:col-span-7 xl:col-span-7 space-y-5 sm:space-y-6">
             
             {/* Top Curator Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-amber-300/80 text-amber-950 text-xs font-semibold tracking-wide shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse" />
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-stone-200/90 text-stone-700 text-xs font-medium tracking-wide shadow-2xs">
               <span>
                 {currentLang === 'de'
                   ? 'Offizielles Werkverzeichnis & Portfolio'
@@ -163,7 +93,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
             <div className="pt-1 flex flex-wrap items-center gap-3">
               <button
                 onClick={() => setShowPhilosophy(!showPhilosophy)}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-amber-900 hover:text-amber-700 transition-colors group cursor-pointer bg-white border border-amber-200/90 px-4 py-2.5 rounded-full shadow-2xs hover:shadow-xs"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-amber-900 hover:text-amber-700 transition-colors group cursor-pointer bg-white border border-amber-200/90 px-4 py-2 rounded-full shadow-2xs hover:shadow-xs"
               >
                 <Feather className="w-4 h-4 text-amber-700" />
                 <span>
@@ -179,11 +109,6 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
                 )}
               </button>
-
-              <div className="hidden sm:inline-flex items-center gap-1.5 text-xs text-stone-500 font-mono">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
-                <span>Original Urheberschutz & Verifiziertes Archiv</span>
-              </div>
             </div>
 
           </div>
@@ -199,7 +124,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div 
                   className="relative overflow-hidden rounded-2xl bg-stone-100 cursor-pointer aspect-[4/3] sm:aspect-[4/3]"
                   onClick={() => onOpenLightbox && onOpenLightbox([artistPhotoItem], 0)}
-                  title={currentLang === 'de' ? 'Klicken für Vollbildansicht' : 'Click to enlarge'}
+                  title={currentLang === 'de' ? 'Vollbild' : 'Full size'}
                 >
                   <img
                     src="/images/2025_07_photoart.jpg"
@@ -273,123 +198,6 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
             </div>
           </div>
         )}
-
-        {/* =========================================================================
-            CLIENT'S REQUEST: THE 4 SUBHEADERS FAN OUT!
-            "Hauptheader: Photography – Works – International Awards, 
-             darunter fächern sich 4 weitere Unterheader auf: 
-             Architecture; Fine Art; Social and Environmental Themes; Portraits"
-            One-Pager Mode: Clicking smoothly scrolls directly down to the section!
-           ========================================================================= */}
-        <div className="mt-10 sm:mt-12 pt-8 sm:pt-10 border-t border-stone-200/90">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
-            <div>
-              <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                {currentLang === 'de' ? 'Unterheader / Werkgruppen' : currentLang === 'fa' ? 'زیرمجموعه‌های هنری' : 'Subheaders / Categories'}
-              </span>
-              <p className="text-xs sm:text-sm text-stone-600 font-light">
-                {currentLang === 'de'
-                  ? 'Klicken Sie auf einen Unterheader, um direkt zur jeweiligen Ausstellung zu scrollen:'
-                  : currentLang === 'fa'
-                  ? 'برای حرکت مستقیم به هر بخش، روی کارت مربوطه کلیک کنید:'
-                  : 'Click any subheader to scroll directly down to the exhibition:'}
-              </p>
-            </div>
-
-            {/* Preserved Secondary Pages (Vita & Press) as compact quick-scroll links */}
-            <div className="flex items-center gap-1.5 flex-wrap">
-              {secondaryTabs.map(sec => {
-                const isSecActive = currentCategory === sec.id;
-                return (
-                  <button
-                    key={sec.id}
-                    onClick={() => onSelectCategory(sec.id)}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
-                      isSecActive
-                        ? 'bg-amber-800 text-white shadow-2xs font-semibold'
-                        : 'bg-white/80 hover:bg-white text-stone-600 hover:text-stone-900 border border-stone-200/90'
-                    }`}
-                  >
-                    {sec.icon}
-                    <span>
-                      {currentLang === 'de' ? sec.labelDe : currentLang === 'fa' ? sec.labelFa : sec.labelEn}
-                    </span>
-                    <ArrowDown className="w-3 h-3 opacity-60" />
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* The 4 Core Subheader Cards (Interactive One-Pager Anchors with Smooth Scroll & Visual Indicator) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 w-full">
-            {coreSubheaders.map(sub => {
-              const isActive = currentCategory === sub.id;
-              return (
-                <button
-                  key={sub.id}
-                  onClick={() => onSelectCategory(sub.id)}
-                  className={`text-left group relative p-4 sm:p-5 rounded-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between border ${
-                    isActive
-                      ? 'bg-stone-900 text-white border-stone-900 shadow-md ring-2 ring-amber-600/60 ring-offset-2 ring-offset-[#faf8f5]'
-                      : 'bg-white hover:bg-amber-50/50 text-stone-900 border-stone-200/90 hover:border-amber-400 shadow-2xs hover:shadow-xs'
-                  }`}
-                >
-                  {/* Top Bar: Icon & Active Indicator */}
-                  <div className="flex items-center justify-between w-full mb-3">
-                    <div
-                      className={`p-2 rounded-xl transition-colors ${
-                        isActive
-                          ? 'bg-amber-700 text-white'
-                          : 'bg-amber-100/70 text-amber-900 group-hover:bg-amber-200/70'
-                      }`}
-                    >
-                      {sub.icon}
-                    </div>
-
-                    <div className="flex items-center gap-1">
-                      {isActive ? (
-                        <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider bg-amber-600 text-white px-2 py-0.5 rounded-full font-bold">
-                          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                          <span>Aktiv</span>
-                        </span>
-                      ) : (
-                        <span className="text-[11px] font-mono text-stone-600 group-hover:text-amber-800 transition-colors">
-                          {sub.badgeCount}
-                        </span>
-                      )}
-                      <ArrowDown className={`w-3.5 h-3.5 transition-transform group-hover:translate-y-0.5 ${isActive ? 'text-amber-300' : 'text-stone-400'}`} />
-                    </div>
-                  </div>
-
-                  {/* Title & Tagline */}
-                  <div>
-                    <h3
-                      className={`text-lg sm:text-xl font-serif font-bold transition-colors ${
-                        isActive ? 'text-white' : 'text-stone-900 group-hover:text-amber-950'
-                      }`}
-                    >
-                      {currentLang === 'de' ? sub.labelDe : currentLang === 'fa' ? sub.labelFa : sub.labelEn}
-                    </h3>
-                    <p
-                      className={`text-xs mt-1 font-light leading-snug line-clamp-1 ${
-                        isActive ? 'text-stone-300' : 'text-stone-500 group-hover:text-stone-700'
-                      }`}
-                    >
-                      {currentLang === 'de' ? sub.taglineDe : currentLang === 'fa' ? sub.taglineFa : sub.taglineEn}
-                    </p>
-                  </div>
-
-                  {/* Bottom Active Glow Accent Bar */}
-                  {isActive && (
-                    <div className="absolute -bottom-px left-6 right-6 h-0.5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-full" />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-
-        </div>
 
       </div>
     </header>
