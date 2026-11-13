@@ -100,9 +100,9 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Portraits',
     titleEn: 'Portraits',
     titleFa: 'پرتره‌ها',
-    descriptionDe: 'Ausdrucksstarke Porträts und Selbstporträts im Spannungsfeld von Stärke und Authentizität.',
-    descriptionEn: 'Expressive portraits and self-portraits bridging strength, dynamism, and authenticity.',
-    descriptionFa: 'پرتره‌ها و خودنگاره‌های بیانی پرشور در پیوند میان قدرت و اصالت.'
+    descriptionDe: 'Porträts und Selbstporträts mit Schwerpunkt auf persönlichem Ausdruck, Charakter und fotografischer Präsenz.',
+    descriptionEn: 'Portraits and self-portraits focusing on personal expression, character, and photographic presence.',
+    descriptionFa: 'پرتره‌ها و خودنگاره‌ها با تأکید بر بیان فردی، شخصیت و حضور عکاسانه.'
   },
   {
     id: 'biography',
@@ -201,9 +201,9 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   subtitleDe: 'Architektur / Sonstige Außenaufnahmen (7 Werke)',
   subtitleEn: 'Architecture / Other Exterior (7 Works)',
   subtitleFa: 'معماری / سازه‌های بیرونی (۷ اثر)',
-  descriptionDe: `Diese Serie verwandelt eine solitäre urbane Fassade in ein abstraktes Statement von Individualität und Harmonie mit der Natur. Jedes Bild erkundet eine andere Facette von Geometrie, Licht und Perspektive – und offenbart, wie architektonische Form mit dem Himmel und der Umwelt verschmilzt. Das Zusammenspiel von klaren Linien, wandernden Schatten und subtilen Reflexionen lässt das »Solitär« zwischen materieller Präzision und poetischer Abstraktion oszillieren. Durch Minimalismus und rhythmische Komposition wird der Betrachter eingeladen, nicht nur die innere Ordnung der Struktur, sondern auch ihren unerwarteten Dialog mit der natürlichen Welt zu entdecken.`,
-  descriptionEn: `This series transforms a singular urban facade into an abstract statement of individuality and harmony with nature. Each image explores a different facet of geometry, light, and perspective—revealing how architectural form merges with the sky and environment. The interplay of crisp lines, shifting shadows, and subtle reflections allows the “solitaire” to oscillate between material precision and poetic abstraction. Through minimalism and rhythmic composition, the viewer is invited to discover not only the structure’s inner order but also its unexpected dialogue with the natural world.`,
-  descriptionFa: `این مجموعه عکاسی، نمای یک بنای شهری تک و برجسته را به بیانیه‌ای انتزاعی از فردیت و هماهنگی عمیق با طبیعت تبدیل می‌سازد. هر عکس جلوه‌ای متمایز از هندسه، بازی نور و زاویه دید را به تصویر کشیده و پیوند مسحورکننده فرم معماری با وسعت آسمان و محیط را نمایان می‌سازد. تلفیق خطوط شفاف، سایه‌های سیال و بازتاب‌های ظریف به «تک‌بنا» این امکان را می‌دهد تا میان صراحت ساختاری و انتزاع شاعرانه در نوسان باشد.`,
+  descriptionDe: `Diese Serie untersucht eine solitäre urbane Gebäudestruktur im Wechselspiel mit Licht, Schatten und der umgebenden Natur. Die Fotografien fokussieren auf architektonische Geometrie, klare Kanten und die Reflexionen des Himmels auf der Fassade. Im Zentrum steht die visuelle Verbindung zwischen gebautem Raum und natürlicher Umwelt.`,
+  descriptionEn: `This series investigates a solitary urban building structure in interaction with light, shadow, and surrounding nature. The photographs focus on architectural geometry, clear contours, and the sky’s reflections on the facade, examining the visual relationship between built space and the natural environment.`,
+  descriptionFa: `این مجموعه عکاسی، ساختار یک بنای منفرد شهری را در پیوند با نور، سایه و طبیعت پیرامون بررسی می‌کند. تمرکز تصاویر بر هندسه معماری، خطوط صریح و بازتاب آسمان بر نما قرار دارد.`,
   coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
   badges: [
     {
@@ -316,9 +316,9 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   subtitleDe: 'Architektur / Abstrakt (5 Werke)',
   subtitleEn: 'Architecture / Abstract (5 Works)',
   subtitleFa: 'معماری / انتزاعی (۵ اثر)',
-  descriptionDe: `Diese Serie fängt die moderne Architektur einer urbanen Fassade im dynamischen Wechselspiel von Licht und Schatten ein. Klare Linien, geometrische Strukturen und ungewöhnliche Perspektiven betonen die Ästhetik und Energie des Bauwerks. Besonders faszinierend ist die Art und Weise, wie die Geometrie mit der Umgebung interagiert: Reflexionen und Kontraste zwischen Architektur und Himmel verleihen den Fotografien Tiefe und laden zum Erkunden ein. Durch sorgfältig gewählte Blickwinkel und Bildausschnitte werden sowohl die Strenge als auch die Leichtigkeit der Architektur spürbar.`,
-  descriptionEn: `This series captures the modern architecture of an urban facade in a dynamic interplay of light and shadow. Clear lines, geometric structures, and unusual perspectives emphasize the building’s aesthetic and energy. Particularly fascinating is the way geometry interacts with the environment: reflections and contrasts between architecture and sky add depth to the photographs and invite viewers to explore. Through carefully chosen angles and framing, both the rigor and the lightness of the architecture are revealed.`,
-  descriptionFa: `این مجموعه، معماری معاصر یک نمای شهری را در تعاملی پویا میان نور و سایه ماندگار می‌سازد. خطوط راسخ، ساختارهای متقارن هندسی و زوایای نامتعارف، انرژی و کمال زیبایی‌شناسانه بنا را برجسته می‌نمایند. عمق تصاویر از تضاد میان صلبیت سازه و گستره آسمان سرچشمه می‌گیرد و بیننده را به کاوشی بصری فرا می‌خواند.`,
+  descriptionDe: `Die Werkserie dokumentiert die architektonischen Linien einer urbanen Fassade im natürlichen Tageslichtverlauf. Präzise Blickwinkel betonen die geometrische Rhythmik, Materialität und die Kontraste zwischen Baukörper und offenem Himmel.`,
+  descriptionEn: `This body of work documents the architectural lines of an urban facade throughout the course of natural daylight. Precise viewpoints emphasize geometric rhythm, materiality, and contrasts between structure and open sky.`,
+  descriptionFa: `این مجموعه، خطوط معماری یک نمای شهری را در امتداد نور طبیعی روز مستند می‌سازد. زاویه‌های دقیق نگاه، ریتم هندسی، کیفیت مصالح و تضاد سازه با آسمان را برجسته می‌کنند.`,
   personalNoteDe: 'Persönliche Widmung: The Solitaire as an Abstraction entstand am Vatertag, dem 29. Mai 2025, in Berlin-Halensee und ist meinem Vater K. Shahmirzadi gewidmet.',
   personalNoteEn: 'Personal Note: The Solitaire as an Abstraction was created on Father’s Day, May 29, 2025, in Berlin-Halensee and is dedicated to my father, K. Shahmirzadi.',
   personalNoteFa: 'یادداشت و تقدیم شخصی: مجموعه «تک‌بنا به مثابه انتزاع» در روز پدر، ۲۹ مه ۲۰۲۵، در برلین-هالنزه‌ خلق شد و با تمام احترام به پدرم، ک. شاهمیرزادی، تقدیم گردیده است.',

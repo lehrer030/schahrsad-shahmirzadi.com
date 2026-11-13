@@ -23,7 +23,6 @@ import {
   type PhotoItem,
   type Language
 } from './data/photographyData';
-import { Building2, Palette, Globe2, User, GraduationCap, Newspaper } from 'lucide-react';
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>('de');
@@ -202,16 +201,14 @@ export default function App() {
             <section id="architecture" className="scroll-mt-24 pt-4">
               
               {/* Category Sticky Heading / Divider */}
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-stone-900 text-white shadow-xs">
-                    <Building2 className="w-5 h-5 text-amber-300" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
-                    </h2>
-                  </div>
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    01 / 04
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Architecture' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
@@ -257,17 +254,15 @@ export default function App() {
             {/* -------------------------------------------------------------
                 SECTION 2: FINE ART
                ------------------------------------------------------------- */}
-            <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-amber-900 text-white shadow-xs">
-                    <Palette className="w-5 h-5 text-amber-200" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
-                    </h2>
-                  </div>
+            <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    02 / 04
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
@@ -292,17 +287,15 @@ export default function App() {
             {/* -------------------------------------------------------------
                 SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-            <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-emerald-900 text-white shadow-xs">
-                    <Globe2 className="w-5 h-5 text-emerald-200" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
-                    </h2>
-                  </div>
+            <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    03 / 04
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Social & Environmental Themes' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
@@ -327,24 +320,22 @@ export default function App() {
             {/* -------------------------------------------------------------
                 SECTION 4: PORTRAITS
                ------------------------------------------------------------- */}
-            <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-amber-950 text-white shadow-xs">
-                    <User className="w-5 h-5 text-amber-300" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
-                    </h2>
-                  </div>
+            <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    04 / 04
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Portraits' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
-                    ? 'Ausdrucksstarke Porträts und Selbstporträts im Spannungsfeld von Stärke und Authentizität.'
+                    ? 'Porträts und Selbstporträts mit Schwerpunkt auf persönlichem Ausdruck, Charakter und fotografischer Präsenz.'
                     : currentLang === 'fa'
-                    ? 'پرتره‌ها و خودنگاره‌های بیانی پرشور در پیوند میان قدرت و اصالت.'
-                    : 'Expressive portraits and self-portraits bridging strength, dynamism, and authenticity.'}
+                    ? 'پرتره‌ها و خودنگاره‌ها با تأکید بر بیان فردی، شخصیت و حضور عکاسانه.'
+                    : 'Portraits and self-portraits focusing on personal expression, character, and photographic presence.'}
                 </p>
               </div>
 
@@ -362,20 +353,15 @@ export default function App() {
             {/* -------------------------------------------------------------
                 SECTION 5: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
                ------------------------------------------------------------- */}
-            <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-amber-800 text-white shadow-xs">
-                    <GraduationCap className="w-5 h-5 text-amber-200" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                      {currentLang === 'de' ? 'Künstlerin & Werdegang' : currentLang === 'fa' ? 'سوابق و فعالیت‌ها' : 'Artist & Background'}
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
-                    </h2>
-                  </div>
+            <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    Dokumentation
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'
@@ -393,20 +379,15 @@ export default function App() {
             {/* -------------------------------------------------------------
                 SECTION 6: PRESERVED WORDPRESS CONTENT: PRESS & MEDIA
                ------------------------------------------------------------- */}
-            <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200/90">
-              <div className="border-b border-amber-900/10 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-2xl bg-stone-800 text-white shadow-xs">
-                    <Newspaper className="w-5 h-5 text-stone-300" />
-                  </div>
-                  <div>
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-stone-600 font-bold">
-                      {currentLang === 'de' ? 'Medien & Publikationen' : currentLang === 'fa' ? 'رسانه‌ها و انتشارات' : 'Media & Publications'}
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                      {currentLang === 'de' ? 'Press & Media' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
-                    </h2>
-                  </div>
+            <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
+              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-400 block mb-1">
+                    Publikationen
+                  </span>
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+                    {currentLang === 'de' ? 'Press & Media' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
+                  </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
                   {currentLang === 'de'

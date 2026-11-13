@@ -42,12 +42,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
 
           {/* Visual Gallery Mode Switcher */}
           {worksWithPhotosCount > 0 && (
-            <div className="shrink-0 flex items-center gap-2 bg-white border border-stone-200/90 rounded-2xl p-1.5 shadow-2xs">
+            <div className="shrink-0 flex items-center gap-1.5 bg-white border border-stone-200 p-1 rounded text-xs">
               <button
                 onClick={() => setShowThumbnails(false)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-all cursor-pointer ${
                   !showThumbnails
-                    ? 'bg-amber-100/80 text-amber-950 font-semibold shadow-2xs'
+                    ? 'bg-stone-900 text-white'
                     : 'text-stone-600 hover:text-stone-900'
                 }`}
                 title={currentLang === 'de' ? 'Kompakte Übersicht' : 'Compact view'}
@@ -55,18 +55,18 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 <Layers className="w-3.5 h-3.5" />
                 <span>
                   {currentLang === 'de'
-                    ? 'Standard (Titel & Badges)'
+                    ? 'Katalog (Titel & Badges)'
                     : currentLang === 'fa'
-                    ? 'ساختار متنی (بدون تصویر)'
-                    : 'Standard (Titles & Badges)'}
+                    ? 'فهرست متنی'
+                    : 'Catalog (Titles & Badges)'}
                 </span>
               </button>
 
               <button
                 onClick={() => setShowThumbnails(true)}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition-all cursor-pointer ${
                   showThumbnails
-                    ? 'bg-amber-800 text-white font-semibold shadow-2xs'
+                    ? 'bg-stone-900 text-white'
                     : 'text-stone-600 hover:text-stone-900'
                 }`}
                 title={currentLang === 'de' ? 'Fotogalerie einblenden' : 'Show photo gallery'}
@@ -74,10 +74,10 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 <ImageIcon className="w-3.5 h-3.5" />
                 <span>
                   {currentLang === 'de'
-                    ? `Fotogalerie (${worksWithPhotosCount} Serien)`
+                    ? `Fotovorschau (${worksWithPhotosCount})`
                     : currentLang === 'fa'
-                    ? `گالری عکس‌ها (${worksWithPhotosCount} مجموعه)`
-                    : `Photo Gallery (${worksWithPhotosCount} Series)`}
+                    ? `پیش‌نمایش (${worksWithPhotosCount})`
+                    : `Photo Preview (${worksWithPhotosCount})`}
                 </span>
               </button>
             </div>
@@ -89,7 +89,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           {works.map((work, idx) => (
             <div
               key={work.id}
-              className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/50 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-xs"
+              className="group bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded p-5 sm:p-6 transition-all duration-200 flex flex-col justify-between"
             >
               <div>
                 

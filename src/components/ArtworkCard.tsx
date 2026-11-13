@@ -37,7 +37,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer ${
+        className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all duration-200 cursor-pointer ${
           alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -47,7 +47,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           alt={badge.name}
           className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
-        <span className="text-[10px] text-stone-600 group-hover/badge:text-amber-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
+        <span className="text-[10px] text-stone-500 group-hover/badge:text-stone-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100" />
         </span>
@@ -56,12 +56,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   };
 
   return (
-    <article className="bg-white border border-stone-200/90 rounded-3xl p-5 sm:p-8 lg:p-10 2xl:p-12 shadow-xs hover:shadow-md transition-all duration-300 w-full">
+    <article className="bg-white border border-stone-200 rounded p-6 sm:p-8 lg:p-10 w-full">
       
       {/* Title & Top Metadata Header */}
-      <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-100 pb-5">
+      <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-200 pb-5">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+          <span className="text-xs font-mono uppercase tracking-widest text-stone-500 font-medium">
             {currentLang === 'de'
               ? series.subtitleDe
               : currentLang === 'fa'
@@ -79,7 +79,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
         <button
           onClick={() => onOpenSeries(series.id)}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 hover:bg-amber-800 text-white text-xs font-semibold rounded-full transition-all duration-200 shadow-xs self-start md:self-auto cursor-pointer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium rounded transition-all duration-200 self-start md:self-auto cursor-pointer"
         >
           <Images className="w-4 h-4" />
           <span>
@@ -107,19 +107,19 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           {/* MAIN COVER PHOTO */}
           <div
             onClick={() => onOpenSeries(series.id)}
-            className="group/img relative rounded-2xl overflow-hidden bg-stone-100 border border-stone-200/90 shadow-md cursor-pointer w-full transition-all duration-500 hover:shadow-xl hover:border-amber-700/40"
+            className="group/img relative rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer w-full transition-all duration-300"
           >
             <img
               src={series.coverImage}
               alt={series.titleEn}
-              className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-700 group-hover/img:scale-[1.02]"
+              className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-500 group-hover/img:scale-[1.01]"
               loading="lazy"
             />
 
             {/* Hover actions */}
-            <div className="absolute inset-0 bg-stone-900/35 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 gap-3">
-              <span className="px-5 py-2.5 bg-white text-stone-900 border border-stone-200 rounded-full text-xs font-semibold tracking-wide shadow-lg flex items-center gap-2">
-                <Images className="w-4 h-4 text-amber-700" />
+            <div className="absolute inset-0 bg-stone-900/30 opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center justify-center p-4 gap-3">
+              <span className="px-4 py-2 bg-white text-stone-900 border border-stone-200 rounded text-xs font-medium tracking-wide flex items-center gap-2">
+                <Images className="w-4 h-4 text-stone-700" />
                 {currentLang === 'de'
                   ? 'Serie ansehen'
                   : currentLang === 'fa'
@@ -132,15 +132,15 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
                   e.stopPropagation();
                   onOpenLightbox(series.photos, 0);
                 }}
-                className="p-2.5 bg-white text-stone-900 rounded-full shadow-lg hover:bg-stone-100 transition-colors cursor-pointer"
-                title="Vollbild Lightbox öffnen"
+                className="p-2 bg-white text-stone-900 rounded hover:bg-stone-100 transition-colors cursor-pointer"
+                title="Vollbild"
               >
                 <Maximize2 className="w-4 h-4 text-stone-700" />
               </button>
             </div>
 
             {/* Watermark logo bottom-right */}
-            <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
+            <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/90 font-serif pointer-events-none select-none bg-stone-900/40 px-2 py-0.5 rounded">
               © SchirZan
             </div>
           </div>
@@ -167,11 +167,11 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
         </div>
 
-        {/* Right Column: Editorial Exhibition Curation Panel (utilizing wide screen estate!) */}
-        <div className="lg:col-span-5 space-y-6 bg-[#faf8f5] border border-stone-200/80 rounded-2xl p-6 sm:p-8">
+        {/* Right Column: Editorial Exhibition Curation Panel */}
+        <div className="lg:col-span-5 space-y-6 bg-[#faf8f5] border border-stone-200 rounded p-6 sm:p-8">
           <div>
-            <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold block mb-1">
-              {currentLang === 'de' ? 'Künstlerisches Statement' : currentLang === 'fa' ? 'بیانیه هنری اثر' : 'Curatorial Statement'}
+            <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500 font-medium block mb-2">
+              {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'Exhibition Notes'}
             </span>
             <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
               {currentLang === 'de'
@@ -183,7 +183,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           </div>
 
           {(series.personalNoteDe || series.personalNoteFa) && (
-            <div className="p-4 bg-white rounded-xl border border-stone-200/80 text-xs sm:text-sm text-amber-900/90 italic font-serif">
+            <div className="p-4 bg-white rounded border border-stone-200 text-xs sm:text-sm text-stone-700 italic font-serif">
               {currentLang === 'de'
                 ? series.personalNoteDe
                 : currentLang === 'fa'
