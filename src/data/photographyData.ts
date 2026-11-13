@@ -411,7 +411,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — 2 × Shortlisted ("New Perspectives" and "Revised")',
     awardsFa: 'LICC 2025 — دو بار در فهرست نهایی (Shortlisted)',
     badgeNames: ['LICC 2025 Shortlisted', 'LICC 2025 Revised'],
-    link: 'http://www.licc.uk/winners/winner.php?id=125858'
+    link: 'http://www.licc.uk/winners/winner.php?id=125858',
+    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-new-perspectives-01',
+        src: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+        alt: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionDe: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionEn: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionFa: 'The Solitaire as an Abstraction – New Perspectives and Revised'
+      }
+    ]
   },
   {
     id: 'bw-solitaire',
@@ -424,7 +435,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'Black & White Spider Awards 2025 — Nominee',
     awardsFa: 'Black & White Spider Awards 2025 — نامزد دریافت جایزه (Nominee)',
     badgeNames: ['Spider Awards 2025 Nominee'],
-    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238'
+    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
+    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'bw-solitaire-01',
+        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        alt: 'Black & White Solitaire',
+        captionDe: 'Black & White Solitaire – SchirZan',
+        captionEn: 'Black & White Solitaire – SchirZan',
+        captionFa: 'تک‌بنای سیاه‌وسفید – شیرزن'
+      }
+    ]
   },
   {
     id: 'solitaire-ipa-2025',
@@ -437,7 +459,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2025 — Honorable Mention',
     awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['IPA 2025 HM'],
-    link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25'
+    link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
+    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-ipa-2025-01',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025)',
+        captionDe: 'The Solitaire as an Abstraction – SchirZan',
+        captionEn: 'The Solitaire as an Abstraction – SchirZan',
+        captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
+      }
+    ]
   },
   {
     id: 'solitaire-short-version',
@@ -450,7 +483,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'ND Awards 2025 — Honorable Mention',
     awardsFa: 'ND Awards 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['ND Awards 2025 HM'],
-    link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/'
+    link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
+    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-short-version-01',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (Short Version)',
+        captionDe: 'The Solitaire as an Abstraction (Short Version)',
+        captionEn: 'The Solitaire as an Abstraction (Short Version)',
+        captionFa: 'تک‌بنا به مثابه انتزاع (نسخه کوتاه)'
+      }
+    ]
   },
   {
     id: 'echoes-water-tower',
@@ -711,7 +755,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2025 — Honorable Mention (Sustainable Interior) · PERSPA 2026 — Honorable Mention (Stairs)',
     awardsFa: 'AMP 2025 — تقدیر فضای داخلی پایدار · PERSPA 2026 — تقدیر ویژه پلکان',
     badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM Stairs'],
-    link: 'https://perspa.fr/winners/architectural-perspective/#work-152'
+    link: 'https://perspa.fr/winners/architectural-perspective/#work-152',
+    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'steps-sustainability-01',
+        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.webp',
+        alt: 'Steps of Sustainability',
+        captionDe: 'Steps of Sustainability – SchirZan',
+        captionEn: 'Steps of Sustainability – SchirZan',
+        captionFa: 'پله‌های پایداری – شیرزن'
+      }
+    ]
   },
   {
     id: 'hephaestus-legacy',
@@ -932,7 +987,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی (بخش ویدیو/عکس)',
     badgeNames: ['LICC 2025 OS'],
-    link: 'https://licc.uk/'
+    link: 'https://licc.uk/',
+    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'prismatic-berlin-01',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+        alt: 'Prismatic Berlin',
+        captionDe: 'Prismatic Berlin – SchirZan',
+        captionEn: 'Prismatic Berlin – SchirZan',
+        captionFa: 'برلین منشوری – شیرزن'
+      }
+    ]
   },
   {
     id: 'transformer',
@@ -945,7 +1011,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
-    link: 'https://licc.uk/'
+    link: 'https://licc.uk/',
+    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'transformer-01',
+        src: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
+        alt: 'Transformer',
+        captionDe: 'Transformer – SchirZan',
+        captionEn: 'Transformer – SchirZan',
+        captionFa: 'دگرگون‌شونده – شیرزن'
+      }
+    ]
   },
   {
     id: 'columns-here-and-now',
@@ -958,7 +1035,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'Black & White Spider Awards 2025 — Nominee (Architectural)',
     awardsFa: 'Spider Awards 2025 — نامزد دریافت جایزه',
     badgeNames: ['Spider Awards 2025 Nominee'],
-    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238'
+    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
+    previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'columns-here-now-01',
+        src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+        alt: 'Columns in the Here and Now',
+        captionDe: 'Columns in the Here and Now – SchirZan',
+        captionEn: 'Columns in the Here and Now – SchirZan',
+        captionFa: 'ستون‌ها در همین‌جا و اکنون – شیرزن'
+      }
+    ]
   }
 ];
 
@@ -1038,7 +1126,18 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Shoot / Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
-    link: 'https://licc.uk/'
+    link: 'https://licc.uk/',
+    previewImage: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'blessed-mourn-01',
+        src: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+        alt: 'Blessed Are Those Who Mourn',
+        captionDe: 'Blessed Are Those Who Mourn – SchirZan',
+        captionEn: 'Blessed Are Those Who Mourn – SchirZan',
+        captionFa: 'خوشا به حال سوگواران – شیرزن'
+      }
+    ]
   }
 ];
 
@@ -1054,7 +1153,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'BIFA 2026 — Honorable Mention (Editorial / Photo Essay)',
     awardsFa: 'BIFA 2026 — تقدیر ویژه (بخش ادیتوریال / مقاله تصویری)',
     badgeNames: ['BIFA 2026 HM'],
-    link: 'https://budapestfotoawards.com/'
+    link: 'https://budapestfotoawards.com/',
+    previewImage: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+    galleryPhotos: [
+      {
+        id: 'attack-on-queer-01',
+        src: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom',
+        captionDe: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
+        captionEn: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
+        captionFa: 'برلین: حمله به تنوع و آزادی – شیرزن'
+      }
+    ]
   },
   {
     id: 'life-love-freedom-iran',
@@ -1107,7 +1217,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Shoot / Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
-    link: 'https://licc.uk/'
+    link: 'https://licc.uk/',
+    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+    galleryPhotos: [
+      {
+        id: 'dignity-animal-01',
+        src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+        alt: 'The Dignity of the Animal is Inviolable',
+        captionDe: 'The Dignity of the Animal is Inviolable – SchirZan',
+        captionEn: 'The Dignity of the Animal is Inviolable – SchirZan',
+        captionFa: 'حرمت حیوان خدشه‌ناپذیر است – شیرزن'
+      }
+    ]
   },
   {
     id: 'in-between-spaces',
