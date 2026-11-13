@@ -7,6 +7,11 @@ import { FurtherWorks } from './components/FurtherWorks';
 import { ArtistVita } from './components/ArtistVita';
 import { PressSection } from './components/PressSection';
 import { Footer } from './components/Footer';
+import { LightboxModal } from './components/LightboxModal';
+import { LegalModal } from './components/LegalModal';
+import { ContactModal } from './components/ContactModal';
+import { CookieBanner } from './components/CookieBanner';
+import { BackToTop } from './components/BackToTop';
 import {
   CATEGORIES,
   SOLITAIRE_SERIES_1,
@@ -16,6 +21,7 @@ import {
   SOCIAL_ENVIRONMENTAL_WORKS,
   PORTRAIT_WORKS,
   type PhotoSeries,
+  type PhotoItem,
   type Language
 } from './data/photographyData';
 
@@ -25,6 +31,27 @@ export function App() {
     'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press'
   >('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
+
+  // Modern Must-Have Features State
+  const [lightboxState, setLightboxState] = useState<{
+    isOpen: boolean;
+    photos: PhotoItem[];
+    currentIndex: number;
+  }>({
+    isOpen: false,
+    photos: [],
+    currentIndex: 0
+  });
+
+  const [legalModal, setLegalModal] = useState<{
+    isOpen: boolean;
+    type: 'impressum' | 'datenschutz';
+  }>({
+    isOpen: false,
+    type: 'impressum'
+  });
+
+  const [contactModalOpen, setContactModalOpen] = useState(false);
 
   // Sync RTL / LTR direction and html lang attribute
   useEffect(() => {
@@ -56,13 +83,40 @@ export function App() {
     setSelectedSeriesId(null);
   };
 
+  const handleOpenLightbox = (photos: PhotoItem[], index: number) => {
+    setLightboxState({
+      isOpen: true,
+      photos,
+      currentIndex: index
+    });
+  };
+
+  const handleCloseLightbox = () => {
+    setLightboxState(prev => ({ ...prev, isOpen: false }));
+  };
+
+  const handleNavigateLightbox = (index: number) => {
+    setLightboxState(prev => ({ ...prev, currentIndex: index }));
+  };
+
+  const handleOpenLegal = (type: 'impressum' | 'datenschutz') => {
+    setLegalModal({
+      isOpen: true,
+      type
+    });
+  };
+
+  const handleCloseLegal = () => {
+    setLegalModal(prev => ({ ...prev, isOpen: false }));
+  };
+
   const activeSeries = selectedSeriesId ? seriesMap[selectedSeriesId] : null;
   const activeCatInfo = CATEGORIES.find(c => c.id === currentCategory);
 
   return (
     <div
       dir={currentLang === 'fa' ? 'rtl' : 'ltr'}
-      className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-amber-200 selection:text-amber-950"
+      className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-amber-200 selection:text-amber-950 w-full"
     >
       {/* EXCLUSIVELY ONE UNIFIED NAVIGATION BAR */}
       <Navbar
@@ -75,14 +129,15 @@ export function App() {
           setCurrentCategory('architecture');
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
+        onOpenContact={() => setContactModalOpen(true)}
       />
 
       {/* Main Header & Artist Intro Section */}
       <HeaderIntro currentLang={currentLang} />
 
       {/* Active Category Header Banner */}
-      <div className="bg-[#f5f2eb] border-b border-stone-200/80 py-5 sm:py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div className="bg-[#f5f2eb] border-b border-stone-200/80 py-5 sm:py-6 w-full">
+        <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
               {currentLang === 'de' ? 'Ausgewählter Bereich' : currentLang === 'fa' ? 'بخش انتخابی' : 'Selected Section'}
@@ -95,7 +150,7 @@ export function App() {
                 : activeCatInfo?.titleEn}
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-stone-600 max-w-2xl font-light leading-relaxed">
             {currentLang === 'de'
               ? activeCatInfo?.descriptionDe
               : currentLang === 'fa'
@@ -106,23 +161,24 @@ export function App() {
       </div>
 
       {/* Main Content Body */}
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         {activeSeries ? (
           /* Dedicated Series Subpage View */
           <SeriesDetail
             series={activeSeries}
             onBack={handleBackToOverview}
+            onOpenLightbox={handleOpenLightbox}
             currentLang={currentLang}
           />
         ) : (
-          /* Category Overview Content */
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+          /* Category Overview Content (Responsive for all screen sizes) */
+          <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-12">
             
             {/* 1. ARCHITECTURE (PRIMARY FOCUS) */}
             {currentCategory === 'architecture' && (
               <>
                 {/* Intro note for architecture */}
-                <div className="text-center max-w-2xl mx-auto">
+                <div className="text-center max-w-3xl mx-auto">
                   <span className="text-xs uppercase tracking-widest text-amber-800 font-mono font-bold">
                     {currentLang === 'de'
                       ? 'Fokus Architektur'
@@ -130,7 +186,7 @@ export function App() {
                       ? 'بخش معماری'
                       : 'Architecture Focus'}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
+                  <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 mt-1 font-bold">
                     {currentLang === 'de'
                       ? 'Die Solitaire-Serien'
                       : currentLang === 'fa'
@@ -150,6 +206,7 @@ export function App() {
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_1}
                   onOpenSeries={handleOpenSeries}
+                  onOpenLightbox={handleOpenLightbox}
                   currentLang={currentLang}
                 />
 
@@ -157,6 +214,7 @@ export function App() {
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_2}
                   onOpenSeries={handleOpenSeries}
+                  onOpenLightbox={handleOpenLightbox}
                   currentLang={currentLang}
                 />
 
@@ -219,7 +277,45 @@ export function App() {
       </main>
 
       {/* Global Footer */}
-      <Footer currentLang={currentLang} />
+      <Footer
+        currentLang={currentLang}
+        onOpenLegal={handleOpenLegal}
+        onOpenContact={() => setContactModalOpen(true)}
+      />
+
+      {/* MODERN MUST-HAVES: Lightbox Modal */}
+      <LightboxModal
+        photos={lightboxState.photos}
+        currentIndex={lightboxState.currentIndex}
+        isOpen={lightboxState.isOpen}
+        onClose={handleCloseLightbox}
+        onNavigate={handleNavigateLightbox}
+        currentLang={currentLang}
+      />
+
+      {/* MODERN MUST-HAVES: Legal Modal (Impressum / Datenschutz) */}
+      <LegalModal
+        type={legalModal.type}
+        isOpen={legalModal.isOpen}
+        onClose={handleCloseLegal}
+        currentLang={currentLang}
+      />
+
+      {/* MODERN MUST-HAVES: Quick Contact Modal */}
+      <ContactModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+        currentLang={currentLang}
+      />
+
+      {/* MODERN MUST-HAVES: GDPR/DSGVO Cookie Banner */}
+      <CookieBanner
+        onOpenLegal={handleOpenLegal}
+        currentLang={currentLang}
+      />
+
+      {/* MODERN MUST-HAVES: Floating Back to Top */}
+      <BackToTop />
     </div>
   );
 }

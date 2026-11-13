@@ -8,6 +8,7 @@ interface NavbarProps {
   currentLang: Language;
   onToggleLang: (lang: Language) => void;
   onGoHome: () => void;
+  onOpenContact: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -15,7 +16,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSelectCategory,
   currentLang,
   onToggleLang,
-  onGoHome
+  onGoHome,
+  onOpenContact
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -75,8 +77,8 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f5]/95 border-b border-stone-200/90 text-stone-900 shadow-xs transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-[#faf8f5]/95 border-b border-stone-200/90 text-stone-900 shadow-xs transition-colors w-full">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-20 flex items-center justify-between gap-4">
         
         {/* Brand / Artist Logo */}
         <button
@@ -181,6 +183,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Right Controls: Domain & Language Switcher & Mobile Menu Button */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
           
+          {/* Contact Button */}
+          <button
+            onClick={onOpenContact}
+            className="hidden md:flex items-center gap-1.5 text-xs text-stone-700 hover:text-stone-950 bg-white border border-stone-200/90 px-3.5 py-1.5 rounded-full shadow-2xs hover:border-amber-700 transition-colors font-medium cursor-pointer"
+          >
+            <span>{currentLang === 'fa' ? 'ارتباط' : 'Kontakt'}</span>
+          </button>
+
           {/* Domain Shortcut */}
           <div className="hidden sm:flex items-center text-xs text-stone-600 bg-white border border-stone-200/90 px-3 py-1.5 rounded-full shadow-2xs hover:border-amber-700 transition-colors">
             <a

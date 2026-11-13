@@ -1,16 +1,18 @@
 import React from 'react';
 import type { PhotoSeries, AwardBadge, Language } from '../data/photographyData';
-import { ArrowLeft, ArrowRight, ExternalLink, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink, ShieldCheck, Maximize2 } from 'lucide-react';
 
 interface SeriesDetailProps {
   series: PhotoSeries;
   onBack: () => void;
+  onOpenLightbox: (photos: PhotoSeries['photos'], index: number) => void;
   currentLang: Language;
 }
 
 export const SeriesDetail: React.FC<SeriesDetailProps> = ({
   series,
   onBack,
+  onOpenLightbox,
   currentLang
 }) => {
   // Badges for Image 1 (strictly AMP top-left, IPA bottom-right)
@@ -112,7 +114,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           )}
 
           <div className="flex items-center gap-2 text-xs text-stone-500 pt-1">
-            <ShieldCheck className="w-4 h-4 text-amber-700" />
+            <ShieldCheck className="w-4 h-4 text-amber-800" />
             <span>
               {currentLang === 'de'
                 ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan) · Signatur geschützt'
@@ -147,12 +149,22 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
             </div>
 
             {/* PHOTO 1 CONTAINER */}
-            <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative">
+            <div
+              onClick={() => onOpenLightbox(series.photos, 0)}
+              className="group/first relative rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md cursor-pointer"
+            >
               <img
                 src={firstPhoto.src}
                 alt={firstPhoto.alt}
-                className="w-full h-auto max-h-[620px] object-contain mx-auto"
+                className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/first:scale-[1.01]"
               />
+
+              <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/first:opacity-100 transition-opacity flex items-center justify-center">
+                <span className="p-3 bg-white/95 rounded-full shadow-lg text-stone-900">
+                  <Maximize2 className="w-5 h-5" />
+                </span>
+              </div>
+
               <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
                 © SchirZan
               </div>
@@ -196,13 +208,23 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </span>
               </div>
 
-              <div className="rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md relative max-w-xl mx-auto">
+              <div
+                onClick={() => onOpenLightbox(series.photos, index + 1)}
+                className="group/photo relative rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md max-w-xl mx-auto cursor-pointer"
+              >
                 <img
                   src={photo.src}
                   alt={photo.alt}
-                  className="w-full h-auto max-h-[620px] object-contain mx-auto"
+                  className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/photo:scale-[1.01]"
                   loading="lazy"
                 />
+
+                <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/photo:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="p-3 bg-white/95 rounded-full shadow-lg text-stone-900">
+                    <Maximize2 className="w-5 h-5" />
+                  </span>
+                </div>
+
                 <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
                   © SchirZan
                 </div>

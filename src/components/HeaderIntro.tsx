@@ -10,12 +10,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
   const [showPhilosophy, setShowPhilosophy] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fbfbfa] via-[#f7f4ee] to-[#faf8f5] text-stone-900 py-10 sm:py-14 md:py-16 border-b border-stone-200/90">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fbfbfa] via-[#f7f4ee] to-[#faf8f5] text-stone-900 py-10 sm:py-14 md:py-16 border-b border-stone-200/90 w-full">
       
       {/* Subtle warm architectural glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-200/30 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Headlines & Competitions */}

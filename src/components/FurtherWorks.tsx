@@ -18,12 +18,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   sectionTitleFa = 'سایر آثار برگزیده و دارای افتخارات بین‌المللی'
 }) => {
   return (
-    <section className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-stone-200">
-      <div className="max-w-7xl mx-auto">
+    <section className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-stone-200 w-full">
+      <div className="w-full">
         
         {/* Section Header */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-mono uppercase tracking-wider mb-2 font-bold">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-mono uppercase tracking-wider mb-2 font-bold">
             <Sparkles className="w-3.5 h-3.5 text-amber-700" />
             <span>
               {currentLang === 'de'
@@ -33,14 +33,14 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 : 'Works & Recognition Catalog'}
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
               ? sectionTitleDe
               : currentLang === 'fa'
               ? sectionTitleFa
               : sectionTitleEn}
           </h2>
-          <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-2xl font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-3xl font-light leading-relaxed">
             {currentLang === 'de'
               ? 'Kompaktübersicht mit Werktiteln, Auszeichnungen und direkter Verlinkung zu den internationalen Wettbewerben (ohne Vorschaubilder gemäß Portfolio-Vorgabe).'
               : currentLang === 'fa'
@@ -49,8 +49,8 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </p>
         </div>
 
-        {/* Works List / Compact Responsive Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Works List: Responsive 1 / 2 / 3 / 4 Columns (Full screen width utilization!) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-5 w-full">
           {works.map((work, idx) => (
             <div
               key={work.id}

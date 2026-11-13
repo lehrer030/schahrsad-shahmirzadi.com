@@ -1,19 +1,25 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, Heart } from 'lucide-react';
+import { ExternalLink, ShieldCheck, Heart, Mail, Scale } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface FooterProps {
   currentLang: Language;
+  onOpenLegal: (type: 'impressum' | 'datenschutz') => void;
+  onOpenContact: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
+export const Footer: React.FC<FooterProps> = ({
+  currentLang,
+  onOpenLegal,
+  onOpenContact
+}) => {
   return (
-    <footer className="bg-[#f5f2eb] border-t border-stone-200 text-stone-600 text-xs py-10 sm:py-14 mt-16 sm:mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-stone-200">
+    <footer className="bg-[#f5f2eb] border-t border-stone-200 text-stone-600 text-xs py-12 sm:py-16 mt-16 sm:mt-24 w-full">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 pb-8 border-b border-stone-200">
           
           {/* Brand & Artist */}
-          <div className="space-y-2">
+          <div className="space-y-2 md:col-span-1">
             <span className="text-xl font-serif text-amber-900 font-bold tracking-wider">
               {currentLang === 'fa' ? 'شیرزن (SchirZan)' : 'SchirZan'}
             </span>
@@ -31,6 +37,27 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                 ? 'عکاسی فاخر و برنده جوایز بین‌المللی در حوزه‌های معماری، فاین آرت و مستندهای اجتماعی و زیست‌محیطی.'
                 : 'Award-winning architectural, fine art, and socio-environmental documentary photography.'}
             </p>
+          </div>
+
+          {/* Quick Contact */}
+          <div className="space-y-2">
+            <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono">
+              {currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'ارتباط' : 'Contact'}
+            </span>
+            <ul className="space-y-2 text-[11px]">
+              <li>
+                <button
+                  onClick={onOpenContact}
+                  className="hover:text-amber-800 text-stone-700 font-medium flex items-center gap-1.5 cursor-pointer text-left rtl:text-right"
+                >
+                  <Mail className="w-3.5 h-3.5 text-amber-800" />
+                  <span>contact@schahrsad-shahmirzadi.com</span>
+                </button>
+              </li>
+              <li className="text-stone-500 font-light">
+                Berlin · Potsdam · Germany
+              </li>
+            </ul>
           </div>
 
           {/* Domains */}
@@ -68,25 +95,34 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
             </ul>
           </div>
 
-          {/* Copyright & Urheberschaft */}
+          {/* Legal / Impressum / Datenschutz */}
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
-              <span>
-                {currentLang === 'de'
-                  ? 'Urheberrecht'
-                  : currentLang === 'fa'
-                  ? 'حقوق مالکیت معنوی'
-                  : 'Copyright'}
-              </span>
+              <Scale className="w-3.5 h-3.5 text-amber-800" />
+              <span>{currentLang === 'de' ? 'Rechtliches' : currentLang === 'fa' ? 'اطلاعات حقوقی' : 'Legal'}</span>
             </span>
-            <p className="text-stone-600 text-[11px] leading-relaxed font-light">
-              {currentLang === 'de'
-                ? 'Alle Fotografien, Bildserien und Texte sind urheberrechtlich geschützt. Jedes Foto trägt das offizielle SchirZan Signatur-Wasserzeichen.'
-                : currentLang === 'fa'
-                ? 'کلیه عکس‌ها، مجموعه‌های هنری و متن‌ها تحت حمایت حقوق بین‌المللی کپی‌رایت هستند. هر اثر دارای امضا و واترمارک رسمی شیرزن (SchirZan) است.'
-                : 'All photographs, series, and texts are protected by international copyright. Each artwork carries the official SchirZan signature watermark.'}
-            </p>
+            <ul className="space-y-1.5 text-[11px]">
+              <li>
+                <button
+                  onClick={() => onOpenLegal('impressum')}
+                  className="text-stone-700 hover:text-amber-800 font-medium hover:underline cursor-pointer"
+                >
+                  {currentLang === 'fa' ? 'شناسنامه سایت (Impressum)' : 'Impressum (Angaben gem. § 5 TMG)'}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onOpenLegal('datenschutz')}
+                  className="text-stone-700 hover:text-amber-800 font-medium hover:underline cursor-pointer"
+                >
+                  {currentLang === 'fa' ? 'سیاست حفظ حریم خصوصی (Privacy)' : 'Datenschutzerklärung (DSGVO)'}
+                </button>
+              </li>
+              <li className="text-stone-500 font-light flex items-center gap-1 pt-1">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-800" />
+                <span>© SchirZan Signature Copyright</span>
+              </li>
+            </ul>
           </div>
         </div>
 
