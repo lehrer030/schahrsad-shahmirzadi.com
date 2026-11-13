@@ -24,7 +24,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
     <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
       
       {/* 1. Press Coverage */}
-      <section className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="press-features" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <div className="border-b border-stone-100 pb-6 mb-8">
           <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
             {currentLang === 'de'
@@ -90,7 +90,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
       </section>
 
       {/* 2. Ausstellungen / Exhibitions 2026 (Trieste Photo Days & Fringe, Italien) */}
-      <section className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="exhibitions" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <div className="border-b border-stone-100 pb-6 mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
             <MapPin className="w-4 h-4 text-amber-700" />
@@ -191,7 +191,8 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
       </section>
 
       {/* 3. Publications, Winners E-Books, Videos & Editor's Choice */}
-      <section className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="publications" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs relative">
+        <div id="award-references" className="absolute -top-28 left-0 pointer-events-none" />
         <div className="border-b border-stone-100 pb-6 mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
             <BookOpen className="w-4 h-4 text-amber-700" />

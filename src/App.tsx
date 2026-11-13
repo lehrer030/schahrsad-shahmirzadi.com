@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
+import { Navbar, type NavigationCategory } from './components/Navbar';
 import { HeaderIntro } from './components/HeaderIntro';
 import { ArtworkCard } from './components/ArtworkCard';
 import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
+import { KickboxingFullSection } from './components/KickboxingFullSection';
 import { ArtistVita } from './components/ArtistVita';
 import { PressSection } from './components/PressSection';
 import { GallerySection } from './components/GallerySection';
@@ -53,9 +54,7 @@ const getInitialLanguage = (): Language => {
 
 export default function App() {
   const [currentLang, setCurrentLang] = useState<Language>(getInitialLanguage);
-  const [currentCategory, setCurrentCategory] = useState<
-    'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery'
-  >('architecture');
+  const [currentCategory, setCurrentCategory] = useState<NavigationCategory>('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
 
   // Modern Must-Have Features State
@@ -143,15 +142,85 @@ export default function App() {
     return () => window.removeEventListener('languagechange', handleLangChange);
   }, []);
 
+  // URL Pathname & Hash Router to preserve direct links (/datenschutz, /kickboxen, /impressum, /galerie, etc.)
+  useEffect(() => {
+    const handleRouting = () => {
+      const pathname = window.location.pathname.toLowerCase();
+      const hash = window.location.hash.toLowerCase();
+
+      // 1. Legal routes
+      if (pathname.includes('/datenschutz') || hash === '#datenschutz' || hash === '#/datenschutz') {
+        setLegalModal({ isOpen: true, type: 'datenschutz' });
+      } else if (pathname.includes('/impressum') || hash === '#impressum' || hash === '#/impressum') {
+        setLegalModal({ isOpen: true, type: 'impressum' });
+      }
+      // 2. Contact routes
+      else if (pathname.includes('/kontakt') || pathname.includes('/contact') || hash === '#contact' || hash === '#kontakt') {
+        setContactModalOpen(true);
+      }
+      // 3. Kickboxen routes
+      else if (pathname.includes('/kickboxen') || pathname.includes('/kickboxing') || hash === '#kickboxen' || hash === '#kickboxing') {
+        setCurrentCategory('kickboxing');
+        const el = document.getElementById('kickboxing');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 4. Galerie routes
+      else if (pathname.includes('/galerie') || pathname.includes('/gallery') || hash === '#gallery' || hash === '#galerie') {
+        setCurrentCategory('gallery');
+        const el = document.getElementById('gallery');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 5. Exhibitions routes
+      else if (pathname.includes('/exhibitions') || pathname.includes('/ausstellungen') || hash === '#exhibitions') {
+        setCurrentCategory('press');
+        const el = document.getElementById('exhibitions') || document.getElementById('press');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 6. Press routes
+      else if (pathname.includes('/press') || pathname.includes('/presse') || hash === '#press') {
+        setCurrentCategory('press');
+        const el = document.getElementById('press');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 7. Education / Bildungsweg routes
+      else if (pathname.includes('/bildungsweg') || pathname.includes('/education') || hash === '#education') {
+        setCurrentCategory('biography');
+        const el = document.getElementById('education') || document.getElementById('biography');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 8. Vita / Biography routes
+      else if (pathname.includes('/vita') || pathname.includes('/biography') || hash === '#biography') {
+        setCurrentCategory('biography');
+        const el = document.getElementById('biography');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+      // 9. Environmental Protection / Engagement routes
+      else if (pathname.includes('/environmental-protection') || hash === '#engagement') {
+        setCurrentCategory('biography');
+        const el = document.getElementById('engagement') || document.getElementById('social-environmental');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
+    handleRouting();
+    window.addEventListener('hashchange', handleRouting);
+    window.addEventListener('popstate', handleRouting);
+    return () => {
+      window.removeEventListener('hashchange', handleRouting);
+      window.removeEventListener('popstate', handleRouting);
+    };
+  }, []);
+
   // One-Pager: ScrollSpy IntersectionObserver to track visible section on scroll
   useEffect(() => {
     if (selectedSeriesId) return;
 
-    const sectionIds: Array<'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery'> = [
+    const sectionIds: NavigationCategory[] = [
       'architecture',
       'fine-art',
       'social-environmental',
       'portraits',
+      'kickboxing',
       'biography',
       'press',
       'gallery'
@@ -191,7 +260,7 @@ export default function App() {
   };
 
   // One-Pager Smooth Scroll Action
-  const handleSelectCategory = (cat: 'architecture' | 'fine-art' | 'social-environmental' | 'portraits' | 'biography' | 'press' | 'gallery') => {
+  const handleSelectCategory = (cat: NavigationCategory) => {
     setCurrentCategory(cat);
     setSelectedSeriesId(null);
 
@@ -410,7 +479,13 @@ export default function App() {
 
 
             {/* -------------------------------------------------------------
-                SECTION 5: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
+                SECTION 5: WORLD CHAMPION KICKBOXING (FULL 10X WORLD CHAMPION HISTORY)
+               ------------------------------------------------------------- */}
+            <KickboxingFullSection currentLang={currentLang} />
+
+
+            {/* -------------------------------------------------------------
+                SECTION 6: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
                ------------------------------------------------------------- */}
             <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">

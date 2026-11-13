@@ -120,55 +120,183 @@ export const LegalModal: React.FC<LegalModalProps> = ({
           <div className="space-y-6 text-sm leading-relaxed text-stone-700">
             <div>
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                1. Allgemeine Hinweise &amp; Datenschutz auf einen Blick
+                {currentLang === 'fa'
+                  ? '۱. اطلاعات عمومی'
+                  : currentLang === 'en'
+                  ? '1. General Information'
+                  : '1. Allgemeine Hinweise'}
               </h3>
-              <p className="font-normal text-stone-600 text-xs sm:text-sm">
-                Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO, BDSG, TDDDG) sowie dieser Datenschutzerklärung. Die Nutzung meiner Website ist in der Regel ohne Angabe personenbezogener Daten möglich.
+              <p className="font-normal text-stone-600 text-xs sm:text-sm leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'حفاظت از داده‌های شخصی شما برای من اهمیت ویژه‌ای دارد. من با اطلاعات شخصی شما محرمانه و مطابق با قوانین حفاظت از داده‌ها و این سیاست حفظ حریم خصوصی رفتار می‌کنم. استفاده از این وب‌سایت عموماً بدون نیاز به ارائه داده‌های شخصی امکان‌پذیر است.'
+                  : currentLang === 'en'
+                  ? 'Protecting your personal data is particularly important to me. I treat your personal data confidentially and in accordance with applicable data protection legislation and this Privacy Policy. You can generally use my website without providing personal data. Where personal data is collected, such as your name, address, or email address, you provide it voluntarily wherever possible. This data will not be disclosed to third parties without your explicit consent.'
+                  : 'Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung meiner Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf meinen Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben.'}
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                2. Verantwortliche Stelle / Data Controller
+                {currentLang === 'fa'
+                  ? '۲. مسئول پردازش داده‌ها'
+                  : currentLang === 'en'
+                  ? '2. Data Controller'
+                  : '2. Verantwortliche Stelle'}
               </h3>
               <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi</p>
-              <p>c/o Sammy Richter, Krummestr. 26, 10627 Berlin</p>
-              <p>E-Mail: <a href="mailto:contact@schahrsad-shahmirzadi.com" className="text-amber-800 hover:underline">contact@schahrsad-shahmirzadi.com</a></p>
-            </div>
-
-            <div>
-              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                3. Datenerfassung auf dieser Website (Server-Log-Dateien)
-              </h3>
-              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
-                Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, anonymisierte IP-Adresse). Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
+              <p className="text-stone-600 text-xs sm:text-sm">c/o Sammy Richter, Krummestr. 26, 10627 Berlin, Deutschland / Germany</p>
+              <p className="text-stone-600 text-xs sm:text-sm mt-1">
+                E-Mail: <a href="mailto:contact@schahrsad-shahmirzadi.com" className="text-amber-800 hover:underline font-medium">contact@schahrsad-shahmirzadi.com</a>
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                4. Cookies
+                {currentLang === 'fa'
+                  ? '۳. فایل‌های لاگ سرور'
+                  : currentLang === 'en'
+                  ? '3. Server Log Files'
+                  : '3. Server-Log-Dateien'}
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
-                Diese Website verwendet Cookies. Die meisten der von uns verwendeten Cookies sind so genannte »Session-Cookies«. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen (z. B. Sprachauswahl DE/EN/FA). Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.
+                {currentLang === 'fa'
+                  ? 'میزبان این وب‌سایت به صورت خودکار اطلاعات ارسالی از مرورگر شما را در فایل‌های لاگ سرور جمع‌آوری و ذخیره می‌کند:'
+                  : currentLang === 'en'
+                  ? 'The hosting provider for this website automatically collects and stores information in server log files, which your browser automatically transmits to us. This information includes:'
+                  : 'Der Hosting-Provider dieser Website erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:'}
+              </p>
+              <ul className="list-disc list-inside mt-2 space-y-1 text-xs text-stone-600">
+                <li>{currentLang === 'fa' ? 'نوع و نسخه مرورگر' : currentLang === 'en' ? 'Browser type and version' : 'Browsertyp und Browserversion'}</li>
+                <li>{currentLang === 'fa' ? 'سیستم عامل مورد استفاده' : currentLang === 'en' ? 'Operating system used' : 'Verwendetes Betriebssystem'}</li>
+                <li>{currentLang === 'fa' ? 'نشانی اینترنتی ارجاع‌دهنده (Referrer URL)' : currentLang === 'en' ? 'Referrer URL' : 'Referrer URL'}</li>
+                <li>{currentLang === 'fa' ? 'نام هاست کامپیوتر متصل‌شده' : currentLang === 'en' ? 'Hostname of the accessing computer' : 'Hostname des zugreifenden Rechners'}</li>
+                <li>{currentLang === 'fa' ? 'زمان درخواست سرور' : currentLang === 'en' ? 'Time of the server request' : 'Uhrzeit der Serveranfrage'}</li>
+                <li>{currentLang === 'fa' ? 'آدرس IP (ناشناس یا کوتاه شده)' : currentLang === 'en' ? 'IP address (truncated or anonymised)' : 'IP-Adresse (anonymisiert bzw. gekürzt)'}</li>
+              </ul>
+              <p className="text-xs text-stone-500 mt-2">
+                {currentLang === 'fa'
+                  ? 'این اطلاعات به اشخاص خاصی منتسب نمی‌شود و با منابع دیگر ترکیب نخواهد شد.'
+                  : currentLang === 'en'
+                  ? 'This data cannot be attributed to specific individuals. It is not combined with data from other sources.'
+                  : 'Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.'}
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                5. SSL- bzw. TLS-Verschlüsselung
+                {currentLang === 'fa'
+                  ? '۴. کوکی‌ها'
+                  : currentLang === 'en'
+                  ? '4. Cookies'
+                  : '4. Cookies'}
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
-                Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von »http://« auf »https://« wechselt.
+                {currentLang === 'fa'
+                  ? 'این وب‌سایت از کوکی‌ها استفاده می‌کند. این‌ها فایل‌های متنی کوچکی هستند که در دستگاه شما ذخیره می‌شوند. اکثر کوکی‌های مورد استفاده کوکی‌های جلسه هستند که پس از بستن مرورگر حذف می‌شوند.'
+                  : currentLang === 'en'
+                  ? 'This website uses cookies. These are small text files that your browser automatically stores. Cookies do not harm your device and do not contain viruses. Cookies help make my website more user-friendly and effective. Most of the cookies used are session cookies, which are automatically deleted at the end of your visit. You can configure your browser to notify you when cookies are set and to allow cookies only on a case-by-case basis.'
+                  : 'Diese Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Browser automatisch speichert. Cookies richten auf Ihrem Endgerät keinen Schaden an und enthalten keine Viren. Sie dienen dazu, das Angebot nutzerfreundlicher und effektiver zu machen (z. B. Speicherung der Sprachauswahl). Die meisten der verwendeten Cookies sind sogenannte »Session-Cookies«, die nach Ende Ihres Besuchs automatisch gelöscht werden. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.'}
               </p>
             </div>
 
             <div>
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
-                6. Ihre Rechte (Auskunft, Berichtigung, Löschung, Beschwerde)
+                {currentLang === 'fa'
+                  ? '۵. تماس از طریق ایمیل و فرم تماس'
+                  : currentLang === 'en'
+                  ? '5. Contact Form / Email Contact'
+                  : '5. Kontaktformular & E-Mail-Kontakt'}
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
-                Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung (Art. 15 DSGVO) sowie ein Recht auf Berichtigung (Art. 16 DSGVO), Sperrung oder Löschung dieser Daten (Art. 17 DSGVO). Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
+                {currentLang === 'fa'
+                  ? 'اگر از طریق ایمیل یا فرم تماس با من تماس بگیرید، اطلاعات ارائه‌شده برای پردازش درخواست و پاسخ به سوالات احتمالی بعدی ذخیره می‌شود. این داده‌ها بدون رضایت شما به هیچ شخص ثالثی واگذار نخواهد شد.'
+                  : currentLang === 'en'
+                  ? 'If you send me an enquiry by email or via the contact form, the information you provide in the form or email will be stored to process your enquiry and respond to any follow-up questions. I will not disclose this data without your consent.'
+                  : 'Wenn Sie mir per E-Mail oder über das Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus der Anfrage inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
+                {currentLang === 'fa'
+                  ? '۶. رمزگذاری SSL / TLS'
+                  : currentLang === 'en'
+                  ? '6. SSL / TLS Encryption'
+                  : '6. SSL- bzw. TLS-Verschlüsselung'}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'این وب‌سایت به دلایل امنیتی و به منظور محافظت از انتقال اطلاعات حساس، از رمزگذاری SSL/TLS استفاده می‌کند. اتصال رمزگذاری‌شده با شروع نشانی در نوار مرورگر با «https://» قابل شناسایی است.'
+                  : currentLang === 'en'
+                  ? 'For security reasons and to protect the transmission of confidential information, such as enquiries you send me, this website uses SSL or TLS encryption. You can recognise an encrypted connection by the address in your browser’s address bar beginning with "https://".'
+                  : 'Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen, die Sie an mich senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von »http://« auf »https://« wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
+                {currentLang === 'fa'
+                  ? '۷. حقوق شما (مطابق مقررات عمومی حفاظت از داده‌های اتحادیه اروپا DSGVO)'
+                  : currentLang === 'en'
+                  ? '7. Your Rights (GDPR)'
+                  : '7. Ihre Rechte nach der DSGVO'}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'شما در هر زمان حق دارید:'
+                  : currentLang === 'en'
+                  ? 'You have the right at any time to:'
+                  : 'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:'}
+              </p>
+              <ul className="list-disc list-inside mt-2 space-y-1 text-xs text-stone-600">
+                <li>{currentLang === 'fa' ? 'دسترسی رایگان به اطلاعات شخصی ذخیره‌شده (ماده ۱۵ DSGVO)' : currentLang === 'en' ? 'Access your stored personal data (Article 15 GDPR)' : 'Auskunft über Ihre gespeicherten personenbezogenen Daten (Art. 15 DSGVO)'}</li>
+                <li>{currentLang === 'fa' ? 'تصحیح داده‌های نادرست (ماده ۱۶ DSGVO)' : currentLang === 'en' ? 'Have inaccurate data corrected (Article 16 GDPR)' : 'Berichtigung unrichtiger Daten (Art. 16 DSGVO)'}</li>
+                <li>{currentLang === 'fa' ? 'حذف داده‌های خود (ماده ۱۷ DSGVO)' : currentLang === 'en' ? 'Have your data erased (Article 17 GDPR)' : 'Löschung Ihrer bei mir gespeicherten Daten (Art. 17 DSGVO)'}</li>
+                <li>{currentLang === 'fa' ? 'محدود کردن پردازش داده‌ها (ماده ۱۸ DSGVO)' : currentLang === 'en' ? 'Restrict the processing of your data (Article 18 GDPR)' : 'Einschränkung der Datenverarbeitung (Art. 18 DSGVO)'}</li>
+                <li>{currentLang === 'fa' ? 'انتقال داده‌ها (ماده ۲۰ DSGVO)' : currentLang === 'en' ? 'Data portability (Article 20 GDPR)' : 'Datenübertragbarkeit (Art. 20 DSGVO)'}</li>
+                <li>{currentLang === 'fa' ? 'اعتراض به پردازش داده‌ها (ماده ۲۱ DSGVO)' : currentLang === 'en' ? 'Object to the processing of your data (Article 21 GDPR)' : 'Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)'}</li>
+              </ul>
+              <p className="text-xs text-stone-600 mt-2">
+                {currentLang === 'fa'
+                  ? 'برای اعمال این حقوق، لطفاً با ایمیل زیر تماس بگیرید: '
+                  : currentLang === 'en'
+                  ? 'To exercise these rights, please contact me directly at: '
+                  : 'Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an mich wenden: '}
+                <a href="mailto:contact@schahrsad-shahmirzadi.com" className="text-amber-800 hover:underline font-medium">contact@schahrsad-shahmirzadi.com</a>
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
+                {currentLang === 'fa'
+                  ? '۸. حق شکایت به مرجع نظارتی'
+                  : currentLang === 'en'
+                  ? '8. Right to Lodge a Complaint with a Supervisory Authority'
+                  : '8. Beschwerderecht bei der zuständigen Aufsichtsbehörde'}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'در صورت نقض قوانین حفاظت از داده‌ها، شما حق دارید به مرجع نظارتی ذی‌صلاح شکایت کنید.'
+                  : currentLang === 'en'
+                  ? 'You have the right to lodge a complaint with a data protection supervisory authority regarding the processing of your personal data.'
+                  : 'Im Falle datenschutzrechtlicher Verstöße steht den Betroffenen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde in datenschutzrechtlichen Fragen ist die Landesbeauftragte für den Datenschutz des Bundeslandes Berlin.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
+                {currentLang === 'fa'
+                  ? '۹. تغییرات در این سیاست حفظ حریم خصوصی'
+                  : currentLang === 'en'
+                  ? '9. Changes to This Privacy Policy'
+                  : '9. Aktualität und Änderung dieser Datenschutzerklärung'}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'من حق به‌روزرسانی این سیاست حفظ حریم خصوصی را در صورت لزوم (مثلاً در پاسخ به تغییرات قوانین یا پیشرفت‌های فنی وب‌سایت) برای خود محفوظ می‌دارم.'
+                  : currentLang === 'en'
+                  ? 'I reserve the right to update this Privacy Policy as necessary, for example, in response to changes in legislation or technical developments on this website.'
+                  : 'Ich behalte mir das Recht vor, diese Datenschutzerklärung bei Bedarf anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen meiner Angebote in der Datenschutzerklärung umzusetzen.'}
               </p>
             </div>
           </div>
