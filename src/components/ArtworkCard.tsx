@@ -35,7 +35,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-neutral-900/90 hover:bg-neutral-850 border border-neutral-700/80 hover:border-amber-400 rounded-xl shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer ${
+        className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer ${
           alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -43,9 +43,9 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         <img
           src={badge.badgeImage}
           alt={badge.name}
-          className="max-h-9 sm:max-h-12 max-w-full object-contain filter drop-shadow group-hover/badge:brightness-110"
+          className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
-        <span className="text-[10px] text-neutral-400 group-hover/badge:text-amber-300 font-sans tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
+        <span className="text-[10px] text-stone-600 group-hover/badge:text-amber-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100" />
         </span>
@@ -54,19 +54,19 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   };
 
   return (
-    <article className="bg-neutral-900/40 border border-neutral-800 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xl transition-all duration-300 hover:border-neutral-700/80">
+    <article className="bg-white border border-stone-200/90 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-xs hover:shadow-md transition-all duration-300">
       
       {/* Title & Metadata Header */}
-      <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-neutral-800/80 pb-5">
+      <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-100 pb-5">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-500 font-medium">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
             {currentLang === 'de'
               ? series.subtitleDe
               : currentLang === 'fa'
               ? series.subtitleFa
               : series.subtitleEn}
           </span>
-          <h3 className="text-2xl sm:text-3xl font-serif text-neutral-100 mt-1">
+          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
             {currentLang === 'de'
               ? series.titleDe
               : currentLang === 'fa'
@@ -77,9 +77,9 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
         <button
           onClick={() => onOpenSeries(series.id)}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-amber-500 hover:text-neutral-950 text-neutral-200 text-xs font-semibold rounded-full transition-all duration-200 border border-neutral-700 hover:border-amber-400 self-start md:self-auto cursor-pointer shadow-md"
+          className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 hover:bg-amber-800 text-white text-xs font-semibold rounded-full transition-all duration-200 shadow-xs self-start md:self-auto cursor-pointer"
         >
-          <Images className="w-3.5 h-3.5" />
+          <Images className="w-4 h-4" />
           <span>
             {currentLang === 'de'
               ? `Serie ansehen (${series.photos.length} Werke)`
@@ -87,7 +87,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               ? `مشاهده کامل مجموعه (${series.photos.length} اثر)`
               : `View Full Series (${series.photos.length} Works)`}
           </span>
-          <ArrowUpRight className="w-3.5 h-3.5" />
+          <ArrowUpRight className="w-4 h-4" />
         </button>
       </div>
 
@@ -99,22 +99,22 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           {renderBadgeItem(ampBadge, 'left')}
         </div>
 
-        {/* CENTER: Moderately Sized Photo (Not huge desktop size!) */}
+        {/* CENTER: Moderately Sized Photo (Clean light frame, not giant desktop size!) */}
         <div
           onClick={() => onOpenSeries(series.id)}
-          className="group/img relative rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800 shadow-2xl cursor-pointer w-full transition-all duration-500 hover:shadow-amber-500/10 hover:border-amber-500/40"
+          className="group/img relative rounded-2xl overflow-hidden bg-stone-100 border border-stone-200/90 shadow-md cursor-pointer w-full transition-all duration-500 hover:shadow-xl hover:border-amber-700/40"
         >
           <img
             src={series.coverImage}
             alt={series.titleEn}
-            className="w-full h-auto max-h-[540px] object-contain mx-auto transition-transform duration-700 group-hover/img:scale-[1.02]"
+            className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-700 group-hover/img:scale-[1.02]"
             loading="lazy"
           />
 
           {/* Hover overlay with button */}
-          <div className="absolute inset-0 bg-neutral-950/40 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <span className="px-5 py-2.5 bg-neutral-900/90 text-amber-300 border border-amber-400/50 rounded-full text-xs font-medium tracking-wider backdrop-blur-sm shadow-xl flex items-center gap-2">
-              <Images className="w-4 h-4 text-amber-400" />
+          <div className="absolute inset-0 bg-stone-900/35 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+            <span className="px-5 py-2.5 bg-white text-stone-900 border border-stone-200 rounded-full text-xs font-semibold tracking-wide shadow-lg flex items-center gap-2">
+              <Images className="w-4 h-4 text-amber-700" />
               {currentLang === 'de'
                 ? 'Klicken, um gesamte Serie zu öffnen'
                 : currentLang === 'fa'
@@ -123,14 +123,14 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </span>
           </div>
 
-          {/* Discreet Urheberrecht Copyright Logo bottom-right */}
-          <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/50 font-serif pointer-events-none select-none drop-shadow">
+          {/* Watermark logo bottom-right */}
+          <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
             © SchirZan
           </div>
         </div>
 
         {/* BOTTOM ROW: Equal Proportion Badges exactly as in her email mockups */}
-        <div className="w-full mt-4 flex items-center justify-between flex-wrap gap-3">
+        <div className="w-full mt-4 flex items-center justify-between flex-wrap gap-2.5 sm:gap-3">
           {/* Bottom-Left: PERSPA */}
           <div>
             {renderBadgeItem(perspaBadge, 'left')}
@@ -152,7 +152,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
       </div>
 
       {/* Brief Series Preview Description */}
-      <div className="mt-8 pt-5 border-t border-neutral-800/80 text-sm text-neutral-400 line-clamp-2 font-light">
+      <div className="mt-7 pt-5 border-t border-stone-100 text-sm text-stone-600 line-clamp-2 font-normal leading-relaxed">
         {currentLang === 'de'
           ? series.descriptionDe
           : currentLang === 'fa'

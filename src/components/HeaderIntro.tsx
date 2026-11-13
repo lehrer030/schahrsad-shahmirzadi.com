@@ -10,17 +10,18 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
   const [showPhilosophy, setShowPhilosophy] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-neutral-950 via-neutral-900 to-neutral-950 text-neutral-100 py-12 md:py-16 border-b border-neutral-800">
-      {/* Subtle background glow effect */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 blur-[120px] rounded-full pointer-events-none" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fbfbfa] via-[#f7f4ee] to-[#faf8f5] text-stone-900 py-10 sm:py-14 md:py-16 border-b border-stone-200/90">
+      
+      {/* Subtle warm architectural glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-200/30 blur-[130px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Headlines & Awards */}
-          <div className="lg:col-span-8 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-medium tracking-wide">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          {/* Left Column: Headlines & Competitions */}
+          <div className="lg:col-span-8 space-y-5 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-semibold tracking-wide">
+              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
               <span>
                 {currentLang === 'de'
                   ? 'Offizielles Portfolio & Werkverzeichnis'
@@ -30,13 +31,13 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
               </span>
             </div>
 
-            {/* Main Header */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif tracking-tight text-neutral-100 leading-tight">
+            {/* Main Header as requested by client */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif tracking-tight text-stone-900 leading-tight font-bold">
               {currentLang === 'fa' ? INTRO_CONTENT.mainHeaderFa : INTRO_CONTENT.mainHeader}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-neutral-300 font-light max-w-3xl leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-stone-700 font-light max-w-3xl leading-relaxed">
               {currentLang === 'de'
                 ? INTRO_CONTENT.subtitleDe
                 : currentLang === 'fa'
@@ -45,9 +46,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
             </p>
 
             {/* Competition Recognition Badges / Ticker */}
-            <div className="pt-2">
-              <p className="text-xs uppercase tracking-widest text-neutral-400 mb-3 flex items-center gap-2">
-                <Award className="w-4 h-4 text-amber-400" />
+            <div className="pt-1 sm:pt-2">
+              <p className="text-xs uppercase tracking-widest text-stone-600 mb-2.5 flex items-center gap-2 font-semibold font-mono">
+                <Award className="w-4 h-4 text-amber-700" />
                 <span>
                   {currentLang === 'de'
                     ? 'Internationale Wettbewerbe & Auszeichnungen'
@@ -60,7 +61,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
                 {INTRO_CONTENT.competitions.map((comp, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center text-xs bg-neutral-800/90 text-neutral-200 border border-neutral-700/70 px-3 py-1.5 rounded-md hover:border-amber-400/50 hover:text-amber-200 transition-colors"
+                    className="inline-flex items-center text-xs bg-white text-stone-800 border border-stone-200/90 shadow-2xs px-3 py-1.5 rounded-lg hover:border-amber-700/50 hover:text-amber-950 transition-colors"
                   >
                     {comp}
                   </span>
@@ -72,9 +73,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
             <div className="pt-2">
               <button
                 onClick={() => setShowPhilosophy(!showPhilosophy)}
-                className="inline-flex items-center gap-2 text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors group cursor-pointer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-amber-900 hover:text-amber-700 transition-colors group cursor-pointer bg-white/80 border border-amber-200/80 px-4 py-2 rounded-full shadow-2xs"
               >
-                <Feather className="w-4 h-4 text-amber-400" />
+                <Feather className="w-4 h-4 text-amber-700" />
                 <span>
                   {currentLang === 'de'
                     ? INTRO_CONTENT.artistSectionTitleDe
@@ -94,21 +95,21 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
           {/* Right Column: Artist Portrait */}
           <div className="lg:col-span-4 flex flex-col items-center">
             <div className="relative group max-w-xs w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-neutral-900">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <img
                   src="/images/2025_07_photoart.jpg"
                   alt="SchirZan - Schahrsad Shahmirzadi"
-                  className="w-full h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="w-full h-80 object-cover object-center group-hover:scale-103 transition-transform duration-500 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/20 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/30 to-transparent" />
                 <div className="absolute bottom-3 left-4 right-4">
                   <p className="text-white font-serif text-base font-semibold">
                     {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
                   </p>
-                  <p className="text-amber-400 text-xs tracking-wider">
+                  <p className="text-amber-300 text-xs tracking-wider font-medium">
                     {currentLang === 'fa' ? 'شیرزن (SchirZan) · هنرمند و عکاس' : 'SchirZan · Artist & Photographer'}
                   </p>
-                  <p className="text-[11px] text-neutral-400 mt-1">
+                  <p className="text-[11px] text-stone-300 mt-1">
                     {INTRO_CONTENT.photoCredit}
                   </p>
                 </div>
@@ -120,16 +121,16 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({ currentLang }) => {
 
         {/* Collapsible Artist Philosophy Section */}
         {showPhilosophy && (
-          <div className="mt-8 pt-8 border-t border-neutral-800 bg-neutral-900/60 rounded-2xl p-6 sm:p-8 backdrop-blur-sm shadow-xl transition-all">
+          <div className="mt-8 pt-8 border-t border-stone-200 bg-white/95 rounded-2xl p-6 sm:p-8 shadow-sm border border-stone-200 transition-all">
             <div className="max-w-4xl space-y-4">
-              <h3 className="text-xl font-serif text-amber-300">
+              <h3 className="text-xl font-serif text-amber-900 font-bold">
                 {currentLang === 'de'
                   ? 'Künstlername SchirZan & Die Philosophie des Lichts'
                   : currentLang === 'fa'
                   ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
                   : 'Artist Name SchirZan & The Philosophy of Light'}
               </h3>
-              <div className="text-neutral-300 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-light">
+              <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
                 {currentLang === 'de'
                   ? INTRO_CONTENT.artistExplanationDe
                   : currentLang === 'fa'

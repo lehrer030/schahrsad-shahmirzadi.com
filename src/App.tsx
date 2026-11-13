@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeaderIntro } from './components/HeaderIntro';
-import { CategoryTabs } from './components/CategoryTabs';
 import { ArtworkCard } from './components/ArtworkCard';
 import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
 import { Footer } from './components/Footer';
 import {
+  CATEGORIES,
   SOLITAIRE_SERIES_1,
   SOLITAIRE_SERIES_2,
   FURTHER_WORKS_ARCHITECTURE,
@@ -24,7 +24,7 @@ export function App() {
   >('architecture');
   const [selectedSeriesId, setSelectedSeriesId] = useState<string | null>(null);
 
-  // Sync RTL / LTR direction with current language
+  // Sync RTL / LTR direction and html lang attribute
   useEffect(() => {
     if (currentLang === 'fa') {
       document.documentElement.setAttribute('dir', 'rtl');
@@ -42,7 +42,7 @@ export function App() {
 
   const handleOpenSeries = (seriesId: string) => {
     setSelectedSeriesId(seriesId);
-    window.scrollTo({ top: 380, behavior: 'smooth' });
+    window.scrollTo({ top: 350, behavior: 'smooth' });
   };
 
   const handleBackToOverview = () => {
@@ -55,17 +55,19 @@ export function App() {
   };
 
   const activeSeries = selectedSeriesId ? seriesMap[selectedSeriesId] : null;
+  const activeCatInfo = CATEGORIES.find(c => c.id === currentCategory);
 
   return (
     <div
       dir={currentLang === 'fa' ? 'rtl' : 'ltr'}
-      className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col font-sans selection:bg-amber-500 selection:text-neutral-950"
+      className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-amber-200 selection:text-amber-950"
     >
-      {/* Top Navigation with DE | EN | FA Switcher */}
+      {/* EXCLUSIVELY ONE UNIFIED NAVIGATION BAR */}
       <Navbar
+        currentCategory={currentCategory}
+        onSelectCategory={handleSelectCategory}
         currentLang={currentLang}
         onToggleLang={setCurrentLang}
-        onSelectCategory={handleSelectCategory}
         onGoHome={() => {
           setSelectedSeriesId(null);
           setCurrentCategory('architecture');
@@ -76,12 +78,30 @@ export function App() {
       {/* Main Header & Artist Intro Section */}
       <HeaderIntro currentLang={currentLang} />
 
-      {/* 4 Category Subheaders Navigation */}
-      <CategoryTabs
-        currentCategory={currentCategory}
-        onSelectCategory={handleSelectCategory}
-        currentLang={currentLang}
-      />
+      {/* Active Category Header Banner */}
+      <div className="bg-[#f5f2eb] border-b border-stone-200/80 py-5 sm:py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
+              {currentLang === 'de' ? 'Aktive Kategorie' : currentLang === 'fa' ? 'دسته‌بندی فعال' : 'Active Category'}
+            </span>
+            <h2 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold mt-0.5">
+              {currentLang === 'de'
+                ? activeCatInfo?.titleDe
+                : currentLang === 'fa'
+                ? activeCatInfo?.titleFa
+                : activeCatInfo?.titleEn}
+            </h2>
+          </div>
+          <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light leading-relaxed">
+            {currentLang === 'de'
+              ? activeCatInfo?.descriptionDe
+              : currentLang === 'fa'
+              ? activeCatInfo?.descriptionFa
+              : activeCatInfo?.descriptionEn}
+          </p>
+        </div>
+      </div>
 
       {/* Main Content Body */}
       <main className="flex-1">
@@ -93,27 +113,27 @@ export function App() {
             currentLang={currentLang}
           />
         ) : (
-          /* Category Overview Views */
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+          /* Category Overview Content */
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
             {currentCategory === 'architecture' && (
               <>
                 {/* Intro note for architecture */}
                 <div className="text-center max-w-2xl mx-auto">
-                  <span className="text-xs uppercase tracking-widest text-amber-500 font-mono font-medium">
+                  <span className="text-xs uppercase tracking-widest text-amber-800 font-mono font-bold">
                     {currentLang === 'de'
                       ? 'Fokus Architektur'
                       : currentLang === 'fa'
                       ? 'بخش معماری'
                       : 'Architecture Focus'}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif text-neutral-100 mt-1">
+                  <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
                     {currentLang === 'de'
                       ? 'Die Solitaire-Serien'
                       : currentLang === 'fa'
                       ? 'مجموعه‌های تک‌بنا (Solitaire)'
                       : 'The Solitaire Series'}
                   </h3>
-                  <p className="text-neutral-400 text-xs sm:text-sm mt-2 leading-relaxed font-light">
+                  <p className="text-stone-600 text-xs sm:text-sm mt-2 leading-relaxed font-normal">
                     {currentLang === 'de'
                       ? 'Klicken Sie auf das jeweilige Titelbild, um die gesamte Serie in Ruhe und ohne ablenkende Auszeichnungen zu betrachten.'
                       : currentLang === 'fa'
@@ -122,14 +142,14 @@ export function App() {
                   </p>
                 </div>
 
-                {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature */}
+                {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_1}
                   onOpenSeries={handleOpenSeries}
                   currentLang={currentLang}
                 />
 
-                {/* Series 2: The Solitaire as an Abstraction (Revised) */}
+                {/* Series 2: The Solitaire as an Abstraction (Revised) (5 photos) */}
                 <ArtworkCard
                   series={SOLITAIRE_SERIES_2}
                   onOpenSeries={handleOpenSeries}

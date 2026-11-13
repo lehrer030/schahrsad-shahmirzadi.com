@@ -18,13 +18,13 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   sectionTitleFa = 'سایر آثار برگزیده و دارای افتخارات بین‌المللی'
 }) => {
   return (
-    <section className="mt-16 pt-12 border-t border-neutral-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-stone-200">
+      <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-neutral-800 text-amber-400 text-xs font-mono uppercase tracking-wider mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/70 border border-amber-300/80 text-amber-900 text-xs font-mono uppercase tracking-wider mb-2 font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-amber-700" />
             <span>
               {currentLang === 'de'
                 ? 'Werkverzeichnis & Auszeichnungen'
@@ -33,14 +33,14 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 : 'Works & Recognition Catalog'}
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-serif text-neutral-100">
+          <h2 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
               ? sectionTitleDe
               : currentLang === 'fa'
               ? sectionTitleFa
               : sectionTitleEn}
           </h2>
-          <p className="text-xs text-neutral-400 mt-1 max-w-2xl font-light">
+          <p className="text-xs sm:text-sm text-stone-600 mt-1 max-w-2xl font-light leading-relaxed">
             {currentLang === 'de'
               ? 'Kompaktübersicht mit Werktiteln, Auszeichnungen und direkter Verlinkung zu den internationalen Wettbewerben (ohne Vorschaubilder gemäß Portfolio-Vorgabe).'
               : currentLang === 'fa'
@@ -49,24 +49,24 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </p>
         </div>
 
-        {/* Works List / Compact Grid */}
+        {/* Works List / Compact Responsive Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {works.map((work, idx) => (
             <div
               key={work.id}
-              className="group bg-neutral-900/60 hover:bg-neutral-900 border border-neutral-800/80 hover:border-amber-400/50 rounded-xl p-5 transition-all duration-300 flex flex-col justify-between shadow-lg"
+              className="group bg-white hover:bg-stone-50/80 border border-stone-200/90 hover:border-amber-700/50 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-xs"
             >
               <div>
-                <div className="flex items-center justify-between text-[11px] font-mono text-neutral-400 mb-2">
-                  <span className="text-amber-500 font-semibold">
+                <div className="flex items-center justify-between text-[11px] font-mono text-stone-500 mb-2">
+                  <span className="text-amber-800 font-bold">
                     #{String(idx + 1).padStart(2, '0')}
                   </span>
-                  <span className="truncate max-w-[200px]">
+                  <span className="truncate max-w-[200px] font-medium">
                     {currentLang === 'fa' && work.categoryFa ? work.categoryFa : work.category}
                   </span>
                 </div>
 
-                <h4 className="text-base sm:text-lg font-serif text-neutral-100 group-hover:text-amber-300 transition-colors font-medium">
+                <h4 className="text-base sm:text-lg font-serif text-stone-900 group-hover:text-amber-900 transition-colors font-bold">
                   {currentLang === 'de'
                     ? work.titleDe
                     : currentLang === 'fa'
@@ -74,7 +74,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     : work.titleEn}
                 </h4>
 
-                <p className="text-xs text-neutral-300 mt-2 leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
                   {currentLang === 'de'
                     ? work.awardsDe
                     : currentLang === 'fa'
@@ -84,14 +84,14 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
               </div>
 
               {/* Badges / Tags & External link */}
-              <div className="mt-4 pt-3 border-t border-neutral-800/80 flex items-center justify-between flex-wrap gap-2">
+              <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between flex-wrap gap-2">
                 <div className="flex flex-wrap gap-1.5">
                   {work.badgeNames.map((badge, bIdx) => (
                     <span
                       key={bIdx}
-                      className="inline-flex items-center gap-1 text-[10px] bg-neutral-800/90 text-neutral-300 px-2 py-0.5 rounded border border-neutral-700/60"
+                      className="inline-flex items-center gap-1 text-[10px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded-md border border-stone-200 font-medium"
                     >
-                      <Award className="w-2.5 h-2.5 text-amber-400" />
+                      <Award className="w-2.5 h-2.5 text-amber-700" />
                       <span>{badge}</span>
                     </span>
                   ))}
@@ -102,7 +102,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     href={work.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-amber-400 hover:text-amber-300 transition-colors"
+                    className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 hover:text-amber-950 transition-colors"
                   >
                     <span>
                       {currentLang === 'de'

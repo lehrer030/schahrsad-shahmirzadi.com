@@ -8,23 +8,23 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
   return (
-    <footer className="bg-neutral-950 border-t border-neutral-900 text-neutral-400 text-xs py-12 mt-20">
+    <footer className="bg-[#f5f2eb] border-t border-stone-200 text-stone-600 text-xs py-10 sm:py-14 mt-16 sm:mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-neutral-900">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pb-8 border-b border-stone-200">
           
           {/* Brand & Artist */}
           <div className="space-y-2">
-            <span className="text-xl font-serif text-amber-400 font-bold tracking-wider">
+            <span className="text-xl font-serif text-amber-900 font-bold tracking-wider">
               {currentLang === 'fa' ? 'شیرزن (SchirZan)' : 'SchirZan'}
             </span>
-            <p className="text-neutral-300 font-sans text-xs">
+            <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'
                 ? 'Schahrsad Shahmirzadi · Künstlerin & Photographin'
                 : currentLang === 'fa'
                 ? 'شهزاد شاهمیرزادی · هنرمند، عکاس و پژوهشگر'
                 : 'Schahrsad Shahmirzadi · Artist & Photographer'}
             </p>
-            <p className="text-neutral-500 text-[11px] leading-relaxed font-light">
+            <p className="text-stone-600 text-[11px] leading-relaxed font-light">
               {currentLang === 'de'
                 ? 'Ausgezeichnete Architektur-, Fine-Art- und sozial-ökologische Dokumentarfotografie.'
                 : currentLang === 'fa'
@@ -35,7 +35,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Domains */}
           <div className="space-y-2">
-            <span className="text-xs uppercase tracking-wider text-neutral-300 font-semibold font-mono">
+            <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono">
               {currentLang === 'de'
                 ? 'Offizielle Domains'
                 : currentLang === 'fa'
@@ -48,10 +48,10 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                   href="https://schahrsad-shahmirzadi.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-300 transition-colors flex items-center gap-1 text-neutral-300"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1 text-stone-700 font-medium"
                 >
                   <span>schahrsad-shahmirzadi.com</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
+                  <ExternalLink className="w-3 h-3 text-stone-400" />
                 </a>
               </li>
               <li>
@@ -59,10 +59,10 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                   href="http://schirzan.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-300 transition-colors flex items-center gap-1 text-neutral-300"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1 text-stone-700 font-medium"
                 >
                   <span>schirzan.com</span>
-                  <ExternalLink className="w-3 h-3 text-neutral-500" />
+                  <ExternalLink className="w-3 h-3 text-stone-400" />
                 </a>
               </li>
             </ul>
@@ -70,8 +70,8 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
 
           {/* Copyright & Urheberschaft */}
           <div className="space-y-2">
-            <span className="text-xs uppercase tracking-wider text-neutral-300 font-semibold font-mono flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono flex items-center gap-1">
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />
               <span>
                 {currentLang === 'de'
                   ? 'Urheberrecht'
@@ -80,7 +80,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
                   : 'Copyright'}
               </span>
             </span>
-            <p className="text-neutral-500 text-[11px] leading-relaxed font-light">
+            <p className="text-stone-600 text-[11px] leading-relaxed font-light">
               {currentLang === 'de'
                 ? 'Alle Fotografien, Bildserien und Texte sind urheberrechtlich geschützt. Jedes Foto trägt das offizielle SchirZan Signatur-Wasserzeichen.'
                 : currentLang === 'fa'
@@ -90,15 +90,15 @@ export const Footer: React.FC<FooterProps> = ({ currentLang }) => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-4">
           <p>© {new Date().getFullYear()} Schahrsad Shahmirzadi (SchirZan). All rights reserved.</p>
-          <div className="flex items-center gap-1 text-neutral-500">
+          <div className="flex items-center gap-1 text-stone-500">
             <span>
               {currentLang === 'fa'
                 ? 'طراحی‌شده با دقت و استانداردهای نمایش جوایز بین‌المللی'
                 : 'Designed for precision & international awards presentation'}
             </span>
-            <Heart className="w-3 h-3 text-amber-500/70 inline" />
+            <Heart className="w-3 h-3 text-amber-700 inline" />
           </div>
         </div>
       </div>
