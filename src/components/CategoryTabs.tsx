@@ -45,7 +45,7 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
                 ? activeCat?.titleFa
                 : activeCat?.titleEn}
             </h2>
-            <p className="text-xs text-neutral-400 mt-1 max-w-xl font-light">
+            <p className="text-xs text-neutral-300 mt-1 max-w-xl font-normal">
               {currentLang === 'de'
                 ? activeCat?.descriptionDe
                 : currentLang === 'fa'

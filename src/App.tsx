@@ -238,7 +238,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
                     : currentLang === 'fa'
@@ -289,7 +289,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
                     : currentLang === 'fa'
@@ -319,7 +319,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
                     : currentLang === 'fa'
@@ -349,7 +349,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Fotografische Porträts und Selbstporträts.'
                     : currentLang === 'fa'
@@ -379,7 +379,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
                     : currentLang === 'fa'
@@ -402,7 +402,7 @@ export default function App() {
                     {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
                   </h2>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-600 max-w-xl font-light">
+                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
                   {currentLang === 'de'
                     ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
                     : currentLang === 'fa'

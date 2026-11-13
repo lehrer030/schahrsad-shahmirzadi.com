@@ -56,7 +56,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </h1>
 
               {/* Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl text-stone-600 font-light max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-stone-700 font-normal max-w-2xl leading-relaxed">
                 {currentLang === 'de'
                   ? INTRO_CONTENT.subtitleDe
                   : currentLang === 'fa'
@@ -100,7 +100,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 </div>
 
                 {/* Compact informative text as requested: shows the most important facts directly */}
-                <p className="mt-2.5 pt-2 border-t border-stone-100 text-xs text-stone-600 font-light leading-relaxed">
+                <p className="mt-2.5 pt-2 border-t border-stone-100 text-xs text-stone-700 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? 'Mehrfach international prämierte Architektur-, Fine-Art- und Dokumentarfotografie (AMP 2025/2026, IPA, PERSPA Paris, BIFA).'
                     : currentLang === 'fa'

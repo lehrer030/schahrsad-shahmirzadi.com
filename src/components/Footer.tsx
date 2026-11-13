@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({
                 ? 'شهزاد شاهمیرزادی · هنرمند، عکاس و پژوهشگر'
                 : 'Schahrsad Shahmirzadi · Artist & Photographer'}
             </p>
-            <p className="text-stone-600 text-[11px] leading-relaxed font-light">
+            <p className="text-stone-700 text-[11px] leading-relaxed font-normal">
               {currentLang === 'de'
                 ? 'Ausgezeichnete Architektur-, Fine-Art- und sozial-ökologische Dokumentarfotografie.'
                 : currentLang === 'fa'
@@ -54,7 +54,7 @@ export const Footer: React.FC<FooterProps> = ({
                   <span>contact@schahrsad-shahmirzadi.com</span>
                 </button>
               </li>
-              <li className="text-stone-500 font-light">
+              <li className="text-stone-600 font-normal">
                 Berlin · Potsdam · Germany
               </li>
             </ul>
@@ -118,7 +118,7 @@ export const Footer: React.FC<FooterProps> = ({
                   {currentLang === 'fa' ? 'سیاست حفظ حریم خصوصی (Privacy)' : 'Datenschutzerklärung (DSGVO)'}
                 </button>
               </li>
-              <li className="text-stone-500 font-light flex items-center gap-1 pt-1">
+              <li className="text-stone-600 font-normal flex items-center gap-1 pt-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-800" />
                 <span>© SchirZan Signature Copyright</span>
               </li>

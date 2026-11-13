@@ -27,7 +27,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               ? 'مسیر بین‌رشته‌ای آکادمیک'
               : 'Interdisciplinary Academic Education'}
           </h3>
-          <p className="text-sm text-stone-600 mt-2 font-light max-w-2xl leading-relaxed">
+          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
             {currentLang === 'de'
               ? 'Die Verbindung von Rechtswissenschaften, Verwaltungsexpertise, Umweltwissenschaften und künstlerischer Photographie prägt das präzise Werk von SchirZan.'
               : currentLang === 'fa'
@@ -92,7 +92,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 ? 'قهرمان جهان در کیک‌بوکسینگ و دویدن در راه صلح'
                 : 'Kickboxing World Champion & Runs for Peace'}
             </h3>
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-stone-800 leading-relaxed font-normal">
               {currentLang === 'de'
                 ? 'Für SchirZan ist Sport weit mehr als körperliche Höchstleistung: Er ist die lebendige Verkörperung von Standhaftigkeit, Mut und innerer Haltung. Allein im Jahr 2025 absolvierte sie elf Halbmarathons und den Berliner Marathon – stets unter dem Leitgedanken: »Für Umweltschutz & Frieden«.'
                 : currentLang === 'fa'
@@ -118,7 +118,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 ? 'فعالیت در حوزه منابع آب و محیط زیست'
                 : 'Dedicated to Water Issues & LAWA'}
             </h4>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
               {currentLang === 'de'
                 ? 'Seit 2024 ist Schahrsad Shahmirzadi im Ministerium für Umwelt in Potsdam im Bereich Gewässerschutz sowie in der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA) aktiv und vertieft ihr Wissen im Masterstudiengang Angewandte Umweltwissenschaften.'
                 : currentLang === 'fa'

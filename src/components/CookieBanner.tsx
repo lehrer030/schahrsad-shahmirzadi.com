@@ -50,7 +50,7 @@ export const CookieBanner: React.FC<CookieBannerProps> = ({
               ? 'حریم خصوصی و کوکی‌ها'
               : 'Privacy & Cookies'}
           </h4>
-          <p className="text-xs text-stone-600 leading-relaxed font-light">
+          <p className="text-xs text-stone-600 leading-relaxed font-normal">
             {currentLang === 'de'
               ? 'Wir nutzen essenzielle Cookies, um Ihnen die bestmögliche Präsentation (u. a. Sprachauswahl DE/EN/FA) zu ermöglichen.'
               : currentLang === 'fa'

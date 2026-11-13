@@ -56,7 +56,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
         </div>
 
         <div className="space-y-4">
-          <p className="text-sm text-stone-600 font-light leading-relaxed">
+          <p className="text-sm text-stone-600 font-normal leading-relaxed">
             {currentLang === 'de'
               ? 'Für Ausstellungsanfragen, Kooperationen, Werkankäufe oder Presseanfragen wenden Sie sich bitte direkt an:'
               : currentLang === 'fa'

@@ -27,7 +27,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
               ? 'مطبوعات و مصاحبه‌ها'
               : 'Press & Features'}
           </h3>
-          <p className="text-sm text-stone-600 mt-2 font-light max-w-2xl leading-relaxed">
+          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
             {currentLang === 'de'
               ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan.'
               : currentLang === 'fa'
@@ -51,7 +51,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
                 <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
                   {item.title}
                 </h4>
-                <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-stone-700 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? item.descriptionDe
                     : currentLang === 'fa'
@@ -101,7 +101,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
             <h5 className="font-serif font-bold text-stone-900 text-sm">
               Global Lens &amp; PERSPA
             </h5>
-            <p className="text-xs text-stone-600 font-light leading-relaxed">
+            <p className="text-xs text-stone-700 font-normal leading-relaxed">
               {currentLang === 'de'
                 ? 'Mehrfache Aufnahme in die offizielle Editor’s Choice Galerie der führenden Architekturwettbewerbe.'
                 : currentLang === 'fa'
@@ -115,7 +115,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
             <h5 className="font-serif font-bold text-stone-900 text-sm">
               Official Winners E-Books
             </h5>
-            <p className="text-xs text-stone-600 font-light leading-relaxed">
+            <p className="text-xs text-stone-700 font-normal leading-relaxed">
               {currentLang === 'de'
                 ? 'Katalogpublikationen im Rahmen der Black & White Spider Awards und IPA Annual Compendium.'
                 : currentLang === 'fa'
@@ -129,7 +129,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
             <h5 className="font-serif font-bold text-stone-900 text-sm">
               Official Showcase Videos
             </h5>
-            <p className="text-xs text-stone-600 font-light leading-relaxed">
+            <p className="text-xs text-stone-700 font-normal leading-relaxed">
               {currentLang === 'de'
                 ? 'Internationale Videopräsentationen der 20. Annual Architecture Photography Exhibition.'
                 : currentLang === 'fa'

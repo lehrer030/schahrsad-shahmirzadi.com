@@ -90,28 +90,28 @@ export const LegalModal: React.FC<LegalModalProps> = ({
 
             <div>
               <h4 className="font-serif font-bold text-stone-900 text-sm mb-1">Haftung für Inhalte / Liability for Content</h4>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-600 leading-relaxed font-normal">
                 Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
               </p>
             </div>
 
             <div>
               <h4 className="font-serif font-bold text-stone-900 text-sm mb-1">Haftung für Links / Liability for Links</h4>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-600 leading-relaxed font-normal">
                 Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
               </p>
             </div>
 
             <div>
               <h4 className="font-serif font-bold text-stone-900 text-sm mb-1">Urheberrecht / Copyright</h4>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-600 leading-relaxed font-normal">
                 Die durch die Seitenbetreiber erstellten Inhalte und Werke (insbesondere Photographien und Bildserien) auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Autorin bzw. Erstellerin Schahrsad Shahmirzadi (SchirZan). Jedes Photo trägt das urheberrechtliche Schutzzeichen.
               </p>
             </div>
 
             <div>
               <h4 className="font-serif font-bold text-stone-900 text-sm mb-1">EU-Streitschlichtung</h4>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-600 leading-relaxed font-normal">
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-amber-800 hover:underline">https://ec.europa.eu/consumers/odr/</a>.
               </p>
             </div>
@@ -122,7 +122,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 1. Allgemeine Hinweise &amp; Datenschutz auf einen Blick
               </h3>
-              <p className="font-light text-stone-600 text-xs sm:text-sm">
+              <p className="font-normal text-stone-600 text-xs sm:text-sm">
                 Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften (DSGVO, BDSG, TDDDG) sowie dieser Datenschutzerklärung. Die Nutzung meiner Website ist in der Regel ohne Angabe personenbezogener Daten möglich.
               </p>
             </div>
@@ -140,7 +140,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 3. Datenerfassung auf dieser Website (Server-Log-Dateien)
               </h3>
-              <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
                 Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt (Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, anonymisierte IP-Adresse). Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
               </p>
             </div>
@@ -149,7 +149,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 4. Cookies
               </h3>
-              <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
                 Diese Website verwendet Cookies. Die meisten der von uns verwendeten Cookies sind so genannte »Session-Cookies«. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen (z. B. Sprachauswahl DE/EN/FA). Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden.
               </p>
             </div>
@@ -158,7 +158,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 5. SSL- bzw. TLS-Verschlüsselung
               </h3>
-              <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von »http://« auf »https://« wechselt.
               </p>
             </div>
@@ -167,7 +167,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 6. Ihre Rechte (Auskunft, Berichtigung, Löschung, Beschwerde)
               </h3>
-              <p className="text-xs sm:text-sm text-stone-600 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
                 Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung (Art. 15 DSGVO) sowie ein Recht auf Berichtigung (Art. 16 DSGVO), Sperrung oder Löschung dieser Daten (Art. 17 DSGVO). Zudem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
               </p>
             </div>

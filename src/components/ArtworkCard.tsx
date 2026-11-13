@@ -173,7 +173,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500 font-medium block mb-2">
               {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'Exhibition Notes'}
             </span>
-            <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-stone-800 leading-relaxed font-normal">
               {currentLang === 'de'
                 ? series.descriptionDe
                 : currentLang === 'fa'

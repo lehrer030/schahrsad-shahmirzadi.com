@@ -108,7 +108,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
         {/* Caption */}
         {(currentPhoto.captionDe || currentPhoto.captionFa) && (
-          <p className="text-center text-xs sm:text-sm text-stone-300 font-sans tracking-wide mt-3 max-w-2xl px-4 font-light">
+          <p className="text-center text-xs sm:text-sm text-stone-300 font-sans tracking-wide mt-3 max-w-2xl px-4 font-normal">
             {currentLang === 'de'
               ? currentPhoto.captionDe
               : currentLang === 'fa'

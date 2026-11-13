@@ -10,7 +10,16 @@
     background-color: #faf8f5;
     color: #1c1917;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     min-height: 100vh;
+  }
+
+  /* Verbessere Lesbarkeit auf PC-Bildschirmen: Keine zu dünnen 300er-Schriften */
+  .font-light {
+    font-weight: 400 !important;
   }
 
   [dir="rtl"] {

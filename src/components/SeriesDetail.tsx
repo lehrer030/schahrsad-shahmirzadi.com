@@ -141,7 +141,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
           {/* 2. TEXT (Description & Personal Dedication) */}
           <div className="bg-white border border-stone-200 rounded-xl p-5 sm:p-7 space-y-4 shadow-xs">
-            <p className="text-stone-700 leading-relaxed text-sm sm:text-base font-light">
+            <p className="text-stone-800 leading-relaxed text-sm sm:text-base font-normal">
               {currentLang === 'de'
                 ? series.descriptionDe
                 : currentLang === 'fa'
