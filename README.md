@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# SchirZan – Schahrsad Shahmirzadi | Photography Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Offizielles Portfolio & Werkverzeichnis von **Schahrsad Shahmirzadi (SchirZan)**.
+Internationale Auszeichnungen bei den **Architecture MasterPrize (AMP)**, **International Photography Awards (IPA)**, **Prix de la Perspective Architecturale (PERSPA)**, **Budapest International Foto Awards (BIFA)**, **Black & White Spider Awards**, **ND Awards** und **LICC**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Website & Deployment
 
-## React Compiler
+Die Website ist als performanter, responsiver One-Pager mit Vite, React 19 und Tailwind CSS realisiert.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Deployment auf Cloudflare Pages (Empfohlen):
+1. Öffne das [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Klicke auf **Workers & Pages** ➔ **Create application** ➔ **Pages** ➔ **Connect to Git**
+3. Wähle das Repository `lehrer030/schahrsad-shahmirzadi.com` aus
+4. Hinterlege folgende Build-Einstellungen:
+   * **Framework preset:** `Vite`
+   * **Build command:** `npm run build`
+   * **Build output directory:** `dist`
+   * **Node.js version:** `20` oder höher (Environment Variable: `NODE_VERSION` = `20`)
+5. Klicke auf **Save and Deploy**. Cloudflare Pages baut und hostet die Website automatisch unter einer schnellen `*.pages.dev`-Domain mit weltweitem CDN und kostenlosem SSL!
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 🛠️ Lokale Entwicklung
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+# Repository klonen
+git clone https://github.com/lehrer030/schahrsad-shahmirzadi.com.git
+cd schahrsad-shahmirzadi.com
+
+# Abhängigkeiten installieren
+npm install
+
+# Entwicklungsserver starten
+npm run dev
+
+# Produktions-Build erstellen
+npm run build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## ✨ Features
+* **Künstlerische Kuration:** Museumsreife Farbpalette in warmen Museums-Tönen (Sandstein, Pergament, warmes Gold). Kein Schwarz.
+* **Künstlerporträt:** Prominente Platzierung von Schahrsad Shahmirzadi (fotografiert von Steve Barret) mit Plakette und Vollbild-Zoom.
+* **4 Kern-Unterheader:** Gemäß Kundenvorgabe aufgefächert in Architecture, Fine Art, Social & Environmental Themes, Portraits.
+* **Präzise Badge-Platzierung:** Auf den Solitaire-Hauptserien nach genauer Anweisung (AMP oben links, IPA unten rechts, einheitliche Proportionen).
+* **Trilingual (DE / EN / FA):** Deutsch, Englisch und Farsi (mit nativer RTL-Unterstützung).
+* **Vollständiges WordPress-Erbe:** Akademische Vita, sportliche Erfolge (Weltmeisterin Kickboxen), Engagement für Umweltschutz & Frieden, Presseberichte sowie originales Impressum & DSGVO-Datenschutzerklärung.
+* **Moderne Must-Haves:** Interaktive Lightbox mit Pfeilnavigation & Urheberschutz, Cookie-Banner, Back-to-Top-Button, 1-Click-Kontakt.
