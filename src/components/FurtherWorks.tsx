@@ -68,6 +68,16 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       draggable={false}
                       className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
                       loading="lazy"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.dataset.triedFallback) return;
+                        target.dataset.triedFallback = 'true';
+                        if (target.src.endsWith('.webp')) {
+                          target.src = target.src.replace(/\.webp$/, '.jpeg');
+                        } else if (target.src.endsWith('.jpeg')) {
+                          target.src = target.src.replace(/\.jpeg$/, '.webp');
+                        }
+                      }}
                     />
                     <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
                     

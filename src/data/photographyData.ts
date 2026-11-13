@@ -757,11 +757,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2025 — تقدیر فضای داخلی پایدار · PERSPA 2026 — تقدیر ویژه پلکان',
     badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM Stairs'],
     link: 'https://perspa.fr/winners/architectural-perspective/#work-152',
-    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.webp',
+    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'steps-sustainability-01',
-        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.webp',
+        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
         alt: 'Steps of Sustainability',
         captionDe: 'Steps of Sustainability – SchirZan',
         captionEn: 'Steps of Sustainability – SchirZan',
