@@ -10,15 +10,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   const [showTitlesDetail, setShowTitlesDetail] = useState(false);
 
   const kickboxingTitles = [
-    { year: '2013', titleDe: 'WKU Weltmeisterin – K1 & Vollkontakt (Damen –55 kg, Griechenland)', titleEn: 'WKU World Champion – K1 & Full Contact (Women –55 kg, Greece)', titleFa: 'قهرمان جهان WKU در K1 و فول‌کنتاکت (یونان)' },
-    { year: '2014', titleDe: 'WKU Weltmeisterin – K1 & Vollkontakt (Damen –55 kg, London)', titleEn: 'WKU World Champion – K1 & Full Contact (Women –55 kg, London)', titleFa: 'قهرمان جهان WKU در K1 و فول‌کنتاکت (لندن)' },
-    { year: '2014', titleDe: 'WKU Pro-Europameisterin im Vollkontakt (Damen –57,5 kg, Sieg nach Punkten)', titleEn: 'WKU Pro European Champion Full Contact (Women –57.5 kg, Unanimous Decision)', titleFa: 'قهرمان حرفه‌ای اروپا WKU فول‌کنتاکت' },
-    { year: '2014', titleDe: 'IAKSA World Cup Siegerin im K1 (Damen –60 kg, San Marino)', titleEn: 'IAKSA World Cup Winner K1 (Women –60 kg, San Marino)', titleFa: 'قهرمان جام جهانی IAKSA در سان‌مارینو' },
+    { year: '2016', titleDe: 'ISKA Weltmeisterin im Vollkontakt (Damen –58 kg, Deutschland)', titleEn: 'ISKA World Champion Full Contact (Women –58 kg, Germany)', titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت (آلمان)' },
+    { year: '2016', titleDe: 'WMAC World Martial Arts Games Siegerin (Offene Klasse, Bad Kissingen)', titleEn: 'WMAC World Martial Arts Games Winner (Open Division, Bad Kissingen)', titleFa: 'قهرمان بازی‌های جهانی هنرهای رزمی WMAC' },
     { year: '2015', titleDe: 'ISKA Weltmeisterin – Vollkontakt & Lowkick (Damen –57 kg, Portugal)', titleEn: 'ISKA World Champion – Full Contact & Low Kick (Women –57 kg, Portugal)', titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت و لوکیک (پرتغال)' },
     { year: '2015', titleDe: 'ICO Weltmeisterin im Vollkontakt (Damen –60 kg, Stuttgart)', titleEn: 'ICO World Champion Full Contact (Women –60 kg, Stuttgart)', titleFa: 'قهرمان جهان ICO در فول‌کنتاکت (اشتوتگارت)' },
     { year: '2015', titleDe: 'WKU World Cup Siegerin im K1 (Damen –55 kg, Kroatien)', titleEn: 'WKU World Cup Winner K1 (Women –55 kg, Croatia)', titleFa: 'قهرمان جام جهانی WKU در کرواسی' },
-    { year: '2016', titleDe: 'ISKA Weltmeisterin im Vollkontakt (Damen –58 kg, Deutschland)', titleEn: 'ISKA World Champion Full Contact (Women –58 kg, Germany)', titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت (آلمان)' },
-    { year: '2016', titleDe: 'WMAC World Martial Arts Games Siegerin (Offene Klasse, Bad Kissingen)', titleEn: 'WMAC World Martial Arts Games Winner (Open Division, Bad Kissingen)', titleFa: 'قهرمان بازی‌های جهانی هنرهای رزمی WMAC' },
+    { year: '2014', titleDe: 'WKU Weltmeisterin – K1 & Vollkontakt (Damen –55 kg, London)', titleEn: 'WKU World Champion – K1 & Full Contact (Women –55 kg, London)', titleFa: 'قهرمان جهان WKU در K1 و فول‌کنتاکت (لندن)' },
+    { year: '2014', titleDe: 'WKU Pro-Europameisterin im Vollkontakt (Damen –57,5 kg, Sieg nach Punkten)', titleEn: 'WKU Pro European Champion Full Contact (Women –57.5 kg, Unanimous Decision)', titleFa: 'قهرمان حرفه‌ای اروپا WKU فول‌کنتاکت' },
+    { year: '2014', titleDe: 'IAKSA World Cup Siegerin im K1 (Damen –60 kg, San Marino)', titleEn: 'IAKSA World Cup Winner K1 (Women –60 kg, San Marino)', titleFa: 'قهرمان جام جهانی IAKSA در سان‌مارینو' },
+    { year: '2013', titleDe: 'WKU Weltmeisterin – K1 & Vollkontakt (Damen –55 kg, Griechenland)', titleEn: 'WKU World Champion – K1 & Full Contact (Women –55 kg, Greece)', titleFa: 'قهرمان جهان WKU در K1 و فول‌کنتاکت (یونان)' },
     { year: '2010–2016', titleDe: '15-fache Deutsche / Int. Deutsche Meisterin in 7 Verbänden (WAKO, WKA, WKU, ISKA, IAKSA, ICO, WKC)', titleEn: '15-time German / Int. German Champion across 7 Federations (WAKO, WKA, WKU, ISKA, IAKSA, ICO, WKC)', titleFa: '۱۵ دوره قهرمان آلمان و بین‌المللی در ۷ فدراسیون معتبر' }
   ];
 

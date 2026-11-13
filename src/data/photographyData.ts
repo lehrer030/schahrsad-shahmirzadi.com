@@ -143,6 +143,7 @@ export const INTRO_CONTENT = {
     'Architecture MasterPrize (AMP) 2026',
     'PRIX DE LA PERSPECTIVE ARCHITECTURALE (PERSPA - FRANCE) 2026',
     'Budapest International Foto Awards (BIFA) 2026',
+    'URBAN Photo Awards 2026',
     'Architecture MasterPrize (AMP) 2025',
     'International Photography Awards (IPA) 2025',
     'ND Awards 2025',
@@ -215,16 +216,6 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
   badges: [
     {
-      id: 'amp-2025-winner',
-      name: 'Architecture MasterPrize 2025',
-      year: '2025',
-      award: 'Student Photography Winner (Other Exterior)',
-      awardFa: 'برنده جایزه عکاسی دانشجویی (معماری بیرونی)',
-      badgeImage: '/images/email_badges/amp_2025_winner.png',
-      link: 'https://architectureprize.com/winners/winner.php?id=8533',
-      position: 'top-left'
-    },
-    {
       id: 'perspa-2026-hm',
       name: 'Prix de la Perspective Architecturale 2026',
       year: '2026',
@@ -253,6 +244,16 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       badgeImage: '/images/email_badges/ipa_2026_hm_ribbon.png',
       link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25',
       position: 'bottom-right'
+    },
+    {
+      id: 'amp-2025-winner',
+      name: 'Architecture MasterPrize 2025',
+      year: '2025',
+      award: 'Student Photography Winner (Other Exterior)',
+      awardFa: 'برنده جایزه عکاسی دانشجویی (معماری بیرونی)',
+      badgeImage: '/images/email_badges/amp_2025_winner.png',
+      link: 'https://architectureprize.com/winners/winner.php?id=8533',
+      position: 'top-left'
     }
   ],
   photos: [
@@ -409,102 +410,6 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
 
 export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   {
-    id: 'solitaire-new-perspectives',
-    titleDe: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-    titleEn: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-    titleFa: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-    category: 'Architecture / Abstract',
-    categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'LICC 2025 — 2 × Shortlisted (Kategorien: »New Perspectives« & »Revised«)',
-    awardsEn: 'LICC 2025 — 2 × Shortlisted ("New Perspectives" and "Revised")',
-    awardsFa: 'LICC 2025 — دو بار در فهرست نهایی (Shortlisted)',
-    badgeNames: ['LICC 2025 Shortlisted', 'LICC 2025 Revised'],
-    link: 'http://www.licc.uk/winners/winner.php?id=125858',
-    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
-    galleryPhotos: [
-      {
-        id: 'solitaire-new-perspectives-01',
-        src: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
-        alt: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-        captionDe: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-        captionEn: 'The Solitaire as an Abstraction – New Perspectives and Revised',
-        captionFa: 'The Solitaire as an Abstraction – New Perspectives and Revised'
-      }
-    ]
-  },
-  {
-    id: 'bw-solitaire',
-    titleDe: 'Black & White Solitaire',
-    titleEn: 'Black & White Solitaire',
-    titleFa: 'Black & White Solitaire (تک‌بنای سیاه‌وسفید)',
-    category: 'Architecture / Monochromatic',
-    categoryFa: 'معماری / تک‌رنگ',
-    awardsDe: 'Black & White Spider Awards 2025 — Nominee',
-    awardsEn: 'Black & White Spider Awards 2025 — Nominee',
-    awardsFa: 'Black & White Spider Awards 2025 — نامزد دریافت جایزه (Nominee)',
-    badgeNames: ['Spider Awards 2025 Nominee'],
-    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
-    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
-    galleryPhotos: [
-      {
-        id: 'bw-solitaire-01',
-        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
-        alt: 'Black & White Solitaire',
-        captionDe: 'Black & White Solitaire – SchirZan',
-        captionEn: 'Black & White Solitaire – SchirZan',
-        captionFa: 'تک‌بنای سیاه‌وسفید – شیرزن'
-      }
-    ]
-  },
-  {
-    id: 'solitaire-ipa-2025',
-    titleDe: 'The Solitaire as an Abstraction',
-    titleEn: 'The Solitaire as an Abstraction',
-    titleFa: 'The Solitaire as an Abstraction',
-    category: 'Architecture / Abstract',
-    categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'IPA 2025 — Honorable Mention',
-    awardsEn: 'IPA 2025 — Honorable Mention',
-    awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
-    badgeNames: ['IPA 2025 HM'],
-    link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
-    galleryPhotos: [
-      {
-        id: 'solitaire-ipa-2025-01',
-        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025)',
-        captionDe: 'The Solitaire as an Abstraction – SchirZan',
-        captionEn: 'The Solitaire as an Abstraction – SchirZan',
-        captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
-      }
-    ]
-  },
-  {
-    id: 'solitaire-short-version',
-    titleDe: 'The Solitaire as an Abstraction (Short Version)',
-    titleEn: 'The Solitaire as an Abstraction (Short Version)',
-    titleFa: 'The Solitaire as an Abstraction (نسخه کوتاه)',
-    category: 'Architecture / Others',
-    categoryFa: 'معماری / سایر',
-    awardsDe: 'ND Awards 2025 — Honorable Mention',
-    awardsEn: 'ND Awards 2025 — Honorable Mention',
-    awardsFa: 'ND Awards 2025 — تقدیر ویژه (Honorable Mention)',
-    badgeNames: ['ND Awards 2025 HM'],
-    link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
-    galleryPhotos: [
-      {
-        id: 'solitaire-short-version-01',
-        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (Short Version)',
-        captionDe: 'The Solitaire as an Abstraction (Short Version)',
-        captionEn: 'The Solitaire as an Abstraction (Short Version)',
-        captionFa: 'تک‌بنا به مثابه انتزاع (نسخه کوتاه)'
-      }
-    ]
-  },
-  {
     id: 'echoes-water-tower',
     titleDe: 'Echoes of a Water Tower',
     titleEn: 'Echoes of a Water Tower',
@@ -535,10 +440,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Architectural Piano (پیانوی معماری)',
     category: 'Architecture / Abstract',
     categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'Black & White Spider Awards 2025 — HM & Nominee · AMP 2026 — HM · IPA 2026 — Official Selection · LICC 2025 — Official Selection',
-    awardsEn: 'Black & White Spider Awards 2025 — HM & Nominee · AMP 2026 — HM · IPA 2026 — Official Selection · LICC 2025 — Official Selection',
-    awardsFa: 'Spider Awards 2025 — نامزد و تقدیر · AMP 2026 — تقدیر · IPA 2026 — برگزیده رسمی · LICC 2025 — برگزیده رسمی',
-    badgeNames: ['Spider Awards 2025 HM', 'AMP 2026 HM', 'IPA 2026 OS', 'LICC 2025 OS'],
+    awardsDe: 'AMP 2026 — HM · IPA 2026 — Official Selection · Black & White Spider Awards 2025 — HM & Nominee · LICC 2025 — Official Selection',
+    awardsEn: 'AMP 2026 — HM · IPA 2026 — Official Selection · Black & White Spider Awards 2025 — HM & Nominee · LICC 2025 — Official Selection',
+    awardsFa: 'AMP 2026 — تقدیر · IPA 2026 — برگزیده رسمی · Spider Awards 2025 — نامزد و تقدیر · LICC 2025 — برگزیده رسمی',
+    badgeNames: ['AMP 2026 HM', 'IPA 2026 OS', 'Spider Awards 2025 HM', 'LICC 2025 OS'],
     link: 'https://architectureprize.com/',
     previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
     galleryPhotos: [
@@ -759,10 +664,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Steps of Sustainability (پله‌های پایداری)',
     category: 'Architecture / Sustainable Design',
     categoryFa: 'معماری / طراحی پایدار',
-    awardsDe: 'AMP 2025 — Honorable Mention (Sustainable Interior) · PERSPA 2026 — Honorable Mention (Stairs)',
-    awardsEn: 'AMP 2025 — Honorable Mention (Sustainable Interior) · PERSPA 2026 — Honorable Mention (Stairs)',
-    awardsFa: 'AMP 2025 — تقدیر فضای داخلی پایدار · PERSPA 2026 — تقدیر ویژه پلکان',
-    badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM Stairs'],
+    awardsDe: 'PERSPA 2026 — Honorable Mention (Stairs) · AMP 2025 — Honorable Mention (Sustainable Interior)',
+    awardsEn: 'PERSPA 2026 — Honorable Mention (Stairs) · AMP 2025 — Honorable Mention (Sustainable Interior)',
+    awardsFa: 'PERSPA 2026 — تقدیر ویژه پلکان · AMP 2025 — تقدیر فضای داخلی پایدار',
+    badgeNames: ['PERSPA 2026 HM Stairs', 'AMP 2025 HM'],
     link: 'https://perspa.fr/winners/architectural-perspective/#work-152',
     previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
     galleryPhotos: [
@@ -981,6 +886,102 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         captionDe: 'Symmetric Networks II',
         captionEn: 'Symmetric Networks II',
         captionFa: 'شبکه‌های متقارن ۲'
+      }
+    ]
+  },
+  {
+    id: 'solitaire-new-perspectives',
+    titleDe: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+    titleEn: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+    titleFa: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+    category: 'Architecture / Abstract',
+    categoryFa: 'معماری / انتزاعی',
+    awardsDe: 'LICC 2025 — 2 × Shortlisted (Kategorien: »New Perspectives« & »Revised«)',
+    awardsEn: 'LICC 2025 — 2 × Shortlisted ("New Perspectives" and "Revised")',
+    awardsFa: 'LICC 2025 — دو بار در فهرست نهایی (Shortlisted)',
+    badgeNames: ['LICC 2025 Shortlisted', 'LICC 2025 Revised'],
+    link: 'http://www.licc.uk/winners/winner.php?id=125858',
+    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-new-perspectives-01',
+        src: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+        alt: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionDe: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionEn: 'The Solitaire as an Abstraction – New Perspectives and Revised',
+        captionFa: 'The Solitaire as an Abstraction – New Perspectives and Revised'
+      }
+    ]
+  },
+  {
+    id: 'bw-solitaire',
+    titleDe: 'Black & White Solitaire',
+    titleEn: 'Black & White Solitaire',
+    titleFa: 'Black & White Solitaire (تک‌بنای سیاه‌وسفید)',
+    category: 'Architecture / Monochromatic',
+    categoryFa: 'معماری / تک‌رنگ',
+    awardsDe: 'Black & White Spider Awards 2025 — Nominee',
+    awardsEn: 'Black & White Spider Awards 2025 — Nominee',
+    awardsFa: 'Black & White Spider Awards 2025 — نامزد دریافت جایزه (Nominee)',
+    badgeNames: ['Spider Awards 2025 Nominee'],
+    link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
+    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'bw-solitaire-01',
+        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        alt: 'Black & White Solitaire',
+        captionDe: 'Black & White Solitaire – SchirZan',
+        captionEn: 'Black & White Solitaire – SchirZan',
+        captionFa: 'تک‌بنای سیاه‌وسفید – شیرزن'
+      }
+    ]
+  },
+  {
+    id: 'solitaire-ipa-2025',
+    titleDe: 'The Solitaire as an Abstraction',
+    titleEn: 'The Solitaire as an Abstraction',
+    titleFa: 'The Solitaire as an Abstraction',
+    category: 'Architecture / Abstract',
+    categoryFa: 'معماری / انتزاعی',
+    awardsDe: 'IPA 2025 — Honorable Mention',
+    awardsEn: 'IPA 2025 — Honorable Mention',
+    awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
+    badgeNames: ['IPA 2025 HM'],
+    link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
+    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-ipa-2025-01',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025)',
+        captionDe: 'The Solitaire as an Abstraction – SchirZan',
+        captionEn: 'The Solitaire as an Abstraction – SchirZan',
+        captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
+      }
+    ]
+  },
+  {
+    id: 'solitaire-short-version',
+    titleDe: 'The Solitaire as an Abstraction (Short Version)',
+    titleEn: 'The Solitaire as an Abstraction (Short Version)',
+    titleFa: 'The Solitaire as an Abstraction (نسخه کوتاه)',
+    category: 'Architecture / Others',
+    categoryFa: 'معماری / سایر',
+    awardsDe: 'ND Awards 2025 — Honorable Mention',
+    awardsEn: 'ND Awards 2025 — Honorable Mention',
+    awardsFa: 'ND Awards 2025 — تقدیر ویژه (Honorable Mention)',
+    badgeNames: ['ND Awards 2025 HM'],
+    link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
+    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+    galleryPhotos: [
+      {
+        id: 'solitaire-short-version-01',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (Short Version)',
+        captionDe: 'The Solitaire as an Abstraction (Short Version)',
+        captionEn: 'The Solitaire as an Abstraction (Short Version)',
+        captionFa: 'تک‌بنا به مثابه انتزاع (نسخه کوتاه)'
       }
     ]
   },
@@ -1215,6 +1216,30 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     ]
   },
   {
+    id: 'in-between-spaces',
+    titleDe: 'In-Between Spaces',
+    titleEn: 'In-Between Spaces',
+    titleFa: 'In-Between Spaces (فضاهای میانی)',
+    category: 'Street & Social Documentation',
+    categoryFa: 'عکاسی خیابانی و مستند اجتماعی',
+    awardsDe: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
+    awardsEn: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
+    awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
+    badgeNames: ['URBAN Photo Awards 2026 Selected'],
+    link: 'https://www.urbanphotoawards.com/',
+    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+    galleryPhotos: [
+      {
+        id: 'in-between-spaces-01',
+        src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+        alt: 'In-Between Spaces – Schahrsad Shahmirzadi',
+        captionDe: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        captionEn: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        captionFa: 'فضاهای میانی – شیرزن (منتخب مسابقه URBAN 2026)'
+      }
+    ]
+  },
+  {
     id: 'dignity-of-animal',
     titleDe: 'The Dignity of the Animal is Inviolable',
     titleEn: 'The Dignity of the Animal is Inviolable',
@@ -1251,30 +1276,6 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
         captionDe: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
         captionEn: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
         captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۳ – شیرزن'
-      }
-    ]
-  },
-  {
-    id: 'in-between-spaces',
-    titleDe: 'In-Between Spaces',
-    titleEn: 'In-Between Spaces',
-    titleFa: 'In-Between Spaces (فضاهای میانی)',
-    category: 'Street & Social Documentation',
-    categoryFa: 'عکاسی خیابانی و مستند اجتماعی',
-    awardsDe: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
-    awardsEn: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
-    awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
-    badgeNames: ['URBAN Photo Awards 2026 Selected'],
-    link: 'https://www.urbanphotoawards.com/',
-    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
-    galleryPhotos: [
-      {
-        id: 'in-between-spaces-01',
-        src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
-        alt: 'In-Between Spaces – Schahrsad Shahmirzadi',
-        captionDe: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
-        captionEn: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
-        captionFa: 'فضاهای میانی – شیرزن (منتخب مسابقه URBAN 2026)'
       }
     ]
   }
@@ -1535,25 +1536,6 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     coverImage: '/images/2026_10_seite-1-1152x1536.jpg'
   },
   {
-    id: 'ipa-annual-book-2025',
-    titleDe: 'The 2025 Annual International Photography Awards (IPA) Book',
-    titleEn: 'The 2025 Annual International Photography Awards (IPA) Book',
-    titleFa: 'کتاب سالانه جوایز بین‌المللی عکاسی (IPA) ۲۰۲۵',
-    subtitleDe: 'Offizielles Jahrbuch der IPA Preisträger 2025',
-    subtitleEn: 'Official Annual IPA Winners Book 2025',
-    subtitleFa: 'کتاب رسمی برگزیدگان سال ۲۰۲۵',
-    publisher: 'International Photography Awards (IPA / Lucie Awards)',
-    detailsDe: 'Preisträger-Publikation inklusive »The Solitaire as an Abstraction«.',
-    detailsEn: 'Award winner edition featuring "The Solitaire as an Abstraction".',
-    detailsFa: 'چاپ اثر شاخص تک‌بنا به عنوان یک انتزاع.',
-    link: 'https://www.photoawards.com/books/IPA-2025-EBOOK.pdf',
-    linkTextDe: 'IPA 2025 E-Book (PDF) →',
-    linkTextEn: 'IPA 2025 E-Book (PDF) →',
-    linkTextFa: 'دریافت کتاب سالانه IPA ۲۰۲۵ (PDF) ←',
-    type: 'ebook',
-    coverImage: '/images/2026_06_ebook-01-1152x1536.jpg'
-  },
-  {
     id: 'bw-spider-book-2026',
     titleDe: 'Black & White Spider Awards: The Curated Collection 2026',
     titleEn: 'Black & White Spider Awards: The Curated Collection 2026',
@@ -1589,24 +1571,6 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'Watch Film on Vimeo →',
     linkTextFa: 'تماشای فیلم در ویمئو ←',
     type: 'video'
-  },
-  {
-    id: 'apmp-magcloud-2025',
-    titleDe: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
-    titleEn: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
-    titleFa: 'کتاب برگزیدگان مسترپرایز عکاسی معماری ۲۰۲۵ (APMP)',
-    subtitleDe: 'Offizielle MagCloud-Katalogpublikation',
-    subtitleEn: 'Official MagCloud Print & Digital Edition',
-    subtitleFa: 'چاپ رسمی کاتالوگ بین‌المللی مسترپرایز معماری',
-    publisher: 'Architecture MasterPrize (AMP / APMP)',
-    detailsDe: 'Gewinnerin in Exterior Architecture Photography – Other Exterior.',
-    detailsEn: 'Winner in Exterior Architecture Photography – Other Exterior.',
-    detailsFa: 'برنده جایزه عکاسی معماری نمای بیرونی.',
-    link: 'https://www.magcloud.com/browse/issue/3262571',
-    linkTextDe: 'MagCloud Magazin ansehen →',
-    linkTextEn: 'View MagCloud Issue →',
-    linkTextFa: 'مشاهده در مگ‌کلود ←',
-    type: 'book'
   },
   {
     id: 'globallens-editors-choice',
@@ -1645,5 +1609,42 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextFa: 'مشاهده گالری رسمی PERSPA ←',
     type: 'editors-choice',
     coverImage: '/images/2026_07_haphaestus-1214x2048.jpg'
+  },
+  {
+    id: 'ipa-annual-book-2025',
+    titleDe: 'The 2025 Annual International Photography Awards (IPA) Book',
+    titleEn: 'The 2025 Annual International Photography Awards (IPA) Book',
+    titleFa: 'کتاب سالانه جوایز بین‌المللی عکاسی (IPA) ۲۰۲۵',
+    subtitleDe: 'Offizielles Jahrbuch der IPA Preisträger 2025',
+    subtitleEn: 'Official Annual IPA Winners Book 2025',
+    subtitleFa: 'کتاب رسمی برگزیدگان سال ۲۰۲۵',
+    publisher: 'International Photography Awards (IPA / Lucie Awards)',
+    detailsDe: 'Preisträger-Publikation inklusive »The Solitaire as an Abstraction«.',
+    detailsEn: 'Award winner edition featuring "The Solitaire as an Abstraction".',
+    detailsFa: 'چاپ اثر شاخص تک‌بنا به عنوان یک انتزاع.',
+    link: 'https://www.photoawards.com/books/IPA-2025-EBOOK.pdf',
+    linkTextDe: 'IPA 2025 E-Book (PDF) →',
+    linkTextEn: 'IPA 2025 E-Book (PDF) →',
+    linkTextFa: 'دریافت کتاب سالانه IPA ۲۰۲۵ (PDF) ←',
+    type: 'ebook',
+    coverImage: '/images/2026_06_ebook-01-1152x1536.jpg'
+  },
+  {
+    id: 'apmp-magcloud-2025',
+    titleDe: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
+    titleEn: 'Architecture Photography MasterPrize (APMP) Winners Book 2025',
+    titleFa: 'کتاب برگزیدگان مسترپرایز عکاسی معماری ۲۰۲۵ (APMP)',
+    subtitleDe: 'Offizielle MagCloud-Katalogpublikation',
+    subtitleEn: 'Official MagCloud Print & Digital Edition',
+    subtitleFa: 'چاپ رسمی کاتالوگ بین‌المللی مسترپرایز معماری',
+    publisher: 'Architecture MasterPrize (AMP / APMP)',
+    detailsDe: 'Gewinnerin in Exterior Architecture Photography – Other Exterior.',
+    detailsEn: 'Winner in Exterior Architecture Photography – Other Exterior.',
+    detailsFa: 'برنده جایزه عکاسی معماری نمای بیرونی.',
+    link: 'https://www.magcloud.com/browse/issue/3262571',
+    linkTextDe: 'MagCloud Magazin ansehen →',
+    linkTextEn: 'View MagCloud Issue →',
+    linkTextFa: 'مشاهده در مگ‌کلود ←',
+    type: 'book'
   }
 ];

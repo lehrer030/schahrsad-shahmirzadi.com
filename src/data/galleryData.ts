@@ -135,62 +135,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     descriptionFa: 'در سال‌های ۲۰۲۵ و ۲۰۲۶، شیرزن یازده نیمه‌ماراتن و ماراتن معتبر برلین را با موفقیت پشت سر گذاشت. او هر دویدن را به آرمان‌های والای انسانی پیوند می‌زند: برای کرامت، برابری جنسیتی، تنوع و علیه سرکوب‌های پدرسالارانه.',
     photos: [
       {
-        id: 'run-gallery-01',
-        src: './images/2026_10_image00001-scaled.webp',
-        alt: 'Berlin Marathon 2026 – Running for dignity and equality',
-        captionDe: 'Berlin Marathon 2026 — Als deutsch-iranische Frau gelaufen: Für Würde und Gleichberechtigung, gegen patriarchale Familienstrukturen.',
-        captionEn: 'Berlin Marathon 2026 — I ran as a German-Iranian woman: for dignity and equality, against patriarchal structures within families.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — دویدن به عنوان یک زن آلمانی-ایرانی: برای کرامت و برابری، علیه ساختارهای پدرسالارانه خانوادگی.'
-      },
-      {
-        id: 'run-gallery-02',
-        src: './images/2026_10_image00002-scaled.webp',
-        alt: 'Berlin Marathon 2026 – Ziel & Medaille',
-        captionDe: 'Berlin Marathon 2026 — Finisher-Impression und Medaille nach 42,195 Kilometern voller Entschlossenheit.',
-        captionEn: 'Berlin Marathon 2026 — Finisher impression and medal after 42.195 km of sheer determination.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — مدال و لحظه پایان پس از ۴۲٫۱۹۵ کیلومتر اراده استوار.'
-      },
-      {
-        id: 'run-gallery-03',
-        src: './images/2026_05_image00002-scaled.webp',
-        alt: '45. Berliner Halbmarathon: Running for Free Iran',
-        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles Zeichen für Freiheit und Frauenrechte.',
-        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom and women’s rights.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی و حقوق زنان.'
-      },
-      {
-        id: 'run-gallery-04',
-        src: './images/2026_05_image00001-scaled.webp',
-        alt: '45. Berliner Halbmarathon – Strecke',
-        captionDe: '45. Berliner Halbmarathon — Unterwegs auf den Straßen Berlins mit sportlichem Spirit.',
-        captionEn: '45th Berlin Half Marathon — On the streets of Berlin with dedicated athletic spirit.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین — در خیابان‌های برلین با روحیه‌ای ورزشی و پویا.'
-      },
-      {
-        id: 'run-gallery-05',
-        src: './images/2025_07_image00055-1-scaled.webp',
-        alt: 'Halbmarathon Berlin – Konzentration & Vorbereitung',
-        captionDe: 'Halbmarathon Berlin — Fokus, Athletik und Vorbereitung auf die Langstrecke.',
-        captionEn: 'Berlin Half Marathon — Focus, athletic conditioning, and race preparation.',
-        captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی بدنی و آماده‌سازی برای مسافت طولانی.'
-      },
-      {
-        id: 'run-gallery-06',
-        src: './images/2025_07_image00056-1-scaled.webp',
-        alt: 'Halbmarathon Berlin – Ziellinie',
-        captionDe: 'Halbmarathon Berlin — Ein weiterer erfolgreicher Lauf für Frieden und Menschlichkeit.',
-        captionEn: 'Berlin Half Marathon — Another accomplished endurance run for peace and humanity.',
-        captionFa: 'نیمه‌ماراتن برلین — دویی دیگر با موفقیت برای صلح و انسانیت.'
-      },
-      {
-        id: 'run-gallery-07',
-        src: './images/2026_08_Adidas-City-Night-Run-Berlin-2026-1152x1536.webp',
-        alt: 'Adidas City Night Run Berlin 2026',
-        captionDe: 'Adidas City Night Run Berlin 2026: In Solidarität mit den Opfern des CSD 2026 – Für queeres Leben, Vielfalt und Freiheit an der Kaiser-Wilhelm-Gedächtniskirche.',
-        captionEn: 'Adidas City Night Run Berlin 2026: In Solidarity with the Victims of the CSD 2026 Attack – for Queer Lives, Diversity and Freedom at the Kaiser Wilhelm Memorial Church.',
-        captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
-      },
-      {
         id: 'run-gallery-08',
         src: './images/2026_08_ecchr-human-rights-support-4-1152x1536.webp',
         alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
@@ -238,12 +182,44 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'همکاری با ECCHR: همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.'
       },
       {
-        id: 'run-gallery-13',
-        src: './images/2025_07_image00001-768x1366.webp',
-        alt: 'Halbmarathons & Marathon Berlin 2025',
-        captionDe: 'Halbmarathons & Marathon Berlin: SchirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
-        captionEn: 'Half Marathons & Marathon Berlin: SchirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
-        captionFa: 'نیمه‌ماراتن‌ها و ماراتن برلین: شیرزن ۱۱ نیمه‌ماراتن و ماراتن کامل برلین را به نفع صلح و آزادی به پایان رساند.'
+        id: 'run-gallery-01',
+        src: './images/2026_10_image00001-scaled.webp',
+        alt: 'Berlin Marathon 2026 – Running for dignity and equality',
+        captionDe: 'Berlin Marathon 2026 — Als deutsch-iranische Frau gelaufen: Für Würde und Gleichberechtigung, gegen patriarchale Familienstrukturen.',
+        captionEn: 'Berlin Marathon 2026 — I ran as a German-Iranian woman: for dignity and equality, against patriarchal structures within families.',
+        captionFa: 'ماراتن برلین ۲۰۲۶ — دویدن به عنوان یک زن آلمانی-ایرانی: برای کرامت و برابری، علیه ساختارهای پدرسالارانه خانوادگی.'
+      },
+      {
+        id: 'run-gallery-02',
+        src: './images/2026_10_image00002-scaled.webp',
+        alt: 'Berlin Marathon 2026 – Ziel & Medaille',
+        captionDe: 'Berlin Marathon 2026 — Finisher-Impression und Medaille nach 42,195 Kilometern voller Entschlossenheit.',
+        captionEn: 'Berlin Marathon 2026 — Finisher impression and medal after 42.195 km of sheer determination.',
+        captionFa: 'ماراتن برلین ۲۰۲۶ — مدال و لحظه پایان پس از ۴۲٫۱۹۵ کیلومتر اراده استوار.'
+      },
+      {
+        id: 'run-gallery-07',
+        src: './images/2026_08_Adidas-City-Night-Run-Berlin-2026-1152x1536.webp',
+        alt: 'Adidas City Night Run Berlin 2026',
+        captionDe: 'Adidas City Night Run Berlin 2026: In Solidarität mit den Opfern des CSD 2026 – Für queeres Leben, Vielfalt und Freiheit an der Kaiser-Wilhelm-Gedächtniskirche.',
+        captionEn: 'Adidas City Night Run Berlin 2026: In Solidarity with the Victims of the CSD 2026 Attack – for Queer Lives, Diversity and Freedom at the Kaiser Wilhelm Memorial Church.',
+        captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
+      },
+      {
+        id: 'run-gallery-03',
+        src: './images/2026_05_image00002-scaled.webp',
+        alt: '45. Berliner Halbmarathon: Running for Free Iran',
+        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles Zeichen für Freiheit und Frauenrechte.',
+        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom and women’s rights.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی و حقوق زنان.'
+      },
+      {
+        id: 'run-gallery-04',
+        src: './images/2026_05_image00001-scaled.webp',
+        alt: '45. Berliner Halbmarathon – Strecke',
+        captionDe: '45. Berliner Halbmarathon — Unterwegs auf den Straßen Berlins mit sportlichem Spirit.',
+        captionEn: '45th Berlin Half Marathon — On the streets of Berlin with dedicated athletic spirit.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین — در خیابان‌های برلین با روحیه‌ای ورزشی و پویا.'
       },
       {
         id: 'run-gallery-14',
@@ -252,6 +228,30 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionDe: 'Herbstlauf Berlin — Ausdauer, Natur und mentale Stärke im Einklang mit sportlicher Konsequenz.',
         captionEn: 'Autumn Run Berlin — Endurance, nature, and mental balance in harmony with athletic discipline.',
         captionFa: 'دو پاییزه برلین — استقامت، هماهنگی با طبیعت و استواری ذهنی در پرتو انضباط ورزشی.'
+      },
+      {
+        id: 'run-gallery-05',
+        src: './images/2025_07_image00055-1-scaled.webp',
+        alt: 'Halbmarathon Berlin – Konzentration & Vorbereitung',
+        captionDe: 'Halbmarathon Berlin — Fokus, Athletik und Vorbereitung auf die Langstrecke.',
+        captionEn: 'Berlin Half Marathon — Focus, athletic conditioning, and race preparation.',
+        captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی بدنی و آماده‌سازی برای مسافت طولانی.'
+      },
+      {
+        id: 'run-gallery-06',
+        src: './images/2025_07_image00056-1-scaled.webp',
+        alt: 'Halbmarathon Berlin – Ziellinie',
+        captionDe: 'Halbmarathon Berlin — Ein weiterer erfolgreicher Lauf für Frieden und Menschlichkeit.',
+        captionEn: 'Berlin Half Marathon — Another accomplished endurance run for peace and humanity.',
+        captionFa: 'نیمه‌ماراتن برلین — دویی دیگر با موفقیت برای صلح و انسانیت.'
+      },
+      {
+        id: 'run-gallery-13',
+        src: './images/2025_07_image00001-768x1366.webp',
+        alt: 'Halbmarathons & Marathon Berlin 2025',
+        captionDe: 'Halbmarathons & Marathon Berlin: SchirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
+        captionEn: 'Half Marathons & Marathon Berlin: SchirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
+        captionFa: 'نیمه‌ماراتن‌ها و ماراتن برلین: شیرزن ۱۱ نیمه‌ماراتن و ماراتن کامل برلین را به نفع صلح و آزادی به پایان رساند.'
       }
     ]
   },
