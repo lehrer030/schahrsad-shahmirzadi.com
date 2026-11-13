@@ -126,9 +126,24 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-4">
-          <p>© {new Date().getFullYear()} Schahrsad Shahmirzadi (SchirZan). All rights reserved.</p>
-          <div className="flex items-center gap-1 text-stone-500">
+        <div className="flex flex-col md:flex-row items-center justify-between text-[11px] text-stone-500 gap-4 pt-2">
+          <p className="text-center md:text-left">© {new Date().getFullYear()} Schahrsad Shahmirzadi (SchirZan). All rights reserved.</p>
+
+          {/* Webdesign by Emanuel Jurgait (Mittig mit E-Mail-Link zu info@re-mint.online) */}
+          <div className="text-center py-1 md:py-0">
+            <span className="text-stone-400">
+              {currentLang === 'de' ? 'Webdesign: ' : currentLang === 'fa' ? 'طراحی وب: ' : 'Web Design: '}
+            </span>
+            <a
+              href="mailto:info@re-mint.online"
+              className="text-stone-700 hover:text-amber-800 font-medium underline decoration-stone-300 hover:decoration-amber-800 underline-offset-2 transition-colors"
+              title="E-Mail an Emanuel Jurgait (info@re-mint.online)"
+            >
+              Emanuel Jurgait
+            </a>
+          </div>
+
+          <div className="flex items-center justify-center md:justify-end gap-1 text-stone-500 text-center md:text-right">
             <span>
               {currentLang === 'fa'
                 ? 'طراحی‌شده با دقت و استانداردهای نمایش جوایز بین‌المللی'
