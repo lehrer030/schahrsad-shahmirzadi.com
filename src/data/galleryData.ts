@@ -190,14 +190,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین — در خیابان‌های برلین با روحیه‌ای ورزشی و پویا.'
       },
       {
-        id: 'run-gallery-14',
-        src: './images/2025_10_image00001.webp',
-        alt: 'Herbstlauf Berlin – Galerie-Dokumentation',
-        captionDe: 'Herbstlauf Berlin — Ausdauer, Natur und mentale Stärke im Einklang mit sportlicher Konsequenz.',
-        captionEn: 'Autumn Run Berlin — Endurance, nature, and mental balance in harmony with athletic discipline.',
-        captionFa: 'دو پاییزه برلین — استقامت، هماهنگی با طبیعت و استواری ذهنی در پرتو انضباط ورزشی.'
-      },
-      {
         id: 'run-gallery-05',
         src: './images/2025_07_image00055-1-scaled.webp',
         alt: 'Halbmarathon Berlin – Konzentration & Vorbereitung',
