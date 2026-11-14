@@ -130,13 +130,24 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 </h4>
 
                 {/* Recognition / Awards Description */}
-                <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+                <p className="text-xs font-mono font-medium text-amber-800 mt-1.5 leading-snug">
                   {currentLang === 'de'
                     ? work.awardsDe
                     : currentLang === 'fa'
                     ? work.awardsFa
                     : work.awardsEn}
                 </p>
+
+                {/* Rich Curatorial Description */}
+                {(work.descriptionDe || work.descriptionEn) && (
+                  <p className="text-xs text-stone-600 mt-2 leading-relaxed line-clamp-3">
+                    {currentLang === 'de'
+                      ? work.descriptionDe
+                      : currentLang === 'fa'
+                      ? (work.descriptionFa || work.descriptionEn)
+                      : work.descriptionEn}
+                  </p>
+                )}
               </div>
 
               {/* Action Bar: View full photo series and official award link */}

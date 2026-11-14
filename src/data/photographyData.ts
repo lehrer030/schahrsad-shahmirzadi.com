@@ -62,6 +62,12 @@ export interface FurtherWork {
   link?: string;
   previewImage?: string;
   galleryPhotos?: PhotoItem[];
+  descriptionDe?: string;
+  descriptionEn?: string;
+  descriptionFa?: string;
+  personalNoteDe?: string;
+  personalNoteEn?: string;
+  personalNoteFa?: string;
 }
 
 export interface CategoryInfo {
@@ -421,7 +427,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 HM', 'AMP 2026 HM', 'PERSPA 2026 HM'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26',
-    previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+        descriptionDe: "Der Wasserturm als Wahrzeichen industrieller Berliner Baukultur wird aus unerwarteten Blickwinkeln portr\u00e4tiert. Die massive Klinkerarchitektur tritt in einen spannungsvollen Dialog mit dem offenen Himmelsraum.",
+    descriptionEn: "The water tower as a landmark of Berlin\u2019s industrial heritage is portrayed from unexpected perspectives. The massive brick architecture enters into a compelling dialogue with the open sky.",
+    descriptionFa: "\u0628\u0631\u062c \u0622\u0628 \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0646\u0645\u0627\u062f\u06cc \u0627\u0632 \u0645\u06cc\u0631\u0627\u062b \u0635\u0646\u0639\u062a\u06cc \u0628\u0631\u0644\u06cc\u0646 \u0627\u0632 \u0632\u0648\u0627\u06cc\u0627\u06cc\u06cc \u0646\u0627\u0645\u0646\u062a\u0638\u0631 \u0628\u0647 \u062a\u0635\u0648\u06cc\u0631 \u06a9\u0634\u06cc\u062f\u0647 \u0634\u062f\u0647 \u0627\u0633\u062a. \u0645\u0639\u0645\u0627\u0631\u06cc \u0622\u062c\u0631\u06cc \u062f\u0631 \u06af\u0641\u062a\u200c\u0648\u06af\u0648\u06cc\u06cc \u0632\u0646\u062f\u0647 \u0628\u0627 \u0641\u0636\u0627\u06cc \u0628\u0627\u0632 \u0622\u0633\u0645\u0627\u0646 \u0642\u0631\u0627\u0631 \u0645\u06cc\u200c\u06af\u06cc\u0631\u062f.",
+previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'echoes-water-tower-01',
@@ -445,7 +454,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2026 — تقدیر · IPA 2026 — برگزیده رسمی · Spider Awards 2025 — نامزد و تقدیر · LICC 2025 — برگزیده رسمی',
     badgeNames: ['AMP 2026 HM', 'IPA 2026 OS', 'Spider Awards 2025 HM', 'LICC 2025 OS'],
     link: 'https://architectureprize.com/',
-    previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
+        descriptionDe: "Diese Serie abstrahiert eine moderne Geb\u00e4udefassade, deren vertikale Fensterb\u00e4nder wie die Tasten eines Pianos wirken. Rhythmus, Wiederholung und die strenge Ausrichtung der Fensterachsen erzeugen eine visuelle Partitur architektonischer Harmonie.",
+    descriptionEn: "This series abstracts a modern facade, where vertical windows appear like the keys of a piano. Rhythm, repetition, and the precise alignment of window axes create a powerful graphic score, echoing musical harmony.",
+    descriptionFa: "\u0627\u06cc\u0646 \u0645\u062c\u0645\u0648\u0639\u0647 \u0646\u0645\u0627\u06cc \u0645\u062f\u0631\u0646 \u06cc\u06a9 \u0633\u0627\u062e\u062a\u0645\u0627\u0646 \u0631\u0627 \u0627\u0646\u062a\u0632\u0627\u0639 \u0645\u06cc\u200c\u06a9\u0646\u062f\u061b \u062c\u0627\u06cc\u06cc \u06a9\u0647 \u0646\u0648\u0627\u0631\u0647\u0627\u06cc \u0639\u0645\u0648\u062f\u06cc \u067e\u0646\u062c\u0631\u0647\u200c\u0647\u0627 \u0647\u0645\u0686\u0648\u0646 \u06a9\u0644\u0627\u0648\u06cc\u0647\u200c\u0647\u0627\u06cc \u067e\u06cc\u0627\u0646\u0648 \u062c\u0644\u0648\u0647\u200c\u06af\u0631 \u0645\u06cc\u200c\u0634\u0648\u0646\u062f \u0648 \u0636\u0631\u0628\u200c\u0622\u0647\u0646\u06af \u0648 \u062a\u06a9\u0631\u0627\u0631 \u06cc\u06a9 \u067e\u0627\u0631\u062a\u06cc\u062a\u0648\u0631 \u0628\u0635\u0631\u06cc \u062e\u0644\u0642 \u0645\u06cc\u200c\u06a9\u0646\u0646\u062f.",
+previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'architectural-piano-01',
@@ -493,7 +505,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2026 — تقدیر جزئیات داخلی · BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['AMP 2026 HM', 'BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
-    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        descriptionDe: "Diese Fotografien pr\u00e4sentieren das Interieur der Griechischen Nationaloper in Athen als Gesamtkunstwerk \u2013 von weitl\u00e4ufigen Atrien bis zu raffinierten architektonischen Linien, in denen Licht, Materialien und Raumrhythmus pr\u00e4zise harmonieren.",
+    descriptionEn: "These photographs present the interior of the Greek National Opera in Athens as a total work of art, from soaring atriums to refined architectural curves, where light, materials, and spatial rhythm are precisely harmonised.",
+    descriptionFa: "\u0627\u06cc\u0646 \u0639\u06a9\u0633\u200c\u0647\u0627 \u0641\u0636\u0627\u06cc \u062f\u0627\u062e\u0644\u06cc \u0627\u067e\u0631\u0627\u06cc \u0645\u0644\u06cc \u06cc\u0648\u0646\u0627\u0646 \u062f\u0631 \u0622\u062a\u0646 \u0631\u0627 \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0627\u062b\u0631\u06cc \u06cc\u06a9\u067e\u0627\u0631\u0686\u0647 \u0628\u0647 \u062a\u0635\u0648\u06cc\u0631 \u0645\u06cc\u200c\u06a9\u0634\u0646\u062f \u06a9\u0647 \u062f\u0631 \u0622\u0646 \u0646\u0648\u0631\u060c \u0645\u0635\u0627\u0644\u062d \u0648 \u0631\u06cc\u062a\u0645 \u0641\u0636\u0627\u06cc\u06cc \u0628\u0647 \u0632\u06cc\u0628\u0627\u06cc\u06cc \u067e\u06cc\u0648\u0646\u062f \u062e\u0648\u0631\u062f\u0647\u200c\u0627\u0646\u062f.",
+previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'elegance-structure-bw-01',
@@ -549,7 +564,13 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2026 — ۲ بار تقدیر ویژه (پل بهشت و دریای طوفانی)',
     badgeNames: ['AMP 2026 HM (Heaven’s Bridge)', 'AMP 2026 HM (Stormy Sea)'],
     link: 'https://architectureprize.com/',
-    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+        descriptionDe: "\u201eCloud Mirror Architecture I: Heaven\u2019s Bridge\u201c zeigt moderne Architektur, die sich wie eine Br\u00fccke zwischen Stadt und Himmel erhebt. In \u201eCloud Mirror Architecture II: Stormy Sea (B&W)\u201c verdichten sich Spiegelungen zu einer ozeanischen Dynamik. Gewidmet Steve Barret.",
+    descriptionEn: "\u201cCloud Mirror Architecture I: Heaven\u2019s Bridge\u201d rises like a bridge between city and sky, creating a visual dialogue. \u201cCloud Mirror Architecture II: Stormy Sea (B&W)\u201d condenses reflections into an oceanic drama. Dedicated to Steve Barret.",
+    descriptionFa: "\u00ab\u0645\u0639\u0645\u0627\u0631\u06cc \u0622\u06cc\u0646\u0647 \u0627\u0628\u0631\u0647\u0627 \u06f1: \u067e\u0644 \u0628\u0647\u0634\u062a\u00bb \u067e\u06cc\u0648\u0646\u062f\u06cc \u0645\u06cc\u0627\u0646 \u0622\u0633\u0645\u0627\u0646 \u0648 \u0634\u0647\u0631 \u067e\u062f\u06cc\u062f \u0645\u06cc\u200c\u0622\u0648\u0631\u062f \u0648 \u0628\u062e\u0634 \u062f\u0648\u0645 \u0628\u0627\u0632\u062a\u0627\u0628\u200c\u0647\u0627 \u0631\u0627 \u0628\u0647 \u062f\u0631\u0627\u0645\u0627\u06cc\u06cc \u0627\u0642\u06cc\u0627\u0646\u0648\u0633\u06cc \u062a\u0628\u062f\u06cc\u0644 \u0645\u06cc\u200c\u06a9\u0646\u062f. \u062a\u0642\u062f\u06cc\u0645 \u0628\u0647 \u0627\u0633\u062a\u06cc\u0648 \u0628\u0627\u0631\u062a.",
+    personalNoteDe: "Pers\u00f6nliche Widmung: Gewidmet Steve Barret.",
+    personalNoteEn: "Personal Dedication: Dedicated to Steve Barret.",
+    personalNoteFa: "\u062a\u0642\u062f\u06cc\u0645 \u0634\u062e\u0635\u06cc: \u062a\u0642\u062f\u06cc\u0645 \u0634\u062f\u0647 \u0628\u0647 \u0627\u0633\u062a\u06cc\u0648 \u0628\u0627\u0631\u062a.",
+previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'cloud-mirror-i-01',
@@ -661,7 +682,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2026 — تقدیر ویژه سازه‌های بیرونی',
     badgeNames: ['AMP 2026 HM'],
     link: 'https://architectureprize.com/',
-    previewImage: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
+        descriptionDe: "Schwarz, Rot und Gold spiegeln sich in der Architektur des Bundespr\u00e4sidialamtes in Berlin wider. Die Werkserie \u00fcbersetzt die staatliche Symbolik und die markante Bauk\u00f6rper\u00e4sthetik in eine kraftvolle photographische Abstraktion.",
+    descriptionEn: "Black, red, and gold are reflected in the architecture of the Federal President\u2019s Office in Berlin. The series translates state symbolism into an abstract photographic study of architectural presence.",
+    descriptionFa: "\u0631\u0646\u06af\u200c\u0647\u0627\u06cc \u0633\u06cc\u0627\u0647\u060c \u0633\u0631\u062e \u0648 \u0637\u0644\u0627\u06cc\u06cc \u062f\u0631 \u0645\u0639\u0645\u0627\u0631\u06cc \u062f\u0641\u062a\u0631 \u0631\u06cc\u0627\u0633\u062a\u200c\u062c\u0645\u0647\u0648\u0631\u06cc \u0641\u062f\u0631\u0627\u0644 \u062f\u0631 \u0628\u0631\u0644\u06cc\u0646 \u0628\u0627\u0632\u062a\u0627\u0628 \u06cc\u0627\u0641\u062a\u0647\u200c\u0627\u0646\u062f. \u0627\u06cc\u0646 \u0645\u062c\u0645\u0648\u0639\u0647 \u0646\u0645\u0627\u062f\u0647\u0627\u06cc \u062d\u0627\u06a9\u0645\u06cc\u062a\u06cc \u0631\u0627 \u0628\u0647 \u0627\u0646\u062a\u0632\u0627\u0639\u06cc \u0646\u0627\u0628 \u0648 \u067e\u0631\u0627\u0628\u0647\u062a \u062f\u0631 \u0639\u06a9\u0627\u0633\u06cc \u0628\u062f\u0644 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
+previewImage: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'black-red-gold-01',
@@ -725,7 +749,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — ۲ بار تقدیر ویژه',
     badgeNames: ['IPA 2026 HM & OS', 'AMP 2026 HM (Urban)', 'AMP 2026 HM (B&W)'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26',
-    previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
+        descriptionDe: "Facettenreiche urbane Spiegelungen und Raumverschachtelungen zwischen Natur, Himmel und moderner Metropolenarchitektur. Die Bildserie untersucht, wie reflektierende Oberfl\u00e4chen statische Bauk\u00f6rper in fluide Lichtr\u00e4ume transformieren.",
+    descriptionEn: "Multifaceted urban reflections and spatial interlacings between nature, sky, and modern metropolitan architecture. The series investigates how reflective surfaces transform static structures into fluid realms of light.",
+    descriptionFa: "\u0628\u0627\u0632\u062a\u0627\u0628\u200c\u0647\u0627\u06cc \u0686\u0646\u062f\u0648\u062c\u0647\u06cc \u0634\u0647\u0631\u06cc \u0648 \u0647\u0645\u200c\u067e\u0648\u0634\u0627\u0646\u06cc\u200c\u0647\u0627\u06cc \u0641\u0636\u0627\u06cc\u06cc \u0645\u06cc\u0627\u0646 \u0637\u0628\u06cc\u0639\u062a\u060c \u0622\u0633\u0645\u0627\u0646 \u0648 \u0645\u0639\u0645\u0627\u0631\u06cc \u06a9\u0644\u0627\u0646\u200c\u0634\u0647\u0631 \u06a9\u0647 \u0627\u062d\u062c\u0627\u0645 \u062b\u0627\u0628\u062a \u0631\u0627 \u0628\u0647 \u062c\u0631\u06cc\u0627\u0646\u200c\u0647\u0627\u06cc \u0634\u0646\u0627\u0648\u0631 \u0646\u0648\u0631 \u0628\u062f\u0644 \u0645\u06cc\u200c\u0633\u0627\u0632\u0646\u062f.",
+previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'mirrored-ii-01',
@@ -757,7 +784,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'PERSPA 2026 — تقدیر ویژه پلکان · AMP 2025 — تقدیر فضای داخلی پایدار',
     badgeNames: ['PERSPA 2026 HM Stairs', 'AMP 2025 HM'],
     link: 'https://perspa.fr/winners/architectural-perspective/#work-152',
-    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
+        descriptionDe: "Fotografische Detailstudien architektonischer Stufen und \u00dcberg\u00e4nge im Kontext \u00f6kologischer und nachhaltiger Bauweise. Formen und Materialien spiegeln das stetige Voranschreiten hin zu zukunftsf\u00e4higen Lebensr\u00e4umen wider.",
+    descriptionEn: "Photographic detail studies of architectural steps and transitions within sustainable construction, where materials and forms signify the progression toward resilient environments.",
+    descriptionFa: "\u0645\u0637\u0627\u0644\u0639\u0647 \u062c\u0632\u0626\u06cc\u0627\u062a \u0645\u0639\u0645\u0627\u0631\u06cc \u067e\u0644\u0647\u200c\u0647\u0627 \u0648 \u06af\u0630\u0631\u06af\u0627\u0647\u200c\u0647\u0627 \u062f\u0631 \u0632\u0645\u06cc\u0646\u0647 \u0633\u0627\u062e\u062a \u067e\u0627\u06cc\u062f\u0627\u0631 \u06a9\u0647 \u062d\u0631\u06a9\u062a \u067e\u06cc\u0648\u0633\u062a\u0647 \u0628\u0647 \u0633\u0648\u06cc \u0632\u06cc\u0633\u062a\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u062a\u0627\u0628\u200c\u0622\u0648\u0631 \u0631\u0627 \u0628\u0627\u0632\u0645\u06cc\u200c\u0646\u0645\u0627\u06cc\u0627\u0646\u062f.",
+previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'steps-sustainability-01',
@@ -781,7 +811,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/',
-    previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+        descriptionDe: "Der Hephaistos-Tempel auf der Athener Agora ist dem Gott der Schmiedekunst und des Feuers geweiht. Diese Serie r\u00fcckt die dorischen S\u00e4ulen ins Zentrum, wie sie seit Jahrtausenden Licht und Schatten im sakralen Rhythmus b\u00fcndeln.",
+    descriptionEn: "The Temple of Hephaistos is dedicated to the god of blacksmiths and fire\u2014a work of architecture rich in symbolism and craftsmanship. This series places its columns at the center as they draw light and shadow into dialogue across millennia.",
+    descriptionFa: "\u0645\u0639\u0628\u062f \u0647\u0641\u0627\u0626\u0633\u062a\u0648\u0633 \u062f\u0631 \u0622\u06af\u0648\u0631\u0627\u06cc \u0628\u0627\u0633\u062a\u0627\u0646\u06cc \u0622\u062a\u0646\u060c \u0648\u0642\u0641 \u062e\u062f\u0627\u06cc \u0635\u0646\u0639\u062a\u06af\u0631\u06cc \u0648 \u0622\u062a\u0634 \u0627\u0633\u062a. \u0627\u06cc\u0646 \u0645\u062c\u0645\u0648\u0639\u0647 \u0633\u062a\u0648\u0646\u200c\u0647\u0627\u06cc \u06a9\u0647\u0646 \u0631\u0627 \u062f\u0631 \u06af\u0641\u062a\u200c\u0648\u06af\u0648\u06cc \u0627\u0628\u062f\u06cc \u0646\u0648\u0631 \u0648 \u0633\u0627\u06cc\u0647 \u0628\u0647 \u062a\u0635\u0648\u06cc\u0631 \u0645\u06cc\u200c\u06a9\u0634\u062f.",
+previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'hephaestus-01',
@@ -837,7 +870,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
     link: 'https://architectureprize.com/',
-    previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+        descriptionDe: "\u201eRazor Pull Berlin\u201c verdichtet den allt\u00e4glichen st\u00e4dtischen Stra\u00dfenraum zu einem abstrakten visuellen Kraftfeld. Durch extreme Blickwinkel und Fluchtlinien verschmelzen Stra\u00dfenleuchten, Glasfassaden und Klinkerbauten zu rasiermesserscharfen Konturen und geometrischer Spannung.",
+    descriptionEn: "\u201cRazor Pull Berlin\u201d condenses an ordinary urban streetscape into an almost abstract visual space. Through extreme perspectives, streetlights, glass facades and brick structures converge into razor-sharp lines and geometric tension.",
+    descriptionFa: "\u00ab\u06a9\u0634\u0634 \u062a\u06cc\u063a \u0628\u0631\u0644\u06cc\u0646\u00bb \u0686\u0634\u0645\u200c\u0627\u0646\u062f\u0627\u0632 \u062e\u06cc\u0627\u0628\u0627\u0646\u06cc \u0634\u0647\u0631 \u0631\u0627 \u0628\u0647 \u0645\u06cc\u062f\u0627\u0646\u06cc \u0627\u0646\u062a\u0632\u0627\u0639\u06cc \u062a\u0628\u062f\u06cc\u0644 \u0645\u06cc\u200c\u06a9\u0646\u062f \u06a9\u0647 \u062f\u0631 \u0622\u0646 \u0686\u0631\u0627\u063a\u200c\u0647\u0627\u060c \u0634\u06cc\u0634\u0647\u200c\u0647\u0627 \u0648 \u0622\u062c\u0631\u0647\u0627 \u062f\u0631 \u062e\u0637\u0648\u0637\u06cc \u062a\u06cc\u0632 \u0648 \u067e\u0631\u06a9\u0634\u0634 \u0628\u0647 \u0647\u0645 \u0645\u06cc\u200c\u0631\u0633\u0646\u062f.",
+previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'razor-pull-01',
@@ -901,7 +937,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25',
-    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+        descriptionDe: "\u201eDimensions of Sustainability\u201c entstand im Treppenhaus des Ministeriums f\u00fcr Landwirtschaft, Umwelt und Klimaschutz (MLUK) des Landes Brandenburg in Potsdam. Die Werkserie untersucht das Zusammenspiel von Licht, Schatten, Stahl und Holz und transformiert funktionale Architekturelemente in Sinnbilder nachhaltiger Gestaltung.",
+    descriptionEn: "\u201cDimensions of Sustainability\u201d was created in the stairwell of the Environment Ministry in Brandenburg. The abstract series explores light, shadow, and materials such as steel and wood, transforming everyday architectural elements into symbols of sustainable design.",
+    descriptionFa: "\u00ab\u0627\u0628\u0639\u0627\u062f \u067e\u0627\u06cc\u062f\u0627\u0631\u06cc\u00bb \u062f\u0631 \u067e\u0644\u06a9\u0627\u0646 \u0648\u0632\u0627\u0631\u062a \u0645\u062d\u06cc\u0637 \u0632\u06cc\u0633\u062a \u0628\u0631\u0627\u0646\u062f\u0646\u0628\u0648\u0631\u06af \u062f\u0631 \u067e\u0648\u062a\u0633\u062f\u0627\u0645 \u062b\u0628\u062a \u0634\u062f\u0647 \u0627\u0633\u062a \u0648 \u0639\u0646\u0627\u0635\u0631 \u0631\u0648\u0632\u0645\u0631\u0647 \u0631\u0627 \u0628\u0647 \u0646\u0645\u0627\u062f\u0647\u0627\u06cc \u0637\u0631\u0627\u062d\u06cc \u067e\u0627\u06cc\u062f\u0627\u0631 \u0628\u062f\u0644 \u0645\u06cc\u200c\u0633\u0627\u0632\u062f.",
+previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'dimensions-01',
@@ -941,7 +980,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25',
-    previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
+        descriptionDe: "Die Kaiser-Wilhelm-Ged\u00e4chtniskirche ist ein unvergleichlicher Erinnerungsort im Herzen Berlins. Der Ruinenturm mahnt an die Schrecken des Krieges, w\u00e4hrend die zeitgen\u00f6ssischen Sperrelemente nach dem Anschlag von 2016 die Verwundbarkeit und Wachsamkeit unserer heutigen offenen Gesellschaft spiegeln.",
+    descriptionEn: "The Kaiser Wilhelm Memorial Church is a unique place of remembrance in Berlin. Its ruined tower recalls the horrors of war, while contemporary entrance barriers reflect our open society\u2019s vulnerability and vigilance.",
+    descriptionFa: "\u06a9\u0644\u06cc\u0633\u0627\u06cc \u06cc\u0627\u062f\u0628\u0648\u062f \u0642\u06cc\u0635\u0631 \u0648\u06cc\u0644\u0647\u0644\u0645 \u06cc\u0627\u062f\u0645\u0627\u0646\u06cc \u0628\u06cc\u200c\u0647\u0645\u062a\u0627 \u062f\u0631 \u0642\u0644\u0628 \u0628\u0631\u0644\u06cc\u0646 \u0627\u0633\u062a\u061b \u0628\u0631\u062c\u06cc \u0648\u06cc\u0631\u0627\u0646 \u06a9\u0647 \u0648\u062d\u0634\u062a \u062c\u0646\u06af \u0631\u0627 \u06af\u0648\u0634\u0632\u062f \u0645\u06cc\u200c\u06a9\u0646\u062f \u0648 \u062d\u0635\u0627\u0631\u0647\u0627\u06cc \u0645\u062f\u0631\u0646 \u0627\u0645\u0631\u0648\u0632\u06cc \u06a9\u0647 \u0622\u0633\u06cc\u0628\u200c\u067e\u0630\u06cc\u0631\u06cc \u0648 \u0647\u0648\u0634\u06cc\u0627\u0631\u06cc \u062c\u0627\u0645\u0639\u0647 \u0628\u0627\u0632 \u0631\u0627 \u0628\u0627\u0632\u062a\u0627\u0628 \u0645\u06cc\u200c\u062f\u0647\u0646\u062f.",
+previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'fragments-01',
@@ -997,7 +1039,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25',
-    previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
+        descriptionDe: "Im architektonischen Au\u00dfenraum eines Bildungsbaus wird ein Spielplatzkletterger\u00fcst zu einer tiefgr\u00fcndigen Studie \u00fcber Symmetrie, Rhythmus und r\u00e4umliche Spannung \u2013 eine Form von \u201eSpielarchitektur\u201c, in der Gitter und Verbindungspunkte ein abstraktes Raumnetzwerk entfalten.",
+    descriptionEn: "Within the wider context of an educational exterior, a playground climbing frame transforms into a study of symmetry, rhythm, and spatial tension \u2014 a form of \u201cplay architecture\u201d in which grids and junctions create an abstract visual network.",
+    descriptionFa: "\u062f\u0631 \u0645\u062d\u0648\u0637\u0647 \u0628\u06cc\u0631\u0648\u0646\u06cc \u06cc\u06a9 \u0645\u0631\u06a9\u0632 \u0622\u0645\u0648\u0632\u0634\u06cc\u060c \u0627\u0633\u06a9\u0644\u062a \u06cc\u06a9 \u0648\u0633\u06cc\u0644\u0647 \u0628\u0627\u0632\u06cc \u0628\u0647 \u0645\u0637\u0627\u0644\u0639\u0647\u200c\u0627\u06cc \u0698\u0631\u0641 \u062f\u0631 \u0628\u0627\u0628 \u062a\u0642\u0627\u0631\u0646\u060c \u0631\u06cc\u062a\u0645 \u0648 \u062a\u0646\u0634 \u0641\u0636\u0627\u06cc\u06cc \u0628\u062f\u0644 \u0645\u06cc\u200c\u0634\u0648\u062f \u06a9\u0647 \u0634\u0628\u06a9\u0647\u200c\u0627\u06cc \u0627\u0646\u062a\u0632\u0627\u0639\u06cc \u062e\u0644\u0642 \u0645\u06cc\u200c\u06a9\u0646\u062f.",
+previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'symmetric-01',
@@ -1061,7 +1106,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'LICC 2025 — دو بار در فهرست نهایی (Shortlisted)',
     badgeNames: ['LICC 2025 Shortlisted', 'LICC 2025 Revised'],
     link: 'http://www.licc.uk/winners/winner.php?id=125858',
-    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+        descriptionDe: "Neue Perspektiven auf den Solit\u00e4r: Erweiterte visuelle Erkundung von Fluchtpunkten, Materialoberfl\u00e4chen und Himmelsspiegelungen.",
+    descriptionEn: "New perspectives on the solitaire: Expanded exploration of vanishing lines, material textures, and reflections.",
+    descriptionFa: "\u062f\u06cc\u062f\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u0646\u0648 \u0628\u0647 \u062a\u06a9\u200c\u0628\u0646\u0627: \u06a9\u0627\u0648\u0634 \u06af\u0633\u062a\u0631\u062f\u0647 \u062f\u0631 \u0646\u0642\u0627\u0637 \u06af\u0631\u06cc\u0632\u060c \u0628\u0627\u0641\u062a \u0645\u0635\u0627\u0644\u062d \u0648 \u0628\u0627\u0632\u062a\u0627\u0628\u200c\u0647\u0627\u06cc \u0622\u0633\u0645\u0627\u0646.",
+previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'solitaire-new-perspectives-01',
@@ -1085,7 +1133,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'Black & White Spider Awards 2025 — نامزد دریافت جایزه (Nominee)',
     badgeNames: ['Spider Awards 2025 Nominee'],
     link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
-    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        descriptionDe: "Monochrome Reduktion der Solit\u00e4r-Architektur auf reine geometrische Kontraste, Hell-Dunkel-Verl\u00e4ufe und architektonische Zeitlosigkeit.",
+    descriptionEn: "Monochrome reduction of solitary architecture to pure geometric contrasts, chiaroscuro gradations, and timeless form.",
+    descriptionFa: "\u062a\u0642\u0644\u06cc\u0644 \u062a\u06a9\u200c\u0631\u0646\u06af \u0645\u0639\u0645\u0627\u0631\u06cc \u062a\u06a9\u200c\u0628\u0646\u0627 \u0628\u0647 \u06a9\u0646\u062a\u0631\u0627\u0633\u062a\u200c\u0647\u0627\u06cc \u062e\u0627\u0644\u0635 \u0647\u0646\u062f\u0633\u06cc\u060c \u062f\u0631\u062c\u0627\u062a \u0646\u0648\u0631 \u0648 \u0633\u0627\u06cc\u0647 \u0648 \u062c\u0627\u0648\u062f\u0627\u0646\u06af\u06cc \u0641\u0631\u0645.",
+previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'bw-solitaire-01',
@@ -1109,7 +1160,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['IPA 2025 HM'],
     link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+        descriptionDe: "Die originale Pr\u00e4mierungsserie der International Photography Awards 2025: Der Solit\u00e4r im lebendigen Lichtdialog des urbanen Fr\u00fchlings.",
+    descriptionEn: "The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue.",
+    descriptionFa: "\u0645\u062c\u0645\u0648\u0639\u0647 \u0628\u0631\u06af\u0632\u06cc\u062f\u0647 \u0627\u0648\u0644\u06cc\u0647 \u062f\u0631 \u062c\u0648\u0627\u06cc\u0632 \u062c\u0647\u0627\u0646\u06cc \u0639\u06a9\u0627\u0633\u06cc \u06f2\u06f0\u06f2\u06f5: \u062a\u06a9\u200c\u0628\u0646\u0627 \u062f\u0631 \u06af\u0641\u062a\u200c\u0648\u06af\u0648\u06cc \u067e\u0648\u06cc\u0627\u06cc \u0646\u0648\u0631 \u0631\u0648\u0632 \u0634\u0647\u0631\u06cc.",
+previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
     galleryPhotos: [
       {
         id: 'solitaire-ipa-2025-01',
@@ -1133,7 +1187,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsFa: 'ND Awards 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['ND Awards 2025 HM'],
     link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+        descriptionDe: "Kompakte kuratierte Fassung der Solit\u00e4r-Serie, fokussiert auf die pr\u00e4gnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum.",
+    descriptionEn: "Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky.",
+    descriptionFa: "\u0646\u0633\u062e\u0647 \u06af\u0632\u06cc\u062f\u0647 \u0648 \u0641\u0634\u0631\u062f\u0647 \u0645\u062c\u0645\u0648\u0639\u0647 \u062a\u06a9\u200c\u0628\u0646\u0627 \u0628\u0627 \u062a\u0645\u0631\u06a9\u0632 \u0628\u0631 \u0628\u0627\u0631\u0632\u062a\u0631\u06cc\u0646 \u06a9\u0634\u0634\u200c\u0647\u0627\u06cc \u0641\u0631\u0645\u06cc \u0645\u06cc\u0627\u0646 \u0634\u06cc\u0634\u0647\u060c \u0641\u0648\u0644\u0627\u062f \u0648 \u0622\u0633\u0645\u0627\u0646.",
+previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
     galleryPhotos: [
       {
         id: 'solitaire-short-version-01',
@@ -1256,7 +1313,10 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی · LICC 2025 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS', 'LICC 2025 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25',
-    previewImage: '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
+        descriptionDe: "In den Reflexionen von Regenlachen verschmelzen Realit\u00e4t und Illusion, Stillstand und Bewegung. Die Uhr als universelles Symbol der Zeit wirkt entr\u00fcckt und im Zwischenraum von Raum und Zeit schwebend.",
+    descriptionEn: "In the reflections of puddles, reality and illusion merge\u2014stillness intertwines with movement. The clock, symbol of time, appears estranged and suspended within its own in-between space.",
+    descriptionFa: "\u062f\u0631 \u0628\u0627\u0632\u062a\u0627\u0628 \u0686\u0627\u0644\u0647\u200c\u0647\u0627\u06cc \u0628\u0627\u0631\u0627\u0646\u060c \u0648\u0627\u0642\u0639\u06cc\u062a \u0648 \u062a\u0648\u0647\u0645\u060c \u0633\u06a9\u0648\u0646 \u0648 \u062d\u0631\u06a9\u062a \u0628\u0647 \u0647\u0645 \u0645\u06cc\u200c\u0622\u0645\u06cc\u0632\u0646\u062f \u0648 \u0633\u0627\u0639\u062a \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0646\u0645\u0627\u062f \u0632\u0645\u0627\u0646\u060c \u062f\u0631 \u0645\u06cc\u0627\u0646 \u0641\u0636\u0627 \u0648 \u0632\u0645\u0627\u0646 \u0645\u0639\u0644\u0642 \u0645\u06cc\u200c\u0645\u0627\u0646\u062f.",
+previewImage: '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'between-space-time-01',
@@ -1296,7 +1356,10 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
     link: 'https://licc.uk/',
-    previewImage: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+        descriptionDe: "\u201eSelig sind die Trauernden\u201c: Eine poetische, meditative Bildkomposition, die der stillen W\u00fcrde des Gedenkens Raum gibt und menschliche Verwundbarkeit mit Trost und innerer Einkehr verbindet.",
+    descriptionEn: "\u201cBlessed Are Those Who Mourn\u201d: A poetic, meditative composition honoring the quiet dignity of grief, uniting human vulnerability with solace and spiritual contemplation.",
+    descriptionFa: "\u00ab\u062e\u0648\u0634\u0627 \u0628\u0647 \u062d\u0627\u0644 \u0633\u0648\u06af\u0648\u0627\u0631\u0627\u0646\u00bb: \u062a\u0631\u06a9\u06cc\u0628\u06cc \u0634\u0627\u0639\u0631\u0627\u0646\u0647 \u0648 \u0698\u0631\u0641\u200c\u0627\u0646\u062f\u06cc\u0634\u0627\u0646\u0647 \u06a9\u0647 \u0628\u0647 \u0648\u0642\u0627\u0631 \u062e\u0627\u0645\u0648\u0634 \u0633\u0648\u06af\u0648\u0627\u0631\u06cc \u0627\u0631\u062c \u0646\u0647\u0627\u062f\u0647 \u0648 \u0634\u06a9\u0646\u0646\u062f\u06af\u06cc \u0627\u0646\u0633\u0627\u0646 \u0631\u0627 \u0628\u0627 \u0622\u0631\u0627\u0645\u0634 \u0648 \u062a\u0641\u06a9\u0631 \u067e\u06cc\u0648\u0646\u062f \u0645\u06cc\u200c\u0632\u0646\u062f.",
+previewImage: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'blessed-mourn-01',
@@ -1323,7 +1386,10 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsFa: 'BIFA 2026 — تقدیر ویژه (بخش ادیتوریال / مقاله تصویری)',
     badgeNames: ['BIFA 2026 HM'],
     link: 'https://budapestfotoawards.com/',
-    previewImage: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+        descriptionDe: "Eine couragierte visuelle Dokumentation gegen Ausgrenzung, Queerfeindlichkeit und patriarchale Unterdr\u00fcckung. Die Bilder treten f\u00fcr universelle Menschenw\u00fcrde, Vielfalt und den Schutz queeren Lebens im urbanen Raum ein. Ausgezeichnet mit einer Honorable Mention bei den Budapest International Foto Awards (BIFA 2026).",
+    descriptionEn: "A courageous photographic documentation against marginalization, queerphobia, and patriarchal oppression, advocating for universal dignity, diversity, and the protection of queer lives in urban spaces (BIFA 2026 Honorable Mention).",
+    descriptionFa: "\u0645\u0633\u062a\u0646\u062f\u0646\u06af\u0627\u0631\u06cc \u0634\u062c\u0627\u0639\u0627\u0646\u0647 \u0639\u0644\u06cc\u0647 \u0637\u0631\u062f\u060c \u062a\u0628\u0639\u06cc\u0636 \u0648 \u0633\u062a\u0645 \u067e\u062f\u0631\u0633\u0627\u0644\u0627\u0631\u0627\u0646\u0647\u060c \u062f\u0631 \u062f\u0641\u0627\u0639 \u0627\u0632 \u06a9\u0631\u0627\u0645\u062a \u062c\u0647\u0627\u0646\u06cc\u060c \u06af\u0648\u0646\u0627\u06af\u0648\u0646\u06cc \u0648 \u062d\u0642\u0648\u0642 \u0627\u0642\u0644\u06cc\u062a\u200c\u0647\u0627 \u062f\u0631 \u0641\u0636\u0627\u06cc \u0634\u0647\u0631\u06cc (\u062a\u0642\u062f\u06cc\u0631 \u0648\u06cc\u0698\u0647 BIFA \u06f2\u06f0\u06f2\u06f6).",
+previewImage: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'attack-on-queer-01',
@@ -1347,7 +1413,10 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش ویژه)',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26',
-    previewImage: '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+        descriptionDe: "Drei Pfeiler stehen f\u00fcr Leben, Liebe und Freiheit \u2013 f\u00fcr die Menschen im Iran und im Exil. Sie erheben sich aus der Dunkelheit, jeder f\u00fcr sich und doch unaufl\u00f6slich verbunden. Das seitlich einfallende Licht symbolisiert die unbesiegbare Hoffnung.",
+    descriptionEn: "Three pillars stand for life, love, and freedom\u2014for people in Iran and in exile. They rise from darkness, distinct yet inextricably linked; incoming side light embodies invincible hope.",
+    descriptionFa: "\u0633\u0647 \u0633\u062a\u0648\u0646 \u0646\u0645\u0627\u062f \u0632\u0646\u062f\u06af\u06cc\u060c \u0639\u0634\u0642 \u0648 \u0622\u0632\u0627\u062f\u06cc\u200c\u0627\u0646\u062f \u2013 \u0628\u0631\u0627\u06cc \u0645\u0631\u062f\u0645 \u062f\u0631 \u0627\u06cc\u0631\u0627\u0646 \u0648 \u062f\u0631 \u062a\u0628\u0639\u06cc\u062f. \u0622\u0646\u200c\u0647\u0627 \u0627\u0632 \u062f\u0644 \u062a\u0627\u0631\u06cc\u06a9\u06cc \u0628\u0631\u0645\u06cc\u200c\u062e\u06cc\u0632\u0646\u062f \u0648 \u0646\u0648\u0631 \u062c\u0627\u0646\u0628\u06cc \u062a\u062c\u0633\u0645 \u0627\u0645\u06cc\u062f \u0634\u06a9\u0633\u062a\u200c\u0646\u0627\u067e\u0630\u06cc\u0631 \u0627\u0633\u062a.",
+previewImage: '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'iran-freedom-01',
@@ -1387,7 +1456,10 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
     badgeNames: ['URBAN Photo Awards 2026 Selected'],
     link: 'https://www.urbanphotoawards.com/',
-    previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
+        descriptionDe: "In-Between Spaces (Area 14): Ausgestellt bei den Trieste Photo Days 2026 (Mercato Coperto, Triest). Fotografische Erkundung von urbanen Schwellenr\u00e4umen, Passagen und Zwischenzonen, in denen die Grenzen zwischen Innen und Au\u00dfen verschwimmen.",
+    descriptionEn: "In-Between Spaces (Area 14): Exhibited at Trieste Photo Days 2026 (Mercato Coperto, Trieste). Photographic inquiry into urban liminal zones, transitions, and passages where boundaries dissolve.",
+    descriptionFa: "\u0641\u0636\u0627\u0647\u0627\u06cc \u0645\u06cc\u0627\u0646\u06cc (\u0645\u0646\u0637\u0642\u0647 \u06f1\u06f4): \u0646\u0645\u0627\u06cc\u0634 \u062f\u0631 \u062c\u0634\u0646\u0648\u0627\u0631\u0647 \u0639\u06a9\u0633 \u062a\u0631\u06cc\u0633\u062a\u0647 \u06f2\u06f0\u06f2\u06f6 \u062f\u0631 \u0627\u06cc\u062a\u0627\u0644\u06cc\u0627\u061b \u06a9\u0627\u0648\u0634 \u0639\u06a9\u0627\u0633\u0627\u0646\u0647 \u062f\u0631 \u0641\u0636\u0627\u0647\u0627\u06cc \u0622\u0633\u062a\u0627\u0646\u0647\u200c\u0627\u06cc \u0648 \u06af\u0630\u0631\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u0634\u0647\u0631\u06cc.",
+previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
     galleryPhotos: [
       {
         id: 'in-between-spaces-01',
@@ -1411,7 +1483,10 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
     link: 'https://licc.uk/',
-    previewImage: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
+        descriptionDe: "Die W\u00fcrde des Tieres ist unantastbar: Eine eindringliche gesellschaftsdokumentarische Fotoserie, die das Verh\u00e4ltnis zwischen Mensch, Tier und Natur im Spannungsfeld von Ausbeutung, Respekt und Verantwortung beleuchtet. Ausgezeichnet bei der London International Creative Competition (LICC 2025).",
+    descriptionEn: "The Dignity of the Animal is Inviolable: A poignant documentary series examining human-animal relations between exploitation, profound respect, and ethical duty (LICC 2025 Official Selection).",
+    descriptionFa: "\u06a9\u0631\u0627\u0645\u062a \u062d\u06cc\u0648\u0627\u0646 \u062a\u0639\u0631\u0636\u200c\u0646\u0627\u067e\u0630\u06cc\u0631 \u0627\u0633\u062a: \u0645\u062c\u0645\u0648\u0639\u0647\u200c\u0627\u06cc \u0627\u062b\u0631\u06af\u0630\u0627\u0631 \u062f\u0631 \u0628\u0627\u0628 \u0631\u0627\u0628\u0637\u0647 \u0627\u0646\u0633\u0627\u0646 \u0648 \u062d\u06cc\u0648\u0627\u0646 \u062f\u0631 \u0645\u06cc\u0627\u0646 \u0628\u0647\u0631\u0647\u200c\u06a9\u0634\u06cc\u060c \u0627\u062d\u062a\u0631\u0627\u0645 \u0648 \u0645\u0633\u0626\u0648\u0644\u06cc\u062a \u0627\u062e\u0644\u0627\u0642\u06cc (\u0645\u0646\u062a\u062e\u0628 LICC \u06f2\u06f0\u06f2\u06f5 \u0644\u0646\u062f\u0646).",
+previewImage: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'dignity-animal-01',
@@ -1454,7 +1529,10 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش پرتره و سلف پرتره)',
     badgeNames: ['IPA 2026 OS'],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26',
-    previewImage: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
+        descriptionDe: "Vom Kampf im Ring zum Blitzlicht im Bild: Ein kraftvolles Selbstportr\u00e4t, das den \u00dcbergang von zehnfacher sportlicher Weltmeisterschaft zur kompromisslosen photographischen Disziplin und Pr\u00e4zision visualisiert. Ausgezeichnet als Official Selection bei den International Photography Awards (IPA 2026).",
+    descriptionEn: "From Fighting in the Ring to Lightning in the Frame: A commanding self-portrait visualizing the transition from ten-time world champion kickboxer to uncompromising photographic precision (IPA 2026 Official Selection).",
+    descriptionFa: "\u0627\u0632 \u0645\u0628\u0627\u0631\u0632\u0647 \u062f\u0631 \u0631\u06cc\u0646\u06af \u062a\u0627 \u062f\u0631\u062e\u0634\u0634 \u062f\u0631 \u0642\u0627\u0628: \u062e\u0648\u062f\u0646\u06af\u0627\u0631\u0647\u200c\u0627\u06cc \u0642\u062f\u0631\u062a\u0645\u0646\u062f \u06a9\u0647 \u06af\u0630\u0631 \u0627\u0632 \u06f1\u06f0 \u0639\u0646\u0648\u0627\u0646 \u0642\u0647\u0631\u0645\u0627\u0646\u06cc \u062c\u0647\u0627\u0646 \u0628\u0647 \u062f\u0642\u062a \u0648 \u0627\u0646\u0636\u0628\u0627\u0637 \u0633\u0627\u0632\u0634\u200c\u0646\u0627\u067e\u0630\u06cc\u0631 \u0639\u06a9\u0627\u0633\u06cc \u0631\u0627 \u0628\u0647 \u062a\u0635\u0648\u06cc\u0631 \u0645\u06cc\u200c\u06a9\u0634\u062f (\u0645\u0646\u062a\u062e\u0628 \u0631\u0633\u0645\u06cc IPA \u06f2\u06f0\u06f2\u06f6).",
+previewImage: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
     galleryPhotos: [
       {
         id: 'kickboxing-portrait-01',
@@ -1806,6 +1884,24 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'View MagCloud Issue →',
     linkTextFa: 'مشاهده در مگ‌کلود ←',
     type: 'book'
+  },
+  {
+    id: 'mleuv-newsletter-2025',
+    titleDe: 'Ministerium für Umwelt Brandenburg: Titelfoto MLEUV-Newsletter',
+    titleEn: 'Ministry for Environment Brandenburg: Newsletter Cover Feature',
+    titleFa: 'تصویر روی جلد خبرنامه رسمی وزارت محیط زیست براندنبورگ',
+    subtitleDe: 'Ausgabe Juli 2025 · Klatschmohn vor zeitgenössischer Architektur',
+    subtitleEn: 'July 2025 Issue · Poppies in dialogue with contemporary architecture',
+    subtitleFa: 'نسخه ژوئیه ۲۰۲۵ · شقایق‌های سرخ در تضاد با معماری مدرن',
+    publisher: 'Ministerium für Landwirtschaft, Umwelt und Klimaschutz Brandenburg',
+    detailsDe: 'Schahrsad Shahmirzadis Fotografie von leuchtendem Mohn vor moderner Architektur erschien als Titelbild der offiziellen Publikation des Ministeriums in Potsdam.',
+    detailsEn: 'Schahrsad Shahmirzadi’s photograph of radiant poppies before modern architecture was selected as the cover photo of the official ministry publication.',
+    detailsFa: 'انتشار عکس شهزاد شاهمیرزادی به عنوان تصویر شاخص روی جلد نشریه رسمی وزارت محیط زیست در پوتسدام.',
+    link: 'https://schahrsad-shahmirzadi.com/',
+    linkTextDe: 'Offizielle Ministeriumspublikation →',
+    linkTextEn: 'Official Ministry Publication →',
+    linkTextFa: 'انتشارات رسمی وزارتخانه ←',
+    type: 'ebook'
   }
 ];
 
@@ -1823,9 +1919,12 @@ function furtherWorkToSeries(
     subtitleDe: `${work.category} (${work.galleryPhotos?.length || 1} Werke)`,
     subtitleEn: `${work.category} (${work.galleryPhotos?.length || 1} Works)`,
     subtitleFa: `${work.categoryFa || work.category} (${work.galleryPhotos?.length || 1} اثر)`,
-    descriptionDe: work.awardsDe,
-    descriptionEn: work.awardsEn,
-    descriptionFa: work.awardsFa,
+    descriptionDe: work.descriptionDe || work.awardsDe,
+    descriptionEn: work.descriptionEn || work.awardsEn,
+    descriptionFa: work.descriptionFa || work.awardsFa,
+    personalNoteDe: work.personalNoteDe,
+    personalNoteEn: work.personalNoteEn,
+    personalNoteFa: work.personalNoteFa,
     coverImage: work.previewImage || (work.galleryPhotos && work.galleryPhotos[0]?.src) || '',
     photos: work.galleryPhotos || [],
     badges: (work.badgeNames || []).map((name, idx) => ({

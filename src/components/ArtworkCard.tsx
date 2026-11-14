@@ -184,7 +184,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </p>
           </div>
 
-          {(series.personalNoteDe || series.personalNoteFa) && (
+          {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn) && (
             <div className="p-4 bg-white rounded border border-stone-200 text-xs sm:text-sm text-stone-700 italic font-serif">
               {currentLang === 'de'
                 ? series.personalNoteDe

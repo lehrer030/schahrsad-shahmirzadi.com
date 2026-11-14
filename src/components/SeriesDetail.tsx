@@ -151,7 +151,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 : series.descriptionEn}
             </p>
 
-            {(series.personalNoteDe || series.personalNoteFa) && (
+            {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn) && (
               <div className="pt-3 border-t border-stone-100 text-sm text-stone-700 italic font-serif">
                 {currentLang === 'de'
                   ? series.personalNoteDe
