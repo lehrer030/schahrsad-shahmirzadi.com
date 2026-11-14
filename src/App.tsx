@@ -272,17 +272,19 @@ export default function App() {
   };
 
   // One-Pager Smooth Scroll Action
-  const handleSelectCategory = (cat: NavigationCategory) => {
+  const handleSelectCategory = (cat: NavigationCategory, skipScroll = false) => {
     setCurrentCategory(cat);
     setSelectedSeriesId(null);
 
     // Smooth scroll down to the targeted section
-    setTimeout(() => {
-      const el = document.getElementById(cat);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 50);
+    if (!skipScroll) {
+      setTimeout(() => {
+        const el = document.getElementById(cat);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 50);
+    }
   };
 
   const handleOpenLightbox = (photos: PhotoItem[], index: number) => {

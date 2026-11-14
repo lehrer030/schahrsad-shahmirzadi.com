@@ -14,7 +14,7 @@ export type NavigationCategory =
 
 interface NavbarProps {
   currentCategory: NavigationCategory;
-  onSelectCategory: (catId: NavigationCategory) => void;
+  onSelectCategory: (catId: NavigationCategory, skipScroll?: boolean) => void;
   currentLang: Language;
   onToggleLang: (lang: Language) => void;
   onGoHome: () => void;
@@ -179,32 +179,31 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
   }
 ];
 
-export interface MobileSectionItem {
-  id: string;
-  num: string;
-  shortDe: string;
-  shortEn: string;
-  shortFa: string;
-  targetId: string;
+export interface ScrollCheckpoint {
+  menuId: string;
+  domId: string;
 }
 
-export const MOBILE_SECTIONS: MobileSectionItem[] = [
-  { id: 'architecture', num: '01', shortDe: 'Architektur · Werke', shortEn: 'Architecture · Works', shortFa: 'آثار معماری', targetId: 'architecture' },
-  { id: 'fine-art', num: '02', shortDe: 'Fine Art · Serien', shortEn: 'Fine Art · Series', shortFa: 'هنرهای زیبا', targetId: 'fine-art' },
-  { id: 'social-environmental', num: '03', shortDe: 'Gesellschaft & Umwelt', shortEn: 'Social & Environment', shortFa: 'اجتماع و محیط‌زیست', targetId: 'social-environmental' },
-  { id: 'portraits', num: '04', shortDe: 'Porträts & Selbstporträts', shortEn: 'Portraits & Self-Portraits', shortFa: 'پرتره‌ها', targetId: 'portraits' },
-  { id: 'kickboxing', num: '05', shortDe: 'Kickbox-Weltmeisterin (10×)', shortEn: 'World Champion Kickboxing', shortFa: 'قهرمانی کیک‌بوکسینگ', targetId: 'kickboxing' },
-  { id: 'education', num: '06', shortDe: 'Akademische Bildung', shortEn: 'Academic Education', shortFa: 'تحصیلات دانشگاهی', targetId: 'education' },
-  { id: 'engagement', num: '07', shortDe: 'Gesellschaftliches Engagement', shortEn: 'Advocacy & Human Rights', shortFa: 'فعالیت‌های اجتماعی و صلح', targetId: 'engagement' },
-  { id: 'press-features', num: '08', shortDe: 'Presse & Medien', shortEn: 'Press & Media', shortFa: 'مطبوعات و رسانه‌ها', targetId: 'press-features' },
-  { id: 'exhibitions', num: '09', shortDe: 'Ausstellungen 2026', shortEn: 'Exhibitions 2026', shortFa: 'نمایشگاه‌ها', targetId: 'exhibitions' },
-  { id: 'publications', num: '10', shortDe: 'Publikationen & Bücher', shortEn: 'Publications & Books', shortFa: 'کتاب‌ها و نشریات', targetId: 'publications' },
-  { id: 'award-references', num: '11', shortDe: 'Internationale Awards', shortEn: 'International Awards', shortFa: 'جوایز بین‌المللی', targetId: 'award-references' },
-  { id: 'gallery', num: '12', shortDe: 'Galerie & Impressionen', shortEn: 'Gallery & Impressions', shortFa: 'گالری و ویدیوها', targetId: 'gallery' }
+export const SCROLL_CHECKPOINTS: ScrollCheckpoint[] = [
+  { menuId: 'works', domId: 'architecture' },
+  { menuId: 'works', domId: 'fine-art' },
+  { menuId: 'works', domId: 'social-environmental' },
+  { menuId: 'works', domId: 'portraits' },
+  { menuId: 'kickboxing', domId: 'kickboxing' },
+  { menuId: 'biography', domId: 'biography' },
+  { menuId: 'education', domId: 'education' },
+  { menuId: 'engagement', domId: 'engagement' },
+  { menuId: 'press', domId: 'press' },
+  { menuId: 'press', domId: 'press-features' },
+  { menuId: 'exhibitions', domId: 'exhibitions' },
+  { menuId: 'publications', domId: 'publications' },
+  { menuId: 'award-references', domId: 'award-references' },
+  { menuId: 'award-references', domId: 'photoart' },
+  { menuId: 'gallery', domId: 'gallery' },
 ];
 
 export const Navbar: React.FC<NavbarProps> = ({
-  currentCategory,
+  currentCategory: _currentCategory,
   onSelectCategory,
   currentLang,
   onToggleLang,
@@ -212,23 +211,39 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenContact
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeSectionId, setActiveSectionId] = useState<string>('architecture');
+  const [activeMenuId, setActiveMenuId] = useState<string>('works');
 
-  // Active section tracking on scroll for mobile & tablet breadcrumb indicator
+  // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPos = window.scrollY + 180;
-      for (let i = MOBILE_SECTIONS.length - 1; i >= 0; i--) {
-        const item = MOBILE_SECTIONS[i];
-        const el = document.getElementById(item.targetId);
+      // Wenn das Seitenende erreicht ist, Galerie aktivieren
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+        setActiveMenuId('gallery');
+        return;
+      }
+
+      // Alle vorhandenen Checkpoints mit ihrer tatsächlichen Seitenposition ermitteln
+      const points: { menuId: string; top: number }[] = [];
+      for (const cp of SCROLL_CHECKPOINTS) {
+        const el = document.getElementById(cp.domId);
         if (el) {
           const top = el.getBoundingClientRect().top + window.scrollY;
-          if (scrollPos >= top) {
-            setActiveSectionId(item.id);
-            break;
-          }
+          points.push({ menuId: cp.menuId, top });
         }
       }
+
+      // Nach Y-Position aufsteigend sortieren
+      points.sort((a, b) => a.top - b.top);
+
+      const scrollPos = window.scrollY + 200;
+      let foundMenuId = 'works';
+      for (let i = points.length - 1; i >= 0; i--) {
+        if (scrollPos >= points[i].top) {
+          foundMenuId = points[i].menuId;
+          break;
+        }
+      }
+      setActiveMenuId(foundMenuId);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -236,7 +251,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const currentSection = MOBILE_SECTIONS.find(s => s.id === activeSectionId) || MOBILE_SECTIONS[0];
+  const currentSection = ORIGINAL_11_MENU_ITEMS.find(s => s.id === activeMenuId) || ORIGINAL_11_MENU_ITEMS[0];
 
   const handleNavigateToItem = (item: OriginalMenuItem) => {
     setMobileMenuOpen(false);
@@ -247,15 +262,17 @@ export const Navbar: React.FC<NavbarProps> = ({
     }
 
     if (item.category) {
-      onSelectCategory(item.category);
+      onSelectCategory(item.category, true);
     }
+
+    setActiveMenuId(item.id);
 
     setTimeout(() => {
       const el = document.getElementById(item.targetId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 60);
+    }, 40);
   };
 
   const getItemLabel = (item: OriginalMenuItem) => {
@@ -368,7 +385,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Row 1: Items 01 to 06 */}
           <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
             {ORIGINAL_11_MENU_ITEMS.slice(0, 6).map((item) => {
-              const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
+              const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
                   key={item.id}
@@ -400,7 +417,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Row 2: Items 07 to 11 */}
           <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
             {ORIGINAL_11_MENU_ITEMS.slice(6).map((item) => {
-              const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
+              const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
                   key={item.id}
@@ -519,7 +536,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
             {ORIGINAL_11_MENU_ITEMS.map((item) => {
-              const isActive = activeSectionId === item.targetId || (item.category && currentCategory === item.category);
+              const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
                   key={item.id}
