@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { INTRO_CONTENT, type Language, type PhotoItem } from '../data/photographyData';
-import { ChevronDown, ChevronUp, Feather, Maximize2 } from 'lucide-react';
+import { ChevronDown, ChevronUp, Feather, Maximize2, ExternalLink } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 
 interface HeaderIntroProps {
@@ -88,10 +88,31 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
                 {/* Attribution Plaque */}
                 <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between gap-2">
-                  <div>
-                    <h3 className="font-serif text-stone-900 font-bold text-sm leading-tight">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
-                    </h3>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <h3 className="font-serif text-stone-900 font-bold text-sm leading-tight">
+                        <a
+                          href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-amber-800 hover:underline transition-colors"
+                          title="Wikipedia: Schahrsad Shahmirzadi"
+                        >
+                          {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                        </a>
+                      </h3>
+                      <a
+                        href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-200 text-[10px] font-mono transition-colors shadow-2xs group/wiki"
+                        title={currentLang === 'fa' ? 'مدخل ویکی‌پدیا' : 'Wikipedia-Eintrag ansehen'}
+                      >
+                        <span className="font-serif font-bold text-[10px]">W</span>
+                        <span>Wikipedia</span>
+                        <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/wiki:opacity-100" />
+                      </a>
+                    </div>
                     <p className="text-[11px] text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'عکاسی و هنرهای تجسمی' : 'Photographie & Bildende Kunst'}
                     </p>
@@ -186,10 +207,31 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
                 {/* Museum Attribution Plaque (Below Image) */}
                 <div className="mt-3.5 pt-3 border-t border-stone-100 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <div>
-                    <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
-                    </h3>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
+                        <a
+                          href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-amber-800 hover:underline transition-colors"
+                          title="Wikipedia: Schahrsad Shahmirzadi"
+                        >
+                          {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                        </a>
+                      </h3>
+                      <a
+                        href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-300 text-[10px] font-mono font-medium transition-colors shadow-2xs group/wiki"
+                        title={currentLang === 'fa' ? 'مشاهده مدخل در ویکی‌پدیا' : 'Offizieller Wikipedia-Artikel'}
+                      >
+                        <span className="font-serif font-black text-[11px]">W</span>
+                        <span>Wikipedia</span>
+                        <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/wiki:opacity-100" />
+                      </a>
+                    </div>
                     <p className="text-xs text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'هنرمند، عکاس و پژوهشگر' : 'Photographie & Bildende Kunst'}
                     </p>

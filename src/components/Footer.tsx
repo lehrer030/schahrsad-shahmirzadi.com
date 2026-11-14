@@ -99,12 +99,25 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono">
               {currentLang === 'de'
-                ? 'Offizielle Domains'
+                ? 'Offizielle Domains & Profile'
                 : currentLang === 'fa'
-                ? 'دامنه‌های رسمی'
-                : 'Official Domains'}
+                ? 'دامنه‌ها و نمایه‌ها'
+                : 'Official Domains & Profiles'}
             </span>
             <ul className="space-y-1.5 text-[11px]">
+              <li>
+                <a
+                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-700 font-medium"
+                  title="Wikipedia: Schahrsad Shahmirzadi"
+                >
+                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W</span>
+                  <span>Wikipedia ({currentLang === 'fa' ? 'زندگی‌نامه' : currentLang === 'en' ? 'Biography' : 'Biografie'})</span>
+                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                </a>
+              </li>
               <li>
                 <a
                   href="https://schahrsad-shahmirzadi.com/"

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Globe, Menu, X, ChevronDown, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon } from 'lucide-react';
+import { Globe, Menu, X, ChevronDown, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 export type NavigationCategory =
@@ -205,28 +205,42 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full">
       <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-20 flex items-center justify-between gap-4">
         
-        {/* Brand / Artist Logo */}
-        <button
-          onClick={onGoHome}
-          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex flex-col justify-center shrink-0"
-        >
-          <div className="flex items-center space-x-2 rtl:space-x-reverse">
-            <span className="text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
-              SchirZan
-            </span>
-            <span className="text-stone-300 text-sm hidden sm:inline">|</span>
-            <span className="text-stone-600 text-xs sm:text-sm tracking-wide font-normal hidden sm:inline">
-              {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
-            </span>
-          </div>
-          <p className="text-[10px] tracking-widest uppercase text-stone-500 font-sans group-hover:text-stone-700 mt-0.5">
-            {currentLang === 'de'
-              ? 'Photographie & Kunst'
-              : currentLang === 'fa'
-              ? 'عکاسی و هنر · شیرزن'
-              : 'Photography & Art'}
-          </p>
-        </button>
+        {/* Brand / Artist Logo with Wikipedia Badge */}
+        <div className="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+          <button
+            onClick={onGoHome}
+            className="text-left rtl:text-right group focus:outline-none cursor-pointer flex flex-col justify-center shrink-0"
+          >
+            <div className="flex items-center space-x-2 rtl:space-x-reverse">
+              <span className="text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
+                SchirZan
+              </span>
+              <span className="text-stone-300 text-sm hidden sm:inline">|</span>
+              <span className="text-stone-600 text-xs sm:text-sm tracking-wide font-normal hidden sm:inline">
+                {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
+              </span>
+            </div>
+            <p className="text-[10px] tracking-widest uppercase text-stone-500 font-sans group-hover:text-stone-700 mt-0.5">
+              {currentLang === 'de'
+                ? 'Photographie & Kunst'
+                : currentLang === 'fa'
+                ? 'عکاسی و هنر · شیرزن'
+                : 'Photography & Art'}
+            </p>
+          </button>
+
+          <a
+            href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-stone-100 hover:bg-stone-900 text-stone-600 hover:text-white border border-stone-200 text-[10px] font-mono transition-colors shadow-2xs group/wiki"
+            title="Wikipedia-Artikel: Schahrsad Shahmirzadi"
+          >
+            <span className="font-serif font-black text-[10px] group-hover/wiki:text-white">W</span>
+            <span className="hidden xl:inline">Wikipedia</span>
+            <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/wiki:opacity-100" />
+          </a>
+        </div>
 
         {/* Desktop Category Navigation */}
         <nav className="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">

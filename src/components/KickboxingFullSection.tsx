@@ -195,13 +195,34 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-              {currentLang === 'fa'
-                ? 'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
-                : currentLang === 'en'
-                ? 'Schahrsad Shahmirzadi (SchirZan) – 10-Time Kickboxing World Champion'
-                : 'Schahrsad Shahmirzadi (SchirZan) – 10-fache Kickbox-Weltmeisterin'}
-            </h2>
+            <div className="flex flex-wrap items-center gap-2.5">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                <a
+                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-800 hover:underline transition-colors"
+                  title="Wikipedia: Schahrsad Shahmirzadi"
+                >
+                  {currentLang === 'fa'
+                    ? 'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
+                    : currentLang === 'en'
+                    ? 'Schahrsad Shahmirzadi (SchirZan) – 10-Time Kickboxing World Champion'
+                    : 'Schahrsad Shahmirzadi (SchirZan) – 10-fache Kickbox-Weltmeisterin'}
+                </a>
+              </h2>
+              <a
+                href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-300 text-xs font-mono font-medium transition-colors shadow-2xs group/wiki"
+                title={currentLang === 'fa' ? 'مشاهده مدخل در ویکی‌پدیا' : 'Offizieller Wikipedia-Artikel'}
+              >
+                <span className="font-serif font-black text-xs">W</span>
+                <span>Wikipedia</span>
+                <ExternalLink className="w-3 h-3 opacity-60 group-hover/wiki:opacity-100" />
+              </a>
+            </div>
 
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
               {currentLang === 'fa'
