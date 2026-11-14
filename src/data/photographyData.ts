@@ -1564,62 +1564,62 @@ export const ACADEMIC_MILESTONES: EducationMilestone[] = [
   {
     period: 'bis 2004',
     fieldDe: 'Abitur',
-    fieldEn: 'Abitur / High School Diploma',
-    fieldFa: 'دیپلم متوسطه (Abitur)',
+    fieldEn: 'Abitur / High School Graduation',
+    fieldFa: 'دیپلم دبیرستان (Abitur)',
     institutionDe: 'Ev. Gymnasium zum Grauen Kloster Berlin',
-    institutionEn: 'Gymnasium zum Grauen Kloster Berlin',
-    institutionFa: 'کالج مشهور گرائن کلوستر برلین',
-    degreeDe: 'Erfolgreich bestanden',
-    degreeEn: 'Successfully graduated',
-    degreeFa: 'فارغ‌التحصیلی با موفقیت'
+    institutionEn: 'Evangelisches Gymnasium zum Grauen Kloster Berlin',
+    institutionFa: 'کالج مشهور گراوئن کلوستر برلین',
+    degreeDe: 'Abitur erfolgreich bestanden',
+    degreeEn: 'Successfully graduated (Abitur)',
+    degreeFa: 'اخذ مدرک دیپلم متوسطه با موفقیت'
   },
   {
-    period: '2005–2009',
+    period: '2005–2009 (bzw. 2010)',
     fieldDe: 'Rechtswissenschaften',
     fieldEn: 'Law / Jurisprudence',
-    fieldFa: 'حقوق و علوم قضایی',
+    fieldFa: 'رشته حقوق و علوم قضایی',
     institutionDe: 'Freie Universität Berlin (FU Berlin)',
     institutionEn: 'Free University of Berlin (FU Berlin)',
     institutionFa: 'دانشگاه آزاد برلین (FU Berlin)',
-    degreeDe: 'Grundstudium erfolgreich abgeschlossen',
-    degreeEn: 'Undergraduate legal studies completed',
-    degreeFa: 'پایان دوره مقدماتی حقوق'
+    degreeDe: 'Grundstudium erfolgreich abgeschlossen, Wechsel aufgrund privater und leistungssportlicher Gründe',
+    degreeEn: 'Undergraduate legal studies completed, transition due to elite sports career',
+    degreeFa: 'اتمام موفقیت‌آمیز دوره پایه حقوق و انتقال به دلیل تعهدات ورزش حرفه‌ای'
+  },
+  {
+    period: '2009–2010',
+    fieldDe: 'Polizeiausbildung',
+    fieldEn: 'Police Academy Training',
+    fieldFa: 'دوره آموزش حرفه‌ای پلیس',
+    institutionDe: 'Polizei Berlin',
+    institutionEn: 'Berlin Police Department',
+    institutionFa: 'پلیس برلین',
+    degreeDe: 'Nach einjähriger Polizeiausbildung nach Bestenauslese: Wechsel zum Polizeistudium',
+    degreeEn: 'After 1-year training selected on merit: transfer to police degree studies',
+    degreeFa: 'پس از یک سال آموزش بر اساس گزینش نخبگان: ورود به دوره عالی تحصیلات پلیس'
   },
   {
     period: '2010–2013',
     fieldDe: 'Diplomverwaltungswirtin – Polizeivollzugsdienst',
     fieldEn: 'Diploma in Public Administration (Police Service)',
-    fieldFa: 'دانشنامه مدیریت خدمات دولتی و پلیسی',
+    fieldFa: 'دانشنامه مدیریت خدمات دولتی – نیروی انتظامی',
     institutionDe: 'Hochschule für Wirtschaft und Recht Berlin (HWR Berlin)',
     institutionEn: 'Berlin School of Economics and Law (HWR Berlin)',
-    institutionFa: 'دانشگاه اقتصاد و حقوق برلین',
-    degreeDe: 'Diplomverwaltungswirtin (FH)',
-    degreeEn: 'Diplomverwaltungswirtin (FH)',
-    degreeFa: 'کسب دانشنامه رسمی'
+    institutionFa: 'دانشگاه اقتصاد و حقوق برلین (HWR)',
+    degreeDe: 'Diplomverwaltungswirtin (Polizeivollzugsdienst) erfolgreich abgeschlossen',
+    degreeEn: 'Graduated as Diplom-Verwaltungswirtin (Police Service)',
+    degreeFa: 'اخذ دانشنامه رسمی Diplomverwaltungswirtin در خدمات پلیس با موفقیت'
   },
   {
     period: 'Seit 2024',
-    fieldDe: 'Umweltministerium & LAWA (Gewässerschutz)',
-    fieldEn: 'Ministry of Environment & LAWA (Water Conservation)',
-    fieldFa: 'وزارت محیط زیست پوتسدام و کارگروه حفاظت از آب (LAWA)',
-    institutionDe: 'Ministerium für Umwelt, Klimaschutz und Landwirtschaft Potsdam',
-    institutionEn: 'Ministry of Environment Potsdam',
-    institutionFa: 'وزارت محیط زیست ایالت براندنبورگ',
-    degreeDe: 'Referentin für Gewässerschutz & Wasserwirtschaft',
-    degreeEn: 'Officer for Water Issues and Conservation',
-    degreeFa: 'کارشناس ارشد حفاظت از منابع آب'
-  },
-  {
-    period: 'Berufsbegleitend',
-    fieldDe: 'Master of Science (M.Sc.) Applied Environmental Sciences',
-    fieldEn: 'Master of Science in Applied Environmental Sciences',
-    fieldFa: 'کارشناسی ارشد علوم محیط زیست کاربردی',
-    institutionDe: 'Universität Koblenz',
-    institutionEn: 'University of Koblenz',
-    institutionFa: 'دانشگاه کوبلنتس',
-    degreeDe: 'Masterstudium in Vertiefung',
-    degreeEn: 'Ongoing Master’s studies',
-    degreeFa: 'در حال تکمیل دوره کارشناسی ارشد'
+    fieldDe: 'Masterstudium Angewandte Umweltwissenschaften (Fernstudium)',
+    fieldEn: 'M.Sc. in Applied Environmental Sciences (Distance Learning)',
+    fieldFa: 'کارشناسی ارشد علوم کاربردی محیط زیست (آموزش مجازی)',
+    institutionDe: 'Universität Koblenz (UK) – ZFUW: Zentrum für Fernstudien und Universitäre Weiterbildung',
+    institutionEn: 'University of Koblenz – Centre for Distance Studies and Further Education (ZFUW)',
+    institutionFa: 'دانشگاه کوبلنتس – مرکز آموزش‌های مجازی و تکمیلی دانشگاهی (ZFUW)',
+    degreeDe: 'Derzeit im 4. Semester (Stand Aug. 2026)',
+    degreeEn: 'Currently in 4th Semester (as of Aug. 2026)',
+    degreeFa: 'در حال حاضر در ترم چهارم (تا اوت ۲۰۲۶)'
   }
 ];
 

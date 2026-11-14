@@ -1,6 +1,6 @@
 import React from 'react';
 import { ACADEMIC_MILESTONES, type Language } from '../data/photographyData';
-import { ExternalLink, Leaf, Sparkles, Trophy } from 'lucide-react';
+import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 
 interface ArtistVitaProps {
@@ -11,24 +11,29 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   return (
     <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
       
-      {/* 1. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION */}
-      <section id="education" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
-        <div className="border-b border-stone-100 pb-6 mb-8">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            {currentLang === 'de'
-              ? 'Akademische Laufbahn'
-              : currentLang === 'fa'
-              ? 'سوابق تحصیلی و دانشگاهی'
-              : 'Academic Background'}
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
+      {/* 1. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
+      <section id="education" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
+        
+        {/* Header & Tagline */}
+        <div className="border-b border-stone-100 pb-6 space-y-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+            <GraduationCap className="w-4 h-4 text-amber-800" />
+            <span>
+              {currentLang === 'de'
+                ? 'Akademische Laufbahn'
+                : currentLang === 'fa'
+                ? 'سوابق تحصیلی و دانشگاهی'
+                : 'Academic Background'}
+            </span>
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
               ? 'Interdisziplinärer akademischer Bildungsweg'
               : currentLang === 'fa'
               ? 'مسیر بین‌رشته‌ای آکادمیک'
               : 'Interdisciplinary Academic Education'}
           </h3>
-          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
+          <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
                 <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
@@ -37,78 +42,180 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             ) : currentLang === 'fa' ? (
               <>
                 <strong className="font-semibold text-stone-900">شهزاد شاهمیرزادی</strong>{' '}
-                دارای پیشینه‌ای چندرشته‌ای در حوزه‌های حقوق، امنیت عمومی و علوم محیط‌زیست با گرایش تخصصی مدیریت منابع آب است.
+                دارای پیشینه‌ای بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و علوم محیط زیست با گرایش تخصصی مدیریت منابع آب است.
               </>
             ) : (
               <>
                 <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
-                has an interdisciplinary academic and professional background in law, public security, and environmental sciences with a focus on water resource management.
+                possesses an interdisciplinary academic and professional background spanning law, security, and environmental sciences with a specialization in water management.
               </>
             )}
           </p>
         </div>
 
-        {/* Milestone Timeline / Table from WordPress Database */}
-        <div className="space-y-4 mb-8">
-          <div className="text-xs font-mono uppercase tracking-wider text-stone-500 font-semibold px-4 pb-2 border-b border-stone-100 hidden md:grid md:grid-cols-12 gap-4">
-            <span className="col-span-3">{currentLang === 'fa' ? 'دوره' : 'Zeitraum / Period'}</span>
-            <span className="col-span-5">{currentLang === 'fa' ? 'رشته / موسسه' : 'Studiengang / Ausbildung & Einrichtung'}</span>
-            <span className="col-span-4 text-right rtl:text-left">{currentLang === 'fa' ? 'مدرک / وضعیت' : 'Abschluss / Stand'}</span>
+        {/* Official Campus Image: Universität Koblenz (ZFUW) */}
+        <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] max-h-[380px] w-full overflow-hidden bg-stone-100">
+            <img
+              src={resolveAsset('/images/2025_08_uni-koblenz.webp')}
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.src.endsWith('.jpg')) {
+                  img.src = resolveAsset('/images/2025_08_uni-koblenz.jpg');
+                }
+              }}
+              alt="Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung (ZFUW)"
+              className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.01]"
+              loading="lazy"
+            />
           </div>
-
-          {ACADEMIC_MILESTONES.map((item, idx) => (
-            <div
-              key={idx}
-              className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-4 p-4 rounded-xl hover:bg-stone-50 transition-colors border border-stone-100 md:border-transparent md:hover:border-stone-200/60"
-            >
-              <div className="md:col-span-3 text-xs font-mono text-amber-800 font-bold">
-                {item.period}
-              </div>
-              <div className="md:col-span-5">
-                <h4 className="text-sm sm:text-base font-serif font-bold text-stone-900">
-                  {currentLang === 'de'
-                    ? item.fieldDe
-                    : currentLang === 'fa'
-                    ? item.fieldFa
-                    : item.fieldEn}
-                </h4>
-                <p className="text-xs text-stone-500 mt-0.5">
-                  {currentLang === 'de'
-                    ? item.institutionDe
-                    : currentLang === 'fa'
-                    ? item.institutionFa
-                    : item.institutionEn}
-                </p>
-              </div>
-              <div className="md:col-span-4 flex items-center md:justify-end rtl:md:justify-start">
-                <span className="text-[11px] text-stone-600 font-medium px-2 py-0.5 rounded bg-stone-100/70 border border-stone-200/60 max-w-fit">
-                  {currentLang === 'de'
-                    ? item.degreeDe
-                    : currentLang === 'fa'
-                    ? item.degreeFa
-                    : item.degreeEn}
-                </span>
-              </div>
+          <div className="p-3.5 sm:p-4 bg-stone-50/90 border-t border-stone-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs text-stone-600">
+            <div className="flex items-center gap-2">
+              <span className="font-mono text-stone-400">08 / 01</span>
+              <span className="font-serif italic font-medium text-stone-800">
+                {currentLang === 'de'
+                  ? 'Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung (ZFUW)'
+                  : currentLang === 'fa'
+                  ? 'دانشگاه کوبلنتس – مرکز آموزش‌های آزاد و مجازی (ZFUW)'
+                  : 'University of Koblenz – Centre for Distance Studies & Further Education (ZFUW)'}
+              </span>
             </div>
-          ))}
+            <span className="font-mono text-[11px] text-stone-500 bg-stone-200/60 px-2.5 py-0.5 rounded-full">
+              {currentLang === 'de'
+                ? 'Masterstudium Angewandte Umweltwissenschaften (M.Sc.)'
+                : currentLang === 'fa'
+                ? 'کارشناسی ارشد علوم کاربردی محیط زیست'
+                : 'M.Sc. Applied Environmental Sciences'}
+            </span>
+          </div>
         </div>
 
-        {/* Narrative context from WordPress Post 1728 */}
-        <div className="p-6 rounded-2xl bg-[#faf8f5] border border-stone-200/80 text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
-          <p>
+        {/* Authentic 4-Column Table: "Akademische Laufbahn – Übersicht" from WordPress Post 1728 */}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+              {currentLang === 'de'
+                ? 'Akademische Laufbahn – Übersicht'
+                : currentLang === 'fa'
+                ? 'جدول سوابق تحصیلی و دانشگاهی'
+                : 'Academic Career – Overview'}
+            </h4>
+            <span className="text-xs font-mono text-stone-400">
+              {currentLang === 'fa' ? '۵ مرحله تحصیلی' : '5 Milestones'}
+            </span>
+          </div>
+
+          <div className="border border-stone-200 rounded-2xl overflow-hidden shadow-2xs bg-white">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-stone-50/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
+                    <th className="py-3 px-4 font-bold whitespace-nowrap min-w-[130px]">
+                      {currentLang === 'de'
+                        ? 'Zeitraum'
+                        : currentLang === 'fa'
+                        ? 'دوره زمانی'
+                        : 'Period'}
+                    </th>
+                    <th className="py-3 px-4 font-bold min-w-[180px]">
+                      {currentLang === 'de'
+                        ? 'Studiengang / Ausbildung'
+                        : currentLang === 'fa'
+                        ? 'رشته / دوره آموزشی'
+                        : 'Field of Study / Training'}
+                    </th>
+                    <th className="py-3 px-4 font-bold min-w-[200px]">
+                      {currentLang === 'de'
+                        ? 'Einrichtung'
+                        : currentLang === 'fa'
+                        ? 'موسسه / دانشگاه'
+                        : 'Institution'}
+                    </th>
+                    <th className="py-3 px-4 font-bold min-w-[220px]">
+                      {currentLang === 'de'
+                        ? 'Abschluss / Stand'
+                        : currentLang === 'fa'
+                        ? 'مدرک / وضعیت تحصیلی'
+                        : 'Degree / Status'}
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-stone-100 font-normal text-stone-800">
+                  {ACADEMIC_MILESTONES.map((row, idx) => (
+                    <tr
+                      key={idx}
+                      className={
+                        idx % 2 === 0
+                          ? 'bg-white hover:bg-amber-50/20 transition-colors'
+                          : 'bg-[#faf8f5]/60 hover:bg-amber-50/20 transition-colors'
+                      }
+                    >
+                      <td className="py-3.5 px-4 font-mono font-bold text-amber-800 whitespace-nowrap align-top text-xs">
+                        {row.period}
+                      </td>
+                      <td className="py-3.5 px-4 font-medium text-stone-900 align-top">
+                        {currentLang === 'de'
+                          ? row.fieldDe
+                          : currentLang === 'fa'
+                          ? row.fieldFa
+                          : row.fieldEn}
+                      </td>
+                      <td className="py-3.5 px-4 text-stone-600 align-top">
+                        {currentLang === 'de'
+                          ? row.institutionDe
+                          : currentLang === 'fa'
+                          ? row.institutionFa
+                          : row.institutionEn}
+                      </td>
+                      <td className="py-3.5 px-4 text-stone-700 align-top leading-relaxed">
+                        <span className="inline-block px-2.5 py-1 rounded-md bg-stone-100/90 border border-stone-200/70 text-xs font-normal">
+                          {currentLang === 'de'
+                            ? row.degreeDe
+                            : currentLang === 'fa'
+                            ? row.degreeFa
+                            : row.degreeEn}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Narrative Context: Interdisziplinärer akademischer Bildungsweg (WordPress Post 1728) */}
+        <div className="p-6 sm:p-8 rounded-2xl bg-[#faf8f5] border border-stone-200/90 space-y-4">
+          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
             {currentLang === 'de'
-              ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften an der Freien Universität Berlin (Grundstudium erfolgreich abgeschlossen). Im Zusammenhang mit ihrem leistungssportlichen Werdegang im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort schloss sie das Studium an der Hochschule für Wirtschaft und Recht Berlin als Diplom-Verwaltungswirtin (Polizeivollzugsdienst) ab und war unter anderem im Landeskriminalamt (LKA) sowie in stabsnahen Funktionen tätig.'
+              ? 'Interdisziplinärer akademischer Bildungsweg'
               : currentLang === 'fa'
-              ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل حقوق در دانشگاه آزاد برلین پرداخت و دوره پایه را با موفقیت گذراند. در پی ورزش قهرمانی، او به خدمات پلیس برلین پیوست و مدرک کارشناسی ارشد مدیریت عمومی پلیس را از HWR برلین دریافت نمود و در اداره مبارزه با جرایم (LKA) و دوایر ستادی خدمت کرد.'
-              : 'After graduating from the prestigious Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law at the Free University of Berlin. Alongside her high-performance athletic career in kickboxing, she joined the Berlin Police Department, graduating from the Berlin School of Economics and Law (HWR) as Diplom-Verwaltungswirtin, subsequently serving in the State Criminal Police Office (LKA) and executive staff functions.'}
-          </p>
-          <p>
-            {currentLang === 'de'
-              ? 'Seit 2024 arbeitet sie im Ministerium für Landwirtschaft, Umwelt und Klimaschutz des Landes Brandenburg in Potsdam mit Schwerpunkt Gewässerschutz und in der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Berufsbegleitend absolviert sie den interdisziplinären Masterstudiengang „Angewandte Umweltwissenschaften“ (M.Sc.) am Zentrum für Fernstudien und Universitäre Weiterbildung (ZFUW) der Universität Koblenz.'
-              : currentLang === 'fa'
-              ? 'از سال ۲۰۲۴، او در وزارت محیط زیست در پوتسدام با تمرکز بر حفاظت منابع آب و کارگروه فدرال آب (LAWA) فعالیت دارد و هم‌زمان در مقطع کارشناسی ارشد علوم کاربردی محیط‌زیست (M.Sc.) در دانشگاه کوبلنتس مشغول به تحصیل است.'
-              : 'Since 2024, she has served at the Ministry of Environment in Potsdam focusing on water conservation within the German Working Group on Water Issues (LAWA), alongside pursuing her M.Sc. in Applied Environmental Sciences at the University of Koblenz.'}
-          </p>
+              ? 'شرح مسیر بین‌رشته‌ای آکادمیک و شغلی'
+              : 'Interdisciplinary Academic Career'}
+          </h4>
+          <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
+            <p>
+              {currentLang === 'de'
+                ? 'Schahrsad Shahmirzadi verfügt über einen interdisziplinären Bildungs- und Berufsweg in den Bereichen Recht, Sicherheit und Umwelt mit einem Schwerpunkt im Wasserbereich.'
+                : currentLang === 'fa'
+                ? 'شهزاد شاهمیرزادی دارای پیشینه‌ای جامع و بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و محیط زیست با تمرکز ویژه بر منابع آب است.'
+                : 'Schahrsad Shahmirzadi possesses a comprehensive interdisciplinary background across law, public safety, and environmental sciences with a primary focus on water management.'}
+            </p>
+            <p>
+              {currentLang === 'de'
+                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Im Zusammenhang mit ihrem Leistungssport im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort war sie unter anderem im Landeskriminalamt (LKA) sowie in stabsnahen Funktionen tätig.'
+                : currentLang === 'fa'
+                ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم (LKA) و دوایر ستادی خدمت نمود.'
+                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office (LKA) and in executive staff roles.'}
+            </p>
+            <p>
+              {currentLang === 'de'
+                ? 'Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend ein Masterstudium im Fernstudiengang „Angewandte Umweltwissenschaften“ (M.Sc.) an der Universität Koblenz (ZFUW).'
+                : currentLang === 'fa'
+                ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست» (M.Sc.) را در دانشگاه کوبلنتس (ZFUW) می‌گذراند.'
+                : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences (M.Sc.) at the University of Koblenz (ZFUW).'}
+            </p>
+          </div>
         </div>
       </section>
 

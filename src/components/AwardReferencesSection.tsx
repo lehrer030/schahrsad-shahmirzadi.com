@@ -183,7 +183,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Renommierter globaler Wettbewerb mit über 14.000 Einreichungen aus 139 Ländern im Jahr 2026 (Student / Non-Professional).',
     scopeEn: 'Premier global competition with over 14,000 entries from 139 countries in 2026 (Student / Non-Professional).',
     scopeFa: 'مسابقه معتبر جهانی با بیش از ۱۴,۰۰۰ اثر ارسالی از ۱۳۹ کشور جهان در سال ۲۰۲۶.',
-    badgeImage: '/images/2026_08_create_hmention_seal22-1024x630.webp',
+    badgeImage: '/images/2026_08_create_hmention_seal22-1024x630.png',
     mainDirectoryUrl: 'https://photoawards.com/winner/hmention.php?compName=IPA%202026&level=student',
     honors: [
       {
@@ -913,7 +913,12 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     className="h-11 sm:h-13 w-auto max-w-[150px] sm:max-w-[180px] object-contain drop-shadow-2xs transition-transform duration-200 hover:scale-105 shrink-0"
                     loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.style.display = 'none';
+                      const currentSrc = e.currentTarget.src;
+                      if (currentSrc.endsWith('.webp')) {
+                        e.currentTarget.src = currentSrc.replace(/\.webp$/, '.png');
+                      } else {
+                        e.currentTarget.style.display = 'none';
+                      }
                     }}
                   />
                 )}
