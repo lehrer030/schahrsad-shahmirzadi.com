@@ -180,14 +180,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionDe: 'Halbmarathon Berlin — Fokus, Athletik und sportlicher Einsatz für Frieden und Menschlichkeit.',
         captionEn: 'Berlin Half Marathon — Athletic focus, endurance, and dedication to peace and humanity.',
         captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی ورزشی و گامی استوار در مسیر صلح و انسانیت.'
-      },
-      {
-        id: 'run-gallery-13',
-        src: './images/2025_07_image00001-768x1366.webp',
-        alt: 'Halbmarathons & Marathon Berlin 2025',
-        captionDe: 'Halbmarathons & Marathon Berlin: SchirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
-        captionEn: 'Half Marathons & Marathon Berlin: SchirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
-        captionFa: 'نیمه‌ماراتن‌ها و ماراتن برلین: شیرزن ۱۱ نیمه‌ماراتن و ماراتن کامل برلین را به نفع صلح و آزادی به پایان رساند.'
       }
     ]
   },
