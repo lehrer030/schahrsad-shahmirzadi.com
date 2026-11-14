@@ -324,7 +324,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </a>
 
-      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 h-16 sm:h-18 lg:h-20 flex items-center justify-between gap-2 xl:gap-4">
+      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
         
         {/* Brand / Artist Logo */}
         <button
@@ -349,40 +349,75 @@ export const Navbar: React.FC<NavbarProps> = ({
           </p>
         </button>
 
-        {/* Desktop Header Navigation: All 11 links with their numbered badges directly visible */}
-        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 shrink min-w-0" aria-label="Hauptnavigation">
-          {ORIGINAL_11_MENU_ITEMS.map((item) => {
-            const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
-            return (
-              <button
-                key={item.id}
-                onClick={() => handleNavigateToItem(item)}
-                className={`group px-1.5 xl:px-2 2xl:px-2.5 py-1 2xl:py-1.5 rounded-lg text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
-                  isActive
-                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
-                }`}
-                title={getItemLabel(item)}
-              >
-                <span
-                  className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+        {/* Desktop Header Navigation: 2 Rows to avoid horizontal overflow & collision */}
+        <nav className="hidden lg:flex flex-col gap-1 items-center justify-center shrink min-w-0" aria-label="Hauptnavigation">
+          {/* Row 1: Items 01 to 06 */}
+          <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
+            {ORIGINAL_11_MENU_ITEMS.slice(0, 6).map((item) => {
+              const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigateToItem(item)}
+                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
                     isActive
-                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
                   }`}
+                  title={getItemLabel(item)}
                 >
-                  {item.num}
-                </span>
-                <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
-                  {getHeaderItemLabel(item)}
-                </span>
-              </button>
-            );
-          })}
+                  <span
+                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                      isActive
+                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                    }`}
+                  >
+                    {item.num}
+                  </span>
+                  <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
+                    {getHeaderItemLabel(item)}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Row 2: Items 07 to 11 */}
+          <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
+            {ORIGINAL_11_MENU_ITEMS.slice(6).map((item) => {
+              const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigateToItem(item)}
+                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
+                    isActive
+                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                  }`}
+                  title={getItemLabel(item)}
+                >
+                  <span
+                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                      isActive
+                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                    }`}
+                  >
+                    {item.num}
+                  </span>
+                  <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
+                    {getHeaderItemLabel(item)}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
         </nav>
 
         {/* Right Tools: Language Switcher (DE / EN / FA) & Contact */}
-        <div className="flex items-center space-x-3 rtl:space-x-reverse">
+        <div className="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
           
           {/* Trilingual Switcher (DE / EN / FA) */}
           <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
