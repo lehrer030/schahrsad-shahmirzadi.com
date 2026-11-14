@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand & Artist */}
           <div className="space-y-2 md:col-span-1">
             <span className="text-xl font-serif text-amber-900 font-bold tracking-wider">
-              {currentLang === 'fa' ? 'شیرزن (ShirZan)' : 'ShirZan'}
+              {currentLang === 'fa' ? 'شیرزن (SchirZan)' : 'SchirZan'}
             </span>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({
                     <span>LinkedIn</span>
                   </a>
                   <a
-                    href="https://api.whatsapp.com/send?text=ShirZan%20-%20Photography%20%26%20Awards%3A%20https%3A%2F%2Fschahrsad-shahmirzadi.com%2F"
+                    href="https://api.whatsapp.com/send?text=SchirZan%20-%20Photography%20%26%20Awards%3A%20https%3A%2F%2Fschahrsad-shahmirzadi.com%2F"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({
                     <span>WhatsApp</span>
                   </a>
                   <a
-                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fschahrsad-shahmirzadi.com%2F&text=ShirZan%20-%20Photography%20%26%20Awards"
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fschahrsad-shahmirzadi.com%2F&text=SchirZan%20-%20Photography%20%26%20Awards"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-stone-200 rounded text-stone-700 hover:text-amber-800 hover:border-stone-400 transition-colors text-[10px] font-medium"
@@ -168,14 +168,14 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li className="text-stone-600 font-normal flex items-center gap-1 pt-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-800" />
-                <span>© ShirZan Signature Copyright</span>
+                <span>© SchirZan Signature Copyright</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between text-[11px] text-stone-500 gap-4 pt-2">
-          <p className="text-center md:text-left">© {new Date().getFullYear()} Schahrsad Shahmirzadi (ShirZan). All rights reserved.</p>
+          <p className="text-center md:text-left">© {new Date().getFullYear()} Schahrsad Shahmirzadi (SchirZan). All rights reserved.</p>
 
           {/* Webdesign by Emanuel Jurgait (Mittig mit E-Mail-Link zu info@re-mint.online) */}
           <div className="text-center py-1 md:py-0">

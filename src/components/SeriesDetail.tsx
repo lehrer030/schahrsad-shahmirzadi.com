@@ -163,10 +163,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               <ShieldCheck className="w-4 h-4 text-stone-600" />
               <span>
                 {currentLang === 'de'
-                  ? 'Urheberschaft: Schahrsad Shahmirzadi (ShirZan)'
+                  ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan)'
                   : currentLang === 'fa'
                   ? 'مالکیت اثر: شهزاد شاهمیرزادی (شیرزن)'
-                  : 'Copyright: Schahrsad Shahmirzadi (ShirZan)'}
+                  : 'Copyright: Schahrsad Shahmirzadi (SchirZan)'}
               </span>
             </div>
           </div>
@@ -215,7 +215,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
 
                 <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
-                  © ShirZan
+                  © SchirZan
                 </div>
               </div>
 
@@ -231,10 +231,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   </p>
                   <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
                     {currentLang === 'de'
-                      ? `Bild 01 von ${series.photos.length} · Hauptwerk (Prämiert) · © ShirZan`
+                      ? `Bild 01 von ${series.photos.length} · Hauptwerk (Prämiert) · © SchirZan`
                       : currentLang === 'fa'
                       ? `تصویر ۰۱ از ${series.photos.length} · اثر اصلی (برنده جوایز) · © شیرزن`
-                      : `Image 01 of ${series.photos.length} · Lead Work (Awarded) · © ShirZan`}
+                      : `Image 01 of ${series.photos.length} · Lead Work (Awarded) · © SchirZan`}
                   </span>
                 </div>
               )}
@@ -290,7 +290,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   </div>
 
                   <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
-                    © ShirZan
+                    © SchirZan
                   </div>
                 </div>
 
@@ -305,10 +305,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                     </p>
                     <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
                       {currentLang === 'de'
-                        ? `Bild ${String(index + 2).padStart(2, '0')} von ${series.photos.length} · © ShirZan`
+                        ? `Bild ${String(index + 2).padStart(2, '0')} von ${series.photos.length} · © SchirZan`
                         : currentLang === 'fa'
                         ? `تصویر ۰${index + 2} از ${series.photos.length} · © شیرزن`
-                        : `Image ${String(index + 2).padStart(2, '0')} of ${series.photos.length} · © ShirZan`}
+                        : `Image ${String(index + 2).padStart(2, '0')} of ${series.photos.length} · © SchirZan`}
                     </span>
                   </div>
                 )}

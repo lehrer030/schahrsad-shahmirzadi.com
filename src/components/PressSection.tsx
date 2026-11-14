@@ -42,10 +42,10 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
           </h3>
           <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
             {currentLang === 'de'
-              ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von ShirZan.'
+              ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan.'
               : currentLang === 'fa'
               ? 'پوشش مطبوعاتی و نقدهای رسانه‌های تخصصی پیرامون آثار معماری و افتخارات شیرزن.'
-              : 'International journalistic coverage and critical reception of ShirZan’s architectural photographs and honors.'}
+              : 'International journalistic coverage and critical reception of SchirZan’s architectural photographs and honors.'}
           </p>
         </div>
 

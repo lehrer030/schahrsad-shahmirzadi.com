@@ -399,11 +399,11 @@ const APMP_MAGCLOUD_ITEMS: (PhotoItem & {
     titleDe: 'Doppelseitige Preisträger-Strecke',
     titleEn: 'Double-Page Winner Spread',
     titleFa: 'صفحه دوطرفه انتشار اثر معماری',
-    descDe: 'The Solitaire as Abstraction in Harmony with Nature · Vollständige Strecke mit Namensnennung ShirZan (Schahrsad Shahmirzadi)',
-    descEn: 'The Solitaire as Abstraction in Harmony with Nature · Full spread showing ShirZan (Schahrsad Shahmirzadi)',
+    descDe: 'The Solitaire as Abstraction in Harmony with Nature · Vollständige Strecke mit Namensnennung SchirZan (Schahrsad Shahmirzadi)',
+    descEn: 'The Solitaire as Abstraction in Harmony with Nature · Full spread showing SchirZan (Schahrsad Shahmirzadi)',
     descFa: 'تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت · صفحه کامل با درج نام شیرزن (شهزاد شاهمیرزادی)',
-    captionDe: 'Doppelseitige Preisträger-Strecke: The Solitaire as Abstraction in Harmony with Nature – ShirZan (Schahrsad Shahmirzadi)',
-    captionEn: 'Double-Page Winner Spread: The Solitaire as Abstraction in Harmony with Nature – ShirZan (Schahrsad Shahmirzadi)',
+    captionDe: 'Doppelseitige Preisträger-Strecke: The Solitaire as Abstraction in Harmony with Nature – SchirZan (Schahrsad Shahmirzadi)',
+    captionEn: 'Double-Page Winner Spread: The Solitaire as Abstraction in Harmony with Nature – SchirZan (Schahrsad Shahmirzadi)',
     captionFa: 'صفحه دوطرفه برگزیده: تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت – شیرزن (شهزاد شاهمیرزادی)'
   },
   {
@@ -413,11 +413,11 @@ const APMP_MAGCLOUD_ITEMS: (PhotoItem & {
     titleDe: 'MagCloud Druckausgabe & Leseprobe',
     titleEn: 'MagCloud Print Edition & Sample',
     titleFa: 'پیش‌نمایش نسخه چاپی در مگ‌کلود',
-    descDe: 'Seite 163 (Honorable Mentions Students): Offizielle Nennung von ShirZan | Schahrsad Shahmirzadi',
-    descEn: 'Page 163 (Honorable Mentions Students): Official listing of ShirZan | Schahrsad Shahmirzadi',
+    descDe: 'Seite 163 (Honorable Mentions Students): Offizielle Nennung von SchirZan | Schahrsad Shahmirzadi',
+    descEn: 'Page 163 (Honorable Mentions Students): Official listing of SchirZan | Schahrsad Shahmirzadi',
     descFa: 'صفحه ۱۶۳: ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی در بخش تقدیر ویژه',
-    captionDe: 'MagCloud Druckausgabe & Leseprobe (S. 163): Honorable Mentions – Nennung ShirZan | Schahrsad Shahmirzadi',
-    captionEn: 'MagCloud Print Edition & Sample (p. 163): Honorable Mentions – Listing ShirZan | Schahrsad Shahmirzadi',
+    captionDe: 'MagCloud Druckausgabe & Leseprobe (S. 163): Honorable Mentions – Nennung SchirZan | Schahrsad Shahmirzadi',
+    captionEn: 'MagCloud Print Edition & Sample (p. 163): Honorable Mentions – Listing SchirZan | Schahrsad Shahmirzadi',
     captionFa: 'نسخه چاپی و نمونه مجله مگ‌کلود (ص ۱۶۳): تقدیر ویژه – ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی'
   }
 ];
@@ -713,10 +713,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-3xl">
           {isDe
-            ? 'Die renommierte französische Auszeichnung PERSPA wählte gleich drei Architekturserien von ShirZan in die offizielle Editor’s Choice Galerie:'
+            ? 'Die renommierte französische Auszeichnung PERSPA wählte gleich drei Architekturserien von SchirZan in die offizielle Editor’s Choice Galerie:'
             : isFa
             ? 'جایزه معتبر فرانسوی PERSPA سه مجموعه عکاسی معماری شیرزن را برای گالری رسمی برگزیدگان سردبیر انتخاب نمود:'
-            : 'The prestigious French award PERSPA selected three architectural series by ShirZan for its official Editor’s Choice gallery:'}
+            : 'The prestigious French award PERSPA selected three architectural series by SchirZan for its official Editor’s Choice gallery:'}
         </p>
 
         {/* 3 PERSPA Artworks Grid with Clean Photographs and Interactive Series Hover Preview */}
@@ -811,10 +811,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               </h5>
               <p className="text-xs text-stone-700 leading-relaxed font-normal">
                 {isDe
-                  ? 'Der offizielle Film der 20. Spider Awards präsentiert ShirZans preisgekrönte Architekturfotografie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
+                  ? 'Der offizielle Film der 20. Spider Awards präsentiert SchirZans preisgekrönte Architekturfotografie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
                   : isFa
                   ? 'فیلم رسمی بیستمین دوره جوایز اسپایدر که آثار برگزیده معماری سیاه و سفید شیرزن را به تصویر می‌کشد.'
-                  : 'The official 20th Spider Awards film presenting ShirZan’s awarded architectural photography in the international compendium.'}
+                  : 'The official 20th Spider Awards film presenting SchirZan’s awarded architectural photography in the international compendium.'}
               </p>
             </div>
 
@@ -1058,10 +1058,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-3xl">
           {isDe
-            ? 'In der offiziellen Buchausgabe »The Curated Collection 2026, Amateur Edition« ist ShirZans prämierte Arbeit »Piano« auf Seite 37 ganzseitig publiziert.'
+            ? 'In der offiziellen Buchausgabe »The Curated Collection 2026, Amateur Edition« ist SchirZans prämierte Arbeit »Piano« auf Seite 37 ganzseitig publiziert.'
             : isFa
             ? 'در کتاب رسمی «مجموعه برگزیده ۲۰۲۶ اسپایدر»، اثر شاخص پیانوی معماری شیرزن در صفحه ۳۷ منتشر گردیده است.'
-            : 'In the official book edition "The Curated Collection 2026, Amateur Edition", ShirZan’s awarded work "Piano" is prominently featured on page 37.'}
+            : 'In the official book edition "The Curated Collection 2026, Amateur Edition", SchirZan’s awarded work "Piano" is prominently featured on page 37.'}
         </p>
 
         {/* 4 Books/Pages Grid */}
@@ -1329,10 +1329,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
         <div className="p-4 bg-white rounded-xl border border-stone-200/90 space-y-2">
           <div className="text-xs sm:text-sm font-semibold text-stone-900">
             {isDe
-              ? 'ShirZans prämierte Werke publiziert auf den Seiten 20–21, 26, 41 und 168:'
+              ? 'SchirZans prämierte Werke publiziert auf den Seiten 20–21, 26, 41 und 168:'
               : isFa
               ? 'آثار برگزیده شیرزن منتشر شده در صفحات ۲۰–۲۱، ۲۶، ۴۱ و ۱۶۸:'
-              : 'ShirZan’s awarded works published on pages 20–21, 26, 41, and 168:'}
+              : 'SchirZan’s awarded works published on pages 20–21, 26, 41, and 168:'}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <a

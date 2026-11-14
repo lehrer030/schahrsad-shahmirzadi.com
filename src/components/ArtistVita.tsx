@@ -250,7 +250,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               <p>
                 {currentLang === 'de' ? (
                   <>
-                    <strong className="text-stone-900 font-semibold">ShirZan</strong> engagiert sich für Umweltschutz, Menschenrechte und Frieden durch eigene Projekte, sportliche und photographische Initiativen sowie den stetigen Dialog in ihrer Gemeinschaft.
+                    <strong className="text-stone-900 font-semibold">SchirZan</strong> engagiert sich für Umweltschutz, Menschenrechte und Frieden durch eigene Projekte, sportliche und photographische Initiativen sowie den stetigen Dialog in ihrer Gemeinschaft.
                   </>
                 ) : currentLang === 'fa' ? (
                   <>
@@ -258,7 +258,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   </>
                 ) : (
                   <>
-                    <strong className="text-stone-900 font-semibold">ShirZan</strong> is committed to environmental protection, human rights, and peace through her own projects, sporting and photographic initiatives, and conversations within her personal community.
+                    <strong className="text-stone-900 font-semibold">SchirZan</strong> is committed to environmental protection, human rights, and peace through her own projects, sporting and photographic initiatives, and conversations within her personal community.
                   </>
                 )}
               </p>
@@ -287,7 +287,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 <div className="aspect-3/4 overflow-hidden bg-stone-100 relative">
                   <img
                     src={resolveAsset('/images/2025_07_image00001-768x1366.webp')}
-                    alt="ShirZan – Halbmarathons & Marathon Berlin für Frieden und Umweltschutz"
+                    alt="SchirZan – Halbmarathons & Marathon Berlin für Frieden und Umweltschutz"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -346,7 +346,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 <div className="aspect-3/4 sm:aspect-4/5 overflow-hidden bg-stone-100 relative">
                   <img
                     src={resolveAsset('/images/2026_08_ecchr-human-rights-support-4-1152x1536.webp')}
-                    alt="ShirZan — Berlin Half Marathon 2027 · Support the fundraising run for ECCHR"
+                    alt="SchirZan — Berlin Half Marathon 2027 · Support the fundraising run for ECCHR"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -376,8 +376,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   {currentLang === 'fa'
                     ? 'برای شیرزن، ورزش فراتر از تمرین بدنی است؛ ورزش بیانگر تعهد عمیق او به آرمان‌هایی است که به آن‌ها باور دارد.'
                     : currentLang === 'de'
-                    ? 'Für ShirZan ist Sport mehr als körperliche Bewegung – er ist auch Ausdruck ihres Engagements für die Themen, die ihr am Herzen liegen.'
-                    : 'For ShirZan, sport is more than physical exercise—it is also an expression of her commitment to the causes she cares about.'}
+                    ? 'Für SchirZan ist Sport mehr als körperliche Bewegung – er ist auch Ausdruck ihres Engagements für die Themen, die ihr am Herzen liegen.'
+                    : 'For SchirZan, sport is more than physical exercise—it is also an expression of her commitment to the causes she cares about.'}
                 </p>
                 <p>
                   {currentLang === 'fa'
@@ -478,10 +478,10 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               </h4>
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
                 {currentLang === 'de'
-                  ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich ShirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
+                  ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich SchirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
                   : currentLang === 'fa'
                   ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
-                  : 'In her photographic and artistic work, ShirZan explores social and environmental issues. Key projects include:'}
+                  : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
               </p>
               <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
                 <li>• <strong>„In Between Spaces“</strong> (Trieste Photo Days / Urban Photo Awards)</li>

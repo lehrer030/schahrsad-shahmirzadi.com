@@ -14,7 +14,7 @@ export const MobileFloatingContact: React.FC<MobileFloatingContactProps> = ({
   const getLabel = () => {
     if (currentLang === 'de') return 'Direkt Kontakt aufnehmen';
     if (currentLang === 'fa') return 'تماس مستقیم';
-    return 'Contact ShirZan';
+    return 'Contact SchirZan';
   };
 
   return (

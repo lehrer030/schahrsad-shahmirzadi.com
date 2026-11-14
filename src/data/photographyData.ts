@@ -160,38 +160,38 @@ export const INTRO_CONTENT = {
   artistSectionTitleDe: 'Photographie, Künstlername und Inspiration',
   artistSectionTitleEn: 'Photography, Artist Name and Inspiration',
   artistSectionTitleFa: 'عکاسی، نام هنری و الهام‌بخش (شیرزن)',
-  artistNameDe: 'Schahrsad Shahmirzadi (ShirZan)',
-  artistNameEn: 'Schahrsad Shahmirzadi (ShirZan)',
+  artistNameDe: 'Schahrsad Shahmirzadi (SchirZan)',
+  artistNameEn: 'Schahrsad Shahmirzadi (SchirZan)',
   artistNameFa: 'شهزاد شاهمیرزادی (شیرزن)',
-  artistExplanationDe: `Schahrsad Shahmirzadi präsentiert ihre Fotografie und Kunst unter dem Künstlernamen ShirZan. Der Name stammt aus dem Persischen und verbindet zwei Worte:
+  artistExplanationDe: `Schahrsad Shahmirzadi präsentiert ihre Fotografie und Kunst unter dem Künstlernamen SchirZan. Der Name stammt aus dem Persischen und verbindet zwei Worte:
 
 • Shir (شیر), bedeutet »Löwe«
 • Zan (زن), bedeutet »Frau«
 
-Zusammen bedeutet »ShirZan« die »Löwenfrau« oder »Löwin« und verkörpert den Mut, seinen eigenen Weg zu gehen.
+Zusammen bedeutet »SchirZan« die »Löwenfrau« oder »Löwin« und verkörpert den Mut, seinen eigenen Weg zu gehen.
 
-Für sie steht »ShirZan« auch für das Engagement, sich für benachteiligte Menschen einzusetzen, deren Stimmen Sichtbarkeit zu verleihen und für Gerechtigkeit, Gleichberechtigung und Menschlichkeit einzutreten.
+Für sie steht »SchirZan« auch für das Engagement, sich für benachteiligte Menschen einzusetzen, deren Stimmen Sichtbarkeit zu verleihen und für Gerechtigkeit, Gleichberechtigung und Menschlichkeit einzutreten.
 
 Durch Fotografie kann sie einen Moment gelebter Erfahrung für die Ewigkeit bewahren – ein Gedanke, der sie jedes Mal aufs Neue bewegt.
 
 Das Wort »Photographie« leitet sich aus dem Altgriechischen ab: φῶς, phōs (Genitiv φωτός, phōtos), was »Licht« bedeutet, und γράφειν, gráphein, was »schreiben« oder »zeichnen« bedeutet. Im übertragenen Sinne bedeutet es »Zeichnen mit Licht«.
 
 Ihre bewusste Wahl der traditionellen deutschen Schreibweise »Photographie« mit »ph« statt »f« spiegelt diesen Ursprung wider. Durch die konsequente Beibehaltung dieser Schreibweise macht sie die Verbindung zur Geschichte des Mediums sichtbar und unterstreicht ihren Anspruch, bewusst und künstlerisch mit dem Licht zu arbeiten.`,
-  artistExplanationEn: `Schahrsad Shahmirzadi presents her photography and art under the artist name ShirZan. The name comes from Persian and combines two words:
+  artistExplanationEn: `Schahrsad Shahmirzadi presents her photography and art under the artist name SchirZan. The name comes from Persian and combines two words:
 
 • Shir (شیر), meaning "lion"
 • Zan (زن), meaning "woman"
 
-Together, "ShirZan" conveys "lion-woman" or "lioness" and embodies the courage to follow one's own path.
+Together, "SchirZan" conveys "lion-woman" or "lioness" and embodies the courage to follow one's own path.
 
-For her, "ShirZan" also represents a commitment to standing up for disadvantaged people, bringing visibility to their voices, and advocating for justice, equality, and humanity.
+For her, "SchirZan" also represents a commitment to standing up for disadvantaged people, bringing visibility to their voices, and advocating for justice, equality, and humanity.
 
 Through photography, she can preserve a moment of lived experience for eternity—a thought that moves her anew each time.
 
 The word "photography" derives from Ancient Greek: φῶς, phōs (genitive phōtos), meaning "light," and γράφειν, gráphein, meaning "to write" or "to draw." Figuratively, it means "drawing with light."
 
 Her deliberate use of the traditional German spelling "Photographie," with "ph" rather than "f," reflects this origin. By consistently choosing this spelling, she makes the connection to the medium's history visible and emphasises her commitment to working consciously and artistically with light.`,
-  artistExplanationFa: `شهزاد شاهمیرزادی آثار عکاسی و هنری خود را با نام هنری «شیرزن» (ShirZan) ارائه می‌دهد. این نام اصیل از زبان فارسی برگرفته شده و از ترکیب دو واژه پدید آمده است:
+  artistExplanationFa: `شهزاد شاهمیرزادی آثار عکاسی و هنری خود را با نام هنری «شیرزن» (SchirZan) ارائه می‌دهد. این نام اصیل از زبان فارسی برگرفته شده و از ترکیب دو واژه پدید آمده است:
 
 • شیر (Shir)، به معنای نماد شجاعت و دلیری
 • زن (Zan)، به معنای زن و آفریننده
@@ -436,8 +436,8 @@ previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
         id: 'echoes-water-tower-01',
         src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
         alt: 'Echoes of a Water Tower – Schahrsad Shahmirzadi',
-        captionDe: 'Echoes of a Water Tower – ShirZan',
-        captionEn: 'Echoes of a Water Tower – ShirZan',
+        captionDe: 'Echoes of a Water Tower – SchirZan',
+        captionEn: 'Echoes of a Water Tower – SchirZan',
         captionFa: 'پژواک برج آب – شیرزن'
       }
     ]
@@ -463,32 +463,32 @@ previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
         id: 'architectural-piano-01',
         src: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
         alt: 'Architectural Piano 01 – Schahrsad Shahmirzadi',
-        captionDe: 'Architectural Piano I – ShirZan',
-        captionEn: 'Architectural Piano I – ShirZan',
+        captionDe: 'Architectural Piano I – SchirZan',
+        captionEn: 'Architectural Piano I – SchirZan',
         captionFa: 'پیانوی معماری ۱ – شیرزن'
       },
       {
         id: 'architectural-piano-02',
         src: '/images/2026_10_amp-2026-architectural-piano-02-scaled.webp',
         alt: 'Architectural Piano 02 – Schahrsad Shahmirzadi',
-        captionDe: 'Architectural Piano II – ShirZan',
-        captionEn: 'Architectural Piano II – ShirZan',
+        captionDe: 'Architectural Piano II – SchirZan',
+        captionEn: 'Architectural Piano II – SchirZan',
         captionFa: 'پیانوی معماری ۲ – شیرزن'
       },
       {
         id: 'architectural-piano-03',
         src: '/images/2026_10_amp-2026-architectural-piano-03-scaled.webp',
         alt: 'Architectural Piano 03 – Schahrsad Shahmirzadi',
-        captionDe: 'Architectural Piano III – ShirZan',
-        captionEn: 'Architectural Piano III – ShirZan',
+        captionDe: 'Architectural Piano III – SchirZan',
+        captionEn: 'Architectural Piano III – SchirZan',
         captionFa: 'پیانوی معماری ۳ – شیرزن'
       },
       {
         id: 'architectural-piano-04',
         src: '/images/2026_10_amp-2026-architectural-piano-04-scaled.webp',
         alt: 'Architectural Piano 04 – Schahrsad Shahmirzadi',
-        captionDe: 'Architectural Piano IV – ShirZan',
-        captionEn: 'Architectural Piano IV – ShirZan',
+        captionDe: 'Architectural Piano IV – SchirZan',
+        captionEn: 'Architectural Piano IV – SchirZan',
         captionFa: 'پیانوی معماری ۴ – شیرزن'
       }
     ]
@@ -793,8 +793,8 @@ previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg
         id: 'steps-sustainability-01',
         src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
         alt: 'Steps of Sustainability',
-        captionDe: 'Steps of Sustainability – ShirZan',
-        captionEn: 'Steps of Sustainability – ShirZan',
+        captionDe: 'Steps of Sustainability – SchirZan',
+        captionEn: 'Steps of Sustainability – SchirZan',
         captionFa: 'پله‌های پایداری – شیرزن'
       }
     ]
@@ -1142,8 +1142,8 @@ previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
         id: 'bw-solitaire-01',
         src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
         alt: 'Black & White Solitaire',
-        captionDe: 'Black & White Solitaire – ShirZan',
-        captionEn: 'Black & White Solitaire – ShirZan',
+        captionDe: 'Black & White Solitaire – SchirZan',
+        captionEn: 'Black & White Solitaire – SchirZan',
         captionFa: 'تک‌بنای سیاه‌وسفید – شیرزن'
       }
     ]
@@ -1169,8 +1169,8 @@ previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-wit
         id: 'solitaire-ipa-2025-01',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
         alt: 'The Solitaire as an Abstraction (IPA 2025)',
-        captionDe: 'The Solitaire as an Abstraction – ShirZan',
-        captionEn: 'The Solitaire as an Abstraction – ShirZan',
+        captionDe: 'The Solitaire as an Abstraction – SchirZan',
+        captionEn: 'The Solitaire as an Abstraction – SchirZan',
         captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
       }
     ]
@@ -1220,8 +1220,8 @@ previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-wit
         id: 'prismatic-berlin-01',
         src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
         alt: 'Prismatic Berlin',
-        captionDe: 'Prismatic Berlin – ShirZan',
-        captionEn: 'Prismatic Berlin – ShirZan',
+        captionDe: 'Prismatic Berlin – SchirZan',
+        captionEn: 'Prismatic Berlin – SchirZan',
         captionFa: 'برلین منشوری – شیرزن'
       }
     ]
@@ -1244,8 +1244,8 @@ previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-wit
         id: 'transformer-01',
         src: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
         alt: 'Transformer',
-        captionDe: 'Transformer – ShirZan',
-        captionEn: 'Transformer – ShirZan',
+        captionDe: 'Transformer – SchirZan',
+        captionEn: 'Transformer – SchirZan',
         captionFa: 'دگرگون‌شونده – شیرزن'
       }
     ]
@@ -1268,8 +1268,8 @@ previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-wit
         id: 'columns-here-now-01',
         src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
         alt: 'Columns in the Here and Now',
-        captionDe: 'Columns in the Here and Now – ShirZan',
-        captionEn: 'Columns in the Here and Now – ShirZan',
+        captionDe: 'Columns in the Here and Now – SchirZan',
+        captionEn: 'Columns in the Here and Now – SchirZan',
         captionFa: 'ستون‌ها در همین‌جا و اکنون – شیرزن'
       }
     ]
@@ -1295,8 +1295,8 @@ export const FINE_ART_WORKS: FurtherWork[] = [
         id: 'echoes-fineart-01',
         src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
         alt: 'Echoes of a Water Tower',
-        captionDe: 'Echoes of a Water Tower – ShirZan',
-        captionEn: 'Echoes of a Water Tower – ShirZan',
+        captionDe: 'Echoes of a Water Tower – SchirZan',
+        captionEn: 'Echoes of a Water Tower – SchirZan',
         captionFa: 'پژواک برج آب – شیرزن'
       }
     ]
@@ -1365,8 +1365,8 @@ previewImage: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
         id: 'blessed-mourn-01',
         src: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
         alt: 'Blessed Are Those Who Mourn',
-        captionDe: 'Blessed Are Those Who Mourn – ShirZan',
-        captionEn: 'Blessed Are Those Who Mourn – ShirZan',
+        captionDe: 'Blessed Are Those Who Mourn – SchirZan',
+        captionEn: 'Blessed Are Those Who Mourn – SchirZan',
         captionFa: 'خوشا به حال سوگواران – شیرزن'
       }
     ]
@@ -1395,8 +1395,8 @@ previewImage: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
         id: 'attack-on-queer-01',
         src: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
         alt: 'Berlin: Attack on Queer, Diversity and Freedom',
-        captionDe: 'Berlin: Attack on Queer, Diversity and Freedom – ShirZan',
-        captionEn: 'Berlin: Attack on Queer, Diversity and Freedom – ShirZan',
+        captionDe: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
+        captionEn: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
         captionFa: 'برلین: حمله به تنوع و آزادی – شیرزن'
       }
     ]
@@ -1465,8 +1465,8 @@ previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
         id: 'in-between-spaces-01',
         src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
         alt: 'In-Between Spaces – Schahrsad Shahmirzadi',
-        captionDe: 'In-Between Spaces – ShirZan (URBAN Photo Awards 2026 Selected)',
-        captionEn: 'In-Between Spaces – ShirZan (URBAN Photo Awards 2026 Selected)',
+        captionDe: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        captionEn: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
         captionFa: 'فضاهای میانی – شیرزن (منتخب مسابقه URBAN 2026)'
       }
     ]
@@ -1492,24 +1492,24 @@ previewImage: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
         id: 'dignity-animal-01',
         src: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
         alt: 'The Dignity of the Animal is Inviolable I',
-        captionDe: 'The Dignity of the Animal is Inviolable I – ShirZan (LICC 2025 Official Selection)',
-        captionEn: 'The Dignity of the Animal is Inviolable I – ShirZan (LICC 2025 Official Selection)',
+        captionDe: 'The Dignity of the Animal is Inviolable I – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable I – SchirZan (LICC 2025 Official Selection)',
         captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۱ – شیرزن'
       },
       {
         id: 'dignity-animal-02',
         src: '/images/2026_04_f921f50c9aeb75ce30ac79453121ddda-scaled.jpeg',
         alt: 'The Dignity of the Animal is Inviolable II',
-        captionDe: 'The Dignity of the Animal is Inviolable II – ShirZan (LICC 2025 Official Selection)',
-        captionEn: 'The Dignity of the Animal is Inviolable II – ShirZan (LICC 2025 Official Selection)',
+        captionDe: 'The Dignity of the Animal is Inviolable II – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable II – SchirZan (LICC 2025 Official Selection)',
         captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۲ – شیرزن'
       },
       {
         id: 'dignity-animal-03',
         src: '/images/2026_04_4bacafa6404a9d91da6e9374e3feb98e-scaled.jpeg',
         alt: 'The Dignity of the Animal is Inviolable III',
-        captionDe: 'The Dignity of the Animal is Inviolable III – ShirZan (LICC 2025 Official Selection)',
-        captionEn: 'The Dignity of the Animal is Inviolable III – ShirZan (LICC 2025 Official Selection)',
+        captionDe: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
+        captionEn: 'The Dignity of the Animal is Inviolable III – SchirZan (LICC 2025 Official Selection)',
         captionFa: 'حرمت حیوان خدشه‌ناپذیر است ۳ – شیرزن'
       }
     ]
@@ -1537,7 +1537,7 @@ previewImage: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-sca
       {
         id: 'kickboxing-portrait-01',
         src: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
-        alt: 'Kickboxing – Self-Portrait (Schahrsad Shahmirzadi / ShirZan)',
+        alt: 'Kickboxing – Self-Portrait (Schahrsad Shahmirzadi / SchirZan)',
         captionDe: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
         captionEn: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
         captionFa: 'کیک‌بوکسینگ – از مبارزه در رینگ تا آذرخش در قاب تصویر (برگزیده رسمی IPA 2026)'
@@ -1628,8 +1628,8 @@ export const PRESS_ITEMS = [
     outlet: '121 CLICKS',
     date: '17. Oktober 2026',
     title: 'PERSPA Awards 2026: 47 Winning Photos That Reveal Architecture in a Whole New Light',
-    descriptionDe: '#3. Abstract – 2nd Place Winner: »The Solitaire as an Abstraction« by ShirZan, Germany',
-    descriptionEn: '#3. Abstract – 2nd Place Winner: "The Solitaire as an Abstraction" by ShirZan, Germany',
+    descriptionDe: '#3. Abstract – 2nd Place Winner: »The Solitaire as an Abstraction« by SchirZan, Germany',
+    descriptionEn: '#3. Abstract – 2nd Place Winner: "The Solitaire as an Abstraction" by SchirZan, Germany',
     descriptionFa: 'رتبه دوم بخش معماری انتزاعی: تک‌بنا به مثابه انتزاع اثر شیرزن، آلمان',
     link: 'https://121clicks.com/inspirations/2026-perspa-awards-winners-architecture/'
   },
@@ -1637,8 +1637,8 @@ export const PRESS_ITEMS = [
     outlet: 'KOJARO (کجارو)',
     date: '18. Oktober 2026',
     title: 'از تئاتر تاریخی ایتالیا تا هندسه ساختمان‌ها؛ برندگان نخستین جایزه عکاسی معماری پرسپکتیو',
-    descriptionDe: 'Internationale Berichterstattung über die renommiertesten Architekturfotografien des Jahres – Auszeichnung für ShirZan (Werk Nr. 3).',
-    descriptionEn: 'International press coverage on the year’s finest architectural photography – Honour for ShirZan (Work No. 3).',
+    descriptionDe: 'Internationale Berichterstattung über die renommiertesten Architekturfotografien des Jahres – Auszeichnung für SchirZan (Werk Nr. 3).',
+    descriptionEn: 'International press coverage on the year’s finest architectural photography – Honour for SchirZan (Work No. 3).',
     descriptionFa: 'پوشش مطبوعاتی بین‌المللی برترین آثار عکاسی معماری سال ۲۰۲۶ و درخشش شیرزن در میان برگزیدگان.',
     link: 'https://www.kojaro.com/travel-photos/310932-best-architectural-photography-2026/'
   },
@@ -1744,8 +1744,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     subtitleEn: 'Official Hardcover & E-Book Compendium',
     subtitleFa: 'کتاب رسمی جلد سخت و نسخه دیجیتال',
     publisher: 'PRIX DE LA PERSPECTIVE ARCHITECTURALE (Bourges, France)',
-    detailsDe: 'Hardcover ISBN: 979-1044810359 · ShirZans Werke auf den Seiten 20–21, 26, 41 und 168.',
-    detailsEn: 'Hardcover ISBN: 979-1044810359 · ShirZan featured on pages 20–21, 26, 41, and 168.',
+    detailsDe: 'Hardcover ISBN: 979-1044810359 · SchirZans Werke auf den Seiten 20–21, 26, 41 und 168.',
+    detailsEn: 'Hardcover ISBN: 979-1044810359 · SchirZan featured on pages 20–21, 26, 41, and 168.',
     detailsFa: 'شابک رسمی: 979-1044810359 · انتشار آثار شیرزن در صفحات ۲۰–۲۱، ۲۶، ۴۱ و ۱۶۸.',
     link: 'https://perspa.fr/book/#cover',
     linkTextDe: 'E-Book & Buchkatalog öffnen →',
@@ -1782,8 +1782,8 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     subtitleEn: 'Amateur Edition & Best of Show Official Awards Book',
     subtitleFa: 'کتاب رسمی برگزیدگان عکاسی سیاه و سفید',
     publisher: 'Black & White Spider Awards',
-    detailsDe: 'ShirZans prämierte Arbeit »Piano« publiziert auf Seite 37.',
-    detailsEn: 'ShirZan’s awarded work "Piano" published on page 37.',
+    detailsDe: 'SchirZans prämierte Arbeit »Piano« publiziert auf Seite 37.',
+    detailsEn: 'SchirZan’s awarded work "Piano" published on page 37.',
     detailsFa: 'اثر پیانوی معماری در صفحه ۳۷ کتاب رسمی.',
     link: 'https://www.thespiderawards.com/publications/CC26/a/#page=37',
     linkTextDe: 'Katalog auf Seite 37 öffnen →',

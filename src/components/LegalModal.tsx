@@ -105,7 +105,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
             <div>
               <h4 className="font-serif font-bold text-stone-900 text-sm mb-1">Urheberrecht / Copyright</h4>
               <p className="text-xs text-stone-600 leading-relaxed font-normal">
-                Die durch die Seitenbetreiber erstellten Inhalte und Werke (insbesondere Photographien und Bildserien) auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Autorin bzw. Erstellerin Schahrsad Shahmirzadi (ShirZan). Jedes Photo trägt das urheberrechtliche Schutzzeichen.
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke (insbesondere Photographien und Bildserien) auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der jeweiligen Autorin bzw. Erstellerin Schahrsad Shahmirzadi (SchirZan). Jedes Photo trägt das urheberrechtliche Schutzzeichen.
               </p>
             </div>
 

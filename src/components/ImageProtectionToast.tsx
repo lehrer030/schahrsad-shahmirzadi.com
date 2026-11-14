@@ -45,10 +45,10 @@ export const ImageProtectionToast: React.FC<ImageProtectionToastProps> = ({
             </h4>
             <p className="text-xs text-stone-300 leading-relaxed font-normal">
               {currentLang === 'de'
-                ? '© Schahrsad Shahmirzadi (ShirZan). Alle Rechte vorbehalten. Das Herunterladen, Kopieren oder Verwenden der Fotografien ohne schriftliche Lizenz ist untersagt.'
+                ? '© Schahrsad Shahmirzadi (SchirZan). Alle Rechte vorbehalten. Das Herunterladen, Kopieren oder Verwenden der Fotografien ohne schriftliche Lizenz ist untersagt.'
                 : currentLang === 'fa'
                 ? '© شهزاد شاهمیرزادی (شیرزن). کلیه حقوق محفوظ است. هرگونه دانلود، کپی‌برداری یا بازنشر بدون مجوز رسمی ممنوع می‌باشد.'
-                : '© Schahrsad Shahmirzadi (ShirZan). All rights reserved. Downloading, copying, or distributing these photographs without explicit authorization is strictly prohibited.'}
+                : '© Schahrsad Shahmirzadi (SchirZan). All rights reserved. Downloading, copying, or distributing these photographs without explicit authorization is strictly prohibited.'}
             </p>
             <div className="pt-2 flex items-center gap-3">
               <button
