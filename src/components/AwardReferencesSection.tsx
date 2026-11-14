@@ -971,17 +971,19 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                         return (
                           <div
                             key={itemIdx}
-                            className="bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm transition-all group"
+                            className="relative bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm hover:z-30 transition-all group"
                           >
                             <div className="flex items-center gap-3 min-w-0 flex-1">
                               {thumbImg && (
-                                <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-stone-100 shrink-0 border border-stone-200/80 shadow-2xs relative">
-                                  <img
-                                    src={resolveAsset(thumbImg)}
-                                    alt={item.title}
-                                    loading="lazy"
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                  />
+                                <div className="relative group/thumb shrink-0 z-10 hover:z-50">
+                                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-stone-100 border border-stone-200/90 shadow-2xs transition-all duration-300 ease-out group-hover/thumb:scale-[1.75] group-hover/thumb:shadow-2xl group-hover/thumb:border-amber-700/80 group-hover/thumb:ring-2 group-hover/thumb:ring-amber-500/40 cursor-zoom-in origin-left rtl:origin-right">
+                                    <img
+                                      src={resolveAsset(thumbImg)}
+                                      alt={getAwardWorkTitle(item.title, currentLang)}
+                                      loading="lazy"
+                                      className="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105"
+                                    />
+                                  </div>
                                 </div>
                               )}
                               <div className="space-y-0.5 min-w-0 flex-1">
