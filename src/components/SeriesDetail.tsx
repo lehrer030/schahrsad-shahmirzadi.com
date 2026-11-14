@@ -42,7 +42,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
   const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
   const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
 
-  const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
+  const renderBadgeItem = (badge: AwardBadge | null | undefined) => {
     if (!badge) return null;
 
     const awardText = currentLang === 'fa' && badge.awardFa ? badge.awardFa : badge.award;
@@ -52,15 +52,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={`${badge.name}: ${awardText}`}
-        className={`group flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer ${
-          alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
-        }`}
+        className="group flex flex-col items-center justify-center w-full h-16 sm:h-20 p-1.5 sm:p-2 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover:brightness-105"
+          className="max-h-8 sm:max-h-12 max-w-full object-contain filter group-hover:brightness-105"
         />
         <span className="text-[10px] text-stone-600 group-hover:text-amber-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
@@ -193,7 +191,9 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
               {/* TOP: AMP ALWAYS TOP-LEFT */}
               <div className="w-full flex justify-start">
-                {renderBadgeItem(ampBadge, 'left')}
+                <div className="w-28 sm:w-36">
+                  {renderBadgeItem(ampBadge)}
+                </div>
               </div>
 
               {/* PHOTO 1 CONTAINER */}
@@ -239,15 +239,19 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
               )}
 
-              {/* BOTTOM ROW: PERSPA (left), BIFA (center if present), IPA (right) */}
-              <div className="w-full pt-1 flex items-center justify-between flex-wrap gap-2.5 sm:gap-3">
-                <div>{renderBadgeItem(perspaBadge, 'left')}</div>
+              {/* BOTTOM ROW: Equal Proportion Badges */}
+              <div className={`w-full pt-1 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
+                <div className="flex justify-start">
+                  {renderBadgeItem(perspaBadge)}
+                </div>
                 {bifaBadge && (
-                  <div className="flex-1 flex justify-center">
-                    {renderBadgeItem(bifaBadge, 'center')}
+                  <div className="flex justify-center">
+                    {renderBadgeItem(bifaBadge)}
                   </div>
                 )}
-                <div className="ml-auto">{renderBadgeItem(ipaBadge, 'right')}</div>
+                <div className="flex justify-end">
+                  {renderBadgeItem(ipaBadge)}
+                </div>
               </div>
             </div>
 

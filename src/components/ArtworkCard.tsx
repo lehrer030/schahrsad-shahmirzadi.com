@@ -27,7 +27,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   const firstPhoto = series.photos[0];
 
   // Helper to render uniform badge item with equal proportions
-  const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
+  const renderBadgeItem = (badge: AwardBadge | null | undefined) => {
     if (!badge) return null;
 
     const awardText = currentLang === 'fa' && badge.awardFa ? badge.awardFa : badge.award;
@@ -39,15 +39,13 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className={`group/badge flex flex-col items-center justify-center w-28 h-16 sm:w-36 sm:h-20 p-2 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all duration-200 cursor-pointer ${
-          alignment === 'left' ? 'sm:self-start' : alignment === 'right' ? 'sm:self-end' : ''
-        }`}
+        className="group/badge flex flex-col items-center justify-center w-full h-16 sm:h-20 p-1.5 sm:p-2 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all duration-200 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-9 sm:max-h-12 max-w-full object-contain filter group-hover/badge:brightness-105"
+          className="max-h-8 sm:max-h-11 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
         <span className="text-[10px] text-stone-500 group-hover/badge:text-stone-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
@@ -103,7 +101,9 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           
           {/* TOP ROW: AMP ALWAYS TOP-LEFT */}
           <div className="w-full flex justify-start mb-3">
-            {renderBadgeItem(ampBadge, 'left')}
+            <div className="w-28 sm:w-36">
+              {renderBadgeItem(ampBadge)}
+            </div>
           </div>
 
           {/* MAIN COVER PHOTO */}
@@ -166,23 +166,23 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </span>
           </div>
 
-          {/* BOTTOM ROW: Equal Proportion Badges matching her email mockup */}
-          <div className="w-full mt-4 flex items-center justify-between flex-wrap gap-2.5 sm:gap-3">
+          {/* BOTTOM ROW: Equal Proportion Badges */}
+          <div className={`w-full mt-4 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
             {/* Bottom-Left: PERSPA */}
-            <div>
-              {renderBadgeItem(perspaBadge, 'left')}
+            <div className="flex justify-start">
+              {renderBadgeItem(perspaBadge)}
             </div>
 
             {/* Bottom-Center: BIFA (if present) */}
             {bifaBadge && (
-              <div className="flex-1 flex justify-center">
-                {renderBadgeItem(bifaBadge, 'center')}
+              <div className="flex justify-center">
+                {renderBadgeItem(bifaBadge)}
               </div>
             )}
 
             {/* Bottom-Right: IPA ALWAYS BOTTOM-RIGHT */}
-            <div className="ml-auto">
-              {renderBadgeItem(ipaBadge, 'right')}
+            <div className="flex justify-end">
+              {renderBadgeItem(ipaBadge)}
             </div>
           </div>
 
