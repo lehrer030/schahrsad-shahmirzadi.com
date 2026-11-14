@@ -21,6 +21,15 @@ interface NavbarProps {
   onOpenContact: () => void;
 }
 
+// Automatische Steuerung des Spendenlauf-Banners anhand des Datums:
+// Der Berliner Halbmarathon 2027 findet im April 2027 statt.
+// Sobald dieses Datum überschritten ist, blendet sich der obere rote Banner vollautomatisch aus.
+export const SPENDENLAUF_CONFIG = {
+  // Enddatum im ISO-Format: Jahr-Monat-TagTHH:MM:SS (inkl. 30. April 2027, 23:59:59 Uhr)
+  endDate: '2027-04-30T23:59:59',
+  url: 'https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights'
+};
+
 export interface OriginalMenuItem {
   id: string;
   num: string;
@@ -278,51 +287,56 @@ export const Navbar: React.FC<NavbarProps> = ({
     }
   };
 
+  // Kampagnen-Banner vollautomatisch ausblenden, sobald das Enddatum überschritten ist
+  const isCampaignActive = new Date() <= new Date(SPENDENLAUF_CONFIG.endDate);
+
   return (
     <header
       className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full"
       style={{ position: 'sticky', top: 0, zIndex: 50 }}
     >
-      {/* Top Colored Spendenlauf Announcement Banner - Compact & Slender on Mobile & Tablet */}
-      <a
-        href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Spendenlauf für Menschenrechte beim ECCHR online unterstützen"
-        className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
-      >
-        <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
-          <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-            <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
-              <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
-            </span>
-            <span className="font-semibold tracking-wide truncate">
-              {currentLang === 'fa'
-                ? 'کمپین دویدن برای حقوق بشر:'
-                : currentLang === 'en'
-                ? 'Run for Human Rights:'
-                : 'Spendenlauf für Menschenrechte:'}
-            </span>
-            <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity hidden md:inline truncate">
-              {currentLang === 'fa'
-                ? 'حمایت از کارزار شیرزن برای ECCHR'
-                : currentLang === 'en'
-                ? 'Support SchirZan’s fundraising campaign at ECCHR'
-                : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+      {/* Top Colored Spendenlauf Announcement Banner - Automatisch gesteuert nach Datum */}
+      {isCampaignActive && (
+        <a
+          href={SPENDENLAUF_CONFIG.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Spendenlauf für Menschenrechte beim ECCHR online unterstützen"
+          className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
+        >
+          <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
+            <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+              <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
+                <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
+              </span>
+              <span className="font-semibold tracking-wide truncate">
+                {currentLang === 'fa'
+                  ? 'کمپین دویدن برای حقوق بشر:'
+                  : currentLang === 'en'
+                  ? 'Run for Human Rights:'
+                  : 'Spendenlauf für Menschenrechte:'}
+              </span>
+              <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity hidden md:inline truncate">
+                {currentLang === 'fa'
+                  ? 'حمایت از کارزار شیرزن برای ECCHR'
+                  : currentLang === 'en'
+                  ? 'Support SchirZan’s fundraising campaign at ECCHR'
+                  : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+              </span>
+            </div>
+            <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
+              <span>
+                {currentLang === 'fa'
+                  ? 'کمک آنلاین'
+                  : currentLang === 'en'
+                  ? 'Donate'
+                  : 'Jetzt spenden'}
+              </span>
+              <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
             </span>
           </div>
-          <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
-            <span>
-              {currentLang === 'fa'
-                ? 'کمک آنلاین'
-                : currentLang === 'en'
-                ? 'Donate'
-                : 'Jetzt spenden'}
-            </span>
-            <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
-          </span>
-        </div>
-      </a>
+        </a>
+      )}
 
       <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
         
