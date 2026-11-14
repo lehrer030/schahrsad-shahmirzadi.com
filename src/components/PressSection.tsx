@@ -2,18 +2,16 @@ import React from 'react';
 import {
   PRESS_ITEMS,
   EXHIBITIONS_DATA,
-  PUBLICATIONS_DATA,
   type Language
 } from '../data/photographyData';
 import {
   ExternalLink,
   BookOpen,
-  Film,
   MapPin,
   Calendar,
-  Sparkles,
-  Award
+  Sparkles
 } from 'lucide-react';
+import { PublicationsGallery } from './PublicationsGallery';
 
 interface PressSectionProps {
   currentLang: Language;
@@ -198,87 +196,29 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
             <BookOpen className="w-4 h-4 text-amber-700" />
             <span>
               {currentLang === 'de'
-                ? 'Offizielle Publikationen & Kataloge'
+                ? 'Fotografie, Editor’s Choice, Videos & E-Books'
                 : currentLang === 'fa'
-                ? 'کتاب‌های سالانه و انتشارات رسمی'
-                : 'Official Publications & Catalogues'}
+                ? 'عکاسی، انتخاب‌های ویژه سردبیر، ویدیوها و کتاب‌ها'
+                : 'Photography, Editor’s Choice, Videos & E-Books'}
             </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
-              ? 'Editor’s Choice, Winners E-Books & Videos'
+              ? 'Photography, Editor’s Choice, Videos & E-Books'
               : currentLang === 'fa'
-              ? 'کتاب‌ها، ویدیوها و انتخاب‌های ویژه سردبیر'
-              : 'Editor’s Choice, Winners E-Books & Videos'}
+              ? 'عکاسی، برگزیدگان سردبیر، فیلم‌های مستند و کتاب‌های رسمی'
+              : 'Photography, Editor’s Choice, Videos & E-Books'}
           </h3>
           <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
             {currentLang === 'de'
-              ? 'Offizielle Druckausgaben mit ISBN, digitale Preisträger-Kataloge und Videopräsentationen führender internationaler Fotowettbewerbe.'
+              ? 'Offizielle Druckausgaben mit Hardcover ISBN, kuratierte Editor’s Choice Galerien (Global Lens & PERSPA), Spider Awards Preisträgerfilme und internationale Gewinner-Jahrbücher mit Beitexten.'
               : currentLang === 'fa'
-              ? 'کتاب‌های رسمی چاپی با شابک، کاتالوگ‌های دیجیتال برگزیدگان و ویدیوهای مستند جوایز بین‌المللی.'
-              : 'Official print editions with ISBN, digital compendiums, and showcase video reels from premier international awards.'}
+              ? 'انتشارات رسمی چاپی با شابک، گالری‌های برگزیده سردبیر (گلوبال لنز و پرسپا)، فیلم‌های مستند جوایز اسپایدر و کتاب‌های سالانه با توضیحات کامل.'
+              : 'Official print editions with hardcover ISBN, curated Editor’s Choice galleries (Global Lens & PERSPA), Spider Awards winning films, and international annual compendiums with detailed captions.'}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {PUBLICATIONS_DATA.map((pub) => {
-            const isVideo = pub.type === 'video';
-            const isBook = pub.type === 'book';
-
-            return (
-              <div
-                key={pub.id}
-                className="p-5 sm:p-6 rounded-2xl bg-[#faf8f5] border border-stone-200/90 flex flex-col justify-between hover:border-amber-700/40 transition-colors space-y-4"
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-amber-800 uppercase">
-                      {isVideo ? (
-                        <Film className="w-3.5 h-3.5 text-amber-700" />
-                      ) : isBook ? (
-                        <BookOpen className="w-3.5 h-3.5 text-amber-700" />
-                      ) : (
-                        <Award className="w-3.5 h-3.5 text-amber-700" />
-                      )}
-                      <span>{pub.publisher}</span>
-                    </span>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-stone-200/80 text-stone-700 uppercase">
-                      {pub.type}
-                    </span>
-                  </div>
-
-                  <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900 leading-snug">
-                    {currentLang === 'de' ? pub.titleDe : currentLang === 'fa' ? pub.titleFa : pub.titleEn}
-                  </h4>
-
-                  <p className="text-xs text-amber-950 font-medium">
-                    {currentLang === 'de' ? pub.subtitleDe : currentLang === 'fa' ? pub.subtitleFa : pub.subtitleEn}
-                  </p>
-
-                  {(pub.detailsDe || pub.detailsEn) && (
-                    <p className="text-xs text-stone-600 leading-relaxed font-normal">
-                      {currentLang === 'de' ? pub.detailsDe : currentLang === 'fa' ? pub.detailsFa : pub.detailsEn}
-                    </p>
-                  )}
-                </div>
-
-                <div className="pt-2">
-                  <a
-                    href={pub.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-between gap-2 px-4 py-2.5 bg-stone-900 hover:bg-stone-800 text-white rounded-xl text-xs font-medium transition-colors shadow-2xs"
-                  >
-                    <span>
-                      {currentLang === 'de' ? pub.linkTextDe : currentLang === 'fa' ? pub.linkTextFa : pub.linkTextEn}
-                    </span>
-                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <PublicationsGallery currentLang={currentLang} />
       </section>
 
     </div>
