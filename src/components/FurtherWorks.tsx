@@ -178,7 +178,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[11px] font-medium text-stone-500 hover:text-stone-900 transition-colors shrink-0"
-                    title="Offizielle Verifikation ansehen"
+                    title={currentLang === 'fa' ? 'مشاهده جایزه' : currentLang === 'en' ? 'View award' : 'Auszeichnung ansehen'}
                   >
                     <span>
                       {currentLang === 'de'

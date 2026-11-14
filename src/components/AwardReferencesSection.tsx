@@ -805,7 +805,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
 
   return (
     <div className="space-y-12 max-w-6xl mx-auto py-8">
-      
+
       {/* Editorial Section Header */}
       <div className="border-b border-stone-200 pb-8 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div className="max-w-3xl space-y-3">
@@ -822,16 +822,16 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
             {currentLang === 'de'
               ? 'Internationale Auszeichnungen & Zertifikate'
               : currentLang === 'fa'
-              ? 'جوایز بین‌المللی، داوری و لینک‌های تایید رسمی'
-              : 'International Photography Award References & Directory'}
+                ? 'جوایز بین‌المللی، داوری و لینک‌های تایید رسمی'
+                : 'International Photography Award References & Directory'}
           </h2>
 
           <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
             {currentLang === 'de'
               ? 'Vollständige Übersicht aller internationalen Fotopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
               : currentLang === 'fa'
-              ? 'فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان.'
-              : 'Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions.'}
+                ? 'فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان.'
+                : 'Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions.'}
           </p>
         </div>
 
@@ -843,31 +843,28 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
           </span>
           <button
             onClick={() => setFilterYear('all')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
-              filterYear === 'all'
-                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === 'all'
+              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+              }`}
           >
             {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
           </button>
           <button
             onClick={() => setFilterYear('2026')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
-              filterYear === '2026'
-                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2026'
+              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+              }`}
           >
             2026 (6)
           </button>
           <button
             onClick={() => setFilterYear('2025')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
-              filterYear === '2025'
-                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2025'
+              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+              }`}
           >
             2025 (5)
           </button>
@@ -882,147 +879,146 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
             className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs transition-all hover:border-amber-800/40"
           >
             {/* Competition Card Header */}
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 border-b border-stone-100 pb-5 mb-6">
-                <div className="space-y-1.5 max-w-2xl">
-                  <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded bg-amber-100 text-amber-900 font-mono text-xs font-bold">
-                      {comp.year}
-                    </span>
-                    <span className="text-xs font-mono text-stone-500 flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-stone-400" />
-                      <span>{currentLang === 'fa' ? comp.hostFa : comp.host}</span>
-                    </span>
-                  </div>
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 border-b border-stone-100 pb-5 mb-6">
+              <div className="space-y-1.5 max-w-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-0.5 rounded bg-amber-100 text-amber-900 font-mono text-xs font-bold">
+                    {comp.year}
+                  </span>
+                  <span className="text-xs font-mono text-stone-500 flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-stone-400" />
+                    <span>{currentLang === 'fa' ? comp.hostFa : comp.host}</span>
+                  </span>
+                </div>
 
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900">
-                    {comp.name}
-                  </h3>
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900">
+                  {comp.name}
+                </h3>
 
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-1">
-                    {currentLang === 'de'
-                      ? comp.scopeDe
-                      : currentLang === 'fa'
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-1">
+                  {currentLang === 'de'
+                    ? comp.scopeDe
+                    : currentLang === 'fa'
                       ? comp.scopeFa
                       : comp.scopeEn}
-                  </p>
-                </div>
+                </p>
+              </div>
 
-                {/* Badge Image & Main Directory Link */}
-                <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0">
-                  {comp.badgeImage && (
-                    <img
-                      src={resolveAsset(comp.badgeImage)}
-                      alt={comp.name}
-                      className="h-10 sm:h-12 w-auto object-contain"
-                      loading="lazy"
-                    />
-                  )}
+              {/* Badge Image & Main Directory Link */}
+              <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0">
+                {comp.badgeImage && (
+                  <img
+                    src={resolveAsset(comp.badgeImage)}
+                    alt={comp.name}
+                    className="h-10 sm:h-12 w-auto object-contain"
+                    loading="lazy"
+                  />
+                )}
 
-                  {comp.mainDirectoryUrl && (
-                    <a
-                      href={comp.mainDirectoryUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-950 transition-colors"
-                    >
-                      <span>
-                        {currentLang === 'fa'
-                          ? 'سایت رسمی مسابقه'
-                          : currentLang === 'en'
+                {comp.mainDirectoryUrl && (
+                  <a
+                    href={comp.mainDirectoryUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-950 transition-colors"
+                  >
+                    <span>
+                      {currentLang === 'fa'
+                        ? 'سایت رسمی مسابقه'
+                        : currentLang === 'en'
                           ? 'Official Winners Directory'
                           : 'Offizielles Gewinner-Verzeichnis'}
-                      </span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  )}
-                </div>
+                    </span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
               </div>
+            </div>
 
-              {/* Honors & Awarded Works Breakdown */}
-              <div className="space-y-6">
-                {comp.honors.map((honorGroup, hIdx) => {
-                  const isTopHonor = honorGroup.type === 'winner' || honorGroup.type === 'second';
+            {/* Honors & Awarded Works Breakdown */}
+            <div className="space-y-6">
+              {comp.honors.map((honorGroup, hIdx) => {
+                const isTopHonor = honorGroup.type === 'winner' || honorGroup.type === 'second';
 
-                  return (
-                    <div
-                      key={hIdx}
-                      className={`p-4 sm:p-5 rounded-2xl border ${
-                        isTopHonor
-                          ? 'bg-amber-50/70 border-amber-300/80'
-                          : 'bg-[#faf8f5] border-stone-200/80'
+                return (
+                  <div
+                    key={hIdx}
+                    className={`p-4 sm:p-5 rounded-2xl border ${isTopHonor
+                      ? 'bg-amber-50/70 border-amber-300/80'
+                      : 'bg-[#faf8f5] border-stone-200/80'
                       }`}
-                    >
-                      <div className="flex items-center gap-2 mb-3">
-                        {isTopHonor ? (
-                          <Trophy className="w-4 h-4 text-amber-700" />
-                        ) : (
-                          <Award className="w-4 h-4 text-stone-600" />
-                        )}
-                        <h4 className="font-serif font-bold text-sm sm:text-base text-stone-900">
-                          {currentLang === 'de'
-                            ? honorGroup.labelDe
-                            : currentLang === 'fa'
+                  >
+                    <div className="flex items-center gap-2 mb-3">
+                      {isTopHonor ? (
+                        <Trophy className="w-4 h-4 text-amber-700" />
+                      ) : (
+                        <Award className="w-4 h-4 text-stone-600" />
+                      )}
+                      <h4 className="font-serif font-bold text-sm sm:text-base text-stone-900">
+                        {currentLang === 'de'
+                          ? honorGroup.labelDe
+                          : currentLang === 'fa'
                             ? honorGroup.labelFa
                             : honorGroup.labelEn}
-                        </h4>
-                      </div>
-
-                      {/* List of awarded works */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                        {honorGroup.items.map((item, itemIdx) => {
-                          const thumbImg = getAwardWorkImage(item.title, item.image);
-
-                          return (
-                            <div
-                              key={itemIdx}
-                              className="bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm transition-all group"
-                            >
-                              <div className="flex items-center gap-3 min-w-0 flex-1">
-                                {thumbImg && (
-                                  <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-stone-100 shrink-0 border border-stone-200/80 shadow-2xs relative">
-                                    <img
-                                      src={resolveAsset(thumbImg)}
-                                      alt={item.title}
-                                      loading="lazy"
-                                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                    />
-                                  </div>
-                                )}
-                                <div className="space-y-0.5 min-w-0 flex-1">
-                                  <h5
-                                    className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-1 sm:truncate"
-                                    title={getAwardWorkTitle(item.title, currentLang)}
-                                  >
-                                    {getAwardWorkTitle(item.title, currentLang)}
-                                  </h5>
-                                  <p className="text-[11px] text-stone-500 font-mono line-clamp-1 sm:truncate">
-                                    {getCategoryTitle(item.category, currentLang, item.categoryFa)}
-                                  </p>
-                                </div>
-                              </div>
-
-                              {item.zoomUrl && (
-                                <a
-                                  href={item.zoomUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white transition-colors text-[10px] font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
-                                  title={currentLang === 'fa' ? 'استعلام اصالت اثر' : currentLang === 'en' ? 'View official verification' : 'Offizielle Verifikation ansehen'}
-                                >
-                                  <span>{currentLang === 'fa' ? 'استعلام' : currentLang === 'en' ? 'Verify' : 'Verifizieren'}</span>
-                                  <ExternalLink className="w-3 h-3" />
-                                </a>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
+                      </h4>
                     </div>
-                  );
-                })}
-              </div>
 
+                    {/* List of awarded works */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {honorGroup.items.map((item, itemIdx) => {
+                        const thumbImg = getAwardWorkImage(item.title, item.image);
+
+                        return (
+                          <div
+                            key={itemIdx}
+                            className="bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm transition-all group"
+                          >
+                            <div className="flex items-center gap-3 min-w-0 flex-1">
+                              {thumbImg && (
+                                <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-stone-100 shrink-0 border border-stone-200/80 shadow-2xs relative">
+                                  <img
+                                    src={resolveAsset(thumbImg)}
+                                    alt={item.title}
+                                    loading="lazy"
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                  />
+                                </div>
+                              )}
+                              <div className="space-y-0.5 min-w-0 flex-1">
+                                <h5
+                                  className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-1 sm:truncate"
+                                  title={getAwardWorkTitle(item.title, currentLang)}
+                                >
+                                  {getAwardWorkTitle(item.title, currentLang)}
+                                </h5>
+                                <p className="text-[11px] text-stone-500 font-mono line-clamp-1 sm:truncate">
+                                  {getCategoryTitle(item.category, currentLang, item.categoryFa)}
+                                </p>
+                              </div>
+                            </div>
+
+                            {item.zoomUrl && (
+                              <a
+                                href={item.zoomUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white transition-colors text-[10px] font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
+                                title={currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'en' ? 'View artwork' : 'Werk ansehen'}
+                              >
+                                <span>{currentLang === 'fa' ? 'مشاهده' : currentLang === 'en' ? 'View' : 'Ansehen'}</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                            )}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+
+          </div>
         ))}
       </div>
 
