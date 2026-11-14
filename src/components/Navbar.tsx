@@ -485,10 +485,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Contact Button (Tablet only, as item 09 Kontakt is already in the desktop bar) */}
+          {/* Separate Contact Button on the right */}
           <button
             onClick={onOpenContact}
-            className="hidden sm:inline-flex lg:hidden items-center px-3.5 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
+            className="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
           >
             <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
           </button>
