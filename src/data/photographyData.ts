@@ -26,6 +26,9 @@ export interface PhotoItem {
   badgeDe?: string;
   badgeEn?: string;
   badgeFa?: string;
+  locationDe?: string;
+  locationEn?: string;
+  locationFa?: string;
 }
 
 export interface PhotoSeries {

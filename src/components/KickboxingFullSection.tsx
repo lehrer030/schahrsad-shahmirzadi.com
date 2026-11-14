@@ -681,6 +681,12 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {/* Fight Photo 1: vs Sofia Cavallo */}
               <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
                 <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
+                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                      <Trophy className="w-3 h-3 text-amber-400" />
+                      <span>{currentLang === 'fa' ? 'کاخ دیدرزدورف · براندنبورگ (۲۰۱۷)' : 'Schloss Diedersdorf · Brandenburg (2017)'}</span>
+                    </span>
+                  </div>
                   <img
                     src={resolveAsset('/images/2025_11_vs-Sofia-Cavallo.webp')}
                     alt="Schahrsad Shahmirzadi vs. Sofia Cavallo (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"
@@ -706,6 +712,12 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {/* Fight Photo 2: vs Jessica Marazzi */}
               <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
                 <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
+                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                      <Trophy className="w-3 h-3 text-amber-400" />
+                      <span>{currentLang === 'fa' ? 'کاخ دیدرزدورف · براندنبورگ (۲۰۱۶)' : 'Schloss Diedersdorf · Brandenburg (2016)'}</span>
+                    </span>
+                  </div>
                   <img
                     src={resolveAsset('/images/2025_11_vs.-Jessica-Marazzi.webp')}
                     alt="Schahrsad Shahmirzadi vs. Jessica Marazzi (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"

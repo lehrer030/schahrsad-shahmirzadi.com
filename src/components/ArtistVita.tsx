@@ -1,6 +1,6 @@
 import React from 'react';
 import { ACADEMIC_MILESTONES, type Language } from '../data/photographyData';
-import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap } from 'lucide-react';
+import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap, MapPin } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 
 interface ArtistVitaProps {
@@ -145,6 +145,12 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
         {/* Official Campus Image: Universität Koblenz (ZFUW) */}
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
           <div className="relative aspect-[16/9] sm:aspect-[21/9] max-h-[380px] w-full overflow-hidden bg-stone-100">
+            <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                <GraduationCap className="w-3.5 h-3.5 text-amber-400" />
+                <span>{currentLang === 'fa' ? 'دانشگاه کوبلنتس · کوبلنتس، آلمان' : 'Universität Koblenz · Koblenz'}</span>
+              </span>
+            </div>
             <img
               src={resolveAsset('/images/2025_08_uni-koblenz.webp')}
               onError={(e) => {
@@ -375,6 +381,12 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             <div className="md:col-span-4">
               <div className="group bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs">
                 <div className="aspect-3/4 overflow-hidden bg-stone-100 relative">
+                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                      <MapPin className="w-3 h-3 text-amber-400" />
+                      <span>{currentLang === 'fa' ? 'برلین · برای صلح و محیط‌زیست' : 'Berlin · Für Frieden & Umweltschutz'}</span>
+                    </span>
+                  </div>
                   <img
                     src={resolveAsset('/images/2025_07_image00001-768x1366.webp')}
                     alt="SchirZan – Halbmarathons & Marathon Berlin für Frieden und Umweltschutz"

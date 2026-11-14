@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, ExternalLink, Trophy, Flame, Award, Eye, Heart } from 'lucide-react';
+import { Play, ExternalLink, Trophy, Flame, Award, Eye, Heart, MapPin } from 'lucide-react';
 import type { Language, PhotoItem } from '../data/photographyData';
 import { GALLERY_PAGE_DATA } from '../data/galleryData';
 import { resolveAsset } from '../utils/resolveAsset';
@@ -160,6 +160,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       : currentLang === 'fa'
                       ? photo.captionFa
                       : photo.captionEn;
+                  const locationTag =
+                    currentLang === 'fa'
+                      ? photo.locationFa
+                      : currentLang === 'en'
+                      ? photo.locationEn
+                      : photo.locationDe;
 
                   return (
                     <div
@@ -168,6 +174,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       className="group relative bg-white border border-stone-200 hover:border-stone-400 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer"
                     >
                       <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 group/img">
+                        {locationTag && (
+                          <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                              <Trophy className="w-3 h-3 text-amber-400" />
+                              <span>{locationTag}</span>
+                            </span>
+                          </div>
+                        )}
                         <img
                           src={resolveAsset(photo.src)}
                           alt={photo.alt}
@@ -255,6 +269,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   : currentLang === 'fa'
                   ? photo.badgeFa
                   : photo.badgeEn;
+              const locationTag =
+                currentLang === 'fa'
+                  ? photo.locationFa
+                  : currentLang === 'en'
+                  ? photo.locationEn
+                  : photo.locationDe;
               const linkText =
                 currentLang === 'de'
                   ? (photo.externalLinkTextDe || 'Spendenlauf unterstützen →')
@@ -276,6 +296,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-red-600/95 text-white rounded text-[11px] font-bold shadow-md tracking-wide">
                           <Heart className="w-3 h-3 fill-white" />
                           {badge}
+                        </span>
+                      </div>
+                    )}
+                    {!badge && locationTag && (
+                      <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                          <MapPin className="w-3 h-3 text-amber-400" />
+                          <span>{locationTag}</span>
                         </span>
                       </div>
                     )}
@@ -384,6 +412,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   : currentLang === 'fa'
                   ? photo.captionFa
                   : photo.captionEn;
+              const locationTag =
+                currentLang === 'fa'
+                  ? photo.locationFa
+                  : currentLang === 'en'
+                  ? photo.locationEn
+                  : photo.locationDe;
 
               const isCertificate = photo.id === 'ipa-athens-06';
               const isPortraitPerson = photo.id === 'ipa-athens-05' || photo.id === 'ipa-athens-04';
@@ -420,11 +454,11 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       </div>
                     )}
 
-                    {photo.id === 'ipa-athens-05' && (
+                    {!isCertificate && locationTag && (
                       <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
                         <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
                           <Trophy className="w-3 h-3 text-amber-400" />
-                          <span>IPA Gala 2025 · Athen</span>
+                          <span>{locationTag}</span>
                         </span>
                       </div>
                     )}
