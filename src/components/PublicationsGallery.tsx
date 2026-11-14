@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import {
   ExternalLink,
   BookOpen,
@@ -210,29 +210,60 @@ const PerspaCard: React.FC<{
   onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
 }> = ({ item, currentLang, onOpenLightbox }) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
   const isDe = currentLang === 'de';
   const isFa = currentLang === 'fa';
 
   const currentPhoto = item.photos[selectedIndex] || item.photos[0];
 
-  const handlePrev = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
+  const handlePrev = (e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
     setSelectedIndex((prev) => (prev - 1 + item.photos.length) % item.photos.length);
   };
 
-  const handleNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
+  const handleNext = (e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
     setSelectedIndex((prev) => (prev + 1) % item.photos.length);
+  };
+
+  // Mobile Touch Swipe Handling
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+
+    // Horizontales Wischen erkennen (mind. 35px, horizontal dominanter als vertikal)
+    if (Math.abs(deltaX) > 35 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (deltaX < 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
   };
 
   return (
     <div className="group/card relative flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-600/60 hover:shadow-lg transition-all duration-300">
-      {/* Lead image presentation with no baked-in screenshot arrows */}
+      {/* Lead image presentation with full mobile swipe & tap support */}
       <div
         className="relative block overflow-hidden bg-stone-900 aspect-3/4 sm:aspect-2/3 cursor-pointer select-none"
         onClick={() => onOpenLightbox?.(item.photos, selectedIndex)}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <img
           src={resolveAsset(currentPhoto.src)}
@@ -243,7 +274,7 @@ const PerspaCard: React.FC<{
 
         {/* Top Badges */}
         <div className="absolute top-2.5 left-2.5 right-2.5 z-10 flex items-center justify-between pointer-events-none">
-          <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-900/90 text-amber-100 shadow-md backdrop-blur-xs">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-sans font-bold uppercase tracking-wider bg-amber-900/95 text-amber-100 shadow-md backdrop-blur-xs select-none">
             PERSPA Choice #{item.choiceNum}
           </span>
           <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-mono font-medium bg-stone-950/80 text-white shadow-md backdrop-blur-xs">
@@ -252,12 +283,12 @@ const PerspaCard: React.FC<{
           </span>
         </div>
 
-        {/* Fully functional Navigation Arrows — ONLY visible on card hover, and they actually work! */}
+        {/* Navigation Arrows — on mobile always visible, on desktop visible on hover */}
         <button
           type="button"
           onClick={handlePrev}
           aria-label={isDe ? 'Vorheriges Bild' : 'Previous image'}
-          className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
+          className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-85 sm:opacity-0 sm:group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
         >
           <ChevronLeft className="w-4 h-4" />
         </button>
@@ -265,15 +296,15 @@ const PerspaCard: React.FC<{
           type="button"
           onClick={handleNext}
           aria-label={isDe ? 'Nächstes Bild' : 'Next image'}
-          className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
+          className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-85 sm:opacity-0 sm:group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
         >
           <ChevronRight className="w-4 h-4" />
         </button>
 
-        {/* HOVER FENSTER: Displays the remaining images of this series on hover */}
+        {/* DESKTOP HOVER FENSTER: Displays the remaining images of this series on desktop hover */}
         <div
           onClick={(e) => e.stopPropagation()}
-          className="absolute bottom-0 inset-x-0 z-20 p-3 pt-6 bg-gradient-to-t from-stone-950 via-stone-950/90 to-transparent backdrop-blur-[2px] opacity-0 group-hover/card:opacity-100 pointer-events-none group-hover/card:pointer-events-auto transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0"
+          className="hidden sm:block absolute bottom-0 inset-x-0 z-20 p-3 pt-6 bg-gradient-to-t from-stone-950 via-stone-950/90 to-transparent backdrop-blur-[2px] opacity-0 group-hover/card:opacity-100 pointer-events-none group-hover/card:pointer-events-auto transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0"
         >
           <div className="flex items-center justify-between text-white text-[11px] mb-2 font-medium">
             <span className="flex items-center gap-1.5 text-stone-200">
@@ -296,7 +327,7 @@ const PerspaCard: React.FC<{
             </button>
           </div>
 
-          {/* Horizontal thumbnail strip of remaining pictures */}
+          {/* Horizontal thumbnail strip on desktop */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
             {item.photos.map((photo, pIdx) => {
               const isActive = pIdx === selectedIndex;
@@ -305,9 +336,9 @@ const PerspaCard: React.FC<{
                   key={photo.id}
                   type="button"
                   onMouseEnter={() => setSelectedIndex(pIdx)}
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.stopPropagation();
                     setSelectedIndex(pIdx);
-                    onOpenLightbox?.(item.photos, pIdx);
                   }}
                   className={`relative shrink-0 w-11 h-13 rounded-md overflow-hidden border transition-all duration-200 cursor-pointer ${
                     isActive
@@ -330,6 +361,49 @@ const PerspaCard: React.FC<{
             })}
           </div>
         </div>
+      </div>
+
+      {/* MOBILE THUMBNAIL BAR: Positioned cleanly BELOW the photo — never covers the artwork! */}
+      <div className="sm:hidden p-2.5 bg-stone-50 border-b border-stone-200/80 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 scrollbar-none">
+          {item.photos.map((photo, pIdx) => {
+            const isActive = pIdx === selectedIndex;
+            return (
+              <button
+                key={photo.id}
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedIndex(pIdx);
+                }}
+                className={`relative shrink-0 w-9 h-9 rounded-md overflow-hidden border transition-all cursor-pointer ${
+                  isActive
+                    ? 'border-amber-600 ring-2 ring-amber-500/50 scale-105'
+                    : 'border-stone-300 opacity-60'
+                }`}
+                title={photo.alt}
+              >
+                <img
+                  src={resolveAsset(photo.src)}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover protected-art"
+                  loading="lazy"
+                />
+                <span className="absolute bottom-0 right-0 text-[7px] font-mono px-0.5 bg-black/80 text-white rounded-tl">
+                  {pIdx + 1}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+        <button
+          type="button"
+          onClick={() => onOpenLightbox?.(item.photos, selectedIndex)}
+          className="shrink-0 text-[10px] font-medium text-amber-900 bg-amber-100 hover:bg-amber-200 px-2.5 py-1.5 rounded-md flex items-center gap-1 cursor-pointer shadow-2xs"
+        >
+          <span>{isFa ? 'بزرگنمایی' : isDe ? 'Großansicht' : 'Enlarge'}</span>
+          <Maximize2 className="w-3 h-3" />
+        </button>
       </div>
 
       {/* Card Info & Links Below */}
