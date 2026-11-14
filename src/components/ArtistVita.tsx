@@ -10,8 +10,8 @@ interface ArtistVitaProps {
 export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   return (
     <div className="space-y-12 sm:space-y-16 max-w-5xl mx-auto">
-      
-            {/* 1. BIOGRAFIE & BERUFLICHER WERDEGANG */}
+
+      {/* 1. BIOGRAFIE & BERUFLICHER WERDEGANG */}
       <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
         <div className="border-b border-stone-100 pb-4">
           <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
@@ -23,7 +23,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
         </div>
         {/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-          
+
           {/* Pillar: Professional Background / Water Protection */}
           <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
             <div className="space-y-3">
@@ -39,15 +39,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 {currentLang === 'fa'
                   ? 'حفاظت از منابع آب، محیط زیست و مطالعات آکادمیک'
                   : currentLang === 'de'
-                  ? 'Beruflicher Hintergrund & Umweltwissenschaften'
-                  : 'Professional Background & Environmental Sciences'}
+                    ? 'Beruflicher Hintergrund & Umweltwissenschaften'
+                    : 'Professional Background & Environmental Sciences'}
               </h4>
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
                 {currentLang === 'de'
                   ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser LAWA. Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
                   : currentLang === 'fa'
-                  ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
-                  : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
+                    ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
+                    : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
               </p>
             </div>
             <div className="pt-2 border-t border-stone-200/60 text-[11px] font-mono text-emerald-900 font-semibold">
@@ -70,15 +70,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 {currentLang === 'fa'
                   ? 'پروژه‌های هنری و عکاسی با محوریت جامعه و محیط‌زیست'
                   : currentLang === 'de'
-                  ? 'Eigene photographische und künstlerische Projekte'
-                  : 'Her Own Photographic and Artistic Projects'}
+                    ? 'Eigene photographische und künstlerische Projekte'
+                    : 'Her Own Photographic and Artistic Projects'}
               </h4>
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
                 {currentLang === 'de'
                   ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich SchirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
                   : currentLang === 'fa'
-                  ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
-                  : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
+                    ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
+                    : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
               </p>
               <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
                 <li>• <strong>„In Between Spaces“</strong> · Trieste Photo Days & Urban Photo Awards</li>
@@ -100,9 +100,9 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
         </div>
       </section>
 
-{/* 2. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
+      {/* 2. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
       <section id="education" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
-        
+
         {/* Header & Tagline */}
         <div className="border-b border-stone-100 pb-6 space-y-2">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
@@ -111,16 +111,16 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               {currentLang === 'de'
                 ? 'Akademische Laufbahn'
                 : currentLang === 'fa'
-                ? 'سوابق تحصیلی و دانشگاهی'
-                : 'Academic Background'}
+                  ? 'سوابق تحصیلی و دانشگاهی'
+                  : 'Academic Background'}
             </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
               ? 'Interdisziplinärer akademischer Bildungsweg'
               : currentLang === 'fa'
-              ? 'مسیر بین‌رشته‌ای آکادمیک'
-              : 'Interdisciplinary Academic Education'}
+                ? 'مسیر بین‌رشته‌ای آکادمیک'
+                : 'Interdisciplinary Academic Education'}
           </h3>
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
@@ -171,16 +171,16 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 {currentLang === 'de'
                   ? 'Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung ZFUW'
                   : currentLang === 'fa'
-                  ? 'دانشگاه کوبلنتس – مرکز آموزش‌های آزاد و مجازی ZFUW'
-                  : 'University of Koblenz – Centre for Distance Studies & Further Education ZFUW'}
+                    ? 'دانشگاه کوبلنتس – مرکز آموزش‌های آزاد و مجازی ZFUW'
+                    : 'University of Koblenz – Centre for Distance Studies & Further Education ZFUW'}
               </span>
             </div>
             <span className="font-mono text-[11px] text-stone-500 bg-stone-200/60 px-2.5 py-0.5 rounded-full">
               {currentLang === 'de'
                 ? 'Masterstudium Angewandte Umweltwissenschaften · M.Sc.'
                 : currentLang === 'fa'
-                ? 'کارشناسی ارشد علوم کاربردی محیط زیست'
-                : 'M.Sc. Applied Environmental Sciences'}
+                  ? 'کارشناسی ارشد علوم کاربردی محیط زیست'
+                  : 'M.Sc. Applied Environmental Sciences'}
             </span>
           </div>
         </div>
@@ -192,8 +192,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               {currentLang === 'de'
                 ? 'Akademische Laufbahn – Übersicht'
                 : currentLang === 'fa'
-                ? 'جدول سوابق تحصیلی و دانشگاهی'
-                : 'Academic Career – Overview'}
+                  ? 'جدول سوابق تحصیلی و دانشگاهی'
+                  : 'Academic Career – Overview'}
             </h4>
             <span className="text-xs font-mono text-stone-400">
               {currentLang === 'fa' ? '۵ مرحله تحصیلی' : '5 Milestones'}
@@ -209,29 +209,29 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                       {currentLang === 'de'
                         ? 'Zeitraum'
                         : currentLang === 'fa'
-                        ? 'دوره زمانی'
-                        : 'Period'}
+                          ? 'دوره زمانی'
+                          : 'Period'}
                     </th>
                     <th className="py-3 px-4 font-bold min-w-[180px]">
                       {currentLang === 'de'
                         ? 'Studiengang / Ausbildung'
                         : currentLang === 'fa'
-                        ? 'رشته / دوره آموزشی'
-                        : 'Field of Study / Training'}
+                          ? 'رشته / دوره آموزشی'
+                          : 'Field of Study / Training'}
                     </th>
                     <th className="py-3 px-4 font-bold min-w-[200px]">
                       {currentLang === 'de'
                         ? 'Einrichtung'
                         : currentLang === 'fa'
-                        ? 'موسسه / دانشگاه'
-                        : 'Institution'}
+                          ? 'موسسه / دانشگاه'
+                          : 'Institution'}
                     </th>
                     <th className="py-3 px-4 font-bold min-w-[220px]">
                       {currentLang === 'de'
                         ? 'Abschluss / Stand'
                         : currentLang === 'fa'
-                        ? 'مدرک / وضعیت تحصیلی'
-                        : 'Degree / Status'}
+                          ? 'مدرک / وضعیت تحصیلی'
+                          : 'Degree / Status'}
                     </th>
                   </tr>
                 </thead>
@@ -252,23 +252,23 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                         {currentLang === 'de'
                           ? row.fieldDe
                           : currentLang === 'fa'
-                          ? row.fieldFa
-                          : row.fieldEn}
+                            ? row.fieldFa
+                            : row.fieldEn}
                       </td>
                       <td className="py-3.5 px-4 text-stone-600 align-top">
                         {currentLang === 'de'
                           ? row.institutionDe
                           : currentLang === 'fa'
-                          ? row.institutionFa
-                          : row.institutionEn}
+                            ? row.institutionFa
+                            : row.institutionEn}
                       </td>
                       <td className="py-3.5 px-4 text-stone-700 align-top leading-relaxed">
                         <span className="inline-block px-2.5 py-1 rounded-md bg-stone-100/90 border border-stone-200/70 text-xs font-normal">
                           {currentLang === 'de'
                             ? row.degreeDe
                             : currentLang === 'fa'
-                            ? row.degreeFa
-                            : row.degreeEn}
+                              ? row.degreeFa
+                              : row.degreeEn}
                         </span>
                       </td>
                     </tr>
@@ -285,39 +285,39 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             {currentLang === 'de'
               ? 'Interdisziplinärer akademischer Bildungsweg'
               : currentLang === 'fa'
-              ? 'شرح مسیر بین‌رشته‌ای آکادمیک و شغلی'
-              : 'Interdisciplinary Academic Career'}
+                ? 'شرح مسیر بین‌رشته‌ای آکادمیک و شغلی'
+                : 'Interdisciplinary Academic Career'}
           </h4>
           <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
             <p>
               {currentLang === 'de'
                 ? 'Schahrsad Shahmirzadi verfügt über einen interdisziplinären Bildungs- und Berufsweg in den Bereichen Recht, Sicherheit und Umwelt mit einem Schwerpunkt im Wasserbereich.'
                 : currentLang === 'fa'
-                ? 'شهزاد شاهمیرزادی دارای پیشینه‌ای جامع و بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و محیط زیست با تمرکز ویژه بر منابع آب است.'
-                : 'Schahrsad Shahmirzadi possesses a comprehensive interdisciplinary background across law, public safety, and environmental sciences with a primary focus on water management.'}
+                  ? 'شهزاد شاهمیرزادی دارای پیشینه‌ای جامع و بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و محیط زیست با تمرکز ویژه بر منابع آب است.'
+                  : 'Schahrsad Shahmirzadi possesses a comprehensive interdisciplinary background across law, public safety, and environmental sciences with a primary focus on water management.'}
             </p>
             <p>
               {currentLang === 'de'
                 ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Im Zusammenhang mit ihrem Leistungssport im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort war sie unter anderem im Landeskriminalamt LKA sowie in stabsnahen Funktionen tätig.'
                 : currentLang === 'fa'
-                ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم LKA و دوایر ستادی خدمت نمود.'
-                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office LKA and in executive staff roles.'}
+                  ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم LKA و دوایر ستادی خدمت نمود.'
+                  : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office LKA and in executive staff roles.'}
             </p>
             <p>
               {currentLang === 'de'
                 ? 'Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend den Masterstudiengang Angewandte Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz ZFUW.'
                 : currentLang === 'fa'
-                ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست»، M.Sc.، را در دانشگاه کوبلنتس ZFUW می‌گذراند.'
-                : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences at the University of Koblenz ZFUW.'}
+                  ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست»، M.Sc.، را در دانشگاه کوبلنتس ZFUW می‌گذراند.'
+                  : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences at the University of Koblenz ZFUW.'}
             </p>
           </div>
         </div>
       </section>
 
-      
-{/* 3. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
+
+      {/* 3. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
       <section id="engagement" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
-        
+
         {/* Header & Hero Image with Mission Statement */}
         <div className="border-b border-stone-100 pb-8 space-y-6">
           <div className="space-y-2">
@@ -327,16 +327,16 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 {currentLang === 'de'
                   ? 'Gesellschaftliches Engagement'
                   : currentLang === 'fa'
-                  ? 'مسئولیت اجتماعی، محیط زیست و صلح'
-                  : 'Social & Environmental Advocacy'}
+                    ? 'مسئولیت اجتماعی، محیط زیست و صلح'
+                    : 'Social & Environmental Advocacy'}
               </span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
               {currentLang === 'de'
                 ? 'Engagiert für Umweltschutz, Menschenrechte & Frieden'
                 : currentLang === 'fa'
-                ? 'متعهد به حفاظت از محیط زیست، حقوق بشر و صلح'
-                : 'Committed to Environmental Protection, Human Rights & Peace'}
+                  ? 'متعهد به حفاظت از محیط زیست، حقوق بشر و صلح'
+                  : 'Committed to Environmental Protection, Human Rights & Peace'}
             </h3>
           </div>
 
@@ -362,8 +362,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                 {currentLang === 'de'
                   ? 'Sie nutzt ihre Stimme, um Aufmerksamkeit auf gesellschaftliche Herausforderungen zu lenken und zu positivem Wandel beizutragen. Sie möchte Menschen dazu inspirieren, Verantwortung für die Umwelt zu übernehmen, sich für Menschenrechte einzusetzen und in Frieden und gegenseitigem Respekt zusammenzuleben.'
                   : currentLang === 'fa'
-                  ? 'او صدای خود را برای افزایش آگاهی عمومی پیرامون چالش‌های جامعه و ایجاد تغییرات مثبت به کار می‌گیرد و امیدوار است الهام‌بخش انسان‌ها در پذیرش مسئولیت محیط‌زیست، حمایت از حقوق بشر و همزیستی در صلح و احترام متقابل باشد.'
-                  : 'She uses her voice to raise awareness of societal challenges and contribute to positive change. She hopes to inspire people to take responsibility for the environment, support human rights, and live together in peace and mutual respect.'}
+                    ? 'او صدای خود را برای افزایش آگاهی عمومی پیرامون چالش‌های جامعه و ایجاد تغییرات مثبت به کار می‌گیرد و امیدوار است الهام‌بخش انسان‌ها در پذیرش مسئولیت محیط‌زیست، حمایت از حقوق بشر و همزیستی در صلح و احترام متقابل باشد.'
+                    : 'She uses her voice to raise awareness of societal challenges and contribute to positive change. She hopes to inspire people to take responsibility for the environment, support human rights, and live together in peace and mutual respect.'}
               </p>
               <div className="p-4 rounded-2xl bg-[#faf8f5] border border-stone-200/80">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 block mb-1">
@@ -399,8 +399,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                     {currentLang === 'fa'
                       ? 'دویدن در خیابان‌های برلین برای صلح و محیط‌زیست'
                       : currentLang === 'de'
-                      ? 'Halbmarathons & Marathon Berlin: Für Frieden & Umweltschutz'
-                      : 'Half Marathons & Marathon Berlin: For Peace & Environment'}
+                        ? 'Halbmarathons & Marathon Berlin: Für Frieden & Umweltschutz'
+                        : 'Half Marathons & Marathon Berlin: For Peace & Environment'}
                   </span>
                 </div>
               </div>
@@ -478,15 +478,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   {currentLang === 'fa'
                     ? 'برای شیرزن، ورزش فراتر از تمرین بدنی است؛ ورزش بیانگر تعهد عمیق او به آرمان‌هایی است که به آن‌ها باور دارد.'
                     : currentLang === 'de'
-                    ? 'Für SchirZan ist Sport mehr als körperliche Bewegung – er ist auch Ausdruck ihres Engagements für die Themen, die ihr am Herzen liegen.'
-                    : 'For SchirZan, sport is more than physical exercise—it is also an expression of her commitment to the causes she cares about.'}
+                      ? 'Für SchirZan ist Sport mehr als körperliche Bewegung – er ist auch Ausdruck ihres Engagements für die Themen, die ihr am Herzen liegen.'
+                      : 'For SchirZan, sport is more than physical exercise—it is also an expression of her commitment to the causes she cares about.'}
                 </p>
                 <p>
                   {currentLang === 'fa'
                     ? 'او از طریق دویدن در نیمه‌ماراتن‌ها و ماراتن‌های بین‌المللی پیام‌هایی چون «برای حفاظت از محیط زیست و صلح» را به گوش همگان می‌رساند.'
                     : currentLang === 'de'
-                    ? 'Durch ihre Halbmarathons und Marathons vermittelt sie klare Botschaften wie „Für Umweltschutz & Frieden“.'
-                    : 'Through her half-marathons and marathons, she shares messages such as “For Environmental Protection & Peace”.'}
+                      ? 'Durch ihre Halbmarathons und Marathons vermittelt sie klare Botschaften wie „Für Umweltschutz & Frieden“.'
+                      : 'Through her half-marathons and marathons, she shares messages such as “For Environmental Protection & Peace”.'}
                 </p>
               </div>
 
@@ -501,15 +501,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   {currentLang === 'fa'
                     ? 'تنها در سال ۲۰۲۵، او یازده نیمه‌ماراتن و یک ماراتن کامل را در برلین با موفقیت به پایان رساند.'
                     : currentLang === 'de'
-                    ? 'Allein im Jahr 2025 absolvierte sie elf Halbmarathons und einen Marathon in Berlin.'
-                    : 'In 2025 alone, she completed eleven half-marathons and one marathon in Berlin.'}
+                      ? 'Allein im Jahr 2025 absolvierte sie elf Halbmarathons und einen Marathon in Berlin.'
+                      : 'In 2025 alone, she completed eleven half-marathons and one marathon in Berlin.'}
                 </p>
                 <div className="pt-1 flex flex-wrap items-center gap-3">
                   <a
                     href="#gallery"
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-950 font-mono hover:underline"
                   >
-                    <span>{currentLang === 'fa' ? 'مشاهده تصاویر در گالری' : currentLang === 'de' ? 'Fotos in der Galerie ansehen →' : 'View photos in the gallery →'}</span>
+                    <span>{currentLang === 'fa' ? 'مشاهده تصاویر در گالری' : currentLang === 'de' ? 'Photos in der Galerie ansehen →' : 'View photos in the gallery →'}</span>
                   </a>
                   <a
                     href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"

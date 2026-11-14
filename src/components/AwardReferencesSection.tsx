@@ -92,8 +92,8 @@ export const getCategoryTitle = (category: string, lang: Language, categoryFa?: 
     'Architecture, Interior – Student/Non-Pro': 'Architektur, Innenraum – Student/Non-Pro',
     'Architecture, Other – Student/Non-Pro': 'Architektur, Sonstige – Student/Non-Pro',
     'Black and White': 'Schwarz-Weiß',
-    'Editorial – Photo Essay (Non-Pro)': 'Redaktionell – Foto-Essay (Non-Pro)',
-    'Exterior Architecture Photography': 'Außenarchitektur-Fotografie',
+    'Editorial – Photo Essay (Non-Pro)': 'Redaktionell – Photo-Essay (Non-Pro)',
+    'Exterior Architecture Photography': 'Außenarchitektur-Photographie',
     'Exterior Architecture Photography – Landscape / Urban Design': 'Außenarchitektur – Landschaft & Stadtgestaltung',
     'Exterior Architecture Photography – Other Exterior (Student)': 'Außenarchitektur – Sonstige Außenbauten (Student)',
     'Fine Art Architecture': 'Fine Art Architektur',
@@ -102,11 +102,11 @@ export const getCategoryTitle = (category: string, lang: Language, categoryFa?: 
     'Interior Architecture Photography – Interior Details': 'Innenarchitektur – Architekturdetails',
     'Interior Architecture Photography – Other Interior': 'Innenarchitektur – Sonstige Innenräume',
     'People, Self-Portrait – Student/Non-Pro': 'Menschen, Selbstporträt – Student/Non-Pro',
-    'Shoot (Photo/Video)': 'Shoot (Foto/Video)',
+    'Shoot (Photo/Video)': 'Shoot (Photo/Video)',
     'Special, Other – Student/Non-Pro': 'Sonderkategorie, Sonstige – Student/Non-Pro',
     'Stairs': 'Treppen & Stufen',
     'Street & Social Documentation': 'Street & Sozialdokumentation',
-    'Sustainable Interior Design Photography': 'Nachhaltige Innenarchitektur-Fotografie',
+    'Sustainable Interior Design Photography': 'Nachhaltige Innenarchitektur-Photographie',
     'Trieste Photo Fringe 2026 – La Preferita': 'Triest Photo Fringe 2026 – La Preferita'
   };
 
@@ -349,7 +349,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     name: 'Architecture MasterPrize (AMP) 2026 – APMP',
     host: 'Los Angeles / United States',
     hostFa: 'ایالات متحده آمریکا',
-    scopeDe: 'Führender US-amerikanischer Architekturpreis. Eine internationale Fachjury bewertet fotografische Arbeiten aus mehreren tausend Einreichungen aus über 94 Ländern.',
+    scopeDe: 'Führender US-amerikanischer Architekturpreis. Eine internationale Fachjury bewertet photographische Arbeiten aus mehreren tausend Einreichungen aus über 94 Ländern.',
     scopeEn: 'Premier US architecture awards program. An esteemed international jury evaluates architectural photography from thousands of entries across 94+ countries.',
     scopeFa: 'معتبرترین جایزه معماری ایالات متحده آمریکا با ارزیابی هیئت داوران بین‌المللی از بیش از ۹۴ کشور.',
     badgeImage: '/images/2026_10_winners_badge-AMP-2026-1024x474.webp',
@@ -435,7 +435,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     name: 'PERSPA – Prix de la Perspective Architecturale 2026',
     host: 'Bourges / France',
     hostFa: 'فرانسه، بورژ',
-    scopeDe: 'Französischer Architekturfotopreis für Bilder, die über bloße Dokumentation hinausgehen und Maßstab, Atmosphäre und menschliche Wahrnehmung erlebbar machen.',
+    scopeDe: 'Französischer Architekturphotopreis für Bilder, die über bloße Dokumentation hinausgehen und Maßstab, Atmosphäre und menschliche Wahrnehmung erlebbar machen.',
     scopeEn: 'French architectural photography award recognizing works that transcend mere depiction to capture scale, atmosphere, and human experience.',
     scopeFa: 'جایزه عکاسی معماری فرانسه برای آثاری که اتمسفر، مقیاس و ادراک انسانی فضا را به تصویر می‌کشند.',
     badgeImage: '/images/2026_10_perspa-awards-2026-second-prize-abstract.webp',
@@ -508,7 +508,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     name: 'Global Lens Photography Awards (GL) 2026',
     host: 'International',
     hostFa: 'بین‌المللی',
-    scopeDe: 'Internationale Auszeichnung für herausragende kuratorische Bildgestaltung in der zeitgenössischen Fotografie.',
+    scopeDe: 'Internationale Auszeichnung für herausragende kuratorische Bildgestaltung in der zeitgenössischen Photographie.',
     scopeEn: 'International recognition honoring outstanding curatorial vision in contemporary fine art photography.',
     scopeFa: 'تقدیر بین‌المللی برای نگاه نوآورانه در عکاسی معاصر.',
     badgeImage: '/images/Global@LENS.png',
@@ -543,7 +543,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'winner',
-        labelDe: 'Ausgewählte Fotografin · Sparte STREETS',
+        labelDe: 'Ausgewählte Photographin · Sparte STREETS',
         labelEn: 'Selected Photographer · STREETS',
         labelFa: 'عکاس برگزیده بخش خیابانی · Selected Photographer',
         items: [
@@ -580,7 +580,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     name: 'Budapest International Foto Awards (BIFA) 2026',
     host: 'Budapest / Hungary',
     hostFa: 'بوداپست / مجارستان',
-    scopeDe: 'Mitteleuropäischer Wettbewerb mit Fokus auf fotografische Exzellenz, kuratiert von einer internationalen Jury.',
+    scopeDe: 'Mitteleuropäischer Wettbewerb mit Fokus auf photographische Exzellenz, kuratiert von einer internationalen Jury.',
     scopeEn: 'Central European photography awards celebrating outstanding visual narratives and artistic distinction.',
     scopeFa: 'مسابقه عکاسی اروپای مرکزی با داوری بین‌المللی برای تجلیل از خلاقیت بصری.',
     badgeImage: '/images/2026_10_winners_badge-1024x474.webp',
@@ -716,7 +716,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     name: 'Black & White Spider Awards 2025 – 20th Edition',
     host: 'Beverly Hills / London',
     hostFa: 'بورلی هیلز / لندن',
-    scopeDe: 'Führender weltweiter Preis für Schwarz-Weiß-Fotografie. Jury mit Vertreter:innen der Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy und Financial Times bei ca. 6.000 Einreichungen aus 64 Ländern.',
+    scopeDe: 'Führender weltweiter Preis für Schwarz-Weiß-Photographie. Jury mit Vertreter:innen der Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy und Financial Times bei ca. 6.000 Einreichungen aus 64 Ländern.',
     scopeEn: 'The leading international accolade for black and white photography. Jurors include Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy, and Financial Times.',
     scopeFa: 'معتبرترین جایزه جهانی عکاسی سیاه‌وسفید با حضور داورانی از تیت مدرن، ساتبیز، گالری سرپنتین و آرت‌نت.',
     badgeImage: '/images/2025_12_spiderfellow20thwinner.webp',
@@ -774,7 +774,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'shortlist',
-        labelDe: '2× Shortlist-Nominierung · Sparte Shoot Foto & Video',
+        labelDe: '2× Shortlist-Nominierung · Sparte Shoot Photo & Video',
         labelEn: '2× Shortlisted · Category Shoot Photo & Video',
         labelFa: '۲ اثر در فهرست نهایی · Shortlisted',
         items: [
@@ -792,7 +792,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'selection',
-        labelDe: '6× Offizielle Auswahl · Sparte Shoot Foto & Video',
+        labelDe: '6× Offizielle Auswahl · Sparte Shoot Photo & Video',
         labelEn: '6× Official Selection · Category Shoot Photo & Video',
         labelFa: '۶ اثر منتخب رسمی · Official Selection',
         items: [
@@ -865,7 +865,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
 
           <p className="text-xs sm:text-[13px] text-stone-500 leading-relaxed font-normal pt-1">
             {currentLang === 'de'
-              ? 'Vollständige Übersicht aller internationalen Fotopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
+              ? 'Vollständige Übersicht aller internationalen Photopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
               : currentLang === 'fa'
                 ? 'فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان.'
                 : 'Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions.'}

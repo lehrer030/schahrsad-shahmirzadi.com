@@ -98,7 +98,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                           {currentLang === 'fa'
                             ? `${work.galleryPhotos.length} تصویر`
                             : currentLang === 'de'
-                            ? `${work.galleryPhotos.length} Fotos`
+                            ? `${work.galleryPhotos.length} Photos`
                             : `${work.galleryPhotos.length} Photos`}
                         </span>
                       </div>
@@ -167,7 +167,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                     {currentLang === 'fa'
                       ? `مشاهده سری کامل · ${work.galleryPhotos?.length || 1} اثر ←`
                       : currentLang === 'de'
-                      ? `Serie ansehen · ${work.galleryPhotos?.length || 1} Fotos →`
+                      ? `Serie ansehen · ${work.galleryPhotos?.length || 1} Photos →`
                       : `View Series · ${work.galleryPhotos?.length || 1} Photos →`}
                   </span>
                 </button>

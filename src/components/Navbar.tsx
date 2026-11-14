@@ -50,9 +50,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'works',
     num: '01',
     labelEn: 'Photography - Works - International Awards',
-    labelDe: 'Fotografie – Werke & Auszeichnungen',
+    labelDe: 'Photographie – Werke & Auszeichnungen',
     labelFa: 'عکاسی – آثار و جوایز بین‌المللی',
-    shortDe: 'Fotografie',
+    shortDe: 'Photographie',
     shortEn: 'Photography',
     shortFa: 'عکاسی',
     targetId: 'architecture',
@@ -62,7 +62,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'award-references',
     num: '02',
     labelEn: 'International Photography Award References',
-    labelDe: 'Internationale Fotopreis-Referenzen & Awards',
+    labelDe: 'Internationale Photopreis-Referenzen & Awards',
     labelFa: 'مراجع جوایز بین‌المللی عکاسی',
     shortDe: 'Awards',
     shortEn: 'Awards',
@@ -86,7 +86,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'publications',
     num: '04',
     labelEn: "Photography, Editor's Choice, Videos & E-Books",
-    labelDe: "Fotografie, Editor's Choice, Videos & E-Books",
+    labelDe: "Photographie, Editor's Choice, Videos & E-Books",
     labelFa: 'عکاسی، انتخاب سردبیر، ویدیوها و کتاب‌ها',
     shortDe: 'Publikationen',
     shortEn: 'Publications',
@@ -199,7 +199,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenContact
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMenuId, setActiveMenuId] = useState<string>('works');
+  const [activeMenuId, setActiveMenuId] = useState<string>('home');
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -214,16 +214,20 @@ export const Navbar: React.FC<NavbarProps> = ({
         return;
       }
 
-      // Am Seitenanfang (Hero Intro) immer Fotografie (01) aktivieren
-      if (scrollY < 160) {
-        setActiveMenuId('works');
-        return;
+      // Dynamischer Lesebereich
+      const checkpointOffset = Math.max(200, Math.min(clientHeight * 0.40, 320));
+
+      // Solange man oben im Intro / Startseiten-Bereich ist und die Architektur-Sektion
+      // den Lesebereich noch nicht erreicht hat, ist auf der Startseite keine Sektion 01-10 aktiv!
+      const archEl = document.getElementById('architecture');
+      if (archEl) {
+        const archRect = archEl.getBoundingClientRect();
+        if (archRect.top > checkpointOffset) {
+          setActiveMenuId('home');
+          return;
+        }
       }
 
-      // Dynamischer Lesebereich: Reagiert responsiv auf Mobilgeräte (kleinere Viewports)
-      // und Desktop. Ein Bereich wird aktiv, sobald seine Oberkante in den oberen Lesebereich
-      // (oberes Drittel bis ca. 42% des sichtbaren Bildschirms) eintritt.
-      const checkpointOffset = Math.max(220, Math.min(clientHeight * 0.42, 350));
       let active = 'works';
 
       // Gehe alle Checkpoints in Reihenfolge durch: der letzte, der den Lesebereich erreicht hat, wird aktiv
@@ -245,7 +249,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const currentSection = ORIGINAL_11_MENU_ITEMS.find(s => s.id === activeMenuId) || ORIGINAL_11_MENU_ITEMS[0];
+  const currentSection = ORIGINAL_11_MENU_ITEMS.find(s => s.id === activeMenuId);
 
   const handleNavigateToItem = (item: OriginalMenuItem) => {
     setMobileMenuOpen(false);
@@ -494,19 +498,21 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       </div>
 
-      {/* Mobile & Tablet Live Section Indicator Bar (Visible on mobile & tablet: lg:hidden) */}
-      <div id="mobile-section-indicator" className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
-        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-          <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
-          <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
-            {currentSection.num}
-          </span>
-          <span className="text-stone-300 text-xs shrink-0">/</span>
-          <span className="font-serif font-bold text-stone-900 truncate text-[11px] sm:text-xs tracking-tight">
-            {currentLang === 'fa' ? currentSection.shortFa : currentLang === 'de' ? currentSection.shortDe : currentSection.shortEn}
-          </span>
+      {/* Mobile & Tablet Live Section Indicator Bar (Only rendered when scrolled into section 01-10) */}
+      {currentSection && (
+        <div id="mobile-section-indicator" className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
+          <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
+            <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
+              {currentSection.num}
+            </span>
+            <span className="text-stone-300 text-xs shrink-0">/</span>
+            <span className="font-serif font-bold text-stone-900 truncate text-[11px] sm:text-xs tracking-tight">
+              {currentLang === 'fa' ? currentSection.shortFa : currentLang === 'de' ? currentSection.shortDe : currentSection.shortEn}
+            </span>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED, OPTIMIZED FOR MOBILE & TABLET */}
       {mobileMenuOpen && (

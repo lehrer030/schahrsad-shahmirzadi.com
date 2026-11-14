@@ -330,7 +330,7 @@ export default function App() {
                 </h2>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
+                    ? 'Prämierte Architekturphotographien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
                     : currentLang === 'fa'
                       ? 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
                       : 'Award-winning architectural photography focusing on solitary structures and geometric forms.'}
@@ -382,7 +382,7 @@ export default function App() {
                 </h2>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
+                    ? 'Photographische Arbeiten im Bereich Fine Art und Bildkomposition.'
                     : currentLang === 'fa'
                       ? 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
                       : 'Photographic works in fine art and visual composition.'}
@@ -413,7 +413,7 @@ export default function App() {
                 </h2>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
+                    ? 'Photographische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
                     : currentLang === 'fa'
                       ? 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
                       : 'Photographic documentation on human rights, social issues, and animal welfare.'}
@@ -444,7 +444,7 @@ export default function App() {
                 </h2>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Fotografische Porträts und Selbstporträts.'
+                    ? 'Photographische Porträts und Selbstporträts.'
                     : currentLang === 'fa'
                       ? 'پرتره‌ها و خودنگاره‌های عکاسی.'
                       : 'Photographic portraits and self-portraits.'}

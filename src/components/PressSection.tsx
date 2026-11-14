@@ -176,7 +176,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
             <BookOpen className="w-4 h-4 text-amber-700" />
             <span>
               {currentLang === 'de'
-                ? 'Fotografie, Editor’s Choice, Videos & E-Books'
+                ? 'Photographie, Editor’s Choice, Videos & E-Books'
                 : currentLang === 'fa'
                 ? 'عکاسی، انتخاب‌های ویژه سردبیر، ویدیوها و کتاب‌ها'
                 : 'Photography, Editor’s Choice, Videos & E-Books'}

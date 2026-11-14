@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({
             </p>
             <p className="text-stone-700 text-[11px] leading-relaxed font-normal">
               {currentLang === 'de'
-                ? 'Ausgezeichnete Architektur-, Fine-Art- und Dokumentarfotografie sowie sportliche Höchstleistungen.'
+                ? 'Ausgezeichnete Architektur-, Fine-Art- und Dokumentarphotographie sowie sportliche Höchstleistungen.'
                 : currentLang === 'fa'
                 ? 'عکاسی فاخر برنده جوایز جهانی و دستاوردهای درخشان ورزشی در کیک‌بوکسینگ.'
                 : 'Award-winning architectural, fine art, and documentary photography alongside world-class athletic achievements.'}

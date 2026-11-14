@@ -17,8 +17,13 @@ export const scrollToElementWithOffset = (
     const indicator = document.getElementById('mobile-section-indicator');
     const header = document.querySelector('header');
 
-    if (window.innerWidth < 1024 && indicator) {
-      headerHeight = indicator.getBoundingClientRect().bottom;
+    if (window.innerWidth < 1024) {
+      if (indicator) {
+        headerHeight = indicator.getBoundingClientRect().bottom;
+      } else if (header) {
+        // On startpage, the sticky indicator is hidden until scrolled to works; account for its +34px height
+        headerHeight = header.getBoundingClientRect().height + 34;
+      }
     } else if (header) {
       headerHeight = header.getBoundingClientRect().height;
     }

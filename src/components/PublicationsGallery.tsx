@@ -861,7 +861,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               </h5>
               <p className="text-xs text-stone-700 leading-relaxed font-normal">
                 {isDe
-                  ? 'Der offizielle Film der 20. Spider Awards präsentiert SchirZans preisgekrönte Architekturfotografie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
+                  ? 'Der offizielle Film der 20. Spider Awards präsentiert SchirZans preisgekrönte Architekturphotographie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
                   : isFa
                   ? 'فیلم رسمی بیستمین دوره جوایز اسپایدر که آثار برگزیده معماری سیاه و سفید شیرزن را به تصویر می‌کشد.'
                   : 'The official 20th Spider Awards film presenting SchirZan’s awarded architectural photography in the international compendium.'}

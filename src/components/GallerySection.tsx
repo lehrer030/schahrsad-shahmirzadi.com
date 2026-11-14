@@ -26,23 +26,23 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               {currentLang === 'de'
                 ? 'Originale WordPress-Galerie'
                 : currentLang === 'fa'
-                ? 'گالری اصلی وردپرس'
-                : 'Original WordPress Gallery'}
+                  ? 'گالری اصلی وردپرس'
+                  : 'Original WordPress Gallery'}
             </span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
             {currentLang === 'de'
               ? 'Galerie: Sport, Engagement & IPA Athen'
               : currentLang === 'fa'
-              ? 'گالری: ورزش، فعالیت اجتماعی و فستیوال آتن'
-              : 'Gallery: Sports, Advocacy & IPA Athens'}
+                ? 'گالری: ورزش، فعالیت اجتماعی و فستیوال آتن'
+                : 'Gallery: Sports, Advocacy & IPA Athens'}
           </h2>
           <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
             {currentLang === 'de'
               ? 'Dokumentarische Aufnahmen, Weltmeister-Video und Impressionen der internationalen Preisverleihung.'
               : currentLang === 'fa'
-              ? 'تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی.'
-              : 'Documentary photography, world champion video, and international award gala impressions.'}
+                ? 'تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی.'
+                : 'Documentary photography, world champion video, and international award gala impressions.'}
           </p>
         </div>
       </div>
@@ -53,7 +53,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
            ========================================================================= */}
         <div className="bg-white border border-stone-200 rounded-lg p-6 sm:p-8 lg:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
+
             {/* Left/Right Text column */}
             <div className="lg:col-span-5 space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700">
@@ -62,23 +62,23 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   {currentLang === 'de'
                     ? kickboxing.subtitleDe
                     : currentLang === 'fa'
-                    ? kickboxing.subtitleFa
-                    : kickboxing.subtitleEn}
+                      ? kickboxing.subtitleFa
+                      : kickboxing.subtitleEn}
                 </span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">
                 {currentLang === 'de'
                   ? kickboxing.titleDe
                   : currentLang === 'fa'
-                  ? kickboxing.titleFa
-                  : kickboxing.titleEn}
+                    ? kickboxing.titleFa
+                    : kickboxing.titleEn}
               </h3>
               <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
                 {currentLang === 'de'
                   ? kickboxing.descriptionDe
                   : currentLang === 'fa'
-                  ? kickboxing.descriptionFa
-                  : kickboxing.descriptionEn}
+                    ? kickboxing.descriptionFa
+                    : kickboxing.descriptionEn}
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -93,8 +93,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                     {currentLang === 'de'
                       ? 'Video in neuem Tab öffnen'
                       : currentLang === 'fa'
-                      ? 'باز کردن ویدیو در تب جدید'
-                      : 'Open Video in New Tab'}
+                        ? 'باز کردن ویدیو در تب جدید'
+                        : 'Open Video in New Tab'}
                   </span>
                   <ExternalLink className="w-3.5 h-3.5 opacity-70" />
                 </a>
@@ -102,8 +102,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   {currentLang === 'de'
                     ? 'Original-Trainingsvideo · SchirZan · 52 Sekunden'
                     : currentLang === 'fa'
-                    ? 'ویدیوی تمرینی اصلی · شیرزن · ۵۲ ثانیه'
-                    : 'Original Training Footage · SchirZan · 52 Seconds'}
+                      ? 'ویدیوی تمرینی اصلی · شیرزن · ۵۲ ثانیه'
+                      : 'Original Training Footage · SchirZan · 52 Seconds'}
                 </span>
               </div>
             </div>
@@ -139,16 +139,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                     {currentLang === 'de'
                       ? 'Dokumentation & Titelkämpfe · WKU-Weltmeisterschaft'
                       : currentLang === 'fa'
-                      ? 'مستندات و رقابت‌های قهرمانی · قهرمانی جهان WKU'
-                      : 'Documentary & Championship Bouts · WKU World Championship'}
+                        ? 'مستندات و رقابت‌های قهرمانی · قهرمانی جهان WKU'
+                        : 'Documentary & Championship Bouts · WKU World Championship'}
                   </span>
                 </div>
                 <span className="text-xs text-stone-500 font-medium">
                   {currentLang === 'de'
                     ? `${kickboxing.photos.length} Aufnahmen · Klicken zum Vergrößern`
                     : currentLang === 'fa'
-                    ? `${kickboxing.photos.length} تصویر · برای بزرگنمایی کلیک کنید`
-                    : `${kickboxing.photos.length} photographs · Click to enlarge`}
+                      ? `${kickboxing.photos.length} تصویر · برای بزرگنمایی کلیک کنید`
+                      : `${kickboxing.photos.length} photographs · Click to enlarge`}
                 </span>
               </div>
 
@@ -158,14 +158,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                     currentLang === 'de'
                       ? photo.captionDe
                       : currentLang === 'fa'
-                      ? photo.captionFa
-                      : photo.captionEn;
+                        ? photo.captionFa
+                        : photo.captionEn;
                   const locationTag =
                     currentLang === 'fa'
                       ? photo.locationFa
                       : currentLang === 'en'
-                      ? photo.locationEn
-                      : photo.locationDe;
+                        ? photo.locationEn
+                        : photo.locationDe;
 
                   return (
                     <div
@@ -191,6 +191,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                             const target = e.currentTarget;
                             if (target.src.endsWith('.webp')) {
                               target.src = target.src.replace(/\.webp$/, '.jpg');
+                            } else if (target.src.endsWith('.jpg')) {
+                              target.src = target.src.replace(/\.jpg$/, '.jpeg');
                             }
                           }}
                         />
@@ -210,8 +212,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                             {currentLang === 'de'
                               ? `Aufnahme ${index + 1} von ${kickboxing.photos.length} · Vergrößern`
                               : currentLang === 'fa'
-                              ? `تصویر ${index + 1} از ${kickboxing.photos.length} · بزرگنمایی`
-                              : `Photo ${index + 1} of ${kickboxing.photos.length} · Enlarge`}
+                                ? `تصویر ${index + 1} از ${kickboxing.photos.length} · بزرگنمایی`
+                                : `Photo ${index + 1} of ${kickboxing.photos.length} · Enlarge`}
                           </span>
                         </div>
                       )}
@@ -234,22 +236,22 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 {currentLang === 'de'
                   ? running.subtitleDe
                   : currentLang === 'fa'
-                  ? running.subtitleFa
-                  : running.subtitleEn}
+                    ? running.subtitleFa
+                    : running.subtitleEn}
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-stone-900">
                 {currentLang === 'de'
                   ? running.titleDe
                   : currentLang === 'fa'
-                  ? running.titleFa
-                  : running.titleEn}
+                    ? running.titleFa
+                    : running.titleEn}
               </h3>
               <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                 {currentLang === 'de'
                   ? running.descriptionDe
                   : currentLang === 'fa'
-                  ? running.descriptionFa
-                  : running.descriptionEn}
+                    ? running.descriptionFa
+                    : running.descriptionEn}
               </p>
             </div>
           </div>
@@ -261,34 +263,33 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 currentLang === 'de'
                   ? photo.captionDe
                   : currentLang === 'fa'
-                  ? photo.captionFa
-                  : photo.captionEn;
+                    ? photo.captionFa
+                    : photo.captionEn;
               const badge =
                 currentLang === 'de'
                   ? photo.badgeDe
                   : currentLang === 'fa'
-                  ? photo.badgeFa
-                  : photo.badgeEn;
+                    ? photo.badgeFa
+                    : photo.badgeEn;
               const locationTag =
                 currentLang === 'fa'
                   ? photo.locationFa
                   : currentLang === 'en'
-                  ? photo.locationEn
-                  : photo.locationDe;
+                    ? photo.locationEn
+                    : photo.locationDe;
               const linkText =
                 currentLang === 'de'
                   ? (photo.externalLinkTextDe || 'Spendenlauf unterstützen →')
                   : currentLang === 'fa'
-                  ? (photo.externalLinkTextFa || 'حمایت از کمپین حقوق بشر ←')
-                  : (photo.externalLinkTextEn || 'Support the fundraising run →');
+                    ? (photo.externalLinkTextFa || 'حمایت از کمپین حقوق بشر ←')
+                    : (photo.externalLinkTextEn || 'Support the fundraising run →');
 
               return (
                 <div
                   key={photo.id}
                   onClick={() => onOpenLightbox(running.photos, index)}
-                  className={`group relative bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer ${
-                    photo.externalLink ? 'border-red-300 ring-1 ring-red-100 hover:border-red-500' : 'border-stone-200 hover:border-stone-400'
-                  }`}
+                  className={`group relative bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer ${photo.externalLink ? 'border-red-300 ring-1 ring-red-100 hover:border-red-500' : 'border-stone-200 hover:border-stone-400'
+                    }`}
                 >
                   <div className="relative aspect-[3/4] overflow-hidden bg-stone-100 group/img">
                     {badge && (
@@ -316,6 +317,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                         const target = e.currentTarget;
                         if (target.src.endsWith('.webp')) {
                           target.src = target.src.replace(/\.webp$/, '.jpg');
+                        } else if (target.src.endsWith('.jpg')) {
+                          target.src = target.src.replace(/\.jpg$/, '.jpeg');
                         }
                       }}
                     />
@@ -356,8 +359,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                             {currentLang === 'de'
                               ? `Aufnahme ${index + 1} von ${running.photos.length} · Vergrößern`
                               : currentLang === 'fa'
-                              ? `تصویر ${index + 1} از ${running.photos.length} · بزرگنمایی`
-                              : `Photo ${index + 1} of ${running.photos.length} · Enlarge`}
+                                ? `تصویر ${index + 1} از ${running.photos.length} · بزرگنمایی`
+                                : `Photo ${index + 1} of ${running.photos.length} · Enlarge`}
                           </span>
                         )}
                       </div>
@@ -382,23 +385,23 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   {currentLang === 'de'
                     ? athensGala.subtitleDe
                     : currentLang === 'fa'
-                    ? athensGala.subtitleFa
-                    : athensGala.subtitleEn}
+                      ? athensGala.subtitleFa
+                      : athensGala.subtitleEn}
                 </span>
               </div>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif font-bold text-stone-900">
                 {currentLang === 'de'
                   ? athensGala.titleDe
                   : currentLang === 'fa'
-                  ? athensGala.titleFa
-                  : athensGala.titleEn}
+                    ? athensGala.titleFa
+                    : athensGala.titleEn}
               </h3>
               <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                 {currentLang === 'de'
                   ? athensGala.descriptionDe
                   : currentLang === 'fa'
-                  ? athensGala.descriptionFa
-                  : athensGala.descriptionEn}
+                    ? athensGala.descriptionFa
+                    : athensGala.descriptionEn}
               </p>
             </div>
           </div>
@@ -410,14 +413,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 currentLang === 'de'
                   ? photo.captionDe
                   : currentLang === 'fa'
-                  ? photo.captionFa
-                  : photo.captionEn;
+                    ? photo.captionFa
+                    : photo.captionEn;
               const locationTag =
                 currentLang === 'fa'
                   ? photo.locationFa
                   : currentLang === 'en'
-                  ? photo.locationEn
-                  : photo.locationDe;
+                    ? photo.locationEn
+                    : photo.locationDe;
 
               const isCertificate = photo.id === 'ipa-athens-06';
               const isPortraitPerson = photo.id === 'ipa-athens-05' || photo.id === 'ipa-athens-04';
@@ -431,11 +434,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 <div
                   key={photo.id}
                   onClick={() => onOpenLightbox(athensGala.photos, index)}
-                  className={`group relative bg-white border rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer ${
-                    isCertificate
-                      ? 'border-amber-300/80 ring-1 ring-amber-100 hover:border-amber-500 bg-linear-to-b from-amber-50/20 to-white'
-                      : 'border-stone-200 hover:border-stone-400'
-                  }`}
+                  className={`group relative bg-white border rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer ${isCertificate
+                    ? 'border-amber-300/80 ring-1 ring-amber-100 hover:border-amber-500 bg-linear-to-b from-amber-50/20 to-white'
+                    : 'border-stone-200 hover:border-stone-400'
+                    }`}
                 >
                   <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-stone-100 group/img">
                     {/* Badge for official award / certificate */}
@@ -447,8 +449,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                             {currentLang === 'fa'
                               ? 'گواهی و مدال رسمی مسابقه'
                               : currentLang === 'en'
-                              ? 'Official Award & Medal'
-                              : 'Offizielles Zertifikat & Medaille'}
+                                ? 'Official Award & Medal'
+                                : 'Offizielles Zertifikat & Medaille'}
                           </span>
                         </span>
                       </div>
@@ -467,15 +469,16 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       src={resolveAsset(photo.src)}
                       alt={photo.alt}
                       loading="lazy"
-                      className={`w-full h-full ${
-                        isCertificate
-                          ? 'object-contain p-2 sm:p-2.5 bg-[#18181b]'
-                          : `object-cover ${objectPosClass}`
-                      } transition-transform duration-500 group-hover:scale-105 protected-art`}
+                      className={`w-full h-full ${isCertificate
+                        ? 'object-contain p-2 sm:p-2.5 bg-[#18181b]'
+                        : `object-cover ${objectPosClass}`
+                        } transition-transform duration-500 group-hover:scale-105 protected-art`}
                       onError={(e) => {
                         const target = e.currentTarget;
                         if (target.src.endsWith('.webp')) {
                           target.src = target.src.replace(/\.webp$/, '.jpg');
+                        } else if (target.src.endsWith('.jpg')) {
+                          target.src = target.src.replace(/\.jpg$/, '.jpeg');
                         }
                       }}
                     />
@@ -495,8 +498,8 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                         {currentLang === 'de'
                           ? `Aufnahme ${index + 1} von ${athensGala.photos.length} · Vergrößern`
                           : currentLang === 'fa'
-                          ? `تصویر ${index + 1} از ${athensGala.photos.length} · بزرگنمایی`
-                          : `Photo ${index + 1} of ${athensGala.photos.length} · Enlarge`}
+                            ? `تصویر ${index + 1} از ${athensGala.photos.length} · بزرگنمایی`
+                            : `Photo ${index + 1} of ${athensGala.photos.length} · Enlarge`}
                       </span>
                     </div>
                   )}

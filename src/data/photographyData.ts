@@ -89,7 +89,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Architektur',
     titleEn: 'Architecture',
     titleFa: 'معماری',
-    descriptionDe: 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.',
+    descriptionDe: 'Prämierte Architekturphotographien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.',
     descriptionEn: 'Award-winning architectural photography focusing on solitary structures and geometric forms.',
     descriptionFa: 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
   },
@@ -98,7 +98,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Fine Art',
     titleEn: 'Fine Art',
     titleFa: 'هنرهای زیبا (فاین آرت)',
-    descriptionDe: 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.',
+    descriptionDe: 'Photographische Arbeiten im Bereich Fine Art und Bildkomposition.',
     descriptionEn: 'Photographic works in fine art and visual composition.',
     descriptionFa: 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
   },
@@ -107,7 +107,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Gesellschaft & Umwelt',
     titleEn: 'Social & Environmental Themes',
     titleFa: 'مضامین اجتماعی و زیست‌محیطی',
-    descriptionDe: 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.',
+    descriptionDe: 'Photographische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.',
     descriptionEn: 'Photographic documentation on human rights, social issues, and animal welfare.',
     descriptionFa: 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
   },
@@ -116,7 +116,7 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Porträts',
     titleEn: 'Portraits',
     titleFa: 'پرتره‌ها',
-    descriptionDe: 'Fotografische Porträts und Selbstporträts.',
+    descriptionDe: 'Photographische Porträts und Selbstporträts.',
     descriptionEn: 'Photographic portraits and self-portraits.',
     descriptionFa: 'پرتره‌ها و خودنگاره‌های عکاسی.'
   },
@@ -144,7 +144,7 @@ export const INTRO_CONTENT = {
   mainHeader: 'Photography – Works – International Awards',
   mainHeaderDe: 'Photographie – Werke – Internationale Auszeichnungen',
   mainHeaderFa: 'عکاسی – آثار – جوایز بین‌المللی',
-  subtitleDe: 'Fotografie & Kunst · Mehrfach international ausgezeichnet & prämiert',
+  subtitleDe: 'Photographie & Kunst · Mehrfach international ausgezeichnet & prämiert',
   subtitleEn: 'Photography & Art · Internationally awarded & recognized multiple times',
   subtitleFa: 'عکاسی و هنر · برنده جوایز متعدد و شناخته‌شده در سطح بین‌المللی',
   competitions: [
@@ -166,7 +166,7 @@ export const INTRO_CONTENT = {
   artistNameDe: 'Schahrsad Shahmirzadi · SchirZan',
   artistNameEn: 'Schahrsad Shahmirzadi · SchirZan',
   artistNameFa: 'شهزاد شاهمیرزادی · شیرزن',
-  artistExplanationDe: `Schahrsad Shahmirzadi präsentiert ihre Fotografie und Kunst unter dem Künstlernamen SchirZan. Der Name stammt aus dem Persischen und verbindet zwei Worte:
+  artistExplanationDe: `Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst unter dem Künstlernamen SchirZan. Der Name stammt aus dem Persischen und verbindet zwei Worte:
 
 • Shir (شیر), bedeutet »Löwe«
 • Zan (زن), bedeutet »Frau«
@@ -175,7 +175,7 @@ Zusammen bedeutet »SchirZan« die »Löwenfrau« oder »Löwin« und verkörper
 
 Für sie steht »SchirZan« auch für das Engagement, sich für benachteiligte Menschen einzusetzen, deren Stimmen Sichtbarkeit zu verleihen und für Gerechtigkeit, Gleichberechtigung und Menschlichkeit einzutreten.
 
-Durch Fotografie kann sie einen Moment gelebter Erfahrung für die Ewigkeit bewahren – ein Gedanke, der sie jedes Mal aufs Neue bewegt.
+Durch Photographie kann sie einen Moment gelebter Erfahrung für die Ewigkeit bewahren – ein Gedanke, der sie jedes Mal aufs Neue bewegt.
 
 Das Wort »Photographie« leitet sich aus dem Altgriechischen ab: φῶς, phōs (Genitiv φωτός, phōtos), was »Licht« bedeutet, und γράφειν, gráphein, was »schreiben« oder »zeichnen« bedeutet. Im übertragenen Sinne bedeutet es »Zeichnen mit Licht«.
 
@@ -219,7 +219,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   subtitleDe: 'Architektur · Sonstige Außenaufnahmen · 7 Werke',
   subtitleEn: 'Architecture · Other Exterior · 7 Works',
   subtitleFa: 'معماری · سازه‌های بیرونی · ۷ اثر',
-  descriptionDe: `Diese Serie untersucht eine solitäre urbane Gebäudestruktur im Wechselspiel mit Licht, Schatten und der umgebenden Natur. Die Fotografien fokussieren auf architektonische Geometrie, klare Kanten und die Reflexionen des Himmels auf der Fassade. Im Zentrum steht die visuelle Verbindung zwischen gebautem Raum und natürlicher Umwelt.`,
+  descriptionDe: `Diese Serie untersucht eine solitäre urbane Gebäudestruktur im Wechselspiel mit Licht, Schatten und der umgebenden Natur. Die Photographien fokussieren auf architektonische Geometrie, klare Kanten und die Reflexionen des Himmels auf der Fassade. Im Zentrum steht die visuelle Verbindung zwischen gebautem Raum und natürlicher Umwelt.`,
   descriptionEn: `This series investigates a solitary urban building structure in interaction with light, shadow, and surrounding nature. The photographs focus on architectural geometry, clear contours, and the sky’s reflections on the facade, examining the visual relationship between built space and the natural environment.`,
   descriptionFa: `این مجموعه عکاسی، ساختار یک بنای منفرد شهری را در پیوند با نور، سایه و طبیعت پیرامون بررسی می‌کند. تمرکز تصاویر بر هندسه معماری، خطوط صریح و بازتاب آسمان بر نما قرار دارد.`,
   coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
@@ -508,7 +508,7 @@ previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
     awardsFa: 'AMP 2026 — تقدیر جزئیات داخلی · BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['AMP 2026 HM', 'BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
-        descriptionDe: "Diese Fotografien pr\u00e4sentieren das Interieur der Griechischen Nationaloper in Athen als Gesamtkunstwerk \u2013 von weitl\u00e4ufigen Atrien bis zu raffinierten architektonischen Linien, in denen Licht, Materialien und Raumrhythmus pr\u00e4zise harmonieren.",
+        descriptionDe: "Diese Photographien pr\u00e4sentieren das Interieur der Griechischen Nationaloper in Athen als Gesamtkunstwerk \u2013 von weitl\u00e4ufigen Atrien bis zu raffinierten architektonischen Linien, in denen Licht, Materialien und Raumrhythmus pr\u00e4zise harmonieren.",
     descriptionEn: "These photographs present the interior of the Greek National Opera in Athens as a total work of art, from soaring atriums to refined architectural curves, where light, materials, and spatial rhythm are precisely harmonised.",
     descriptionFa: "\u0627\u06cc\u0646 \u0639\u06a9\u0633\u200c\u0647\u0627 \u0641\u0636\u0627\u06cc \u062f\u0627\u062e\u0644\u06cc \u0627\u067e\u0631\u0627\u06cc \u0645\u0644\u06cc \u06cc\u0648\u0646\u0627\u0646 \u062f\u0631 \u0622\u062a\u0646 \u0631\u0627 \u0628\u0647 \u0639\u0646\u0648\u0627\u0646 \u0627\u062b\u0631\u06cc \u06cc\u06a9\u067e\u0627\u0631\u0686\u0647 \u0628\u0647 \u062a\u0635\u0648\u06cc\u0631 \u0645\u06cc\u200c\u06a9\u0634\u0646\u062f \u06a9\u0647 \u062f\u0631 \u0622\u0646 \u0646\u0648\u0631\u060c \u0645\u0635\u0627\u0644\u062d \u0648 \u0631\u06cc\u062a\u0645 \u0641\u0636\u0627\u06cc\u06cc \u0628\u0647 \u0632\u06cc\u0628\u0627\u06cc\u06cc \u067e\u06cc\u0648\u0646\u062f \u062e\u0648\u0631\u062f\u0647\u200c\u0627\u0646\u062f.",
 previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
@@ -787,7 +787,7 @@ previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
     awardsFa: 'PERSPA 2026 — تقدیر ویژه پلکان · AMP 2025 — تقدیر فضای داخلی پایدار',
     badgeNames: ['PERSPA 2026 HM Stairs', 'AMP 2025 HM'],
     link: 'https://perspa.fr/winners/architectural-perspective/#work-152',
-        descriptionDe: "Fotografische Detailstudien architektonischer Stufen und \u00dcberg\u00e4nge im Kontext \u00f6kologischer und nachhaltiger Bauweise. Formen und Materialien spiegeln das stetige Voranschreiten hin zu zukunftsf\u00e4higen Lebensr\u00e4umen wider.",
+        descriptionDe: "Photographische Detailstudien architektonischer Stufen und \u00dcberg\u00e4nge im Kontext \u00f6kologischer und nachhaltiger Bauweise. Formen und Materialien spiegeln das stetige Voranschreiten hin zu zukunftsf\u00e4higen Lebensr\u00e4umen wider.",
     descriptionEn: "Photographic detail studies of architectural steps and transitions within sustainable construction, where materials and forms signify the progression toward resilient environments.",
     descriptionFa: "\u0645\u0637\u0627\u0644\u0639\u0647 \u062c\u0632\u0626\u06cc\u0627\u062a \u0645\u0639\u0645\u0627\u0631\u06cc \u067e\u0644\u0647\u200c\u0647\u0627 \u0648 \u06af\u0630\u0631\u06af\u0627\u0647\u200c\u0647\u0627 \u062f\u0631 \u0632\u0645\u06cc\u0646\u0647 \u0633\u0627\u062e\u062a \u067e\u0627\u06cc\u062f\u0627\u0631 \u06a9\u0647 \u062d\u0631\u06a9\u062a \u067e\u06cc\u0648\u0633\u062a\u0647 \u0628\u0647 \u0633\u0648\u06cc \u0632\u06cc\u0633\u062a\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u062a\u0627\u0628\u200c\u0622\u0648\u0631 \u0631\u0627 \u0628\u0627\u0632\u0645\u06cc\u200c\u0646\u0645\u0627\u06cc\u0627\u0646\u062f.",
 previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
@@ -1459,7 +1459,7 @@ previewImage: '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
     awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
     badgeNames: ['URBAN Photo Awards 2026 Selected'],
     link: 'https://www.urbanphotoawards.com/',
-        descriptionDe: "In-Between Spaces (Area 14): Ausgestellt bei den Trieste Photo Days 2026 (Mercato Coperto, Triest). Fotografische Erkundung von urbanen Schwellenr\u00e4umen, Passagen und Zwischenzonen, in denen die Grenzen zwischen Innen und Au\u00dfen verschwimmen.",
+        descriptionDe: "In-Between Spaces (Area 14): Ausgestellt bei den Trieste Photo Days 2026 (Mercato Coperto, Triest). Photographische Erkundung von urbanen Schwellenr\u00e4umen, Passagen und Zwischenzonen, in denen die Grenzen zwischen Innen und Au\u00dfen verschwimmen.",
     descriptionEn: "In-Between Spaces (Area 14): Exhibited at Trieste Photo Days 2026 (Mercato Coperto, Trieste). Photographic inquiry into urban liminal zones, transitions, and passages where boundaries dissolve.",
     descriptionFa: "\u0641\u0636\u0627\u0647\u0627\u06cc \u0645\u06cc\u0627\u0646\u06cc (\u0645\u0646\u0637\u0642\u0647 \u06f1\u06f4): \u0646\u0645\u0627\u06cc\u0634 \u062f\u0631 \u062c\u0634\u0646\u0648\u0627\u0631\u0647 \u0639\u06a9\u0633 \u062a\u0631\u06cc\u0633\u062a\u0647 \u06f2\u06f0\u06f2\u06f6 \u062f\u0631 \u0627\u06cc\u062a\u0627\u0644\u06cc\u0627\u061b \u06a9\u0627\u0648\u0634 \u0639\u06a9\u0627\u0633\u0627\u0646\u0647 \u062f\u0631 \u0641\u0636\u0627\u0647\u0627\u06cc \u0622\u0633\u062a\u0627\u0646\u0647\u200c\u0627\u06cc \u0648 \u06af\u0630\u0631\u06af\u0627\u0647\u200c\u0647\u0627\u06cc \u0634\u0647\u0631\u06cc.",
 previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
@@ -1486,7 +1486,7 @@ previewImage: '/images/2026_07_In-Between-Spaces-scaled.jpg',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
     link: 'https://licc.uk/',
-        descriptionDe: "Die W\u00fcrde des Tieres ist unantastbar: Eine eindringliche gesellschaftsdokumentarische Fotoserie, die das Verh\u00e4ltnis zwischen Mensch, Tier und Natur im Spannungsfeld von Ausbeutung, Respekt und Verantwortung beleuchtet. Ausgezeichnet bei der London International Creative Competition (LICC 2025).",
+        descriptionDe: "Die W\u00fcrde des Tieres ist unantastbar: Eine eindringliche gesellschaftsdokumentarische Photoserie, die das Verh\u00e4ltnis zwischen Mensch, Tier und Natur im Spannungsfeld von Ausbeutung, Respekt und Verantwortung beleuchtet. Ausgezeichnet bei der London International Creative Competition (LICC 2025).",
     descriptionEn: "The Dignity of the Animal is Inviolable: A poignant documentary series examining human-animal relations between exploitation, profound respect, and ethical duty (LICC 2025 Official Selection).",
     descriptionFa: "\u06a9\u0631\u0627\u0645\u062a \u062d\u06cc\u0648\u0627\u0646 \u062a\u0639\u0631\u0636\u200c\u0646\u0627\u067e\u0630\u06cc\u0631 \u0627\u0633\u062a: \u0645\u062c\u0645\u0648\u0639\u0647\u200c\u0627\u06cc \u0627\u062b\u0631\u06af\u0630\u0627\u0631 \u062f\u0631 \u0628\u0627\u0628 \u0631\u0627\u0628\u0637\u0647 \u0627\u0646\u0633\u0627\u0646 \u0648 \u062d\u06cc\u0648\u0627\u0646 \u062f\u0631 \u0645\u06cc\u0627\u0646 \u0628\u0647\u0631\u0647\u200c\u06a9\u0634\u06cc\u060c \u0627\u062d\u062a\u0631\u0627\u0645 \u0648 \u0645\u0633\u0626\u0648\u0644\u06cc\u062a \u0627\u062e\u0644\u0627\u0642\u06cc (\u0645\u0646\u062a\u062e\u0628 LICC \u06f2\u06f0\u06f2\u06f5 \u0644\u0646\u062f\u0646).",
 previewImage: '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
@@ -1640,7 +1640,7 @@ export const PRESS_ITEMS = [
     outlet: 'KOJARO · کجارو',
     date: '18. Oktober 2026',
     title: 'از تئاتر تاریخی ایتالیا تا هندسه ساختمان‌ها؛ برندگان نخستین جایزه عکاسی معماری پرسپکتیو',
-    descriptionDe: 'Internationale Berichterstattung über die renommiertesten Architekturfotografien des Jahres – Auszeichnung für SchirZan · Werk Nr. 3.',
+    descriptionDe: 'Internationale Berichterstattung über die renommiertesten Architekturphotographien des Jahres – Auszeichnung für SchirZan · Werk Nr. 3.',
     descriptionEn: 'International press coverage on the year’s finest architectural photography – Honour for SchirZan · Work No. 3.',
     descriptionFa: 'پوشش مطبوعاتی بین‌المللی برترین آثار عکاسی معماری سال ۲۰۲۶ و درخشش شیرزن در میان برگزیدگان.',
     link: 'https://www.kojaro.com/travel-photos/310932-best-architectural-photography-2026/'
@@ -1890,14 +1890,14 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
   },
   {
     id: 'mleuv-newsletter-2025',
-    titleDe: 'Ministerium für Umwelt Brandenburg: Titelfoto MLEUV-Newsletter',
+    titleDe: 'Ministerium für Umwelt Brandenburg: Titelphoto MLEUV-Newsletter',
     titleEn: 'Ministry for Environment Brandenburg: Newsletter Cover Feature',
     titleFa: 'تصویر روی جلد خبرنامه رسمی وزارت محیط زیست براندنبورگ',
     subtitleDe: 'Ausgabe Juli 2025 · Klatschmohn vor zeitgenössischer Architektur',
     subtitleEn: 'July 2025 Issue · Poppies in dialogue with contemporary architecture',
     subtitleFa: 'نسخه ژوئیه ۲۰۲۵ · شقایق‌های سرخ در تضاد با معماری مدرن',
     publisher: 'Ministerium für Landwirtschaft, Umwelt und Klimaschutz Brandenburg',
-    detailsDe: 'Schahrsad Shahmirzadis Fotografie von leuchtendem Mohn vor moderner Architektur erschien als Titelbild der offiziellen Publikation des Ministeriums in Potsdam.',
+    detailsDe: 'Schahrsad Shahmirzadis Photographie von leuchtendem Mohn vor moderner Architektur erschien als Titelbild der offiziellen Publikation des Ministeriums in Potsdam.',
     detailsEn: 'Schahrsad Shahmirzadi’s photograph of radiant poppies before modern architecture was selected as the cover photo of the official ministry publication.',
     detailsFa: 'انتشار عکس شهزاد شاهمیرزادی به عنوان تصویر شاخص روی جلد نشریه رسمی وزارت محیط زیست در پوتسدام.',
     link: 'https://schahrsad-shahmirzadi.com/',

@@ -93,7 +93,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi · Foto: Steve Barret"
+                    alt="SchirZan – Schahrsad Shahmirzadi · Photo: Steve Barret"
                     draggable={false}
                     className="w-full h-full object-cover object-center select-none"
                     loading="eager"
@@ -121,7 +121,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 {/* Compact informative text as requested: shows the most important facts directly */}
                 <p className="mt-2.5 pt-2 border-t border-stone-100 text-xs text-stone-700 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Mehrfach international prämierte Architektur-, Fine-Art- und Dokumentarfotografie, unter anderem bei AMP 2025/2026, IPA, PERSPA Paris und BIFA.'
+                    ? 'Mehrfach international prämierte Architektur-, Fine-Art- und Dokumentarphotographie, unter anderem bei AMP 2025/2026, IPA, PERSPA Paris und BIFA.'
                     : currentLang === 'fa'
                     ? 'عکاسی برگزیده معماری، هنرهای زیبا و مستند در مسابقات جهانی از جمله AMP، IPA، PERSPA و BIFA.'
                     : 'Multiple internationally awarded architectural, fine art, and documentary photography, recognized by AMP 2025/2026, IPA, PERSPA Paris, and BIFA.'}
@@ -189,7 +189,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi · Foto: Steve Barret"
+                    alt="SchirZan – Schahrsad Shahmirzadi · Photo: Steve Barret"
                     draggable={false}
                     className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out select-none"
                     loading="eager"
