@@ -202,12 +202,12 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
                 ) : currentLang === 'en' ? (
                   <>
-                    Schahrsad Shahmirzadi (SchirZan) –{' '}
+                    Schahrsad Shahmirzadi (ShirZan) –{' '}
                     <span className="whitespace-nowrap">10-Time</span> Kickboxing World Champion
                   </>
                 ) : (
                   <>
-                    Schahrsad Shahmirzadi (SchirZan) –{' '}
+                    Schahrsad Shahmirzadi (ShirZan) –{' '}
                     <span className="whitespace-nowrap">10-fache</span> Kickbox-Weltmeisterin
                   </>
                 )}
@@ -238,7 +238,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 : 'Gewinnen fängt im Kopf an!'}
             </p>
             <div className="mt-2 text-[11px] font-mono uppercase tracking-wider text-stone-400">
-              — SchirZan
+              — ShirZan
             </div>
           </div>
         </div>
@@ -682,13 +682,13 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </div>
             
             <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : 'Von »Prinzessin« zu »SchirZan«'}
+              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : 'Von »Prinzessin« zu »ShirZan«'}
             </h4>
 
             <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
               {currentLang === 'fa'
                 ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
-                : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Schir (Löwe) und Zan (Frau), die für furchtlosen Mut, Würde und Frauenrechte steht.'}
+                : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „ShirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für furchtlosen Mut, Würde und Frauenrechte steht.'}
             </p>
 
             <p className="text-xs text-stone-600 leading-relaxed font-normal pt-1 border-t border-stone-100">

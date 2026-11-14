@@ -144,7 +144,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
             {/* Watermark logo bottom-right */}
             <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/90 font-serif pointer-events-none select-none bg-stone-900/40 px-2 py-0.5 rounded">
-              © SchirZan
+              © ShirZan
             </div>
           </div>
 
@@ -159,10 +159,10 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </p>
             <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-0.5">
               {currentLang === 'de'
-                ? `Hauptwerk · Bild 01 von ${series.photos.length} · © SchirZan`
+                ? `Hauptwerk · Bild 01 von ${series.photos.length} · © ShirZan`
                 : currentLang === 'fa'
                 ? `اثر اصلی · تصویر ۰۱ از ${series.photos.length} · © شیرزن`
-                : `Lead Work · Image 01 of ${series.photos.length} · © SchirZan`}
+                : `Lead Work · Image 01 of ${series.photos.length} · © ShirZan`}
             </span>
           </div>
 

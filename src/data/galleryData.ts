@@ -50,8 +50,8 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     subtitleDe: 'Sportliche Höchstleistung & mentale Stärke',
     subtitleEn: 'High Performance & Mental Strength',
     subtitleFa: 'اوج عملکرد ورزشی و قدرت ذهنی',
-    descriptionDe: 'SchirZan blickt auf eine beeindruckende Laufbahn als Kickbox-Weltmeisterin zurück. Für sie ist der Sport die Schule der Konzentration, Disziplin und Willenskraft, die sich auch in ihrer kompromisslosen photographischen Ästhetik widerspiegelt.',
-    descriptionEn: 'SchirZan looks back on an extraordinary career as a Kickboxing World Champion. For her, sports represent discipline, relentless focus, and resilience—qualities that resonate deeply throughout her photographic works.',
+    descriptionDe: 'ShirZan blickt auf eine beeindruckende Laufbahn als Kickbox-Weltmeisterin zurück. Für sie ist der Sport die Schule der Konzentration, Disziplin und Willenskraft, die sich auch in ihrer kompromisslosen photographischen Ästhetik widerspiegelt.',
+    descriptionEn: 'ShirZan looks back on an extraordinary career as a Kickboxing World Champion. For her, sports represent discipline, relentless focus, and resilience—qualities that resonate deeply throughout her photographic works.',
     descriptionFa: 'شیرزن پیشینه‌ای درخشان به عنوان قهرمان جهان در کیک‌بوکسینگ دارد. برای او ورزش مدرسه تمرکز، انضباط و اراده است که در زیبایی‌شناسی سازش‌ناپذیر عکاسی او نیز متجلی می‌شود.',
     videoSrcMp4: './videos/kickboxing-training.mp4',
     videoSrcMov: './videos/1000035211.mov',
@@ -108,9 +108,9 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       {
         id: 'kb-gallery-07',
         src: './images/2025_06_ssh.webp',
-        alt: 'SchirZan im Kampfsport-Outfit',
-        captionDe: 'SchirZan im Wettkampf-Dress — Athletische Souveränität, mentale Standhaftigkeit und Charakter.',
-        captionEn: 'SchirZan in Official Competition Attire — Athletic sovereignty, mental fortitude, and character.',
+        alt: 'ShirZan im Kampfsport-Outfit',
+        captionDe: 'ShirZan im Wettkampf-Dress — Athletische Souveränität, mentale Standhaftigkeit und Charakter.',
+        captionEn: 'ShirZan in Official Competition Attire — Athletic sovereignty, mental fortitude, and character.',
         captionFa: 'شیرزن با لباس مسابقه — صلابت ورزشی، استقامت ذهنی و شخصیت الهام‌بخش.'
       },
       {
@@ -130,16 +130,16 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     subtitleDe: 'Langstreckenläufe mit Botschaft für Gleichberechtigung & Freiheit',
     subtitleEn: 'Long-distance advocacy runs for equality & human dignity',
     subtitleFa: 'دوهای استقامت با پیام برابری، آزادی و کرامت انسانی',
-    descriptionDe: 'In den Jahren 2025 und 2026 absolvierte SchirZan elf Halbmarathons sowie den prestigeträchtigen Berlin Marathon. Ihre Läufe widmet sie dem gesellschaftlichen Engagement: Für Würde, Gleichberechtigung aller Menschen und gegen patriarchale Unterdrückung.',
-    descriptionEn: 'In 2025 and 2026, SchirZan completed eleven half-marathons and the prestigious Berlin Marathon. Each run carries an unequivocal statement: Standing for human dignity, gender equality, diversity, and against patriarchal violence.',
+    descriptionDe: 'In den Jahren 2025 und 2026 absolvierte ShirZan elf Halbmarathons sowie den prestigeträchtigen Berlin Marathon. Ihre Läufe widmet sie dem gesellschaftlichen Engagement: Für Würde, Gleichberechtigung aller Menschen und gegen patriarchale Unterdrückung.',
+    descriptionEn: 'In 2025 and 2026, ShirZan completed eleven half-marathons and the prestigious Berlin Marathon. Each run carries an unequivocal statement: Standing for human dignity, gender equality, diversity, and against patriarchal violence.',
     descriptionFa: 'در سال‌های ۲۰۲۵ و ۲۰۲۶، شیرزن یازده نیمه‌ماراتن و ماراتن معتبر برلین را با موفقیت پشت سر گذاشت. او هر دویدن را به آرمان‌های والای انسانی پیوند می‌زند: برای کرامت، برابری جنسیتی، تنوع و علیه سرکوب‌های پدرسالارانه.',
     photos: [
       {
         id: 'run-gallery-08',
         src: './images/2026_08_ecchr-human-rights-support-4-1152x1536.webp',
-        alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
-        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 zur Unterstützung des European Center for Constitutional and Human Rights (ECCHR): Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
-        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 supporting the European Center for Constitutional and Human Rights (ECCHR): Solidarity and worldwide legal action for survivors of human rights violations.',
+        alt: 'ShirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
+        captionDe: 'ShirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 zur Unterstützung des European Center for Constitutional and Human Rights (ECCHR): Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
+        captionEn: 'ShirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 supporting the European Center for Constitutional and Human Rights (ECCHR): Solidarity and worldwide legal action for survivors of human rights violations.',
         captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷ ✨ · نیمه‌ماراتن برلین ۲۰۲۷ در حمایت از مرکز اروپایی قانون اساسی و حقوق بشر (ECCHR): همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.',
         externalLink: 'https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights',
         externalLinkTextDe: 'Spendenlauf unterstützen →',
@@ -201,8 +201,8 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         id: 'run-gallery-13',
         src: './images/2025_07_image00001-768x1366.webp',
         alt: 'Halbmarathons & Marathon Berlin 2025',
-        captionDe: 'Halbmarathons & Marathon Berlin: SchirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
-        captionEn: 'Half Marathons & Marathon Berlin: SchirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
+        captionDe: 'Halbmarathons & Marathon Berlin: ShirZan absolvierte 11 Halbmarathons und den Berlin-Marathon für Frieden und Freiheit.',
+        captionEn: 'Half Marathons & Marathon Berlin: ShirZan completed 11 half-marathons and the full Berlin Marathon for peace and freedom.',
         captionFa: 'نیمه‌ماراتن‌ها و ماراتن برلین: شیرزن ۱۱ نیمه‌ماراتن و ماراتن کامل برلین را به نفع صلح و آزادی به پایان رساند.'
       }
     ]

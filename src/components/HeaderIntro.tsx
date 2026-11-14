@@ -17,9 +17,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
   const artistPhotoItem: PhotoItem = {
     id: 'steve-barret-portrait',
     src: resolveAsset('/images/2025_07_photoart_bw.jpg'),
-    alt: 'SchirZan – Schahrsad Shahmirzadi. Photographiert von Steve Barret',
-    captionDe: 'Schahrsad Shahmirzadi (SchirZan) – Porträt photographiert von Steve Barret',
-    captionEn: 'Schahrsad Shahmirzadi (SchirZan) – Portrait by Steve Barret',
+    alt: 'ShirZan – Schahrsad Shahmirzadi. Photographiert von Steve Barret',
+    captionDe: 'Schahrsad Shahmirzadi (ShirZan) – Porträt photographiert von Steve Barret',
+    captionEn: 'Schahrsad Shahmirzadi (ShirZan) – Portrait by Steve Barret',
     captionFa: 'شهزاد شاهمیرزادی (شیرزن) – پرتره عکاسی‌شده توسط استیو بارت'
   };
 
@@ -93,7 +93,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
+                    alt="ShirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
                     draggable={false}
                     className="w-full h-full object-cover object-center select-none"
                     loading="eager"
@@ -107,7 +107,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between gap-2">
                   <div className="space-y-0.5">
                     <h3 className="font-serif text-stone-900 font-bold text-sm leading-tight">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (ShirZan)'}
                     </h3>
                     <p className="text-[11px] text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'عکاسی و هنرهای تجسمی' : 'Photographie & Bildende Kunst'}
@@ -189,7 +189,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
+                    alt="ShirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
                     draggable={false}
                     className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out select-none"
                     loading="eager"
@@ -205,7 +205,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="mt-3.5 pt-3 border-t border-stone-100 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="space-y-0.5">
                     <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (ShirZan)'}
                     </h3>
                     <p className="text-xs text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'هنرمند، عکاس و پژوهشگر' : 'Photographie & Bildende Kunst'}
@@ -234,10 +234,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </div>
               <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
                 {currentLang === 'de'
-                  ? 'Künstlername SchirZan & Die Philosophie des Lichts'
+                  ? 'Künstlername ShirZan & Die Philosophie des Lichts'
                   : currentLang === 'fa'
                   ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
-                  : 'Artist Name SchirZan & The Philosophy of Light'}
+                  : 'Artist Name ShirZan & The Philosophy of Light'}
               </h3>
               <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
                 {currentLang === 'de'

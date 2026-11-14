@@ -224,10 +224,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-3xl">
           {isDe
-            ? 'Die renommierte französische Auszeichnung PERSPA wählte gleich drei Architekturserien von SchirZan in die offizielle Editor’s Choice Galerie:'
+            ? 'Die renommierte französische Auszeichnung PERSPA wählte gleich drei Architekturserien von ShirZan in die offizielle Editor’s Choice Galerie:'
             : isFa
             ? 'جایزه معتبر فرانسوی PERSPA سه مجموعه عکاسی معماری شیرزن را برای گالری رسمی برگزیدگان سردبیر انتخاب نمود:'
-            : 'The prestigious French award PERSPA selected three architectural series by SchirZan for its official Editor’s Choice gallery:'}
+            : 'The prestigious French award PERSPA selected three architectural series by ShirZan for its official Editor’s Choice gallery:'}
         </p>
 
         {/* 3 PERSPA Artworks Grid */}
@@ -430,10 +430,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               </h5>
               <p className="text-xs text-stone-700 leading-relaxed font-normal">
                 {isDe
-                  ? 'Der offizielle Film der 20. Spider Awards präsentiert SchirZans preisgekrönte Architekturfotografie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
+                  ? 'Der offizielle Film der 20. Spider Awards präsentiert ShirZans preisgekrönte Architekturfotografie im internationalen Verzeichnis herausragender Schwarz-Weiß-Arbeiten.'
                   : isFa
                   ? 'فیلم رسمی بیستمین دوره جوایز اسپایدر که آثار برگزیده معماری سیاه و سفید شیرزن را به تصویر می‌کشد.'
-                  : 'The official 20th Spider Awards film presenting SchirZan’s awarded architectural photography in the international compendium.'}
+                  : 'The official 20th Spider Awards film presenting ShirZan’s awarded architectural photography in the international compendium.'}
               </p>
             </div>
 
@@ -657,10 +657,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-3xl">
           {isDe
-            ? 'In der offiziellen Buchausgabe »The Curated Collection 2026, Amateur Edition« ist SchirZans prämierte Arbeit »Piano« auf Seite 37 ganzseitig publiziert.'
+            ? 'In der offiziellen Buchausgabe »The Curated Collection 2026, Amateur Edition« ist ShirZans prämierte Arbeit »Piano« auf Seite 37 ganzseitig publiziert.'
             : isFa
             ? 'در کتاب رسمی «مجموعه برگزیده ۲۰۲۶ اسپایدر»، اثر شاخص پیانوی معماری شیرزن در صفحه ۳۷ منتشر گردیده است.'
-            : 'In the official book edition "The Curated Collection 2026, Amateur Edition", SchirZan’s awarded work "Piano" is prominently featured on page 37.'}
+            : 'In the official book edition "The Curated Collection 2026, Amateur Edition", ShirZan’s awarded work "Piano" is prominently featured on page 37.'}
         </p>
 
         {/* 4 Books/Pages Grid */}
@@ -925,10 +925,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
         <div className="p-4 bg-white rounded-xl border border-stone-200/90 space-y-2">
           <div className="text-xs sm:text-sm font-semibold text-stone-900">
             {isDe
-              ? 'SchirZans prämierte Werke publiziert auf den Seiten 20–21, 26, 41 und 168:'
+              ? 'ShirZans prämierte Werke publiziert auf den Seiten 20–21, 26, 41 und 168:'
               : isFa
               ? 'آثار برگزیده شیرزن منتشر شده در صفحات ۲۰–۲۱، ۲۶، ۴۱ و ۱۶۸:'
-              : 'SchirZan’s awarded works published on pages 20–21, 26, 41, and 168:'}
+              : 'ShirZan’s awarded works published on pages 20–21, 26, 41, and 168:'}
           </div>
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <a

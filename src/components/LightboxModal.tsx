@@ -62,7 +62,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         <div className="flex items-center gap-2 bg-stone-900/80 px-4 py-1.5 rounded-full border border-stone-700/80 text-xs font-mono">
           <span>{currentIndex + 1} / {photos.length}</span>
           <span className="text-stone-500">|</span>
-          <span className="text-stone-300">SchirZan Collection</span>
+          <span className="text-stone-300">ShirZan Collection</span>
         </div>
 
         <button
@@ -116,7 +116,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           {/* Protective Watermark */}
           <div className="absolute bottom-3 right-4 flex items-center gap-1.5 text-xs text-white/70 font-serif bg-stone-950/60 px-2.5 py-1 rounded-md backdrop-blur-xs">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-            <span>© SchirZan · Schahrsad Shahmirzadi</span>
+            <span>© ShirZan · Schahrsad Shahmirzadi</span>
           </div>
         </div>
 

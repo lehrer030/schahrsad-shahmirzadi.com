@@ -88,7 +88,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
           <div className="space-y-2 pt-2">
             <a
-              href={`mailto:${email}?subject=Anfrage%20SchirZan%20Photographie`}
+              href={`mailto:${email}?subject=Anfrage%20ShirZan%20Photographie`}
               className="w-full flex items-center justify-center gap-2 py-3 bg-stone-900 hover:bg-amber-800 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors shadow-xs"
             >
               <Mail className="w-4 h-4" />
@@ -102,7 +102,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <span>
               {currentLang === 'fa'
                 ? 'پاسخ‌گویی مستقیم توسط هنرمند یا دفتر مدیریت آثار'
-                : 'Direkte Bearbeitung durch die Künstlerin SchirZan'}
+                : 'Direkte Bearbeitung durch die Künstlerin ShirZan'}
             </span>
           </div>
         </div>

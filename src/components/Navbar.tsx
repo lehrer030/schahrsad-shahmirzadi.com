@@ -226,8 +226,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             {currentLang === 'fa'
               ? 'حمایت از کارزار شیرزن برای ECCHR'
               : currentLang === 'en'
-              ? 'Support SchirZan’s fundraising campaign at ECCHR'
-              : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+              ? 'Support ShirZan’s fundraising campaign at ECCHR'
+              : 'Unterstützen Sie ShirZans Spendenkampagne beim ECCHR'}
           </span>
           <span className="inline-flex items-center gap-1 font-semibold text-[11px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 ltr:ml-1 rtl:mr-1">
             <span>
@@ -251,7 +251,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <span className="text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
-              SchirZan
+              ShirZan
             </span>
             <span className="text-stone-300 text-sm hidden sm:inline">|</span>
             <span className="text-stone-600 text-xs sm:text-sm tracking-wide font-normal hidden sm:inline">

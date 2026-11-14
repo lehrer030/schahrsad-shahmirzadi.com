@@ -35,7 +35,7 @@
   /* Druckschutz: Copyright-Wasserzeichen beim Drucken */
   @media print {
     body::before {
-      content: "© Schahrsad Shahmirzadi (SchirZan) · Urheberrechtlich geschützte Werke · https://schahrsad-shahmirzadi.com";
+      content: "© Schahrsad Shahmirzadi (ShirZan) · Urheberrechtlich geschützte Werke · https://schahrsad-shahmirzadi.com";
       display: block;
       text-align: center;
       font-weight: bold;
