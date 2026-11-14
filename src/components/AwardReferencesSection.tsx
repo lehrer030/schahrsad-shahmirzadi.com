@@ -682,7 +682,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Führender weltweiter Preis für Schwarz-Weiß-Fotografie. Jury mit Vertreter:innen der Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy und Financial Times bei ca. 6.000 Einreichungen aus 64 Ländern.',
     scopeEn: 'The leading international accolade for black and white photography. Jurors include Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy, and Financial Times.',
     scopeFa: 'معتبرترین جایزه جهانی عکاسی سیاه‌وسفید با حضور داورانی از تیت مدرن، ساتبیز، گالری سرپنتین و آرت‌نت.',
-    badgeImage: '/images/2025_09_image00012.webp',
+    badgeImage: '/images/2025_12_spiderfellow20thwinner.webp',
     mainDirectoryUrl: 'https://www.thespiderawards.com/gallery/20th/gallery.php?x=a&cid=653&g=w',
     honors: [
       {
