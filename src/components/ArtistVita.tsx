@@ -424,8 +424,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           </div>
         </div>
 
-        {/* Additional 2 Pillars: Professional Background & Artistic Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+        {/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
+        <div id="biography-profile" className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 scroll-mt-28">
           
           {/* Pillar: Professional Background / Water Protection */}
           <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">

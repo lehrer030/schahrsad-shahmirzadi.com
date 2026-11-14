@@ -225,40 +225,6 @@ export default function App() {
     };
   }, []);
 
-  // One-Pager: ScrollSpy IntersectionObserver to track visible section on scroll
-  useEffect(() => {
-    if (selectedSeriesId) return;
-
-    const sectionIds: NavigationCategory[] = [
-      'architecture',
-      'fine-art',
-      'social-environmental',
-      'portraits',
-      'kickboxing',
-      'biography',
-      'press',
-      'gallery'
-    ];
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 220;
-
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const id = sectionIds[i];
-        const el = document.getElementById(id);
-        if (el) {
-          const top = el.offsetTop;
-          if (scrollPosition >= top) {
-            setCurrentCategory(id);
-            break;
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [selectedSeriesId]);
 
   // Comprehensive series map including all core and further works across all 4 categories
   const seriesMap: Record<string, PhotoSeries> = ALL_SERIES_MAP;

@@ -191,8 +191,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
       </section>
 
       {/* 3. Publications, Winners E-Books, Videos & Editor's Choice */}
-      <section id="publications" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs relative">
-        <div id="award-references" className="absolute -top-28 left-0 pointer-events-none" />
+      <section id="publications" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <div className="border-b border-stone-100 pb-6 mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
             <BookOpen className="w-4 h-4 text-amber-700" />

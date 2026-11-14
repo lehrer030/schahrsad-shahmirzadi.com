@@ -193,12 +193,12 @@ export const SCROLL_CHECKPOINTS: ScrollCheckpoint[] = [
   { menuId: 'biography', domId: 'biography' },
   { menuId: 'education', domId: 'education' },
   { menuId: 'engagement', domId: 'engagement' },
+  { menuId: 'biography', domId: 'biography-profile' },
   { menuId: 'press', domId: 'press' },
   { menuId: 'press', domId: 'press-features' },
   { menuId: 'exhibitions', domId: 'exhibitions' },
   { menuId: 'publications', domId: 'publications' },
   { menuId: 'award-references', domId: 'award-references' },
-  { menuId: 'award-references', domId: 'photoart' },
   { menuId: 'gallery', domId: 'gallery' },
 ];
 
@@ -216,34 +216,39 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
     const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = window.innerHeight;
+      const scrollY = window.scrollY || window.pageYOffset;
+
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
-      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+      if (clientHeight + scrollY >= scrollHeight - 60) {
         setActiveMenuId('gallery');
         return;
       }
 
-      // Alle vorhandenen Checkpoints mit ihrer tatsächlichen Seitenposition ermitteln
-      const points: { menuId: string; top: number }[] = [];
+      // Am Seitenanfang (über der Architektur) immer Fotografie (01) aktivieren
+      if (scrollY < 200) {
+        setActiveMenuId('works');
+        return;
+      }
+
+      // Der fixierte Header hat eine Höhe von ca. 100-130px.
+      // Ein Bereich wird aktiv, sobald seine Oberkante den Lesebereich (140px unterhalb des oberen Fensterrands) erreicht.
+      const checkpointOffset = 140;
+      let active = 'works';
+
+      // Gehe alle Checkpoints in Reihenfolge durch: der letzte, der den Lesebereich erreicht hat, wird aktiv
       for (const cp of SCROLL_CHECKPOINTS) {
         const el = document.getElementById(cp.domId);
         if (el) {
-          const top = el.getBoundingClientRect().top + window.scrollY;
-          points.push({ menuId: cp.menuId, top });
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= checkpointOffset) {
+            active = cp.menuId;
+          }
         }
       }
 
-      // Nach Y-Position aufsteigend sortieren
-      points.sort((a, b) => a.top - b.top);
-
-      const scrollPos = window.scrollY + 200;
-      let foundMenuId = 'works';
-      for (let i = points.length - 1; i >= 0; i--) {
-        if (scrollPos >= points[i].top) {
-          foundMenuId = points[i].menuId;
-          break;
-        }
-      }
-      setActiveMenuId(foundMenuId);
+      setActiveMenuId(active);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -330,15 +335,15 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {currentLang === 'fa'
                   ? 'کمپین دویدن برای حقوق بشر:'
                   : currentLang === 'en'
-                  ? 'Run for Human Rights:'
-                  : 'Spendenlauf für Menschenrechte:'}
+                    ? 'Run for Human Rights:'
+                    : 'Spendenlauf für Menschenrechte:'}
               </span>
               <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity hidden md:inline truncate">
                 {currentLang === 'fa'
                   ? 'حمایت از کارزار شیرزن برای ECCHR'
                   : currentLang === 'en'
-                  ? 'Support SchirZan’s fundraising campaign at ECCHR'
-                  : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+                    ? 'Support SchirZan’s fundraising campaign at ECCHR'
+                    : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
               </span>
             </div>
             <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
@@ -346,8 +351,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {currentLang === 'fa'
                   ? 'کمک آنلاین'
                   : currentLang === 'en'
-                  ? 'Donate'
-                  : 'Jetzt spenden'}
+                    ? 'Donate'
+                    : 'Jetzt spenden'}
               </span>
               <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
             </span>
@@ -356,7 +361,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
-        
+
         {/* Brand / Artist Logo */}
         <button
           onClick={onGoHome}
@@ -375,8 +380,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             {currentLang === 'de'
               ? 'Photographie & Kunst'
               : currentLang === 'fa'
-              ? 'عکاسی و هنر · شیرزن'
-              : 'Photography & Art'}
+                ? 'عکاسی و هنر · شیرزن'
+                : 'Photography & Art'}
           </p>
         </button>
 
@@ -390,19 +395,17 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
-                    isActive
-                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
-                  }`}
+                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${isActive
+                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                    }`}
                   title={getItemLabel(item)}
                 >
                   <span
-                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
-                      isActive
-                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                    }`}
+                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${isActive
+                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                      }`}
                   >
                     {item.num}
                   </span>
@@ -422,19 +425,17 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
-                    isActive
-                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
-                  }`}
+                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${isActive
+                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                    }`}
                   title={getItemLabel(item)}
                 >
                   <span
-                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
-                      isActive
-                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                    }`}
+                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${isActive
+                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                      }`}
                   >
                     {item.num}
                   </span>
@@ -449,39 +450,36 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Right Tools: Language Switcher (DE / EN / FA) & Contact */}
         <div className="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
-          
+
           {/* Trilingual Switcher (DE / EN / FA) */}
           <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
             <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0" />
             <button
               onClick={() => onToggleLang('de')}
-              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${
-                currentLang === 'de'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
+              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'de'
+                ? 'bg-stone-900 text-white font-medium'
+                : 'text-stone-600 hover:text-stone-900'
+                }`}
               title="Deutsch"
             >
               DE
             </button>
             <button
               onClick={() => onToggleLang('en')}
-              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${
-                currentLang === 'en'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
+              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'en'
+                ? 'bg-stone-900 text-white font-medium'
+                : 'text-stone-600 hover:text-stone-900'
+                }`}
               title="English"
             >
               EN
             </button>
             <button
               onClick={() => onToggleLang('fa')}
-              className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${
-                currentLang === 'fa'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
+              className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'fa'
+                ? 'bg-stone-900 text-white font-medium'
+                : 'text-stone-600 hover:text-stone-900'
+                }`}
               title="فارسی"
             >
               فارسی
@@ -541,11 +539,10 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handleNavigateToItem(item)}
-                  className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
-                    isActive
-                      ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
-                      : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
-                  }`}
+                  className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${isActive
+                    ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
+                    : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
+                    }`}
                 >
                   <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
                     <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
