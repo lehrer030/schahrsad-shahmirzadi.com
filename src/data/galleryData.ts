@@ -150,30 +150,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         badgeFa: 'فراخوان حمایت مالی حقوق بشر ۲۰۲۷ ✨'
       },
       {
-        id: 'run-gallery-09',
-        src: './images/2026_08_ecchr-human-rights-support-1-1152x1536.webp',
-        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation I',
-        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Vorbereitung und Streckeneindrücke für den Berliner Halbmarathon zugunsten des ECCHR.',
-        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: Training and route impressions for the Berlin Half Marathon supporting ECCHR.',
-        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: تمرین و آماده‌سازی برای نیمه‌ماراتن برلین در حمایت از ECCHR.'
-      },
-      {
-        id: 'run-gallery-10',
-        src: './images/2026_08_ecchr-human-rights-support-1152x1536.webp',
-        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation II',
-        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Sportlicher Einsatz für globale Menschenrechte und Rechtsstaatlichkeit.',
-        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: Athletic commitment to global human rights and international justice.',
-        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: تعهد ورزشی برای حقوق بشر جهانی و حاکمیت قانون.'
-      },
-      {
-        id: 'run-gallery-11',
-        src: './images/2026_08_ecchr-human-rights-support-3-1152x1536.webp',
-        alt: 'SchirZan – ECCHR Spendenlauf Dokumentation III',
-        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027: Auf der Laufstrecke in Berlin mit klarer Botschaft für universelle Menschenwürde.',
-        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027: On the Berlin running course with an unequivocal message for universal human dignity.',
-        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷: در مسیر دویدن برلین با پیامی روشن برای کرامت انسانی.'
-      },
-      {
         id: 'run-gallery-12',
         src: './images/2026_08_ecchr-human-rights-768x792.webp',
         alt: 'ECCHR – Engagement für Menschenrechte',
