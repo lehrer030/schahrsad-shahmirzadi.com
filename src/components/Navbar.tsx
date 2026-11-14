@@ -307,6 +307,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Top Colored Spendenlauf Announcement Banner - Automatisch gesteuert nach Datum */}
       {isCampaignActive && (
         <a
+          id="spendenlauf-banner"
           href={SPENDENLAUF_CONFIG.url}
           target="_blank"
           rel="noopener noreferrer"
@@ -347,7 +348,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </a>
       )}
 
-      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
+      <div id="brand-header-bar" className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
 
         {/* Brand / Artist Logo */}
         <button
@@ -494,7 +495,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Mobile & Tablet Live Section Indicator Bar (Visible on mobile & tablet: lg:hidden) */}
-      <div className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
+      <div id="mobile-section-indicator" className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
         <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
           <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
@@ -509,57 +510,64 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED, OPTIMIZED FOR MOBILE & TABLET */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#faf8f5] border-b border-stone-200 px-4 pt-4 pb-8 space-y-4 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-4 duration-200">
-          <div className="flex items-center justify-between border-b border-stone-200 pb-2">
-            <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
-              {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
-            </span>
-            <span className="text-[10px] font-mono text-stone-500">
-              {currentLang === 'de' ? '10 Bereiche' : currentLang === 'fa' ? '۱۰ بخش' : '10 Sections'}
-            </span>
-          </div>
+        <>
+          <div
+            className="lg:hidden fixed inset-0 bg-stone-900/40 backdrop-blur-2xs z-40 transition-opacity"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="lg:hidden absolute top-full inset-x-0 bg-[#faf8f5] border-b border-stone-300 px-4 pt-4 pb-8 space-y-4 max-h-[80vh] overflow-y-auto shadow-2xl z-50 animate-in slide-in-from-top-2 duration-150">
+            <div className="flex items-center justify-between border-b border-stone-200 pb-2">
+              <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
+                {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
+              </span>
+              <span className="text-[10px] font-mono text-stone-500">
+                {currentLang === 'de' ? '10 Bereiche' : currentLang === 'fa' ? '۱۰ بخش' : '10 Sections'}
+              </span>
+            </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
-            {ORIGINAL_11_MENU_ITEMS.map((item) => {
-              const isActive = !item.isContact && activeMenuId === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavigateToItem(item)}
-                  className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${isActive
-                    ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
-                    : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
-                    }`}
-                >
-                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
-                    <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
-                      {item.num}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+              {ORIGINAL_11_MENU_ITEMS.map((item) => {
+                const isActive = !item.isContact && activeMenuId === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavigateToItem(item)}
+                    className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${isActive
+                      ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
+                      : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
+                      }`}
+                  >
+                    <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                      <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
+                        {item.num}
+                      </span>
+                      <div className="shrink-0">{getItemIcon(item.id)}</div>
+                      <span className="text-xs truncate">
+                        {getItemLabel(item)}
+                      </span>
+                    </div>
+                    <span className={`text-xs shrink-0 ml-1.5 ${isActive ? 'text-amber-700' : 'text-stone-300 group-hover:text-stone-500'}`}>
+                      →
                     </span>
-                    <div className="shrink-0">{getItemIcon(item.id)}</div>
-                    <span className="text-xs truncate">
-                      {getItemLabel(item)}
-                    </span>
-                  </div>
-                  <span className={`text-xs shrink-0 ml-1.5 ${isActive ? 'text-amber-700' : 'text-stone-300 group-hover:text-stone-500'}`}>
-                    →
-                  </span>
-                </button>
-              );
-            })}
-          </div>
+                  </button>
+                );
+              })}
+            </div>
 
-          <div className="pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenContact();
-              }}
-              className="w-full py-2.5 sm:py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
-            >
-              {currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}
-            </button>
+            <div className="pt-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenContact();
+                }}
+                className="w-full py-2.5 sm:py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
+              >
+                {currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}
+              </button>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </header>
   );

@@ -11,8 +11,22 @@ export const scrollToElementWithOffset = (
     const el = typeof target === 'string' ? document.getElementById(target) : target;
     if (!el) return;
 
+    // Accurately determine the bottom edge of the sticky header on screen.
+    // On mobile & tablet (< 1024px), the indicator bar is the bottom-most element of the sticky header.
+    let headerHeight = 0;
+    const indicator = document.getElementById('mobile-section-indicator');
     const header = document.querySelector('header');
-    const headerHeight = header ? header.getBoundingClientRect().height : (window.innerWidth < 1024 ? 132 : 176);
+
+    if (window.innerWidth < 1024 && indicator) {
+      headerHeight = indicator.getBoundingClientRect().bottom;
+    } else if (header) {
+      headerHeight = header.getBoundingClientRect().height;
+    }
+
+    // Safety fallback if header is not yet rendered or inflated by temporary overlays
+    if (!headerHeight || headerHeight > 220 || headerHeight < 50) {
+      headerHeight = window.innerWidth < 1024 ? 132 : 176;
+    }
 
     // Exact equal spacing: on mobile px-4 is 16px (1rem).
     // The top gap between the bottom of sticky header and top of section card equals the left margin!
