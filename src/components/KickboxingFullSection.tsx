@@ -6,7 +6,6 @@ import {
   Shield,
   ChevronDown,
   ChevronUp,
-  Play,
   FileText,
   Users,
   Sparkles
@@ -550,51 +549,75 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </h3>
           </div>
 
-          {/* Videos Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <a
-              href="https://www.youtube.com/watch?v=B3M_FcVURA4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-5 rounded-2xl bg-[#faf8f5] border border-stone-200 hover:border-amber-700/50 transition-all flex items-center justify-between group"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-3 bg-red-600 text-white rounded-xl group-hover:scale-105 transition-transform">
-                  <Play className="w-5 h-5 fill-white" />
-                </div>
-                <div>
-                  <h5 className="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition-colors">
+          {/* Embedded Videos Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Video 1: Steve Barret */}
+            <div className="bg-white rounded-2xl border border-stone-200/90 p-3.5 sm:p-4 shadow-xs flex flex-col justify-between space-y-3">
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-stone-950 border border-stone-200/80 shadow-2xs">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/B3M_FcVURA4"
+                  title="Steve Barret – Stay With Me (Offizielles Musikvideo)"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex items-center justify-between gap-3 px-1 pt-1">
+                <div className="space-y-0.5 min-w-0">
+                  <h5 className="font-serif font-bold text-stone-900 text-sm truncate">
                     Steve Barret – „Stay With Me“
                   </h5>
-                  <p className="text-xs text-stone-500">
-                    {currentLang === 'fa' ? 'موزیک ویدیو رسمی (یوتیوب)' : 'Offizielles Musikvideo (Hauptrolle)'}
+                  <p className="text-xs text-stone-500 font-mono truncate">
+                    {currentLang === 'fa' ? 'موزیک ویدیو رسمی (نقش اصلی)' : 'Offizielles Musikvideo (Hauptrolle)'}
                   </p>
                 </div>
+                <a
+                  href="https://www.youtube.com/watch?v=B3M_FcVURA4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-600 hover:text-white transition-colors text-xs font-mono shrink-0 shadow-2xs"
+                  title="Auf YouTube öffnen"
+                >
+                  <span>YouTube</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
-              <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-stone-700" />
-            </a>
+            </div>
 
-            <a
-              href="https://www.youtube.com/watch?v=p9cGqvKUnV8&pp=ygUQb2RlIGFuIGRlbiBzcG9ydA%3D%3D"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-5 rounded-2xl bg-[#faf8f5] border border-stone-200 hover:border-amber-700/50 transition-all flex items-center justify-between group"
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-3 bg-red-600 text-white rounded-xl group-hover:scale-105 transition-transform">
-                  <Play className="w-5 h-5 fill-white" />
-                </div>
-                <div>
-                  <h5 className="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition-colors">
+            {/* Video 2: L&T Sport */}
+            <div className="bg-white rounded-2xl border border-stone-200/90 p-3.5 sm:p-4 shadow-xs flex flex-col justify-between space-y-3">
+              <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-stone-950 border border-stone-200/80 shadow-2xs">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/p9cGqvKUnV8"
+                  title="L&T Sport – Ode an den Sport"
+                  className="w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+              <div className="flex items-center justify-between gap-3 px-1 pt-1">
+                <div className="space-y-0.5 min-w-0">
+                  <h5 className="font-serif font-bold text-stone-900 text-sm truncate">
                     L&T Sport – „Ode an den Sport“
                   </h5>
-                  <p className="text-xs text-stone-500">
-                    {currentLang === 'fa' ? 'تیزر تلویزیونی سراسری (یوتیوب)' : 'Bundesweiter TV-Werbespot'}
+                  <p className="text-xs text-stone-500 font-mono truncate">
+                    {currentLang === 'fa' ? 'تیزر تلویزیونی سراسری' : 'Bundesweiter TV-Werbespot'}
                   </p>
                 </div>
+                <a
+                  href="https://www.youtube.com/watch?v=p9cGqvKUnV8&pp=ygUQb2RlIGFuIGRlbiBzcG9ydA%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-600 hover:text-white transition-colors text-xs font-mono shrink-0 shadow-2xs"
+                  title="Auf YouTube öffnen"
+                >
+                  <span>YouTube</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
-              <ExternalLink className="w-4 h-4 text-stone-400 group-hover:text-stone-700" />
-            </a>
+            </div>
           </div>
 
           {/* Press Links */}
