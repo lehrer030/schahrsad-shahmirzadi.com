@@ -279,7 +279,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full">
+    <header
+      className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full"
+      style={{ position: 'sticky', top: 0, zIndex: 50 }}
+    >
       {/* Top Colored Spendenlauf Announcement Banner - Compact & Slender on Mobile & Tablet */}
       <a
         href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"
@@ -440,8 +443,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       </div>
 
       {/* Mobile & Tablet Live Section Indicator Bar (Visible on mobile & tablet: lg:hidden) */}
-      <div className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center justify-between text-xs transition-colors shadow-2xs">
-        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 pr-2">
+      <div className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
+        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
           <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
             {currentSection.num}
@@ -451,13 +454,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             {currentLang === 'fa' ? currentSection.shortFa : currentLang === 'de' ? currentSection.shortDe : currentSection.shortEn}
           </span>
         </div>
-        <button
-          onClick={() => setMobileMenuOpen(prev => !prev)}
-          className="shrink-0 text-[10px] sm:text-[11px] font-mono font-medium text-stone-700 hover:text-stone-950 bg-white hover:bg-stone-50 px-2 sm:px-2.5 py-0.5 rounded border border-stone-200 transition-colors flex items-center gap-1 shadow-2xs cursor-pointer ml-2"
-          aria-label="Bereichsnavigation"
-        >
-          <span>{currentLang === 'fa' ? 'بخش‌ها ▾' : currentLang === 'de' ? 'Bereiche ▾' : 'Sections ▾'}</span>
-        </button>
       </div>
 
       {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED, OPTIMIZED FOR MOBILE & TABLET */}
