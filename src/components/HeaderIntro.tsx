@@ -46,23 +46,40 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </span>
             </div>
 
-            {/* Main Header as requested by client: "Photography – Works – International Awards" */}
+            {/* Main Header */}
             <div className="space-y-3">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold">
-                {currentLang === 'de'
-                  ? (INTRO_CONTENT.mainHeaderDe || 'Photographie – Werke – Internationale Auszeichnungen')
-                  : currentLang === 'fa'
-                  ? INTRO_CONTENT.mainHeaderFa
-                  : INTRO_CONTENT.mainHeader}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-serif tracking-tight text-stone-900 leading-[1.2] font-bold text-balance">
+                {currentLang === 'de' ? (
+                  <>
+                    <span className="block">Photographie · Werke</span>
+                    <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.25rem] xl:text-[2.5rem] font-normal text-stone-700 mt-1 sm:mt-1.5 sm:whitespace-nowrap">
+                      Internationale Auszeichnungen
+                    </span>
+                  </>
+                ) : currentLang === 'fa' ? (
+                  <>
+                    <span className="block">عکاسی · آثار هنری</span>
+                    <span className="block text-2xl sm:text-3xl md:text-4xl font-normal text-stone-700 mt-1 sm:whitespace-nowrap">
+                      جوایز و افتخارات بین‌المللی
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="block">Photography · Works</span>
+                    <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-[2.25rem] xl:text-[2.5rem] font-normal text-stone-700 mt-1 sm:mt-1.5 sm:whitespace-nowrap">
+                      International Awards
+                    </span>
+                  </>
+                )}
               </h1>
 
               {/* Subtitle */}
-              <p className="text-base sm:text-lg md:text-xl text-stone-700 font-normal max-w-2xl leading-relaxed">
+              <p className="text-base sm:text-lg text-stone-600 font-normal max-w-2xl leading-relaxed">
                 {currentLang === 'de'
-                  ? INTRO_CONTENT.subtitleDe
+                  ? 'Katalog der Bilderserien, Architekturobjekte & kuratorischen Auszeichnungen'
                   : currentLang === 'fa'
-                  ? INTRO_CONTENT.subtitleFa
-                  : INTRO_CONTENT.subtitleEn}
+                  ? 'مجموعه آثار معماری، عکاسی تجسمی و افتخارات بین‌المللی'
+                  : 'Catalog of fine art series, architectural abstractions & curated awards'}
               </p>
             </div>
 
