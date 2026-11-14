@@ -164,18 +164,6 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     shortFa: 'گالری',
     targetId: 'gallery',
     category: 'gallery'
-  },
-  {
-    id: 'contact',
-    num: '11',
-    labelEn: 'Contact',
-    labelDe: 'Kontakt & Anfragen',
-    labelFa: 'تماس و اخذ مجوز',
-    shortDe: 'Kontakt',
-    shortEn: 'Contact',
-    shortFa: 'تماس',
-    targetId: 'contact',
-    isContact: true
   }
 ];
 
@@ -384,11 +372,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           </p>
         </button>
 
-        {/* Desktop Header Navigation: 2 Rows to avoid horizontal overflow & collision */}
+        {/* Desktop Header Navigation: 2 Rows of 5 items each (01-05 and 06-10) */}
         <nav className="hidden lg:flex flex-col gap-1 items-center justify-center shrink min-w-0" aria-label="Hauptnavigation">
-          {/* Row 1: Items 01 to 06 */}
-          <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
-            {ORIGINAL_11_MENU_ITEMS.slice(0, 6).map((item) => {
+          {/* Row 1: Items 01 to 05 */}
+          <div className="flex items-center gap-1 xl:gap-1.5 flex-nowrap justify-center">
+            {ORIGINAL_11_MENU_ITEMS.slice(0, 5).map((item) => {
               const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
@@ -416,9 +404,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </div>
 
-          {/* Row 2: Items 07 to 11 */}
-          <div className="flex items-center gap-1 xl:gap-1.5 flex-wrap justify-center">
-            {ORIGINAL_11_MENU_ITEMS.slice(6).map((item) => {
+          {/* Row 2: Items 06 to 10 */}
+          <div className="flex items-center gap-1 xl:gap-1.5 flex-nowrap justify-center">
+            {ORIGINAL_11_MENU_ITEMS.slice(5, 10).map((item) => {
               const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
@@ -527,7 +515,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
             </span>
             <span className="text-[10px] font-mono text-stone-500">
-              {currentLang === 'de' ? '11 Bereiche' : currentLang === 'fa' ? '۱۱ بخش' : '11 Sections'}
+              {currentLang === 'de' ? '10 Bereiche' : currentLang === 'fa' ? '۱۰ بخش' : '10 Sections'}
             </span>
           </div>
 
