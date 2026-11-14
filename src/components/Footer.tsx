@@ -1,7 +1,6 @@
 import React from 'react';
 import { ExternalLink, ShieldCheck, Heart, Mail, Scale } from 'lucide-react';
 import type { Language } from '../data/photographyData';
-import { resolveAsset } from '../utils/resolveAsset';
 
 interface FooterProps {
   currentLang: Language;
@@ -21,24 +20,17 @@ export const Footer: React.FC<FooterProps> = ({
           
           {/* Brand & Artist */}
           <div className="space-y-3 md:col-span-1">
-            <div className="flex items-center gap-3">
-              <img
-                src={resolveAsset('/images/schirzan-logo.webp')}
-                alt="SchirZan Emblem"
-                className="w-10 h-10 object-contain drop-shadow-2xs"
-              />
-              <div className="flex flex-col">
-                <span className="text-xl font-serif text-amber-900 font-bold tracking-wider leading-none">
-                  {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
-                </span>
-                <span className="text-[9.5px] font-mono tracking-widest uppercase text-stone-500 font-semibold mt-1">
-                  {currentLang === 'de'
-                    ? 'KUNST · KAMPF · VISION'
-                    : currentLang === 'fa'
-                      ? 'هنر · مبارزه · آرمان'
-                      : 'ART · FIGHT · VISION'}
-                </span>
-              </div>
+            <div className="flex flex-col">
+              <span className="text-xl font-serif text-amber-900 font-bold tracking-wider leading-none">
+                {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
+              </span>
+              <span className="text-[9.5px] font-mono tracking-widest uppercase text-stone-500 font-semibold mt-1.5">
+                {currentLang === 'de'
+                  ? 'KUNST · KAMPF · VISION'
+                  : currentLang === 'fa'
+                    ? 'هنر · مبارزه · آرمان'
+                    : 'ART · FIGHT · VISION'}
+              </span>
             </div>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'

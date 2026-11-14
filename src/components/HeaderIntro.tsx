@@ -281,35 +281,23 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
         {/* Collapsible Expanded Philosophy & Etymology Section */}
         {showPhilosophy && (
           <div className="pt-6 border-t border-stone-200 bg-white p-6 sm:p-8 md:p-10 border border-stone-200 transition-all rounded-2xl shadow-xs">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-              <div className="lg:col-span-8 space-y-4">
-                <div className="text-xs font-mono uppercase tracking-widest text-stone-500 font-medium">
-                  {currentLang === 'fa' ? 'نام و رسالت' : 'Inspiration & Identity'}
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
-                  {currentLang === 'de'
-                    ? 'Künstlername SchirZan & Die Philosophie des Lichts'
-                    : currentLang === 'fa'
-                    ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
-                    : 'Artist Name SchirZan & The Philosophy of Light'}
-                </h3>
-                <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
-                  {currentLang === 'de'
-                    ? INTRO_CONTENT.artistExplanationDe
-                    : currentLang === 'fa'
-                    ? INTRO_CONTENT.artistExplanationFa
-                    : INTRO_CONTENT.artistExplanationEn}
-                </div>
+            <div className="max-w-4xl space-y-4">
+              <div className="text-xs font-mono uppercase tracking-widest text-stone-500 font-medium">
+                {currentLang === 'fa' ? 'نام و رسالت' : 'Inspiration & Identity'}
               </div>
-              <div className="lg:col-span-4 flex flex-col items-center justify-center p-6 bg-[#faf8f5] border border-stone-200/90 rounded-2xl text-center space-y-3">
-                <img
-                  src={resolveAsset('/images/schirzan-logo.webp')}
-                  alt="SchirZan Emblem – Photographie, Kickboxen, Marathon & Frieden"
-                  className="w-48 h-48 sm:w-56 sm:h-56 object-contain drop-shadow-sm hover:scale-102 transition-transform duration-300"
-                />
-                <span className="text-[11px] font-mono tracking-widest uppercase text-stone-500 font-semibold">
-                  {currentLang === 'fa' ? 'نشان رسمی شیرزن' : 'SchirZan · Offizielles Emblem'}
-                </span>
+              <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
+                {currentLang === 'de'
+                  ? 'Künstlername SchirZan & Die Philosophie des Lichts'
+                  : currentLang === 'fa'
+                  ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
+                  : 'Artist Name SchirZan & The Philosophy of Light'}
+              </h3>
+              <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
+                {currentLang === 'de'
+                  ? INTRO_CONTENT.artistExplanationDe
+                  : currentLang === 'fa'
+                  ? INTRO_CONTENT.artistExplanationFa
+                  : INTRO_CONTENT.artistExplanationEn}
               </div>
             </div>
           </div>
