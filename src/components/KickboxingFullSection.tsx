@@ -23,106 +23,106 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   const amateurTitles = [
     {
       year: '2013',
-      titleDe: 'WKU Weltmeisterin – Vollkontakt (Damen –55 kg, Griechenland)',
+      titleDe: 'WKU Weltmeisterin im Vollkontakt · Damen bis 55 kg in Griechenland',
       titleEn: 'WKU World Champion – Women’s Full Contact, −55 kg, Greece',
-      titleFa: 'قهرمان جهان WKU در فول‌کنتاکت بانوان (–۵۵ ک.گ، یونان)'
+      titleFa: 'قهرمان جهان WKU در فول‌کنتاکت بانوان · وزن منهای ۵۵ کیلوگرم در یونان'
     },
     {
       year: '2013',
-      titleDe: 'WKU Weltmeisterin – K-1 (Damen –55 kg, Griechenland)',
+      titleDe: 'WKU Weltmeisterin im K-1 · Damen bis 55 kg in Griechenland',
       titleEn: 'WKU World Champion – Women’s K-1, −55 kg, Greece',
-      titleFa: 'قهرمان جهان WKU در K-1 بانوان (–۵۵ ک.گ، یونان)'
+      titleFa: 'قهرمان جهان WKU در K-1 بانوان · وزن منهای ۵۵ کیلوگرم در یونان'
     },
     {
       year: '2014',
-      titleDe: 'WKU Weltmeisterin – Vollkontakt (Damen –55 kg, London)',
+      titleDe: 'WKU Weltmeisterin im Vollkontakt · Damen bis 55 kg in London',
       titleEn: 'WKU World Champion – Women’s Full Contact, −55 kg, London',
-      titleFa: 'قهرمان جهان WKU در فول‌کنتاکت بانوان (–۵۵ ک.گ، لندن)'
+      titleFa: 'قهرمان جهان WKU در فول‌کنتاکت بانوان · وزن منهای ۵۵ کیلوگرم در لندن'
     },
     {
       year: '2014',
-      titleDe: 'WKU Weltmeisterin – K-1 (Damen –55 kg, London)',
+      titleDe: 'WKU Weltmeisterin im K-1 · Damen bis 55 kg in London',
       titleEn: 'WKU World Champion – Women’s K-1, −55 kg, London',
-      titleFa: 'قهرمان جهان WKU در K-1 بانوان (–۵۵ ک.گ، لندن)'
+      titleFa: 'قهرمان جهان WKU در K-1 بانوان · وزن منهای ۵۵ کیلوگرم در لندن'
     },
     {
       year: '2015',
-      titleDe: 'ISKA Weltmeisterin – Vollkontakt (Damen –57 kg, Portugal)',
+      titleDe: 'ISKA Weltmeisterin im Vollkontakt · Damen bis 57 kg in Portugal',
       titleEn: 'ISKA World Champion – Women’s Full Contact, −57 kg, Portugal',
-      titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت بانوان (–۵۷ ک.گ، پرتغال)'
+      titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت بانوان · وزن منهای ۵۷ کیلوگرم در پرتغال'
     },
     {
       year: '2015',
-      titleDe: 'ISKA Weltmeisterin – Lowkick (Damen –57 kg, Portugal)',
+      titleDe: 'ISKA Weltmeisterin im Lowkick · Damen bis 57 kg in Portugal',
       titleEn: 'ISKA World Champion – Women’s Low Kick, −57 kg, Portugal',
-      titleFa: 'قهرمان جهان ISKA در لوکیک بانوان (–۵۷ ک.گ، پرتغال)'
+      titleFa: 'قهرمان جهان ISKA در لوکیک بانوان · وزن منهای ۵۷ کیلوگرم در پرتغال'
     },
     {
       year: '2015',
-      titleDe: 'ICO Weltmeisterin – Vollkontakt (Damen –60 kg, Stuttgart)',
+      titleDe: 'ICO Weltmeisterin im Vollkontakt · Damen bis 60 kg in Stuttgart',
       titleEn: 'ICO World Champion – Women’s Full Contact, −60 kg, Stuttgart',
-      titleFa: 'قهرمان جهان ICO در فول‌کنتاکت بانوان (–۶۰ ک.گ، اشتوتگارت)'
+      titleFa: 'قهرمان جهان ICO در فول‌کنتاکت بانوان · وزن منهای ۶۰ کیلوگرم در اشتوتگارت'
     },
     {
       year: '2016',
-      titleDe: 'ISKA Weltmeisterin – Vollkontakt (Damen –58 kg, Deutschland)',
+      titleDe: 'ISKA Weltmeisterin im Vollkontakt · Damen bis 58 kg in Deutschland',
       titleEn: 'ISKA World Champion – Women’s Full Contact, −58 kg, Germany',
-      titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت بانوان (–۵۸ ک.گ، آلمان)'
+      titleFa: 'قهرمان جهان ISKA در فول‌کنتاکت بانوان · وزن منهای ۵۸ کیلوگرم در آلمان'
     },
     {
       year: '2016',
-      titleDe: 'WMAC World Martial Arts Games Siegerin (Vollkontakt, Offene Klasse, Bad Kissingen)',
+      titleDe: 'WMAC World Martial Arts Games Siegerin im Vollkontakt · Offene Klasse in Bad Kissingen',
       titleEn: 'WMAC World Martial Arts Games Winner – Women’s Full Contact, Open Weight, Bad Kissingen',
-      titleFa: 'قهرمان بازی‌های جهانی هنرهای رزمی WMAC (کلاس آزاد، آلمان)'
+      titleFa: 'قهرمان بازی‌های جهانی هنرهای رزمی WMAC در کلاس آزاد در آلمان'
     },
     {
       year: '2014',
-      titleDe: 'IAKSA World Cup Siegerin im K-1 (Damen –60 kg, San Marino)',
+      titleDe: 'IAKSA World Cup Siegerin im K-1 · Damen bis 60 kg in San Marino',
       titleEn: 'IAKSA World Cup Winner – Women’s K-1, −60 kg, San Marino',
-      titleFa: 'قهرمان جام جهانی IAKSA در K-1 (سان‌مارینو)'
+      titleFa: 'قهرمان جام جهانی IAKSA در K-1 در سان‌مارینو'
     },
     {
       year: '2015',
-      titleDe: 'WKU World Cup Siegerin im K-1 (Damen –55 kg, Kroatien)',
+      titleDe: 'WKU World Cup Siegerin im K-1 · Damen bis 55 kg in Kroatien',
       titleEn: 'WKU World Cup Winner – Women’s K-1, −55 kg, Croatia',
-      titleFa: 'قهرمان جام جهانی WKU در K-1 (کرواسی)'
+      titleFa: 'قهرمان جام جهانی WKU در K-1 در کرواسی'
     },
     {
       year: '2014',
-      titleDe: 'ICO Europameisterin im Vollkontakt (Damen –60 kg, England)',
+      titleDe: 'ICO Europameisterin im Vollkontakt · Damen bis 60 kg in England',
       titleEn: 'ICO European Champion – Women’s Full Contact, −60 kg, England',
-      titleFa: 'قهرمان اروپا ICO در فول‌کنتاکت (انگلستان)'
+      titleFa: 'قهرمان اروپا ICO در فول‌کنتاکت در انگلستان'
     },
     {
       year: '2013',
-      titleDe: 'ISKA German Pro/Am Champion im Vollkontakt (Damen –58,2 kg)',
+      titleDe: 'ISKA German Pro/Am Champion im Vollkontakt · Damen bis 58,2 kg',
       titleEn: 'ISKA German Pro/Am Champion – Women’s Full Contact, −58.2 kg',
       titleFa: 'قهرمان حرفه‌ای/آماتور ISKA آلمان'
     },
     {
       year: '2010–2016',
-      titleDe: '15-fache Deutsche / Int. Deutsche Meisterin in 7 Verbänden (WAKO, WKA, WKU, ISKA, IAKSA, ICO, WKC)',
-      titleEn: '15-time German or International German Champion across 7 federations (WAKO, WKA, WKU, ISKA, IAKSA, ICO, WKC)',
+      titleDe: '15-fache Deutsche und Int. Deutsche Meisterin in den Verbänden WAKO, WKA, WKU, ISKA, IAKSA, ICO und WKC',
+      titleEn: '15-time German or International German Champion across 7 federations: WAKO, WKA, WKU, ISKA, IAKSA, ICO, WKC',
       titleFa: '۱۵ دوره قهرمان آلمان و بین‌المللی در ۷ فدراسیون معتبر'
     },
     {
       year: '2010–2012',
-      titleDe: 'Dreifache Baden-Württembergische Meisterin (WAKO)',
+      titleDe: 'Dreifache Baden-Württembergische Meisterin des Verbandes WAKO',
       titleEn: 'Three-time Baden-Württemberg Champion (WAKO)',
-      titleFa: 'سه دوره قهرمان ایالت بادن-وورتمبرگ (WAKO)'
+      titleFa: 'سه دوره قهرمان ایالت بادن-وورتمبرگ فدراسیون WAKO'
     },
     {
       year: '2009',
-      titleDe: 'Mack-Mania Siegerin (Mannheim)',
-      titleEn: 'Mack-Mania Winner (Mannheim)',
-      titleFa: 'قهرمان تورنمنت معتبر مک‌مانیا (مانهایم)'
+      titleDe: 'Mack-Mania Siegerin in Mannheim',
+      titleEn: 'Mack-Mania Winner in Mannheim',
+      titleFa: 'قهرمان تورنمنت معتبر مک‌مانیا در مانهایم'
     }
   ];
 
   const sportingHonours = [
     {
       period: '2014 & 2016',
-      titleDe: 'Zweifache Auszeichnung als herausragende Spitzensportlerin der Polizei durch den Innenminister des Landes Nordrhein-Westfalen (Ralf Jäger)',
+      titleDe: 'Zweifache Auszeichnung als herausragende Spitzensportlerin der Polizei durch den Innenminister des Landes Nordrhein-Westfalen Ralf Jäger',
       titleEn: 'Honoured twice as an outstanding police athlete by the Minister of the Interior of North Rhine-Westphalia',
       titleFa: 'دو بار تجلیل رسمی به عنوان ورزشکار نخبه پلیس توسط وزیر کشور ایالت نوردراین-وستفالن',
       link: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister'
@@ -250,7 +250,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <Trophy className="w-6 h-6 text-amber-600 mx-auto mb-2" />
           <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">10×</div>
           <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
-            {currentLang === 'fa' ? 'قهرمان جهان (WKU, ISKA, ICO)' : 'Weltmeisterin (WKU, ISKA, ICO)'}
+            {currentLang === 'fa' ? 'قهرمان جهان · فدراسیون‌های WKU, ISKA, ICO' : 'Weltmeisterin · WKU, ISKA, ICO'}
           </div>
           <div className="text-[11px] text-stone-400 mt-1">
             {currentLang === 'fa' ? 'شامل ۲ عنوان حرفه‌ای' : 'Inkl. 2 Profi-Weltmeistertitel'}
@@ -261,7 +261,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <Award className="w-6 h-6 text-amber-600 mx-auto mb-2" />
           <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">2×</div>
           <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
-            {currentLang === 'fa' ? 'قهرمان اروپا (WKU & ICO)' : 'Europameisterin (WKU & ICO)'}
+            {currentLang === 'fa' ? 'قهرمان اروپا · فدراسیون‌های WKU و ICO' : 'Europameisterin · WKU & ICO'}
           </div>
           <div className="text-[11px] text-stone-400 mt-1">
             {currentLang === 'fa' ? 'شامل قهرمانی حرفه‌ای اروپا' : 'Inkl. Profi-Europameisterin'}
@@ -283,7 +283,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <Sparkles className="w-6 h-6 text-amber-600 mx-auto mb-2" />
           <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">3. Dan</div>
           <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
-            {currentLang === 'fa' ? 'دان ۳ مشکی (Meistergrad)' : 'Schwarzer Gürtel (3. Dan)'}
+            {currentLang === 'fa' ? 'دان ۳ مشکی · درجه استادی' : 'Schwarzer Gürtel · 3. Dan'}
           </div>
           <div className="text-[11px] text-stone-400 mt-1">
             {currentLang === 'fa' ? 'یکی از معدود بانوان این رتبه' : 'Höchste meisterliche Reife'}
@@ -323,13 +323,13 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             <div className="space-y-3">
               <p>
                 {currentLang === 'fa'
-                  ? 'پس از حضور در مسابقات قهرمانی اروپا و جهان، او در سال ۲۰۱۲ به فدراسیون WKA (امروزه WKU/WKUWORLD) پیوست و همچنین در فدراسیون‌های بزرگ جهانی از جمله ISKA، IAKSA، ICO و WMAC درخشید.'
-                  : 'Nach Einsätzen bei Europa- und Weltmeisterschaften wechselte sie 2012 zur WKA (heute WKU/WKUWORLD) und kämpfte fortan in weltweit führenden Verbänden, darunter auch ISKA, IAKSA, ICO und WMAC.'}
+                  ? 'پس از حضور در مسابقات قهرمانی اروپا و جهان، او در سال ۲۰۱۲ به فدراسیون WKA، امروزه WKUWORLD، پیوست و همچنین در فدراسیون‌های بزرگ جهانی از جمله ISKA، IAKSA، ICO و WMAC درخشید.'
+                  : 'Nach Einsätzen bei Europa- und Weltmeisterschaften wechselte sie 2012 zur WKA, heute WKUWORLD, und kämpfte fortan in weltweit führenden Verbänden, darunter auch ISKA, IAKSA, ICO und WMAC.'}
               </p>
               <p>
                 {currentLang === 'fa'
-                  ? 'او عمدتاً در اوزان ۵۵ تا ۶۰ کیلوگرم در رشته‌های فول‌کنتاکت و K-1 به مبارزه می‌پرداخت و به عنوان یکی از اندک بانوان موفق به کسب دان ۳ مشکی شد.'
-                  : 'Sie kämpfte vor allem in den Gewichtsklassen zwischen 55 und 60 kg und spezialisierte sich auf Vollkontakt und K-1. Sie ist Trägerin des 3. Dan (Schwarzer Gürtel) im Kickboxen – eine Stufe, die nur wenige Frauen erreichen.'}
+                  ? 'او عمدتاً در اوزان ۵۵ تا ۶۰ کیلوگرم در رشته‌های فول‌کنتاکت و K-1 به مبارزه می‌پرداخت و به عنوان یکی از اندک بانوان موفق به کسب کمربند مشکی دان ۳ شد.'
+                  : 'Sie kämpfte vor allem in den Gewichtsklassen zwischen 55 und 60 kg und spezialisierte sich auf Vollkontakt und K-1. Sie ist Trägerin des 3. Dan, des Schwarzen Gürtels im Kickboxen – eine Stufe, die nur wenige Frauen erreichen.'}
               </p>
             </div>
           </div>
@@ -343,8 +343,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </span>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
               {currentLang === 'fa'
-                ? 'مبارزات بر سر عنوان قهرمانی حرفه‌ای اروپا و جهان (فول‌کنتاکت −۵۷٫۵ کیلوگرم)'
-                : 'Profi-Europa- & Weltmeisterschaftstitelkämpfe – Vollkontakt (−57,5 kg)'}
+                ? 'مبارزات بر سر عنوان قهرمانی حرفه‌ای اروپا و جهان · فول‌کنتاکت −۵۷٫۵ کیلوگرم'
+                : 'Profi-Europa- & Weltmeisterschaftstitelkämpfe – Vollkontakt bis 57,5 kg'}
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
               {currentLang === 'fa'
@@ -390,7 +390,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                       {currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}
                     </td>
                     <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
-                      {currentLang === 'fa' ? 'کارمن برتیچی (کرواسی)' : currentLang === 'de' ? 'Karmen Bertici (Kroatien)' : 'Karmen Bertici (Croatia)'}
+                      {currentLang === 'fa' ? 'کارمن برتیچی · کرواسی' : currentLang === 'de' ? 'Karmen Bertici · Kroatien' : 'Karmen Bertici · Croatia'}
                     </td>
                     <td className="py-3.5 px-4 text-stone-700">
                       Schloss Diedersdorf, Brandenburg
@@ -420,8 +420,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 <strong className="text-stone-900">{currentLang === 'fa' ? 'پوشش رسانه‌ای:' : 'Medienbericht / Fachpresse:'} </strong>
                 <span>
                   {currentLang === 'fa'
-                    ? 'گزارش اختصاصی در مجله تخصصی Kampfkunst Budo International (نوامبر ۲۰۱۴، صفحات ۱۲۲–۱۲۳).'
-                    : 'Ausführliche Reportage im internationalen Fachmagazin Kampfkunst Budo International (Ausgabe November 2014, S. 122–123).'}
+                    ? 'گزارش اختصاصی در مجله تخصصی Kampfkunst Budo International، نوامبر ۲۰۱۴، صفحات ۱۲۲–۱۲۳.'
+                    : 'Ausführliche Reportage im internationalen Fachmagazin Kampfkunst Budo International, Ausgabe November 2014, S. 122–123.'}
                 </span>
               </div>
               <a
@@ -474,7 +474,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                       {currentLang === 'fa' ? '۱۳ اکتبر ۲۰۱۶' : currentLang === 'de' ? '13. Okt. 2016' : '13 Oct 2016'}
                     </td>
                     <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
-                      {currentLang === 'fa' ? 'جسیکا مارازی (سوئیس)' : currentLang === 'de' ? 'Jessica Marazzi (Schweiz)' : 'Jessica Marazzi (Switzerland)'}
+                      {currentLang === 'fa' ? 'جسیکا مارازی · سوئیس' : currentLang === 'de' ? 'Jessica Marazzi · Schweiz' : 'Jessica Marazzi · Switzerland'}
                     </td>
                     <td className="py-3.5 px-4 text-stone-700">
                       Schloss Diedersdorf, Brandenburg
@@ -502,7 +502,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                       {currentLang === 'fa' ? '۸ اکتبر ۲۰۱۷' : currentLang === 'de' ? '8. Okt. 2017' : '8 Oct 2017'}
                     </td>
                     <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
-                      {currentLang === 'fa' ? 'سوفیا کاوالو (ایتالیا)' : currentLang === 'de' ? 'Sofia Cavallo (Italien)' : 'Sofia Cavallo (Italy)'}
+                      {currentLang === 'fa' ? 'سوفیا کاوالو · ایتالیا' : currentLang === 'de' ? 'Sofia Cavallo · Italien' : 'Sofia Cavallo · Italy'}
                     </td>
                     <td className="py-3.5 px-4 text-stone-700">
                       Schloss Diedersdorf, Brandenburg
@@ -544,7 +544,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                     {currentLang === 'fa' ? 'دفاع از عنوان قهرمانی جهان' : 'WKU Profi-Weltmeisterschaftstitelverteidigung'}
                   </span>
                   <h5 className="font-serif font-bold text-stone-900 text-sm">
-                    vs. Sofia Cavallo (Italien)
+                    vs. Sofia Cavallo · Italien
                   </h5>
                   <p className="text-xs text-stone-600 leading-relaxed">
                     {currentLang === 'fa'
@@ -569,7 +569,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                     {currentLang === 'fa' ? 'مبارزه قهرمانی حرفه‌ای جهان' : 'WKU Profi-Weltmeisterschaftstitelkampf'}
                   </span>
                   <h5 className="font-serif font-bold text-stone-900 text-sm">
-                    vs. Jessica Marazzi (Schweiz)
+                    vs. Jessica Marazzi · Schweiz
                   </h5>
                   <p className="text-xs text-stone-600 leading-relaxed">
                     {currentLang === 'fa'

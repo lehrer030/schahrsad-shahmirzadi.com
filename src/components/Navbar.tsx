@@ -76,7 +76,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'award-references',
     num: '04',
     labelEn: 'International Photography Award References',
-    labelDe: 'Internationale Fotopreis-Referenzen (Awards)',
+    labelDe: 'Internationale Fotopreis-Referenzen & Awards',
     labelFa: 'مراجع جوایز بین‌المللی عکاسی',
     shortDe: 'Awards',
     shortEn: 'Awards',
@@ -100,7 +100,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'kickboxing',
     num: '06',
     labelEn: 'World Champion Kickboxing',
-    labelDe: 'Kickbox-Weltmeisterin (10× Titel)',
+    labelDe: '10-fache Kickbox-Weltmeisterin',
     labelFa: 'قهرمانی جهان کیک‌بوکسینگ',
     shortDe: 'Kickboxen',
     shortEn: 'Kickboxing',
@@ -506,7 +506,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               }}
               className="w-full py-2.5 sm:py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
             >
-              {currentLang === 'de' ? 'Direkte Nachricht senden (Kontakt)' : currentLang === 'fa' ? 'ارسال پیام مستقیم (تماس)' : 'Send Direct Message (Contact)'}
+              {currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}
             </button>
           </div>
         </div>

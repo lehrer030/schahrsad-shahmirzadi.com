@@ -165,10 +165,10 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 >
                   <span className="group-hover/btn:underline">
                     {currentLang === 'fa'
-                      ? `مشاهده سری کامل (${work.galleryPhotos?.length || 1} اثر) ←`
+                      ? `مشاهده سری کامل · ${work.galleryPhotos?.length || 1} اثر ←`
                       : currentLang === 'de'
-                      ? `Serie ansehen (${work.galleryPhotos?.length || 1} Fotos) →`
-                      : `View Series (${work.galleryPhotos?.length || 1} Photos) →`}
+                      ? `Serie ansehen · ${work.galleryPhotos?.length || 1} Fotos →`
+                      : `View Series · ${work.galleryPhotos?.length || 1} Photos →`}
                   </span>
                 </button>
 

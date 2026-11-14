@@ -18,9 +18,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
     id: 'steve-barret-portrait',
     src: resolveAsset('/images/2025_07_photoart_bw.jpg'),
     alt: 'SchirZan – Schahrsad Shahmirzadi. Photographiert von Steve Barret',
-    captionDe: 'Schahrsad Shahmirzadi (SchirZan) – Porträt photographiert von Steve Barret',
-    captionEn: 'Schahrsad Shahmirzadi (SchirZan) – Portrait by Steve Barret',
-    captionFa: 'شهزاد شاهمیرزادی (شیرزن) – پرتره عکاسی‌شده توسط استیو بارت'
+    captionDe: 'Schahrsad Shahmirzadi · Künstlername SchirZan – Porträt photographiert von Steve Barret',
+    captionEn: 'Schahrsad Shahmirzadi · Artist name SchirZan – Portrait by Steve Barret',
+    captionFa: 'شهزاد شاهمیرزادی · نام هنری شیرزن – پرتره عکاسی‌شده توسط استیو بارت'
   };
 
   return (
@@ -93,7 +93,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
+                    alt="SchirZan – Schahrsad Shahmirzadi · Foto: Steve Barret"
                     draggable={false}
                     className="w-full h-full object-cover object-center select-none"
                     loading="eager"
@@ -107,7 +107,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between gap-2">
                   <div className="space-y-0.5">
                     <h3 className="font-serif text-stone-900 font-bold text-sm leading-tight">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
                     </h3>
                     <p className="text-[11px] text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'عکاسی و هنرهای تجسمی' : 'Photographie & Bildende Kunst'}
@@ -121,10 +121,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 {/* Compact informative text as requested: shows the most important facts directly */}
                 <p className="mt-2.5 pt-2 border-t border-stone-100 text-xs text-stone-700 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Mehrfach international prämierte Architektur-, Fine-Art- und Dokumentarfotografie (AMP 2025/2026, IPA, PERSPA Paris, BIFA).'
+                    ? 'Mehrfach international prämierte Architektur-, Fine-Art- und Dokumentarfotografie, unter anderem bei AMP 2025/2026, IPA, PERSPA Paris und BIFA.'
                     : currentLang === 'fa'
-                    ? 'عکاسی برگزیده معماری، هنرهای زیبا و مستند در مسابقات جهانی (AMP، IPA، PERSPA، BIFA).'
-                    : 'Multiple internationally awarded architectural, fine art, and documentary photography (AMP 2025/2026, IPA, PERSPA Paris, BIFA).'}
+                    ? 'عکاسی برگزیده معماری، هنرهای زیبا و مستند در مسابقات جهانی از جمله AMP، IPA، PERSPA و BIFA.'
+                    : 'Multiple internationally awarded architectural, fine art, and documentary photography, recognized by AMP 2025/2026, IPA, PERSPA Paris, and BIFA.'}
                 </p>
               </div>
             </div>
@@ -189,7 +189,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi (Photo: Steve Barret)"
+                    alt="SchirZan – Schahrsad Shahmirzadi · Foto: Steve Barret"
                     draggable={false}
                     className="w-full h-full object-cover object-center hover:scale-102 transition-transform duration-500 ease-out select-none"
                     loading="eager"
@@ -205,7 +205,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="mt-3.5 pt-3 border-t border-stone-100 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="space-y-0.5">
                     <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی (شیرزن)' : 'Schahrsad Shahmirzadi (SchirZan)'}
+                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
                     </h3>
                     <p className="text-xs text-stone-600 font-normal">
                       {currentLang === 'fa' ? 'هنرمند، عکاس و پژوهشگر' : 'Photographie & Bildende Kunst'}

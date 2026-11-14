@@ -21,7 +21,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand & Artist */}
           <div className="space-y-2 md:col-span-1">
             <span className="text-xl font-serif text-amber-900 font-bold tracking-wider">
-              {currentLang === 'fa' ? 'شیرزن (SchirZan)' : 'SchirZan'}
+              {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
             </span>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'
@@ -79,7 +79,7 @@ export const Footer: React.FC<FooterProps> = ({
                   title="Wikipedia: Schahrsad Shahmirzadi"
                 >
                   <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W</span>
-                  <span>Wikipedia ({currentLang === 'fa' ? 'زندگی‌نامه' : currentLang === 'en' ? 'Biography' : 'Biografie'})</span>
+                  <span>Wikipedia · {currentLang === 'fa' ? 'زندگی‌نامه' : currentLang === 'en' ? 'Biography' : 'Biografie'}</span>
                   <ExternalLink className="w-3 h-3 text-stone-400" />
                 </a>
               </li>
@@ -120,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onOpenLegal('impressum')}
                   className="text-stone-700 hover:text-amber-800 font-medium hover:underline cursor-pointer"
                 >
-                  {currentLang === 'fa' ? 'شناسنامه سایت (Impressum)' : 'Impressum (Angaben gem. § 5 TMG)'}
+                  {currentLang === 'fa' ? 'شناسنامه حقوقی سایت · Impressum' : 'Impressum gem. § 5 TMG'}
                 </button>
               </li>
               <li>
@@ -128,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onClick={() => onOpenLegal('datenschutz')}
                   className="text-stone-700 hover:text-amber-800 font-medium hover:underline cursor-pointer"
                 >
-                  {currentLang === 'fa' ? 'سیاست حفظ حریم خصوصی (Privacy)' : 'Datenschutzerklärung (DSGVO)'}
+                  {currentLang === 'fa' ? 'حفظ حریم خصوصی · Privacy' : 'Datenschutzerklärung nach DSGVO'}
                 </button>
               </li>
               <li className="text-stone-600 font-normal flex items-center gap-1 pt-1">
@@ -150,7 +150,7 @@ export const Footer: React.FC<FooterProps> = ({
             <a
               href="mailto:info@re-mint.online"
               className="text-stone-700 hover:text-amber-800 font-medium underline decoration-stone-300 hover:decoration-amber-800 underline-offset-2 transition-colors"
-              title="E-Mail an Emanuel Jurgait (info@re-mint.online)"
+              title="E-Mail an Emanuel Jurgait: info@re-mint.online"
             >
               Emanuel Jurgait
             </a>

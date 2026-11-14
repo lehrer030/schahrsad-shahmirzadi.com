@@ -115,38 +115,38 @@ export const getAwardWorkTitle = (title: string, lang: Language): string => {
   if (lang !== 'de') return title;
 
   const deTitleMap: Record<string, string> = {
-    'The Solitaire as an Abstraction (Revised)': 'Der Solitär als Abstraktion (Überarbeitet)',
+    'The Solitaire as an Abstraction (Revised)': 'Der Solitär als Abstraktion – Überarbeitete Fassung',
     'The Solitaire as Abstraction – In Harmony with Nature': 'Der Solitär als Abstraktion – Im Einklang mit der Natur',
     'The Solitaire as an Abstraction': 'Der Solitär als Abstraktion',
-    'The Solitaire as an Abstraction (Short Version)': 'Der Solitär als Abstraktion (Kurzfassung)',
+    'The Solitaire as an Abstraction (Short Version)': 'Der Solitär als Abstraktion – Kurzfassung',
     'The Solitaire as an Abstraction – New Perspectives': 'Der Solitär als Abstraktion – Neue Perspektiven',
     'Black & White Solitaire': 'Schwarz-Weiß-Solitär',
-    'Echoes of a Water Tower': 'Echoes of a Water Tower (Echos eines Wasserturms)',
-    'Steps of Sustainability': 'Steps of Sustainability (Stufen der Nachhaltigkeit)',
-    'Between Space and Time': 'Between Space and Time (Zwischen Raum und Zeit)',
+    'Echoes of a Water Tower': 'Echoes of a Water Tower – Echos eines Wasserturms',
+    'Steps of Sustainability': 'Steps of Sustainability – Stufen der Nachhaltigkeit',
+    'Between Space and Time': 'Between Space and Time – Zwischen Raum und Zeit',
     'The Dignity of the Animal is Inviolable': 'Die Würde des Tieres ist unantastbar',
-    'Architectural Piano': 'Architectural Piano (Architektur-Piano)',
+    'Architectural Piano': 'Architectural Piano – Architektur-Piano',
     'Blessed Are Those Who Mourn': 'Selig sind die Trauernden',
     'Prismatic Berlin': 'Prismatisches Berlin',
-    'Transformer': 'Transformer (Transformation)',
+    'Transformer': 'Transformer – Urbane Wandlung',
     'Berlin: Attack on Queer, Diversity and Freedom': 'Berlin: Angriff auf Vielfalt und Freiheit',
     'Black Red Gold – Office of the Federal President of Germany': 'Schwarz Rot Gold – Bundespräsidialamt Berlin',
     'Cloud Mirror Architecture I: Heaven’s Bridge': 'Cloud Mirror Architecture I: Himmelsbrücke',
-    'Cloud Mirror Architecture II: Stormy Sea (Black & White)': 'Cloud Mirror Architecture II: Stürmische See (Schwarz-Weiß)',
+    'Cloud Mirror Architecture II: Stormy Sea (Black & White)': 'Cloud Mirror Architecture II: Stormy Sea in Schwarz-Weiß',
     'Columns in the Here and Now': 'Säulen im Hier und Jetzt',
-    'Dimensions of Sustainability': 'Dimensions of Sustainability (Dimensionen der Nachhaltigkeit)',
+    'Dimensions of Sustainability': 'Dimensions of Sustainability – Dimensionen der Nachhaltigkeit',
     'Elegance of Structure – An Interior Symphony of Light, Forms and Lines': 'Elegance of Structure – Eine innere Symphonie aus Licht, Formen und Linien',
-    'Elegance of Structure – Black and White': 'Elegance of Structure – Schwarz-Weiß',
+    'Elegance of Structure – Black and White': 'Elegance of Structure in Schwarz-Weiß',
     'Fragments of Memory – Fragments of Time': 'Fragmente der Erinnerung – Fragmente der Zeit',
-    'Hephaestus’ Legacy': 'Hephaestus’ Legacy (Das Erbe des Hephaistos)',
-    'In-Between Spaces': 'In-Between Spaces (Zwischenräume)',
-    'In-Between Spaces (Area 14)': 'In-Between Spaces (Zwischenräume – Area 14)',
+    'Hephaestus’ Legacy': 'Hephaestus’ Legacy – Das Erbe des Hephaistos',
+    'In-Between Spaces': 'In-Between Spaces – Zwischenräume',
+    'In-Between Spaces (Area 14)': 'In-Between Spaces – Zwischenräume Area 14',
     'Kickboxing – From Fighting in the Ring to Lightning in the Frame': 'Kickboxen – Vom Kampf im Ring zum Blitzlicht im Bild',
-    'LIFE – LOVE – FREEDOM · IRAN': 'LIFE – LOVE – FREEDOM · IRAN (Leben – Liebe – Freiheit)',
-    'Mirrored': 'Mirrored (Gespiegelt)',
-    'Mirrored II': 'Mirrored II (Gespiegelt II)',
-    'Mirrored III (Black & White)': 'Mirrored III (Gespiegelt III – Schwarz-Weiß)',
-    'Razor Pull Berlin': 'Razor Pull Berlin (Rasierklingen-Zug Berlin)',
+    'LIFE – LOVE – FREEDOM · IRAN': 'LIFE – LOVE – FREEDOM · IRAN – Leben, Liebe, Freiheit',
+    'Mirrored': 'Mirrored – Gespiegelt',
+    'Mirrored II': 'Mirrored II – Gespiegelt II',
+    'Mirrored III (Black & White)': 'Mirrored III in Schwarz-Weiß',
+    'Razor Pull Berlin': 'Razor Pull Berlin – Rasierklingen-Zug Berlin',
     'Symmetric Networks': 'Symmetrische Netzwerke'
   };
 
@@ -188,9 +188,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: '3× Lobende Erwähnungen (Honorable Mentions)',
+        labelDe: '3× Lobende Erwähnung · Honorable Mention',
         labelEn: '3× Honorable Mentions',
-        labelFa: '۳ عنوان تقدیر ویژه (Honorable Mention)',
+        labelFa: '۳ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'Echoes of a Water Tower',
@@ -214,9 +214,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'selection',
-        labelDe: '14× Offizielle Auswahlen (Official Selections)',
+        labelDe: '14× Offizielle Auswahl · Official Selection',
         labelEn: '14× Official Selections',
-        labelFa: '۱۴ اثر منتخب رسمی (Official Selection)',
+        labelFa: '۱۴ اثر منتخب رسمی · Official Selection',
         items: [
           {
             title: 'LIFE – LOVE – FREEDOM · IRAN',
@@ -320,9 +320,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'winner',
-        labelDe: 'Gewinnerin – Architecture MasterPrize (Student)',
-        labelEn: 'Winner – Architecture Photography MasterPrize (Student)',
-        labelFa: 'برنده اصلی (Winner) – عکاسی معماری APMP',
+        labelDe: 'Gewinnerin des Architecture MasterPrize · Kategorie Student',
+        labelEn: 'Winner – Architecture Photography MasterPrize · Student',
+        labelFa: 'برنده اصلی · عکاسی معماری APMP',
         items: [
           {
             title: 'The Solitaire as an Abstraction (Revised)',
@@ -334,9 +334,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'hm',
-        labelDe: '10× Lobende Erwähnungen (Honorable Mentions)',
+        labelDe: '10× Lobende Erwähnung · Honorable Mention',
         labelEn: '10× Honorable Mentions',
-        labelFa: '۱۰ عنوان تقدیر ویژه (Honorable Mention)',
+        labelFa: '۱۰ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'Black Red Gold – Office of the Federal President of Germany',
@@ -406,9 +406,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'second',
-        labelDe: 'Gewinnerin – 2. Platz (Silber)',
-        labelEn: 'Winner – 2nd Place',
-        labelFa: 'برنده جایزه دوم (2nd Place Winner)',
+        labelDe: 'Gewinnerin · 2. Platz Silber',
+        labelEn: 'Winner · 2nd Place Silver',
+        labelFa: 'برنده جایزه دوم · مدال نقره',
         items: [
           {
             title: 'The Solitaire as an Abstraction (Revised)',
@@ -419,9 +419,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'hm',
-        labelDe: '3× Lobende Erwähnungen (Honorable Mentions)',
+        labelDe: '3× Lobende Erwähnung · Honorable Mention',
         labelEn: '3× Honorable Mentions',
-        labelFa: '۳ عنوان تقدیر ویژه (Honorable Mentions)',
+        labelFa: '۳ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
@@ -442,9 +442,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'editor',
-        labelDe: '3× Empfehlung der Redaktion (Editor’s Choice)',
+        labelDe: '3× Empfehlung der Redaktion · Editor’s Choice',
         labelEn: '3× Editor’s Choice',
-        labelFa: '۳ انتخاب ویژه سردبیر (Editor’s Choice)',
+        labelFa: '۳ انتخاب ویژه سردبیر · Editor’s Choice',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
@@ -506,9 +506,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'winner',
-        labelDe: 'Ausgewählte Fotografin (STREETS)',
-        labelEn: 'Selected Photographer (STREETS)',
-        labelFa: 'عکاس برگزیده بخش خیابانی (Selected Photographer)',
+        labelDe: 'Ausgewählte Fotografin · Sparte STREETS',
+        labelEn: 'Selected Photographer · STREETS',
+        labelFa: 'عکاس برگزیده بخش خیابانی · Selected Photographer',
         items: [
           {
             title: 'In-Between Spaces',
@@ -551,9 +551,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: '4× Lobende Erwähnungen (Honorable Mentions)',
+        labelDe: '4× Lobende Erwähnung · Honorable Mention',
         labelEn: '4× Honorable Mentions',
-        labelFa: '۴ عنوان تقدیر ویژه (Honorable Mentions)',
+        labelFa: '۴ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'Berlin: Attack on Queer, Diversity and Freedom',
@@ -593,9 +593,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: 'Lobende Erwähnung (Non-Professional)',
-        labelEn: 'Honorable Mention (Non-Professional)',
-        labelFa: 'تقدیر ویژه (Honorable Mention)',
+        labelDe: 'Lobende Erwähnung · Non-Professional',
+        labelEn: 'Honorable Mention · Non-Professional',
+        labelFa: 'تقدیر ویژه · بخش آزاد و دانشجویی',
         items: [
           {
             title: 'The Solitaire as an Abstraction',
@@ -620,9 +620,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'winner',
-        labelDe: 'Gewinnerin – Andere Außenarchitektur (Student)',
-        labelEn: 'Winner – Other Exterior (Student)',
-        labelFa: 'برنده اصلی (Winner)',
+        labelDe: 'Gewinnerin · Andere Außenarchitektur · Student',
+        labelEn: 'Winner · Other Exterior · Student',
+        labelFa: 'برنده اصلی · معماری سازه‌های بیرونی',
         items: [
           {
             title: 'The Solitaire as an Abstraction',
@@ -660,8 +660,8 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: 'Lobende Erwähnung (Architektur / Sonstige)',
-        labelEn: 'Honorable Mention (Architecture / Others)',
+        labelDe: 'Lobende Erwähnung · Architektur und Sonstige',
+        labelEn: 'Honorable Mention · Architecture and Others',
         labelFa: 'تقدیر ویژه در بخش معماری',
         items: [
           {
@@ -687,8 +687,8 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: 'Lobende Erwähnung (Architektur – Amateur)',
-        labelEn: 'Honorable Mention (Architectural – Amateur)',
+        labelDe: 'Lobende Erwähnung · Architektur · Amateur',
+        labelEn: 'Honorable Mention · Architectural · Amateur',
         labelFa: 'تقدیر ویژه در عکاسی معماری',
         items: [
           {
@@ -700,9 +700,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'nominee',
-        labelDe: '3× Nominierungen (Architektur & Abstrakt)',
-        labelEn: '3× Nominee (Architectural & Abstract)',
-        labelFa: '۳ عنوان نامزدی (Nominee)',
+        labelDe: '3× Nominierung · Architektur und Abstrakt',
+        labelEn: '3× Nominee · Architectural and Abstract',
+        labelFa: '۳ عنوان نامزدی رسمی · Nominee',
         items: [
           {
             title: 'Architectural Piano',
@@ -737,9 +737,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'shortlist',
-        labelDe: '2× Shortlist-Nominierungen (Shoot – Foto/Video)',
-        labelEn: '2× Shortlisted (Shoot – Photo/Video)',
-        labelFa: '۲ اثر در فهرست نهایی (Shortlisted)',
+        labelDe: '2× Shortlist-Nominierung · Sparte Shoot Foto & Video',
+        labelEn: '2× Shortlisted · Category Shoot Photo & Video',
+        labelFa: '۲ اثر در فهرست نهایی · Shortlisted',
         items: [
           {
             title: 'The Solitaire as an Abstraction (Revised)',
@@ -755,9 +755,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'selection',
-        labelDe: '6× Offizielle Auswahlen (Shoot – Foto/Video)',
-        labelEn: '6× Official Selections (Shoot – Photo/Video)',
-        labelFa: '۶ اثر منتخب رسمی (Official Selection)',
+        labelDe: '6× Offizielle Auswahl · Sparte Shoot Foto & Video',
+        labelEn: '6× Official Selection · Category Shoot Photo & Video',
+        labelFa: '۶ اثر منتخب رسمی · Official Selection',
         items: [
           {
             title: 'The Dignity of the Animal is Inviolable',

@@ -392,8 +392,8 @@ export default function App() {
               <FurtherWorks
                 works={FURTHER_WORKS_ARCHITECTURE}
                 currentLang={currentLang}
-                sectionTitleDe="Weitere Arbeiten (Architektur)"
-                sectionTitleEn="Further Works (Architecture)"
+                sectionTitleDe="Weitere Arbeiten der Architektur"
+                sectionTitleEn="Further Works in Architecture"
                 sectionTitleFa="سایر آثار معماری"
                 onOpenLightbox={handleOpenLightbox}
                 onOpenSeries={handleOpenSeries}
@@ -408,7 +408,7 @@ export default function App() {
               <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
                 <div>
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
-                    {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا (فاین آرت)' : 'Fine Art'}
+                    {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
                   </h2>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">

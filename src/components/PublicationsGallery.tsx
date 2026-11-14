@@ -113,8 +113,8 @@ const PERSPA_SERIES_LIST: PerspaSeriesItem[] = [
         id: 'elegance-01',
         src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
         alt: 'Elegance of Structure – Black and White I',
-        captionDe: 'Elegance of Structure – Black and White I · Griechische Nationaloper (Athen)',
-        captionEn: 'Elegance of Structure – Black and White I · Greek National Opera (Athens)',
+        captionDe: 'Elegance of Structure – Black and White I · Griechische Nationaloper in Athen',
+        captionEn: 'Elegance of Structure – Black and White I · Greek National Opera in Athens',
         captionFa: 'شکوه و ظرافت ساختار – سیاه و سفید ۱'
       },
       {
@@ -164,9 +164,9 @@ const PERSPA_SERIES_LIST: PerspaSeriesItem[] = [
         id: 'hephaestus-01',
         src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
         alt: 'Hephaestus’ Legacy I',
-        captionDe: 'Hephaestus’ Legacy I · Tempel des Hephaistos (Agora, Athen)',
-        captionEn: 'Hephaestus’ Legacy I · Temple of Hephaestus (Agora, Athens)',
-        captionFa: 'میراث هفائستوس ۱ · معبد هفائستوس (آتن)'
+        captionDe: 'Hephaestus’ Legacy I · Tempel des Hephaistos auf der Agora in Athen',
+        captionEn: 'Hephaestus’ Legacy I · Temple of Hephaestus, Ancient Agora in Athens',
+        captionFa: 'میراث هفائستوس ۱ · معبد هفائستوس در آتن'
       },
       {
         id: 'hephaestus-02',
@@ -399,12 +399,12 @@ const APMP_MAGCLOUD_ITEMS: (PhotoItem & {
     titleDe: 'Doppelseitige Preisträger-Strecke',
     titleEn: 'Double-Page Winner Spread',
     titleFa: 'صفحه دوطرفه انتشار اثر معماری',
-    descDe: 'The Solitaire as Abstraction in Harmony with Nature · Vollständige Strecke mit Namensnennung SchirZan (Schahrsad Shahmirzadi)',
-    descEn: 'The Solitaire as Abstraction in Harmony with Nature · Full spread showing SchirZan (Schahrsad Shahmirzadi)',
-    descFa: 'تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت · صفحه کامل با درج نام شیرزن (شهزاد شاهمیرزادی)',
-    captionDe: 'Doppelseitige Preisträger-Strecke: The Solitaire as Abstraction in Harmony with Nature – SchirZan (Schahrsad Shahmirzadi)',
-    captionEn: 'Double-Page Winner Spread: The Solitaire as Abstraction in Harmony with Nature – SchirZan (Schahrsad Shahmirzadi)',
-    captionFa: 'صفحه دوطرفه برگزیده: تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت – شیرزن (شهزاد شاهمیرزادی)'
+    descDe: 'The Solitaire as Abstraction in Harmony with Nature · Vollständige Strecke mit Namensnennung SchirZan · Schahrsad Shahmirzadi',
+    descEn: 'The Solitaire as Abstraction in Harmony with Nature · Full spread showing SchirZan · Schahrsad Shahmirzadi',
+    descFa: 'تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت · صفحه کامل با درج نام شیرزن · شهزاد شاهمیرزادی',
+    captionDe: 'Doppelseitige Preisträger-Strecke: The Solitaire as Abstraction in Harmony with Nature – SchirZan · Schahrsad Shahmirzadi',
+    captionEn: 'Double-Page Winner Spread: The Solitaire as Abstraction in Harmony with Nature – SchirZan · Schahrsad Shahmirzadi',
+    captionFa: 'صفحه دوطرفه برگزیده: تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت – شیرزن · شهزاد شاهمیرزادی'
   },
   {
     id: 'apmp-sample',
@@ -413,12 +413,12 @@ const APMP_MAGCLOUD_ITEMS: (PhotoItem & {
     titleDe: 'MagCloud Druckausgabe & Leseprobe',
     titleEn: 'MagCloud Print Edition & Sample',
     titleFa: 'پیش‌نمایش نسخه چاپی در مگ‌کلود',
-    descDe: 'Seite 163 (Honorable Mentions Students): Offizielle Nennung von SchirZan | Schahrsad Shahmirzadi',
-    descEn: 'Page 163 (Honorable Mentions Students): Official listing of SchirZan | Schahrsad Shahmirzadi',
-    descFa: 'صفحه ۱۶۳: ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی در بخش تقدیر ویژه',
-    captionDe: 'MagCloud Druckausgabe & Leseprobe (S. 163): Honorable Mentions – Nennung SchirZan | Schahrsad Shahmirzadi',
-    captionEn: 'MagCloud Print Edition & Sample (p. 163): Honorable Mentions – Listing SchirZan | Schahrsad Shahmirzadi',
-    captionFa: 'نسخه چاپی و نمونه مجله مگ‌کلود (ص ۱۶۳): تقدیر ویژه – ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی'
+    descDe: 'Seite 163, Honorable Mentions Students: Offizielle Nennung von SchirZan · Schahrsad Shahmirzadi',
+    descEn: 'Page 163, Honorable Mentions Students: Official listing of SchirZan · Schahrsad Shahmirzadi',
+    descFa: 'صفحه ۱۶۳: ثبت رسمی نام شیرزن · شهزاد شاهمیرزادی در بخش تقدیر ویژه',
+    captionDe: 'MagCloud Druckausgabe & Leseprobe Seite 163: Honorable Mentions – Nennung SchirZan · Schahrsad Shahmirzadi',
+    captionEn: 'MagCloud Print Edition & Sample page 163: Honorable Mentions – Listing SchirZan · Schahrsad Shahmirzadi',
+    captionFa: 'نسخه چاپی و نمونه مجله مگ‌کلود صفحه ۱۶۳: تقدیر ویژه – ثبت رسمی نام شیرزن · شهزاد شاهمیرزادی'
   }
 ];
 
@@ -691,7 +691,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-200">
-                Editor’s Choice (3 Werke)
+                Editor’s Choice · 3 Werke
               </span>
               <span className="text-xs font-mono text-stone-500">Bourges, Frankreich</span>
             </div>
@@ -881,7 +881,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium transition-colors"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>{isFa ? 'دانلود کتاب سالانه ۲۰۲۶ (PDF)' : isDe ? 'IPA 2026 E-Book (PDF)' : 'IPA 2026 E-Book (PDF)'}</span>
+              <span>{isFa ? 'دانلود کتاب سالانه ۲۰۲۶ · PDF' : isDe ? 'IPA 2026 E-Book · PDF' : 'IPA 2026 E-Book · PDF'}</span>
               <ExternalLink className="w-3 h-3 opacity-70" />
             </a>
           </div>
@@ -955,7 +955,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium transition-colors"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>{isFa ? 'دانلود کتاب سالانه ۲۰۲۵ (PDF)' : isDe ? 'IPA 2025 E-Book (PDF)' : 'IPA 2025 E-Book (PDF)'}</span>
+              <span>{isFa ? 'دانلود کتاب سالانه ۲۰۲۵ · PDF' : isDe ? 'IPA 2025 E-Book · PDF' : 'IPA 2025 E-Book · PDF'}</span>
               <ExternalLink className="w-3 h-3 opacity-70" />
             </a>
           </div>
@@ -1083,7 +1083,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             </a>
             <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2">
               <span className="text-xs font-medium text-stone-900 leading-snug">
-                {isDe ? 'The Curated Collection 2026 (Buchcover)' : isFa ? 'جلد کتاب مجموعه برگزیده ۲۰۲۶' : 'The Curated Collection 2026 Cover'}
+                {isDe ? 'The Curated Collection 2026 · Buchcover' : isFa ? 'جلد کتاب مجموعه برگزیده ۲۰۲۶' : 'The Curated Collection 2026 Cover'}
               </span>
               <a
                 href="https://www.thespiderawards.com/publications/CC26/a/"
@@ -1145,7 +1145,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             </a>
             <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2">
               <span className="text-xs font-medium text-stone-900 leading-snug">
-                {isDe ? 'The 2026 Best Of Show (Buchcover)' : isFa ? 'جلد کتاب بهترین‌های سال ۲۰۲۶' : 'The 2026 Best Of Show Cover'}
+                {isDe ? 'The 2026 Best Of Show · Buchcover' : isFa ? 'جلد کتاب بهترین‌های سال ۲۰۲۶' : 'The 2026 Best Of Show Cover'}
               </span>
               <a
                 href="https://www.thespiderawards.com/publications/20th/#page=1"
@@ -1176,7 +1176,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             </a>
             <div className="p-3.5 flex-1 flex flex-col justify-between space-y-2">
               <span className="text-xs font-medium text-stone-900 leading-snug">
-                {isDe ? '20th Spider Awards Best of Show (PDF)' : isFa ? 'کتاب برترین‌ها نسخه پی‌دی‌اف' : '20th Spider Awards Best of Show (PDF)'}
+                {isDe ? '20th Spider Awards Best of Show · PDF' : isFa ? 'کتاب برترین‌ها نسخه پی‌دی‌اف' : '20th Spider Awards Best of Show · PDF'}
               </span>
               <a
                 href="https://schahrsad-shahmirzadi.com/wp-content/uploads/2026/06/20th-spiderawards-bestofshow%202025.pdf"

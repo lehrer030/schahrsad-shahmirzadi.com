@@ -64,7 +64,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   img.src = resolveAsset('/images/2025_08_uni-koblenz.jpg');
                 }
               }}
-              alt="Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung (ZFUW)"
+              alt="Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung ZFUW"
               className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.01]"
               loading="lazy"
             />
@@ -74,15 +74,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               <span className="font-mono text-stone-400">08 / 01</span>
               <span className="font-serif italic font-medium text-stone-800">
                 {currentLang === 'de'
-                  ? 'Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung (ZFUW)'
+                  ? 'Universität Koblenz – Zentrum für Fernstudien und Universitäre Weiterbildung ZFUW'
                   : currentLang === 'fa'
-                  ? 'دانشگاه کوبلنتس – مرکز آموزش‌های آزاد و مجازی (ZFUW)'
-                  : 'University of Koblenz – Centre for Distance Studies & Further Education (ZFUW)'}
+                  ? 'دانشگاه کوبلنتس – مرکز آموزش‌های آزاد و مجازی ZFUW'
+                  : 'University of Koblenz – Centre for Distance Studies & Further Education ZFUW'}
               </span>
             </div>
             <span className="font-mono text-[11px] text-stone-500 bg-stone-200/60 px-2.5 py-0.5 rounded-full">
               {currentLang === 'de'
-                ? 'Masterstudium Angewandte Umweltwissenschaften (M.Sc.)'
+                ? 'Masterstudium Angewandte Umweltwissenschaften · M.Sc.'
                 : currentLang === 'fa'
                 ? 'کارشناسی ارشد علوم کاربردی محیط زیست'
                 : 'M.Sc. Applied Environmental Sciences'}
@@ -203,17 +203,17 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </p>
             <p>
               {currentLang === 'de'
-                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Im Zusammenhang mit ihrem Leistungssport im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort war sie unter anderem im Landeskriminalamt (LKA) sowie in stabsnahen Funktionen tätig.'
+                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Im Zusammenhang mit ihrem Leistungssport im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort war sie unter anderem im Landeskriminalamt LKA sowie in stabsnahen Funktionen tätig.'
                 : currentLang === 'fa'
-                ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم (LKA) و دوایر ستادی خدمت نمود.'
-                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office (LKA) and in executive staff roles.'}
+                ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم LKA و دوایر ستادی خدمت نمود.'
+                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office LKA and in executive staff roles.'}
             </p>
             <p>
               {currentLang === 'de'
-                ? 'Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend ein Masterstudium im Fernstudiengang „Angewandte Umweltwissenschaften“ (M.Sc.) an der Universität Koblenz (ZFUW).'
+                ? 'Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend den Masterstudiengang Angewandte Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz ZFUW.'
                 : currentLang === 'fa'
-                ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست» (M.Sc.) را در دانشگاه کوبلنتس (ZFUW) می‌گذراند.'
-                : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences (M.Sc.) at the University of Koblenz (ZFUW).'}
+                ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست»، M.Sc.، را در دانشگاه کوبلنتس ZFUW می‌گذراند.'
+                : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences at the University of Koblenz ZFUW.'}
             </p>
           </div>
         </div>
@@ -447,10 +447,10 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               </h4>
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
                 {currentLang === 'de'
-                  ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften (M.Sc.) an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
+                  ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser LAWA. Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
                   : currentLang === 'fa'
-                  ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب (LAWA) فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
-                  : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues (LAWA). Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
+                  ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
+                  : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
               </p>
             </div>
             <div className="pt-2 border-t border-stone-200/60 text-[11px] font-mono text-emerald-900 font-semibold">
@@ -484,10 +484,10 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                   : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
               </p>
               <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
-                <li>• <strong>„In Between Spaces“</strong> (Trieste Photo Days / Urban Photo Awards)</li>
-                <li>• <strong>„Berlin: Attack on Queer, Diversity and Freedom“</strong> (BIFA Honorable Mention)</li>
-                <li>• <strong>„LIFE – LOVE – FREEDOM · IRAN“</strong> (IPA Official Selection)</li>
-                <li>• <strong>„The Dignity of the Animal is Inviolable“</strong> (LICC Official Selection)</li>
+                <li>• <strong>„In Between Spaces“</strong> · Trieste Photo Days & Urban Photo Awards</li>
+                <li>• <strong>„Berlin: Attack on Queer, Diversity and Freedom“</strong> · BIFA Honorable Mention</li>
+                <li>• <strong>„LIFE – LOVE – FREEDOM · IRAN“</strong> · IPA Official Selection</li>
+                <li>• <strong>„The Dignity of the Animal is Inviolable“</strong> · LICC Official Selection</li>
               </ul>
             </div>
             <div className="pt-2 border-t border-stone-200/60">

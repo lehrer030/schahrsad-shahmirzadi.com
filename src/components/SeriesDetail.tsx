@@ -101,7 +101,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.titleFa
                 : series.titleEn}{' '}
               <span className="text-stone-500 font-sans font-normal text-xs sm:text-sm">
-                ({series.photos.length} {currentLang === 'de' ? 'Werke' : currentLang === 'fa' ? 'اثر' : 'Works'})
+                · {series.photos.length} {currentLang === 'de' ? 'Werke' : currentLang === 'fa' ? 'اثر' : 'Works'}
               </span>
             </h2>
           </div>
@@ -163,10 +163,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               <ShieldCheck className="w-4 h-4 text-stone-600" />
               <span>
                 {currentLang === 'de'
-                  ? 'Urheberschaft: Schahrsad Shahmirzadi (SchirZan)'
+                  ? 'Urheberschaft: Schahrsad Shahmirzadi · SchirZan'
                   : currentLang === 'fa'
-                  ? 'مالکیت اثر: شهزاد شاهمیرزادی (شیرزن)'
-                  : 'Copyright: Schahrsad Shahmirzadi (SchirZan)'}
+                  ? 'مالکیت اثر: شهزاد شاهمیرزادی · شیرزن'
+                  : 'Copyright: Schahrsad Shahmirzadi · SchirZan'}
               </span>
             </div>
           </div>
@@ -179,10 +179,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               <div className="flex items-center justify-between text-xs text-stone-500 font-mono">
                 <span className="uppercase tracking-wider text-amber-800 font-bold">
                   {currentLang === 'de'
-                    ? 'Hauptwerk / Bild 01 (Prämiert)'
+                    ? 'Hauptwerk · Bild 01 · Prämiert'
                     : currentLang === 'fa'
-                    ? 'اثر اصلی / تصویر ۰۱ (برنده جوایز)'
-                    : 'Lead Work / Image 01 (Awarded)'}
+                    ? 'اثر اصلی · تصویر ۰۱ · برنده جوایز'
+                    : 'Lead Work · Image 01 · Awarded'}
                 </span>
                 <span>
                   1 / {series.photos.length}

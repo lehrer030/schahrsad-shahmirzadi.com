@@ -100,10 +100,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 </a>
                 <span className="text-xs text-stone-500 font-medium">
                   {currentLang === 'de'
-                    ? 'Original-Trainingsvideo · SchirZan (52 Sek.)'
+                    ? 'Original-Trainingsvideo · SchirZan · 52 Sekunden'
                     : currentLang === 'fa'
-                    ? 'ویدیوی تمرینی اصلی · شیرزن (۵۲ ثانیه)'
-                    : 'Original Training Footage · SchirZan (52s)'}
+                    ? 'ویدیوی تمرینی اصلی · شیرزن · ۵۲ ثانیه'
+                    : 'Original Training Footage · SchirZan · 52 Seconds'}
                 </span>
               </div>
             </div>
