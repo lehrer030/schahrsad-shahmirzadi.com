@@ -192,18 +192,10 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       {
         id: 'run-gallery-05',
         src: './images/2025_07_image00055-1-scaled.webp',
-        alt: 'Halbmarathon Berlin – Konzentration & Vorbereitung',
-        captionDe: 'Halbmarathon Berlin — Fokus, Athletik und Vorbereitung auf die Langstrecke.',
-        captionEn: 'Berlin Half Marathon — Focus, athletic conditioning, and race preparation.',
-        captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی بدنی و آماده‌سازی برای مسافت طولانی.'
-      },
-      {
-        id: 'run-gallery-06',
-        src: './images/2025_07_image00056-1-scaled.webp',
-        alt: 'Halbmarathon Berlin – Ziellinie',
-        captionDe: 'Halbmarathon Berlin — Ein weiterer erfolgreicher Lauf für Frieden und Menschlichkeit.',
-        captionEn: 'Berlin Half Marathon — Another accomplished endurance run for peace and humanity.',
-        captionFa: 'نیمه‌ماراتن برلین — دویی دیگر با موفقیت برای صلح و انسانیت.'
+        alt: 'Halbmarathon Berlin – Fokus & sportlicher Einsatz für Frieden und Menschlichkeit',
+        captionDe: 'Halbmarathon Berlin — Fokus, Athletik und sportlicher Einsatz für Frieden und Menschlichkeit.',
+        captionEn: 'Berlin Half Marathon — Athletic focus, endurance, and dedication to peace and humanity.',
+        captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی ورزشی و گامی استوار در مسیر صلح و انسانیت.'
       },
       {
         id: 'run-gallery-13',
