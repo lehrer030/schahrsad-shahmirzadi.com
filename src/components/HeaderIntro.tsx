@@ -80,8 +80,8 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </div>
             </div>
 
-            {/* Inviting Welcome & Person Introduction (Inspired by Bild 2) */}
-            <div className="text-sm sm:text-base text-stone-700 leading-relaxed space-y-3 font-normal pt-1">
+            {/* Desktop Intro View (lg and up) */}
+            <div className="hidden lg:block text-sm sm:text-base text-stone-700 leading-relaxed space-y-3 font-normal pt-1">
               <p>
                 {currentLang === 'de' ? (
                   <>
@@ -114,42 +114,73 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </p>
             </div>
 
-            {/* Mobile-Only Portrait Card: Directly placed here for mobile readability */}
-            <div className="block lg:hidden pt-2 pb-1">
-              <div className="bg-white p-3 border border-stone-200/90 shadow-sm rounded-2xl max-w-md mx-auto space-y-2.5">
-                <div
-                  className="relative overflow-hidden bg-stone-100 cursor-pointer aspect-[4/3] rounded-xl group"
-                  onClick={() => onOpenLightbox && onOpenLightbox([artistPhotoItem], 0)}
-                  title={currentLang === 'de' ? 'Vollbild' : 'Full size'}
-                >
-                  <img
-                    src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="Schahrsad Shahmirzadi (SchirZan) – Photographie & Kunst · Porträt von Steve Barret"
-                    title="Schahrsad Shahmirzadi · SchirZan"
-                    draggable={false}
-                    className="w-full h-full object-cover object-center select-none group-hover:scale-102 transition-transform duration-500 ease-out"
-                    loading="eager"
-                  />
-                  {/* Subtle Google-optimierter Name-Tag direkt auf dem Bild */}
-                  <div className="absolute bottom-2.5 left-2.5 z-10 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 backdrop-blur-xs text-white rounded text-[11px] font-medium tracking-wide shadow-md">
-                      <span>{currentLang === 'fa' ? 'شهرزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}</span>
-                    </span>
-                  </div>
-                  <div className="absolute top-2.5 right-2.5 bg-white/90 text-stone-700 p-1.5 rounded-md shadow-xs">
-                    <Maximize2 className="w-3.5 h-3.5" />
-                  </div>
+            {/* Mobile-Only Side-by-Side Presentation (lg:hidden): Bild und Text sofort gemeinsam auf einen Blick wie auf dem PC */}
+            <div className="block lg:hidden pt-1 space-y-3">
+              <div className="grid grid-cols-12 gap-3 items-start">
+                {/* Left: Text introducing Schahrsad / SchirZan */}
+                <div className="col-span-7 text-xs sm:text-sm text-stone-700 leading-relaxed space-y-1.5 font-normal">
+                  <p>
+                    {currentLang === 'de' ? (
+                      <>
+                        Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst unter dem Künstlernamen{' '}
+                        <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (aus dem Persischen:{' '}
+                        <em>Shir</em> = Löwe, <em>Zan</em> = Frau – die »Löwin« als Verkörperung des Mutes).
+                      </>
+                    ) : currentLang === 'fa' ? (
+                      <>
+                        شهزاد شاهمیرزادی آثار عکاسی و هنری خود را با نام هنری{' '}
+                        <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد
+                        (مظهر شهامت و شجاعت).
+                      </>
+                    ) : (
+                      <>
+                        Schahrsad Shahmirzadi presents her photography under the artist name{' '}
+                        <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (from Persian:{' '}
+                        <em>Shir</em> = lion, <em>Zan</em> = woman — "lioness").
+                      </>
+                    )}
+                  </p>
                 </div>
 
-                <div className="pt-1 px-1 flex items-center justify-between text-[11px] font-mono text-stone-500 border-t border-stone-100">
-                  <span className="text-[10px] text-stone-600">
-                    {currentLang === 'fa' ? 'عکاسی و هنر · برلین' : 'Photographie & Kunst'}
-                  </span>
-                  <span className="text-[10px] font-mono text-stone-500 bg-stone-50 border border-stone-200 px-2 py-0.5 rounded">
+                {/* Right: Portrait Image directly visible on mobile */}
+                <div className="col-span-5">
+                  <div
+                    className="relative overflow-hidden bg-stone-100 cursor-pointer aspect-[3/4] rounded-xl shadow-xs border border-stone-200/90 group"
+                    onClick={() => onOpenLightbox && onOpenLightbox([artistPhotoItem], 0)}
+                    title={currentLang === 'de' ? 'Vollbild' : 'Full size'}
+                  >
+                    <img
+                      src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
+                      alt="Schahrsad Shahmirzadi (SchirZan) – Photographie & Kunst · Porträt von Steve Barret"
+                      title="Schahrsad Shahmirzadi · SchirZan"
+                      draggable={false}
+                      className="w-full h-full object-cover object-center select-none group-hover:scale-102 transition-transform duration-500 ease-out"
+                      loading="eager"
+                    />
+                    {/* Name-Tag direkt auf dem Bild */}
+                    <div className="absolute bottom-1.5 left-1.5 z-10 pointer-events-none">
+                      <span className="inline-flex items-center px-1.5 py-0.5 bg-stone-900/85 backdrop-blur-xs text-white rounded text-[9.5px] font-medium tracking-wide shadow-xs">
+                        {currentLang === 'fa' ? 'شیرزن' : 'SchirZan'}
+                      </span>
+                    </div>
+                    <div className="absolute top-1.5 right-1.5 bg-white/90 text-stone-700 p-1 rounded shadow-2xs">
+                      <Maximize2 className="w-3 h-3" />
+                    </div>
+                  </div>
+                  <div className="text-[9.5px] font-mono text-stone-500 mt-1 text-center truncate">
                     {INTRO_CONTENT.photoCredit}
-                  </span>
+                  </div>
                 </div>
               </div>
+
+              {/* Second Paragraph on Mobile */}
+              <p className="text-xs text-stone-600 leading-relaxed font-normal">
+                {currentLang === 'de'
+                  ? 'Durch Photographie bewahrt sie gelebte Momente für die Ewigkeit — getragen von der Philosophie des Lichts, der Disziplin einer 10-fachen Weltmeisterin im Kickboxen und ihrem leidenschaftlichen Einsatz für Menschenrechte, Gleichberechtigung und den Schutz unserer Umwelt.'
+                  : currentLang === 'fa'
+                  ? 'او از دریچه عکاسی، لحظات زیسته را برای ابدیت ماندگار می‌سازد — با تکیه بر فلسفه اصیل نگارش با نور، روحیه مبارزه‌جوی ۱۰ دوره قهرمانی جهان در کیک‌بوکسینگ و تعهد به حقوق بشر و محیط زیست.'
+                  : 'Through photography, she preserves lived experience for eternity — guided by the philosophy of light, the discipline of a 10-time world champion in kickboxing, and her commitment to human rights and the environment.'}
+              </p>
             </div>
 
             {/* 3 Core Pillars: The Person At a Glance */}
