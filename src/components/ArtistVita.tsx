@@ -237,7 +237,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
               {currentLang === 'de'
-                ? 'Committed to Environmental Protection, Human Rights & Peace'
+                ? 'Engagiert für Umweltschutz, Menschenrechte & Frieden'
                 : currentLang === 'fa'
                 ? 'متعهد به حفاظت از محیط زیست، حقوق بشر و صلح'
                 : 'Committed to Environmental Protection, Human Rights & Peace'}
