@@ -155,6 +155,41 @@ export const getAwardWorkTitle = (title: string, lang: Language): string => {
   return deTitleMap[title] || title;
 };
 
+export const getHonorBadgeInfo = (type: string, lang: Language) => {
+  switch (type) {
+    case 'winner':
+      return {
+        label: lang === 'fa' ? 'برنده رتبه اول' : lang === 'en' ? 'Winner / 1st Prize' : 'Gewinnerin · 1. Platz',
+        className: 'bg-amber-600/95 text-white border-amber-400'
+      };
+    case 'second':
+      return {
+        label: lang === 'fa' ? 'جایزه دوم' : lang === 'en' ? '2nd Prize / Silver' : '2. Platz · Silber',
+        className: 'bg-amber-700/95 text-white border-amber-300'
+      };
+    case 'hm':
+      return {
+        label: lang === 'fa' ? 'تقدیر ویژه' : lang === 'en' ? 'Honorable Mention' : 'Lobende Erwähnung',
+        className: 'bg-stone-900/90 text-amber-300 border-amber-400/40'
+      };
+    case 'selection':
+      return {
+        label: lang === 'fa' ? 'منتخب رسمی' : lang === 'en' ? 'Official Selection' : 'Offizielle Auswahl',
+        className: 'bg-stone-900/90 text-stone-200 border-stone-600'
+      };
+    case 'editor':
+      return {
+        label: lang === 'fa' ? 'منتخب سردبیر' : lang === 'en' ? "Editor's Pick" : 'Editor’s Pick',
+        className: 'bg-stone-900/90 text-stone-200 border-stone-600'
+      };
+    default:
+      return {
+        label: lang === 'fa' ? 'نامزد' : lang === 'en' ? 'Nominee' : 'Nominierung',
+        className: 'bg-stone-900/90 text-stone-200 border-stone-600'
+      };
+  }
+};
+
 interface CompetitionItem {
   id: string;
   year: string;
@@ -974,37 +1009,40 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     </div>
 
                     {/* List of awarded works in generous Gallery-style Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                       {honorGroup.items.map((item, itemIdx) => {
                         const thumbImg = getAwardWorkImage(item.title, item.image);
                         const workTitle = getAwardWorkTitle(item.title, currentLang);
                         const categoryName = getCategoryTitle(item.category, currentLang, item.categoryFa);
+                        const badgeInfo = getHonorBadgeInfo(honorGroup.type, currentLang);
+
+                        const handleArtworkClick = () => {
+                          if (thumbImg && onOpenLightbox) {
+                            onOpenLightbox([
+                              {
+                                id: `award-${item.title}`,
+                                src: thumbImg,
+                                alt: workTitle,
+                                captionDe: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year}) [${honorGroup.labelDe}]`,
+                                captionEn: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year}) [${honorGroup.labelEn}]`,
+                                captionFa: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year}) [${honorGroup.labelFa}]`,
+                              }
+                            ], 0);
+                          } else if (item.zoomUrl) {
+                            window.open(item.zoomUrl, '_blank', 'noopener,noreferrer');
+                          }
+                        };
 
                         return (
                           <div
                             key={itemIdx}
                             className="bg-white rounded-2xl border border-stone-200/90 hover:border-amber-700/60 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden group"
                           >
-                            {/* Card Image Header: Gallery Proportions (aspect-4/3) matching Section 10 */}
+                            {/* Card Image Header: Gallery Proportions with Honor & Year Badges */}
                             {thumbImg ? (
                               <div
-                                onClick={() => {
-                                  if (onOpenLightbox) {
-                                    onOpenLightbox([
-                                      {
-                                        id: `award-${item.title}`,
-                                        src: thumbImg,
-                                        alt: workTitle,
-                                        captionDe: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year})`,
-                                        captionEn: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year})`,
-                                        captionFa: `${workTitle} — ${categoryName} · ${comp.name} (${comp.year})`,
-                                      }
-                                    ], 0);
-                                  } else if (item.zoomUrl) {
-                                    window.open(item.zoomUrl, '_blank', 'noopener,noreferrer');
-                                  }
-                                }}
-                                className="relative aspect-[4/3] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
+                                onClick={handleArtworkClick}
+                                className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
                                 title={currentLang === 'de' ? 'Klicken für Vollbild-Ansicht' : currentLang === 'fa' ? 'کلیک برای مشاهده تمام‌صفحه' : 'Click for full view'}
                               >
                                 <img
@@ -1019,13 +1057,20 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                     }
                                   }}
                                 />
-                                <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                                  <div className="bg-white/95 backdrop-blur-xs text-stone-900 rounded-full p-2.5 shadow-lg transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
-                                    <Eye className="w-4 h-4 text-stone-800" />
+                                <div className="absolute inset-0 bg-stone-950/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                                  <div className="bg-white/95 backdrop-blur-xs text-stone-900 rounded-full px-3 py-1.5 shadow-lg flex items-center gap-1.5 text-xs font-mono font-semibold transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+                                    <Eye className="w-3.5 h-3.5 text-amber-800" />
+                                    <span>{currentLang === 'fa' ? 'مشاهده بزرگ‌تر' : currentLang === 'en' ? 'Enlarge' : 'Großansicht'}</span>
                                   </div>
                                 </div>
-                                <div className="absolute top-2.5 left-2.5 rtl:left-auto rtl:right-2.5 pointer-events-none">
-                                  <span className="px-2 py-0.5 rounded-md bg-stone-950/80 backdrop-blur-xs text-white text-[10px] font-mono font-medium tracking-tight">
+
+                                {/* Top Badges: Honor Badge + Year Badge */}
+                                <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-2 pointer-events-none">
+                                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10.5px] font-mono font-bold tracking-tight shadow-md backdrop-blur-md border ${badgeInfo.className}`}>
+                                    {isTopHonor ? <Trophy className="w-3 h-3 text-amber-200" /> : <Award className="w-3 h-3 text-amber-400" />}
+                                    <span>{badgeInfo.label}</span>
+                                  </span>
+                                  <span className="px-2.5 py-1 rounded-md bg-stone-950/85 backdrop-blur-md text-white text-[11px] font-mono font-semibold tracking-tight shadow-md">
                                     {comp.year}
                                   </span>
                                 </div>
@@ -1036,14 +1081,17 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                               </div>
                             )}
 
-                            {/* Card Content */}
-                            <div className="p-4 flex-1 flex flex-col justify-between space-y-3">
-                              <div className="space-y-1.5">
-                                <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
-                                  {categoryName}
-                                </span>
+                            {/* Card Content: Thema / Kategorie + Werk-Titel + Wettbewerb */}
+                            <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3.5">
+                              <div className="space-y-2">
+                                <div className="flex items-center gap-2 flex-wrap">
+                                  <span className="text-[11px] font-mono uppercase tracking-wider text-amber-900 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60 inline-block">
+                                    {categoryName}
+                                  </span>
+                                </div>
                                 <h5
-                                  className="font-serif font-bold text-sm sm:text-base text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-2 leading-snug"
+                                  onClick={handleArtworkClick}
+                                  className="font-serif font-bold text-base sm:text-lg text-stone-900 group-hover:text-amber-900 transition-colors leading-snug cursor-pointer"
                                   title={workTitle}
                                 >
                                   {workTitle}
@@ -1051,8 +1099,8 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                               </div>
 
                               {/* Footer Action */}
-                              <div className="pt-3 border-t border-stone-100 flex items-center justify-between gap-2 text-xs">
-                                <span className="text-[11px] font-mono text-stone-500 truncate max-w-[130px] sm:max-w-[170px]" title={comp.name}>
+                              <div className="pt-3 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2 text-xs">
+                                <span className="text-xs font-mono text-stone-600 font-medium" title={comp.name}>
                                   {comp.name}
                                 </span>
                                 {item.zoomUrl && (
