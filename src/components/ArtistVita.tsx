@@ -11,7 +11,96 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   return (
     <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
       
-      {/* 1. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
+            {/* 1. BIOGRAFIE & BERUFLICHER WERDEGANG */}
+      <section id="biography-profile" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+        <div className="border-b border-stone-100 pb-4">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+            {currentLang === 'de' ? 'Biografie & Werdegang' : currentLang === 'fa' ? 'زندگینامه و سوابق حرفه‌ای' : 'Biography & Career'}
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold mt-1">
+            {currentLang === 'de' ? 'Beruflicher Hintergrund & Künstlerische Projekte' : currentLang === 'fa' ? 'پیشینه حرفه‌ای و پروژه‌های هنری' : 'Professional Background & Artistic Projects'}
+          </h3>
+        </div>
+{/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
+        <div id="biography-profile" className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 scroll-mt-28">
+          
+          {/* Pillar: Professional Background / Water Protection */}
+          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                  <Leaf className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-mono font-semibold text-emerald-800 uppercase tracking-wider">
+                  Professional Background
+                </span>
+              </div>
+              <h4 className="text-lg font-serif font-bold text-stone-900">
+                {currentLang === 'fa'
+                  ? 'حفاظت از منابع آب، محیط زیست و مطالعات آکادمیک'
+                  : currentLang === 'de'
+                  ? 'Beruflicher Hintergrund & Umweltwissenschaften'
+                  : 'Professional Background & Environmental Sciences'}
+              </h4>
+              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+                {currentLang === 'de'
+                  ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser LAWA. Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
+                  : currentLang === 'fa'
+                  ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
+                  : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
+              </p>
+            </div>
+            <div className="pt-2 border-t border-stone-200/60 text-[11px] font-mono text-emerald-900 font-semibold">
+              Umweltministerium Potsdam · Universität Koblenz
+            </div>
+          </div>
+
+          {/* Pillar: Her Own Photographic and Artistic Projects */}
+          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <span className="text-[11px] font-mono font-semibold text-amber-800 uppercase tracking-wider">
+                  Artistic Projects
+                </span>
+              </div>
+              <h4 className="text-lg font-serif font-bold text-stone-900">
+                {currentLang === 'fa'
+                  ? 'پروژه‌های هنری و عکاسی با محوریت جامعه و محیط‌زیست'
+                  : currentLang === 'de'
+                  ? 'Eigene photographische und künstlerische Projekte'
+                  : 'Her Own Photographic and Artistic Projects'}
+              </h4>
+              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+                {currentLang === 'de'
+                  ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich SchirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
+                  : currentLang === 'fa'
+                  ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
+                  : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
+              </p>
+              <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
+                <li>• <strong>„In Between Spaces“</strong> · Trieste Photo Days & Urban Photo Awards</li>
+                <li>• <strong>„Berlin: Attack on Queer, Diversity and Freedom“</strong> · BIFA Honorable Mention</li>
+                <li>• <strong>„LIFE – LOVE – FREEDOM · IRAN“</strong> · IPA Official Selection</li>
+                <li>• <strong>„The Dignity of the Animal is Inviolable“</strong> · LICC Official Selection</li>
+              </ul>
+            </div>
+            <div className="pt-2 border-t border-stone-200/60">
+              <a
+                href="#social-environmental"
+                className="text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors inline-flex items-center gap-1 font-mono"
+              >
+                <span>{currentLang === 'fa' ? 'مشاهده مجموعه‌ها در گالری آثار ←' : 'Zu den Werkserien im Portfolio →'}</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+{/* 2. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
       <section id="education" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
         
         {/* Header & Tagline */}
@@ -219,7 +308,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
         </div>
       </section>
 
-      {/* 2. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
+      
+{/* 3. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
       <section id="engagement" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
         
         {/* Header & Hero Image with Mission Statement */}
@@ -423,85 +513,6 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </div>
           </div>
         </div>
-
-        {/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
-        <div id="biography-profile" className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 scroll-mt-28">
-          
-          {/* Pillar: Professional Background / Water Protection */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
-                  <Leaf className="w-5 h-5" />
-                </div>
-                <span className="text-[11px] font-mono font-semibold text-emerald-800 uppercase tracking-wider">
-                  Professional Background
-                </span>
-              </div>
-              <h4 className="text-lg font-serif font-bold text-stone-900">
-                {currentLang === 'fa'
-                  ? 'حفاظت از منابع آب، محیط زیست و مطالعات آکادمیک'
-                  : currentLang === 'de'
-                  ? 'Beruflicher Hintergrund & Umweltwissenschaften'
-                  : 'Professional Background & Environmental Sciences'}
-              </h4>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                {currentLang === 'de'
-                  ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser LAWA. Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
-                  : currentLang === 'fa'
-                  ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
-                  : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
-              </p>
-            </div>
-            <div className="pt-2 border-t border-stone-200/60 text-[11px] font-mono text-emerald-900 font-semibold">
-              Umweltministerium Potsdam · Universität Koblenz
-            </div>
-          </div>
-
-          {/* Pillar: Her Own Photographic and Artistic Projects */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <span className="text-[11px] font-mono font-semibold text-amber-800 uppercase tracking-wider">
-                  Artistic Projects
-                </span>
-              </div>
-              <h4 className="text-lg font-serif font-bold text-stone-900">
-                {currentLang === 'fa'
-                  ? 'پروژه‌های هنری و عکاسی با محوریت جامعه و محیط‌زیست'
-                  : currentLang === 'de'
-                  ? 'Eigene photographische und künstlerische Projekte'
-                  : 'Her Own Photographic and Artistic Projects'}
-              </h4>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                {currentLang === 'de'
-                  ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich SchirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
-                  : currentLang === 'fa'
-                  ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
-                  : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
-              </p>
-              <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
-                <li>• <strong>„In Between Spaces“</strong> · Trieste Photo Days & Urban Photo Awards</li>
-                <li>• <strong>„Berlin: Attack on Queer, Diversity and Freedom“</strong> · BIFA Honorable Mention</li>
-                <li>• <strong>„LIFE – LOVE – FREEDOM · IRAN“</strong> · IPA Official Selection</li>
-                <li>• <strong>„The Dignity of the Animal is Inviolable“</strong> · LICC Official Selection</li>
-              </ul>
-            </div>
-            <div className="pt-2 border-t border-stone-200/60">
-              <a
-                href="#social-environmental"
-                className="text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors inline-flex items-center gap-1 font-mono"
-              >
-                <span>{currentLang === 'fa' ? 'مشاهده مجموعه‌ها در گالری آثار ←' : 'Zu den Werkserien im Portfolio →'}</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
       </section>
 
     </div>

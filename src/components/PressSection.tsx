@@ -23,73 +23,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
   return (
     <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
       
-      {/* 1. Press Coverage */}
-      <section id="press-features" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
-        <div className="border-b border-stone-100 pb-6 mb-8">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            {currentLang === 'de'
-              ? 'Internationale Medienberichte'
-              : currentLang === 'fa'
-              ? 'بازتاب در رسانه‌های بین‌المللی'
-              : 'International Media'}
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
-            {currentLang === 'de'
-              ? 'Press & Features'
-              : currentLang === 'fa'
-              ? 'مطبوعات و مصاحبه‌ها'
-              : 'Press & Features'}
-          </h3>
-          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
-            {currentLang === 'de'
-              ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan.'
-              : currentLang === 'fa'
-              ? 'پوشش مطبوعاتی و نقدهای رسانه‌های تخصصی پیرامون آثار معماری و افتخارات شیرزن.'
-              : 'International journalistic coverage and critical reception of SchirZan’s architectural photographs and honors.'}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-6">
-          {PRESS_ITEMS.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-6 rounded-2xl bg-[#faf8f5] border border-stone-200/80 hover:border-amber-700/50 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
-            >
-              <div className="space-y-2">
-                <div className="flex items-center gap-3 text-xs font-mono text-stone-500">
-                  <span className="text-amber-800 font-bold uppercase">{item.outlet}</span>
-                  <span>·</span>
-                  <span>{item.date}</span>
-                </div>
-                <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
-                  {item.title}
-                </h4>
-                <p className="text-xs sm:text-sm text-stone-700 font-normal leading-relaxed">
-                  {currentLang === 'de'
-                    ? item.descriptionDe
-                    : currentLang === 'fa'
-                    ? item.descriptionFa
-                    : item.descriptionEn}
-                </p>
-              </div>
-
-              {item.link && (
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-stone-100 text-stone-900 text-xs font-semibold rounded-full border border-stone-200 transition-colors shrink-0 self-start md:self-auto shadow-2xs cursor-pointer"
-                >
-                  <span>{currentLang === 'fa' ? 'مطالعه مقاله' : currentLang === 'de' ? 'Artikel lesen' : 'Read Article'}</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-stone-500" />
-                </a>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 2. Ausstellungen / Exhibitions 2026 (Trieste Photo Days & Fringe, Italien) */}
+      {/* 1. Ausstellungen / Exhibitions 2026 (Trieste Photo Days & Fringe, Italien) */}
       <section id="exhibitions" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <div className="border-b border-stone-100 pb-6 mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
@@ -190,7 +124,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
         </div>
       </section>
 
-      {/* 3. Publications, Winners E-Books, Videos & Editor's Choice */}
+      {/* 2. Publications, Winners E-Books, Videos & Editor's Choice */}
       <section id="publications" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <div className="border-b border-stone-100 pb-6 mb-8">
           <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
@@ -222,7 +156,73 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
         <PublicationsGallery currentLang={currentLang} onOpenLightbox={onOpenLightbox} />
       </section>
 
-    </div>
+    {/* 3. Press Coverage & Features */}
+      <section id="press-features" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+        <div className="border-b border-stone-100 pb-6 mb-8">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+            {currentLang === 'de'
+              ? 'Internationale Medienberichte'
+              : currentLang === 'fa'
+              ? 'بازتاب در رسانه‌های بین‌المللی'
+              : 'International Media'}
+          </span>
+          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
+            {currentLang === 'de'
+              ? 'Press & Features'
+              : currentLang === 'fa'
+              ? 'مطبوعات و مصاحبه‌ها'
+              : 'Press & Features'}
+          </h3>
+          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
+            {currentLang === 'de'
+              ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan.'
+              : currentLang === 'fa'
+              ? 'پوشش مطبوعاتی و نقدهای رسانه‌های تخصصی پیرامون آثار معماری و افتخارات شیرزن.'
+              : 'International journalistic coverage and critical reception of SchirZan’s architectural photographs and honors.'}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6">
+          {PRESS_ITEMS.map((item, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-2xl bg-[#faf8f5] border border-stone-200/80 hover:border-amber-700/50 transition-all flex flex-col md:flex-row md:items-center justify-between gap-4"
+            >
+              <div className="space-y-2">
+                <div className="flex items-center gap-3 text-xs font-mono text-stone-500">
+                  <span className="text-amber-800 font-bold uppercase">{item.outlet}</span>
+                  <span>·</span>
+                  <span>{item.date}</span>
+                </div>
+                <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+                  {item.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-stone-700 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? item.descriptionDe
+                    : currentLang === 'fa'
+                    ? item.descriptionFa
+                    : item.descriptionEn}
+                </p>
+              </div>
+
+              {item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-stone-100 text-stone-900 text-xs font-semibold rounded-full border border-stone-200 transition-colors shrink-0 self-start md:self-auto shadow-2xs cursor-pointer"
+                >
+                  <span>{currentLang === 'fa' ? 'مطالعه مقاله' : currentLang === 'de' ? 'Artikel lesen' : 'Read Article'}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-stone-500" />
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      </div>
   );
 };
 

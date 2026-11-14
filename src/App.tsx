@@ -463,49 +463,29 @@ export default function App() {
 
 
           {/* -------------------------------------------------------------
-                SECTION 5: WORLD CHAMPION KICKBOXING (FULL 10X WORLD CHAMPION HISTORY)
+                SECTION 2: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
                ------------------------------------------------------------- */}
-          <KickboxingFullSection currentLang={currentLang} />
-
-
-          {/* -------------------------------------------------------------
-                SECTION 6: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
-               ------------------------------------------------------------- */}
-          <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                  {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
-                </h2>
-                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                  {currentLang === 'de'
-                    ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
-                    : currentLang === 'fa'
-                      ? 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
-                      : 'Biography, academic career, kickboxing achievements, and community engagement.'}
-                </p>
-              </div>
-            </div>
-
-            <ArtistVita currentLang={currentLang} />
+          <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
+            <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
+            <AwardReferencesSection currentLang={currentLang} />
           </section>
 
 
           {/* -------------------------------------------------------------
-                SECTION 6: PRESERVED WORDPRESS CONTENT: PRESS & MEDIA
+                SECTION 3: EXHIBITIONS, PUBLICATIONS, VIDEOS & PRESS
                ------------------------------------------------------------- */}
           <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                  {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
+                  {currentLang === 'de' ? 'Ausstellungen, Publikationen & Presse' : currentLang === 'fa' ? 'نمایشگاه‌ها، نشریات و مطبوعات' : 'Exhibitions, Publications & Press'}
                 </h2>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
-                    ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
+                    ? 'Internationale Ausstellungsbeteiligungen, offizielle Publikationen mit ISBN, Preisträger-Dokumentationen und Medienberichte.'
                     : currentLang === 'fa'
-                      ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
-                      : 'International publications, press features, and official award catalogues.'}
+                      ? 'نمایشگاه‌های بین‌المللی، کتاب‌های برگزیده با شابک، فیلم‌های مستند و پوشش رسانه‌ای.'
+                      : 'International exhibition participations, official publications with ISBN, winner compendiums, and media reports.'}
                 </p>
               </div>
             </div>
@@ -515,15 +495,36 @@ export default function App() {
 
 
           {/* -------------------------------------------------------------
-                SECTION: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
+                SECTION 4: WORLD CHAMPION KICKBOXING (FULL 10X WORLD CHAMPION HISTORY)
                ------------------------------------------------------------- */}
-          <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
-            <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
-            <AwardReferencesSection currentLang={currentLang} />
-          </section>
+          <KickboxingFullSection currentLang={currentLang} />
+
 
           {/* -------------------------------------------------------------
-                SECTION 7: GALLERY (WORDPRESS ORIGINAL: KICKBOXING VIDEO, RUNNING & IPA ATHENS GALA)
+                SECTION 5: BIOGRAPHY, ACADEMIC EDUCATION & COMMITMENT
+               ------------------------------------------------------------- */}
+          <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Biografie & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Biography & Commitment'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Biografie, beruflicher Werdegang im Umweltschutz, akademischer Bildungsweg und soziales Engagement.'
+                    : currentLang === 'fa'
+                      ? 'زندگی‌نامه، پیشینه حرفه‌ای در حفاظت از محیط زیست، مدارک دانشگاهی و فعالیت‌های اجتماعی.'
+                      : 'Biography, professional career in environmental protection, academic education, and community engagement.'}
+                </p>
+              </div>
+            </div>
+
+            <ArtistVita currentLang={currentLang} />
+          </section>
+
+
+          {/* -------------------------------------------------------------
+                SECTION 6: GALLERY (ORIGINAL: KICKBOXING VIDEO, RUNNING & IPA ATHENS GALA)
                ------------------------------------------------------------- */}
           <GallerySection
             currentLang={currentLang}
