@@ -797,6 +797,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
 
 export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ currentLang }) => {
   const [filterYear, setFilterYear] = useState<'all' | '2026' | '2025'>('all');
+  const [activeTileKey, setActiveTileKey] = useState<string | null>(null);
 
   const filteredCompetitions = AWARD_COMPETITIONS.filter(c => {
     if (filterYear === 'all') return true;
@@ -975,16 +976,95 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {honorGroup.items.map((item, itemIdx) => {
                         const thumbImg = getAwardWorkImage(item.title, item.image);
+                        const tileKey = `${comp.id}-${hIdx}-${itemIdx}`;
+                        const isExpanded = activeTileKey === tileKey;
+
+                        if (isExpanded) {
+                          return (
+                            <div
+                              key={itemIdx}
+                              onClick={() => setActiveTileKey(null)}
+                              className="md:col-span-2 relative bg-amber-50/60 p-4 sm:p-5 rounded-2xl border-2 border-amber-600 shadow-lg ring-2 ring-amber-500/20 flex flex-col gap-3 transition-all duration-300 cursor-pointer animate-in fade-in zoom-in-98"
+                            >
+                              {/* Expanded Card Header */}
+                              <div className="flex items-start justify-between gap-3 border-b border-amber-200/70 pb-3">
+                                <div className="space-y-1">
+                                  <div className="flex items-center gap-2">
+                                    <span className="px-2 py-0.5 rounded bg-amber-200/80 text-amber-950 font-mono text-[10px] font-bold uppercase tracking-wider">
+                                      {comp.name} ({comp.year})
+                                    </span>
+                                    <span className="text-[11px] font-mono text-amber-900 font-medium">
+                                      {isTopHonor ? '★ Top Honor' : 'Honorable Mention'}
+                                    </span>
+                                  </div>
+                                  <h5 className="font-serif font-bold text-base sm:text-lg text-stone-950 leading-snug">
+                                    {getAwardWorkTitle(item.title, currentLang)}
+                                  </h5>
+                                  <p className="text-xs text-amber-950/80 font-mono">
+                                    {getCategoryTitle(item.category, currentLang, item.categoryFa)}
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setActiveTileKey(null);
+                                  }}
+                                  className="shrink-0 text-xs font-mono font-medium px-2.5 py-1.5 rounded-lg bg-white border border-amber-300 text-stone-700 hover:bg-amber-100 transition-colors shadow-2xs"
+                                >
+                                  ✕ {currentLang === 'fa' ? 'بستن' : currentLang === 'en' ? 'Close' : 'Schließen'}
+                                </button>
+                              </div>
+
+                              {/* Large Preview Image */}
+                              {thumbImg && (
+                                <div className="w-full h-56 sm:h-72 rounded-xl overflow-hidden bg-stone-950 flex items-center justify-center border border-amber-300/80 shadow-inner">
+                                  <img
+                                    src={resolveAsset(thumbImg)}
+                                    alt={getAwardWorkTitle(item.title, currentLang)}
+                                    className="w-full h-full object-contain"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              )}
+
+                              {/* Action Footer */}
+                              <div className="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs">
+                                <span className="text-stone-500 font-sans text-[11px]">
+                                  {currentLang === 'de'
+                                    ? 'Antippen zum Einklappen'
+                                    : currentLang === 'fa'
+                                      ? 'برای بستن مجدداً لمس کنید'
+                                      : 'Tap again to collapse'}
+                                </span>
+                                {item.zoomUrl && (
+                                  <a
+                                    href={item.zoomUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-stone-900 hover:bg-amber-800 text-white transition-colors text-xs font-mono font-semibold shadow-xs"
+                                  >
+                                    <span>{currentLang === 'fa' ? 'مشاهده اثر رسمی' : currentLang === 'en' ? 'View Official Entry' : 'Offiziellen Eintrag öffnen'}</span>
+                                    <ExternalLink className="w-3.5 h-3.5" />
+                                  </a>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        }
 
                         return (
                           <div
                             key={itemIdx}
-                            className="relative bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm hover:z-30 transition-all group"
+                            onClick={() => setActiveTileKey(tileKey)}
+                            className="relative bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/80 flex items-center justify-between gap-2.5 hover:border-amber-700/60 hover:shadow-xs transition-all cursor-pointer group"
+                            title={currentLang === 'de' ? 'Antippen für vergrößerte Vorschau' : 'Tap to enlarge preview'}
                           >
-                            <div className="flex items-center gap-3 min-w-0 flex-1">
+                            <div className="flex items-center gap-2.5 sm:gap-3 min-w-0 flex-1">
                               {thumbImg && (
                                 <div className="relative group/thumb shrink-0 z-10 hover:z-50">
-                                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-stone-100 border border-stone-200/90 shadow-2xs transition-all duration-300 ease-out group-hover/thumb:scale-[1.75] group-hover/thumb:shadow-2xl group-hover/thumb:border-amber-700/80 group-hover/thumb:ring-2 group-hover/thumb:ring-amber-500/40 cursor-zoom-in origin-left rtl:origin-right">
+                                  <div className="w-14 h-14 sm:w-18 sm:h-18 rounded-lg overflow-hidden bg-stone-100 border border-stone-200 shadow-2xs transition-all duration-300 ease-out group-hover/thumb:scale-[1.75] group-hover/thumb:shadow-2xl group-hover/thumb:border-amber-700/80 group-hover/thumb:ring-2 group-hover/thumb:ring-amber-500/40 cursor-zoom-in origin-left rtl:origin-right">
                                     <img
                                       src={resolveAsset(thumbImg)}
                                       alt={getAwardWorkTitle(item.title, currentLang)}
@@ -996,14 +1076,18 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                               )}
                               <div className="space-y-0.5 min-w-0 flex-1">
                                 <h5
-                                  className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-1 sm:truncate"
+                                  className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-2 leading-tight"
                                   title={getAwardWorkTitle(item.title, currentLang)}
                                 >
                                   {getAwardWorkTitle(item.title, currentLang)}
                                 </h5>
-                                <p className="text-[11px] text-stone-500 font-mono line-clamp-1 sm:truncate">
+                                <p className="text-[10.5px] sm:text-[11px] text-stone-500 font-mono line-clamp-1">
                                   {getCategoryTitle(item.category, currentLang, item.categoryFa)}
                                 </p>
+                                <span className="sm:hidden text-[9px] font-mono text-amber-800 font-semibold tracking-tight pt-0.5 flex items-center gap-0.5">
+                                  <span>{currentLang === 'fa' ? 'لمس برای پیش‌نمایش' : currentLang === 'en' ? 'Tap for preview' : 'Tippen für Vorschau'}</span>
+                                  <span>▸</span>
+                                </span>
                               </div>
                             </div>
 
@@ -1012,6 +1096,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                 href={item.zoomUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
                                 className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white transition-colors text-[10px] font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
                                 title={currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'en' ? 'View artwork' : 'Werk ansehen'}
                               >
