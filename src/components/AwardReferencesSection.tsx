@@ -474,7 +474,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Internationale Auszeichnung für herausragende kuratorische Bildgestaltung in der zeitgenössischen Fotografie.',
     scopeEn: 'International recognition honoring outstanding curatorial vision in contemporary fine art photography.',
     scopeFa: 'تقدیر بین‌المللی برای نگاه نوآورانه در عکاسی معاصر.',
-    badgeImage: '/images/2026_09_image00012.webp',
+    badgeImage: '/images/2025_09_image00012.webp',
     mainDirectoryUrl: 'https://globallensawards.com/',
     honors: [
       {
@@ -501,7 +501,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Internationales Festival in Triest, Italien. Ausgewählt für die kuratierte Hauptausstellung im historischen Mercato Coperto.',
     scopeEn: 'Renowned international festival in Trieste, Italy. Selected photographer for curated exhibition at the historic Mercato Coperto.',
     scopeFa: 'فستیوال بین‌المللی عکاسی در تریست ایتالیا و نمایشگاه برگزیدگان در مرکاتو کوپرتو.',
-    badgeImage: '/images/2026_09_image00011.webp',
+    badgeImage: '/images/2025_09_image00011.webp',
     mainDirectoryUrl: 'https://www.urbanphotoawards.com/en/photonew/?id=333556%2Fschirzan%2Fin-between-spaces',
     honors: [
       {
@@ -682,7 +682,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Führender weltweiter Preis für Schwarz-Weiß-Fotografie. Jury mit Vertreter:innen der Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy und Financial Times bei ca. 6.000 Einreichungen aus 64 Ländern.',
     scopeEn: 'The leading international accolade for black and white photography. Jurors include Tate Modern, Sotheby\'s, Serpentine Galleries, Artnet, Ogilvy, and Financial Times.',
     scopeFa: 'معتبرترین جایزه جهانی عکاسی سیاه‌وسفید با حضور داورانی از تیت مدرن، ساتبیز، گالری سرپنتین و آرت‌نت.',
-    badgeImage: '/images/2026_09_image00012.webp',
+    badgeImage: '/images/2025_09_image00012.webp',
     mainDirectoryUrl: 'https://www.thespiderawards.com/gallery/20th/gallery.php?x=a&cid=653&g=w',
     honors: [
       {
@@ -912,6 +912,9 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     alt={comp.name}
                     className="h-10 sm:h-12 w-auto object-contain"
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
                   />
                 )}
 
