@@ -16,7 +16,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   const { kickboxing, running, athensGala } = GALLERY_PAGE_DATA;
 
   return (
-    <section id="gallery" className="scroll-mt-24 pt-6 border-t border-stone-200">
+    <section id="gallery" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
       {/* Section Top Header */}
       <div className="border-b border-stone-200 pb-4 mb-8">
         <div className="space-y-1.5 max-w-2xl">

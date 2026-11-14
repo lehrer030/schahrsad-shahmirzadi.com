@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
+import { scrollToElementWithOffset } from '../utils/scrollHelper';
 
 export type NavigationCategory =
   | 'architecture'
@@ -126,7 +127,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     shortDe: 'Biografie',
     shortEn: 'Biography',
     shortFa: 'زندگی‌نامه',
-    targetId: 'biography',
+    targetId: 'biography-profile',
     category: 'biography'
   },
   {
@@ -260,12 +261,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
     setActiveMenuId(item.id);
 
-    setTimeout(() => {
-      const el = document.getElementById(item.targetId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 40);
+    // Direct, exact scroll so the clicked heading/card sits immediately under the sticky header
+    // with equal top spacing matching the left screen margin (16px on mobile matching px-4)
+    const targetId = item.id === 'biography' ? 'biography-profile' : item.targetId;
+    scrollToElementWithOffset(targetId, 60);
   };
 
   const getItemLabel = (item: OriginalMenuItem) => {

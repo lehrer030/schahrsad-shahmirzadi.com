@@ -17,6 +17,7 @@ import { CookieBanner } from './components/CookieBanner';
 import { BackToTop } from './components/BackToTop';
 import { MobileFloatingContact } from './components/MobileFloatingContact';
 import { ImageProtectionToast } from './components/ImageProtectionToast';
+import { scrollToElementWithOffset } from './utils/scrollHelper';
 import {
   SOLITAIRE_SERIES_1,
   SOLITAIRE_SERIES_2,
@@ -165,43 +166,43 @@ export default function App() {
       else if (pathname.includes('/kickboxen') || pathname.includes('/kickboxing') || hash === '#kickboxen' || hash === '#kickboxing') {
         setCurrentCategory('kickboxing');
         const el = document.getElementById('kickboxing');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 4. Galerie routes
       else if (pathname.includes('/galerie') || pathname.includes('/gallery') || hash === '#gallery' || hash === '#galerie') {
         setCurrentCategory('gallery');
         const el = document.getElementById('gallery');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 5. Exhibitions routes
       else if (pathname.includes('/exhibitions') || pathname.includes('/ausstellungen') || hash === '#exhibitions') {
         setCurrentCategory('press');
         const el = document.getElementById('exhibitions') || document.getElementById('press');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 6. Press routes
       else if (pathname.includes('/press') || pathname.includes('/presse') || hash === '#press') {
         setCurrentCategory('press');
-        const el = document.getElementById('press');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        const el = document.getElementById('press-features') || document.getElementById('press');
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 7. Education / Bildungsweg routes
       else if (pathname.includes('/bildungsweg') || pathname.includes('/education') || hash === '#education') {
         setCurrentCategory('biography');
-        const el = document.getElementById('education') || document.getElementById('biography');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        const el = document.getElementById('education') || document.getElementById('biography-profile');
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 8. Vita / Biography routes
       else if (pathname.includes('/vita') || pathname.includes('/biography') || hash === '#biography') {
         setCurrentCategory('biography');
-        const el = document.getElementById('biography');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        const el = document.getElementById('biography-profile') || document.getElementById('biography');
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 9. Environmental Protection / Engagement routes
       else if (pathname.includes('/environmental-protection') || hash === '#engagement') {
         setCurrentCategory('biography');
         const el = document.getElementById('engagement') || document.getElementById('social-environmental');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) scrollToElementWithOffset(el, 40);
       }
       // 10. Award References & Photoart routes
       else if (
@@ -212,7 +213,7 @@ export default function App() {
       ) {
         setCurrentCategory('press');
         const el = document.getElementById('award-references') || document.getElementById('press');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
+        if (el) scrollToElementWithOffset(el, 40);
       }
     };
 
@@ -245,9 +246,10 @@ export default function App() {
     // Smooth scroll down to the targeted section
     if (!skipScroll) {
       setTimeout(() => {
-        const el = document.getElementById(cat);
+        const targetId = cat === 'biography' ? 'biography-profile' : cat;
+        const el = document.getElementById(targetId) || document.getElementById(cat);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          scrollToElementWithOffset(el);
         }
       }, 50);
     }
@@ -318,7 +320,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
                ------------------------------------------------------------- */}
-          <section id="architecture" className="scroll-mt-24 pt-4">
+          <section id="architecture" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-4">
 
             {/* Category Sticky Heading / Divider */}
             <div className="border-b border-stone-200 pb-4 mb-8">
@@ -372,7 +374,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 2: FINE ART
                ------------------------------------------------------------- */}
-          <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
+          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
@@ -403,7 +405,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-          <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
+          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
@@ -434,7 +436,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 4: PORTRAITS
                ------------------------------------------------------------- */}
-          <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
+          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
@@ -465,7 +467,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 2: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
                ------------------------------------------------------------- */}
-          <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
+          <section id="award-references" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
             <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
             <AwardReferencesSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
           </section>
@@ -474,24 +476,9 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 3: EXHIBITIONS, PUBLICATIONS, VIDEOS & PRESS
                ------------------------------------------------------------- */}
-          <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                  {currentLang === 'de' ? 'Ausstellungen, Publikationen & Presse' : currentLang === 'fa' ? 'نمایشگاه‌ها، نشریات و مطبوعات' : 'Exhibitions, Publications & Press'}
-                </h2>
-                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                  {currentLang === 'de'
-                    ? 'Internationale Ausstellungsbeteiligungen, offizielle Publikationen mit ISBN, Preisträger-Dokumentationen und Medienberichte.'
-                    : currentLang === 'fa'
-                      ? 'نمایشگاه‌های بین‌المللی، کتاب‌های برگزیده با شابک، فیلم‌های مستند و پوشش رسانه‌ای.'
-                      : 'International exhibition participations, official publications with ISBN, winner compendiums, and media reports.'}
-                </p>
-              </div>
-            </div>
-
+          <div id="press" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
             <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
-          </section>
+          </div>
 
 
           {/* -------------------------------------------------------------
@@ -503,24 +490,9 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 5: BIOGRAPHY, ACADEMIC EDUCATION & COMMITMENT
                ------------------------------------------------------------- */}
-          <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                  {currentLang === 'de' ? 'Biografie & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Biography & Commitment'}
-                </h2>
-                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                  {currentLang === 'de'
-                    ? 'Biografie, beruflicher Werdegang im Umweltschutz, akademischer Bildungsweg und soziales Engagement.'
-                    : currentLang === 'fa'
-                      ? 'زندگی‌نامه، پیشینه حرفه‌ای در حفاظت از محیط زیست، مدارک دانشگاهی و فعالیت‌های اجتماعی.'
-                      : 'Biography, professional career in environmental protection, academic education, and community engagement.'}
-                </p>
-              </div>
-            </div>
-
+          <div id="biography" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
             <ArtistVita currentLang={currentLang} />
-          </section>
+          </div>
 
 
           {/* -------------------------------------------------------------

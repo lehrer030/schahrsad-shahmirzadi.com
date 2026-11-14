@@ -9,10 +9,10 @@ interface ArtistVitaProps {
 
 export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   return (
-    <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
+    <div className="space-y-12 sm:space-y-16 max-w-5xl mx-auto">
       
             {/* 1. BIOGRAFIE & BERUFLICHER WERDEGANG */}
-      <section id="biography-profile" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+      <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
         <div className="border-b border-stone-100 pb-4">
           <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
             {currentLang === 'de' ? 'Biografie & Werdegang' : currentLang === 'fa' ? 'زندگینامه و سوابق حرفه‌ای' : 'Biography & Career'}
@@ -101,7 +101,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
       </section>
 
 {/* 2. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
-      <section id="education" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
+      <section id="education" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
         
         {/* Header & Tagline */}
         <div className="border-b border-stone-100 pb-6 space-y-2">
@@ -316,7 +316,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
 
       
 {/* 3. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
-      <section id="engagement" className="scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
+      <section id="engagement" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
         
         {/* Header & Hero Image with Mission Statement */}
         <div className="border-b border-stone-100 pb-8 space-y-6">

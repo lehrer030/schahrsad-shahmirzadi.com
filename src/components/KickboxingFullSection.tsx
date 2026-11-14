@@ -184,7 +184,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   ];
 
   return (
-    <section id="kickboxing" className="scroll-mt-24 pt-8 border-t border-stone-200 relative">
+    <section id="kickboxing" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
       
       {/* Editorial Section Header */}
