@@ -215,10 +215,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <Feather className="w-4 h-4 text-stone-600" />
                 <span>
                   {currentLang === 'de'
-                    ? 'Namensbedeutung »SchirZan« & Philosophie des Lichts vertiefen'
+                    ? INTRO_CONTENT.artistSectionTitleDe
                     : currentLang === 'fa'
-                    ? 'مطالعه بیشتر درباره نام «شیرزن» و فلسفه نور'
-                    : 'Learn more about the name »SchirZan« & Philosophy of Light'}
+                    ? INTRO_CONTENT.artistSectionTitleFa
+                    : INTRO_CONTENT.artistSectionTitleEn}
                 </span>
                 {showPhilosophy ? (
                   <ChevronUp className="w-4 h-4 text-stone-500" />
