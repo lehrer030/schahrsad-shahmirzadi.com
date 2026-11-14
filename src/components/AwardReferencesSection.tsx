@@ -474,7 +474,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Internationale Auszeichnung für herausragende kuratorische Bildgestaltung in der zeitgenössischen Fotografie.',
     scopeEn: 'International recognition honoring outstanding curatorial vision in contemporary fine art photography.',
     scopeFa: 'تقدیر بین‌المللی برای نگاه نوآورانه در عکاسی معاصر.',
-    badgeImage: '/images/2025_09_image00012.webp',
+    badgeImage: '/images/Global@LENS.png',
     mainDirectoryUrl: 'https://globallensawards.com/',
     honors: [
       {
