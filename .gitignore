@@ -145,4 +145,7 @@ public/images/*
 !public/images/2025_08_uni-koblenz.webp
 !public/images/2025_08_uni-koblenz.jpg
 
+# SchirZan Official Brand Emblem / Logo
+!public/images/schirzan-logo*
+
 !public/videos/**
