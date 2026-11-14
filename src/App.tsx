@@ -353,19 +353,19 @@ export default function App() {
             <section id="architecture" className="scroll-mt-24 pt-4">
               
               {/* Category Sticky Heading / Divider */}
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
+                      : currentLang === 'fa'
+                      ? 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
+                      : 'Award-winning architectural photography focusing on solitary structures and geometric forms.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
-                    : currentLang === 'fa'
-                    ? 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
-                    : 'Award-winning architectural photography focusing on solitary structures and geometric forms.'}
-                </p>
               </div>
 
               {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
@@ -405,19 +405,19 @@ export default function App() {
                 SECTION 2: FINE ART
                ------------------------------------------------------------- */}
             <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
+                      : currentLang === 'fa'
+                      ? 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
+                      : 'Photographic works in fine art and visual composition.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
-                    : currentLang === 'fa'
-                    ? 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
-                    : 'Photographic works in fine art and visual composition.'}
-                </p>
               </div>
 
               <FurtherWorks
@@ -436,19 +436,19 @@ export default function App() {
                 SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
             <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
+                      : currentLang === 'fa'
+                      ? 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
+                      : 'Photographic documentation on human rights, social issues, and animal welfare.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
-                    : currentLang === 'fa'
-                    ? 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
-                    : 'Photographic documentation on human rights, social issues, and animal welfare.'}
-                </p>
               </div>
 
               <FurtherWorks
@@ -467,19 +467,19 @@ export default function App() {
                 SECTION 4: PORTRAITS
                ------------------------------------------------------------- */}
             <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Fotografische Porträts und Selbstporträts.'
+                      : currentLang === 'fa'
+                      ? 'پرتره‌ها و خودنگاره‌های عکاسی.'
+                      : 'Photographic portraits and self-portraits.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Fotografische Porträts und Selbstporträts.'
-                    : currentLang === 'fa'
-                    ? 'پرتره‌ها و خودنگاره‌های عکاسی.'
-                    : 'Photographic portraits and self-portraits.'}
-                </p>
               </div>
 
               <FurtherWorks
@@ -504,19 +504,19 @@ export default function App() {
                 SECTION 6: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
                ------------------------------------------------------------- */}
             <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
+                      : currentLang === 'fa'
+                      ? 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
+                      : 'Biography, academic career, kickboxing achievements, and community engagement.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
-                    : currentLang === 'fa'
-                    ? 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
-                    : 'Biography, academic career, kickboxing achievements, and community engagement.'}
-                </p>
               </div>
 
               <ArtistVita currentLang={currentLang} />
@@ -527,19 +527,19 @@ export default function App() {
                 SECTION 6: PRESERVED WORDPRESS CONTENT: PRESS & MEDIA
                ------------------------------------------------------------- */}
             <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-5 mb-8 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-                <div>
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+              <div className="border-b border-stone-200 pb-4 mb-8">
+                <div className="space-y-1.5 max-w-2xl">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
                     {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
                   </h2>
+                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                    {currentLang === 'de'
+                      ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
+                      : currentLang === 'fa'
+                      ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
+                      : 'International publications, press features, and official award catalogues.'}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-                  {currentLang === 'de'
-                    ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
-                    : currentLang === 'fa'
-                    ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
-                    : 'International publications, press features, and official award catalogues.'}
-                </p>
               </div>
 
               <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
