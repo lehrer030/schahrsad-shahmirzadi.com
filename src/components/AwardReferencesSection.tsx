@@ -910,7 +910,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                   <img
                     src={resolveAsset(comp.badgeImage)}
                     alt={comp.name}
-                    className="h-10 sm:h-12 w-auto object-contain"
+                    className="h-11 sm:h-13 w-auto max-w-[150px] sm:max-w-[180px] object-contain drop-shadow-2xs transition-transform duration-200 hover:scale-105 shrink-0"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
