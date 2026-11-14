@@ -27,10 +27,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
   const artistPhotoItem: PhotoItem = {
     id: 'steve-barret-portrait',
     src: resolveAsset('/images/2025_07_photoart_bw.jpg'),
-    alt: 'SchirZan – Schahrsad Shahmirzadi. Photographiert von Steve Barret',
+    alt: 'Schahrsad Shahmirzadi (SchirZan) – Photographie & Kunst · Porträt von Steve Barret',
     captionDe: 'Schahrsad Shahmirzadi · Künstlername SchirZan – Porträt photographiert von Steve Barret',
     captionEn: 'Schahrsad Shahmirzadi · Artist name SchirZan – Portrait by Steve Barret',
-    captionFa: 'شهزاد شاهمیرزادی · نام هنری شیرزن – پرتره عکاسی‌شده توسط استیو بارت'
+    captionFa: 'شهرزاد شاهمیرزادی · نام هنری شیرزن – عکس از استیو بارت'
   };
 
   return (
@@ -116,7 +116,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
             {/* Mobile-Only Portrait Card: Directly placed here for mobile readability */}
             <div className="block lg:hidden pt-2 pb-1">
-              <div className="bg-white p-3.5 border border-stone-200/90 shadow-sm rounded-2xl max-w-md mx-auto space-y-3">
+              <div className="bg-white p-3 border border-stone-200/90 shadow-sm rounded-2xl max-w-md mx-auto space-y-2.5">
                 <div
                   className="relative overflow-hidden bg-stone-100 cursor-pointer aspect-[4/3] rounded-xl group"
                   onClick={() => onOpenLightbox && onOpenLightbox([artistPhotoItem], 0)}
@@ -124,34 +124,29 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 >
                   <img
                     src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                    alt="SchirZan – Schahrsad Shahmirzadi · Photo: Steve Barret"
+                    alt="Schahrsad Shahmirzadi (SchirZan) – Photographie & Kunst · Porträt von Steve Barret"
+                    title="Schahrsad Shahmirzadi · SchirZan"
                     draggable={false}
                     className="w-full h-full object-cover object-center select-none group-hover:scale-102 transition-transform duration-500 ease-out"
                     loading="eager"
                   />
+                  {/* Subtle Google-optimierter Name-Tag direkt auf dem Bild */}
+                  <div className="absolute bottom-2.5 left-2.5 z-10 pointer-events-none">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 backdrop-blur-xs text-white rounded text-[11px] font-medium tracking-wide shadow-md">
+                      <span>{currentLang === 'fa' ? 'شهرزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}</span>
+                    </span>
+                  </div>
                   <div className="absolute top-2.5 right-2.5 bg-white/90 text-stone-700 p-1.5 rounded-md shadow-xs">
                     <Maximize2 className="w-3.5 h-3.5" />
                   </div>
                 </div>
 
-                <div className="pt-1 flex items-center justify-between gap-2 border-t border-stone-100">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={resolveAsset('/images/schirzan-logo.webp')}
-                      alt="Emblem"
-                      className="w-8 h-8 object-contain shrink-0"
-                    />
-                    <div>
-                      <h3 className="font-serif text-stone-900 font-bold text-sm leading-tight">
-                        {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
-                      </h3>
-                      <p className="text-[10px] text-stone-500 font-mono">
-                        {INTRO_CONTENT.photoCredit}
-                      </p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-mono text-amber-900 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded font-semibold shrink-0">
-                    Berlin
+                <div className="pt-1 px-1 flex items-center justify-between text-[11px] font-mono text-stone-500 border-t border-stone-100">
+                  <span className="text-[10px] text-stone-600">
+                    {currentLang === 'fa' ? 'عکاسی و هنر · برلین' : 'Photographie & Kunst'}
+                  </span>
+                  <span className="text-[10px] font-mono text-stone-500 bg-stone-50 border border-stone-200 px-2 py-0.5 rounded">
+                    {INTRO_CONTENT.photoCredit}
                   </span>
                 </div>
               </div>
@@ -235,9 +230,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
           </div>
 
-          {/* Right Column (Span 5): Master Portrait + Official Emblem (Desktop View) */}
+          {/* Right Column (Span 5): Master Portrait (Desktop View) */}
           <div className="hidden lg:flex lg:col-span-5 xl:col-span-5 flex-col items-center justify-center space-y-4">
-            <div className="w-full max-w-md xl:max-w-lg bg-white p-4 border border-stone-200 shadow-sm rounded-2xl space-y-3.5">
+            <div className="w-full max-w-md xl:max-w-lg bg-white p-3.5 border border-stone-200 shadow-sm rounded-2xl space-y-2.5">
               
               {/* Steve Barret Portrait Container */}
               <div
@@ -247,36 +242,32 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               >
                 <img
                   src={resolveAsset('/images/2025_07_photoart_bw.jpg')}
-                  alt="SchirZan – Schahrsad Shahmirzadi · Photo: Steve Barret"
+                  alt="Schahrsad Shahmirzadi (SchirZan) – Photographie & Kunst · Porträt von Steve Barret"
+                  title="Schahrsad Shahmirzadi · SchirZan"
                   draggable={false}
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500 ease-out select-none"
                   loading="eager"
                 />
+
+                {/* Google-optimierter Name-Tag dezent direkt auf dem Bild */}
+                <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-stone-900/85 backdrop-blur-xs text-white rounded text-xs font-serif tracking-wide shadow-md">
+                    <span>{currentLang === 'fa' ? 'شهرزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}</span>
+                  </span>
+                </div>
+
                 <div className="absolute top-3 right-3 bg-white/90 text-stone-700 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity shadow-xs">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
 
-              {/* Attribution Plaque with Official Emblem */}
-              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <img
-                    src={resolveAsset('/images/schirzan-logo.webp')}
-                    alt="SchirZan Emblem"
-                    className="w-10 h-10 object-contain shrink-0 drop-shadow-2xs"
-                  />
-                  <div>
-                    <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
-                      {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
-                    </h3>
-                    <p className="text-xs text-stone-600 font-normal">
-                      {currentLang === 'fa'
-                        ? 'عکاسی، هنر و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
-                        : 'Photographie, Kunst & 10-fache Weltmeisterin Kickboxen'}
-                    </p>
-                  </div>
-                </div>
-
+              {/* Subtiler Bildnachweis ohne Logo */}
+              <div className="pt-2 px-1 border-t border-stone-100 flex items-center justify-between text-xs font-mono text-stone-500">
+                <span className="text-[11px] text-stone-600">
+                  {currentLang === 'fa'
+                    ? 'هنر، عکاسی و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
+                    : 'Photographie, Kunst & 10-fache Weltmeisterin'}
+                </span>
                 <div className="bg-stone-50 border border-stone-200 px-2.5 py-1 text-[11px] font-mono text-stone-600 shrink-0 rounded">
                   <span>{INTRO_CONTENT.photoCredit}</span>
                 </div>
