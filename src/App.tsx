@@ -541,7 +541,7 @@ export default function App() {
                 </p>
               </div>
 
-              <PressSection currentLang={currentLang} />
+              <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
             </section>
 
 

@@ -1,20 +1,376 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ExternalLink,
   BookOpen,
   Film,
   Award,
   FileText,
-  Play
+  Play,
+  ChevronLeft,
+  ChevronRight,
+  Eye,
+  Layers,
+  Maximize2,
+  Images
 } from 'lucide-react';
-import type { Language } from '../data/photographyData';
+import type { Language, PhotoItem } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
 
 interface PublicationsGalleryProps {
   currentLang: Language;
+  onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
 }
 
-export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ currentLang }) => {
+interface PerspaSeriesItem {
+  id: string;
+  choiceNum: number;
+  title: string;
+  subtitleDe: string;
+  subtitleEn: string;
+  subtitleFa: string;
+  perspaUrl: string;
+  photos: PhotoItem[];
+}
+
+const PERSPA_SERIES_LIST: PerspaSeriesItem[] = [
+  {
+    id: 'perspa-solitaire',
+    choiceNum: 1,
+    title: 'The Solitaire as Abstraction – In Harmony with Nature',
+    subtitleDe: 'Serie: In Harmony with Nature · 7 Aufnahmen',
+    subtitleEn: 'Series: In Harmony with Nature · 7 works',
+    subtitleFa: 'مجموعه: در هماهنگی با طبیعت · ۷ اثر',
+    perspaUrl: 'https://perspa.fr/2026/architectural-perspective/the-solitaire-as-abstraction-in-harmony-with-nature/',
+    photos: [
+      {
+        id: 'solitaire-01',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature I',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature I · PERSPA Editor’s Choice 2026',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature I · PERSPA Editor’s Choice 2026',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۱'
+      },
+      {
+        id: 'solitaire-02',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature II',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature II',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature II',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۲'
+      },
+      {
+        id: 'solitaire-03',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-03-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature III',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature III',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature III',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۳'
+      },
+      {
+        id: 'solitaire-04',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-04-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature IV',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature IV',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature IV',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۴'
+      },
+      {
+        id: 'solitaire-05',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-05-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature V',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature V',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature V',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۵'
+      },
+      {
+        id: 'solitaire-06',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-06-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature VI',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature VI',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature VI',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۶'
+      },
+      {
+        id: 'solitaire-07',
+        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-07-scaled.webp',
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature VII',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature VII',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature VII',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۷'
+      }
+    ]
+  },
+  {
+    id: 'perspa-elegance',
+    choiceNum: 2,
+    title: 'Elegance of Structure – Black and White',
+    subtitleDe: 'Serie: Elegance of Structure · 5 Aufnahmen',
+    subtitleEn: 'Series: Elegance of Structure · 5 works',
+    subtitleFa: 'مجموعه: شکوه و ظرافت ساختار · ۵ اثر',
+    perspaUrl: 'https://perspa.fr/2026/architectural-perspective/elegance-of-structure-black-and-white-2/',
+    photos: [
+      {
+        id: 'elegance-01',
+        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        alt: 'Elegance of Structure – Black and White I',
+        captionDe: 'Elegance of Structure – Black and White I · Griechische Nationaloper (Athen)',
+        captionEn: 'Elegance of Structure – Black and White I · Greek National Opera (Athens)',
+        captionFa: 'شکوه و ظرافت ساختار – سیاه و سفید ۱'
+      },
+      {
+        id: 'elegance-02',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-01-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines I',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines I',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines I',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۱'
+      },
+      {
+        id: 'elegance-03',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-02-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines II',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines II',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines II',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۲'
+      },
+      {
+        id: 'elegance-04',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-03-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines III',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines III',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines III',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۳'
+      },
+      {
+        id: 'elegance-05',
+        src: '/images/2026_10_amp-2026-elegance-interior-symphony-04-scaled.webp',
+        alt: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionDe: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionEn: 'An Interior Symphony of Light, Forms and Lines IV',
+        captionFa: 'سمفونی درونی نور، فرم‌ها و خطوط ۴'
+      }
+    ]
+  },
+  {
+    id: 'perspa-hephaestus',
+    choiceNum: 3,
+    title: 'Hephaestus’ Legacy',
+    subtitleDe: 'Serie: Hephaestus’ Legacy · 5 Aufnahmen',
+    subtitleEn: 'Series: Hephaestus’ Legacy · 5 works',
+    subtitleFa: 'مجموعه: میراث هفائستوس · ۵ اثر',
+    perspaUrl: 'https://perspa.fr/2026/architectural-perspective/hephaestus-legacy-3/',
+    photos: [
+      {
+        id: 'hephaestus-01',
+        src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+        alt: 'Hephaestus’ Legacy I',
+        captionDe: 'Hephaestus’ Legacy I · Tempel des Hephaistos (Agora, Athen)',
+        captionEn: 'Hephaestus’ Legacy I · Temple of Hephaestus (Agora, Athens)',
+        captionFa: 'میراث هفائستوس ۱ · معبد هفائستوس (آتن)'
+      },
+      {
+        id: 'hephaestus-02',
+        src: '/images/2026_09_os-06-hephaestus-legacy-02-scaled.webp',
+        alt: 'Hephaestus’ Legacy II',
+        captionDe: 'Hephaestus’ Legacy II · Säulenordnung & Perspektive',
+        captionEn: 'Hephaestus’ Legacy II · Columnar Rhythm & Perspective',
+        captionFa: 'میراث هفائستوس ۲'
+      },
+      {
+        id: 'hephaestus-03',
+        src: '/images/2026_09_os-06-hephaestus-legacy-03-scaled.webp',
+        alt: 'Hephaestus’ Legacy III',
+        captionDe: 'Hephaestus’ Legacy III · Detailaufnahme & Relief',
+        captionEn: 'Hephaestus’ Legacy III · Relief Details',
+        captionFa: 'میراث هفائستوس ۳'
+      },
+      {
+        id: 'hephaestus-04',
+        src: '/images/2026_09_os-06-hephaestus-legacy-04-scaled.webp',
+        alt: 'Hephaestus’ Legacy IV',
+        captionDe: 'Hephaestus’ Legacy IV · Klassische Harmonie',
+        captionEn: 'Hephaestus’ Legacy IV · Classical Harmony',
+        captionFa: 'میراث هفائستوس ۴'
+      },
+      {
+        id: 'hephaestus-05',
+        src: '/images/2026_09_os-06-hephaestus-legacy-05-scaled.webp',
+        alt: 'Hephaestus’ Legacy V',
+        captionDe: 'Hephaestus’ Legacy V · Antikes Monument im Tageslicht',
+        captionEn: 'Hephaestus’ Legacy V · Ancient Monument in Daylight',
+        captionFa: 'میراث هفائستوس ۵'
+      }
+    ]
+  }
+];
+
+const PerspaCard: React.FC<{
+  item: PerspaSeriesItem;
+  currentLang: Language;
+  onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
+}> = ({ item, currentLang, onOpenLightbox }) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const isDe = currentLang === 'de';
+  const isFa = currentLang === 'fa';
+
+  const currentPhoto = item.photos[selectedIndex] || item.photos[0];
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setSelectedIndex((prev) => (prev - 1 + item.photos.length) % item.photos.length);
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setSelectedIndex((prev) => (prev + 1) % item.photos.length);
+  };
+
+  return (
+    <div className="group/card relative flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-600/60 hover:shadow-lg transition-all duration-300">
+      {/* Lead image presentation with no baked-in screenshot arrows */}
+      <div
+        className="relative block overflow-hidden bg-stone-900 aspect-3/4 sm:aspect-2/3 cursor-pointer select-none"
+        onClick={() => onOpenLightbox?.(item.photos, selectedIndex)}
+      >
+        <img
+          src={resolveAsset(currentPhoto.src)}
+          alt={currentPhoto.alt}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-102 protected-art"
+          loading="lazy"
+        />
+
+        {/* Top Badges */}
+        <div className="absolute top-2.5 left-2.5 right-2.5 z-10 flex items-center justify-between pointer-events-none">
+          <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-amber-900/90 text-amber-100 shadow-md backdrop-blur-xs">
+            PERSPA Choice #{item.choiceNum}
+          </span>
+          <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-mono font-medium bg-stone-950/80 text-white shadow-md backdrop-blur-xs">
+            <Images className="w-3 h-3 text-amber-400" />
+            <span>{selectedIndex + 1}/{item.photos.length}</span>
+          </span>
+        </div>
+
+        {/* Fully functional Navigation Arrows — ONLY visible on card hover, and they actually work! */}
+        <button
+          type="button"
+          onClick={handlePrev}
+          aria-label={isDe ? 'Vorheriges Bild' : 'Previous image'}
+          className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
+        >
+          <ChevronLeft className="w-4 h-4" />
+        </button>
+        <button
+          type="button"
+          onClick={handleNext}
+          aria-label={isDe ? 'Nächstes Bild' : 'Next image'}
+          className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-stone-950/80 hover:bg-amber-700 text-white flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all shadow-md backdrop-blur-xs hover:scale-110 cursor-pointer"
+        >
+          <ChevronRight className="w-4 h-4" />
+        </button>
+
+        {/* HOVER FENSTER: Displays the remaining images of this series on hover */}
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className="absolute bottom-0 inset-x-0 z-20 p-3 pt-6 bg-gradient-to-t from-stone-950 via-stone-950/90 to-transparent backdrop-blur-[2px] opacity-0 group-hover/card:opacity-100 pointer-events-none group-hover/card:pointer-events-auto transition-all duration-300 transform translate-y-2 group-hover/card:translate-y-0"
+        >
+          <div className="flex items-center justify-between text-white text-[11px] mb-2 font-medium">
+            <span className="flex items-center gap-1.5 text-stone-200">
+              <Layers className="w-3.5 h-3.5 text-amber-400" />
+              <span>
+                {isFa
+                  ? `سایر تصاویر مجموعه (${item.photos.length} تصویر)`
+                  : isDe
+                  ? `Restliche Bilder dieser Serie (${item.photos.length - 1} weitere)`
+                  : `Remaining series images (${item.photos.length - 1} more)`}
+              </span>
+            </span>
+            <button
+              type="button"
+              onClick={() => onOpenLightbox?.(item.photos, selectedIndex)}
+              className="inline-flex items-center gap-1 text-[10px] text-amber-300 hover:text-white transition-colors cursor-pointer"
+            >
+              <span>{isFa ? 'بزرگنمایی' : isDe ? 'Großansicht' : 'Enlarge'}</span>
+              <Maximize2 className="w-3 h-3" />
+            </button>
+          </div>
+
+          {/* Horizontal thumbnail strip of remaining pictures */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            {item.photos.map((photo, pIdx) => {
+              const isActive = pIdx === selectedIndex;
+              return (
+                <button
+                  key={photo.id}
+                  type="button"
+                  onMouseEnter={() => setSelectedIndex(pIdx)}
+                  onClick={() => {
+                    setSelectedIndex(pIdx);
+                    onOpenLightbox?.(item.photos, pIdx);
+                  }}
+                  className={`relative shrink-0 w-11 h-13 rounded-md overflow-hidden border transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? 'border-amber-400 ring-2 ring-amber-400/60 scale-105'
+                      : 'border-white/30 hover:border-white/80 opacity-75 hover:opacity-100'
+                  }`}
+                  title={photo.alt}
+                >
+                  <img
+                    src={resolveAsset(photo.src)}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover protected-art"
+                    loading="lazy"
+                  />
+                  <span className="absolute bottom-0.5 right-0.5 text-[8px] font-mono px-1 bg-black/75 text-white rounded">
+                    {pIdx + 1}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Card Info & Links Below */}
+      <div className="p-4 flex-1 flex flex-col justify-between space-y-3 bg-white">
+        <div className="space-y-1">
+          <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800 block">
+            PERSPA Choice #{item.choiceNum}
+          </span>
+          <h5 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug">
+            {item.title}
+          </h5>
+          <p className="text-[11px] text-stone-500 font-sans">
+            {isFa ? item.subtitleFa : isDe ? item.subtitleDe : item.subtitleEn}
+          </p>
+        </div>
+
+        <div className="pt-2 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+          <a
+            href={item.perspaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-stone-700 hover:text-amber-800 font-medium"
+          >
+            <span>{isFa ? 'مشاهده در PERSPA' : isDe ? 'Werkseite bei PERSPA' : 'Work page on PERSPA'}</span>
+            <ExternalLink className="w-3 h-3 text-stone-400" />
+          </a>
+          <button
+            type="button"
+            onClick={() => onOpenLightbox?.(item.photos, selectedIndex)}
+            className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 font-medium cursor-pointer"
+          >
+            <Eye className="w-3 h-3" />
+            <span>{isFa ? 'نمایش مجموعه' : isDe ? 'Serie öffnen' : 'Open series'}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ currentLang, onOpenLightbox }) => {
   const isDe = currentLang === 'de';
   const isFa = currentLang === 'fa';
 
@@ -230,124 +586,16 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             : 'The prestigious French award PERSPA selected three architectural series by ShirZan for its official Editor’s Choice gallery:'}
         </p>
 
-        {/* 3 PERSPA Artworks Grid */}
+        {/* 3 PERSPA Artworks Grid with Clean Photographs and Interactive Series Hover Preview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
-          {/* Artwork 1: Solitaire */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/2026/architectural-perspective/the-solitaire-as-abstraction-in-harmony-with-nature/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_tsaaihwn-scaled.webp')}
-                alt="The Solitaire as Abstraction – In Harmony with Nature (PERSPA 2026)"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors pointer-events-none" />
-            </a>
-            <div className="p-4 flex-1 flex flex-col justify-between space-y-2.5">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800">
-                  PERSPA Choice #1
-                </span>
-                <h5 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug">
-                  The Solitaire as Abstraction – In Harmony with Nature
-                </h5>
-              </div>
-              <div className="pt-2 border-t border-stone-100 flex flex-col gap-1 text-[11px]">
-                <a
-                  href="https://perspa.fr/2026/architectural-perspective/the-solitaire-as-abstraction-in-harmony-with-nature/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-stone-700 hover:text-amber-800 font-medium"
-                >
-                  <span>{isFa ? 'مشاهده در PERSPA' : isDe ? 'Werkseite bei PERSPA' : 'Work page on PERSPA'}</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Artwork 2: Elegance of Structure */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/2026/architectural-perspective/elegance-of-structure-black-and-white-2/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_perspa-889x1536.webp')}
-                alt="Elegance of Structure – Black and White (PERSPA 2026)"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors pointer-events-none" />
-            </a>
-            <div className="p-4 flex-1 flex flex-col justify-between space-y-2.5">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800">
-                  PERSPA Choice #2
-                </span>
-                <h5 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug">
-                  Elegance of Structure – Black and White
-                </h5>
-              </div>
-              <div className="pt-2 border-t border-stone-100 flex flex-col gap-1 text-[11px]">
-                <a
-                  href="https://perspa.fr/2026/architectural-perspective/elegance-of-structure-black-and-white-2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-stone-700 hover:text-amber-800 font-medium"
-                >
-                  <span>{isFa ? 'مشاهده در PERSPA' : isDe ? 'Werkseite bei PERSPA' : 'Work page on PERSPA'}</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Artwork 3: Hephaestus' Legacy */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/2026/architectural-perspective/hephaestus-legacy-3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_haphaestus-1214x2048.jpg')}
-                alt="Hephaestus' Legacy (PERSPA 2026)"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors pointer-events-none" />
-            </a>
-            <div className="p-4 flex-1 flex flex-col justify-between space-y-2.5">
-              <div className="space-y-1">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800">
-                  PERSPA Choice #3
-                </span>
-                <h5 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug">
-                  Hephaestus’ Legacy
-                </h5>
-              </div>
-              <div className="pt-2 border-t border-stone-100 flex flex-col gap-1 text-[11px]">
-                <a
-                  href="https://perspa.fr/2026/architectural-perspective/hephaestus-legacy-3/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-stone-700 hover:text-amber-800 font-medium"
-                >
-                  <span>{isFa ? 'مشاهده در PERSPA' : isDe ? 'Werkseite bei PERSPA' : 'Work page on PERSPA'}</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
-                </a>
-              </div>
-            </div>
-          </div>
+          {PERSPA_SERIES_LIST.map((item) => (
+            <PerspaCard
+              key={item.id}
+              item={item}
+              currentLang={currentLang}
+              onOpenLightbox={onOpenLightbox}
+            />
+          ))}
         </div>
 
         {/* Beitexte Directory Note */}

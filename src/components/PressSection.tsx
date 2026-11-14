@@ -2,7 +2,8 @@ import React from 'react';
 import {
   PRESS_ITEMS,
   EXHIBITIONS_DATA,
-  type Language
+  type Language,
+  type PhotoItem
 } from '../data/photographyData';
 import {
   ExternalLink,
@@ -15,9 +16,10 @@ import { PublicationsGallery } from './PublicationsGallery';
 
 interface PressSectionProps {
   currentLang: Language;
+  onOpenLightbox?: (photos: PhotoItem[], index: number) => void;
 }
 
-export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
+export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenLightbox }) => {
   return (
     <div className="space-y-16 max-w-5xl mx-auto py-6 sm:py-10">
       
@@ -218,7 +220,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
           </p>
         </div>
 
-        <PublicationsGallery currentLang={currentLang} />
+        <PublicationsGallery currentLang={currentLang} onOpenLightbox={onOpenLightbox} />
       </section>
 
     </div>

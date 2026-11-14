@@ -1827,7 +1827,7 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'View Editor’s Choice Feature →',
     linkTextFa: 'مشاهده اثر در سایت گلوبال لنز ←',
     type: 'editors-choice',
-    coverImage: '/images/2026_07_tsaaihwn-1008x2048.jpg'
+    coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp'
   },
   {
     id: 'perspa-editors-choice',
@@ -1846,7 +1846,7 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'Open PERSPA Gallery →',
     linkTextFa: 'مشاهده گالری رسمی PERSPA ←',
     type: 'editors-choice',
-    coverImage: '/images/2026_07_haphaestus-1214x2048.jpg'
+    coverImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp'
   },
   {
     id: 'ipa-annual-book-2025',
