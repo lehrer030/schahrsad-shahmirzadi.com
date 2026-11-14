@@ -311,7 +311,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           href={SPENDENLAUF_CONFIG.url}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Spendenlauf für Menschenrechte beim ECCHR online unterstützen"
+          aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
           className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
         >
           <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
@@ -321,10 +321,10 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
               <span className="font-semibold tracking-wide truncate">
                 {currentLang === 'fa'
-                  ? 'کمپین دویدن برای حقوق بشر:'
+                  ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
                   : currentLang === 'en'
-                    ? 'Run for Human Rights:'
-                    : 'Spendenlauf für Menschenrechte:'}
+                    ? 'Run for Human Rights 2027:'
+                    : 'Spendenlauf für Menschenrechte 2027:'}
               </span>
               <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity hidden md:inline truncate">
                 {currentLang === 'fa'
