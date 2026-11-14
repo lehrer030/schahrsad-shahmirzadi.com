@@ -27,9 +27,18 @@ export const Footer: React.FC<FooterProps> = ({
                 alt="SchirZan Emblem"
                 className="w-10 h-10 object-contain drop-shadow-2xs"
               />
-              <span className="text-xl font-serif text-amber-900 font-bold tracking-wider">
-                {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-serif text-amber-900 font-bold tracking-wider leading-none">
+                  {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
+                </span>
+                <span className="text-[9.5px] font-mono tracking-widest uppercase text-stone-500 font-semibold mt-1">
+                  {currentLang === 'de'
+                    ? 'KUNST · KAMPF · VISION'
+                    : currentLang === 'fa'
+                      ? 'هنر · مبارزه · آرمان'
+                      : 'ART · FIGHT · VISION'}
+                </span>
+              </div>
             </div>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'

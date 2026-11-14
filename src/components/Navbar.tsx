@@ -375,12 +375,12 @@ export const Navbar: React.FC<NavbarProps> = ({
                 {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
               </span>
             </div>
-            <p className="text-[9px] sm:text-[10px] tracking-wider sm:tracking-widest uppercase text-stone-500 font-sans group-hover:text-stone-700 mt-0.5 whitespace-nowrap">
+            <p className="text-[9px] sm:text-[10px] tracking-wider sm:tracking-widest uppercase text-stone-500 font-mono group-hover:text-amber-900 mt-0.5 whitespace-nowrap font-medium transition-colors">
               {currentLang === 'de'
-                ? 'Photographie · Kunst · Kickboxen'
+                ? 'KUNST · KAMPF · VISION'
                 : currentLang === 'fa'
-                  ? 'عکاسی · هنر · کیک‌بوکسینگ'
-                  : 'Photography · Art · Kickboxing'}
+                  ? 'هنر · مبارزه · آرمان'
+                  : 'ART · FIGHT · VISION'}
             </p>
           </div>
         </button>
