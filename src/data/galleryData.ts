@@ -138,9 +138,9 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         id: 'run-gallery-08',
         src: './images/2026_08_ecchr-human-rights-support-4-1152x1536.webp',
         alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
-        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 zur Unterstützung des European Center for Constitutional and Human Rights (ECCHR).',
-        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 supporting the European Center for Constitutional and Human Rights (ECCHR).',
-        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷ ✨ · نیمه‌ماراتن برلین ۲۰۲۷ در حمایت از مرکز اروپایی قانون اساسی و حقوق بشر (ECCHR).',
+        captionDe: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 zur Unterstützung des European Center for Constitutional and Human Rights (ECCHR): Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
+        captionEn: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 supporting the European Center for Constitutional and Human Rights (ECCHR): Solidarity and worldwide legal action for survivors of human rights violations.',
+        captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷ ✨ · نیمه‌ماراتن برلین ۲۰۲۷ در حمایت از مرکز اروپایی قانون اساسی و حقوق بشر (ECCHR): همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.',
         externalLink: 'https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights',
         externalLinkTextDe: 'Support the fundraising run →',
         externalLinkTextEn: 'Support the fundraising run →',
@@ -148,14 +148,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         badgeDe: 'Spendenaufruf / Fundraising Run 2027 ✨',
         badgeEn: 'Fundraising Run for Human Rights 2027 ✨',
         badgeFa: 'فراخوان حمایت مالی حقوق بشر ۲۰۲۷ ✨'
-      },
-      {
-        id: 'run-gallery-12',
-        src: './images/2026_08_ecchr-human-rights-768x792.webp',
-        alt: 'ECCHR – Engagement für Menschenrechte',
-        captionDe: 'ECCHR Partner-Initiative: Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
-        captionEn: 'ECCHR Partnership: Solidarity and worldwide legal action for survivors of human rights violations.',
-        captionFa: 'همکاری با ECCHR: همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.'
       },
       {
         id: 'run-gallery-01',
