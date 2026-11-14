@@ -8,7 +8,9 @@ import {
   ChevronUp,
   FileText,
   Users,
-  Sparkles
+  Sparkles,
+  Calendar,
+  MapPin
 } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
@@ -371,7 +373,57 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </span>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
+            {/* Mobile Responsive Fight Card (md:hidden) — No horizontal scrolling */}
+            <div className="md:hidden space-y-3">
+              <div className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+                <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+                  <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-stone-700">
+                    <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                    <span>{currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    <Trophy className="w-3 h-3 text-emerald-700" />
+                    <span>{currentLang === 'fa' ? 'پیروزی (UD)' : currentLang === 'de' ? 'Sieg (UD)' : 'Win (UD)'}</span>
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
+                    {currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}
+                  </span>
+                  <h5 className="font-serif font-bold text-base text-stone-900 pt-0.5">
+                    {currentLang === 'fa' ? 'کارمن برتیچی · کرواسی' : currentLang === 'de' ? 'Karmen Bertici · Kroatien' : 'Karmen Bertici · Croatia'}
+                  </h5>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-stone-100">
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'عنوان و راندها' : currentLang === 'de' ? 'Titel & Runden' : 'Title & Rounds'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      WKU European Title (7 Runden)
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
+                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Full Table (hidden md:block) */}
+            <div className="hidden md:block overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
               <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
                 <thead>
                   <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
@@ -454,7 +506,104 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </span>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
+            {/* Mobile Responsive Fight Cards (md:hidden) — No horizontal scrolling */}
+            <div className="md:hidden space-y-3">
+              {/* Fight 1: Jessica Marazzi */}
+              <div className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+                <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+                  <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-stone-700">
+                    <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                    <span>{currentLang === 'fa' ? '۱۳ اکتبر ۲۰۱۶' : currentLang === 'de' ? '13. Okt. 2016' : '13 Oct 2016'}</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    <Trophy className="w-3 h-3 text-emerald-700" />
+                    <span>{currentLang === 'fa' ? 'پیروزی (UD)' : currentLang === 'de' ? 'Sieg (UD)' : 'Win (UD)'}</span>
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
+                    {currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}
+                  </span>
+                  <h5 className="font-serif font-bold text-base text-stone-900 pt-0.5">
+                    {currentLang === 'fa' ? 'جسیکا مارازی · سوئیس' : currentLang === 'de' ? 'Jessica Marazzi · Schweiz' : 'Jessica Marazzi · Switzerland'}
+                  </h5>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-stone-100">
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'عنوان و راندها' : currentLang === 'de' ? 'Titel & Runden' : 'Title & Rounds'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      WKU World Championship (10 Runden)
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
+                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                </div>
+              </div>
+
+              {/* Fight 2: Sofia Cavallo */}
+              <div className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+                <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+                  <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-stone-700">
+                    <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                    <span>{currentLang === 'fa' ? '۸ اکتبر ۲۰۱۷' : currentLang === 'de' ? '8. Okt. 2017' : '8 Oct 2017'}</span>
+                  </div>
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    <Trophy className="w-3 h-3 text-emerald-700" />
+                    <span>{currentLang === 'fa' ? 'پیروزی (UD)' : currentLang === 'de' ? 'Sieg (UD)' : 'Win (UD)'}</span>
+                  </span>
+                </div>
+
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
+                    {currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}
+                  </span>
+                  <h5 className="font-serif font-bold text-base text-stone-900 pt-0.5">
+                    {currentLang === 'fa' ? 'سوفیا کاوالو · ایتالیا' : currentLang === 'de' ? 'Sofia Cavallo · Italien' : 'Sofia Cavallo · Italy'}
+                  </h5>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-stone-100">
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'عنوان و راندها' : currentLang === 'de' ? 'Titel & Runden' : 'Title & Rounds'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      WKU World Title Defence (10 Runden)
+                    </span>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-stone-400 font-mono block">
+                      {currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}
+                    </span>
+                    <span className="font-medium text-stone-800 text-[11px] block">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
+                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="hidden md:block overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
               <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
                 <thead>
                   <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
