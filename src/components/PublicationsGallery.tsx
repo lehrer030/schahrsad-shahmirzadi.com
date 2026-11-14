@@ -656,18 +656,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
         </div>
 
         {/* Beitexte List from WordPress */}
-        <div className="p-4 bg-white/80 rounded-xl border border-stone-200/80 text-xs text-stone-700 space-y-1.5">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <strong className="text-stone-900">{isFa ? 'فهرست برگزیدگان:' : isDe ? 'Übersicht Editor’s Choice:' : 'Editor’s Choice Directory:'}</strong>
-            <a
-              href="https://globallensawards.com/editor-choice/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-800 hover:text-amber-950 underline font-mono text-[11px]"
-            >
-              https://globallensawards.com/editor-choice/
-            </a>
-          </div>
+        <div className="p-4 bg-white/80 rounded-xl border border-stone-200/80 text-xs text-stone-700">
           <div className="flex flex-wrap items-center gap-1.5">
             <strong className="text-stone-900">{isFa ? 'اثر برگزیده:' : isDe ? 'Ausgezeichnetes Werk:' : 'Awarded Work:'}</strong>
             <a
@@ -729,19 +718,6 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               onOpenLightbox={onOpenLightbox}
             />
           ))}
-        </div>
-
-        {/* Beitexte Directory Note */}
-        <div className="p-4 bg-white/80 rounded-xl border border-stone-200/80 text-xs text-stone-700 flex flex-wrap items-center gap-1.5">
-          <strong className="text-stone-900">{isFa ? 'فهرست برگزیدگان:' : isDe ? 'Übersicht Editor’s Choice:' : 'Editor’s Choice Directory:'}</strong>
-          <a
-            href="https://perspa.fr/editor-choice/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-amber-800 hover:text-amber-950 underline font-mono text-[11px]"
-          >
-            https://perspa.fr/editor-choice/
-          </a>
         </div>
       </div>
 
