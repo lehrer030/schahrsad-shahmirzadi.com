@@ -109,10 +109,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           <button
             onClick={onBack}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-stone-100 hover:bg-stone-200 text-stone-800 hover:text-stone-950 rounded-full text-xs font-semibold tracking-wider transition-colors cursor-pointer shrink-0"
-            aria-label="Schließen"
+            aria-label={currentLang === 'de' ? 'Zurück' : currentLang === 'fa' ? 'بازگشت' : 'Back'}
           >
             <span>
-              {currentLang === 'de' ? 'Schließen' : currentLang === 'fa' ? 'بستن' : 'Close'}
+              {currentLang === 'de' ? 'Zurück' : currentLang === 'fa' ? 'بازگشت' : 'Back'}
             </span>
             <X className="w-4 h-4" />
           </button>
@@ -326,10 +326,10 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               {isRtl ? <ArrowRight className="w-4 h-4" /> : <ArrowLeft className="w-4 h-4" />}
               <span>
                 {currentLang === 'de'
-                  ? `Schließen & zum Onepager zurück (${series.photos.length} Werke)`
+                  ? 'Zurück'
                   : currentLang === 'fa'
-                  ? `بستن و بازگشت به صفحه اصلی (${series.photos.length} اثر)`
-                  : `Close & Return to Onepager (${series.photos.length} Works)`}
+                  ? 'بازگشت'
+                  : 'Back'}
               </span>
             </button>
           </div>
