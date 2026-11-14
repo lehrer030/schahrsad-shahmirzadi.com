@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Globe, Menu, X, ChevronDown, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon } from 'lucide-react';
+import { Globe, Menu, X, ChevronDown, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 export type NavigationCategory =
@@ -203,6 +203,45 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full">
+      {/* Top Colored Spendenlauf Announcement Banner */}
+      <a
+        href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Spendenlauf für Menschenrechte beim ECCHR online unterstützen"
+        className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
+      >
+        <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-2 flex items-center justify-center gap-2 sm:gap-3 text-center text-xs sm:text-sm">
+          <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 shrink-0">
+            <Heart className="w-3 h-3 text-white fill-white animate-pulse" />
+          </span>
+          <span className="font-semibold tracking-wide">
+            {currentLang === 'fa'
+              ? 'کمپین دویدن برای حقوق بشر:'
+              : currentLang === 'en'
+              ? 'Run for Human Rights:'
+              : 'Spendenlauf für Menschenrechte:'}
+          </span>
+          <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity">
+            {currentLang === 'fa'
+              ? 'حمایت از کارزار شیرزن برای ECCHR'
+              : currentLang === 'en'
+              ? 'Support SchirZan’s fundraising campaign at ECCHR'
+              : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+          </span>
+          <span className="inline-flex items-center gap-1 font-semibold text-[11px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 ltr:ml-1 rtl:mr-1">
+            <span>
+              {currentLang === 'fa'
+                ? 'اکنون کمک کنید'
+                : currentLang === 'en'
+                ? 'Donate Now'
+                : 'Jetzt spenden'}
+            </span>
+            <ExternalLink className="w-3 h-3 shrink-0" />
+          </span>
+        </div>
+      </a>
+
       <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-20 flex items-center justify-between gap-4">
         
         {/* Brand / Artist Logo */}
