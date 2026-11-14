@@ -17,7 +17,7 @@ export const Footer: React.FC<FooterProps> = ({
     <footer className="bg-[#f5f2eb] border-t border-stone-200 text-stone-600 text-xs py-12 sm:py-16 mt-16 sm:mt-24 w-full">
       <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10 pb-8 border-b border-stone-200">
-          
+
           {/* Brand & Artist */}
           <div className="space-y-3 md:col-span-1">
             <div className="flex flex-col">
@@ -36,15 +36,15 @@ export const Footer: React.FC<FooterProps> = ({
               {currentLang === 'de'
                 ? 'Schahrsad Shahmirzadi · Photographin & 10-fache Kickbox-Weltmeisterin'
                 : currentLang === 'fa'
-                ? 'شهزاد شاهمیرزادی · عکاس و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
-                : 'Schahrsad Shahmirzadi · Photographer & 10x Kickboxing World Champion'}
+                  ? 'شهزاد شاهمیرزادی · عکاس و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
+                  : 'Schahrsad Shahmirzadi · Photographer & 10x Kickboxing World Champion'}
             </p>
             <p className="text-stone-700 text-[11px] leading-relaxed font-normal">
               {currentLang === 'de'
                 ? 'Ausgezeichnete Architektur-, Fine-Art- und Dokumentarphotographie sowie sportliche Höchstleistungen.'
                 : currentLang === 'fa'
-                ? 'عکاسی فاخر برنده جوایز جهانی و دستاوردهای درخشان ورزشی در کیک‌بوکسینگ.'
-                : 'Award-winning architectural, fine art, and documentary photography alongside world-class athletic achievements.'}
+                  ? 'عکاسی فاخر برنده جوایز جهانی و دستاوردهای درخشان ورزشی در کیک‌بوکسینگ.'
+                  : 'Award-winning architectural, fine art, and documentary photography alongside world-class athletic achievements.'}
             </p>
           </div>
 
@@ -75,8 +75,8 @@ export const Footer: React.FC<FooterProps> = ({
               {currentLang === 'de'
                 ? 'Offizielle Domains & Profile'
                 : currentLang === 'fa'
-                ? 'دامنه‌ها و نمایه‌ها'
-                : 'Official Domains & Profiles'}
+                  ? 'دامنه‌ها و نمایه‌ها'
+                  : 'Official Domains & Profiles'}
             </span>
             <ul className="space-y-1.5 text-[11px]">
               <li>
