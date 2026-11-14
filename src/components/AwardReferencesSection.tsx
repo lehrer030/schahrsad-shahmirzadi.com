@@ -732,7 +732,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Genreübergreifender Kreativwettbewerb mit tausenden Einreichungen aus über 80 Ländern und der Hauptsparte „Shoot (Photo/Video)“.',
     scopeEn: 'Multidisciplinary creative awards program juried by international curators across 80+ nations, featuring Shoot (Photo/Video).',
     scopeFa: 'مسابقه خلاقیت بین‌المللی لندن با حضور هنرمندانی از بیش از ۸۰ کشور.',
-    badgeImage: '/images/2026_04_LICC2025-1016x1024.webp',
+    badgeImage: '/images/LICC-logo-horizontal-final-ver.png',
     mainDirectoryUrl: 'https://www.licc.uk/winners/officialselection.php?comp_name=LICC%202025',
     honors: [
       {
