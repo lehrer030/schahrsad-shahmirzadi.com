@@ -11,6 +11,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import type { Language } from '../data/photographyData';
+import { resolveAsset } from '../utils/resolveAsset';
 
 interface KickboxingFullSectionProps {
   currentLang: Language;
@@ -334,61 +335,249 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </div>
         </div>
 
-        {/* Section B: Profi-Titelkämpfe (Schloss Diedersdorf) */}
-        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+        {/* Section B: Profi-Titelkämpfe (Schloss Diedersdorf & Offizielle Kampftabellen) */}
+        <div id="profi-fight-records" className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
           <div className="border-b border-stone-100 pb-4">
             <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-              {currentLang === 'fa' ? 'مبارزات بر سر عنوان قهرمانی حرفه‌ای جهان' : 'WKU Profi-Weltmeisterschaftstitelkämpfe'}
+              {currentLang === 'fa' ? 'مبارزات رسمی و رکوردهای حرفه‌ای' : 'Offizielle Profi-Kampfstatistiken'}
             </span>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
               {currentLang === 'fa'
-                ? 'نبردهای تاریخی عنوان قهرمانی جهان در کاخ دیدرزدورف'
-                : 'Titelkämpfe auf Schloss Diedersdorf & internationale Verteidigung'}
+                ? 'مبارزات بر سر عنوان قهرمانی حرفه‌ای اروپا و جهان (فول‌کنتاکت −۵۷٫۵ کیلوگرم)'
+                : 'Profi-Europa- & Weltmeisterschaftstitelkämpfe – Vollkontakt (−57,5 kg)'}
             </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              {currentLang === 'fa'
+                ? 'جدول رسمی تمام مبارزات حرفه‌ای بر سر کمربند قهرمانی در کاخ تاریخی دیدرزدورف براندنبورگ با پیروزی‌های قاطع پس از ۷ و ۱۰ راند سنگین.'
+                : 'Offizielle Kampfstatistiken aller Titelkämpfe auf Schloss Diedersdorf (Brandenburg) – ungeschlagen mit einstimmigen Punktsiegen über die volle Distanz von 7 und 10 Runden.'}
+            </p>
           </div>
 
-          <div className="space-y-4 text-sm text-stone-700 leading-relaxed font-normal">
-            <p>
-              {currentLang === 'fa'
-                ? 'نقطه اوج دوران حرفه‌ای در مسابقات رسمی عنوان قهرمانی جهان رخ داد. در ۱۳ اکتبر ۲۰۱۶، او عنوان قهرمانی حرفه‌ای جهان در فول‌کنتاکت بانوان وزن −۵۷٫۵ کیلوگرم WKU/WKUWORLD را به دست آورد و در سال ۲۰۱۷ با شایستگی کامل از آن دفاع کرد.'
-                : 'Der Durchbruch im Profibereich folgte 2016: Am 13. Oktober 2016 wurde sie WKU/WKUWORLD Profi-Weltmeisterin im Vollkontakt Kickboxen der Damen (−57,5 kg). Im Jahr 2017 verteidigte sie diesen prestigeträchtigen Titel erfolgreich in spektakulären Gefechten auf Schloss Diedersdorf.'}
-            </p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-4 rounded-2xl bg-[#faf8f5] border border-stone-200">
-                <span className="text-xs font-mono font-bold text-amber-800 uppercase block mb-1">
-                  {currentLang === 'fa' ? 'مبارزه قهرمانی حرفه‌ای جهان' : 'Profi-Weltmeisterschaftstitelkampf'}
-                </span>
-                <h4 className="font-serif font-bold text-stone-900 text-base">
-                  vs. Sofia Cavallo (Schloss Diedersdorf)
-                </h4>
-                <p className="text-xs text-stone-600 mt-1">
+          {/* TABLE 1: Professional European Title Bout */}
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h4 className="text-sm sm:text-base font-serif font-bold text-stone-900 flex items-center gap-2">
+                <Shield className="w-4 h-4 text-amber-800 shrink-0" />
+                <span>
                   {currentLang === 'fa'
-                    ? 'پیروزی قاطع بر سر عنوان قهرمانی جهان در فول‌کنتاکت −۵۷٫۵ ک.گ'
-                    : 'WKU-Weltmeisterschaftstitelkampf im Vollkontakt (−57,5 kg) – Sieg und Weltmeistergürtel.'}
-                </p>
-              </div>
-
-              <div className="p-4 rounded-2xl bg-[#faf8f5] border border-stone-200">
-                <span className="text-xs font-mono font-bold text-amber-800 uppercase block mb-1">
-                  {currentLang === 'fa' ? 'دفاع از عنوان قهرمانی حرفه‌ای جهان' : 'Profi-Titelverteidigung'}
+                    ? 'مبارزه عنوان قهرمانی حرفه‌ای اروپا – فول‌کنتاکت کیک‌بوکسینگ، −۵۷٫۵ کیلوگرم'
+                    : currentLang === 'de'
+                    ? 'Profi-Europameisterschaftstitelkampf – Vollkontakt Kickboxen, −57,5 kg'
+                    : 'Professional European Title Bout – Full-Contact Kickboxing, −57.5 kg'}
                 </span>
-                <h4 className="font-serif font-bold text-stone-900 text-base">
-                  vs. Jessica Marazzi
-                </h4>
-                <p className="text-xs text-stone-600 mt-1">
-                  {currentLang === 'fa'
-                    ? 'دفاع موفقیت‌آمیز از کمربند قهرمانی جهان در برابر جسیکا مارازی'
-                    : 'Erfolgreiche WKU-Weltmeisterschaftstitelverteidigung gegen Jessica Marazzi.'}
-                </p>
-              </div>
+              </h4>
+              <span className="text-[11px] font-mono text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200 font-semibold">
+                7 Runden · WKU Pro Title
+              </span>
             </div>
 
-            <div className="p-4 bg-stone-50 border border-stone-200 rounded-xl text-xs text-stone-600">
-              <strong className="text-stone-900">Fachbericht im Magazin: </strong>
-              <span>
-                Ausführliche Reportage über den WKU-Profi-Europameisterschaftstitelkampf im internationalen Fachmagazin <em>Kampfkunst Budo International</em> (Ausgabe November 2014, S. 122–123).
+            <div className="overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
+              <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'تاریخ' : currentLang === 'de' ? 'Datum' : 'Date'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'محل برگزاری' : currentLang === 'de' ? 'Austragungsort' : 'Venue'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'فدراسیون / عنوان' : currentLang === 'de' ? 'Verband / Titel' : 'Federation / Title'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'نتیجه' : currentLang === 'de' ? 'Ergebnis' : 'Result'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'راندها' : currentLang === 'de' ? 'Runden' : 'Rounds'}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-stone-100 font-normal text-stone-800">
+                  <tr className="hover:bg-[#faf8f5] transition-colors">
+                    <td className="py-3.5 px-4 font-mono font-medium text-stone-600 whitespace-nowrap">
+                      {currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}
+                    </td>
+                    <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'کارمن برتیچی (کرواسی)' : currentLang === 'de' ? 'Karmen Bertici (Kroatien)' : 'Karmen Bertici (Croatia)'}
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700">
+                      Schloss Diedersdorf, Brandenburg
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-800 font-medium">
+                      WKU European Championship
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                        <Trophy className="w-3 h-3 text-emerald-700" />
+                        <span>{currentLang === 'fa' ? 'پیروزی' : currentLang === 'de' ? 'Sieg' : 'Win'}</span>
+                      </span>
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران (UD)' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </td>
+                    <td className="py-3.5 px-4 text-center font-mono font-semibold text-stone-700 whitespace-nowrap">
+                      7
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="p-3.5 bg-stone-50 border border-stone-200/80 rounded-xl text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <strong className="text-stone-900">{currentLang === 'fa' ? 'پوشش رسانه‌ای:' : 'Medienbericht / Fachpresse:'} </strong>
+                <span>
+                  {currentLang === 'fa'
+                    ? 'گزارش اختصاصی در مجله تخصصی Kampfkunst Budo International (نوامبر ۲۰۱۴، صفحات ۱۲۲–۱۲۳).'
+                    : 'Ausführliche Reportage im internationalen Fachmagazin Kampfkunst Budo International (Ausgabe November 2014, S. 122–123).'}
+                </span>
+              </div>
+              <a
+                href="https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 font-mono text-xs font-semibold hover:underline"
+              >
+                <span>{currentLang === 'fa' ? 'مطالعه در Issuu' : 'Bericht auf Issuu ansehen'}</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+          </div>
+
+          {/* TABLE 2: Professional World Title Bouts */}
+          <div className="space-y-4 pt-4 border-t border-stone-100">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h4 className="text-sm sm:text-base font-serif font-bold text-stone-900 flex items-center gap-2">
+                <Trophy className="w-4 h-4 text-amber-800 shrink-0" />
+                <span>
+                  {currentLang === 'fa'
+                    ? 'مبارزات عنوان قهرمانی حرفه‌ای جهان – فول‌کنتاکت کیک‌بوکسینگ، −۵۷٫۵ کیلوگرم'
+                    : currentLang === 'de'
+                    ? 'Profi-Weltmeisterschaftstitelkämpfe – Vollkontakt Kickboxen, −57,5 kg'
+                    : 'Professional World Title Bouts – Full-Contact Kickboxing, −57.5 kg'}
+                </span>
+              </h4>
+              <span className="text-[11px] font-mono text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200 font-semibold">
+                10 Runden · WKU World Title
               </span>
+            </div>
+
+            <div className="overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
+              <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'تاریخ' : currentLang === 'de' ? 'Datum' : 'Date'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'محل برگزاری' : currentLang === 'de' ? 'Austragungsort' : 'Venue'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'فدراسیون / عنوان' : currentLang === 'de' ? 'Verband / Titel' : 'Federation / Title'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'نتیجه' : currentLang === 'de' ? 'Ergebnis' : 'Result'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}</th>
+                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'راندها' : currentLang === 'de' ? 'Runden' : 'Rounds'}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-stone-100 font-normal text-stone-800">
+                  {/* Fight 1: Jessica Marazzi */}
+                  <tr className="hover:bg-[#faf8f5] transition-colors">
+                    <td className="py-3.5 px-4 font-mono font-medium text-stone-600 whitespace-nowrap">
+                      {currentLang === 'fa' ? '۱۳ اکتبر ۲۰۱۶' : currentLang === 'de' ? '13. Okt. 2016' : '13 Oct 2016'}
+                    </td>
+                    <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'جسیکا مارازی (سوئیس)' : currentLang === 'de' ? 'Jessica Marazzi (Schweiz)' : 'Jessica Marazzi (Switzerland)'}
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700">
+                      Schloss Diedersdorf, Brandenburg
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-800 font-medium">
+                      WKU Professional World Championship
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                        <Trophy className="w-3 h-3 text-emerald-700" />
+                        <span>{currentLang === 'fa' ? 'پیروزی' : currentLang === 'de' ? 'Sieg' : 'Win'}</span>
+                      </span>
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران (UD)' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </td>
+                    <td className="py-3.5 px-4 text-center font-mono font-semibold text-stone-700 whitespace-nowrap">
+                      10
+                    </td>
+                  </tr>
+
+                  {/* Fight 2: Sofia Cavallo */}
+                  <tr className="hover:bg-[#faf8f5] transition-colors">
+                    <td className="py-3.5 px-4 font-mono font-medium text-stone-600 whitespace-nowrap">
+                      {currentLang === 'fa' ? '۸ اکتبر ۲۰۱۷' : currentLang === 'de' ? '8. Okt. 2017' : '8 Oct 2017'}
+                    </td>
+                    <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'سوفیا کاوالو (ایتالیا)' : currentLang === 'de' ? 'Sofia Cavallo (Italien)' : 'Sofia Cavallo (Italy)'}
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700">
+                      Schloss Diedersdorf, Brandenburg
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-800 font-medium">
+                      WKU Professional World Title Defence
+                    </td>
+                    <td className="py-3.5 px-4 text-center">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                        <Trophy className="w-3 h-3 text-emerald-700" />
+                        <span>{currentLang === 'fa' ? 'پیروزی' : currentLang === 'de' ? 'Sieg' : 'Win'}</span>
+                      </span>
+                    </td>
+                    <td className="py-3.5 px-4 text-stone-700 whitespace-nowrap">
+                      {currentLang === 'fa' ? 'رأی قاطع داوران (UD)' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                    </td>
+                    <td className="py-3.5 px-4 text-center font-mono font-semibold text-stone-700 whitespace-nowrap">
+                      10
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Official Fight Photos from WordPress Original */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-3">
+              {/* Fight Photo 1: vs Sofia Cavallo */}
+              <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
+                <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
+                  <img
+                    src={resolveAsset('/images/2025_11_vs-Sofia-Cavallo.webp')}
+                    alt="Schahrsad Shahmirzadi vs. Sofia Cavallo (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 space-y-1">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800">
+                    {currentLang === 'fa' ? 'دفاع از عنوان قهرمانی جهان' : 'WKU Profi-Weltmeisterschaftstitelverteidigung'}
+                  </span>
+                  <h5 className="font-serif font-bold text-stone-900 text-sm">
+                    vs. Sofia Cavallo (Italien)
+                  </h5>
+                  <p className="text-xs text-stone-600 leading-relaxed">
+                    {currentLang === 'fa'
+                      ? 'پیروزی مقتدرانه بر سر کمربند قهرمانی جهان پس از ۱۰ راند مبارزه نفس‌گیر در کاخ دیدرزدورف.'
+                      : 'Schloss Diedersdorf, Brandenburg · Einstimmiger Punktsieg und erfolgreiche Titelverteidigung nach 10 Runden.'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Fight Photo 2: vs Jessica Marazzi */}
+              <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
+                <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
+                  <img
+                    src={resolveAsset('/images/2025_11_vs.-Jessica-Marazzi.webp')}
+                    alt="Schahrsad Shahmirzadi vs. Jessica Marazzi (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"
+                    className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4 space-y-1">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-800">
+                    {currentLang === 'fa' ? 'مبارزه قهرمانی حرفه‌ای جهان' : 'WKU Profi-Weltmeisterschaftstitelkampf'}
+                  </span>
+                  <h5 className="font-serif font-bold text-stone-900 text-sm">
+                    vs. Jessica Marazzi (Schweiz)
+                  </h5>
+                  <p className="text-xs text-stone-600 leading-relaxed">
+                    {currentLang === 'fa'
+                      ? 'فتح کمربند قهرمانی حرفه‌ای جهان با پیروزی قاطع پس از ۱۰ راند مبارزه سرنوشت‌ساز.'
+                      : 'Schloss Diedersdorf, Brandenburg · Sieg und Gewinn des WKU-Weltmeistergürtels nach 10 Runden.'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
