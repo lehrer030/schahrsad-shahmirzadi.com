@@ -208,20 +208,21 @@ export const Navbar: React.FC<NavbarProps> = ({
       const scrollY = window.scrollY || window.pageYOffset;
 
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
-      if (clientHeight + scrollY >= scrollHeight - 60) {
+      if (clientHeight + scrollY >= scrollHeight - 90) {
         setActiveMenuId('gallery');
         return;
       }
 
-      // Am Seitenanfang (über der Architektur) immer Fotografie (01) aktivieren
-      if (scrollY < 200) {
+      // Am Seitenanfang (Hero Intro) immer Fotografie (01) aktivieren
+      if (scrollY < 160) {
         setActiveMenuId('works');
         return;
       }
 
-      // Der fixierte Header hat eine Höhe von ca. 100-130px.
-      // Ein Bereich wird aktiv, sobald seine Oberkante den Lesebereich (140px unterhalb des oberen Fensterrands) erreicht.
-      const checkpointOffset = 140;
+      // Dynamischer Lesebereich: Reagiert responsiv auf Mobilgeräte (kleinere Viewports)
+      // und Desktop. Ein Bereich wird aktiv, sobald seine Oberkante in den oberen Lesebereich
+      // (oberes Drittel bis ca. 42% des sichtbaren Bildschirms) eintritt.
+      const checkpointOffset = Math.max(220, Math.min(clientHeight * 0.42, 350));
       let active = 'works';
 
       // Gehe alle Checkpoints in Reihenfolge durch: der letzte, der den Lesebereich erreicht hat, wird aktiv
