@@ -467,7 +467,7 @@ export default function App() {
                ------------------------------------------------------------- */}
           <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
             <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
-            <AwardReferencesSection currentLang={currentLang} />
+            <AwardReferencesSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
           </section>
 
 

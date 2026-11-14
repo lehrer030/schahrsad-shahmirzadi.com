@@ -10,9 +10,16 @@ import {
   BookOpen,
   MapPin,
   Calendar,
-  Sparkles
+  Sparkles,
+  Eye
 } from 'lucide-react';
 import { PublicationsGallery } from './PublicationsGallery';
+import { resolveAsset } from '../utils/resolveAsset';
+
+const EXHIBITION_ARTWORK_IMAGES: Record<string, string> = {
+  'trieste-photo-days-2026': '/images/2026_07_In-Between-Spaces-scaled.jpg',
+  'trieste-photo-fringe-2026': '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp'
+};
 
 interface PressSectionProps {
   currentLang: Language;
@@ -53,74 +60,112 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {EXHIBITIONS_DATA.map((ex) => (
-            <div
-              key={ex.id}
-              className="p-6 rounded-2xl bg-[#faf8f5] border border-stone-200/90 flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors"
-            >
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-xs font-mono text-amber-800 font-bold uppercase">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>
-                    {currentLang === 'de' ? ex.festivalDe : currentLang === 'fa' ? ex.festivalFa : ex.festivalEn}
-                  </span>
-                </div>
-
-                <h4 className="text-lg font-serif font-bold text-stone-900 leading-snug">
-                  {currentLang === 'de' ? ex.titleDe : currentLang === 'fa' ? ex.titleFa : ex.titleEn}
-                </h4>
-
-                <div className="text-xs text-stone-600 space-y-1.5 pt-1">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-stone-500 shrink-0 mt-0.5" />
-                    <span>
-                      <strong className="text-stone-800">{ex.venue}</strong> · {ex.address}
-                    </span>
+          {EXHIBITIONS_DATA.map((ex) => {
+            const exImg = EXHIBITION_ARTWORK_IMAGES[ex.id];
+            return (
+              <div
+                key={ex.id}
+                className="rounded-2xl bg-[#faf8f5] border border-stone-200/90 overflow-hidden flex flex-col justify-between hover:border-amber-700/40 transition-colors group"
+              >
+                {exImg && (
+                  <div
+                    onClick={() => {
+                      if (onOpenLightbox) {
+                        onOpenLightbox([{
+                          id: ex.id,
+                          src: exImg,
+                          alt: ex.featuredWorkDe,
+                          captionDe: `${ex.featuredWorkDe} — ${ex.titleDe} (${ex.venue})`,
+                          captionEn: `${ex.featuredWorkEn} — ${ex.titleEn} (${ex.venue})`,
+                          captionFa: `${ex.featuredWorkFa} — ${ex.titleFa} (${ex.venue})`,
+                        }], 0);
+                      } else if (ex.link) {
+                        window.open(ex.link, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                    className="relative aspect-[16/10] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
+                    title={currentLang === 'de' ? 'Klicken für Vollbild-Ansicht' : 'Click for full view'}
+                  >
+                    <img
+                      src={resolveAsset(exImg)}
+                      alt={ex.featuredWorkDe}
+                      className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500 protected-art"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                      <div className="bg-white/95 backdrop-blur-xs text-stone-900 rounded-full p-2.5 shadow-lg transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+                        <Eye className="w-4 h-4 text-stone-800" />
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4 text-stone-500 shrink-0" />
-                    <span>
-                      {currentLang === 'de' ? ex.datesDe : currentLang === 'fa' ? ex.datesFa : ex.datesEn}
-                    </span>
-                  </div>
-                </div>
+                )}
 
-                <div className="p-3 bg-white rounded-xl border border-stone-200/80 text-xs text-stone-800">
-                  <span className="font-semibold text-stone-900 block mb-0.5">
-                    {currentLang === 'de' ? 'Ausgestelltes Werk:' : currentLang === 'fa' ? 'اثر به نمایش درآمده:' : 'Featured Artwork:'}
-                  </span>
-                  <span className="text-amber-900 font-medium font-serif">
-                    {currentLang === 'de' ? ex.featuredWorkDe : currentLang === 'fa' ? ex.featuredWorkFa : ex.featuredWorkEn}
-                  </span>
+                <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 text-xs font-mono text-amber-800 font-bold uppercase">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>
+                        {currentLang === 'de' ? ex.festivalDe : currentLang === 'fa' ? ex.festivalFa : ex.festivalEn}
+                      </span>
+                    </div>
+
+                    <h4 className="text-lg font-serif font-bold text-stone-900 leading-snug">
+                      {currentLang === 'de' ? ex.titleDe : currentLang === 'fa' ? ex.titleFa : ex.titleEn}
+                    </h4>
+
+                    <div className="text-xs text-stone-600 space-y-1.5 pt-1">
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-4 h-4 text-stone-500 shrink-0 mt-0.5" />
+                        <span>
+                          <strong className="text-stone-800">{ex.venue}</strong> · {ex.address}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4 text-stone-500 shrink-0" />
+                        <span>
+                          {currentLang === 'de' ? ex.datesDe : currentLang === 'fa' ? ex.datesFa : ex.datesEn}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="p-3 bg-white rounded-xl border border-stone-200/80 text-xs text-stone-800">
+                      <span className="font-semibold text-stone-900 block mb-0.5">
+                        {currentLang === 'de' ? 'Ausgestelltes Werk:' : currentLang === 'fa' ? 'اثر به نمایش درآمده:' : 'Featured Artwork:'}
+                      </span>
+                      <span className="text-amber-900 font-medium font-serif">
+                        {currentLang === 'de' ? ex.featuredWorkDe : currentLang === 'fa' ? ex.featuredWorkFa : ex.featuredWorkEn}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 flex flex-wrap items-center gap-2">
+                    {ex.link && (
+                      <a
+                        href={ex.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-medium transition-colors"
+                      >
+                        <span>{currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'de' ? 'Werk ansehen' : 'View Work'}</span>
+                        <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                      </a>
+                    )}
+                    {ex.festivalLink && (
+                      <a
+                        href={ex.festivalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-stone-100 text-stone-700 rounded-lg text-xs font-medium border border-stone-200 transition-colors"
+                      >
+                        <span>{currentLang === 'fa' ? 'سایت فستیوال' : currentLang === 'de' ? 'Festival-Webseite' : 'Festival Info'}</span>
+                        <ExternalLink className="w-3.5 h-3.5 opacity-60" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-
-              <div className="pt-2 flex flex-wrap items-center gap-2">
-                {ex.link && (
-                  <a
-                    href={ex.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-medium transition-colors"
-                  >
-                    <span>{currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'de' ? 'Werk ansehen' : 'View Work'}</span>
-                    <ExternalLink className="w-3.5 h-3.5 opacity-80" />
-                  </a>
-                )}
-                {ex.festivalLink && (
-                  <a
-                    href={ex.festivalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-stone-100 text-stone-700 rounded-lg text-xs font-medium border border-stone-200 transition-colors"
-                  >
-                    <span>{currentLang === 'fa' ? 'سایت فستیوال' : currentLang === 'de' ? 'Festival-Webseite' : 'Festival Info'}</span>
-                    <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                  </a>
-                )}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
