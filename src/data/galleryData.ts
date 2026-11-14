@@ -58,52 +58,28 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     posterImage: './videos/kickboxing-poster.jpg',
     photos: [
       {
-        id: 'kb-gallery-03',
-        src: './images/2025_07_DSC_0701.webp',
-        alt: 'Weltmeistergürtel & Pokal — Schloss Diedersdorf',
-        captionDe: 'Siegerehrung auf Schloss Diedersdorf: Weltmeistergürtel, Trophäe und Anerkennung für herausragende sportliche Disziplin.',
-        captionEn: 'Award Ceremony at Diedersdorf Castle: World championship belt, trophy, and international recognition.',
-        captionFa: 'مراسم اهدای جوایز در کاخ دیدرزدورف: کمربند قهرمانی جهان، جام قهرمانی و ارج‌نهادن به انضباط ورزشی.'
-      },
-      {
-        id: 'kb-gallery-04',
-        src: './images/2025_07_ode-an-den-sport-e1753264342920.webp',
-        alt: 'Ode an den Sport – Ehrung von Spitzensportlerinnen',
-        captionDe: '„Ode an den Sport“ — Feierliche Würdigung der Weltmeisterin für außergewöhnliche sportliche Vorbildfunktion.',
-        captionEn: '"Ode to Sports" — Celebratory tribute honoring the world champion as an empowering role model.',
-        captionFa: '«قصیده‌ای برای ورزش» — ادای احترام به قهرمان جهان به عنوان الگویی الهام‌بخش در ورزش قهرمانی.'
-      },
-      {
-        id: 'kb-gallery-05',
-        src: './images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-1152x1536.webp',
-        alt: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame',
-        captionDe: 'Kickboxing — Vom Kampf im Ring zur Energie im Bildkader: Ästhetik aus Kraft, Haltung und Licht.',
-        captionEn: 'Kickboxing — From Fighting in the Ring to Lightning in the Frame: An artistic synthesis of force and vision.',
-        captionFa: 'کیک‌بوکسینگ — از مبارزه در رینگ تا درخشش و انرژی در قاب تصویر: پیوند هنر، قدرت و نور.'
-      },
-      {
-        id: 'kb-gallery-06',
-        src: './images/2025_06_Snap-1.webp',
-        alt: 'Wettkampf & Kampfgeschehen im Ring',
-        captionDe: 'Wettkampf im Ring — Reines Reaktionsvermögen, Dynamik und millimetergenaue Präzision.',
-        captionEn: 'Action in the Ring — Instinctive timing, kinetic momentum, and split-second precision.',
-        captionFa: 'صحنه‌ای از مبارزه در رینگ — واکنش لحظه‌ای، پویایی و دقت میلی‌متری.'
-      },
-      {
-        id: 'kb-gallery-07',
+        id: 'kb-gallery-01',
         src: './images/2025_06_ssh.webp',
-        alt: 'SchirZan im Kampfsport-Outfit',
-        captionDe: 'SchirZan im Wettkampf-Dress — Athletische Souveränität, mentale Standhaftigkeit und Charakter.',
-        captionEn: 'SchirZan in Official Competition Attire — Athletic sovereignty, mental fortitude, and character.',
-        captionFa: 'شیرزن با لباس مسابقه — صلابت ورزشی، استقامت ذهنی و شخصیت الهام‌بخش.'
+        alt: 'SchirZan mit dem WKU-Weltmeistergürtel',
+        captionDe: 'SchirZan mit dem WKU-Weltmeistergürtel – Vollkontakt Kickboxen (−57,5 kg).',
+        captionEn: 'SchirZan with the WKU World Championship Belt – Full Contact Kickboxing (−57.5 kg).',
+        captionFa: 'شیرزن با کمربند قهرمانی جهان WKU – فول‌کنتاکت کیک‌بوکسینگ (منهای ۵۷٫۵ کیلوگرم).'
       },
       {
-        id: 'kb-gallery-08',
-        src: './images/2025_06_Snap.webp',
-        alt: 'Sparring und Trainingsfokus',
-        captionDe: 'Sparring & Trainingsfokus — Intensive Vorbereitung auf internationale Titelkämpfe.',
-        captionEn: 'Sparring & Training Focus — Rigorous preparation for international championship title bouts.',
-        captionFa: 'تمرین و تمرکز تاکتیکی — آماده‌سازی دقیق برای رقابت‌های عنوان قهرمانی جهان.'
+        id: 'kb-gallery-02',
+        src: './images/2025_07_DSC_0701.webp',
+        alt: 'SchirZan im roten Boxmantel',
+        captionDe: 'SchirZan im roten Boxmantel – Symbol für Konzentration, Disziplin und sportliche Ausdauer.',
+        captionEn: 'SchirZan in Red Boxing Robe – Emblem of focus, discipline, and endurance.',
+        captionFa: 'شیرزن با ردای سرخ بوکس – نماد تمرکز، انضباط و استقامت ورزشی.'
+      },
+      {
+        id: 'kb-gallery-03',
+        src: './images/2025_07_ode-an-den-sport-e1753264342920.webp',
+        alt: 'Filmporträt „Ode an den Sport“',
+        captionDe: 'Filmporträt „Ode an den Sport“ — Fokussierte Vorbereitung und Intensität im Boxring.',
+        captionEn: 'Film Portrait "Ode to Sports" — Focused preparation and intense determination in the boxing ring.',
+        captionFa: 'فیلم پرتره «قصیده‌ای برای ورزش» — تمرکز و آمادگی در رینگ مسابقه.'
       }
     ]
   },
@@ -119,7 +95,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     descriptionFa: 'در سال‌های ۲۰۲۵ و ۲۰۲۶، شیرزن یازده نیمه‌ماراتن و ماراتن معتبر برلین را با موفقیت پشت سر گذاشت. او هر دویدن را به آرمان‌های والای انسانی پیوند می‌زند: برای کرامت، برابری جنسیتی، تنوع و علیه سرکوب‌های پدرسالارانه.',
     photos: [
       {
-        id: 'run-gallery-08',
+        id: 'run-gallery-01',
         src: './images/2026_08_ecchr-human-rights-support-4-1152x1536.webp',
         alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
         captionDe: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 zur Unterstützung des European Center for Constitutional and Human Rights (ECCHR): Solidarität und weltweite rechtliche Unterstützung für Betroffene von schweren Menschenrechtsverletzungen.',
@@ -134,52 +110,36 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         badgeFa: 'فراخوان حمایت مالی حقوق بشر ۲۰۲۷ ✨'
       },
       {
-        id: 'run-gallery-01',
-        src: './images/2026_10_image00001-scaled.webp',
-        alt: 'Berlin Marathon 2026 – Running for dignity and equality',
-        captionDe: 'Berlin Marathon 2026 — Als deutsch-iranische Frau gelaufen: Für Würde und Gleichberechtigung, gegen patriarchale Familienstrukturen.',
-        captionEn: 'Berlin Marathon 2026 — I ran as a German-Iranian woman: for dignity and equality, against patriarchal structures within families.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — دویدن به عنوان یک زن آلمانی-ایرانی: برای کرامت و برابری، علیه ساختارهای پدرسالارانه خانوادگی.'
-      },
-      {
         id: 'run-gallery-02',
-        src: './images/2026_10_image00002-scaled.webp',
-        alt: 'Berlin Marathon 2026 – Ziel & Medaille',
-        captionDe: 'Berlin Marathon 2026 — Finisher-Impression und Medaille nach 42,195 Kilometern voller Entschlossenheit.',
-        captionEn: 'Berlin Marathon 2026 — Finisher impression and medal after 42.195 km of sheer determination.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — مدال و لحظه پایان پس از ۴۲٫۱۹۵ کیلومتر اراده استوار.'
+        src: './images/2026_05_image00001-scaled-1.webp',
+        alt: '45. Berliner Halbmarathon: Running for Free Iran',
+        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
+        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
       },
       {
-        id: 'run-gallery-07',
+        id: 'run-gallery-03',
+        src: './images/2026_10_image00002-scaled.webp',
+        alt: 'Berlin Marathon 2026 – Offizielle Starter- & Finisher-Tafel',
+        captionDe: 'Berlin Marathon 2026 — Offizielle Starter- und Finisher-Tafel mit SchirZan Schahrsad Shahmirzadi nach 42,195 km voller Entschlossenheit.',
+        captionEn: 'Berlin Marathon 2026 — Official starter and finisher board featuring SchirZan Schahrsad Shahmirzadi after 42.195 km of determination.',
+        captionFa: 'ماراتن برلین ۲۰۲۶ — تابلوی رسمی دوندگان با نام شیرزن شهرزاد شاهمیرزادی پس از ۴۲٫۱۹۵ کیلومتر اراده استوار.'
+      },
+      {
+        id: 'run-gallery-04',
         src: './images/2026_08_Adidas-City-Night-Run-Berlin-2026-1152x1536.webp',
         alt: 'Adidas City Night Run Berlin 2026',
-        captionDe: 'Adidas City Night Run Berlin 2026: In Solidarität mit den Opfern des CSD 2026 – Für queeres Leben, Vielfalt und Freiheit an der Kaiser-Wilhelm-Gedächtniskirche.',
+        captionDe: 'Adidas City Night Run Berlin 2026: An der Kaiser-Wilhelm-Gedächtniskirche in Solidarität mit den Opfern des CSD 2026 – Für queeres Leben, Vielfalt und Freiheit.',
         captionEn: 'Adidas City Night Run Berlin 2026: In Solidarity with the Victims of the CSD 2026 Attack – for Queer Lives, Diversity and Freedom at the Kaiser Wilhelm Memorial Church.',
         captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
       },
       {
-        id: 'run-gallery-03',
-        src: './images/2026_05_image00002-scaled.webp',
-        alt: '45. Berliner Halbmarathon: Running for Free Iran',
-        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles Zeichen für Freiheit und Frauenrechte.',
-        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom and women’s rights.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی و حقوق زنان.'
-      },
-      {
-        id: 'run-gallery-04',
-        src: './images/2026_05_image00001-scaled.webp',
-        alt: '45. Berliner Halbmarathon – Strecke',
-        captionDe: '45. Berliner Halbmarathon — Unterwegs auf den Straßen Berlins mit sportlichem Spirit.',
-        captionEn: '45th Berlin Half Marathon — On the streets of Berlin with dedicated athletic spirit.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین — در خیابان‌های برلین با روحیه‌ای ورزشی و پویا.'
-      },
-      {
         id: 'run-gallery-05',
         src: './images/2025_07_image00055-1-scaled.webp',
-        alt: 'Halbmarathon Berlin – Fokus & sportlicher Einsatz für Frieden und Menschlichkeit',
-        captionDe: 'Halbmarathon Berlin — Fokus, Athletik und sportlicher Einsatz für Frieden und Menschlichkeit.',
-        captionEn: 'Berlin Half Marathon — Athletic focus, endurance, and dedication to peace and humanity.',
-        captionFa: 'نیمه‌ماراتن برلین — تمرکز، آمادگی ورزشی و گامی استوار در مسیر صلح و انسانیت.'
+        alt: 'Sommertraining Berlin – Dynamik & Frische',
+        captionDe: 'Sommertraining in Berlin — Momentaufnahme von Frische, Dynamik und Energie während der Vorbereitung auf die Langstrecke.',
+        captionEn: 'Summer training in Berlin — An impression of vitality, dynamic momentum, and focus during endurance preparation.',
+        captionFa: 'تمرین تابستانی در برلین — تصویری از طراوت، انرژی و تمرکز در طول دوره آماده‌سازی استقامت.'
       }
     ]
   },
@@ -241,14 +201,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionDe: 'IPA Winner Honorable Mention 2025 – Auszeichnung und Preismedaille im offiziellen Buch der International Photography Awards',
         captionEn: 'IPA Winner Honorable Mention 2025 – Official award and medal published in the International Photography Awards book',
         captionFa: 'برنده تقدیرنامه افتخاری IPA ۲۰۲۵ – مدال و گواهی رسمی در کتاب جوایز بین‌المللی عکاسی'
-      },
-      {
-        id: 'ipa-athens-07',
-        src: './images/2025_11_image01136-scaled.webp',
-        alt: 'IPA Gala & Photo-Fest Athen – Festliche Atmosphäre',
-        captionDe: 'International Photography Awards Gala 2025 Athen — Festliche Atmosphäre und internationale Begegnungen im House of Lucie.',
-        captionEn: 'International Photography Awards Gala 2025 Athens — Festive atmosphere and international artistic exchange at the House of Lucie.',
-        captionFa: 'مراسم گالا جوایز بین‌المللی عکاسی ۲۰۲۵ آتن — فضای جشن و تبادل هنری بین‌المللی در خانه لوسی.'
       }
     ]
   }
