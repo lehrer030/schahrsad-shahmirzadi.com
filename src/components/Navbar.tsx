@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Globe, Menu, X, ChevronDown, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 export type NavigationCategory =
@@ -27,6 +27,9 @@ export interface OriginalMenuItem {
   labelEn: string;
   labelDe: string;
   labelFa: string;
+  shortDe: string;
+  shortEn: string;
+  shortFa: string;
   targetId: string;
   isContact?: boolean;
   category?: NavigationCategory;
@@ -39,6 +42,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Photography - Works - International Awards',
     labelDe: 'Fotografie – Werke & Auszeichnungen',
     labelFa: 'عکاسی – آثار و جوایز بین‌المللی',
+    shortDe: 'Fotografie',
+    shortEn: 'Photography',
+    shortFa: 'عکاسی',
     targetId: 'architecture',
     category: 'architecture'
   },
@@ -48,6 +54,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: "Photography, Editor's Choice, Videos & E-Books",
     labelDe: "Fotografie, Editor's Choice, Videos & E-Books",
     labelFa: 'عکاسی، انتخاب سردبیر، ویدیوها و کتاب‌ها',
+    shortDe: 'Publikationen',
+    shortEn: 'Publications',
+    shortFa: 'نشریات',
     targetId: 'publications',
     category: 'press'
   },
@@ -57,6 +66,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Exhibitions',
     labelDe: 'Ausstellungen 2026',
     labelFa: 'نمایشگاه‌ها',
+    shortDe: 'Ausstellungen',
+    shortEn: 'Exhibitions',
+    shortFa: 'نمایشگاه‌ها',
     targetId: 'exhibitions',
     category: 'press'
   },
@@ -66,6 +78,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'International Photography Award References',
     labelDe: 'Internationale Fotopreis-Referenzen (Awards)',
     labelFa: 'مراجع جوایز بین‌المللی عکاسی',
+    shortDe: 'Awards',
+    shortEn: 'Awards',
+    shortFa: 'جوایز',
     targetId: 'award-references',
     category: 'press'
   },
@@ -75,6 +90,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Press',
     labelDe: 'Presse & Medienberichte',
     labelFa: 'مطبوعات و رسانه‌ها',
+    shortDe: 'Presse',
+    shortEn: 'Press',
+    shortFa: 'مطبوعات',
     targetId: 'press',
     category: 'press'
   },
@@ -84,6 +102,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'World Champion Kickboxing',
     labelDe: 'Kickbox-Weltmeisterin (10× Titel)',
     labelFa: 'قهرمانی جهان کیک‌بوکسینگ',
+    shortDe: 'Kickboxen',
+    shortEn: 'Kickboxing',
+    shortFa: 'کیک‌بوکسینگ',
     targetId: 'kickboxing',
     category: 'kickboxing'
   },
@@ -93,6 +114,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Committed to Environmental Protection, Human Rights and Peace',
     labelDe: 'Einsatz für Umweltschutz, Menschenrechte & Frieden',
     labelFa: 'تعهد به محیط زیست، حقوق بشر و صلح',
+    shortDe: 'Engagement',
+    shortEn: 'Advocacy',
+    shortFa: 'فعالیت‌ها',
     targetId: 'engagement',
     category: 'biography'
   },
@@ -102,6 +126,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Interdisciplinary Academic Education',
     labelDe: 'Interdisziplinärer akademischer Bildungsweg',
     labelFa: 'تحصیلات دانشگاهی بین‌رشته‌ای',
+    shortDe: 'Bildungsweg',
+    shortEn: 'Education',
+    shortFa: 'تحصیلات',
     targetId: 'education',
     category: 'biography'
   },
@@ -111,6 +138,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Contact',
     labelDe: 'Kontakt & Anfragen',
     labelFa: 'تماس و اخذ مجوز',
+    shortDe: 'Kontakt',
+    shortEn: 'Contact',
+    shortFa: 'تماس',
     targetId: 'contact',
     isContact: true
   },
@@ -120,6 +150,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Biography',
     labelDe: 'Biografie & Vita',
     labelFa: 'زندگی‌نامه',
+    shortDe: 'Biografie',
+    shortEn: 'Biography',
+    shortFa: 'زندگی‌نامه',
     targetId: 'biography',
     category: 'biography'
   },
@@ -129,6 +162,9 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     labelEn: 'Gallery',
     labelDe: 'Galerie & Impressionen',
     labelFa: 'گالری',
+    shortDe: 'Galerie',
+    shortEn: 'Gallery',
+    shortFa: 'گالری',
     targetId: 'gallery',
     category: 'gallery'
   }
@@ -167,9 +203,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenContact
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [allPagesDropdownOpen, setAllPagesDropdownOpen] = useState(false);
   const [activeSectionId, setActiveSectionId] = useState<string>('architecture');
-  const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Active section tracking on scroll for mobile & tablet breadcrumb indicator
   useEffect(() => {
@@ -195,19 +229,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const currentSection = MOBILE_SECTIONS.find(s => s.id === activeSectionId) || MOBILE_SECTIONS[0];
 
-  // Close dropdown on click outside
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setAllPagesDropdownOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
   const handleNavigateToItem = (item: OriginalMenuItem) => {
-    setAllPagesDropdownOpen(false);
     setMobileMenuOpen(false);
 
     if (item.isContact) {
@@ -231,6 +253,12 @@ export const Navbar: React.FC<NavbarProps> = ({
     if (currentLang === 'de') return item.labelDe;
     if (currentLang === 'fa') return item.labelFa;
     return item.labelEn;
+  };
+
+  const getHeaderItemLabel = (item: OriginalMenuItem) => {
+    if (currentLang === 'de') return item.shortDe;
+    if (currentLang === 'fa') return item.shortFa;
+    return item.shortEn;
   };
 
   const getItemIcon = (id: string) => {
@@ -293,7 +321,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </a>
 
-      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-16 sm:h-18 lg:h-20 flex items-center justify-between gap-3 sm:gap-4">
+      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 h-16 sm:h-18 lg:h-20 flex items-center justify-between gap-2 xl:gap-4">
         
         {/* Brand / Artist Logo */}
         <button
@@ -318,119 +346,36 @@ export const Navbar: React.FC<NavbarProps> = ({
           </p>
         </button>
 
-        {/* Desktop Category Navigation */}
-        <nav className="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
-          
-          {/* 1. Architecture & Core Works */}
-          <button
-            onClick={() => onSelectCategory('architecture')}
-            className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded ${
-              currentCategory === 'architecture'
-                ? 'bg-stone-900 text-white'
-                : 'text-stone-700 hover:text-stone-900 hover:bg-stone-200/50'
-            }`}
-          >
-            {currentLang === 'de' ? 'Werke & Fotografie' : currentLang === 'fa' ? 'آثار عکاسی' : 'Photography & Works'}
-          </button>
-
-          {/* 2. World Champion Kickboxing */}
-          <button
-            onClick={() => onSelectCategory('kickboxing')}
-            className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded flex items-center gap-1.5 ${
-              currentCategory === 'kickboxing'
-                ? 'bg-stone-900 text-white'
-                : 'text-stone-700 hover:text-stone-900 hover:bg-stone-200/50'
-            }`}
-          >
-            <Trophy className={`w-3.5 h-3.5 ${currentCategory === 'kickboxing' ? 'text-amber-300' : 'text-amber-700'}`} />
-            <span>{currentLang === 'de' ? 'Kickboxen' : currentLang === 'fa' ? 'کیک‌بوکسینگ' : 'Kickboxing'}</span>
-          </button>
-
-          {/* 3. Vita & Interdisciplinary Education */}
-          <button
-            onClick={() => onSelectCategory('biography')}
-            className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded ${
-              currentCategory === 'biography'
-                ? 'bg-stone-900 text-white'
-                : 'text-stone-700 hover:text-stone-900 hover:bg-stone-200/50'
-            }`}
-          >
-            {currentLang === 'de' ? 'Vita & Bildungsweg' : currentLang === 'fa' ? 'تحصیلات و زندگی‌نامه' : 'Vita & Education'}
-          </button>
-
-          {/* 4. Press & Exhibitions */}
-          <button
-            onClick={() => onSelectCategory('press')}
-            className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded ${
-              currentCategory === 'press'
-                ? 'bg-stone-900 text-white'
-                : 'text-stone-700 hover:text-stone-900 hover:bg-stone-200/50'
-            }`}
-          >
-            {currentLang === 'de' ? 'Presse & Ausstellungen' : currentLang === 'fa' ? 'رسانه‌ها و نمایشگاه‌ها' : 'Press & Exhibitions'}
-          </button>
-
-          {/* 5. Gallery */}
-          <button
-            onClick={() => onSelectCategory('gallery')}
-            className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded ${
-              currentCategory === 'gallery'
-                ? 'bg-stone-900 text-white'
-                : 'text-stone-700 hover:text-stone-900 hover:bg-stone-200/50'
-            }`}
-          >
-            {currentLang === 'de' ? 'Galerie' : currentLang === 'fa' ? 'گالری' : 'Gallery'}
-          </button>
-
-          <span className="h-4 w-px bg-stone-300 mx-1" />
-
-          {/* COMPLETE 11 ORIGINAL WORDPRESS PAGES DROPDOWN */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setAllPagesDropdownOpen(!allPagesDropdownOpen)}
-              className={`px-3 py-1.5 text-xs font-medium tracking-wide transition-all cursor-pointer rounded flex items-center gap-1.5 border ${
-                allPagesDropdownOpen
-                  ? 'bg-stone-900 text-white border-stone-900'
-                  : 'bg-white border-stone-200/90 text-stone-800 hover:border-stone-400 hover:bg-stone-50'
-              }`}
-            >
-              <span className="font-mono text-[11px] px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 font-bold">11</span>
-              <span>{currentLang === 'de' ? 'Alle Menüpunkte' : currentLang === 'fa' ? 'تمام صفحات' : 'All 11 Links'}</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${allPagesDropdownOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            {/* Dropdown Menu with all 11 items */}
-            {allPagesDropdownOpen && (
-              <div className="absolute right-0 rtl:right-auto rtl:left-0 mt-2 w-96 bg-white border border-stone-200 rounded-2xl shadow-xl p-2.5 z-50 animate-in fade-in zoom-in-95 duration-150">
-                <div className="px-3 py-2 border-b border-stone-100 flex items-center justify-between">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
-                    {currentLang === 'de' ? 'Originale Webseiten-Struktur' : currentLang === 'fa' ? 'فهرست کامل بخش‌ها' : 'Original Navigation'}
-                  </span>
-                  <span className="text-[10px] text-stone-400 font-mono">
-                    {currentLang === 'de' ? '11 Einträge' : currentLang === 'fa' ? '۱۱ بخش' : '11 Items'}
-                  </span>
-                </div>
-                <div className="max-h-[480px] overflow-y-auto py-1 space-y-1">
-                  {ORIGINAL_11_MENU_ITEMS.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => handleNavigateToItem(item)}
-                      className="w-full text-left rtl:text-right p-2.5 rounded-xl hover:bg-stone-50 transition-colors flex items-center gap-3 group cursor-pointer"
-                    >
-                      <span className="text-[10px] font-mono font-bold text-stone-400 group-hover:text-amber-800 shrink-0 w-5">
-                        {item.num}
-                      </span>
-                      <div className="shrink-0">{getItemIcon(item.id)}</div>
-                      <span className="text-xs font-medium text-stone-800 group-hover:text-stone-950 truncate">
-                        {getItemLabel(item)}
-                      </span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
+        {/* Desktop Header Navigation: All 11 links with their numbered badges directly visible */}
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5 shrink min-w-0" aria-label="Hauptnavigation">
+          {ORIGINAL_11_MENU_ITEMS.map((item) => {
+            const isActive = !item.isContact && (activeSectionId === item.targetId || (item.category && currentCategory === item.category));
+            return (
+              <button
+                key={item.id}
+                onClick={() => handleNavigateToItem(item)}
+                className={`group px-1.5 xl:px-2 2xl:px-2.5 py-1 2xl:py-1.5 rounded-lg text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
+                  isActive
+                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                }`}
+                title={getItemLabel(item)}
+              >
+                <span
+                  className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                    isActive
+                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                  }`}
+                >
+                  {item.num}
+                </span>
+                <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
+                  {getHeaderItemLabel(item)}
+                </span>
+              </button>
+            );
+          })}
         </nav>
 
         {/* Right Tools: Language Switcher (DE / EN / FA) & Contact */}
@@ -474,10 +419,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Contact Button */}
+          {/* Contact Button (Tablet only, as item 09 Kontakt is already in the desktop bar) */}
           <button
             onClick={onOpenContact}
-            className="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
+            className="hidden sm:inline-flex lg:hidden items-center px-3.5 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
           >
             <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
           </button>
