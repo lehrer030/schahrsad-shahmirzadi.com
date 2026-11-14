@@ -134,6 +134,30 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
   }
 ];
 
+export interface MobileSectionItem {
+  id: string;
+  num: string;
+  shortDe: string;
+  shortEn: string;
+  shortFa: string;
+  targetId: string;
+}
+
+export const MOBILE_SECTIONS: MobileSectionItem[] = [
+  { id: 'architecture', num: '01', shortDe: 'Architektur · Werke', shortEn: 'Architecture · Works', shortFa: 'آثار معماری', targetId: 'architecture' },
+  { id: 'fine-art', num: '02', shortDe: 'Fine Art · Serien', shortEn: 'Fine Art · Series', shortFa: 'هنرهای زیبا', targetId: 'fine-art' },
+  { id: 'social-environmental', num: '03', shortDe: 'Gesellschaft & Umwelt', shortEn: 'Social & Environment', shortFa: 'اجتماع و محیط‌زیست', targetId: 'social-environmental' },
+  { id: 'portraits', num: '04', shortDe: 'Porträts & Selbstporträts', shortEn: 'Portraits & Self-Portraits', shortFa: 'پرتره‌ها', targetId: 'portraits' },
+  { id: 'kickboxing', num: '05', shortDe: 'Kickbox-Weltmeisterin (10×)', shortEn: 'World Champion Kickboxing', shortFa: 'قهرمانی کیک‌بوکسینگ', targetId: 'kickboxing' },
+  { id: 'education', num: '06', shortDe: 'Akademische Bildung', shortEn: 'Academic Education', shortFa: 'تحصیلات دانشگاهی', targetId: 'education' },
+  { id: 'engagement', num: '07', shortDe: 'Gesellschaftliches Engagement', shortEn: 'Advocacy & Human Rights', shortFa: 'فعالیت‌های اجتماعی و صلح', targetId: 'engagement' },
+  { id: 'press-features', num: '08', shortDe: 'Presse & Medien', shortEn: 'Press & Media', shortFa: 'مطبوعات و رسانه‌ها', targetId: 'press-features' },
+  { id: 'exhibitions', num: '09', shortDe: 'Ausstellungen 2026', shortEn: 'Exhibitions 2026', shortFa: 'نمایشگاه‌ها', targetId: 'exhibitions' },
+  { id: 'publications', num: '10', shortDe: 'Publikationen & Bücher', shortEn: 'Publications & Books', shortFa: 'کتاب‌ها و نشریات', targetId: 'publications' },
+  { id: 'award-references', num: '11', shortDe: 'Internationale Awards', shortEn: 'International Awards', shortFa: 'جوایز بین‌المللی', targetId: 'award-references' },
+  { id: 'gallery', num: '12', shortDe: 'Galerie & Impressionen', shortEn: 'Gallery & Impressions', shortFa: 'گالری و ویدیوها', targetId: 'gallery' }
+];
+
 export const Navbar: React.FC<NavbarProps> = ({
   currentCategory,
   onSelectCategory,
@@ -144,7 +168,32 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [allPagesDropdownOpen, setAllPagesDropdownOpen] = useState(false);
+  const [activeSectionId, setActiveSectionId] = useState<string>('architecture');
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Active section tracking on scroll for mobile & tablet breadcrumb indicator
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 180;
+      for (let i = MOBILE_SECTIONS.length - 1; i >= 0; i--) {
+        const item = MOBILE_SECTIONS[i];
+        const el = document.getElementById(item.targetId);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          if (scrollPos >= top) {
+            setActiveSectionId(item.id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const currentSection = MOBILE_SECTIONS.find(s => s.id === activeSectionId) || MOBILE_SECTIONS[0];
 
   // Close dropdown on click outside
   useEffect(() => {
@@ -203,7 +252,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full">
-      {/* Top Colored Spendenlauf Announcement Banner */}
+      {/* Top Colored Spendenlauf Announcement Banner - Compact & Slender on Mobile & Tablet */}
       <a
         href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"
         target="_blank"
@@ -211,10 +260,10 @@ export const Navbar: React.FC<NavbarProps> = ({
         aria-label="Spendenlauf für Menschenrechte beim ECCHR online unterstützen"
         className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
       >
-        <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1.5 sm:py-2 flex items-center justify-between sm:justify-center gap-2 sm:gap-3 text-xs sm:text-sm">
-          <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 shrink-0">
-              <Heart className="w-3 h-3 text-white fill-white animate-pulse" />
+        <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
+          <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+            <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
+              <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
             </span>
             <span className="font-semibold tracking-wide truncate">
               {currentLang === 'fa'
@@ -231,20 +280,20 @@ export const Navbar: React.FC<NavbarProps> = ({
                 : 'Unterstützen Sie ShirZans Spendenkampagne beim ECCHR'}
             </span>
           </div>
-          <span className="inline-flex items-center gap-1 font-semibold text-[11px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
+          <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
             <span>
               {currentLang === 'fa'
-                ? 'اکنون کمک کنید'
+                ? 'کمک آنلاین'
                 : currentLang === 'en'
-                ? 'Donate Now'
+                ? 'Donate'
                 : 'Jetzt spenden'}
             </span>
-            <ExternalLink className="w-3 h-3 shrink-0" />
+            <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
           </span>
         </div>
       </a>
 
-      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-20 flex items-center justify-between gap-4">
+      <div className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 h-16 sm:h-18 lg:h-20 flex items-center justify-between gap-3 sm:gap-4">
         
         {/* Brand / Artist Logo */}
         <button
@@ -445,37 +494,67 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       </div>
 
-      {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED */}
+      {/* Mobile & Tablet Live Section Indicator Bar (Visible on mobile & tablet: lg:hidden) */}
+      <div className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center justify-between text-xs transition-colors shadow-2xs">
+        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 pr-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
+          <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
+            {currentSection.num}
+          </span>
+          <span className="text-stone-300 text-xs shrink-0">/</span>
+          <span className="font-serif font-bold text-stone-900 truncate text-[11px] sm:text-xs tracking-tight">
+            {currentLang === 'fa' ? currentSection.shortFa : currentLang === 'de' ? currentSection.shortDe : currentSection.shortEn}
+          </span>
+        </div>
+        <button
+          onClick={() => setMobileMenuOpen(prev => !prev)}
+          className="shrink-0 text-[10px] sm:text-[11px] font-mono font-medium text-stone-700 hover:text-stone-950 bg-white hover:bg-stone-50 px-2 sm:px-2.5 py-0.5 rounded border border-stone-200 transition-colors flex items-center gap-1 shadow-2xs cursor-pointer ml-2"
+          aria-label="Bereichsnavigation"
+        >
+          <span>{currentLang === 'fa' ? 'بخش‌ها ▾' : currentLang === 'de' ? 'Bereiche ▾' : 'Sections ▾'}</span>
+        </button>
+      </div>
+
+      {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED, OPTIMIZED FOR MOBILE & TABLET */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#faf8f5] border-b border-stone-200 px-4 pt-4 pb-8 space-y-4 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-4 duration-200">
           <div className="flex items-center justify-between border-b border-stone-200 pb-2">
             <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
-              {currentLang === 'de' ? 'Alle 11 Bereiche der Website' : currentLang === 'fa' ? 'فهرست کامل ۱۱ بخش سایت' : 'All 11 Site Links'}
+              {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
             </span>
             <span className="text-[10px] font-mono text-stone-500">
-              {currentLang === 'de' ? '11 Seiten' : currentLang === 'fa' ? '۱۱ صفحه' : '11 Pages'}
+              {currentLang === 'de' ? '11 Bereiche' : currentLang === 'fa' ? '۱۱ بخش' : '11 Sections'}
             </span>
           </div>
 
-          <div className="space-y-1.5">
-            {ORIGINAL_11_MENU_ITEMS.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavigateToItem(item)}
-                className="w-full p-3 rounded-xl bg-white border border-stone-200/80 hover:bg-stone-50 transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-[10px] font-mono font-bold text-amber-800 w-5 shrink-0">
-                    {item.num}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+            {ORIGINAL_11_MENU_ITEMS.map((item) => {
+              const isActive = activeSectionId === item.targetId || (item.category && currentCategory === item.category);
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleNavigateToItem(item)}
+                  className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
+                    isActive
+                      ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
+                      : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
+                      {item.num}
+                    </span>
+                    <div className="shrink-0">{getItemIcon(item.id)}</div>
+                    <span className="text-xs truncate">
+                      {getItemLabel(item)}
+                    </span>
+                  </div>
+                  <span className={`text-xs shrink-0 ml-1.5 ${isActive ? 'text-amber-700' : 'text-stone-300 group-hover:text-stone-500'}`}>
+                    →
                   </span>
-                  <div className="shrink-0">{getItemIcon(item.id)}</div>
-                  <span className="text-xs font-medium text-stone-900 group-hover:text-amber-900">
-                    {getItemLabel(item)}
-                  </span>
-                </div>
-                <span className="text-stone-300 text-xs">→</span>
-              </button>
-            ))}
+                </button>
+              );
+            })}
           </div>
 
           <div className="pt-2">
@@ -484,7 +563,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 setMobileMenuOpen(false);
                 onOpenContact();
               }}
-              className="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
+              className="w-full py-2.5 sm:py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
             >
               {currentLang === 'de' ? 'Direkte Nachricht senden (Kontakt)' : currentLang === 'fa' ? 'ارسال پیام مستقیم (تماس)' : 'Send Direct Message (Contact)'}
             </button>
