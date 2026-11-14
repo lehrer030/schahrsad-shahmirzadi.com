@@ -106,8 +106,8 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                     : item.institutionEn}
                 </p>
               </div>
-              <div className="md:col-span-4 text-xs text-stone-600 font-medium md:text-right rtl:md:text-left self-center">
-                <span className="inline-block px-2.5 py-1 rounded-md bg-stone-100 border border-stone-200/70 text-stone-800">
+              <div className="md:col-span-4 flex items-center md:justify-end rtl:md:justify-start">
+                <span className="text-[11px] text-stone-600 font-medium px-2 py-0.5 rounded bg-stone-100/70 border border-stone-200/60 max-w-fit">
                   {currentLang === 'de'
                     ? item.degreeDe
                     : currentLang === 'fa'
