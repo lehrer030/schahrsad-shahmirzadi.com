@@ -80,7 +80,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-stone-100 text-stone-900 text-xs font-semibold rounded-full border border-stone-200 transition-colors shrink-0 self-start md:self-auto shadow-2xs cursor-pointer"
                 >
-                  <span>{currentLang === 'fa' ? 'مطالعه مقاله' : 'Read Article'}</span>
+                  <span>{currentLang === 'fa' ? 'مطالعه مقاله' : currentLang === 'de' ? 'Artikel lesen' : 'Read Article'}</span>
                   <ExternalLink className="w-3.5 h-3.5 text-stone-500" />
                 </a>
               )}
@@ -169,7 +169,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-medium transition-colors"
                   >
-                    <span>{currentLang === 'fa' ? 'مشاهده اثر' : 'View Work'}</span>
+                    <span>{currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'de' ? 'Werk ansehen' : 'View Work'}</span>
                     <ExternalLink className="w-3.5 h-3.5 opacity-80" />
                   </a>
                 )}
@@ -180,7 +180,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang }) => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-stone-100 text-stone-700 rounded-lg text-xs font-medium border border-stone-200 transition-colors"
                   >
-                    <span>{currentLang === 'fa' ? 'سایت فستیوال' : 'Festival Info'}</span>
+                    <span>{currentLang === 'fa' ? 'سایت فستیوال' : currentLang === 'de' ? 'Festival-Webseite' : 'Festival Info'}</span>
                     <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                   </a>
                 )}

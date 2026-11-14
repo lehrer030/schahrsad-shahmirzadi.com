@@ -382,10 +382,10 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-4">
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-                {currentLang === 'fa' ? 'فهرست رسمی عناوین' : 'Wettkampferfolge im Überblick'}
+                {currentLang === 'fa' ? 'فهرست رسمی عناوین' : currentLang === 'en' ? 'Championship Overview' : 'Wettkampferfolge im Überblick'}
               </span>
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
-                {currentLang === 'fa' ? 'افتخارات آماتور و بین‌المللی' : 'Amateur- & Weltcup-Erfolge'}
+                {currentLang === 'fa' ? 'افتخارات آماتور و بین‌المللی' : currentLang === 'en' ? 'Amateur & World Cup Achievements' : 'Amateur- & Weltcup-Erfolge'}
               </h3>
             </div>
 
@@ -393,7 +393,11 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               onClick={() => setShowAllAmateur(!showAllAmateur)}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium transition-colors cursor-pointer self-start sm:self-auto"
             >
-              <span>{showAllAmateur ? (currentLang === 'fa' ? 'کاهش نمایش' : 'Weniger anzeigen') : (currentLang === 'fa' ? 'نمایش تمام ۱۶ عنوان' : 'Alle 16 Titel anzeigen')}</span>
+              <span>
+                {showAllAmateur
+                  ? (currentLang === 'fa' ? 'کاهش نمایش' : currentLang === 'en' ? 'Show less' : 'Weniger anzeigen')
+                  : (currentLang === 'fa' ? 'نمایش تمام ۱۶ عنوان' : currentLang === 'en' ? 'Show all 16 titles' : 'Alle 16 Titel anzeigen')}
+              </span>
               {showAllAmateur ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
             </button>
           </div>

@@ -182,10 +182,10 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                   >
                     <span>
                       {currentLang === 'de'
-                        ? 'Award'
+                        ? 'Auszeichnung ansehen'
                         : currentLang === 'fa'
                         ? 'جایزه'
-                        : 'Award'}
+                        : 'View Award'}
                     </span>
                     <ExternalLink className="w-3 h-3 text-stone-400" />
                   </a>

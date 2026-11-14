@@ -142,10 +142,10 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionEn: 'SchirZan — Fundraising Run for Human Rights 2027 ✨ · Berlin Half Marathon 2027 supporting the European Center for Constitutional and Human Rights (ECCHR): Solidarity and worldwide legal action for survivors of human rights violations.',
         captionFa: 'شیرزن — دویدن برای جمع‌آوری کمک مالی جهت حقوق بشر ۲۰۲۷ ✨ · نیمه‌ماراتن برلین ۲۰۲۷ در حمایت از مرکز اروپایی قانون اساسی و حقوق بشر (ECCHR): همبستگی و دادخواهی حقوقی بین‌المللی برای بازماندگان نقض حقوق بشر.',
         externalLink: 'https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights',
-        externalLinkTextDe: 'Support the fundraising run →',
+        externalLinkTextDe: 'Spendenlauf unterstützen →',
         externalLinkTextEn: 'Support the fundraising run →',
         externalLinkTextFa: 'حمایت از کمپین حقوق بشر (کمک مالی) ←',
-        badgeDe: 'Spendenaufruf / Fundraising Run 2027 ✨',
+        badgeDe: 'Spendenaufruf – Lauf für Menschenrechte 2027 ✨',
         badgeEn: 'Fundraising Run for Human Rights 2027 ✨',
         badgeFa: 'فراخوان حمایت مالی حقوق بشر ۲۰۲۷ ✨'
       },

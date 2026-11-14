@@ -177,7 +177,13 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-red-700 hover:text-red-800 transition-colors"
             >
-              <span>{currentLang === 'fa' ? 'حمایت از کمپین ECCHR ←' : 'Support the fundraising run →'}</span>
+              <span>
+                {currentLang === 'de'
+                  ? 'Spendenlauf unterstützen →'
+                  : currentLang === 'fa'
+                  ? 'حمایت از کمپین ECCHR ←'
+                  : 'Support the fundraising run →'}
+              </span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

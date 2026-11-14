@@ -257,9 +257,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   : photo.badgeEn;
               const linkText =
                 currentLang === 'de'
-                  ? (photo.externalLinkTextDe || 'Support the fundraising run →')
+                  ? (photo.externalLinkTextDe || 'Spendenlauf unterstützen →')
                   : currentLang === 'fa'
-                  ? (photo.externalLinkTextFa || 'Support the fundraising run →')
+                  ? (photo.externalLinkTextFa || 'حمایت از کمپین حقوق بشر ←')
                   : (photo.externalLinkTextEn || 'Support the fundraising run →');
 
               return (

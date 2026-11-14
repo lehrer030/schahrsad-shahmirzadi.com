@@ -37,7 +37,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'works',
     num: '01',
     labelEn: 'Photography - Works - International Awards',
-    labelDe: 'Photography - Works - International Awards',
+    labelDe: 'Fotografie – Werke & Auszeichnungen',
     labelFa: 'عکاسی – آثار و جوایز بین‌المللی',
     targetId: 'architecture',
     category: 'architecture'
@@ -46,7 +46,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'publications',
     num: '02',
     labelEn: "Photography, Editor's Choice, Videos & E-Books",
-    labelDe: "Photography, Editor's Choice, Videos & E-Books",
+    labelDe: "Fotografie, Editor's Choice, Videos & E-Books",
     labelFa: 'عکاسی، انتخاب سردبیر، ویدیوها و کتاب‌ها',
     targetId: 'publications',
     category: 'press'
@@ -55,7 +55,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'exhibitions',
     num: '03',
     labelEn: 'Exhibitions',
-    labelDe: 'Exhibitions (Ausstellungen 2026)',
+    labelDe: 'Ausstellungen 2026',
     labelFa: 'نمایشگاه‌ها',
     targetId: 'exhibitions',
     category: 'press'
@@ -64,7 +64,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'award-references',
     num: '04',
     labelEn: 'International Photography Award References',
-    labelDe: 'International Photography Award References',
+    labelDe: 'Internationale Fotopreis-Referenzen (Awards)',
     labelFa: 'مراجع جوایز بین‌المللی عکاسی',
     targetId: 'award-references',
     category: 'press'
@@ -73,7 +73,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'press',
     num: '05',
     labelEn: 'Press',
-    labelDe: 'Press & Medienberichte',
+    labelDe: 'Presse & Medienberichte',
     labelFa: 'مطبوعات و رسانه‌ها',
     targetId: 'press',
     category: 'press'
@@ -82,7 +82,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'kickboxing',
     num: '06',
     labelEn: 'World Champion Kickboxing',
-    labelDe: 'World Champion Kickboxing (10× Weltmeisterin)',
+    labelDe: 'Kickbox-Weltmeisterin (10× Titel)',
     labelFa: 'قهرمانی جهان کیک‌بوکسینگ',
     targetId: 'kickboxing',
     category: 'kickboxing'
@@ -91,7 +91,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'engagement',
     num: '07',
     labelEn: 'Committed to Environmental Protection, Human Rights and Peace',
-    labelDe: 'Committed to Environmental Protection, Human Rights and Peace',
+    labelDe: 'Einsatz für Umweltschutz, Menschenrechte & Frieden',
     labelFa: 'تعهد به محیط زیست، حقوق بشر و صلح',
     targetId: 'engagement',
     category: 'biography'
@@ -100,7 +100,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'education',
     num: '08',
     labelEn: 'Interdisciplinary Academic Education',
-    labelDe: 'Interdisciplinary Academic Education (Bildungsweg)',
+    labelDe: 'Interdisziplinärer akademischer Bildungsweg',
     labelFa: 'تحصیلات دانشگاهی بین‌رشته‌ای',
     targetId: 'education',
     category: 'biography'
@@ -109,7 +109,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'contact',
     num: '09',
     labelEn: 'Contact',
-    labelDe: 'Contact & Anfragen',
+    labelDe: 'Kontakt & Anfragen',
     labelFa: 'تماس و اخذ مجوز',
     targetId: 'contact',
     isContact: true
@@ -118,7 +118,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'biography',
     num: '10',
     labelEn: 'Biography',
-    labelDe: 'Biography (Vita)',
+    labelDe: 'Biografie & Vita',
     labelFa: 'زندگی‌نامه',
     targetId: 'biography',
     category: 'biography'
@@ -127,7 +127,7 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     id: 'gallery',
     num: '11',
     labelEn: 'Gallery',
-    labelDe: 'Gallery & Momente',
+    labelDe: 'Galerie & Impressionen',
     labelFa: 'گالری',
     targetId: 'gallery',
     category: 'gallery'
@@ -316,7 +316,9 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <span className="text-[11px] font-mono uppercase tracking-widest text-amber-800 font-bold">
                     {currentLang === 'de' ? 'Originale Webseiten-Struktur' : currentLang === 'fa' ? 'فهرست کامل بخش‌ها' : 'Original Navigation'}
                   </span>
-                  <span className="text-[10px] text-stone-400 font-mono">11 Einträge</span>
+                  <span className="text-[10px] text-stone-400 font-mono">
+                    {currentLang === 'de' ? '11 Einträge' : currentLang === 'fa' ? '۱۱ بخش' : '11 Items'}
+                  </span>
                 </div>
                 <div className="max-h-[480px] overflow-y-auto py-1 space-y-1">
                   {ORIGINAL_11_MENU_ITEMS.map((item) => (
@@ -409,7 +411,9 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
               {currentLang === 'de' ? 'Alle 11 Bereiche der Website' : currentLang === 'fa' ? 'فهرست کامل ۱۱ بخش سایت' : 'All 11 Site Links'}
             </span>
-            <span className="text-[10px] font-mono text-stone-500">11 Seiten</span>
+            <span className="text-[10px] font-mono text-stone-500">
+              {currentLang === 'de' ? '11 Seiten' : currentLang === 'fa' ? '۱۱ صفحه' : '11 Pages'}
+            </span>
           </div>
 
           <div className="space-y-1.5">
