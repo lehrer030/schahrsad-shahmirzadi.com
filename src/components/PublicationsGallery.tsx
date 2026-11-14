@@ -370,6 +370,139 @@ const PerspaCard: React.FC<{
   );
 };
 
+const APMP_MAGCLOUD_ITEMS: (PhotoItem & {
+  titleDe: string;
+  titleEn: string;
+  titleFa: string;
+  descDe: string;
+  descEn: string;
+  descFa: string;
+})[] = [
+  {
+    id: 'apmp-cover',
+    src: '/images/2026_07_IMG_1474-3-1198x1536.webp',
+    alt: 'Architecture Photography MasterPrize \'25 Winners Book Cover',
+    titleDe: 'APMP Winners Book – Titelseite',
+    titleEn: 'APMP Winners Book – Cover',
+    titleFa: 'جلد کتاب برگزیدگان APMP',
+    descDe: 'Offizielles Buch- und Magazincover des Architecture Photography Masterprize \'25',
+    descEn: 'Official book and magazine cover of Architecture Photography Masterprize \'25',
+    descFa: 'طرح جلد رسمی نشریه بین‌المللی برگزیدگان جوایز معماری APMP',
+    captionDe: 'Architecture Photography MasterPrize \'25 Winners Book – Offizielles Buchcover',
+    captionEn: 'Architecture Photography MasterPrize \'25 Winners Book – Official Book Cover',
+    captionFa: 'جلد رسمی کتاب برگزیدگان جوایز عکاسی معماری APMP ۲۰۲۵'
+  },
+  {
+    id: 'apmp-spread',
+    src: '/images/2026_07_IMG_1475-2-1024x646.webp',
+    alt: 'Architecture Photography MasterPrize \'25 Winners Spread',
+    titleDe: 'Doppelseitige Preisträger-Strecke',
+    titleEn: 'Double-Page Winner Spread',
+    titleFa: 'صفحه دوطرفه انتشار اثر معماری',
+    descDe: 'The Solitaire as Abstraction in Harmony with Nature · Vollständige Strecke mit Namensnennung ShirZan (Schahrsad Shahmirzadi)',
+    descEn: 'The Solitaire as Abstraction in Harmony with Nature · Full spread showing ShirZan (Schahrsad Shahmirzadi)',
+    descFa: 'تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت · صفحه کامل با درج نام شیرزن (شهزاد شاهمیرزادی)',
+    captionDe: 'Doppelseitige Preisträger-Strecke: The Solitaire as Abstraction in Harmony with Nature – ShirZan (Schahrsad Shahmirzadi)',
+    captionEn: 'Double-Page Winner Spread: The Solitaire as Abstraction in Harmony with Nature – ShirZan (Schahrsad Shahmirzadi)',
+    captionFa: 'صفحه دوطرفه برگزیده: تک‌بنا به عنوان یک انتزاع در هماهنگی با طبیعت – شیرزن (شهزاد شاهمیرزادی)'
+  },
+  {
+    id: 'apmp-sample',
+    src: '/images/2026_07_IMG_1513-1024x991.webp',
+    alt: 'MagCloud Druckausgabe & Leseprobe',
+    titleDe: 'MagCloud Druckausgabe & Leseprobe',
+    titleEn: 'MagCloud Print Edition & Sample',
+    titleFa: 'پیش‌نمایش نسخه چاپی در مگ‌کلود',
+    descDe: 'Seite 163 (Honorable Mentions Students): Offizielle Nennung von ShirZan | Schahrsad Shahmirzadi',
+    descEn: 'Page 163 (Honorable Mentions Students): Official listing of ShirZan | Schahrsad Shahmirzadi',
+    descFa: 'صفحه ۱۶۳: ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی در بخش تقدیر ویژه',
+    captionDe: 'MagCloud Druckausgabe & Leseprobe (S. 163): Honorable Mentions – Nennung ShirZan | Schahrsad Shahmirzadi',
+    captionEn: 'MagCloud Print Edition & Sample (p. 163): Honorable Mentions – Listing ShirZan | Schahrsad Shahmirzadi',
+    captionFa: 'نسخه چاپی و نمونه مجله مگ‌کلود (ص ۱۶۳): تقدیر ویژه – ثبت رسمی نام شیرزن | شهزاد شاهمیرزادی'
+  }
+];
+
+const IPA_2026_PHOTOS: PhotoItem[] = [
+  {
+    id: 'ipa-2026-cover',
+    src: '/images/2026_10_seite-1-1152x1536.webp',
+    alt: 'The 2026 Annual International Photography Awards (IPA) Book Cover',
+    captionDe: 'Titelseite / Cover des IPA 2026 Buchs – International Photography Awards',
+    captionEn: 'IPA 2026 Book Cover – International Photography Awards',
+    captionFa: 'جلد کتاب سالانه IPA ۲۰۲۶ – جوایز بین‌المللی عکاسی'
+  },
+  {
+    id: 'ipa-2026-spread',
+    src: '/images/2026_10_seite-2-1152x1536.webp',
+    alt: 'The 2026 Annual International Photography Awards (IPA) Book Winner Spread',
+    captionDe: 'Preisträger-Doppelseite Architektur – The 2026 Annual IPA Book',
+    captionEn: 'Winner Architecture Double-Page Spread – The 2026 Annual IPA Book',
+    captionFa: 'صفحه دوطرفه آثار برگزیده معماری – کتاب سالانه IPA ۲۰۲۶'
+  }
+];
+
+const IPA_2025_PHOTOS: PhotoItem[] = [
+  {
+    id: 'ipa-2025-cover',
+    src: '/images/2026_06_ebook-01-1152x1536.webp',
+    alt: 'The 2025 Annual International Photography Awards (IPA) Book Cover',
+    captionDe: 'Titelseite / Cover des IPA 2025 Buchs – International Photography Awards',
+    captionEn: 'IPA 2025 Book Cover – International Photography Awards',
+    captionFa: 'جلد کتاب سالانه IPA ۲۰۲۵ – جوایز بین‌المللی عکاسی'
+  },
+  {
+    id: 'ipa-2025-spread',
+    src: '/images/2026_06_ebook-02-1152x1536.webp',
+    alt: 'The 2025 Annual International Photography Awards (IPA) Book Spread',
+    captionDe: 'Preisträger-Doppelseite »The Solitaire as an Abstraction« – The 2025 Annual IPA Book',
+    captionEn: 'Winner Double-Page Spread "The Solitaire as an Abstraction" – The 2025 Annual IPA Book',
+    captionFa: 'صفحه انتشار اثر تک‌بنا به عنوان یک انتزاع – کتاب سالانه IPA ۲۰۲۵'
+  }
+];
+
+const PERSPA_BOOK_PAGES_PHOTOS: PhotoItem[] = [
+  {
+    id: 'perspa-book-p20',
+    src: '/images/2026_11_image001-709x1024.webp',
+    alt: 'PERSPA Awards 2026 Book – Page 20',
+    captionDe: 'PERSPA Awards 2026 Buchausgabe – Seite 20: Preisträger-Veröffentlichung',
+    captionEn: 'PERSPA Awards 2026 Book Edition – Page 20: Winner Feature',
+    captionFa: 'کتاب جوایز PERSPA ۲۰۲۶ – صفحه ۲۰: اثر برگزیده'
+  },
+  {
+    id: 'perspa-book-p21',
+    src: '/images/2026_11_image002-709x1024.webp',
+    alt: 'PERSPA Awards 2026 Book – Page 21',
+    captionDe: 'PERSPA Awards 2026 Buchausgabe – Seite 21: Preisträger-Veröffentlichung',
+    captionEn: 'PERSPA Awards 2026 Book Edition – Page 21: Winner Feature',
+    captionFa: 'کتاب جوایز PERSPA ۲۰۲۶ – صفحه ۲۱: اثر برگزیده'
+  },
+  {
+    id: 'perspa-book-p26',
+    src: '/images/2026_11_image003-707x1024.webp',
+    alt: 'PERSPA Awards 2026 Book – Page 26',
+    captionDe: 'PERSPA Awards 2026 Buchausgabe – Seite 26: Preisträger-Veröffentlichung',
+    captionEn: 'PERSPA Awards 2026 Book Edition – Page 26: Winner Feature',
+    captionFa: 'کتاب جوایز PERSPA ۲۰۲۶ – صفحه ۲۶: اثر برگزیده'
+  },
+  {
+    id: 'perspa-book-p41',
+    src: '/images/2026_11_image004-768x571.webp',
+    alt: 'PERSPA Awards 2026 Book – Page 41',
+    captionDe: 'PERSPA Awards 2026 Buchausgabe – Seite 41: Preisträger-Veröffentlichung',
+    captionEn: 'PERSPA Awards 2026 Book Edition – Page 41: Winner Feature',
+    captionFa: 'کتاب جوایز PERSPA ۲۰۲۶ – صفحه ۴۱: اثر برگزیده'
+  },
+  {
+    id: 'perspa-book-p168',
+    src: '/images/2026_11_image005-709x1024.webp',
+    alt: 'PERSPA Awards 2026 Book – Page 168',
+    captionDe: 'PERSPA Awards 2026 Buchausgabe – Seite 168: Preisträger-Veröffentlichung',
+    captionEn: 'PERSPA Awards 2026 Book Edition – Page 168: Winner Feature',
+    captionFa: 'کتاب جوایز PERSPA ۲۰۲۶ – صفحه ۱۶۸: اثر برگزیده'
+  }
+];
+
 export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ currentLang, onOpenLightbox }) => {
   const isDe = currentLang === 'de';
   const isFa = currentLang === 'fa';
@@ -756,20 +889,25 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Page 1 Cover */}
             <div className="group bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all flex flex-col">
-              <a
-                href="https://www.photoawards.com/ebook/IPA-2026-ebook.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
+              <div
+                onClick={() => onOpenLightbox?.(IPA_2026_PHOTOS, 0)}
+                className="block overflow-hidden bg-[#fbfaf8] aspect-4/3 sm:aspect-3/4 p-3 flex items-center justify-center relative cursor-pointer group/img"
+                title={isDe ? 'Klicken für Großansicht' : 'Click to enlarge'}
               >
                 <img
                   src={resolveAsset('/images/2026_10_seite-1-1152x1536.webp')}
                   alt="The 2026 Annual International Photography Awards (IPA) Book Cover"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
                   loading="lazy"
                 />
-              </a>
-              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700">
+                <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-stone-900 text-xs font-semibold shadow-lg backdrop-blur-xs">
+                    <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                    <span>{isFa ? 'بزرگنمایی' : isDe ? 'Vergrößern' : 'Enlarge'}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700 border-t border-stone-100">
                 <span className="font-medium">{isDe ? 'Titelseite / Cover des IPA 2026 Buchs' : isFa ? 'جلد کتاب سالانه IPA ۲۰۲۶' : 'IPA 2026 Book Cover'}</span>
                 <span className="font-mono text-[11px] text-amber-800 font-semibold">PDF</span>
               </div>
@@ -777,20 +915,25 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
             {/* Page 2 Spread */}
             <div className="group bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all flex flex-col">
-              <a
-                href="https://www.photoawards.com/ebook/IPA-2026-ebook.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
+              <div
+                onClick={() => onOpenLightbox?.(IPA_2026_PHOTOS, 1)}
+                className="block overflow-hidden bg-[#fbfaf8] aspect-4/3 sm:aspect-3/4 p-3 flex items-center justify-center relative cursor-pointer group/img"
+                title={isDe ? 'Klicken für Großansicht' : 'Click to enlarge'}
               >
                 <img
                   src={resolveAsset('/images/2026_10_seite-2-1152x1536.webp')}
                   alt="The 2026 Annual International Photography Awards (IPA) Book Winner Spread"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
                   loading="lazy"
                 />
-              </a>
-              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700">
+                <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-stone-900 text-xs font-semibold shadow-lg backdrop-blur-xs">
+                    <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                    <span>{isFa ? 'بزرگنمایی' : isDe ? 'Vergrößern' : 'Enlarge'}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700 border-t border-stone-100">
                 <span className="font-medium">{isDe ? 'Preisträger-Doppelseite Architektur' : isFa ? 'صفحه دوطرفه آثار برگزیده معماری' : 'Winner Architecture Spread'}</span>
                 <span className="font-mono text-[11px] text-amber-800 font-semibold">Preisträger 2026</span>
               </div>
@@ -820,20 +963,25 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             {/* Page 1 Cover 2025 */}
             <div className="group bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all flex flex-col">
-              <a
-                href="https://www.photoawards.com/books/IPA-2025-EBOOK.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
+              <div
+                onClick={() => onOpenLightbox?.(IPA_2025_PHOTOS, 0)}
+                className="block overflow-hidden bg-[#fbfaf8] aspect-4/3 sm:aspect-3/4 p-3 flex items-center justify-center relative cursor-pointer group/img"
+                title={isDe ? 'Klicken für Großansicht' : 'Click to enlarge'}
               >
                 <img
                   src={resolveAsset('/images/2026_06_ebook-01-1152x1536.webp')}
                   alt="The 2025 Annual International Photography Awards (IPA) Book Cover"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
                   loading="lazy"
                 />
-              </a>
-              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700">
+                <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-stone-900 text-xs font-semibold shadow-lg backdrop-blur-xs">
+                    <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                    <span>{isFa ? 'بزرگنمایی' : isDe ? 'Vergrößern' : 'Enlarge'}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700 border-t border-stone-100">
                 <span className="font-medium">{isDe ? 'Titelseite / Cover des IPA 2025 Buchs' : isFa ? 'جلد کتاب سالانه IPA ۲۰۲۵' : 'IPA 2025 Book Cover'}</span>
                 <span className="font-mono text-[11px] text-amber-800 font-semibold">PDF</span>
               </div>
@@ -841,20 +989,25 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
             {/* Page 2 Spread 2025 */}
             <div className="group bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all flex flex-col">
-              <a
-                href="https://www.photoawards.com/books/IPA-2025-EBOOK.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
+              <div
+                onClick={() => onOpenLightbox?.(IPA_2025_PHOTOS, 1)}
+                className="block overflow-hidden bg-[#fbfaf8] aspect-4/3 sm:aspect-3/4 p-3 flex items-center justify-center relative cursor-pointer group/img"
+                title={isDe ? 'Klicken für Großansicht' : 'Click to enlarge'}
               >
                 <img
                   src={resolveAsset('/images/2026_06_ebook-02-1152x1536.webp')}
                   alt="The 2025 Annual International Photography Awards (IPA) Book Spread"
-                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                  className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
                   loading="lazy"
                 />
-              </a>
-              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700">
+                <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-stone-900 text-xs font-semibold shadow-lg backdrop-blur-xs">
+                    <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                    <span>{isFa ? 'بزرگنمایی' : isDe ? 'Vergrößern' : 'Enlarge'}</span>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3.5 flex items-center justify-between text-xs text-stone-700 border-t border-stone-100">
                 <span className="font-medium">{isDe ? 'Preisträger-Doppelseite »The Solitaire as an Abstraction«' : isFa ? 'صفحه انتشار اثر تک‌بنا به عنوان یک انتزاع' : 'Winner Spread "The Solitaire"'}</span>
                 <span className="font-mono text-[11px] text-amber-800 font-semibold">Preisträger 2025</span>
               </div>
@@ -1074,67 +1227,70 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           <span>WINNER IN EXTERIOR ARCHITECTURE PHOTOGRAPHY - OTHER EXTERIOR</span>
         </div>
 
-        {/* 3 MagCloud Previews */}
+        {/* 3 MagCloud Previews - Full Uncropped View with object-contain & Lightbox Zoom */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
-          {/* Spread 1 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://www.magcloud.com/browse/issue/3262571"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_IMG_1474-3-1198x1536.webp')}
-                alt="Architecture Photography MasterPrize '25 Winners Book Cover"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3.5 text-xs text-stone-800 font-medium">
-              {isDe ? 'APMP Winners Book – Titelseite' : isFa ? 'جلد مجله بین‌المللی برگزیدگان APMP' : 'APMP Winners Book Cover'}
-            </div>
-          </div>
+          {APMP_MAGCLOUD_ITEMS.map((item, index) => {
+            const title = isFa ? item.titleFa : isDe ? item.titleDe : item.titleEn;
+            const desc = isFa ? item.descFa : isDe ? item.descDe : item.descEn;
 
-          {/* Spread 2 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://www.magcloud.com/browse/issue/3262571"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_IMG_1475-2-1024x646.webp')}
-                alt="Architecture Photography MasterPrize '25 Winners Spread"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3.5 text-xs text-stone-800 font-medium">
-              {isDe ? 'Doppelseitige Preisträger-Strecke' : isFa ? 'صفحه دوطرفه انتشار اثر معماری' : 'Double-Page Winner Spread'}
-            </div>
-          </div>
+            return (
+              <div
+                key={item.id}
+                className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/60 hover:shadow-md transition-all duration-300"
+              >
+                {/* Image Container: Full object-contain ensures double-page spreads, text and names are NEVER cut off! */}
+                <div
+                  onClick={() => onOpenLightbox?.(APMP_MAGCLOUD_ITEMS, index)}
+                  className="relative block overflow-hidden bg-[#fbfaf8] aspect-[4/3] sm:aspect-[3/4] flex items-center justify-center p-3 sm:p-4 cursor-pointer select-none group/img"
+                  title={isDe ? 'Klicken für hochauflösende Großansicht' : 'Click to enlarge'}
+                >
+                  <img
+                    src={resolveAsset(item.src)}
+                    alt={item.alt}
+                    className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-stone-900 text-xs font-semibold shadow-lg backdrop-blur-xs">
+                      <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                      <span>{isFa ? 'بزرگنمایی صفحه' : isDe ? 'Seite vergrößern' : 'Enlarge page'}</span>
+                    </div>
+                  </div>
+                </div>
 
-          {/* Spread 3 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://www.magcloud.com/browse/issue/3262571"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_07_IMG_1513-1024x991.webp')}
-                alt="Architecture Photography MasterPrize '25 MagCloud Reader View"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3.5 text-xs text-stone-800 font-medium">
-              {isDe ? 'MagCloud Druckausgabe & Leseprobe' : isFa ? 'پیش‌نمایش نسخه چاپی در مگ‌کلود' : 'MagCloud Print Edition & Sample'}
-            </div>
-          </div>
+                {/* Card Details & Actions */}
+                <div className="p-4 flex-1 flex flex-col justify-between space-y-2.5 bg-white border-t border-stone-100">
+                  <div className="space-y-1">
+                    <h5 className="text-xs sm:text-sm font-serif font-bold text-stone-900 leading-snug">
+                      {title}
+                    </h5>
+                    <p className="text-[11px] text-stone-600 leading-relaxed font-normal">
+                      {desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2 text-[11px]">
+                    <button
+                      type="button"
+                      onClick={() => onOpenLightbox?.(APMP_MAGCLOUD_ITEMS, index)}
+                      className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 font-medium cursor-pointer"
+                    >
+                      <Eye className="w-3 h-3" />
+                      <span>{isFa ? 'مشاهده در قطع بزرگ' : isDe ? 'Großansicht öffnen' : 'View full size'}</span>
+                    </button>
+                    <a
+                      href="https://www.magcloud.com/browse/issue/3262571"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-stone-600 hover:text-stone-900 font-medium"
+                    >
+                      <span>MagCloud ↗</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -1222,147 +1378,58 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           </div>
         </div>
 
-        {/* 5 Pages Grid */}
+        {/* 5 Pages Grid - Full Uncropped View with object-contain & Lightbox Zoom */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 pt-2">
-          {/* Page 20 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/book/#page-20"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_11_image001-709x1024.webp')}
-                alt="PERSPA Awards 2026 Book Page 20"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3 text-center border-t border-stone-100">
-              <a
-                href="https://perspa.fr/book/#page-20"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
-              >
-                <span>Seite 20</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-          </div>
+          {PERSPA_BOOK_PAGES_PHOTOS.map((page, index) => {
+            const pageNums = ['20', '21', '26', '41', '168'];
+            const pNum = pageNums[index] || '20';
+            const pageUrl = `https://perspa.fr/book/#page-${pNum}`;
 
-          {/* Page 21 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/book/#page-21"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_11_image002-709x1024.webp')}
-                alt="PERSPA Awards 2026 Book Page 21"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3 text-center border-t border-stone-100">
-              <a
-                href="https://perspa.fr/book/#page-21"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
+            return (
+              <div
+                key={page.id}
+                className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/60 hover:shadow-md transition-all duration-300"
               >
-                <span>Seite 21</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-          </div>
+                <div
+                  onClick={() => onOpenLightbox?.(PERSPA_BOOK_PAGES_PHOTOS, index)}
+                  className="block overflow-hidden bg-[#fbfaf8] aspect-3/4 p-2.5 flex items-center justify-center relative cursor-pointer group/img"
+                  title={isDe ? `Seite ${pNum} vergrößern` : `Enlarge page ${pNum}`}
+                >
+                  <img
+                    src={resolveAsset(page.src)}
+                    alt={page.alt}
+                    className="w-full h-full object-contain drop-shadow-sm group-hover/img:scale-102 transition-transform duration-300 protected-art"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                    <div className="p-2 rounded-full bg-white/95 text-stone-900 shadow-md backdrop-blur-xs">
+                      <Maximize2 className="w-3.5 h-3.5 text-amber-800" />
+                    </div>
+                  </div>
+                </div>
 
-          {/* Page 26 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/book/#page-26"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_11_image003-707x1024.webp')}
-                alt="PERSPA Awards 2026 Book Page 26"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3 text-center border-t border-stone-100">
-              <a
-                href="https://perspa.fr/book/#page-26"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
-              >
-                <span>Seite 26</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-          </div>
-
-          {/* Page 41 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/book/#page-41"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_11_image004-768x571.webp')}
-                alt="PERSPA Awards 2026 Book Page 41"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3 text-center border-t border-stone-100">
-              <a
-                href="https://perspa.fr/book/#page-41"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
-              >
-                <span>Seite 41</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-          </div>
-
-          {/* Page 168 */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
-            <a
-              href="https://perspa.fr/book/#page-168"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 relative"
-            >
-              <img
-                src={resolveAsset('/images/2026_11_image005-709x1024.webp')}
-                alt="PERSPA Awards 2026 Book Page 168"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-            </a>
-            <div className="p-3 text-center border-t border-stone-100">
-              <a
-                href="https://perspa.fr/book/#page-168"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1"
-              >
-                <span>Seite 168</span>
-                <ExternalLink className="w-3 h-3 opacity-60" />
-              </a>
-            </div>
-          </div>
+                <div className="p-3 text-center border-t border-stone-100 flex items-center justify-between px-3 text-xs bg-white">
+                  <button
+                    type="button"
+                    onClick={() => onOpenLightbox?.(PERSPA_BOOK_PAGES_PHOTOS, index)}
+                    className="font-mono font-bold text-stone-900 hover:text-amber-800 inline-flex items-center gap-1 cursor-pointer"
+                  >
+                    <Eye className="w-3 h-3 text-amber-800" />
+                    <span>Seite {pNum}</span>
+                  </button>
+                  <a
+                    href={pageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-stone-400 hover:text-stone-800 transition-colors"
+                    title="E-Book auf perspa.fr öffnen"
+                  >
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
