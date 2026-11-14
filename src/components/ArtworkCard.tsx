@@ -24,6 +24,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   const otherBadges = series.badges.filter(b => b !== ampBadge && b !== ipaBadge);
   const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
   const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
+  const firstPhoto = series.photos[0];
 
   // Helper to render uniform badge item with equal proportions
   const renderBadgeItem = (badge: AwardBadge | null | undefined, alignment: 'left' | 'center' | 'right' = 'center') => {
@@ -145,6 +146,24 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/90 font-serif pointer-events-none select-none bg-stone-900/40 px-2 py-0.5 rounded">
               © SchirZan
             </div>
+          </div>
+
+          {/* Museum Beitext Plaque directly below Artwork */}
+          <div className="w-full mt-2.5 px-3 py-2 bg-[#faf8f5] border border-stone-200/90 rounded text-center">
+            <p className="text-xs sm:text-sm font-medium text-stone-900 leading-snug">
+              {currentLang === 'de'
+                ? (firstPhoto?.captionDe || series.titleDe)
+                : currentLang === 'fa'
+                ? (firstPhoto?.captionFa || series.titleFa)
+                : (firstPhoto?.captionEn || series.titleEn)}
+            </p>
+            <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-0.5">
+              {currentLang === 'de'
+                ? `Hauptwerk · Bild 01 von ${series.photos.length} · © SchirZan`
+                : currentLang === 'fa'
+                ? `اثر اصلی · تصویر ۰۱ از ${series.photos.length} · © شیرزن`
+                : `Lead Work · Image 01 of ${series.photos.length} · © SchirZan`}
+            </span>
           </div>
 
           {/* BOTTOM ROW: Equal Proportion Badges matching her email mockup */}

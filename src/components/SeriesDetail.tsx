@@ -219,8 +219,28 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
               </div>
 
+              {/* Direct Museum Beitext Plaque under Photo 1 */}
+              {(firstPhoto.captionDe || firstPhoto.captionFa || series.titleDe) && (
+                <div className="w-full p-3 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
+                  <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
+                    {currentLang === 'de'
+                      ? (firstPhoto.captionDe || series.titleDe)
+                      : currentLang === 'fa'
+                      ? (firstPhoto.captionFa || series.titleFa)
+                      : (firstPhoto.captionEn || series.titleEn)}
+                  </p>
+                  <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
+                    {currentLang === 'de'
+                      ? `Bild 01 von ${series.photos.length} · Hauptwerk (Prämiert) · © SchirZan`
+                      : currentLang === 'fa'
+                      ? `تصویر ۰۱ از ${series.photos.length} · اثر اصلی (برنده جوایز) · © شیرزن`
+                      : `Image 01 of ${series.photos.length} · Lead Work (Awarded) · © SchirZan`}
+                  </span>
+                </div>
+              )}
+
               {/* BOTTOM ROW: PERSPA (left), BIFA (center if present), IPA (right) */}
-              <div className="w-full pt-2 flex items-center justify-between flex-wrap gap-2.5 sm:gap-3">
+              <div className="w-full pt-1 flex items-center justify-between flex-wrap gap-2.5 sm:gap-3">
                 <div>{renderBadgeItem(perspaBadge, 'left')}</div>
                 {bifaBadge && (
                   <div className="flex-1 flex justify-center">
@@ -229,16 +249,6 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 )}
                 <div className="ml-auto">{renderBadgeItem(ipaBadge, 'right')}</div>
               </div>
-
-              {(firstPhoto.captionDe || firstPhoto.captionFa) && (
-                <p className="text-center text-xs text-stone-600 font-sans tracking-wide pt-2 font-medium">
-                  {currentLang === 'de'
-                    ? firstPhoto.captionDe
-                    : currentLang === 'fa'
-                    ? firstPhoto.captionFa
-                    : firstPhoto.captionEn}
-                </p>
-              )}
             </div>
 
             {/* SUBSEQUENT PHOTOS: CLEAN, UNINTERRUPTED, STRICTLY NO BADGES (as requested!) */}
@@ -281,13 +291,22 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
 
                 {(photo.captionDe || photo.captionFa) && (
-                  <p className="text-center text-xs text-stone-600 font-sans tracking-wide pt-2 font-medium">
-                    {currentLang === 'de'
-                      ? photo.captionDe
-                      : currentLang === 'fa'
-                      ? photo.captionFa
-                      : photo.captionEn}
-                  </p>
+                  <div className="max-w-xl mx-auto p-3 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
+                    <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
+                      {currentLang === 'de'
+                        ? photo.captionDe
+                        : currentLang === 'fa'
+                        ? photo.captionFa
+                        : photo.captionEn}
+                    </p>
+                    <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
+                      {currentLang === 'de'
+                        ? `Bild ${String(index + 2).padStart(2, '0')} von ${series.photos.length} · © SchirZan`
+                        : currentLang === 'fa'
+                        ? `تصویر ۰${index + 2} از ${series.photos.length} · © شیرزن`
+                        : `Image ${String(index + 2).padStart(2, '0')} of ${series.photos.length} · © SchirZan`}
+                    </span>
+                  </div>
                 )}
               </div>
             ))}

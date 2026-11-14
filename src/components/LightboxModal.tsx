@@ -120,16 +120,23 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           </div>
         </div>
 
-        {/* Caption */}
-        {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
-          <p className="text-center text-xs sm:text-sm text-stone-300 font-sans tracking-wide mt-3 max-w-2xl px-4 font-normal">
-            {currentLang === 'de'
-              ? currentPhoto.captionDe
-              : currentLang === 'fa'
-              ? currentPhoto.captionFa
-              : currentPhoto.captionEn}
-          </p>
-        )}
+        {/* Caption & Beitext */}
+        <div className="mt-3.5 max-w-2xl px-4 text-center space-y-1">
+          {currentPhoto.alt && (
+            <h4 className="text-sm sm:text-base font-serif font-bold text-white tracking-wide">
+              {currentPhoto.alt}
+            </h4>
+          )}
+          {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
+            <p className="text-xs sm:text-sm text-stone-300 font-sans tracking-wide leading-relaxed font-normal">
+              {currentLang === 'de'
+                ? currentPhoto.captionDe
+                : currentLang === 'fa'
+                ? currentPhoto.captionFa
+                : currentPhoto.captionEn}
+            </p>
+          )}
+        </div>
 
         {/* Optional External Donation / Fundraising Link */}
         {currentPhoto.externalLink && (

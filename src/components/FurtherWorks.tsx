@@ -140,7 +140,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
 
                 {/* Rich Curatorial Description */}
                 {(work.descriptionDe || work.descriptionEn) && (
-                  <p className="text-xs text-stone-600 mt-2 leading-relaxed line-clamp-3">
+                  <p className="text-xs text-stone-700 mt-2 leading-relaxed font-normal">
                     {currentLang === 'de'
                       ? work.descriptionDe
                       : currentLang === 'fa'

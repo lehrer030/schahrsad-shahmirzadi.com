@@ -30,44 +30,17 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
-                <a
-                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-stone-900 hover:text-amber-800 hover:underline inline-flex items-center gap-1"
-                  title="Wikipedia-Artikel: Schahrsad Shahmirzadi"
-                >
-                  <span>Schahrsad Shahmirzadi</span>
-                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W Wikipedia</span>
-                </a>{' '}
+                <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
                 verfügt über einen interdisziplinären Bildungs- und Berufsweg in den Bereichen Recht, Sicherheit und Umwelt mit einem Schwerpunkt im Wasserbereich.
               </>
             ) : currentLang === 'fa' ? (
               <>
-                <a
-                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-stone-900 hover:text-amber-800 hover:underline inline-flex items-center gap-1"
-                  title="مدخل ویکی‌پدیا: شهزاد شاهمیرزادی"
-                >
-                  <span>شهزاد شاهمیرزادی</span>
-                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W ویکی‌پدیا</span>
-                </a>{' '}
+                <strong className="font-semibold text-stone-900">شهزاد شاهمیرزادی</strong>{' '}
                 دارای پیشینه‌ای چندرشته‌ای در حوزه‌های حقوق، امنیت عمومی و علوم محیط‌زیست با گرایش تخصصی مدیریت منابع آب است.
               </>
             ) : (
               <>
-                <a
-                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-semibold text-stone-900 hover:text-amber-800 hover:underline inline-flex items-center gap-1"
-                  title="Wikipedia: Schahrsad Shahmirzadi"
-                >
-                  <span>Schahrsad Shahmirzadi</span>
-                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W Wikipedia</span>
-                </a>{' '}
+                <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
                 has an interdisciplinary academic and professional background in law, public security, and environmental sciences with a focus on water resource management.
               </>
             )}

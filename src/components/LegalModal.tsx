@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Mail, Scale } from 'lucide-react';
+import { X, Mail, Scale, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface LegalModalProps {
@@ -297,6 +297,44 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   : currentLang === 'en'
                   ? 'I reserve the right to update this Privacy Policy as necessary, for example, in response to changes in legislation or technical developments on this website.'
                   : 'Ich behalte mir das Recht vor, diese Datenschutzerklärung bei Bedarf anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen meiner Angebote in der Datenschutzerklärung umzusetzen.'}
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
+                {currentLang === 'fa'
+                  ? '۱۰. پیوندهای خارجی و ارجاعات دانشنامه‌ای (ویکی‌پدیا)'
+                  : currentLang === 'en'
+                  ? '10. External Links & Encyclopedic References (Wikipedia)'
+                  : '10. Externe Verlinkungen & Enzyklopädische Verweise (Wikipedia)'}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'این وب‌سایت حاوی پیوندهایی به وب‌سایت‌های خارجی شخص ثالث است، از جمله مقاله رسمی بیوگرافی در دانشنامه آزاد ویکی‌پدیا:'
+                  : currentLang === 'en'
+                  ? 'This website contains links to external third-party websites, including the official biographical entry on the free encyclopedia Wikipedia:'
+                  : 'Diese Website enthält Verlinkungen zu externen Websites Dritter, unter anderem zum offiziellen biographischen Eintrag in der freien Enzyklopädie Wikipedia:'}
+              </p>
+              <div className="mt-2.5 p-3 rounded-xl bg-stone-50 border border-stone-200 flex items-center justify-between gap-3">
+                <span className="text-xs font-serif font-medium text-stone-900">
+                  Wikipedia: Schahrsad Shahmirzadi
+                </span>
+                <a
+                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-950 transition-colors"
+                >
+                  <span>de.wikipedia.org/wiki/Schahrsad_Shahmirzadi</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+              <p className="text-[11px] text-stone-500 mt-2 leading-relaxed">
+                {currentLang === 'fa'
+                  ? 'هنگام کلیک بر روی پیوندهای خارجی، شما این وب‌سایت را ترک می‌کنید و داده‌ها طبق سیاست‌های حفاظت از داده‌های ارائه‌دهنده مربوطه (از جمله Wikimedia Foundation Inc.) پردازش می‌شوند.'
+                  : currentLang === 'en'
+                  ? 'Upon clicking external links, you leave this website and data processing is subject to the data protection policies of the respective external providers (including Wikimedia Foundation Inc.).'
+                  : 'Beim Aufruf externer Links verlassen Sie diese Website; die Datenverarbeitung unterliegt den Bestimmungen der jeweiligen Drittanbieter (u. a. Wikimedia Foundation Inc.).'}
               </p>
             </div>
           </div>

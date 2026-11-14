@@ -189,7 +189,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
 
                       {caption && (
                         <div className="p-3.5 flex-1 flex flex-col justify-between bg-white border-t border-stone-100">
-                          <p className="text-xs text-stone-800 leading-snug line-clamp-3 font-medium">
+                          <p className="text-xs text-stone-800 leading-relaxed font-medium">
                             {caption}
                           </p>
                           <span className="text-[11px] text-stone-400 mt-2 block">
@@ -301,7 +301,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   {caption && (
                     <div className="p-4 flex-1 flex flex-col justify-between bg-white border-t border-stone-100">
                       <div>
-                        <p className="text-xs sm:text-sm text-stone-800 leading-snug line-clamp-3 font-medium">
+                        <p className="text-xs sm:text-sm text-stone-800 leading-relaxed font-medium">
                           {caption}
                         </p>
                       </div>
@@ -413,7 +413,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
 
                   {caption && (
                     <div className="p-4 flex-1 flex flex-col justify-between bg-white border-t border-stone-100">
-                      <p className="text-xs sm:text-sm text-stone-800 leading-snug line-clamp-3 font-medium">
+                      <p className="text-xs sm:text-sm text-stone-800 leading-relaxed font-medium">
                         {caption}
                       </p>
                       <span className="text-[11px] text-stone-400 mt-2 block">
