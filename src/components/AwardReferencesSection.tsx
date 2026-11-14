@@ -19,7 +19,57 @@ interface AwardEntry {
   categoryFa?: string;
   zoomUrl?: string;
   badge?: string;
+  image?: string;
 }
+
+export const AWARD_WORK_THUMBNAILS: Record<string, string> = {
+  'Architectural Piano': '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
+  'Berlin: Attack on Queer, Diversity and Freedom': '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+  'Between Space and Time': '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
+  'Black & White Solitaire': '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+  'Black Red Gold – Office of the Federal President of Germany': '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
+  'Blessed Are Those Who Mourn': '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+  'Cloud Mirror Architecture I: Heaven’s Bridge': '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+  'Cloud Mirror Architecture II: Stormy Sea (Black & White)': '/images/2026_10_amp-2026-cloud-mirror-ii-bw-01-scaled.webp',
+  'Columns in the Here and Now': '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+  'Dimensions of Sustainability': '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+  'Echoes of a Water Tower': '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+  'Elegance of Structure – An Interior Symphony of Light, Forms and Lines': '/images/2026_10_amp-2026-elegance-interior-symphony-01-scaled.webp',
+  'Elegance of Structure – Black and White': '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+  'Fragments of Memory – Fragments of Time': '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
+  'Hephaestus’ Legacy': '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+  'In-Between Spaces': '/images/2026_07_In-Between-Spaces-scaled.jpg',
+  'In-Between Spaces (Area 14)': '/images/2026_07_In-Between-Spaces-scaled.jpg',
+  'Kickboxing – From Fighting in the Ring to Lightning in the Frame': '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
+  'LIFE – LOVE – FREEDOM · IRAN': '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+  'Mirrored': '/images/2026_10_amp-2026-razor-pull-berlin-02-scaled.webp',
+  'Mirrored II': '/images/2026_10_amp-2026-razor-pull-berlin-04-scaled.webp',
+  'Mirrored III (Black & White)': '/images/2026_10_amp-2026-razor-pull-berlin-05-scaled.webp',
+  'Prismatic Berlin': '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+  'Razor Pull Berlin': '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+  'Steps of Sustainability': '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
+  'Symmetric Networks': '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
+  'The Dignity of the Animal is Inviolable': '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
+  'The Solitaire as Abstraction – In Harmony with Nature': '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+  'The Solitaire as an Abstraction': '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+  'The Solitaire as an Abstraction (Revised)': '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+  'The Solitaire as an Abstraction (Short Version)': '/images/2026_10_amp-2026-winner-solitaire-revised-02-scaled.webp',
+  'The Solitaire as an Abstraction – New Perspectives': '/images/2026_10_amp-2026-winner-solitaire-revised-03-scaled.webp',
+  'Transformer': '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp'
+};
+
+export const getAwardWorkImage = (title: string, itemImg?: string): string | undefined => {
+  if (itemImg) return itemImg;
+  if (AWARD_WORK_THUMBNAILS[title]) return AWARD_WORK_THUMBNAILS[title];
+  const cleanTitle = title.trim().toLowerCase();
+  for (const [k, v] of Object.entries(AWARD_WORK_THUMBNAILS)) {
+    const cleanKey = k.toLowerCase();
+    if (cleanKey === cleanTitle || cleanTitle.includes(cleanKey) || cleanKey.includes(cleanTitle)) {
+      return v;
+    }
+  }
+  return undefined;
+};
 
 interface CompetitionItem {
   id: string;
@@ -832,35 +882,54 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                       </div>
 
                       {/* List of awarded works */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-                        {honorGroup.items.map((item, itemIdx) => (
-                          <div
-                            key={itemIdx}
-                            className="bg-white p-3 rounded-xl border border-stone-200/70 flex items-start justify-between gap-3 hover:border-amber-700/50 transition-colors group"
-                          >
-                            <div className="space-y-0.5 min-w-0">
-                              <h5 className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors truncate">
-                                {item.title}
-                              </h5>
-                              <p className="text-[11px] text-stone-500 font-mono truncate">
-                                {currentLang === 'fa' && item.categoryFa ? item.categoryFa : item.category}
-                              </p>
-                            </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {honorGroup.items.map((item, itemIdx) => {
+                          const thumbImg = getAwardWorkImage(item.title, item.image);
 
-                            {item.zoomUrl && (
-                              <a
-                                href={item.zoomUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white transition-colors text-[10px] font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
-                                title="Offizielle Verifikation ansehen"
-                              >
-                                <span>{currentLang === 'fa' ? 'استعلام' : 'Verifizieren'}</span>
-                                <ExternalLink className="w-3 h-3" />
-                              </a>
-                            )}
-                          </div>
-                        ))}
+                          return (
+                            <div
+                              key={itemIdx}
+                              className="bg-white p-2.5 sm:p-3 rounded-xl border border-stone-200/70 flex items-center justify-between gap-3 hover:border-amber-700/50 hover:shadow-sm transition-all group"
+                            >
+                              <div className="flex items-center gap-3 min-w-0 flex-1">
+                                {thumbImg && (
+                                  <div className="w-13 h-13 sm:w-16 sm:h-16 rounded-lg overflow-hidden bg-stone-100 shrink-0 border border-stone-200/80 shadow-2xs relative">
+                                    <img
+                                      src={resolveAsset(thumbImg)}
+                                      alt={item.title}
+                                      loading="lazy"
+                                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
+                                  </div>
+                                )}
+                                <div className="space-y-0.5 min-w-0 flex-1">
+                                  <h5
+                                    className="font-serif font-bold text-xs sm:text-sm text-stone-900 group-hover:text-amber-900 transition-colors line-clamp-1 sm:truncate"
+                                    title={item.title}
+                                  >
+                                    {item.title}
+                                  </h5>
+                                  <p className="text-[11px] text-stone-500 font-mono line-clamp-1 sm:truncate">
+                                    {currentLang === 'fa' && item.categoryFa ? item.categoryFa : item.category}
+                                  </p>
+                                </div>
+                              </div>
+
+                              {item.zoomUrl && (
+                                <a
+                                  href={item.zoomUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white transition-colors text-[10px] font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
+                                  title="Offizielle Verifikation ansehen"
+                                >
+                                  <span>{currentLang === 'fa' ? 'استعلام' : 'Verifizieren'}</span>
+                                  <ExternalLink className="w-3 h-3" />
+                                </a>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   );
