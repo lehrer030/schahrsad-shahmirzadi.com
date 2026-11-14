@@ -826,7 +826,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                 : 'International Photography Award References & Directory'}
           </h2>
 
-          <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
+          <p className="text-xs sm:text-[13px] text-stone-500 leading-relaxed font-normal pt-1">
             {currentLang === 'de'
               ? 'Vollständige Übersicht aller internationalen Fotopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
               : currentLang === 'fa'

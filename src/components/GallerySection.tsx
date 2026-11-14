@@ -18,9 +18,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   return (
     <section id="gallery" className="scroll-mt-24 pt-6 border-t border-stone-200">
       {/* Section Top Header */}
-      <div className="border-b border-stone-200 pb-5 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-        <div>
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-stone-100 text-stone-700 text-xs font-medium uppercase tracking-wider mb-2">
+      <div className="border-b border-stone-200 pb-4 mb-8">
+        <div className="space-y-1.5 max-w-2xl">
+          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-stone-100 text-stone-700 text-xs font-medium uppercase tracking-wider">
             <Trophy className="w-3.5 h-3.5 text-amber-600" />
             <span>
               {currentLang === 'de'
@@ -30,21 +30,21 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                 : 'Original WordPress Gallery'}
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
             {currentLang === 'de'
               ? 'Galerie: Sport, Engagement & IPA Athen'
               : currentLang === 'fa'
               ? 'گالری: ورزش، فعالیت اجتماعی و فستیوال آتن'
               : 'Gallery: Sports, Advocacy & IPA Athens'}
           </h2>
+          <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+            {currentLang === 'de'
+              ? 'Dokumentarische Aufnahmen, Weltmeister-Video und Impressionen der internationalen Preisverleihung.'
+              : currentLang === 'fa'
+              ? 'تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی.'
+              : 'Documentary photography, world champion video, and international award gala impressions.'}
+          </p>
         </div>
-        <p className="text-xs sm:text-sm text-stone-700 max-w-xl font-normal">
-          {currentLang === 'de'
-            ? 'Dokumentarische Aufnahmen, Weltmeister-Video und Impressionen der internationalen Preisverleihung.'
-            : currentLang === 'fa'
-            ? 'تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی.'
-            : 'Documentary photography, world champion video, and international award gala impressions.'}
-        </p>
       </div>
 
       <div className="space-y-16 sm:space-y-24">
@@ -214,9 +214,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
             BLOCK 2: RUNNING (MARATHON & ADVOCACY)
            ========================================================================= */}
         <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 border-b border-stone-200 pb-4">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mb-1">
+          <div className="border-b border-stone-200 pb-4">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="text-xs font-semibold uppercase tracking-wider text-stone-500">
                 {currentLang === 'de'
                   ? running.subtitleDe
                   : currentLang === 'fa'
@@ -230,14 +230,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   ? running.titleFa
                   : running.titleEn}
               </h3>
+              <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                {currentLang === 'de'
+                  ? running.descriptionDe
+                  : currentLang === 'fa'
+                  ? running.descriptionFa
+                  : running.descriptionEn}
+              </p>
             </div>
-            <p className="text-xs sm:text-sm text-stone-600 max-w-xl">
-              {currentLang === 'de'
-                ? running.descriptionDe
-                : currentLang === 'fa'
-                ? running.descriptionFa
-                : running.descriptionEn}
-            </p>
           </div>
 
           {/* Running Gallery Grid: 4 columns desktop, 2 mobile */}
@@ -346,9 +346,9 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
             BLOCK 3: ATHENS IPA GALA 2025
            ========================================================================= */}
         <div className="space-y-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 border-b border-stone-200 pb-4">
-            <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-700 mb-1">
+          <div className="border-b border-stone-200 pb-4">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-amber-700">
                 <Award className="w-4 h-4 text-amber-600" />
                 <span>
                   {currentLang === 'de'
@@ -365,14 +365,14 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   ? athensGala.titleFa
                   : athensGala.titleEn}
               </h3>
+              <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                {currentLang === 'de'
+                  ? athensGala.descriptionDe
+                  : currentLang === 'fa'
+                  ? athensGala.descriptionFa
+                  : athensGala.descriptionEn}
+              </p>
             </div>
-            <p className="text-xs sm:text-sm text-stone-600 max-w-xl">
-              {currentLang === 'de'
-                ? athensGala.descriptionDe
-                : currentLang === 'fa'
-                ? athensGala.descriptionFa
-                : athensGala.descriptionEn}
-            </p>
           </div>
 
           {/* Athens Gallery Grid: 3 columns desktop, 2 mobile */}

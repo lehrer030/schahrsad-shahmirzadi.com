@@ -199,15 +199,15 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             <div className="space-y-2">
               <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-serif text-stone-900 font-bold leading-snug tracking-normal text-balance">
                 {currentLang === 'fa' ? (
-                  'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
+                  'شهزاد شاهمیرزادی · شیرزن – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
                 ) : currentLang === 'en' ? (
                   <>
-                    Schahrsad Shahmirzadi (SchirZan) –{' '}
+                    Schahrsad Shahmirzadi · SchirZan –{' '}
                     <span className="whitespace-nowrap">10-Time</span> Kickboxing World Champion
                   </>
                 ) : (
                   <>
-                    Schahrsad Shahmirzadi (SchirZan) –{' '}
+                    Schahrsad Shahmirzadi · SchirZan –{' '}
                     <span className="whitespace-nowrap">10-fache</span> Kickbox-Weltmeisterin
                   </>
                 )}
@@ -220,7 +220,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </div>
             </div>
 
-            <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
+            <p className="text-xs sm:text-[13px] text-stone-500 leading-relaxed font-normal pt-1">
               {currentLang === 'fa'
                 ? 'در طول دوران فعالیت قهرمانی، شهزاد شاهمیرزادی یکی از موفق‌ترین بانوان کیک‌بوکسینگ تاریخ آلمان به شمار می‌رفت. ورزش برای او کانون انضباط، استقامت و تمرکز ذهنی سازش‌ناپذیر بود که در زیبایی‌شناسی عکاسی او نیز متجلی است.'
                 : currentLang === 'en'
