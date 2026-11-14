@@ -8,12 +8,10 @@ import {
   Camera,
   Trophy,
   Heart,
-  ArrowDown,
   Award,
   Sparkles
 } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
-import { scrollToElementWithOffset } from '../utils/scrollHelper';
 
 interface HeaderIntroProps {
   currentLang: Language;
@@ -33,10 +31,6 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
     captionDe: 'Schahrsad Shahmirzadi · Künstlername SchirZan – Porträt photographiert von Steve Barret',
     captionEn: 'Schahrsad Shahmirzadi · Artist name SchirZan – Portrait by Steve Barret',
     captionFa: 'شهزاد شاهمیرزادی · نام هنری شیرزن – پرتره عکاسی‌شده توسط استیو بارت'
-  };
-
-  const handleScrollToWorks = () => {
-    scrollToElementWithOffset('architecture', 50);
   };
 
   return (
@@ -337,47 +331,31 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
            ========================================================================= */}
         <div className="pt-8 sm:pt-10 border-t border-stone-200 space-y-6">
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-            <div className="space-y-2 max-w-3xl">
-              <div className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-500 flex items-center gap-1.5">
-                <Award className="w-3.5 h-3.5 text-amber-700" />
-                <span>
-                  {currentLang === 'de'
-                    ? 'Werkverzeichnis, Auszeichnungen & Jurys'
-                    : currentLang === 'fa'
-                    ? 'کاتالوگ آثار، جوایز و داوری‌های بین‌المللی'
-                    : 'Catalog of Works, Honors & International Juror Panels'}
-                </span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-                {currentLang === 'de'
-                  ? 'Photographie · Werke & Internationale Auszeichnungen'
-                  : currentLang === 'fa'
-                  ? 'عکاسی · آثار و جوایز بین‌المللی'
-                  : 'Photography · Works & International Awards'}
-              </h2>
-              <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
-                {currentLang === 'de'
-                  ? 'Katalog der kuratorischen Bilderserien, Architekturobjekte und verifizierten Auszeichnungen ab Werk 01.'
-                  : currentLang === 'fa'
-                  ? 'مجموعه آثار عکاسی معماری، انتزاع‌های شهری و مدارک رسمی مسابقات جهانی از بخش ۰۱.'
-                  : 'Catalog of curated fine art series, architectural abstractions, and verified award compendiums starting at Section 01.'}
-              </p>
-            </div>
-
-            <button
-              onClick={handleScrollToWorks}
-              className="inline-flex items-center gap-2 self-start lg:self-auto px-4 py-2.5 rounded-lg bg-stone-900 text-white hover:bg-stone-800 transition-colors text-xs sm:text-sm font-medium shadow-xs cursor-pointer group shrink-0"
-            >
+          <div className="space-y-2 max-w-3xl">
+            <div className="text-[11px] font-mono tracking-[0.2em] uppercase text-stone-500 flex items-center gap-1.5">
+              <Award className="w-3.5 h-3.5 text-amber-700" />
               <span>
                 {currentLang === 'de'
-                  ? 'Zu den Werken (01)'
+                  ? 'Werkverzeichnis, Auszeichnungen & Jurys'
                   : currentLang === 'fa'
-                  ? 'مشاهده آثار (۰۱)'
-                  : 'Explore Works (01)'}
+                  ? 'کاتالوگ آثار، جوایز و داوری‌های بین‌المللی'
+                  : 'Catalog of Works, Honors & International Juror Panels'}
               </span>
-              <ArrowDown className="w-4 h-4 text-amber-400 group-hover:translate-y-0.5 transition-transform" />
-            </button>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
+              {currentLang === 'de'
+                ? 'Photographie · Werke & Internationale Auszeichnungen'
+                : currentLang === 'fa'
+                ? 'عکاسی · آثار و جوایز بین‌المللی'
+                : 'Photography · Works & International Awards'}
+            </h2>
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
+              {currentLang === 'de'
+                ? 'Katalog der kuratorischen Bilderserien, Architekturobjekte und verifizierten Auszeichnungen ab Werk 01.'
+                : currentLang === 'fa'
+                ? 'مجموعه آثار عکاسی معماری، انتزاع‌های شهری و مدارک رسمی مسابقات جهانی از بخش ۰۱.'
+                : 'Catalog of curated fine art series, architectural abstractions, and verified award compendiums starting at Section 01.'}
+            </p>
           </div>
 
           {/* Award-Winning Competitions Register */}
