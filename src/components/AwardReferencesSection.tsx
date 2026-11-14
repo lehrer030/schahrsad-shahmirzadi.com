@@ -501,7 +501,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Internationales Festival in Triest, Italien. Ausgewählt für die kuratierte Hauptausstellung im historischen Mercato Coperto.',
     scopeEn: 'Renowned international festival in Trieste, Italy. Selected photographer for curated exhibition at the historic Mercato Coperto.',
     scopeFa: 'فستیوال بین‌المللی عکاسی در تریست ایتالیا و نمایشگاه برگزیدگان در مرکاتو کوپرتو.',
-    badgeImage: '/images/2025_09_image00011.webp',
+    badgeImage: '/images/URBAN-Photo-Awards-2026-2.png',
     mainDirectoryUrl: 'https://www.urbanphotoawards.com/en/photonew/?id=333556%2Fschirzan%2Fin-between-spaces',
     honors: [
       {
