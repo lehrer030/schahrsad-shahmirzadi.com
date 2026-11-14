@@ -58,56 +58,8 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     category: 'architecture'
   },
   {
-    id: 'publications',
-    num: '02',
-    labelEn: "Photography, Editor's Choice, Videos & E-Books",
-    labelDe: "Fotografie, Editor's Choice, Videos & E-Books",
-    labelFa: 'عکاسی، انتخاب سردبیر، ویدیوها و کتاب‌ها',
-    shortDe: 'Publikationen',
-    shortEn: 'Publications',
-    shortFa: 'نشریات',
-    targetId: 'publications',
-    category: 'press'
-  },
-  {
-    id: 'exhibitions',
-    num: '03',
-    labelEn: 'Exhibitions',
-    labelDe: 'Ausstellungen 2026',
-    labelFa: 'نمایشگاه‌ها',
-    shortDe: 'Ausstellungen',
-    shortEn: 'Exhibitions',
-    shortFa: 'نمایشگاه‌ها',
-    targetId: 'exhibitions',
-    category: 'press'
-  },
-  {
-    id: 'award-references',
-    num: '04',
-    labelEn: 'International Photography Award References',
-    labelDe: 'Internationale Fotopreis-Referenzen & Awards',
-    labelFa: 'مراجع جوایز بین‌المللی عکاسی',
-    shortDe: 'Awards',
-    shortEn: 'Awards',
-    shortFa: 'جوایز',
-    targetId: 'award-references',
-    category: 'press'
-  },
-  {
-    id: 'press',
-    num: '05',
-    labelEn: 'Press',
-    labelDe: 'Presse & Medienberichte',
-    labelFa: 'مطبوعات و رسانه‌ها',
-    shortDe: 'Presse',
-    shortEn: 'Press',
-    shortFa: 'مطبوعات',
-    targetId: 'press',
-    category: 'press'
-  },
-  {
     id: 'kickboxing',
-    num: '06',
+    num: '02',
     labelEn: 'World Champion Kickboxing',
     labelDe: '10-fache Kickbox-Weltmeisterin',
     labelFa: 'قهرمانی جهان کیک‌بوکسینگ',
@@ -118,20 +70,8 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     category: 'kickboxing'
   },
   {
-    id: 'engagement',
-    num: '07',
-    labelEn: 'Committed to Environmental Protection, Human Rights and Peace',
-    labelDe: 'Einsatz für Umweltschutz, Menschenrechte & Frieden',
-    labelFa: 'تعهد به محیط زیست، حقوق بشر و صلح',
-    shortDe: 'Engagement',
-    shortEn: 'Advocacy',
-    shortFa: 'فعالیت‌ها',
-    targetId: 'engagement',
-    category: 'biography'
-  },
-  {
     id: 'education',
-    num: '08',
+    num: '03',
     labelEn: 'Interdisciplinary Academic Education',
     labelDe: 'Interdisziplinärer akademischer Bildungsweg',
     labelFa: 'تحصیلات دانشگاهی بین‌رشته‌ای',
@@ -142,8 +82,92 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     category: 'biography'
   },
   {
-    id: 'contact',
+    id: 'engagement',
+    num: '04',
+    labelEn: 'Committed to Environmental Protection, Human Rights and Peace',
+    labelDe: 'Einsatz für Umweltschutz, Menschenrechte & Frieden',
+    labelFa: 'تعهد به محیط زیست، حقوق بشر و صلح',
+    shortDe: 'Engagement',
+    shortEn: 'Advocacy',
+    shortFa: 'فعالیت‌ها',
+    targetId: 'engagement',
+    category: 'biography'
+  },
+  {
+    id: 'biography',
+    num: '05',
+    labelEn: 'Biography & Career',
+    labelDe: 'Biografie & Werdegang',
+    labelFa: 'زندگی‌نامه',
+    shortDe: 'Biografie',
+    shortEn: 'Biography',
+    shortFa: 'زندگی‌نامه',
+    targetId: 'biography-profile',
+    category: 'biography'
+  },
+  {
+    id: 'press',
+    num: '06',
+    labelEn: 'Press & Media Reports',
+    labelDe: 'Presse & Medienberichte',
+    labelFa: 'مطبوعات و رسانه‌ها',
+    shortDe: 'Presse',
+    shortEn: 'Press',
+    shortFa: 'مطبوعات',
+    targetId: 'press',
+    category: 'press'
+  },
+  {
+    id: 'exhibitions',
+    num: '07',
+    labelEn: 'Exhibitions',
+    labelDe: 'Ausstellungen 2026',
+    labelFa: 'نمایشگاه‌ها',
+    shortDe: 'Ausstellungen',
+    shortEn: 'Exhibitions',
+    shortFa: 'نمایشگاه‌ها',
+    targetId: 'exhibitions',
+    category: 'press'
+  },
+  {
+    id: 'publications',
+    num: '08',
+    labelEn: "Photography, Editor's Choice, Videos & E-Books",
+    labelDe: "Fotografie, Editor's Choice, Videos & E-Books",
+    labelFa: 'عکاسی، انتخاب سردبیر، ویدیوها و کتاب‌ها',
+    shortDe: 'Publikationen',
+    shortEn: 'Publications',
+    shortFa: 'نشریات',
+    targetId: 'publications',
+    category: 'press'
+  },
+  {
+    id: 'award-references',
     num: '09',
+    labelEn: 'International Photography Award References',
+    labelDe: 'Internationale Fotopreis-Referenzen & Awards',
+    labelFa: 'مراجع جوایز بین‌المللی عکاسی',
+    shortDe: 'Awards',
+    shortEn: 'Awards',
+    shortFa: 'جوایز',
+    targetId: 'award-references',
+    category: 'press'
+  },
+  {
+    id: 'gallery',
+    num: '10',
+    labelEn: 'Gallery: Sports, Advocacy & IPA Athens',
+    labelDe: 'Galerie: Sport, Engagement & IPA Athen',
+    labelFa: 'گالری',
+    shortDe: 'Galerie',
+    shortEn: 'Gallery',
+    shortFa: 'گالری',
+    targetId: 'gallery',
+    category: 'gallery'
+  },
+  {
+    id: 'contact',
+    num: '11',
     labelEn: 'Contact',
     labelDe: 'Kontakt & Anfragen',
     labelFa: 'تماس و اخذ مجوز',
@@ -152,30 +176,6 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
     shortFa: 'تماس',
     targetId: 'contact',
     isContact: true
-  },
-  {
-    id: 'biography',
-    num: '10',
-    labelEn: 'Biography',
-    labelDe: 'Biografie & Vita',
-    labelFa: 'زندگی‌نامه',
-    shortDe: 'Biografie',
-    shortEn: 'Biography',
-    shortFa: 'زندگی‌نامه',
-    targetId: 'biography',
-    category: 'biography'
-  },
-  {
-    id: 'gallery',
-    num: '11',
-    labelEn: 'Gallery',
-    labelDe: 'Galerie & Impressionen',
-    labelFa: 'گالری',
-    shortDe: 'Galerie',
-    shortEn: 'Gallery',
-    shortFa: 'گالری',
-    targetId: 'gallery',
-    category: 'gallery'
   }
 ];
 
@@ -190,7 +190,7 @@ export const SCROLL_CHECKPOINTS: ScrollCheckpoint[] = [
   { menuId: 'works', domId: 'social-environmental' },
   { menuId: 'works', domId: 'portraits' },
   { menuId: 'kickboxing', domId: 'kickboxing' },
-  { menuId: 'biography', domId: 'biography' },
+  { menuId: 'education', domId: 'biography' },
   { menuId: 'education', domId: 'education' },
   { menuId: 'engagement', domId: 'engagement' },
   { menuId: 'biography', domId: 'biography-profile' },

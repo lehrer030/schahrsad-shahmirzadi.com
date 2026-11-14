@@ -88,11 +88,11 @@ export default function App() {
       const target = e.target as HTMLElement | null;
       if (!target) return;
 
-      const isArtworkImage = 
-        target.tagName === 'IMG' || 
-        target.closest('img') || 
-        target.closest('.group\\/img') || 
-        target.closest('.group\\/photo') || 
+      const isArtworkImage =
+        target.tagName === 'IMG' ||
+        target.closest('img') ||
+        target.closest('.group\\/img') ||
+        target.closest('.group\\/photo') ||
         target.closest('.group\\/first') ||
         target.classList.contains('protected-art');
 
@@ -302,8 +302,8 @@ export default function App() {
       />
 
       {/* Main Header & Artist Intro Section with prominent Steve Barret portrait */}
-      <HeaderIntro 
-        currentLang={currentLang} 
+      <HeaderIntro
+        currentLang={currentLang}
         onOpenLightbox={handleOpenLightbox}
       />
 
@@ -314,223 +314,223 @@ export default function App() {
             All sections are accessible sequentially on one page with smooth scroll!
            ========================================================================= */}
         <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
-            
-            {/* -------------------------------------------------------------
+
+          {/* -------------------------------------------------------------
                 SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
                ------------------------------------------------------------- */}
-            <section id="architecture" className="scroll-mt-24 pt-4">
-              
-              {/* Category Sticky Heading / Divider */}
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
-                      : currentLang === 'fa'
+          <section id="architecture" className="scroll-mt-24 pt-4">
+
+            {/* Category Sticky Heading / Divider */}
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Prämierte Architekturfotografien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
+                    : currentLang === 'fa'
                       ? 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
                       : 'Award-winning architectural photography focusing on solitary structures and geometric forms.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
-              <div className="mb-12">
-                <ArtworkCard
-                  series={SOLITAIRE_SERIES_1}
-                  onOpenSeries={handleOpenSeries}
-                  onOpenLightbox={handleOpenLightbox}
-                  currentLang={currentLang}
-                />
-              </div>
-
-              {/* Series 2: The Solitaire as an Abstraction (Revised) (5 photos) */}
-              <div className="mb-12">
-                <ArtworkCard
-                  series={SOLITAIRE_SERIES_2}
-                  onOpenSeries={handleOpenSeries}
-                  onOpenLightbox={handleOpenLightbox}
-                  currentLang={currentLang}
-                />
-              </div>
-
-              {/* Further Works in Architecture */}
-              <FurtherWorks
-                works={FURTHER_WORKS_ARCHITECTURE}
-                currentLang={currentLang}
-                sectionTitleDe="Weitere Arbeiten der Architektur"
-                sectionTitleEn="Further Works in Architecture"
-                sectionTitleFa="سایر آثار معماری"
-                onOpenLightbox={handleOpenLightbox}
+            {/* Series 1: The Solitaire as Abstraction – In Harmony with Nature (7 photos) */}
+            <div className="mb-12">
+              <ArtworkCard
+                series={SOLITAIRE_SERIES_1}
                 onOpenSeries={handleOpenSeries}
+                onOpenLightbox={handleOpenLightbox}
+                currentLang={currentLang}
               />
-            </section>
+            </div>
+
+            {/* Series 2: The Solitaire as an Abstraction (Revised) (5 photos) */}
+            <div className="mb-12">
+              <ArtworkCard
+                series={SOLITAIRE_SERIES_2}
+                onOpenSeries={handleOpenSeries}
+                onOpenLightbox={handleOpenLightbox}
+                currentLang={currentLang}
+              />
+            </div>
+
+            {/* Further Works in Architecture */}
+            <FurtherWorks
+              works={FURTHER_WORKS_ARCHITECTURE}
+              currentLang={currentLang}
+              sectionTitleDe="Weitere Arbeiten der Architektur"
+              sectionTitleEn="Further Works in Architecture"
+              sectionTitleFa="سایر آثار معماری"
+              onOpenLightbox={handleOpenLightbox}
+              onOpenSeries={handleOpenSeries}
+            />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 2: FINE ART
                ------------------------------------------------------------- */}
-            <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
-                      : currentLang === 'fa'
+          <section id="fine-art" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Fotografische Arbeiten im Bereich Fine Art und Bildkomposition.'
+                    : currentLang === 'fa'
                       ? 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
                       : 'Photographic works in fine art and visual composition.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              <FurtherWorks
-                works={FINE_ART_WORKS}
-                currentLang={currentLang}
-                sectionTitleDe="Fine Art – Werkserien"
-                sectionTitleEn="Fine Art – Series"
-                sectionTitleFa="هنرهای زیبا – مجموعه‌ها"
-                onOpenLightbox={handleOpenLightbox}
-                onOpenSeries={handleOpenSeries}
-              />
-            </section>
+            <FurtherWorks
+              works={FINE_ART_WORKS}
+              currentLang={currentLang}
+              sectionTitleDe="Fine Art – Werkserien"
+              sectionTitleEn="Fine Art – Series"
+              sectionTitleFa="هنرهای زیبا – مجموعه‌ها"
+              onOpenLightbox={handleOpenLightbox}
+              onOpenSeries={handleOpenSeries}
+            />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-            <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
-                      : currentLang === 'fa'
+          <section id="social-environmental" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Fotografische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
+                    : currentLang === 'fa'
                       ? 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
                       : 'Photographic documentation on human rights, social issues, and animal welfare.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              <FurtherWorks
-                works={SOCIAL_ENVIRONMENTAL_WORKS}
-                currentLang={currentLang}
-                sectionTitleDe="Social & Environmental Themes – Werkserien"
-                sectionTitleEn="Social and Environmental Themes – Series"
-                sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – مجموعه‌ها"
-                onOpenLightbox={handleOpenLightbox}
-                onOpenSeries={handleOpenSeries}
-              />
-            </section>
+            <FurtherWorks
+              works={SOCIAL_ENVIRONMENTAL_WORKS}
+              currentLang={currentLang}
+              sectionTitleDe="Social & Environmental Themes – Werkserien"
+              sectionTitleEn="Social and Environmental Themes – Series"
+              sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – مجموعه‌ها"
+              onOpenLightbox={handleOpenLightbox}
+              onOpenSeries={handleOpenSeries}
+            />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 4: PORTRAITS
                ------------------------------------------------------------- */}
-            <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Fotografische Porträts und Selbstporträts.'
-                      : currentLang === 'fa'
+          <section id="portraits" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Fotografische Porträts und Selbstporträts.'
+                    : currentLang === 'fa'
                       ? 'پرتره‌ها و خودنگاره‌های عکاسی.'
                       : 'Photographic portraits and self-portraits.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              <FurtherWorks
-                works={PORTRAIT_WORKS}
-                currentLang={currentLang}
-                sectionTitleDe="Porträts & Selbstporträts"
-                sectionTitleEn="Portraits & Self-Portraits"
-                sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
-                onOpenLightbox={handleOpenLightbox}
-                onOpenSeries={handleOpenSeries}
-              />
-            </section>
+            <FurtherWorks
+              works={PORTRAIT_WORKS}
+              currentLang={currentLang}
+              sectionTitleDe="Porträts & Selbstporträts"
+              sectionTitleEn="Portraits & Self-Portraits"
+              sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
+              onOpenLightbox={handleOpenLightbox}
+              onOpenSeries={handleOpenSeries}
+            />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 5: WORLD CHAMPION KICKBOXING (FULL 10X WORLD CHAMPION HISTORY)
                ------------------------------------------------------------- */}
-            <KickboxingFullSection currentLang={currentLang} />
+          <KickboxingFullSection currentLang={currentLang} />
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 6: PRESERVED WORDPRESS CONTENT: BIOGRAPHY & COMMITMENT
                ------------------------------------------------------------- */}
-            <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
-                      : currentLang === 'fa'
+          <section id="biography" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Vita & Engagement' : currentLang === 'fa' ? 'زندگی‌نامه و تعهدات' : 'Vita & Commitment'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.'
+                    : currentLang === 'fa'
                       ? 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
                       : 'Biography, academic career, kickboxing achievements, and community engagement.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              <ArtistVita currentLang={currentLang} />
-            </section>
+            <ArtistVita currentLang={currentLang} />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 6: PRESERVED WORDPRESS CONTENT: PRESS & MEDIA
                ------------------------------------------------------------- */}
-            <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
-              <div className="border-b border-stone-200 pb-4 mb-8">
-                <div className="space-y-1.5 max-w-2xl">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-                    {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
-                  </h2>
-                  <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-                    {currentLang === 'de'
-                      ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
-                      : currentLang === 'fa'
+          <section id="press" className="scroll-mt-24 pt-6 border-t border-stone-200">
+            <div className="border-b border-stone-200 pb-4 mb-8">
+              <div className="space-y-1.5 max-w-2xl">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+                  {currentLang === 'de' ? 'Presse & Medien' : currentLang === 'fa' ? 'رسانه‌ها و مطبوعات' : 'Press & Media'}
+                </h2>
+                <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
+                  {currentLang === 'de'
+                    ? 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.'
+                    : currentLang === 'fa'
                       ? 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
                       : 'International publications, press features, and official award catalogues.'}
-                  </p>
-                </div>
+                </p>
               </div>
+            </div>
 
-              <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
-            </section>
+            <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
+          </section>
 
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
                ------------------------------------------------------------- */}
-            <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
-              <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
-              <AwardReferencesSection currentLang={currentLang} />
-            </section>
+          <section id="award-references" className="scroll-mt-24 pt-6 border-t border-stone-200 relative">
+            <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
+            <AwardReferencesSection currentLang={currentLang} />
+          </section>
 
-            {/* -------------------------------------------------------------
+          {/* -------------------------------------------------------------
                 SECTION 7: GALLERY (WORDPRESS ORIGINAL: KICKBOXING VIDEO, RUNNING & IPA ATHENS GALA)
                ------------------------------------------------------------- */}
-            <GallerySection
-              currentLang={currentLang}
-              onOpenLightbox={handleOpenLightbox}
-            />
+          <GallerySection
+            currentLang={currentLang}
+            onOpenLightbox={handleOpenLightbox}
+          />
 
-          </div>
+        </div>
       </main>
 
       {/* Global Footer */}
