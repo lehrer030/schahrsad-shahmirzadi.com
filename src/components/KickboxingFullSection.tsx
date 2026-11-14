@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Trophy,
-  Flame,
   Award,
   ExternalLink,
   Shield,
@@ -186,39 +185,46 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
     <section id="kickboxing" className="scroll-mt-24 pt-8 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
       
-      {/* Top Banner / Quote Header */}
-      <div className="bg-stone-900 text-white rounded-3xl p-6 sm:p-10 lg:p-12 mb-12 shadow-sm relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-amber-600/10 rounded-full blur-3xl pointer-events-none" />
-        
-        <div className="relative z-10 max-w-4xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono uppercase tracking-widest border border-amber-500/30">
-            <Flame className="w-3.5 h-3.5 text-amber-400" />
-            <span>
-              {currentLang === 'fa' ? 'پیشینه و افتخارات ورزشی' : 'World Champion Kickboxing'}
-            </span>
+      {/* Editorial Section Header */}
+      <div className="border-b border-stone-200 pb-8 mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+          <div className="space-y-3 max-w-3xl">
+            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+              <Trophy className="w-3.5 h-3.5 text-amber-700" />
+              <span>
+                {currentLang === 'fa' ? 'پیشینه ورزشی و قهرمانی' : 'Sportliche Laufbahn & Weltmeistertitel'}
+              </span>
+            </div>
+
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+              {currentLang === 'fa'
+                ? 'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
+                : currentLang === 'en'
+                ? 'Schahrsad Shahmirzadi (SchirZan) – 10-Time Kickboxing World Champion'
+                : 'Schahrsad Shahmirzadi (SchirZan) – 10-fache Kickbox-Weltmeisterin'}
+            </h2>
+
+            <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
+              {currentLang === 'fa'
+                ? 'در طول دوران فعالیت قهرمانی، شهزاد شاهمیرزادی یکی از موفق‌ترین بانوان کیک‌بوکسینگ تاریخ آلمان به شمار می‌رفت. ورزش برای او کانون انضباط، استقامت و تمرکز ذهنی سازش‌ناپذیر بود که در زیبایی‌شناسی عکاسی او نیز متجلی است.'
+                : currentLang === 'en'
+                ? 'During her active competitive career, Schahrsad Shahmirzadi was one of Germany’s most accomplished female kickboxers. For her, sport represented mental fortitude, relentless focus, and character—qualities that resonate deeply throughout her fine art and architectural photography.'
+                : 'Während ihrer aktiven Wettkampfkarriere gehörte Schahrsad Shahmirzadi zu den erfolgreichsten deutschen Kickboxerinnen. Für sie war der Sport weit mehr als körperliche Höchstleistung: Er war die Schule der Konzentration, Disziplin und Willenskraft, die sich heute in ihrer präzisen photographischen Ästhetik widerspiegelt.'}
+            </p>
           </div>
 
-          <blockquote className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-amber-100 italic leading-snug">
-            {currentLang === 'fa'
-              ? '«پیروزی در ذهن آغاز می‌شود!»'
-              : '„Gewinnen fängt im Kopf an!“'}
-          </blockquote>
-
-          <h2 className="text-xl sm:text-2xl font-serif text-white font-bold">
-            {currentLang === 'fa'
-              ? 'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
-              : currentLang === 'en'
-              ? 'Schahrsad Shahmirzadi (SchirZan) – 10-Time Kickboxing World Champion'
-              : 'Schahrsad Shahmirzadi (SchirZan) – 10-fache Kickbox-Weltmeisterin'}
-          </h2>
-
-          <p className="text-sm sm:text-base text-stone-300 leading-relaxed max-w-3xl font-normal">
-            {currentLang === 'fa'
-              ? 'در طول دوران فعالیت قهرمانی، شهزاد شاهمیرزادی یکی از موفق‌ترین بانوان کیک‌بوکسینگ تاریخ آلمان به شمار می‌رفت. ورزش برای او کانون انضباط، استقامت و تمرکز ذهنی سازش‌ناپذیر بود که در زیبایی‌شناسی عکاسی او نیز متجلی است.'
-              : currentLang === 'en'
-              ? 'During her active competitive career, Schahrsad Shahmirzadi was one of Germany’s most accomplished female kickboxers. For her, sport represented mental fortitude, relentless focus, and character—qualities that resonate deeply throughout her fine art and architectural photography.'
-              : 'Während ihrer aktiven Wettkampfkarriere gehörte Schahrsad Shahmirzadi zu den erfolgreichsten deutschen Kickboxerinnen. Für sie war der Sport weit mehr als körperliche Höchstleistung: Er war die Schule der Konzentration, Disziplin und Willenskraft, die sich heute in ihrer präzisen photographischen Ästhetik widerspiegelt.'}
-          </p>
+          {/* Editorial pull-quote */}
+          <div className="lg:max-w-xs shrink-0 bg-[#faf8f5] border-l-2 border-amber-800/80 p-4 sm:p-5 rounded-r-lg shadow-2xs">
+            <span className="text-3xl font-serif text-amber-800/30 leading-none select-none block -mb-2">“</span>
+            <p className="text-base sm:text-lg font-serif italic text-stone-800 leading-snug">
+              {currentLang === 'fa'
+                ? 'پیروزی در ذهن آغاز می‌شود!'
+                : 'Gewinnen fängt im Kopf an!'}
+            </p>
+            <div className="mt-2 text-[11px] font-mono uppercase tracking-wider text-stone-400">
+              — SchirZan
+            </div>
+          </div>
         </div>
       </div>
 

@@ -724,13 +724,11 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
   return (
     <div className="space-y-12 max-w-6xl mx-auto py-8">
       
-      {/* Header Banner */}
-      <div className="bg-stone-900 text-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 bg-amber-600/15 rounded-full blur-3xl pointer-events-none" />
-        
-        <div className="relative z-10 max-w-4xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-mono uppercase tracking-widest border border-amber-500/30">
-            <Trophy className="w-3.5 h-3.5 text-amber-400" />
+      {/* Editorial Section Header */}
+      <div className="border-b border-stone-200 pb-8 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="max-w-3xl space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+            <Trophy className="w-3.5 h-3.5 text-amber-700" />
             <span>
               {currentLang === 'fa'
                 ? 'مراجع رسمی و استعلام جوایز'
@@ -738,7 +736,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
             </span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-white font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
             {currentLang === 'de'
               ? 'Internationale Auszeichnungen & Zertifikate'
               : currentLang === 'fa'
@@ -746,51 +744,51 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
               : 'International Photography Award References & Directory'}
           </h2>
 
-          <p className="text-sm sm:text-base text-stone-300 leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
             {currentLang === 'de'
               ? 'Vollständige Übersicht aller internationalen Fotopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
               : currentLang === 'fa'
               ? 'فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان.'
               : 'Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions.'}
           </p>
+        </div>
 
-          {/* Quick Filter Bar */}
-          <div className="pt-2 flex flex-wrap items-center gap-2 text-xs">
-            <span className="text-stone-400 font-mono flex items-center gap-1.5 mr-2">
-              <Filter className="w-3.5 h-3.5" />
-              <span>{currentLang === 'fa' ? 'فیلتر سال:' : 'Jahrgang:'}</span>
-            </span>
-            <button
-              onClick={() => setFilterYear('all')}
-              className={`px-3.5 py-1.5 rounded-full font-medium transition-colors cursor-pointer ${
-                filterYear === 'all'
-                  ? 'bg-amber-400 text-stone-950 font-bold'
-                  : 'bg-stone-800 text-stone-300 hover:bg-stone-700'
-              }`}
-            >
-              {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
-            </button>
-            <button
-              onClick={() => setFilterYear('2026')}
-              className={`px-3.5 py-1.5 rounded-full font-medium transition-colors cursor-pointer ${
-                filterYear === '2026'
-                  ? 'bg-amber-400 text-stone-950 font-bold'
-                  : 'bg-stone-800 text-stone-300 hover:bg-stone-700'
-              }`}
-            >
-              2026 (6 Awards)
-            </button>
-            <button
-              onClick={() => setFilterYear('2025')}
-              className={`px-3.5 py-1.5 rounded-full font-medium transition-colors cursor-pointer ${
-                filterYear === '2025'
-                  ? 'bg-amber-400 text-stone-950 font-bold'
-                  : 'bg-stone-800 text-stone-300 hover:bg-stone-700'
-              }`}
-            >
-              2025 (5 Awards)
-            </button>
-          </div>
+        {/* Quick Filter Bar */}
+        <div className="flex flex-wrap items-center gap-2 text-xs shrink-0 self-start md:self-end">
+          <span className="text-stone-500 font-mono flex items-center gap-1.5 mr-1 text-[11px]">
+            <Filter className="w-3.5 h-3.5 text-stone-400" />
+            <span>{currentLang === 'fa' ? 'فیلتر:' : 'Filter:'}</span>
+          </span>
+          <button
+            onClick={() => setFilterYear('all')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
+              filterYear === 'all'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+            }`}
+          >
+            {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
+          </button>
+          <button
+            onClick={() => setFilterYear('2026')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
+              filterYear === '2026'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+            }`}
+          >
+            2026 (6)
+          </button>
+          <button
+            onClick={() => setFilterYear('2025')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${
+              filterYear === '2025'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+            }`}
+          >
+            2025 (5)
+          </button>
         </div>
       </div>
 
