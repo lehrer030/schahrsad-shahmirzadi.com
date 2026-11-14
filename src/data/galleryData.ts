@@ -58,22 +58,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     posterImage: './videos/kickboxing-poster.jpg',
     photos: [
       {
-        id: 'kb-gallery-01',
-        src: './images/2025_11_vs-Sofia-Cavallo.webp',
-        alt: 'WKU-Weltmeisterschaftstitelkampf gegen Sofia Cavallo',
-        captionDe: 'WKU-Weltmeisterschaftstitelkampf gegen Sofia Cavallo auf Schloss Diedersdorf — Höchste Kampfkunst und Konzentration.',
-        captionEn: 'WKU World Championship Title Fight against Sofia Cavallo at Diedersdorf Castle — Peak athletic mastery and relentless focus.',
-        captionFa: 'مبارزه بر سر عنوان قهرمانی جهان WKU در برابر سوفیا کاوالو در کاخ دیدرزدورف — اوج هنر رزمی و تمرکز.'
-      },
-      {
-        id: 'kb-gallery-02',
-        src: './images/2025_11_vs.-Jessica-Marazzi.webp',
-        alt: 'WKU-Weltmeisterschaftstitelkampf gegen Jessica Marazzi',
-        captionDe: 'WKU-Weltmeisterschaftstitelkampf gegen Jessica Marazzi — Erfolgreiche Titelverteidigung im Schwergewicht/Mittelgewicht.',
-        captionEn: 'WKU World Championship Title Fight against Jessica Marazzi — Decisive title defense on the international stage.',
-        captionFa: 'مبارزه بر سر عنوان قهرمانی جهان WKU در برابر جسیکا مارازی — دفاع پیروزمندانه از عنوان قهرمانی جهان.'
-      },
-      {
         id: 'kb-gallery-03',
         src: './images/2025_07_DSC_0701.webp',
         alt: 'Weltmeistergürtel & Pokal — Schloss Diedersdorf',
