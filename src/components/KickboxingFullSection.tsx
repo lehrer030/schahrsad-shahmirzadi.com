@@ -186,8 +186,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       
       {/* Editorial Section Header */}
       <div className="border-b border-stone-200 pb-8 mb-10">
-        <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
-          <div className="space-y-3 max-w-3xl">
+        <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-8">
+          <div className="space-y-4 flex-1 min-w-0 max-w-4xl">
             <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
               <Trophy className="w-3.5 h-3.5 text-amber-700" />
               <span>
@@ -195,8 +195,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </span>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2.5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+            <div className="space-y-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-serif text-stone-900 font-bold leading-snug tracking-normal text-balance">
                 <a
                   href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
                   target="_blank"
@@ -204,24 +204,39 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   className="hover:text-amber-800 hover:underline transition-colors"
                   title="Wikipedia: Schahrsad Shahmirzadi"
                 >
-                  {currentLang === 'fa'
-                    ? 'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
-                    : currentLang === 'en'
-                    ? 'Schahrsad Shahmirzadi (SchirZan) – 10-Time Kickboxing World Champion'
-                    : 'Schahrsad Shahmirzadi (SchirZan) – 10-fache Kickbox-Weltmeisterin'}
+                  {currentLang === 'fa' ? (
+                    'شهزاد شاهمیرزادی (شیرزن) – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
+                  ) : currentLang === 'en' ? (
+                    <>
+                      Schahrsad Shahmirzadi (SchirZan) –{' '}
+                      <span className="whitespace-nowrap">10-Time</span> Kickboxing World Champion
+                    </>
+                  ) : (
+                    <>
+                      Schahrsad Shahmirzadi (SchirZan) –{' '}
+                      <span className="whitespace-nowrap">10-fache</span> Kickbox-Weltmeisterin
+                    </>
+                  )}
                 </a>
               </h2>
-              <a
-                href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-300 text-xs font-mono font-medium transition-colors shadow-2xs group/wiki"
-                title={currentLang === 'fa' ? 'مشاهده مدخل در ویکی‌پدیا' : 'Offizieller Wikipedia-Artikel'}
-              >
-                <span className="font-serif font-black text-xs">W</span>
-                <span>Wikipedia</span>
-                <ExternalLink className="w-3 h-3 opacity-60 group-hover/wiki:opacity-100" />
-              </a>
+
+              <div className="flex items-center gap-2 pt-0.5">
+                <a
+                  href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-stone-100 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-300 text-xs font-mono font-medium transition-colors shadow-2xs group/wiki"
+                  title={currentLang === 'fa' ? 'مشاهده مدخل در ویکی‌پدیا' : 'Offizieller Wikipedia-Artikel'}
+                >
+                  <span className="font-serif font-black text-xs">W</span>
+                  <span>Wikipedia</span>
+                  <ExternalLink className="w-3 h-3 opacity-60 group-hover/wiki:opacity-100" />
+                </a>
+                <span className="text-stone-300">·</span>
+                <span className="text-xs text-stone-500 font-mono">
+                  {currentLang === 'fa' ? '۱۰ عنوان قهرمانی جهان WKU' : '10× WKU World Championship Title'}
+                </span>
+              </div>
             </div>
 
             <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal pt-1">
