@@ -25,17 +25,17 @@ export const Footer: React.FC<FooterProps> = ({
             </span>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'
-                ? 'Schahrsad Shahmirzadi · Künstlerin & Photographin'
+                ? 'Schahrsad Shahmirzadi · Photographin & 10-fache Kickbox-Weltmeisterin'
                 : currentLang === 'fa'
-                ? 'شهزاد شاهمیرزادی · هنرمند، عکاس و پژوهشگر'
-                : 'Schahrsad Shahmirzadi · Artist & Photographer'}
+                ? 'شهزاد شاهمیرزادی · عکاس و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
+                : 'Schahrsad Shahmirzadi · Photographer & 10x Kickboxing World Champion'}
             </p>
             <p className="text-stone-700 text-[11px] leading-relaxed font-normal">
               {currentLang === 'de'
-                ? 'Ausgezeichnete Architektur-, Fine-Art- und sozial-ökologische Dokumentarfotografie.'
+                ? 'Ausgezeichnete Architektur-, Fine-Art- und Dokumentarfotografie sowie sportliche Höchstleistungen.'
                 : currentLang === 'fa'
-                ? 'عکاسی فاخر و برنده جوایز بین‌المللی در حوزه‌های معماری، فاین آرت و مستندهای اجتماعی و زیست‌محیطی.'
-                : 'Award-winning architectural, fine art, and socio-environmental documentary photography.'}
+                ? 'عکاسی فاخر برنده جوایز جهانی و دستاوردهای درخشان ورزشی در کیک‌بوکسینگ.'
+                : 'Award-winning architectural, fine art, and documentary photography alongside world-class athletic achievements.'}
             </p>
           </div>
 

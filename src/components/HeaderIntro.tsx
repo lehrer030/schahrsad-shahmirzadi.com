@@ -110,7 +110,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                       {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
                     </h3>
                     <p className="text-[11px] text-stone-600 font-normal">
-                      {currentLang === 'fa' ? 'عکاسی و هنرهای تجسمی' : 'Photographie & Bildende Kunst'}
+                      {currentLang === 'fa' ? 'عکاسی، هنر و ۱۰ بار قهرمان جهان کیک‌بوکسینگ' : 'Photographie, Kunst & 10-fache Weltmeisterin Kickboxen'}
                     </p>
                   </div>
                   <div className="bg-stone-50 border border-stone-200 px-2 py-0.5 text-[10px] font-mono text-stone-600 shrink-0">
@@ -208,7 +208,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                       {currentLang === 'fa' ? 'شهزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}
                     </h3>
                     <p className="text-xs text-stone-600 font-normal">
-                      {currentLang === 'fa' ? 'هنرمند، عکاس و پژوهشگر' : 'Photographie & Bildende Kunst'}
+                      {currentLang === 'fa' ? 'عکاسی، هنر و ۱۰ بار قهرمان جهان کیک‌بوکسینگ' : 'Photographie, Kunst & 10-fache Weltmeisterin Kickboxen'}
                     </p>
                   </div>
 

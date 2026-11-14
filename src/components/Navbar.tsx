@@ -364,12 +364,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
             </span>
           </div>
-          <p className="text-[10px] tracking-widest uppercase text-stone-500 font-sans group-hover:text-stone-700 mt-0.5">
+          <p className="text-[9px] sm:text-[10px] tracking-wider sm:tracking-widest uppercase text-stone-500 font-sans group-hover:text-stone-700 mt-0.5 whitespace-nowrap">
             {currentLang === 'de'
-              ? 'Photographie & Kunst'
+              ? 'Photographie · Kunst · Kickboxen'
               : currentLang === 'fa'
-                ? 'عکاسی و هنر · شیرزن'
-                : 'Photography & Art'}
+                ? 'عکاسی · هنر · کیک‌بوکسینگ'
+                : 'Photography · Art · Kickboxing'}
           </p>
         </button>
 
