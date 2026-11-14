@@ -172,7 +172,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                           src={resolveAsset(photo.src)}
                           alt={photo.alt}
                           loading="lazy"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 protected-art"
+                          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 protected-art"
                           onError={(e) => {
                             const target = e.currentTarget;
                             if (target.src.endsWith('.webp')) {
@@ -385,18 +385,59 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   ? photo.captionFa
                   : photo.captionEn;
 
+              const isCertificate = photo.id === 'ipa-athens-06';
+              const isPortraitPerson = photo.id === 'ipa-athens-05' || photo.id === 'ipa-athens-04';
+
+              // Smart object positioning: ensure faces & heads are framed prominently at top
+              const objectPosClass = isPortraitPerson
+                ? 'object-top'
+                : 'object-center';
+
               return (
                 <div
                   key={photo.id}
                   onClick={() => onOpenLightbox(athensGala.photos, index)}
-                  className="group relative bg-white border border-stone-200 hover:border-stone-400 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer"
+                  className={`group relative bg-white border rounded-xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col cursor-pointer ${
+                    isCertificate
+                      ? 'border-amber-300/80 ring-1 ring-amber-100 hover:border-amber-500 bg-linear-to-b from-amber-50/20 to-white'
+                      : 'border-stone-200 hover:border-stone-400'
+                  }`}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 group/img">
+                  <div className="relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-stone-100 group/img">
+                    {/* Badge for official award / certificate */}
+                    {isCertificate && (
+                      <div className="absolute top-2.5 left-2.5 right-2.5 z-20 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-900/90 text-amber-100 rounded text-[11px] font-bold shadow-md tracking-wide backdrop-blur-xs">
+                          <Award className="w-3.5 h-3.5 text-amber-400" />
+                          <span>
+                            {currentLang === 'fa'
+                              ? 'گواهی و مدال رسمی مسابقه'
+                              : currentLang === 'en'
+                              ? 'Official Award & Medal'
+                              : 'Offizielles Zertifikat & Medaille'}
+                          </span>
+                        </span>
+                      </div>
+                    )}
+
+                    {photo.id === 'ipa-athens-05' && (
+                      <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
+                          <Trophy className="w-3 h-3 text-amber-400" />
+                          <span>IPA Gala 2025 · Athen</span>
+                        </span>
+                      </div>
+                    )}
+
                     <img
                       src={resolveAsset(photo.src)}
                       alt={photo.alt}
                       loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 protected-art"
+                      className={`w-full h-full ${
+                        isCertificate
+                          ? 'object-contain p-2 sm:p-2.5 bg-[#18181b]'
+                          : `object-cover ${objectPosClass}`
+                      } transition-transform duration-500 group-hover:scale-105 protected-art`}
                       onError={(e) => {
                         const target = e.currentTarget;
                         if (target.src.endsWith('.webp')) {

@@ -136,22 +136,22 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
           </div>
 
           {/* Image 3: Detail / Certification */}
-          <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
+          <div className="group flex flex-col bg-white border border-amber-200/80 ring-1 ring-amber-100 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-400 hover:shadow-md transition-all">
             <a
               href="https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
+              className="block overflow-hidden bg-stone-50 aspect-3/4 sm:aspect-2/3 relative p-2 sm:p-3"
             >
               <img
                 src={resolveAsset('/images/2026_10_image00013-875x1024.webp')}
                 alt="Global Lens Awards 2026 - Detail & Winner Verification"
-                className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+                className="w-full h-full object-contain group-hover:scale-102 transition-transform duration-300 drop-shadow-xs"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/10 transition-colors pointer-events-none" />
+              <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/5 transition-colors pointer-events-none" />
             </a>
-            <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
+            <div className="p-4 flex-1 flex flex-col justify-between space-y-2 border-t border-amber-100/70 bg-linear-to-b from-amber-50/20 to-white">
               <p className="text-xs text-stone-800 font-medium leading-snug">
                 {isDe
                   ? 'Offizielles Zertifikat & Werkbestätigung Global Lens 2026'
@@ -159,8 +159,8 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
                   ? 'گواهی رسمی و تاییدیه اثر در جوایز گلوبال لنز ۲۰۲۶'
                   : 'Official Certificate & Work Verification Global Lens 2026'}
               </p>
-              <span className="text-[11px] font-mono text-stone-500">
-                {isDe ? 'Internationale Fachjury' : isFa ? 'هیئت داوران بین‌المللی' : 'International Jury'}
+              <span className="text-[11px] font-mono text-amber-900/70">
+                {isDe ? 'Internationale Fachjury · Zertifikat' : isFa ? 'هیئت داوران بین‌المللی · گواهینامه رسمی' : 'International Jury · Certificate'}
               </span>
             </div>
           </div>
