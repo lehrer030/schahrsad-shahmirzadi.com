@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { scrollToElementWithOffset } from '../utils/scrollHelper';
+import { resolveAsset } from '../utils/resolveAsset';
 
 export type NavigationCategory =
   | 'architecture'
@@ -357,8 +358,13 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi */}
         <button
           onClick={onGoHome}
-          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2 sm:gap-2.5 shrink-0"
+          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2.5 sm:gap-3 shrink-0"
         >
+          <img
+            src={resolveAsset('/images/schirzan-logo.png')}
+            alt="SchirZan"
+            className="w-9 h-9 sm:w-10 sm:h-10 object-contain drop-shadow-2xs group-hover:scale-105 transition-transform duration-300 shrink-0"
+          />
           <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <span className="text-xl sm:text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
               SchirZan

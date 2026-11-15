@@ -181,13 +181,13 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       {
         id: 'ipa-athens-01',
         src: './images/2025_11_image00012-scaled.webp',
-        alt: 'House of Lucie, Photo: Steve Barret, Photo-Fest IPA',
+        alt: 'International Photography Awards (IPA), Photo-Fest – Athens 2025 · House of Lucie, Athens – Artist Talks',
         locationDe: 'House of Lucie · Athen',
         locationEn: 'House of Lucie · Athens',
         locationFa: 'خانه لوسی · آتن',
-        captionDe: 'House of Lucie, Photo: Steve Barret, Photo-Fest IPA',
-        captionEn: 'House of Lucie, Photo: Steve Barret, Photo-Fest IPA',
-        captionFa: 'خانه لوسی (House of Lucie)، عکس: استیو بارت، فستیوال عکس IPA'
+        captionDe: 'International Photography Awards (IPA), Photo-Fest – Athens 2025 · House of Lucie, Athens – Artist Talks (Photo: Steve Barret)',
+        captionEn: 'International Photography Awards (IPA), Photo-Fest – Athens 2025 · House of Lucie, Athens – Artist Talks (Photo: Steve Barret)',
+        captionFa: 'جوایز بین‌المللی عکاسی (IPA)، فستیوال عکس آتن ۲۰۲۵ · خانه لوسی، گفتگوهای هنرمندان (عکس: استیو بارت)'
       },
       {
         id: 'ipa-athens-02',

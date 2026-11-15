@@ -41,6 +41,8 @@ raw_*.txt
 # Ignore the extra 1.4 GB unreferenced WordPress media thumbnails/backups in public/images
 # Keep all curated portfolio images, series, and badges
 public/images/*
+!public/images/wetransfer
+!public/images/wetransfer/**
 !public/images/email_badges
 !public/images/email_badges/**
 !public/images/badges_custom

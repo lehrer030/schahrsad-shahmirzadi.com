@@ -172,7 +172,7 @@ export const INTRO_CONTENT = {
     { name: 'London International Creative Competition (LICC) 2025', url: 'https://licc.uk/' }
   ],
   photoCredit: 'Photo: Steve Barret',
-  artistSectionTitleDe: 'Photographie, Künstlername und Inspiration',
+  artistSectionTitleDe: 'Namensbedeutung »SchirZan« & Philosophie des Lichts vertiefen',
   artistSectionTitleEn: 'Photography, Artist Name and Inspiration',
   artistSectionTitleFa: 'عکاسی، نام هنری و الهام‌بخش · شیرزن',
   artistNameDe: 'SchirZan | Schahrsad Shahmirzadi',
@@ -252,7 +252,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       year: '2026',
       award: 'Honorable Mention 2026',
       awardFa: 'تقدیر ویژه ۲۰۲۶',
-      badgeImage: '/images/email_badges/bifa_2026_gold.png',
+      badgeImage: '/images/badges_custom/bifa_2026_hm.png',
       link: 'https://budapestfotoawards.com/',
       position: 'top-right'
     },
@@ -445,15 +445,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Photographie zeigt einen historischen Wasserturm, der, obwohl deutlich erkennbar, nur als reine Spiegelung in der Glasfassade des Bahnhofs erscheint und mit den vorbeiziehenden Wolken verschmilzt. Die Wolken steigen hinter der Fassade wie Dampf auf, hüllen Turm und Gebäude ein und schaffen ein völlig neues Bild. In diesem flüchtigen Zusammenspiel von Licht und Architektur stellt das Werk still die Frage, wo die Wirklichkeit liegt: im physischen Turm selbst oder in diesem wandelbaren Bild aus Glas, Reflexion und aufsteigendem »Dampf«?',
     descriptionEn: 'This photograph shows a historic water tower that, although clearly recognisable, appears only as a pure reflection in the glass façade of the station, merging with the passing clouds. The clouds rise behind the façade like steam, enveloping tower and building and creating an image that seems entirely new. In this fleeting interplay of light and architecture, the work quietly raises the question of where reality lies: in the physical tower itself, or in this shifting image of glass, reflection, and rising “steam”?',
     descriptionFa: 'این عکس بازتاب برج آب تاریخی را در نمای شیشه‌ای ایستگاه نشان می‌دهد که با ابرهای گذرنده درمی‌آمیزد و تصویری نو و استعاری پدید می‌آورد.',
-    previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+    previewImage: '/images/wetransfer/echoes_water_tower_01.webp',
     galleryPhotos: [
       {
         id: 'echoes-water-tower-01',
-        src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
-        alt: 'Echoes of a Water Tower – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/echoes_water_tower_01.webp',
+        alt: 'Echoes of a Water Tower',
         captionDe: 'Echoes of a Water Tower – SchirZan',
         captionEn: 'Echoes of a Water Tower – SchirZan',
-        captionFa: 'پژواک برج آب – شیرزن'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -472,39 +472,39 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Serie abstrahiert eine moderne Fassade, deren vertikale Fenster wie die Tasten eines Pianos wirken. Rhythmus, Wiederholung und die präzise Ausrichtung der Fensterachsen erzeugen eine kraftvolle grafische Partitur, die die Struktur einer musikalischen Komposition widerspiegelt. Jedes Photo erforscht Geometrie, Licht und Schatten mit akribischer Kontrolle, während Schwarz-Weiß die Tonwertkontraste intensiviert und jede Nuance der Form offenbart. Das Gebäude wird zu visueller Musik – ein architektonisches Piano, das den Betrachter einlädt, die Resonanz der Stadt in Linien, Flächen und Variationen zu spüren und eine gewöhnliche Fassade in eine fesselnde musikalische Komposition verwandelt.',
     descriptionEn: 'This series abstracts a modern facade, where vertical windows appear like the keys of a piano. Rhythm, repetition, and the precise alignment of window axes create a powerful graphic score, echoing the structure of a musical composition. Each photo explores geometry, light, and shadow with meticulous control, while black & white intensify tonal contrasts and reveal every nuance of form. The building becomes visual music—an architectural piano that invites viewers to sense the city’s resonance in lines, surfaces, and variations, transforming an ordinary facade into a compelling musical composition.',
     descriptionFa: 'این مجموعه نمای مدرن یک ساختمان را انتزاع می‌کند؛ نوارهای عمودی پنجره‌ها همچون کلاویه‌های پیانو ضرب‌آهنگ یک پارتیتور بصری را خلق می‌کنند.',
-    previewImage: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
+    previewImage: '/images/wetransfer/architectural_piano_01.webp',
     galleryPhotos: [
       {
         id: 'architectural-piano-01',
-        src: '/images/2026_10_amp-2026-architectural-piano-01-scaled.webp',
-        alt: 'Architectural Piano 01 – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/architectural_piano_01.webp',
+        alt: 'Architectural Piano 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'architectural-piano-02',
-        src: '/images/2026_10_amp-2026-architectural-piano-02-scaled.webp',
-        alt: 'Architectural Piano 02 – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/architectural_piano_02.webp',
+        alt: 'Architectural Piano 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'architectural-piano-03',
-        src: '/images/2026_10_amp-2026-architectural-piano-03-scaled.webp',
-        alt: 'Architectural Piano 03 – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/architectural_piano_03.webp',
+        alt: 'Architectural Piano 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'architectural-piano-04',
-        src: '/images/2026_10_amp-2026-architectural-piano-04-scaled.webp',
-        alt: 'Architectural Piano 04 – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/architectural_piano_04.webp',
+        alt: 'Architectural Piano 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -523,15 +523,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Photographie zeigt das Interieur der Griechischen Nationaloper in Athen, wo Licht, Materialien und Raumrhythmus präzise harmonieren. Architektur und Design verschmelzen zu einer geometrischen Komposition, in der Glasflächen, schlanke Säulen und sorgfältig durchdachte Details das Foyer in eine Bühne für Licht, Perspektive und Bewegung verwandeln. Dieser Raum übte eine geradezu magnetische Anziehungskraft auf mich aus und bleibt bis heute das eindrucksvollste Beispiel für Innenarchitektur, das ich je erlebt habe.',
     descriptionEn: 'This photograph shows the interior of the Greek National Opera in Athens, where light, materials, and spatial rhythm are precisely harmonised. Architecture and design merge into a geometric composition in which glass surfaces, slender columns, and carefully considered details transform the foyer into a stage for light, perspective, and movement. This space exerted a magnetic pull on me and remains, to this day, the most compelling example of interior architecture I have ever experienced.',
     descriptionFa: 'این عکس فضای داخلی اپرای ملی یونان در آتن را به تصویر می‌کشد که در آن نور، مصالح و ریتم فضایی پیوندی هماهنگ و چشم‌نواز پدید آورده‌اند.',
-    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+    previewImage: '/images/wetransfer/elegance_structure_bw_01.webp',
     galleryPhotos: [
       {
         id: 'elegance-structure-bw-01',
-        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        src: '/images/wetransfer/elegance_structure_bw_01.webp',
         alt: 'Elegance of Structure – Black and White',
-        captionDe: 'Elegance of Structure – Black and White',
-        captionEn: 'Elegance of Structure – Black and White',
-        captionFa: 'شکوه و ظرافت ساختار – سیاه و سفید'
+        captionDe: 'Elegance of Structure – Black and White – SchirZan',
+        captionEn: 'Elegance of Structure – Black and White – SchirZan',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -550,39 +550,39 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Photographien zeigen das Interieur der Griechischen Nationaloper in Athen, wo Licht, Materialien und Raumrhythmus präzise harmonieren. Architektur und Design verschmelzen zu geometrischen Kompositionen, in denen Glasflächen, schlanke Säulen und sorgfältig durchdachte Details das Foyer in eine Bühne für Licht, Perspektive und Bewegung verwandeln. Diese Räume übten eine geradezu magnetische Anziehungskraft auf mich aus und bleiben bis heute die faszinierendsten Beispiele für Innenarchitektur, die ich je erlebt habe.',
     descriptionEn: 'These photographs show the interior of the Greek National Opera in Athens, where light, materials, and spatial rhythm are precisely harmonised. Architecture and design merge into geometric compositions in which glass surfaces, slender columns, and carefully considered details transform the foyer into a stage for light, perspective, and movement. These spaces exerted a magnetic pull on me and remain, to this day, the most compelling examples of interior architecture I have ever experienced.',
     descriptionFa: 'این عکس‌ها فضای داخلی اپرای ملی یونان را در ترکیب‌بندی‌های هندسی رنگی، سطوح شیشه‌ای و ریتم باشکوه خطوط و نور ثبت می‌کنند.',
-    previewImage: '/images/2026_10_amp-2026-elegance-interior-symphony-01-scaled.webp',
+    previewImage: '/images/wetransfer/elegance_symphony_01.webp',
     galleryPhotos: [
       {
         id: 'elegance-interior-01',
-        src: '/images/2026_10_amp-2026-elegance-interior-symphony-01-scaled.webp',
-        alt: 'An Interior Symphony of Light, Forms and Lines 01',
+        src: '/images/wetransfer/elegance_symphony_01.webp',
+        alt: 'Elegance of Structure – Symphony of Light 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'elegance-interior-02',
-        src: '/images/2026_10_amp-2026-elegance-interior-symphony-02-scaled.webp',
-        alt: 'An Interior Symphony of Light, Forms and Lines 02',
+        src: '/images/wetransfer/elegance_symphony_02.webp',
+        alt: 'Elegance of Structure – Symphony of Light 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'elegance-interior-03',
-        src: '/images/2026_10_amp-2026-elegance-interior-symphony-03-scaled.webp',
-        alt: 'An Interior Symphony of Light, Forms and Lines 03',
+        src: '/images/wetransfer/elegance_symphony_03.webp',
+        alt: 'Elegance of Structure – Symphony of Light 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'elegance-interior-04',
-        src: '/images/2026_10_amp-2026-elegance-interior-symphony-04-scaled.webp',
-        alt: 'An Interior Symphony of Light, Forms and Lines 04',
+        src: '/images/wetransfer/elegance_symphony_04.webp',
+        alt: 'Elegance of Structure – Symphony of Light 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -604,63 +604,63 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     personalNoteDe: 'Persönliche Widmung: Gewidmet Steve Barret.',
     personalNoteEn: 'Personal Note: Dedicated to Steve Barret.',
     personalNoteFa: 'تقدیر شخصی: تقدیم شده به استیو بارت.',
-    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+    previewImage: '/images/wetransfer/cloud_mirror_i_01.webp',
     galleryPhotos: [
       {
         id: 'cloud-mirror-i-01',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-01-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_01.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-02',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_02.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-03',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-03-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_03.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-04',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_04.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-05',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-05-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_05.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-06',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-06-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_06.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 06',
         captionDe: 'Image 06',
         captionEn: 'Image 06',
-        captionFa: 'تصویر ۰۶'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-i-07',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-07-scaled.webp',
+        src: '/images/wetransfer/cloud_mirror_i_07.webp',
         alt: 'Cloud Mirror Architecture I: Heaven’s Bridge 07',
         captionDe: 'Image 07',
         captionEn: 'Image 07',
-        captionFa: 'تصویر ۰۷'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -682,47 +682,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     personalNoteDe: 'Persönliche Widmung: Meiner Mutter gewidmet.',
     personalNoteEn: 'Personal Note: Dedicated to my mother.',
     personalNoteFa: 'تقدیر شخصی: با عشق تقدیم به مادرم.',
-    previewImage: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-01-scaled.webp',
+    previewImage: '/images/wetransfer/cloud_mirror_ii_bw_01.webp',
     galleryPhotos: [
       {
         id: 'cloud-mirror-ii-bw-01',
-        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-01-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 01',
+        src: '/images/wetransfer/cloud_mirror_ii_bw_01.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (B&W) 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-ii-bw-02',
-        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-02-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 02',
+        src: '/images/wetransfer/cloud_mirror_ii_bw_02.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (B&W) 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-ii-bw-03',
-        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-03-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 03',
+        src: '/images/wetransfer/cloud_mirror_ii_bw_03.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (B&W) 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-ii-bw-04',
-        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-04-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 04',
+        src: '/images/wetransfer/cloud_mirror_ii_bw_04.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (B&W) 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'cloud-mirror-ii-bw-05',
-        src: '/images/2026_10_amp-2026-cloud-mirror-ii-bw-05-scaled.webp',
-        alt: 'Cloud Mirror Architecture II: Stormy Sea (Black & White) 05',
+        src: '/images/wetransfer/cloud_mirror_ii_bw_05.webp',
+        alt: 'Cloud Mirror Architecture II: Stormy Sea (B&W) 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -741,55 +741,55 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Schwarz, Rot und Gold spiegeln sich in der Architektur des Bundespräsidialamtes in Berlin wider. Meine Serie übersetzt dies in eine abstrakte photographische Sequenz, entstanden unter demokratischen Bedingungen. Ausschnitte offenbaren die Vielfalt des Amtes durch Farbe. Trotz Überwachungskameras begann ich das Projekt mit Mut. Die Bundespolizei überprüfte kurz meine Arbeit und erkannte sie als Architekturphotographie an. Aus Respekt vor Sicherheitsbedenken stellte ich das Photographieren ein. Die Kontrolle war respektvoll – ein Tribut an die Demokratie! Alle Photographien sind unbearbeitet.',
     descriptionEn: 'Black, red, and gold are reflected in the architecture of the Federal President’s Office in Berlin. My series translates this into an abstract photographic sequence, created under democratic conditions. Excerpts reveal the diversity of the office through color. Despite surveillance cameras, I began the project with courage. The federal police briefly checked my work and recognized it as architectural photography. Out of respect for security concerns, I stopped photographing. The control was respectful—a tribute to democracy! All photographs are unedited.',
     descriptionFa: 'رنگ‌های سیاه، سرخ و طلایی در معماری دفتر ریاست‌جمهوری فدرال در برلین بازتاب یافته‌اند. این مجموعه ادای احترامی به دموکراسی و شفافیت مدنی است.',
-    previewImage: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
+    previewImage: '/images/wetransfer/black_red_gold_01.webp',
     galleryPhotos: [
       {
         id: 'black-red-gold-01',
-        src: '/images/2026_10_amp-2026-black-red-gold-01-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 01',
+        src: '/images/wetransfer/black_red_gold_01.webp',
+        alt: 'Black Red Gold – Office of the Federal President 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'black-red-gold-02',
-        src: '/images/2026_10_amp-2026-black-red-gold-02-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 02',
+        src: '/images/wetransfer/black_red_gold_02.webp',
+        alt: 'Black Red Gold – Office of the Federal President 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'black-red-gold-03',
-        src: '/images/2026_10_amp-2026-black-red-gold-03-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 03',
+        src: '/images/wetransfer/black_red_gold_03.webp',
+        alt: 'Black Red Gold – Office of the Federal President 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'black-red-gold-04',
-        src: '/images/2026_10_amp-2026-black-red-gold-04-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 04',
+        src: '/images/wetransfer/black_red_gold_04.webp',
+        alt: 'Black Red Gold – Office of the Federal President 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'black-red-gold-05',
-        src: '/images/2026_10_amp-2026-black-red-gold-05-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 05',
+        src: '/images/wetransfer/black_red_gold_05.webp',
+        alt: 'Black Red Gold – Office of the Federal President 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       },
       {
         id: 'black-red-gold-06',
-        src: '/images/2026_10_amp-2026-black-red-gold-06-scaled.webp',
-        alt: 'Black Red Gold – Office of the Federal President of Germany 06',
+        src: '/images/wetransfer/black_red_gold_06.webp',
+        alt: 'Black Red Gold – Office of the Federal President 06',
         captionDe: 'Image 06',
         captionEn: 'Image 06',
-        captionFa: 'تصویر ۰۶'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -808,15 +808,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Die Spiegelung transformiert die Geometrie der Architektur und verwandelt die Uferfassade in eine fast meditative Komposition. Das Photo spielt mit der Wahrnehmung, indem Wasser und Himmel nahezu vertauscht wirken und den Betrachter einladen zu hinterfragen, was festes Bauwerk und was Reflexion ist.',
     descriptionEn: 'The mirroring transforms the geometry of the architecture, turning the riverside façade into an almost meditative composition. The photograph plays with perception, as water and sky appear almost reversed, inviting the viewer to question what is solid and what is reflection.',
     descriptionFa: 'بازتاب، هندسه معماری را دگرگون می‌سازد و نمای کرانه آب را به ترکیبی آرامش‌بخش بدل می‌کند.',
-    previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
+    previewImage: '/images/wetransfer/mirrored_01.webp',
     galleryPhotos: [
       {
         id: 'mirrored-single-01',
-        src: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
-        alt: 'Mirrored – Schahrsad Shahmirzadi',
-        captionDe: 'Mirrored',
-        captionEn: 'Mirrored',
-        captionFa: 'بازتاب'
+        src: '/images/wetransfer/mirrored_01.webp',
+        alt: 'Mirrored',
+        captionDe: 'Mirrored – Single Shot',
+        captionEn: 'Mirrored – Single Shot',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -835,15 +835,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Entlang der Uferpromenade spiegelt sich die Architektur in einer ruhigen Wasseroberfläche, wo Wasser, Himmel und Wolken eine klare Symmetrieachse zwischen Stadt und Atmosphäre bilden. »Mirrored II« offenbart die Beziehung zwischen gebautem Raum, Fassadenrhythmus und Baumreihen, bis Architektur und Reflexion mit dem Himmel zu einer fast grafischen, symmetrischen Struktur verschmelzen.',
     descriptionEn: 'Along the waterfront promenade, the architecture is reflected in a calm water surface where water, sky and clouds form a clear axis of symmetry between the city and the atmospheric space. „Mirrored II” reveals the relationship between built space, façade rhythm and repeating tree lines, until architecture and its reflection on the calm water surface merge with the sky into an almost graphic, symmetrical structure.',
     descriptionFa: 'در امتداد تفرجگاه ساحلی، معماری در آبی آرام منعکس می‌شود و محور تقارنی شفاف میان شهر و ابرها می‌آفریند.',
-    previewImage: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
+    previewImage: '/images/wetransfer/mirrored_ii_01.webp',
     galleryPhotos: [
       {
         id: 'mirrored-ii-01',
-        src: '/images/2026_10_amp-2026-mirrored-ii-01-scaled.webp',
-        alt: 'Mirrored II – Schahrsad Shahmirzadi',
-        captionDe: 'Mirrored II – Urban Landscape',
-        captionEn: 'Mirrored II – Urban Landscape',
-        captionFa: 'بازتاب ۲ – چشم‌انداز شهری'
+        src: '/images/wetransfer/mirrored_ii_01.webp',
+        alt: 'Mirrored II',
+        captionDe: 'Mirrored II – Single Shot',
+        captionEn: 'Mirrored II – Single Shot',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -862,15 +862,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Entlang der Uferpromenade wird Architektur zum zentralen Motiv: Ihre klare Fassadenstruktur und der Rhythmus der Fenster spiegeln sich nahezu nahtlos im ruhigen Wasser wider. In Schwarz-Weiß gehalten, konzentriert sich »Mirrored III (Black & White)« auf die gebaute Form und ihre Spiegelung. Tonwertkontraste, Baumasse, vertikale Linien und strukturelle Details verschmelzen zu einer symmetrischen Komposition, in der das Wasser das Gebäude nicht nur spiegelt, sondern eigenständig erweitert.',
     descriptionEn: 'Along the waterfront promenade, architecture becomes the central motif: its clear façade structure and the rhythm of its windows are reflected almost seamlessly in the calm water. Presented in black and white, “Mirrored III (Black & White)” focuses on the built form and its reflection in the water. Tonal contrasts, architectural mass, vertical lines and structural details coalesce into an almost complete, symmetrical composition in which the water not only reflects the building but independently extends it.',
     descriptionFa: 'در نسخه سیاه‌وسفید «بازتاب ۳»، تقابل پرمایه سایه‌روشن‌ها و خطوط عمودی، حجم ساختمان را به وسعت آب پیوند می‌دهد.',
-    previewImage: '/images/2026_10_amp-2026-mirrored-iii-bw-01-scaled.webp',
+    previewImage: '/images/wetransfer/mirrored_iii_bw_01.webp',
     galleryPhotos: [
       {
         id: 'mirrored-iii-bw-01',
-        src: '/images/2026_10_amp-2026-mirrored-iii-bw-01-scaled.webp',
-        alt: 'Mirrored III (Black & White) – Schahrsad Shahmirzadi',
+        src: '/images/wetransfer/mirrored_iii_bw_01.webp',
+        alt: 'Mirrored III (Black & White)',
         captionDe: 'Mirrored III (Black & White)',
         captionEn: 'Mirrored III (Black & White)',
-        captionFa: 'بازتاب ۳ (سیاه و سفید)'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -889,47 +889,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Der Hephaistos-Tempel ist dem Gott der Schmiede und des Feuers geweiht – ein Werk der Architektur reich an Symbolik und Handwerkskunst. Diese Serie stellt die Säulen ins Zentrum, wie sie Licht und Schatten in den Raum ziehen und Stärke sowie Kraft widerspiegeln. So entsteht ein visueller Dialog zwischen antiker Technik, mythologischer Inspiration und der zeitlosen Schönheit der Steinarchitektur.',
     descriptionEn: 'The Temple of Hephaistos is dedicated to the god of blacksmiths and fire—a work of architecture rich in symbolism and craftsmanship. This series places its columns at the center as they draw light and shadow into the space, reflecting strength and power. In doing so, a visual dialogue emerges between ancient technique, mythological inspiration, and the timeless beauty of stone architecture.',
     descriptionFa: 'معبد هفائستوس، وقف خدای صنعتگری و آتش؛ این مجموعه ستون‌های کهن را در گفت‌وگوی ابدی نور و سایه به تصویر می‌کشد.',
-    previewImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+    previewImage: '/images/wetransfer/hephaestus_legacy_01.webp',
     galleryPhotos: [
       {
         id: 'hephaestus-01',
-        src: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp',
+        src: '/images/wetransfer/hephaestus_legacy_01.webp',
         alt: 'Hephaestus’ Legacy 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'hephaestus-02',
-        src: '/images/2026_09_os-06-hephaestus-legacy-02-scaled.webp',
+        src: '/images/wetransfer/hephaestus_legacy_02.webp',
         alt: 'Hephaestus’ Legacy 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'hephaestus-03',
-        src: '/images/2026_09_os-06-hephaestus-legacy-03-scaled.webp',
+        src: '/images/wetransfer/hephaestus_legacy_03.webp',
         alt: 'Hephaestus’ Legacy 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'hephaestus-04',
-        src: '/images/2026_09_os-06-hephaestus-legacy-04-scaled.webp',
+        src: '/images/wetransfer/hephaestus_legacy_04.webp',
         alt: 'Hephaestus’ Legacy 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'hephaestus-05',
-        src: '/images/2026_09_os-06-hephaestus-legacy-05-scaled.webp',
+        src: '/images/wetransfer/hephaestus_legacy_05.webp',
         alt: 'Hephaestus’ Legacy 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -948,15 +948,55 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Serie transformiert das Treppenhaus des Ministeriums für Landwirtschaft, Umwelt und Klimaschutz (MLUK/MLEUV) des Landes Brandenburg in Potsdam in ein Paradigma nachhaltiger Architektur: Meditative Kompositionen visualisieren ökologische Verantwortung, ressourceneffizientes Bauen und architektonische Innovation. Übergänge und Brailleschrift-Details betonen das Bewusstsein für Inklusion, Klimaschutz und Wandel.',
     descriptionEn: 'This series transforms the stairwell of the Ministry of Agriculture, Food, Environment and Consumer Protection (MLEUV) of the State of Brandenburg in Potsdam into a paradigm of sustainable architecture: Meditative compositions visualize ecological responsibility, resource-efficient construction, and architectural innovation. Transitions and Braille detail highlight the impact on environmental awareness, social inclusion, and climate action. Each step represents ecological, economic, and social change in our society toward a better world.',
     descriptionFa: 'این مجموعه پلکان وزارت محیط زیست براندنبورگ در پوتسدام را به الگویی از معماری پایدار و فراگیر بدل می‌سازد.',
-    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
+    previewImage: '/images/wetransfer/steps_sustainability_01.webp',
     galleryPhotos: [
       {
         id: 'steps-sustainability-01',
-        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
-        alt: 'Steps of Sustainability',
-        captionDe: 'Steps of Sustainability – SchirZan',
-        captionEn: 'Steps of Sustainability – SchirZan',
-        captionFa: 'پله‌های پایداری – شیرزن'
+        src: '/images/wetransfer/steps_sustainability_01.webp',
+        alt: 'Steps of Sustainability 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'steps-sustainability-02',
+        src: '/images/wetransfer/steps_sustainability_02.webp',
+        alt: 'Steps of Sustainability 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'steps-sustainability-03',
+        src: '/images/wetransfer/steps_sustainability_03.webp',
+        alt: 'Steps of Sustainability 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'steps-sustainability-04',
+        src: '/images/wetransfer/steps_sustainability_04.webp',
+        alt: 'Steps of Sustainability 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'steps-sustainability-05',
+        src: '/images/wetransfer/steps_sustainability_05.webp',
+        alt: 'Steps of Sustainability 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'steps-sustainability-06',
+        src: '/images/wetransfer/steps_sustainability_06.webp',
+        alt: 'Steps of Sustainability 06',
+        captionDe: 'Image 06',
+        captionEn: 'Image 06',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -975,31 +1015,31 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: '»Dimensions of Sustainability« entstand im Treppenhaus des Umweltministeriums in Brandenburg. Die abstrakte Serie erforscht Licht, Schatten und Materialien wie Stahl und Holz und verwandelt alltägliche Durchgänge in meditative Kompositionen. Inspiriert vom UN-Konzept der drei Dimensionen der Nachhaltigkeit – ökologisch, ökonomisch und sozial – repräsentiert jedes Photo eine Säule und macht gewöhnliche Strukturen zu Symbolen gemeinsamer Verantwortung.',
     descriptionEn: '“Dimensions of Sustainability” was created in the stairwell of the Environment Ministry in Brandenburg. The abstract series explores light, shadow, and materials such as steel and wood, transforming everyday passageways into meditative compositions. Inspired by the UN concept of three dimensions of sustainability—ecological, economic, and social—each photo represents one pillar and turns ordinary structures into symbols of shared responsibility.',
     descriptionFa: '«ابعاد پایداری» در پلکان وزارت محیط زیست براندنبورگ خلق شده و با الهام از سه بعد پایداری سازمان ملل، عناصر را به نمادهای مسئولیت مشترک بدل می‌کند.',
-    previewImage: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+    previewImage: '/images/wetransfer/dimensions_sustainability_01.webp',
     galleryPhotos: [
       {
-        id: 'dimensions-01',
-        src: '/images/2026_09_os-07-dimensions-of-sustainability-01-scaled.jpeg',
+        id: 'dimensions-sustainability-01',
+        src: '/images/wetransfer/dimensions_sustainability_01.webp',
         alt: 'Dimensions of Sustainability 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
-        id: 'dimensions-02',
-        src: '/images/2026_09_os-07-dimensions-of-sustainability-02-scaled.jpeg',
+        id: 'dimensions-sustainability-02',
+        src: '/images/wetransfer/dimensions_sustainability_02.webp',
         alt: 'Dimensions of Sustainability 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
-        id: 'dimensions-03',
-        src: '/images/2026_09_os-07-dimensions-of-sustainability-03-scaled.jpeg',
+        id: 'dimensions-sustainability-03',
+        src: '/images/wetransfer/dimensions_sustainability_03.webp',
         alt: 'Dimensions of Sustainability 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1018,55 +1058,55 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: '»Razor Pull Berlin« verdichtet ein gewöhnliches städtisches Straßenbild zu einem fast abstrakten visuellen Raum. Durch extreme Perspektiven konvergieren Straßenlaternen, Glasfassaden und Klinkerstrukturen zu einer eigenständigen Architekturwahrnehmung, wobei die Glasfassade selbst wie eine Klinge erscheint. Die Serie zieht den Betrachter in einen subtilen, hypnotischen Sog. »Razor Pull Berlin« lädt dazu ein, die Stadt neu zu entdecken und die stille, markante Schönheit ihrer abstrakten Geometrie zu erkennen.',
     descriptionEn: '“Razor Pull Berlin” condenses an ordinary urban streetscape into an almost abstract visual space. Through extreme perspectives, streetlights, glass facades and brick structures converge into a distinct perception of architecture, the glass facade itself appearing as a blade. The series draws the viewer into a subtle yet hypnotic pull. The circular lamp detaches from its function, becoming an abstract plane that fuses with the surrounding buildings. “Razor Pull Berlin” invites us to rediscover the city and recognize the quiet, striking beauty of its abstract geometry.',
     descriptionFa: '«کشش تیغ برلین» چشم‌انداز خیابانی شهر را به میدانی انتزاعی تبدیل می‌کند که در آن شیشه‌ها، آجرها و چراغ‌ها در پرسپکتیوی گیرا به هم می‌پیوندند.',
-    previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+    previewImage: '/images/wetransfer/razor_pull_berlin_01.webp',
     galleryPhotos: [
       {
         id: 'razor-pull-01',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-01-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_01.webp',
         alt: 'Razor Pull Berlin 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'razor-pull-02',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-02-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_02.webp',
         alt: 'Razor Pull Berlin 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'razor-pull-03',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_03.webp',
         alt: 'Razor Pull Berlin 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'razor-pull-04',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-04-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_04.webp',
         alt: 'Razor Pull Berlin 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'razor-pull-05',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-05-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_05.webp',
         alt: 'Razor Pull Berlin 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       },
       {
         id: 'razor-pull-06',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-06-scaled.webp',
+        src: '/images/wetransfer/razor_pull_berlin_06.webp',
         alt: 'Razor Pull Berlin 06',
         captionDe: 'Image 06',
         captionEn: 'Image 06',
-        captionFa: 'تصویر ۰۶'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1085,47 +1125,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Die Kaiser-Wilhelm-Gedächtniskirche ist ein einzigartiger Ort der Erinnerung im Herzen Berlins. Ihr Ruinenturm erinnert an die Schrecken des Krieges, während die nach dem Anschlag von 2016 eingeführten Eingangssperren Schutz in einer offenen, aber verwundbaren Stadt symbolisieren. Dennoch strahlt die Kirche Schönheit aus: Historische Bausubstanz, leuchtende Mosaike und moderne Architektur verbinden Vergangenheit und Gegenwart. Menschen aus aller Welt versammeln sich hier in Momenten des Gedenkens, der Freude und der Hoffnung – ein lebendiges Symbol unserer Zeit.',
     descriptionEn: 'The Kaiser Wilhelm Memorial Church is a unique place of remembrance in the heart of Berlin. Its ruined tower recalls the horrors of war, while the entrance barriers introduced after the 2016 attack symbolize protection in an open yet vulnerable city. Still, the church radiates beauty: historic fabric, glowing mosaics and modern architecture connect past and present. People from all over the world gather here in moments of remembrance, joy and hope – a living symbol of our time.',
     descriptionFa: 'کلیسای یادبود قیصر ویلهلم یادمانی بی‌همتا در قلب برلین است؛ برجی ویران که وحشت جنگ را بازمی‌نماید و نماد همبستگی و امید است.',
-    previewImage: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
+    previewImage: '/images/wetransfer/fragments_of_memory_01.webp',
     galleryPhotos: [
       {
         id: 'fragments-01',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-01-scaled.webp',
-        alt: 'Fragments of Memory 01',
+        src: '/images/wetransfer/fragments_of_memory_01.webp',
+        alt: 'Fragments of Memory – Fragments of Time 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'fragments-02',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-02-scaled.webp',
-        alt: 'Fragments of Memory 02',
+        src: '/images/wetransfer/fragments_of_memory_02.webp',
+        alt: 'Fragments of Memory – Fragments of Time 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'fragments-03',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-03-scaled.webp',
-        alt: 'Fragments of Memory 03',
+        src: '/images/wetransfer/fragments_of_memory_03.webp',
+        alt: 'Fragments of Memory – Fragments of Time 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'fragments-04',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-04-scaled.webp',
-        alt: 'Fragments of Memory 04',
+        src: '/images/wetransfer/fragments_of_memory_04.webp',
+        alt: 'Fragments of Memory – Fragments of Time 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'fragments-05',
-        src: '/images/2026_09_os-09-fragments-of-memory-fragments-of-time-05-scaled.webp',
-        alt: 'Fragments of Memory 05',
+        src: '/images/wetransfer/fragments_of_memory_05.webp',
+        alt: 'Fragments of Memory – Fragments of Time 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1144,55 +1184,55 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Im weiteren Kontext eines pädagogischen Außenraums verwandelt sich ein Spielplatz-Klettergerüst in eine Studie über Symmetrie, Rhythmus und räumliche Spannung – eine Form von »Spielarchitektur«, in der Gitter und Verbindungspunkte ein Netzwerk aus Ordnung und Bewegung schaffen. Durch Wiederholungen und radiale Verbindungen wird ein Nutzobjekt zu einem abstrakten Diagramm von Gleichgewicht und Fluss.',
     descriptionEn: 'Within the wider context of an educational exterior, a playground climbing frame transforms into a study of symmetry, rhythm, and spatial tension — a form of “play architecture” in which grids and junctions create a network of order and movement. Through repeating patterns and radial connections, a utilitarian object becomes an abstract diagram of balance and flow, prompting reflection on the invisible frameworks that shape our perception of space and on how designed outdoor learning environments quietly teach structure, orientation and connectivity.',
     descriptionFa: 'در محوطه بیرونی یک مرکز آموزشی، اسکلت یک وسیله بازی به مطالعه‌ای ژرف در باب تقارن، ریتم و تنش فضایی بدل می‌شود.',
-    previewImage: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
+    previewImage: '/images/wetransfer/symmetric_networks_01.webp',
     galleryPhotos: [
       {
         id: 'symmetric-01',
-        src: '/images/2026_09_os-11-symmetric-networks-01-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_01.webp',
         alt: 'Symmetric Networks 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تصویر ۰۱'
+        captionFa: 'تصویر'
       },
       {
         id: 'symmetric-02',
-        src: '/images/2026_09_os-11-symmetric-networks-02-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_02.webp',
         alt: 'Symmetric Networks 02',
         captionDe: 'Image 02',
         captionEn: 'Image 02',
-        captionFa: 'تصویر ۰۲'
+        captionFa: 'تصویر'
       },
       {
         id: 'symmetric-03',
-        src: '/images/2026_09_os-11-symmetric-networks-03-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_03.webp',
         alt: 'Symmetric Networks 03',
         captionDe: 'Image 03',
         captionEn: 'Image 03',
-        captionFa: 'تصویر ۰۳'
+        captionFa: 'تصویر'
       },
       {
         id: 'symmetric-04',
-        src: '/images/2026_09_os-11-symmetric-networks-04-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_04.webp',
         alt: 'Symmetric Networks 04',
         captionDe: 'Image 04',
         captionEn: 'Image 04',
-        captionFa: 'تصویر ۰۴'
+        captionFa: 'تصویر'
       },
       {
         id: 'symmetric-05',
-        src: '/images/2026_09_os-11-symmetric-networks-05-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_05.webp',
         alt: 'Symmetric Networks 05',
         captionDe: 'Image 05',
         captionEn: 'Image 05',
-        captionFa: 'تصویر ۰۵'
+        captionFa: 'تصویر'
       },
       {
         id: 'symmetric-06',
-        src: '/images/2026_09_os-11-symmetric-networks-06-scaled.webp',
+        src: '/images/wetransfer/symmetric_networks_06.webp',
         alt: 'Symmetric Networks 06',
         captionDe: 'Image 06',
         captionEn: 'Image 06',
-        captionFa: 'تصویر ۰۶'
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1346,15 +1386,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Diese Photoserie entschlüsselt Berlins urbane Identität durch das Prisma zeitgenössischer Architektur. Glasfassaden werden zu Leinwänden des pulsierenden Stadtlebens und spiegeln vielschichtige Abstraktionen wider. Geometrische Klarheit, lebendige Farben, Licht, Schatten und ikonische Silhouetten erzeugen neue visuelle Rhythmen. Alle Photographien sind unbearbeitet direkt aus der Kamera – authentische Momente im Fluss der Zeit.',
     descriptionEn: 'This photo series deciphers Berlin’s urban identity through the prism of contemporary architecture. Glass facades transform into canvases for vibrant city life, echoing multi-layered abstractions. Geometric clarity, vivid colors, light, shadow, and iconic silhouettes generate new visual rhythms. All photographs are unedited and taken straight from the camera—authentic moments in time. Construction and illusion blend the familiar with the unexpected, allowing Berlin to shine in ever-changing perspectives and inviting viewers to radically reimagine the city.',
     descriptionFa: 'این مجموعه عکس هویت شهری برلین را از دریچه منشور معماری معاصر رمزگشایی می‌کند؛ شیشه‌ها، رنگ‌ها و خطوط در پرسپکتیوهایی نو متجلی می‌شوند.',
-    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
+    previewImage: '/images/wetransfer/prismatic_berlin_01.webp',
     galleryPhotos: [
       {
         id: 'prismatic-berlin-01',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-02-scaled.webp',
-        alt: 'Prismatic Berlin',
-        captionDe: 'Prismatic Berlin – SchirZan',
-        captionEn: 'Prismatic Berlin – SchirZan',
-        captionFa: 'برلین منشوری – شیرزن'
+        src: '/images/wetransfer/prismatic_berlin_01.webp',
+        alt: 'Prismatic Berlin 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'prismatic-berlin-02',
+        src: '/images/wetransfer/prismatic_berlin_02.webp',
+        alt: 'Prismatic Berlin 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'prismatic-berlin-03',
+        src: '/images/wetransfer/prismatic_berlin_03.webp',
+        alt: 'Prismatic Berlin 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'prismatic-berlin-04',
+        src: '/images/wetransfer/prismatic_berlin_04.webp',
+        alt: 'Prismatic Berlin 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'prismatic-berlin-05',
+        src: '/images/wetransfer/prismatic_berlin_05.webp',
+        alt: 'Prismatic Berlin 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1373,15 +1445,87 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'In »Transformer« werden urbane Räume durch Reflexionen und Verzerrungen transformiert: Fassaden lösen sich auf und der wiederkehrende rote Kran als zentrales Motiv verbindet abstrakte Linien und Muster als Symbol urbanen Wandels und ständiger Veränderung. Architektur scheint zu fließen; vertraute Szenerien werden zu kaleidoskopartigen Projektionen. Alle Bilder sind unbearbeitet – authentische Momente der Metamorphose.',
     descriptionEn: 'In “Transformer,” urban spaces are transformed through reflections and distortions: facades dissolve and the recurring red crane, as a central motiv, links abstract lines and patterns, symbolizing urban transformation and constant change. Architecture appears to flow; familiar settings are reimagined as kaleidoscopic, shifting projections. All images are unedited (except occasional cropping), so viewers encounter authentic moments of metamorphosis: the familiar becomes a sign of radical change, merging reality and abstraction into new perspectives on urban transformation.',
     descriptionFa: 'در «دگرگون‌شونده»، فضاهای شهری از طریق بازتاب‌ها و تغییر زاویه‌ها دگرگون می‌شوند و جرثقیل سرخ به نماد دگرگونی مداوم بدل می‌گردد.',
-    previewImage: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
+    previewImage: '/images/wetransfer/transformer_01.webp',
     galleryPhotos: [
       {
         id: 'transformer-01',
-        src: '/images/2026_10_amp-2026-cloud-mirror-i-04-scaled.webp',
-        alt: 'Transformer',
-        captionDe: 'Transformer – SchirZan',
-        captionEn: 'Transformer – SchirZan',
-        captionFa: 'دگرگون‌شونده – شیرزن'
+        src: '/images/wetransfer/transformer_01.webp',
+        alt: 'Transformer 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-02',
+        src: '/images/wetransfer/transformer_02.webp',
+        alt: 'Transformer 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-03',
+        src: '/images/wetransfer/transformer_03.webp',
+        alt: 'Transformer 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-04',
+        src: '/images/wetransfer/transformer_04.webp',
+        alt: 'Transformer 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-05',
+        src: '/images/wetransfer/transformer_05.webp',
+        alt: 'Transformer 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-06',
+        src: '/images/wetransfer/transformer_06.webp',
+        alt: 'Transformer 06',
+        captionDe: 'Image 06',
+        captionEn: 'Image 06',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-07',
+        src: '/images/wetransfer/transformer_07.webp',
+        alt: 'Transformer 07',
+        captionDe: 'Image 07',
+        captionEn: 'Image 07',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-08',
+        src: '/images/wetransfer/transformer_08.webp',
+        alt: 'Transformer 08',
+        captionDe: 'Image 08',
+        captionEn: 'Image 08',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-09',
+        src: '/images/wetransfer/transformer_09.webp',
+        alt: 'Transformer 09',
+        captionDe: 'Image 09',
+        captionEn: 'Image 09',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'transformer-10',
+        src: '/images/wetransfer/transformer_10.webp',
+        alt: 'Transformer 10',
+        captionDe: 'Image 10',
+        captionEn: 'Image 10',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1500,15 +1644,39 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     descriptionDe: '»Blessed Are Those Who Mourn« übersetzt die Seligpreisungen in monumentale Architektur. Von Licht durchflutet, rahmen Säulen Reliefs, deren uralte Worte Trost und Gerechtigkeit verheißen. Hoffnung erwächst im Wechselspiel von Licht und Schatten und macht jede Fassade zu einem zeitlosen Zeichen. Die Architektur bildet eine Brücke zwischen biblischer Verheißung und zeitgenössischer Erfahrung und macht Trost und Hoffnung im heutigen Stadtraum sinnlich greifbar – alles genau so aufgenommen, wie gesehen, unbearbeitet und im Originalzustand: »Selig sind, die da Leid tragen, denn sie sollen getröstet werden.«',
     descriptionEn: '“Blessed Are Those Who Mourn” translates the Beatitudes into monumental architecture. Bathed in light, columns frame reliefs whose ancient words evoke comfort and justice. Hope emerges in the interplay of light and shadow, turning each façade into a timeless sign. The architecture forms a bridge between biblical promise and contemporary experience, making comfort and hope sensually tangible within today’s urban space—all captured exactly as seen, with every photograph in the series shown unedited and as originally taken, centered on: “Blessed are those who mourn, for they shall be comforted.”',
     descriptionFa: '«خوشا به حال سوگواران»: ترجمان بشارت‌ها در معماری باشکوه ستون‌ها که نور و سایه را به نمادهای امید و تسلی بدل می‌سازد.',
-    previewImage: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+    previewImage: '/images/wetransfer/blessed_mourn_01.webp',
     galleryPhotos: [
       {
         id: 'blessed-mourn-01',
-        src: '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
-        alt: 'Blessed Are Those Who Mourn',
-        captionDe: 'Blessed Are Those Who Mourn – SchirZan',
-        captionEn: 'Blessed Are Those Who Mourn – SchirZan',
-        captionFa: 'خوشا به حال سوگواران – شیرزن'
+        src: '/images/wetransfer/blessed_mourn_01.webp',
+        alt: 'Blessed Are Those Who Mourn 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'blessed-mourn-02',
+        src: '/images/wetransfer/blessed_mourn_02.webp',
+        alt: 'Blessed Are Those Who Mourn 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'blessed-mourn-03',
+        src: '/images/wetransfer/blessed_mourn_03.webp',
+        alt: 'Blessed Are Those Who Mourn 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'blessed-mourn-04',
+        src: '/images/wetransfer/blessed_mourn_04.webp',
+        alt: 'Blessed Are Those Who Mourn 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
       }
     ]
   }
@@ -1530,15 +1698,47 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     descriptionDe: 'Berlin ist meine Heimat, eine Stadt der Vielfalt und Freiheit. Während des Christopher Street Day (CSD) 2026 wurde ein Lieferwagen vorsätzlich in eine Menschenmenge gesteuert, und der Angreifer attackierte mit einer Machete, bevor er flüchtete. Die Behörden stuften den Täter als islamistischen Extremisten ein. Eine Frau wurde getötet, 31 Menschen verletzt. Obwohl ich nicht queer bin, stehe ich als Deutsch-Iranerin in Berlin in voller Solidarität, und dieser Anschlag hat mich tief erschüttert. Diese Photographien sind mein stiller Akt des Gedenkens für die Opfer und eine Mahnung, dass queeres Leben, Vielfalt und Freiheit gelebt und verteidigt werden müssen.',
     descriptionEn: 'Berlin is my home, a city of diversity and freedom. During Christopher Street Day (CSD) 2026, a van was deliberately driven into a crowd, and the attacker used a machete before fleeing. Authorities describe the perpetrator as an Islamist extremist. One woman was killed and 31 people were injured. Although I am not queer, as a German-Iranian living in Berlin, I stand in solidarity, and this attack affected me deeply. This series of photographs is my quiet act of remembrance for the victims. It is also a reminder that queer life, diversity and freedom must be lived and defended.',
     descriptionFa: 'مستندنگاری شجاعانه در همبستگی با قربانیان حمله به رژه رنگین‌کمانی برلین؛ یادبودی برای آزادی و دفاع از حرمت انسانی (تقدیر ویژه BIFA 2026).',
-    previewImage: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+    previewImage: '/images/wetransfer/berlin_attack_queer_01.webp',
     galleryPhotos: [
       {
         id: 'attack-on-queer-01',
-        src: '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
-        alt: 'Berlin: Attack on Queer, Diversity and Freedom',
-        captionDe: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
-        captionEn: 'Berlin: Attack on Queer, Diversity and Freedom – SchirZan',
-        captionFa: 'برلین: حمله به تنوع و آزادی – شیرزن'
+        src: '/images/wetransfer/berlin_attack_queer_01.webp',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'attack-on-queer-02',
+        src: '/images/wetransfer/berlin_attack_queer_02.webp',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'attack-on-queer-03',
+        src: '/images/wetransfer/berlin_attack_queer_03.webp',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'attack-on-queer-04',
+        src: '/images/wetransfer/berlin_attack_queer_04.webp',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'attack-on-queer-05',
+        src: '/images/wetransfer/berlin_attack_queer_05.webp',
+        alt: 'Berlin: Attack on Queer, Diversity and Freedom 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1958,7 +2158,7 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'View Editor’s Choice Feature →',
     linkTextFa: 'مشاهده اثر در سایت گلوبال لنز ←',
     type: 'editors-choice',
-    coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp'
+    coverImage: '/images/wetransfer/solitaire_harmony_01.webp'
   },
   {
     id: 'perspa-editors-choice',
