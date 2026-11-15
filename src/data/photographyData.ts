@@ -173,7 +173,7 @@ export const INTRO_CONTENT = {
   ],
   photoCredit: 'Photo: Steve Barret',
   artistSectionTitleDe: 'Namensbedeutung »SchirZan« & Philosophie des Lichts vertiefen',
-  artistSectionTitleEn: 'Photography, Artist Name and Inspiration',
+  artistSectionTitleEn: 'Artist Name SchirZan & Drawing with Light',
   artistSectionTitleFa: 'عکاسی، نام هنری و الهام‌بخش · شیرزن',
   artistNameDe: 'SchirZan | Schahrsad Shahmirzadi',
   artistNameEn: 'SchirZan | Schahrsad Shahmirzadi',

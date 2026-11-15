@@ -252,9 +252,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
           </div>
 
-          {/* Right Column (Span 5): Master Portrait (Desktop View) */}
+          {/* Right Column (Span 5): Master Portrait (Desktop View - Großzügige weiße Umrandung, Name nicht auf dem Foto) */}
           <div className="hidden lg:flex lg:col-span-5 xl:col-span-5 flex-col items-center justify-center space-y-4">
-            <div className="w-full max-w-md xl:max-w-lg bg-white p-5 sm:p-6 border border-stone-200 shadow-sm rounded-2xl space-y-4">
+            <div className="w-full max-w-md xl:max-w-lg bg-white p-6 sm:p-7 border border-stone-200/90 shadow-sm rounded-2xl space-y-4">
               
               {/* Steve Barret Portrait Container */}
               <div
@@ -270,13 +270,6 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500 ease-out select-none"
                   loading="eager"
                 />
-
-                {/* Name-Tag direkt auf dem Bild */}
-                <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-                  <span className="inline-flex items-center px-2 py-0.5 bg-stone-900/85 backdrop-blur-xs text-white rounded text-xs font-medium tracking-wide shadow-xs">
-                    {currentLang === 'fa' ? 'شیرزن' : 'SchirZan'}
-                  </span>
-                </div>
 
                 <div className="absolute top-3 right-3 bg-white/90 text-stone-700 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity shadow-xs">
                   <Maximize2 className="w-4 h-4" />
@@ -369,10 +362,16 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   : 'Catalog of Works, Honors & International Juror Panels'}
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-              {currentLang === 'fa'
-                ? 'عکاسی و هنر – آثار · جوایز بین‌المللی'
-                : 'Photography & Art – Works · Int’l Awards'}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight flex flex-wrap items-center gap-x-2.5 gap-y-1">
+              <span>
+                {currentLang === 'fa'
+                  ? 'عکاسی و هنر – آثار'
+                  : 'Photography & Art – Works'}
+              </span>
+              <span className="text-stone-300 text-lg sm:text-2xl font-light hidden sm:inline">|</span>
+              <span className="text-amber-900 text-base sm:text-xl font-sans font-semibold">
+                {currentLang === 'fa' ? 'جوایز بین‌المللی' : 'Int’l Awards'}
+              </span>
             </h2>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
               {currentLang === 'de'
@@ -399,10 +398,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   href={comp.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs bg-stone-50 hover:bg-amber-50 text-stone-800 hover:text-amber-950 border border-stone-200/90 hover:border-amber-400 px-3 py-1.5 rounded-lg transition-all shadow-2xs hover:shadow-xs font-medium group"
+                  className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs bg-amber-50/80 hover:bg-amber-100/90 text-amber-950 border border-amber-300/80 hover:border-amber-500 px-3 py-1.5 rounded-lg transition-all shadow-2xs hover:shadow-xs font-semibold group"
                 >
                   <span>{comp.name}</span>
-                  <ExternalLink className="w-2.5 h-2.5 text-stone-400 group-hover:text-amber-700 transition-colors" />
+                  <ExternalLink className="w-2.5 h-2.5 text-amber-700 group-hover:text-amber-950 transition-colors" />
                 </a>
               ))}
             </div>
