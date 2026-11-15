@@ -139,7 +139,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         locationDe: 'Berlin Marathon 2026 · Wall of Fame',
         locationEn: 'Berlin Marathon 2026 · Wall of Fame',
         locationFa: 'ماراتن برلین ۲۰۲۶ · تالار مشاهیر',
-        captionDe: 'All participants in the 2026 BMW BERLIN-MARATHON, along with all champions from 1974 to 2025, are listed alphabetically on the Wall of Fame.',
+        captionDe: 'Alle Teilnehmerinnen und Teilnehmer des BMW BERLIN-MARATHON 2026 sowie alle Champions von 1974 bis 2025 sind alphabetisch auf der Wall of Fame verzeichnet.',
         captionEn: 'All participants in the 2026 BMW BERLIN-MARATHON, along with all champions from 1974 to 2025, are listed alphabetically on the Wall of Fame.',
         captionFa: 'کلیه شرکت‌کنندگان ماراتن بی‌ام‌و برلین ۲۰۲۶ به همراه تمامی قهرمانان از سال ۱۹۷۴ تا ۲۰۲۵ به ترتیب حروف الفبا بر روی تالار مشاهیر (Wall of Fame) ثبت شده‌اند.'
       },
