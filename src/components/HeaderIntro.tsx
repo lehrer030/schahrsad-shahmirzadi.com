@@ -59,7 +59,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
             {/* Main Personal Title */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold break-words">
                 {currentLang === 'fa' ? 'شیرزن | شهزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
               </h1>
 
@@ -270,6 +270,13 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500 ease-out select-none"
                   loading="eager"
                 />
+
+                {/* Name-Tag direkt auf dem Bild */}
+                <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
+                  <span className="inline-flex items-center px-2 py-0.5 bg-stone-900/85 backdrop-blur-xs text-white rounded text-xs font-medium tracking-wide shadow-xs">
+                    {currentLang === 'fa' ? 'شیرزن' : 'SchirZan'}
+                  </span>
+                </div>
 
                 <div className="absolute top-3 right-3 bg-white/90 text-stone-700 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity shadow-xs">
                   <Maximize2 className="w-4 h-4" />

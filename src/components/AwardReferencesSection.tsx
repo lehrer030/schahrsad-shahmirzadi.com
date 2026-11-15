@@ -692,7 +692,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Globaler Wettbewerb mit einer renommierten Jury aus internationalen Galerist:innen, Bildredakteur:innen und Verleger:innen.',
     scopeEn: 'Highly respected international competition juried by leading gallery owners, publishers, and photography editors.',
     scopeFa: 'مسابقه معتبر عکاسی با داوری مدیران گالری‌ها و ناشران برجسته بین‌المللی.',
-    badgeImage: '/images/2025_12_nd_awards_hm_2025.webp',
+    badgeImage: '/images/badges_custom/nd_awards_2025_hm.png',
     mainDirectoryUrl: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/honorable-mentions/',
     honors: [
       {

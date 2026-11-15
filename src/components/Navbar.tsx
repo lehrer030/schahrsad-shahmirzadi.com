@@ -358,19 +358,19 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi */}
         <button
           onClick={onGoHome}
-          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2.5 sm:gap-3 shrink-0"
+          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2 sm:gap-3 min-w-0 shrink"
         >
           <img
             src={resolveAsset('/images/schirzan-logo.png')}
             alt="SchirZan"
-            className="w-9 h-9 sm:w-10 sm:h-10 object-contain drop-shadow-2xs group-hover:scale-105 transition-transform duration-300 shrink-0"
+            className="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-2xs group-hover:scale-105 transition-transform duration-300 shrink-0"
           />
-          <div className="flex items-center space-x-2 rtl:space-x-reverse">
-            <span className="text-xl sm:text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
+          <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
+            <span className="text-lg sm:text-2xl font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors shrink-0">
               SchirZan
             </span>
-            <span className="text-stone-300 text-base sm:text-lg font-light">|</span>
-            <span className="text-stone-700 text-sm sm:text-base font-serif tracking-wide font-medium">
+            <span className="text-stone-300 text-sm sm:text-lg font-light hidden sm:inline">|</span>
+            <span className="text-stone-700 text-xs sm:text-base font-serif tracking-wide font-medium hidden sm:inline truncate">
               {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
             </span>
           </div>

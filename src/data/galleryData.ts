@@ -153,17 +153,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionDe: 'Adidas City Night Run Berlin 2026: An der Kaiser-Wilhelm-Gedächtniskirche in Solidarität mit den Opfern des CSD 2026 – Für queeres Leben, Vielfalt und Freiheit.',
         captionEn: 'Adidas City Night Run Berlin 2026: In Solidarity with the Victims of the CSD 2026 Attack – for Queer Lives, Diversity and Freedom at the Kaiser Wilhelm Memorial Church.',
         captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
-      },
-      {
-        id: 'run-gallery-05',
-        src: './images/2025_07_image00055-1-scaled.webp',
-        alt: 'Sommertraining Berlin – Dynamik & Frische',
-        locationDe: 'Sommertraining · Berlin',
-        locationEn: 'Summer Training · Berlin',
-        locationFa: 'تمرین تابستانی · برلین',
-        captionDe: 'Sommertraining in Berlin — Momentaufnahme von Frische, Dynamik und Energie während der Vorbereitung auf die Langstrecke.',
-        captionEn: 'Summer training in Berlin — An impression of vitality, dynamic momentum, and focus during endurance preparation.',
-        captionFa: 'تمرین تابستانی در برلین — تصویری از طراوت، انرژی و تمرکز در طول دوره آماده‌سازی استقامت.'
       }
     ]
   },

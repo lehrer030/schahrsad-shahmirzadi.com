@@ -24,13 +24,6 @@ export const Footer: React.FC<FooterProps> = ({
               <span className="text-xl font-serif text-amber-900 font-bold tracking-wider leading-none">
                 {currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}
               </span>
-              <span className="text-[9.5px] font-mono tracking-widest uppercase text-stone-500 font-semibold mt-1.5">
-                {currentLang === 'de'
-                  ? 'KUNST · KAMPF · VISION'
-                  : currentLang === 'fa'
-                    ? 'هنر · مبارزه · آرمان'
-                    : 'ART · FIGHT · VISION'}
-              </span>
             </div>
             <p className="text-stone-800 font-sans text-xs font-semibold">
               {currentLang === 'de'

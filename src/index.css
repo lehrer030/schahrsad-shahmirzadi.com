@@ -4,6 +4,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   body {
@@ -15,6 +17,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     min-height: 100vh;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   /* Verbessere Lesbarkeit auf PC-Bildschirmen: Keine zu dünnen 300er-Schriften */

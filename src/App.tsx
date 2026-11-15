@@ -287,7 +287,7 @@ export default function App() {
   return (
     <div
       dir={currentLang === 'fa' ? 'rtl' : 'ltr'}
-      className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-amber-200 selection:text-amber-950 w-full"
+      className="min-h-screen bg-[#faf8f5] text-stone-900 flex flex-col font-sans selection:bg-amber-200 selection:text-amber-950 w-full max-w-full overflow-x-hidden"
     >
       {/* EXCLUSIVELY ONE UNIFIED NAVIGATION BAR */}
       <Navbar
