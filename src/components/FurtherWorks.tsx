@@ -89,6 +89,11 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       }}
                     />
                     <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
+
+                    {/* Watermark badge on image */}
+                    <div className="absolute bottom-2 left-2 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                      SchirZan | Schahrsad Shahmirzadi
+                    </div>
                     
                     {/* Photo count indicator */}
                     {work.galleryPhotos && work.galleryPhotos.length > 1 && (

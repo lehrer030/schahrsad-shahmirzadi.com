@@ -583,7 +583,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Mitteleuropäischer Wettbewerb mit Fokus auf photographische Exzellenz, kuratiert von einer internationalen Jury.',
     scopeEn: 'Central European photography awards celebrating outstanding visual narratives and artistic distinction.',
     scopeFa: 'مسابقه عکاسی اروپای مرکزی با داوری بین‌المللی برای تجلیل از خلاقیت بصری.',
-    badgeImage: '/images/2026_10_winners_badge-1024x474.webp',
+    badgeImage: '/images/badges_custom/bifa_2026_hm.png',
     mainDirectoryUrl: 'https://budapestfotoawards.com/honorable-mention/?comp=bifa&comp_year=2026',
     honors: [
       {
@@ -692,7 +692,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Globaler Wettbewerb mit einer renommierten Jury aus internationalen Galerist:innen, Bildredakteur:innen und Verleger:innen.',
     scopeEn: 'Highly respected international competition juried by leading gallery owners, publishers, and photography editors.',
     scopeFa: 'مسابقه معتبر عکاسی با داوری مدیران گالری‌ها و ناشران برجسته بین‌المللی.',
-    badgeImage: '/images/2026_01_winners_badge-AMP-2025-Honorable-Mention-1024x474.webp',
+    badgeImage: '/images/2025_12_nd_awards_hm_2025.webp',
     mainDirectoryUrl: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/honorable-mentions/',
     honors: [
       {

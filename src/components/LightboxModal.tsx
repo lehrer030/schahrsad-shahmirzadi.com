@@ -114,9 +114,9 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           />
 
           {/* Protective Watermark */}
-          <div className="absolute bottom-3 right-4 flex items-center gap-1.5 text-xs text-white/70 font-serif bg-stone-950/60 px-2.5 py-1 rounded-md backdrop-blur-xs">
+          <div className="absolute bottom-3 right-4 flex items-center gap-1.5 text-xs text-white/90 font-serif bg-stone-950/70 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-md">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-            <span>© SchirZan · Schahrsad Shahmirzadi</span>
+            <span>SchirZan | Schahrsad Shahmirzadi</span>
           </div>
         </div>
 

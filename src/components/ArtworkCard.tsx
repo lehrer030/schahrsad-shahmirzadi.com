@@ -143,8 +143,8 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </div>
 
             {/* Watermark logo bottom-right */}
-            <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/90 font-serif pointer-events-none select-none bg-stone-900/40 px-2 py-0.5 rounded">
-              © SchirZan
+            <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/50 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs">
+              SchirZan | Schahrsad Shahmirzadi
             </div>
           </div>
 

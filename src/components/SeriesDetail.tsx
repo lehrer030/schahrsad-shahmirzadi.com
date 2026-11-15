@@ -214,14 +214,14 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   </span>
                 </div>
 
-                <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
-                  © SchirZan
+                <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/50 px-2 py-0.5 rounded backdrop-blur-xs shadow-xs">
+                  SchirZan | Schahrsad Shahmirzadi
                 </div>
               </div>
 
               {/* Direct Museum Beitext Plaque under Photo 1 */}
-              {(firstPhoto.captionDe || firstPhoto.captionFa || series.titleDe) && (
-                <div className="w-full p-3 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
+              {(firstPhoto.captionDe || firstPhoto.captionFa || series.titleDe) && firstPhoto.captionDe !== 'Image 01' && (
+                <div className="w-full p-2.5 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
                   <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
                     {currentLang === 'de'
                       ? (firstPhoto.captionDe || series.titleDe)
@@ -229,13 +229,6 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                       ? (firstPhoto.captionFa || series.titleFa)
                       : (firstPhoto.captionEn || series.titleEn)}
                   </p>
-                  <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
-                    {currentLang === 'de'
-                      ? `Bild 01 von ${series.photos.length} · Hauptwerk (Prämiert) · © SchirZan`
-                      : currentLang === 'fa'
-                      ? `تصویر ۰۱ از ${series.photos.length} · اثر اصلی (برنده جوایز) · © شیرزن`
-                      : `Image 01 of ${series.photos.length} · Lead Work (Awarded) · © SchirZan`}
-                  </span>
                 </div>
               )}
 
@@ -289,13 +282,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                     </span>
                   </div>
 
-                  <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/80 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/30 px-2 py-0.5 rounded backdrop-blur-xs">
-                    © SchirZan
+                  <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/50 px-2 py-0.5 rounded backdrop-blur-xs shadow-xs">
+                    SchirZan | Schahrsad Shahmirzadi
                   </div>
                 </div>
 
-                {(photo.captionDe || photo.captionFa) && (
-                  <div className="max-w-xl mx-auto p-3 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
+                {(photo.captionDe || photo.captionFa) && photo.captionDe !== 'Image 01' && (
+                  <div className="max-w-xl mx-auto p-2.5 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
                     <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
                       {currentLang === 'de'
                         ? photo.captionDe
@@ -303,13 +296,6 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                         ? photo.captionFa
                         : photo.captionEn}
                     </p>
-                    <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-1">
-                      {currentLang === 'de'
-                        ? `Bild ${String(index + 2).padStart(2, '0')} von ${series.photos.length} · © SchirZan`
-                        : currentLang === 'fa'
-                        ? `تصویر ۰${index + 2} از ${series.photos.length} · © شیرزن`
-                        : `Image ${String(index + 2).padStart(2, '0')} of ${series.photos.length} · © SchirZan`}
-                    </span>
                   </div>
                 )}
               </div>

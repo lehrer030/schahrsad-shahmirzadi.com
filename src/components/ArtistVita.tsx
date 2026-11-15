@@ -21,6 +21,28 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             {currentLang === 'de' ? 'Beruflicher Hintergrund & Künstlerische Projekte' : currentLang === 'fa' ? 'پیشینه حرفه‌ای و پروژه‌های هنری' : 'Professional Background & Artistic Projects'}
           </h3>
         </div>
+        {/* Personal Identity Block */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/50 border border-amber-200/70 space-y-3">
+          <div className="flex items-center gap-2 text-amber-900 font-mono text-xs uppercase tracking-wider font-bold">
+            <Sparkles className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'هویت فردی و پیشینه فرهنگی' : 'Personal Identity'}</span>
+          </div>
+          <h4 className="text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'شهزاد شاهمیرزادی · پیشینه و هویت'
+              : currentLang === 'de'
+              ? 'Persönliche Identität & Bikulturelle Herkunft'
+              : 'Personal Identity & Dual Heritage'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+            {currentLang === 'de'
+              ? 'Schahrsad Shahmirzadi, geboren am 4. Februar 1985 in Berlin, ist deutsch-iranischer Herkunft. Ihre Mutter ist Deutsche, ihr Vater stammte aus dem Iran. Sie wuchs in Berlin-Wilmersdorf auf. Ihre bikulturelle Herkunft prägt ihr Identitätsverständnis und ihr Engagement für gesellschaftliche Vielfalt.'
+              : currentLang === 'fa'
+              ? 'شهزاد شاهمیرزادی متولد ۴ فوریه ۱۹۸۵ در برلین، دارای اصالت دوگانه ایرانی-آلمانی است. مادر او آلمانی و پدرش اهل ایران بود. او در منطقه ویلمرسدورف برلین بزرگ شد. این پیشینه دوگانه فرهنگی، بینش هویتی و تعهد استوار او به تنوع و برابری در جامعه را شکل داده است.'
+              : 'Schahrsad Shahmirzadi, born on February 4, 1985, in Berlin, is German-Iranian. Her mother is German, and her father was from Iran. She grew up in Berlin-Wilmersdorf. Her dual cultural heritage shapes her sense of identity and her commitment to diversity in society.'}
+          </p>
+        </div>
+
         {/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
 
@@ -175,13 +197,22 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                     : 'University of Koblenz – Centre for Distance Studies & Further Education ZFUW'}
               </span>
             </div>
-            <span className="font-mono text-[11px] text-stone-500 bg-stone-200/60 px-2.5 py-0.5 rounded-full">
-              {currentLang === 'de'
-                ? 'Masterstudium Angewandte Umweltwissenschaften · M.Sc.'
-                : currentLang === 'fa'
-                  ? 'کارشناسی ارشد علوم کاربردی محیط زیست'
-                  : 'M.Sc. Applied Environmental Sciences'}
-            </span>
+            <div className="flex flex-col sm:items-end gap-1 text-left sm:text-right rtl:sm:text-left">
+              <span className="font-mono text-[11px] font-semibold text-emerald-900 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full inline-block">
+                {currentLang === 'de'
+                  ? 'M.Sc. in Angewandten Umweltwissenschaften: kurz vor Abschluss'
+                  : currentLang === 'fa'
+                  ? 'کارشناسی ارشد علوم کاربردی محیط زیست: در آستانه فارغ‌التحصیلی'
+                  : 'M.Sc. in Applied Environmental Sciences: nearing completion'}
+              </span>
+              <span className="text-[10px] font-mono text-stone-500 block">
+                {currentLang === 'de'
+                  ? 'Seit 2024 · Derzeit im 5. Semester (Stand November 2026)'
+                  : currentLang === 'fa'
+                  ? 'از سال ۲۰۲۴ · در حال حاضر در ترم ۵ تحصیلی (نوامبر ۲۰۲۶)'
+                  : 'Since 2024 · Currently in 5th Semester · as of November 2026'}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -298,10 +329,10 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </p>
             <p>
               {currentLang === 'de'
-                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Im Zusammenhang mit ihrem Leistungssport im Kickboxen wechselte sie in den Polizeivollzugsdienst des Landes Berlin. Dort war sie unter anderem im Landeskriminalamt LKA sowie in stabsnahen Funktionen tätig.'
+                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Parallel zu ihrer Leistungssportkarriere im Kickboxen trat sie in den Dienst der Berliner Polizei ein, wo sie zuletzt in der Zentralstelle für Prävention beim Landeskriminalamt (LKA) als Ansprechperson für gruppenbezogene Menschenfeindlichkeit tätig war.'
                 : currentLang === 'fa'
-                  ? 'پس از اخذ دیپلم از کالج تاریخی گراوئن کلوستر برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همگام با فعالیت‌های ورزش حرفه‌ای در کیک‌بوکسینگ، او به خدمت پلیس ایالت برلین پیوست و در اداره مبارزه با جرایم LKA و دوایر ستادی خدمت نمود.'
-                  : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she transitioned into the Berlin Police Department, serving within the State Criminal Police Office LKA and in executive staff roles.'}
+                ? 'پس از فارغ‌التحصیلی از دبیرستان تاریخی گراوئن کلوستر در برلین در سال ۲۰۰۴، او به تحصیل حقوق پرداخت. همگام با ورزش قهرمانی در کیک‌بوکسینگ، او به پلیس برلین پیوست و اخیراً در دفتر مرکزی پیشگیری در اداره مبارزه با جرایم (LKA) به عنوان مسئول رسیدگی به جرایم خصومت‌های گروهی خدمت می‌کرد.'
+                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she joined the Berlin Police, where she most recently served in the Central Office for Prevention at the State Criminal Police Office (LKA) as a Contact Person for Group-Focused Enmity.'}
             </p>
             <p>
               {currentLang === 'de'
@@ -393,15 +424,6 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
-                </div>
-                <div className="p-3 text-center border-t border-stone-100">
-                  <span className="text-[11px] font-mono text-stone-600 block">
-                    {currentLang === 'fa'
-                      ? 'دویدن در خیابان‌های برلین برای صلح و محیط‌زیست'
-                      : currentLang === 'de'
-                        ? 'Halbmarathons & Marathon Berlin: Für Frieden & Umweltschutz'
-                        : 'Half Marathons & Marathon Berlin: For Peace & Environment'}
-                  </span>
                 </div>
               </div>
             </div>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { scrollToElementWithOffset } from '../utils/scrollHelper';
-import { resolveAsset } from '../utils/resolveAsset';
 
 export type NavigationCategory =
   | 'architecture'
@@ -355,33 +354,19 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       <div id="brand-header-bar" className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
 
-        {/* Brand / Artist Logo with Emblem */}
+        {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi */}
         <button
           onClick={onGoHome}
-          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2.5 sm:gap-3 shrink-0"
+          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center gap-2 sm:gap-2.5 shrink-0"
         >
-          <img
-            src={resolveAsset('/images/schirzan-logo.webp')}
-            alt="SchirZan Emblem"
-            className="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-2xs group-hover:scale-105 transition-transform duration-300 shrink-0"
-          />
-          <div className="flex flex-col justify-center">
-            <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <span className="text-xl sm:text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
-                SchirZan
-              </span>
-              <span className="text-stone-300 text-sm hidden sm:inline">|</span>
-              <span className="text-stone-600 text-xs sm:text-sm tracking-wide font-normal hidden sm:inline">
-                {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
-              </span>
-            </div>
-            <p className="text-[9px] sm:text-[10px] tracking-wider sm:tracking-widest uppercase text-stone-500 font-mono group-hover:text-amber-900 mt-0.5 whitespace-nowrap font-medium transition-colors">
-              {currentLang === 'de'
-                ? 'KUNST · KAMPF · VISION'
-                : currentLang === 'fa'
-                  ? 'هنر · مبارزه · آرمان'
-                  : 'ART · FIGHT · VISION'}
-            </p>
+          <div className="flex items-center space-x-2 rtl:space-x-reverse">
+            <span className="text-xl sm:text-2xl font-serif tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors">
+              SchirZan
+            </span>
+            <span className="text-stone-300 text-base sm:text-lg font-light">|</span>
+            <span className="text-stone-700 text-sm sm:text-base font-serif tracking-wide font-medium">
+              {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
+            </span>
           </div>
         </button>
 

@@ -632,7 +632,7 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         {/* 3 Images Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
-          {/* Image 1: Feature Page */}
+          {/* Image 1: Solitaire Artwork */}
           <div className="group flex flex-col bg-white border border-stone-200/90 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-700/50 transition-all">
             <a
               href="https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/"
@@ -641,8 +641,8 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
               className="block overflow-hidden bg-stone-100 aspect-3/4 sm:aspect-2/3 relative"
             >
               <img
-                src={resolveAsset('/images/2026_10_image00012-scaled.webp')}
-                alt="Global Lens Awards 2026 - Editor's Choice Feature Page"
+                src={resolveAsset('/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp')}
+                alt="The Solitaire as Abstraction – In Harmony with Nature · Global Lens Awards 2026"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                 loading="lazy"
               />
@@ -651,10 +651,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
               <p className="text-xs text-stone-800 font-medium leading-snug">
                 {isDe
-                  ? 'Offizielle Preisträger-Präsentationsseite bei Global Lens Awards'
+                  ? '»The Solitaire as Abstraction – In Harmony with Nature«'
                   : isFa
-                  ? 'صفحه معرفی رسمی برگزیدگان در جوایز بین‌المللی گلوبال لنز'
-                  : 'Official Winner Showcase Page at Global Lens Awards'}
+                  ? '«تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت»'
+                  : '"The Solitaire as Abstraction – In Harmony with Nature"'}
               </p>
               <a
                 href="https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/"

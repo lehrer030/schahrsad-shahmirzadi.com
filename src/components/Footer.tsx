@@ -60,6 +60,15 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-amber-800 text-stone-700 font-medium flex items-center gap-1.5 cursor-pointer text-left rtl:text-right"
                 >
                   <Mail className="w-3.5 h-3.5 text-amber-800" />
+                  <span>contact@schirzan.com</span>
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={onOpenContact}
+                  className="hover:text-amber-800 text-stone-500 font-medium flex items-center gap-1.5 cursor-pointer text-left rtl:text-right"
+                >
+                  <Mail className="w-3.5 h-3.5 text-stone-400" />
                   <span>contact@schahrsad-shahmirzadi.com</span>
                 </button>
               </li>

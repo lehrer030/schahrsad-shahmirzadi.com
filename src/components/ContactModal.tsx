@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Mail, Check, Copy, ExternalLink, ShieldCheck } from 'lucide-react';
+import { X, Mail, Check, Copy } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 
 interface ContactModalProps {
@@ -13,15 +13,15 @@ export const ContactModal: React.FC<ContactModalProps> = ({
   onClose,
   currentLang
 }) => {
-  const [copied, setCopied] = useState(false);
-  const email = 'contact@schahrsad-shahmirzadi.com';
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+  const emails = ['contact@schirzan.com', 'contact@schahrsad-shahmirzadi.com'];
 
   if (!isOpen) return null;
 
-  const handleCopy = () => {
+  const handleCopy = (email: string, index: number) => {
     navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedIndex(index);
+    setTimeout(() => setCopiedIndex(null), 2000);
   };
 
   return (
@@ -64,46 +64,39 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               : 'For exhibition inquiries, acquisitions, press requests, or collaborations, please reach out directly:'}
           </p>
 
-          <div className="p-4 bg-stone-50 rounded-2xl border border-stone-200/90 flex items-center justify-between gap-3">
-            <div className="truncate">
-              <span className="text-[10px] uppercase tracking-wider font-mono text-stone-400 block font-semibold">
-                Offizielle E-Mail
-              </span>
-              <a
-                href={`mailto:${email}`}
-                className="text-stone-900 hover:text-amber-800 font-mono text-xs sm:text-sm font-semibold truncate block"
-              >
-                {email}
-              </a>
-            </div>
+          <div className="space-y-3">
+            {emails.map((em, idx) => (
+              <div key={idx} className="p-3.5 sm:p-4 bg-stone-50 rounded-2xl border border-stone-200/90 flex items-center justify-between gap-3">
+                <div className="truncate">
+                  <span className="text-[10px] uppercase tracking-wider font-mono text-stone-400 block font-semibold">
+                    {idx === 0 ? (currentLang === 'fa' ? 'ایمیل اصلی هنرمند' : 'Offizielle Studio E-Mail') : (currentLang === 'fa' ? 'ایمیل ارتباطی' : 'Kontakt E-Mail')}
+                  </span>
+                  <a
+                    href={`mailto:${em}`}
+                    className="text-stone-900 hover:text-amber-800 font-mono text-xs sm:text-sm font-semibold truncate block"
+                  >
+                    {em}
+                  </a>
+                </div>
 
-            <button
-              onClick={handleCopy}
-              className="p-2.5 bg-white hover:bg-stone-100 border border-stone-200 rounded-xl transition-all text-stone-600 hover:text-stone-900 shrink-0 cursor-pointer shadow-2xs"
-              title="E-Mail kopieren"
-            >
-              {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-            </button>
-          </div>
-
-          <div className="space-y-2 pt-2">
-            <a
-              href={`mailto:${email}?subject=Anfrage%20SchirZan%20Photographie`}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-stone-900 hover:bg-amber-800 text-white rounded-full text-xs font-bold uppercase tracking-wider transition-colors shadow-xs"
-            >
-              <Mail className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'ارسال ایمیل مستقیم' : 'E-Mail senden'}</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          <div className="pt-3 border-t border-stone-100 flex items-center gap-2 text-xs text-stone-500">
-            <ShieldCheck className="w-4 h-4 text-amber-800" />
-            <span>
-              {currentLang === 'fa'
-                ? 'پاسخ‌گویی مستقیم توسط هنرمند یا دفتر مدیریت آثار'
-                : 'Direkte Bearbeitung durch die Künstlerin SchirZan'}
-            </span>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <button
+                    onClick={() => handleCopy(em, idx)}
+                    className="p-2 sm:p-2.5 bg-white hover:bg-stone-100 border border-stone-200 rounded-xl transition-all text-stone-600 hover:text-stone-900 cursor-pointer shadow-2xs"
+                    title={currentLang === 'fa' ? 'کپی ایمیل' : 'E-Mail kopieren'}
+                  >
+                    {copiedIndex === idx ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+                  </button>
+                  <a
+                    href={`mailto:${em}?subject=Anfrage%20SchirZan%20Photographie`}
+                    className="p-2 sm:p-2.5 bg-stone-900 hover:bg-amber-800 text-white rounded-xl transition-all cursor-pointer shadow-2xs"
+                    title={currentLang === 'fa' ? 'ارسال ایمیل' : 'E-Mail senden'}
+                  >
+                    <Mail className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -64,31 +64,31 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         locationDe: 'WKU Weltmeisterschaft · Schloss Diedersdorf',
         locationEn: 'WKU World Championship · Diedersdorf Castle',
         locationFa: 'قهرمانی جهان WKU · کاخ دیدرزدورف',
-        captionDe: 'SchirZan mit dem WKU-Weltmeistergürtel – Vollkontakt Kickboxen (−57,5 kg).',
-        captionEn: 'SchirZan with the WKU World Championship Belt – Full Contact Kickboxing (−57.5 kg).',
-        captionFa: 'شیرزن با کمربند قهرمانی جهان WKU – فول‌کنتاکت کیک‌بوکسینگ (منهای ۵۷٫۵ کیلوگرم).'
+        captionDe: 'WKU Weltmeisterschaft',
+        captionEn: 'WKU World Championship',
+        captionFa: 'قهرمانی جهان WKU'
       },
       {
         id: 'kb-gallery-02',
         src: './images/2025_07_DSC_0701.webp',
-        alt: 'SchirZan im roten Boxmantel',
+        alt: 'SchirZan im roten Boxmantel – Photo by Steve Barret',
         locationDe: 'Schloss Diedersdorf · Brandenburg',
         locationEn: 'Diedersdorf Castle · Brandenburg',
         locationFa: 'کاخ دیدرزدورف · براندنبورگ',
-        captionDe: 'SchirZan im roten Boxmantel – Symbol für Konzentration, Disziplin und sportliche Ausdauer.',
-        captionEn: 'SchirZan in Red Boxing Robe – Emblem of focus, discipline, and endurance.',
-        captionFa: 'شیرزن با ردای سرخ بوکس – نماد تمرکز، انضباط و استقامت ورزشی.'
+        captionDe: 'Photo by Steve Barret',
+        captionEn: 'Photo by Steve Barret',
+        captionFa: 'عکس: استیو بارت (Photo by Steve Barret)'
       },
       {
         id: 'kb-gallery-03',
         src: './images/2025_07_ode-an-den-sport-e1753264342920.webp',
-        alt: 'Filmporträt „Ode an den Sport“',
+        alt: 'Filmporträt „Ode an den Sport“ – Photo by L&T Sport',
         locationDe: 'Filmporträt „Ode an den Sport“ · Berlin',
         locationEn: 'Film Portrait "Ode to Sports" · Berlin',
         locationFa: 'فیلم پرتره «قصیده‌ای برای ورزش» · برلین',
-        captionDe: 'Filmporträt „Ode an den Sport“ — Fokussierte Vorbereitung und Intensität im Boxring.',
-        captionEn: 'Film Portrait "Ode to Sports" — Focused preparation and intense determination in the boxing ring.',
-        captionFa: 'فیلم پرتره «قصیده‌ای برای ورزش» — تمرکز و آمادگی در رینگ مسابقه.'
+        captionDe: 'Photo by L&T Sport',
+        captionEn: 'Photo by L&T Sport',
+        captionFa: 'عکس: L&T Sport'
       }
     ]
   },
@@ -135,13 +135,13 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       {
         id: 'run-gallery-03',
         src: './images/2026_10_image00002-scaled.webp',
-        alt: 'Berlin Marathon 2026 – Offizielle Starter- & Finisher-Tafel',
-        locationDe: 'Berlin Marathon 2026 · Berlin',
-        locationEn: 'Berlin Marathon 2026 · Berlin',
-        locationFa: 'ماراتن برلین ۲۰۲۶ · برلین',
-        captionDe: 'Berlin Marathon 2026 — Offizielle Starter- und Finisher-Tafel mit SchirZan Schahrsad Shahmirzadi nach 42,195 km voller Entschlossenheit.',
-        captionEn: 'Berlin Marathon 2026 — Official starter and finisher board featuring SchirZan Schahrsad Shahmirzadi after 42.195 km of determination.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — تابلوی رسمی دوندگان با نام شیرزن شهرزاد شاهمیرزادی پس از ۴۲٫۱۹۵ کیلومتر اراده استوار.'
+        alt: 'BMW BERLIN-MARATHON 2026 – Wall of Fame',
+        locationDe: 'Berlin Marathon 2026 · Wall of Fame',
+        locationEn: 'Berlin Marathon 2026 · Wall of Fame',
+        locationFa: 'ماراتن برلین ۲۰۲۶ · تالار مشاهیر',
+        captionDe: 'All participants in the 2026 BMW BERLIN-MARATHON, along with all champions from 1974 to 2025, are listed alphabetically on the Wall of Fame.',
+        captionEn: 'All participants in the 2026 BMW BERLIN-MARATHON, along with all champions from 1974 to 2025, are listed alphabetically on the Wall of Fame.',
+        captionFa: 'کلیه شرکت‌کنندگان ماراتن بی‌ام‌و برلین ۲۰۲۶ به همراه تمامی قهرمانان از سال ۱۹۷۴ تا ۲۰۲۵ به ترتیب حروف الفبا بر روی تالار مشاهیر (Wall of Fame) ثبت شده‌اند.'
       },
       {
         id: 'run-gallery-04',
@@ -168,15 +168,15 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     ]
   },
   athensGala: {
-    titleDe: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 – Athen',
-    titleEn: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 – Athens',
-    titleFa: 'جوایز بین‌المللی عکاسی (IPA)، فستیوال عکس و مراسم گالا ۲۰۲۵ – آتن',
-    subtitleDe: 'Eindrücke der Festtage und Preisverleihung im House of Lucie',
-    subtitleEn: 'Festivities and award ceremony impressions at the House of Lucie',
-    subtitleFa: 'تصاویر جشن‌ها و مراسم اهدای جوایز در خانه لوسی',
-    descriptionDe: 'Dokumentation der feierlichen IPA Gala und des internationalen Photo-Fests 2025 in Athen. Ein Treffen etablierter Meister der Photographie, Galerist:innen und internationaler Preisträger:innen im renommierten House of Lucie.',
-    descriptionEn: 'Documentation of the prestigious IPA Gala and international Photo-Fest 2025 in Athens, Greece. A celebration uniting masters of photography, gallery owners, and international award winners at the esteemed House of Lucie.',
-    descriptionFa: 'مستندسازی مراسم باشکوه گالا IPA و فستیوال بین‌المللی عکس ۲۰۲۵ در آتن. گردهمایی استادان برجسته عکاسی، مدیران گالری‌ها و برگزیدگان بین‌المللی در خانه پرآوازه لوسی.',
+    titleDe: 'International Photography Awards (IPA), Photo-Fest – Athens 2025',
+    titleEn: 'International Photography Awards (IPA), Photo-Fest – Athens 2025',
+    titleFa: 'جوایز بین‌المللی عکاسی (IPA)، فستیوال عکس – آتن ۲۰۲۵',
+    subtitleDe: 'House of Lucie, Athens – Artist Talks',
+    subtitleEn: 'House of Lucie, Athens – Artist Talks',
+    subtitleFa: 'خانه لوسی، آتن – نشست‌ها و گفتگوهای هنرمندان',
+    descriptionDe: 'Dokumentation des internationalen IPA Photo-Fests 2025 in Athen: Artist Talks, Meisterwerke und künstlerischer Austausch im renommierten House of Lucie.',
+    descriptionEn: 'Documentation of the international IPA Photo-Fest 2025 in Athens: Artist talks, masterworks, and creative dialogue at the prestigious House of Lucie.',
+    descriptionFa: 'مستندسازی فستیوال بین‌المللی عکس IPA ۲۰۲۵ در آتن: گفتگوهای هنرمندان، شاهکارهای عکاسی و گردهمایی بین‌المللی در خانه لوسی.',
     photos: [
       {
         id: 'ipa-athens-01',

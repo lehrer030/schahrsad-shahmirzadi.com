@@ -9,7 +9,7 @@ import {
   Trophy,
   Heart,
   Award,
-  Sparkles
+  ExternalLink
 } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 
@@ -22,7 +22,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
   currentLang,
   onOpenLightbox
 }) => {
-  const [showPhilosophy, setShowPhilosophy] = useState(false);
+  const [showPhilosophy, setShowPhilosophy] = useState(true);
 
   const artistPhotoItem: PhotoItem = {
     id: 'steve-barret-portrait',
@@ -59,24 +59,19 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
             {/* Main Personal Title */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.85rem] xl:text-[3.35rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold">
-                {currentLang === 'fa' ? 'شهزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold">
+                {currentLang === 'fa' ? 'شیرزن | شهزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
               </h1>
 
-              {/* Artist Name & Tagline Claim */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-1">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-900 text-amber-100 rounded text-xs sm:text-sm font-serif font-bold tracking-wide shadow-2xs">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-                  <span>{currentLang === 'fa' ? 'شیرزن · SchirZan' : 'SchirZan'}</span>
-                </span>
-                <span className="text-stone-300 hidden sm:inline">•</span>
-                <span className="text-xs sm:text-sm font-mono tracking-widest uppercase font-semibold text-stone-700">
+              {/* Subtitle / Artist Designation */}
+              <div className="pt-0.5">
+                <p className="text-sm sm:text-base font-serif italic text-amber-900 font-semibold tracking-wide">
                   {currentLang === 'de'
-                    ? 'KUNST · KAMPF · VISION'
+                    ? 'Photographin & Bildende Künstlerin | 10-fache Kickbox-Weltmeisterin'
                     : currentLang === 'fa'
-                    ? 'هنر · مبارزه · آرمان'
-                    : 'ART · FIGHT · VISION'}
-                </span>
+                    ? 'عکاس و هنرمند تجسمی | ۱۰ دوره قهرمان جهان در کیک‌بوکسینگ'
+                    : 'Photographer & Visual Artist | 10-Time Kickboxing World Champion'}
+                </p>
               </div>
             </div>
 
@@ -85,23 +80,22 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               <p>
                 {currentLang === 'de' ? (
                   <>
-                    Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst unter dem Künstlernamen{' '}
-                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (aus dem Persischen:{' '}
-                    <em>Shir</em> = Löwe, <em>Zan</em> = Frau – die »Löwin« als Verkörperung des Mutes, den eigenen Weg
-                    zu gehen).
+                    Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst gemeinsam mit ihrem Künstlernamen{' '}
+                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong>. Der Name stammt aus dem Persischen und verbindet zwei Worte:{' '}
+                    <em>Shir</em> (شیر) bedeutet »Löwe«, <em>Zan</em> (زن) bedeutet »Frau« – die »Löwin« als Verkörperung des Mutes, den eigenen Weg
+                    zu gehen und Konventionen herauszufordern.
                   </>
                 ) : currentLang === 'fa' ? (
                   <>
-                    شهزاد شاهمیرزادی آثار عکاسی و هنری خود را با نام هنری{' '}
-                    <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد
-                    (ترکیبی از شیر و زن — مظهر شهامت و شجاعت برای پیمودن مسیر مستقل و افتخارآفرین).
+                    شهزاد شاهمیرزادی آثار عکاسی و هنری خود را همراه با نام هنری{' '}
+                    <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد.
+                    این نام برگرفته از زبان فارسی و پیوند دو واژه است: شیر و زن — مظهر شهامت و شجاعت برای پیمودن مسیر مستقل و افتخارآفرین.
                   </>
                 ) : (
                   <>
-                    Schahrsad Shahmirzadi presents her photography and fine art under the artist name{' '}
-                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (from Persian:{' '}
-                    <em>Shir</em> = lion, <em>Zan</em> = woman — the "lioness" embodying the courage to forge one’s own
-                    path).
+                    Schahrsad Shahmirzadi presents her photography and art together with her artist name,{' '}
+                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong>. The name comes from Persian and combines two words:{' '}
+                    <em>Shir</em> = lion, and <em>Zan</em> = woman — the "lioness" embodying the courage to forge one’s own path.
                   </>
                 )}
               </p>
@@ -151,19 +145,19 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <p>
                   {currentLang === 'de' ? (
                     <>
-                      Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst unter dem Künstlernamen{' '}
-                      <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (aus dem Persischen:{' '}
-                      <em>Shir</em> = Löwe, <em>Zan</em> = Frau – die »Löwin« als Verkörperung des Mutes, den eigenen Weg zu gehen).
+                      Schahrsad Shahmirzadi präsentiert ihre Photographie und Kunst gemeinsam mit ihrem Künstlernamen{' '}
+                      <strong className="text-stone-950 font-serif font-bold">SchirZan</strong>. Der Name stammt aus dem Persischen und verbindet zwei Worte:{' '}
+                      <em>Shir</em> (Löwe) und <em>Zan</em> (Frau) – die »Löwin« als Verkörperung des Mutes, den eigenen Weg zu gehen.
                     </>
                   ) : currentLang === 'fa' ? (
                     <>
-                      شهزاد شاهمیرزادی آثار عکاسی و هنری خود را با نام هنری{' '}
+                      شهزاد شاهمیرزادی آثار عکاسی و هنری خود را همراه با نام هنری{' '}
                       <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد
-                      (مظهر شهامت و شجاعت برای پیمودن مسیر مستقل).
+                      (شیر + زن: مظهر شهامت و شجاعت برای پیمودن مسیر مستقل).
                     </>
                   ) : (
                     <>
-                      Schahrsad Shahmirzadi presents her photography under the artist name{' '}
+                      Schahrsad Shahmirzadi presents her photography and art together with her artist name,{' '}
                       <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (from Persian:{' '}
                       <em>Shir</em> = lion, <em>Zan</em> = woman — "lioness").
                     </>
@@ -171,7 +165,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 </p>
                 <p className="text-stone-600">
                   {currentLang === 'de'
-                    ? 'Durch Photographie bewahrt sie gelebte Momente für die Ewigkeit — getragen von der Philosophie des Lichts, der Disziplin einer 10-fachen Weltmeisterin im Kickboxen und ihrem leidenschaftlichen Einsatz für Menschenrechte, Gleichberechtigung und den Schutz unserer Umwelt.'
+                    ? 'Durch Photographie bewahrt sie gelebte Momente für die Ewigkeit — getragen von der Philosophie des Lichts (dem altgriechischen »Zeichnen mit Licht«), der Disziplin einer 10-fachen Weltmeisterin im Kickboxen und ihrem leidenschaftlichen Einsatz für Menschenrechte, Gleichberechtigung und den Schutz unserer Umwelt.'
                     : currentLang === 'fa'
                     ? 'او از دریچه عکاسی، لحظات زیسته را برای ابدیت ماندگار می‌سازد — با تکیه بر فلسفه اصیل نگارش با نور، روحیه مبارزه‌جوی ۱۰ دوره قهرمانی جهان در کیک‌بوکسینگ و تعهد به حقوق بشر و محیط زیست.'
                     : 'Through photography, she preserves lived experience for eternity — guided by the philosophy of light, the discipline of a 10-time world champion in kickboxing, and her commitment to human rights and the environment.'}
@@ -260,7 +254,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
           {/* Right Column (Span 5): Master Portrait (Desktop View) */}
           <div className="hidden lg:flex lg:col-span-5 xl:col-span-5 flex-col items-center justify-center space-y-4">
-            <div className="w-full max-w-md xl:max-w-lg bg-white p-3.5 border border-stone-200 shadow-sm rounded-2xl space-y-2.5">
+            <div className="w-full max-w-md xl:max-w-lg bg-white p-5 sm:p-6 border border-stone-200 shadow-sm rounded-2xl space-y-4">
               
               {/* Steve Barret Portrait Container */}
               <div
@@ -277,27 +271,46 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   loading="eager"
                 />
 
-                {/* Google-optimierter Name-Tag dezent direkt auf dem Bild */}
-                <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-stone-900/85 backdrop-blur-xs text-white rounded text-xs font-serif tracking-wide shadow-md">
-                    <span>{currentLang === 'fa' ? 'شهرزاد شاهمیرزادی · شیرزن' : 'Schahrsad Shahmirzadi · SchirZan'}</span>
-                  </span>
-                </div>
-
                 <div className="absolute top-3 right-3 bg-white/90 text-stone-700 p-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity shadow-xs">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
 
-              {/* Subtiler Bildnachweis ohne Logo */}
-              <div className="pt-2 px-1 border-t border-stone-100 flex items-center justify-between text-xs font-mono text-stone-500">
-                <span className="text-[11px] text-stone-600">
-                  {currentLang === 'fa'
-                    ? 'هنر، عکاسی و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
-                    : 'Photographie, Kunst & 10-fache Weltmeisterin'}
-                </span>
-                <div className="bg-stone-50 border border-stone-200 px-2.5 py-1 text-[11px] font-mono text-stone-600 shrink-0 rounded">
-                  <span>{INTRO_CONTENT.photoCredit}</span>
+              {/* Museum Attribution Plaque: Generous white frame, Name & Wikipedia button below photo */}
+              <div className="pt-3 border-t border-stone-100 space-y-2.5">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="space-y-1">
+                    <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
+                      {currentLang === 'fa' ? 'شیرزن | شهرزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
+                    </h3>
+                    <p className="text-xs text-stone-600 font-normal">
+                      {currentLang === 'de'
+                        ? 'Photographin & Bildende Künstlerin | 10-fache Kickbox-Weltmeisterin'
+                        : currentLang === 'fa'
+                        ? 'عکاس و هنرمند تجسمی | ۱۰ دوره قهرمان جهان در کیک‌بوکسینگ'
+                        : 'Photographer & Visual Artist | 10-Time Kickboxing World Champion'}
+                    </p>
+                  </div>
+
+                  <div className="bg-stone-50 border border-stone-200 px-2.5 py-1 text-[11px] font-mono text-stone-600 shrink-0 rounded">
+                    <span>{INTRO_CONTENT.photoCredit}</span>
+                  </div>
+                </div>
+
+                {/* Wikipedia-Button etwas weiter herunter gesetzt aus dem Bild */}
+                <div className="pt-1 flex items-center justify-between">
+                  <a
+                    href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-stone-50 hover:bg-stone-900 text-stone-700 hover:text-white border border-stone-200 text-xs font-mono transition-colors shadow-2xs group/wiki"
+                    title={currentLang === 'fa' ? 'مدخل رسمی در دانشنامه ویکی‌پدیا' : 'Offizieller Wikipedia-Artikel: Schahrsad Shahmirzadi'}
+                  >
+                    <span className="font-serif font-black text-xs">W</span>
+                    <span>Wikipedia</span>
+                    <ExternalLink className="w-3 h-3 opacity-60 group-hover/wiki:opacity-100" />
+                  </a>
+                  <span className="text-[11px] font-mono text-stone-400">Berlin</span>
                 </div>
               </div>
 
@@ -315,10 +328,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </div>
               <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
                 {currentLang === 'de'
-                  ? 'Künstlername SchirZan & Die Philosophie des Lichts'
+                  ? 'Künstlername SchirZan & Zeichnen mit Licht'
                   : currentLang === 'fa'
-                  ? 'نام هنری «شیرزن» و فلسفه نگارش با نور'
-                  : 'Artist Name SchirZan & The Philosophy of Light'}
+                  ? 'نام هنری «شیرزن» و نگارش با نور'
+                  : 'Artist Name SchirZan & Drawing with Light'}
               </h3>
               <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
                 {currentLang === 'de'
@@ -350,11 +363,9 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-              {currentLang === 'de'
-                ? 'Photographie · Werke & Internationale Auszeichnungen'
-                : currentLang === 'fa'
-                ? 'عکاسی · آثار و جوایز بین‌المللی'
-                : 'Photography · Works & International Awards'}
+              {currentLang === 'fa'
+                ? 'عکاسی و هنر – آثار · جوایز بین‌المللی'
+                : 'Photography & Art – Works · Int’l Awards'}
             </h2>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
               {currentLang === 'de'
@@ -375,13 +386,17 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 : 'Award-Winning Competitions & Leading Juror Panels:'}
             </span>
             <div className="flex flex-wrap gap-2">
-              {INTRO_CONTENT.competitions.map((comp, idx) => (
-                <span
+              {INTRO_CONTENT.competitionsDetailed.map((comp, idx) => (
+                <a
                   key={idx}
-                  className="inline-flex items-center text-[11px] sm:text-xs bg-white text-stone-700 border border-stone-200/90 px-3 py-1.5 rounded-lg hover:border-stone-400 hover:text-stone-900 transition-colors shadow-2xs font-medium"
+                  href={comp.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs bg-stone-50 hover:bg-amber-50 text-stone-800 hover:text-amber-950 border border-stone-200/90 hover:border-amber-400 px-3 py-1.5 rounded-lg transition-all shadow-2xs hover:shadow-xs font-medium group"
                 >
-                  {comp}
-                </span>
+                  <span>{comp.name}</span>
+                  <ExternalLink className="w-2.5 h-2.5 text-stone-400 group-hover:text-amber-700 transition-colors" />
+                </a>
               ))}
             </div>
           </div>

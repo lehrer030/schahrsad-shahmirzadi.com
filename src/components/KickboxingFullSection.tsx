@@ -123,10 +123,22 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
 
   const sportingHonours = [
     {
+      period: '2014',
+      titleDe: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – Bundesweite Ehrung der Spitzen-Polizeisportlerinnen in Anerkennung für herausragende sportliche Leistungen und Vorbildfunktion',
+      titleEn: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – In recognition of her outstanding sporting achievements and role model function',
+      titleFa: 'تجلیل ورزشی پلیس فدرال و ایالات آلمان (DPSK) ۲۰۱۴ – در تقدیر از دستاوردهای برجسته ورزشی و نقش الگوی پیشگام'
+    },
+    {
+      period: '2014 & 2016',
+      titleDe: 'Berlin Police sporting honours: 2014 and 2016 – Sportlerehrung durch die Senatsverwaltung für Inneres und Sport Berlin (SenInnDS)',
+      titleEn: 'Berlin Police sporting honours: 2014 and 2016 – Senate Department for the Interior and Sports Berlin (SenInnDS)',
+      titleFa: 'تجلیل ورزشی پلیس برلین: ۲۰۱۴ و ۲۰۱۶ – اداره امور داخلی و ورزش سنای برلین (SenInnDS)'
+    },
+    {
       period: '2014 & 2016',
       titleDe: 'Zweifache Auszeichnung als herausragende Spitzensportlerin der Polizei durch den Innenminister des Landes Nordrhein-Westfalen Ralf Jäger',
-      titleEn: 'Honoured twice as an outstanding police athlete by the Minister of the Interior of North Rhine-Westphalia',
-      titleFa: 'دو بار تجلیل رسمی به عنوان ورزشکار نخبه پلیس توسط وزیر کشور ایالت نوردراین-وستفالن',
+      titleEn: 'Honoured twice as an outstanding police athlete by the Minister of the Interior of North Rhine-Westphalia Ralf Jäger',
+      titleFa: 'دو بار تجلیل رسمی به عنوان ورزشکار نخبه پلیس توسط وزیر کشور ایالت نوردراین-وستفالن رالف یگر',
       link: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister'
     },
     {
@@ -246,48 +258,59 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         </div>
       </div>
 
-      {/* 4 Key Pillars Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-5 sm:p-6 shadow-xs text-center">
-          <Trophy className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-          <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">10×</div>
-          <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
+      {/* Key Pillars Stats: 5-Column Responsive Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-12">
+        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center">
+          <Trophy className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
+          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">10×</div>
+          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
             {currentLang === 'fa' ? 'قهرمان جهان · فدراسیون‌های WKU, ISKA, ICO' : 'Weltmeisterin · WKU, ISKA, ICO'}
           </div>
-          <div className="text-[11px] text-stone-400 mt-1">
+          <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'شامل ۲ عنوان حرفه‌ای' : 'Inkl. 2 Profi-Weltmeistertitel'}
           </div>
         </div>
 
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-5 sm:p-6 shadow-xs text-center">
-          <Award className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-          <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">2×</div>
-          <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
+        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center">
+          <Award className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
+          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">2× / 1×</div>
+          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
+            {currentLang === 'fa' ? 'قهرمان جام جهانی و مسابقات هنرهای رزمی' : 'World Cup & WMAG Winner'}
+          </div>
+          <div className="text-[10px] text-stone-400 mt-0.5">
+            {currentLang === 'fa' ? 'فدراسیون‌های WKU و IAKSA / WMAC' : 'WKU & IAKSA / WMAC'}
+          </div>
+        </div>
+
+        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center">
+          <Award className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
+          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">2×</div>
+          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
             {currentLang === 'fa' ? 'قهرمان اروپا · فدراسیون‌های WKU و ICO' : 'Europameisterin · WKU & ICO'}
           </div>
-          <div className="text-[11px] text-stone-400 mt-1">
+          <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'شامل قهرمانی حرفه‌ای اروپا' : 'Inkl. Profi-Europameisterin'}
           </div>
         </div>
 
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-5 sm:p-6 shadow-xs text-center">
-          <Shield className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-          <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">15×</div>
-          <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
+        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center">
+          <Shield className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
+          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">15×</div>
+          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
             {currentLang === 'fa' ? 'قهرمان آلمان در ۷ فدراسیون' : 'Dt. / Int. Dt. Meisterin'}
           </div>
-          <div className="text-[11px] text-stone-400 mt-1">
+          <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'WAKO, WKA, WKU, ISKA, ICO' : 'In 7 Spitzen-Verbänden'}
           </div>
         </div>
 
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-5 sm:p-6 shadow-xs text-center">
-          <Sparkles className="w-6 h-6 text-amber-600 mx-auto mb-2" />
-          <div className="text-3xl sm:text-4xl font-serif font-bold text-stone-900">3. Dan</div>
-          <div className="text-xs font-semibold uppercase tracking-wider text-stone-500 mt-1">
+        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center col-span-2 md:col-span-1">
+          <Sparkles className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
+          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">3. Dan</div>
+          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
             {currentLang === 'fa' ? 'دان ۳ مشکی · درجه استادی' : 'Schwarzer Gürtel · 3. Dan'}
           </div>
-          <div className="text-[11px] text-stone-400 mt-1">
+          <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'یکی از معدود بانوان این رتبه' : 'Höchste meisterliche Reife'}
           </div>
         </div>
@@ -859,7 +882,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </p>
           </div>
 
-          {/* Card 2: Trainer & Team */}
+          {/* Card 2: Trainer & Team - Erfolgreiche Partnerschaften */}
           <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
             <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
               <Users className="w-4 h-4" />
@@ -870,29 +893,65 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : 'Erfolgreiche Partnerschaften'}
             </h4>
 
-            <ul className="text-xs text-stone-700 space-y-2 leading-relaxed">
+            <ul className="text-xs text-stone-700 space-y-2.5 leading-relaxed">
               <li>
-                <strong className="text-stone-900">Michael C.: </strong>
+                <strong className="text-amber-900 font-bold">Michael C.: </strong>
                 {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
               </li>
               <li>
-                <strong className="text-stone-900">Ferdinand Mack: </strong>
+                <strong className="text-amber-900 font-bold">Ferdinand Mack: </strong>
                 {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
               </li>
               <li>
-                <strong className="text-stone-900">Steve Barret: </strong>
-                {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
+                <strong className="text-amber-900 font-bold">Gia K. & Asly A.: </strong>
+                {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : 'Als langjährige sportliche Trainingspartner.'}
               </li>
               <li>
-                <strong className="text-stone-900">Sparringspartnerinnen: </strong>
-                {currentLang === 'fa' ? 'جیا ک. و اصلی آ. همراهان همیشگی تمرینات سخت' : 'Gia K. und Asly A. als langjährige sportliche Weggefährtinnen.'}
+                <strong className="text-amber-900 font-bold">Steve Barret: </strong>
+                {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
               </li>
             </ul>
+
+            {/* Persönliche Anmerkung / Personal Note */}
+            <div className="pt-3 border-t border-stone-100 bg-amber-50/60 p-3.5 rounded-xl border border-amber-200/60">
+              <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-amber-900 block mb-1">
+                {currentLang === 'fa' ? 'یادداشت شخصی' : currentLang === 'en' ? 'Personal Note' : 'Persönliche Anmerkung'}
+              </span>
+              <p className="text-xs italic text-stone-800 leading-relaxed font-serif">
+                {currentLang === 'fa'
+                  ? '«حمایت‌ها و تجربیات مشترک با آن‌ها زندگی مرا برای همیشه شکل داد. از صمیم قلب برای وجودشان سپاسگزارم.»'
+                  : currentLang === 'en'
+                  ? '“Their support and our shared experiences have shaped who I am and will stay with me throughout my life. For that, I am deeply grateful.”'
+                  : '„Ihre Unterstützung und die gemeinsamen Erfahrungen haben mich für mein Leben geprägt. Dafür bin ich ihnen von Herzen dankbar.“'}
+              </p>
+            </div>
           </div>
 
         </div>
 
-        {/* Section F: Spitzensportförderung & Polizei */}
+        {/* Section F1: Representing Germany */}
+        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
+          <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+            <Trophy className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'حضور در میادین با پرچم آلمان' : 'Representing Germany'}</span>
+          </div>
+          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'نمایندگی آلمان و عضویت در تیم ملی'
+              : currentLang === 'de'
+              ? 'Im Nationalteam für Deutschland'
+              : 'Competing for the German National Team'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+            {currentLang === 'fa'
+              ? 'با وجود آن‌که شهزاد شاهمیرزادی دارای ریشه‌های دوگانه آلمانی و ایرانی است، در تمام دوران فعالیت قهرمانی کیک‌بوکسینگ منحصراً برای کشور آلمان به میدان رفت. او عضو رسمی تیم ملی آلمان بود و تمامی عناوین قهرمانی و موفقیت‌های بزرگ ورزشی خود را زیر پرچم آلمان کسب نمود.'
+              : currentLang === 'en'
+              ? 'Although Schahrsad Shahmirzadi has both German and Iranian roots, she competed exclusively for Germany in kickboxing. She was a member of the German national team and won all her titles and achieved all her sporting successes under the German flag.'
+              : 'Obwohl Schahrsad Shahmirzadi sowohl deutsche als auch iranische Wurzeln hat, trat sie im Kickboxen ausschließlich für Deutschland an. Sie war Mitglied der deutschen Nationalmannschaft und gewann all ihre Titel und sportlichen Erfolge unter deutscher Flagge.'}
+          </p>
+        </div>
+
+        {/* Section F2: Spitzensportförderung & Polizei */}
         <div className="bg-stone-50 border border-stone-200/90 rounded-3xl p-6 sm:p-8 space-y-3">
           <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
             <Shield className="w-4 h-4" />
@@ -904,7 +963,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
             {currentLang === 'fa'
               ? 'شهزاد شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در پلیس برلین خدمت کرد. در بازه ۲۰۱۵ تا ۲۰۲۳، او مشمول طرح حمایت از ورزش قهرمانی بود و بارها برای موفقیت‌های ورزشی خود مورد تقدیر رسمی قرار گرفت.'
-              : 'Schahrsad Shahmirzadi war von 2009 bis 2024 bei der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie anlassbezogene Spitzensportförderung und wurde mehrfach für ihre sportlichen Erfolge gewürdigt. Für diese Unterstützung ist sie bis heute dankbar.'}
+              : 'Schahrsad Shahmirzadi war von 2009 bis 2024 bei der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie anlassbezogene Spitzensportförderung und wurde mehrfach für ihre sportlichen Erfolge gewürdigt.'}
           </p>
         </div>
 
