@@ -1042,7 +1042,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                             {thumbImg ? (
                               <div
                                 onClick={handleArtworkClick}
-                                className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
+                                className="relative aspect-[3/4] sm:aspect-[3/4] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
                                 title={currentLang === 'de' ? 'Klicken für Vollbild-Ansicht' : currentLang === 'fa' ? 'کلیک برای مشاهده تمام‌صفحه' : 'Click for full view'}
                               >
                                 <img

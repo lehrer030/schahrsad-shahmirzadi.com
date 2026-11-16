@@ -76,7 +76,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       )}
 
                       <div
-                        className="relative overflow-hidden rounded bg-stone-100 aspect-[16/10] cursor-pointer group/img border border-stone-200/80"
+                        className="relative overflow-hidden rounded bg-stone-100 aspect-[3/4] cursor-pointer group/img border border-stone-200/80"
                         onClick={() => {
                           if (onOpenLightbox && work.galleryPhotos && work.galleryPhotos.length > 0) {
                             onOpenLightbox(work.galleryPhotos, 0);
