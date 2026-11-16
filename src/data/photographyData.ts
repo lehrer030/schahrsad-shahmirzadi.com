@@ -234,7 +234,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   descriptionDe: `Diese Serie transformiert eine solitäre urbane Fassade in ein abstraktes Bekenntnis zu Individualität und Harmonie mit der Natur. Jedes Bild erforscht eine andere Facette von Geometrie, Licht und Perspektive – und offenbart, wie architektonische Form mit dem Himmel und der Umgebung verschmilzt. Das Wechselspiel klarer Linien, wandernder Schatten und subtiler Reflexionen lässt den »Solitär« zwischen materieller Präzision und poetischer Abstraktion oszillieren. Durch Minimalismus und rhythmische Komposition ist der Betrachter eingeladen, nicht nur die innere Ordnung der Struktur, sondern auch ihren unerwarteten Dialog mit der natürlichen Welt zu entdecken.`,
   descriptionEn: `This series transforms a singular urban facade into an abstract statement of individuality and harmony with nature. Each image explores a different facet of geometry, light, and perspective— revealing how architectural form merges with the sky and environment. The interplay of crisp lines, shifting shadows, and subtle reflections allows the “solitaire” to oscillate between material precision and poetic abstraction. Through minimalism and rhythmic composition, the viewer is invited to discover not only the structure’s inner order but also its unexpected dialogue with the natural world.`,
   descriptionFa: `این مجموعه عکاسی، ساختار یک بنای منفرد شهری را به بیانیه‌ای انتزاعی از فردیت و هماهنگی با طبیعت بدل می‌سازد. هر اثر زاویه‌ای نو از هندسه، نور و پرسپکتیو را می‌کاود.`,
-  coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+  coverImage: '/images/wetransfer/solitaire_harmony_01.webp',
   badges: [
     {
       id: 'perspa-2026-hm',
@@ -280,7 +280,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   photos: [
     {
       id: 'solitaire-harmony-01',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_01.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 01',
       captionDe: 'Image 01',
       captionEn: 'Image 01',
@@ -288,7 +288,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-02',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_02.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 02',
       captionDe: 'Image 02',
       captionEn: 'Image 02',
@@ -296,7 +296,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-03',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-03-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_03.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 03',
       captionDe: 'Image 03',
       captionEn: 'Image 03',
@@ -304,7 +304,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-04',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-04-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_04.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 04',
       captionDe: 'Image 04',
       captionEn: 'Image 04',
@@ -312,7 +312,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-05',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-05-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_05.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 05',
       captionDe: 'Image 05',
       captionEn: 'Image 05',
@@ -320,7 +320,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-06',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-06-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_06.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 06',
       captionDe: 'Image 06',
       captionEn: 'Image 06',
@@ -328,7 +328,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
     },
     {
       id: 'solitaire-harmony-07',
-      src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-07-scaled.webp',
+      src: '/images/wetransfer/solitaire_harmony_07.webp',
       alt: 'The Solitaire as Abstraction – In Harmony with Nature 07',
       captionDe: 'Image 07',
       captionEn: 'Image 07',
@@ -352,7 +352,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   personalNoteDe: 'Persönliche Anmerkung: The Solitaire as an Abstraction entstand am Vatertag, dem 29. Mai 2025, in Berlin-Halensee und ist meinem Vater Kh. Shahmirzadi gewidmet.',
   personalNoteEn: 'Personal Note: The Solitaire as an Abstraction was created on Father’s Day, May 29, 2025, in Berlin-Halensee and is dedicated to my father, Kh. Shahmirzadi.',
   personalNoteFa: 'یادداشت و تقدیم شخصی: مجموعه The Solitaire as an Abstraction در روز پدر، ۲۹ مه ۲۰۲۵، در برلین-هالنزه‌ خلق شد و به پدرم خ. شاهمیرزادی تقدیم گردیده است.',
-  coverImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+  coverImage: '/images/wetransfer/solitaire_revised_01.webp',
   badges: [
     {
       id: 'amp-2026-winner',
@@ -388,7 +388,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   photos: [
     {
       id: 'solitaire-revised-01',
-      src: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+      src: '/images/wetransfer/solitaire_revised_01.webp',
       alt: 'The Solitaire as an Abstraction (Revised) 01',
       captionDe: 'Image 01',
       captionEn: 'Image 01',
@@ -396,7 +396,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-02',
-      src: '/images/2026_10_amp-2026-winner-solitaire-revised-02-scaled.webp',
+      src: '/images/wetransfer/solitaire_revised_02.webp',
       alt: 'The Solitaire as an Abstraction (Revised) 02',
       captionDe: 'Image 02',
       captionEn: 'Image 02',
@@ -404,7 +404,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-03',
-      src: '/images/2026_10_amp-2026-winner-solitaire-revised-03-scaled.webp',
+      src: '/images/wetransfer/solitaire_revised_03.webp',
       alt: 'The Solitaire as an Abstraction (Revised) 03',
       captionDe: 'Image 03',
       captionEn: 'Image 03',
@@ -412,7 +412,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-04',
-      src: '/images/2026_10_amp-2026-winner-solitaire-revised-04-scaled.webp',
+      src: '/images/wetransfer/solitaire_revised_04.webp',
       alt: 'The Solitaire as an Abstraction (Revised) 04',
       captionDe: 'Image 04',
       captionEn: 'Image 04',
@@ -420,7 +420,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-05',
-      src: '/images/2026_10_amp-2026-winner-solitaire-revised-05-scaled.webp',
+      src: '/images/wetransfer/solitaire_revised_05.webp',
       alt: 'The Solitaire as an Abstraction (Revised) 05',
       captionDe: 'Image 05',
       captionEn: 'Image 05',
@@ -451,8 +451,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'echoes-water-tower-01',
         src: '/images/wetransfer/echoes_water_tower_01.webp',
         alt: 'Echoes of a Water Tower',
-        captionDe: 'Echoes of a Water Tower – SchirZan',
-        captionEn: 'Echoes of a Water Tower – SchirZan',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تصویر'
       }
     ]
@@ -529,8 +529,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'elegance-structure-bw-01',
         src: '/images/wetransfer/elegance_structure_bw_01.webp',
         alt: 'Elegance of Structure – Black and White',
-        captionDe: 'Elegance of Structure – Black and White – SchirZan',
-        captionEn: 'Elegance of Structure – Black and White – SchirZan',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تصویر'
       }
     ]
@@ -814,8 +814,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'mirrored-single-01',
         src: '/images/wetransfer/mirrored_01.webp',
         alt: 'Mirrored',
-        captionDe: 'Mirrored – Single Shot',
-        captionEn: 'Mirrored – Single Shot',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تصویر'
       }
     ]
@@ -841,8 +841,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'mirrored-ii-01',
         src: '/images/wetransfer/mirrored_ii_01.webp',
         alt: 'Mirrored II',
-        captionDe: 'Mirrored II – Single Shot',
-        captionEn: 'Mirrored II – Single Shot',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تصویر'
       }
     ]
@@ -868,8 +868,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'mirrored-iii-bw-01',
         src: '/images/wetransfer/mirrored_iii_bw_01.webp',
         alt: 'Mirrored III (Black & White)',
-        captionDe: 'Mirrored III (Black & White)',
-        captionEn: 'Mirrored III (Black & White)',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تصویر'
       }
     ]
@@ -1251,14 +1251,14 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Internationale Auszeichnung bei den London International Creative Competition (LICC 2025) für die überarbeitete Fassung der Solitär-Serie.',
     descriptionEn: 'International recognition at London International Creative Competition (LICC 2025) for the revised edition of the Solitaire series.',
     descriptionFa: 'برگزیده رسمی در رقابت بین‌المللی خلاقیت لندن LICC 2025 برای نسخه بازنگری‌شده تک‌بنا.',
-    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+    previewImage: '/images/wetransfer/solitaire_revised_01.webp',
     galleryPhotos: [
       {
         id: 'solitaire-revised-licc-01',
-        src: '/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp',
+        src: '/images/wetransfer/solitaire_revised_01.webp',
         alt: 'The Solitaire as an Abstraction (Revised)',
-        captionDe: 'The Solitaire as an Abstraction (Revised) – SchirZan',
-        captionEn: 'The Solitaire as an Abstraction (Revised) – SchirZan',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده)'
       }
     ]
@@ -1278,14 +1278,14 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Neue Perspektiven auf den Solitär: Erweiterte visuelle Erkundung von Fluchtpunkten, Materialoberflächen und Himmelsspiegelungen bei der London International Creative Competition (LICC 2025).',
     descriptionEn: 'New perspectives on the solitaire: Expanded exploration of vanishing lines, material textures, and reflections at the London International Creative Competition (LICC 2025).',
     descriptionFa: 'دیدگاه‌های نو به تک‌بنا: کاوش گسترده در نقاط گریز و بافت مصالح در رقابت LICC 2025.',
-    previewImage: '/images/2026_10_amp-2026-winner-solitaire-revised-02-scaled.webp',
+    previewImage: '/images/wetransfer/solitaire_revised_02.webp',
     galleryPhotos: [
       {
         id: 'solitaire-new-perspectives-01',
-        src: '/images/2026_10_amp-2026-winner-solitaire-revised-02-scaled.webp',
+        src: '/images/wetransfer/solitaire_revised_02.webp',
         alt: 'The Solitaire as an Abstraction – New Perspectives',
-        captionDe: 'The Solitaire as an Abstraction – New Perspectives',
-        captionEn: 'The Solitaire as an Abstraction – New Perspectives',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو'
       }
     ]
@@ -1305,15 +1305,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Monochrome Reduktion der Solitär-Architektur auf reine geometrische Kontraste, Hell-Dunkel-Verläufe und architektonische Zeitlosigkeit.',
     descriptionEn: 'Monochrome reduction of solitary architecture to pure geometric contrasts, chiaroscuro gradations, and timeless form.',
     descriptionFa: 'تقلیل تک‌رنگ معماری تک‌بنا به کنتراست‌های خالص هندسی و جاودانگی فرم در جوایز بین‌المللی عکاسی اسپایدر.',
-    previewImage: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+    previewImage: '/images/wetransfer/solitaire_bw_01.webp',
     galleryPhotos: [
       {
         id: 'bw-solitaire-01',
-        src: '/images/2026_10_amp-2026-elegance-structure-bw-01-scaled.webp',
+        src: '/images/wetransfer/solitaire_bw_01.webp',
         alt: 'Black & White Solitaire',
-        captionDe: 'Black & White Solitaire – SchirZan',
-        captionEn: 'Black & White Solitaire – SchirZan',
-        captionFa: 'تک‌بنای سیاه‌وسفید – شیرزن'
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
       }
     ]
   },
@@ -1332,14 +1332,14 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Die originale Prämierungsserie der International Photography Awards 2025: Der Solitär im lebendigen Lichtdialog des urbanen Frühlings.',
     descriptionEn: 'The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue.',
     descriptionFa: 'مجموعه برگزیده اولیه در جوایز جهانی عکاسی IPA ۲۰۲۵: تک‌بنا در گفت‌وگوی پویای نور روز شهری.',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+    previewImage: '/images/wetransfer/solitaire_harmony_01.webp',
     galleryPhotos: [
       {
         id: 'solitaire-ipa-2025-01',
-        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
+        src: '/images/wetransfer/solitaire_harmony_01.webp',
         alt: 'The Solitaire as an Abstraction (IPA 2025)',
-        captionDe: 'The Solitaire as an Abstraction – SchirZan',
-        captionEn: 'The Solitaire as an Abstraction – SchirZan',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
       }
     ]
@@ -1359,14 +1359,14 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Kompakte kuratierte Fassung der Solitär-Serie, fokussiert auf die prägnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum.',
     descriptionEn: 'Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky.',
     descriptionFa: 'نسخه گزیده و فشرده مجموعه تک‌بنا با تمرکز بر بارزترین کشش‌های فرمی میان شیشه، فولاد و آسمان.',
-    previewImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+    previewImage: '/images/wetransfer/solitaire_harmony_02.webp',
     galleryPhotos: [
       {
         id: 'solitaire-short-version-01',
-        src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
+        src: '/images/wetransfer/solitaire_harmony_02.webp',
         alt: 'The Solitaire as an Abstraction (Short Version)',
-        captionDe: 'The Solitaire as an Abstraction (Short Version)',
-        captionEn: 'The Solitaire as an Abstraction (Short Version)',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'تک‌بنا به مثابه انتزاع (نسخه کوتاه)'
       }
     ]
@@ -1550,8 +1550,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         id: 'columns-here-now-01',
         src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
         alt: 'Columns in the Here and Now',
-        captionDe: 'Columns in the Here and Now – SchirZan',
-        captionEn: 'Columns in the Here and Now – SchirZan',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'ستون‌ها در همین‌جا و اکنون – شیرزن'
       }
     ]
@@ -1574,14 +1574,14 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     descriptionDe: 'Diese Photographie zeigt einen historischen Wasserturm, der, obwohl deutlich erkennbar, nur als reine Spiegelung in der Glasfassade des Bahnhofs erscheint und mit den vorbeiziehenden Wolken verschmilzt. Die Wolken steigen hinter der Fassade wie Dampf auf, hüllen Turm und Gebäude ein und schaffen ein völlig neues Bild. In diesem flüchtigen Zusammenspiel von Licht und Architektur stellt das Werk still die Frage, wo die Wirklichkeit liegt: im physischen Turm selbst oder in diesem wandelbaren Bild aus Glas, Reflexion und aufsteigendem »Dampf«?',
     descriptionEn: 'This photograph shows a historic water tower that, although clearly recognisable, appears only as a pure reflection in the glass façade of the station, merging with the passing clouds. The clouds rise behind the façade like steam, enveloping tower and building and creating an image that seems entirely new. In this fleeting interplay of light and architecture, the work quietly raises the question of where reality lies: in the physical tower itself, or in this shifting image of glass, reflection, and rising “steam”?',
     descriptionFa: 'پژواک برج آب در قالب اثری فاین‌آرت که مرزهای واقعیت و تصویر را در سایه ابرهای شتابان به پرسش می‌کشد.',
-    previewImage: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
+    previewImage: '/images/wetransfer/echoes_water_tower_01.webp',
     galleryPhotos: [
       {
         id: 'echoes-fineart-01',
-        src: '/images/2026_10_amp-2026-echoes-water-tower-01-scaled.webp',
-        alt: 'Echoes of a Water Tower – Schahrsad Shahmirzadi',
-        captionDe: 'Echoes of a Water Tower – SchirZan',
-        captionEn: 'Echoes of a Water Tower – SchirZan',
+        src: '/images/wetransfer/echoes_water_tower_01.webp',
+        alt: 'Echoes of a Water Tower',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'پژواک برج آب – شیرزن'
       }
     ]
@@ -1805,9 +1805,9 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
       {
         id: 'in-between-spaces-01',
         src: '/images/2026_07_In-Between-Spaces-scaled.jpg',
-        alt: 'In-Between Spaces – Schahrsad Shahmirzadi',
-        captionDe: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
-        captionEn: 'In-Between Spaces – SchirZan (URBAN Photo Awards 2026 Selected)',
+        alt: 'In-Between Spaces',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'فضاهای میانی – شیرزن (منتخب مسابقه URBAN 2026)'
       }
     ]
@@ -1878,9 +1878,9 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
       {
         id: 'kickboxing-portrait-01',
         src: '/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg',
-        alt: 'Kickboxing – Self-Portrait (SchirZan | Schahrsad Shahmirzadi)',
-        captionDe: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
-        captionEn: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame (IPA 2026 Official Selection)',
+        alt: 'Kickboxing – From Fighting in the Ring to Lightning in the Frame',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
         captionFa: 'کیک‌بوکسینگ – از مبارزه در رینگ تا آذرخش در قاب تصویر (برگزیده رسمی IPA 2026)'
       }
     ]

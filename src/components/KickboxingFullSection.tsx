@@ -124,9 +124,9 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   const sportingHonours = [
     {
       period: '2014',
-      titleDe: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – Bundesweite Ehrung der Spitzen-Polizeisportlerinnen in Anerkennung für herausragende sportliche Leistungen und Vorbildfunktion',
-      titleEn: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – In recognition of her outstanding sporting achievements and role model function',
-      titleFa: 'تجلیل ورزشی پلیس فدرال و ایالات آلمان (DPSK) ۲۰۱۴ – در تقدیر از دستاوردهای برجسته ورزشی و نقش الگوی پیشگام'
+      titleDe: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – Bundesweite Ehrung der Spitzen-Polizeisportlerinnen in Anerkennung für herausragende sportliche Leistungen',
+      titleEn: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – In recognition of her outstanding sporting achievements',
+      titleFa: 'تجلیل ورزشی پلیس فدرال و ایالات آلمان (DPSK) ۲۰۱۴ – در تقدیر از دستاوردهای برجسته ورزشی'
     },
     {
       period: '2014 & 2016',
@@ -866,18 +866,22 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </div>
             
             <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : 'Von »Prinzessin« zu »SchirZan«'}
+              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'From "Princess" to "SchirZan"' : 'Von »Prinzessin« zu »SchirZan«'}
             </h4>
 
             <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
               {currentLang === 'fa'
                 ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
-                : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für furchtlosen Mut, Würde und Frauenrechte steht.'}
+                : currentLang === 'en'
+                ? 'From 2009 to 2023, she entered the ring under the fight name "Princess" (a translation of her first name Schahrsad). Today she appears as "SchirZan" – the Persian compound of Shir (lion) and Zan (woman), standing for courage, dignity, and women’s rights.'
+                : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
             </p>
 
             <p className="text-xs text-stone-600 leading-relaxed font-normal pt-1 border-t border-stone-100">
               {currentLang === 'fa'
                 ? 'قدرت ذهنی برای او به اندازه آمادگی جسمانی حیاتی بود: شجاعت، اراده تزلزل‌ناپذیر و اتصال با طبیعت که به او توان بازسازی و غلبه بر هر مانعی را می‌بخشید.'
+                : currentLang === 'en'
+                ? 'Mental strength was as essential to her as physical preparation: courage, willpower, and nature as a source of energy gave her steadfast resilience in sport and professional life.'
                 : 'Mentale Stärke war ihr ebenso wichtig wie körperliche Vorbereitung: Mut, Willenskraft und die Natur als Kraftquelle gaben ihr Standfestigkeit im Sport wie im Berufsleben.'}
             </p>
           </div>
@@ -886,29 +890,29 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
             <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
               <Users className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'مربیان و همراهان' : 'Trainer, Team & Wegbegleiter'}</span>
+              <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Successful Partnerships' : 'Erfolgreiche Partnerschaften'}</span>
             </div>
             
             <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : 'Erfolgreiche Partnerschaften'}
+              {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Mentors, Coaches & Training Partners' : 'Mentoren, Trainer & Wegbegleiter'}
             </h4>
 
             <ul className="text-xs text-stone-700 space-y-2.5 leading-relaxed">
               <li>
                 <strong className="text-amber-900 font-bold">Michael C.: </strong>
-                {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
+                {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : currentLang === 'en' ? 'Taught the technical fundamentals and laid the groundwork.' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
               </li>
               <li>
                 <strong className="text-amber-900 font-bold">Ferdinand Mack: </strong>
-                {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
+                {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'German kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
               </li>
               <li>
                 <strong className="text-amber-900 font-bold">Gia K. & Asly A.: </strong>
-                {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : 'Als langjährige sportliche Trainingspartner.'}
+                {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : currentLang === 'en' ? 'Long-standing athletic sparring and training partners.' : 'Als langjährige sportliche Trainingspartner.'}
               </li>
               <li>
                 <strong className="text-amber-900 font-bold">Steve Barret: </strong>
-                {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
+                {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : currentLang === 'en' ? 'Artist, coach, and manager in professional combat sports (from 2018); joint LeySha Fight Night Berlin 2023 and music video "Stay With Me".' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
               </li>
             </ul>
 
