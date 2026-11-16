@@ -200,7 +200,6 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
-  const [isScrolled, setIsScrolled] = useState(false);
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -208,9 +207,6 @@ export const Navbar: React.FC<NavbarProps> = ({
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
       const scrollY = window.scrollY || window.pageYOffset;
-
-      // Beim Scrollen merken, um z.B. den festen Menü-Button mobil dauerhaft anzuzeigen
-      setIsScrolled(scrollY > 40);
 
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
       if (clientHeight + scrollY >= scrollHeight - 90) {
@@ -510,22 +506,6 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
       )}
-
-      {/* Mobile Permanent Floating Hamburger Menu Button: Dauerhaft oben rechts beim Scrollen */}
-      <button
-        type="button"
-        onClick={() => setMobileMenuOpen(prev => !prev)}
-        aria-label={mobileMenuOpen ? 'Navigation schließen' : 'Navigation öffnen (10 Bereiche)'}
-        className={`lg:hidden fixed top-3 right-3 rtl:right-auto rtl:left-3 z-50 w-11 h-11 rounded-full bg-stone-900/95 hover:bg-stone-900 text-white shadow-xl hover:shadow-2xl border border-stone-700/60 active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center ${
-          isScrolled || mobileMenuOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
-        }`}
-      >
-        {mobileMenuOpen ? (
-          <X className="w-5 h-5 text-white" />
-        ) : (
-          <Menu className="w-5 h-5 text-white" />
-        )}
-      </button>
 
       {/* Mobile Drawer Menu: Fixed overlay accessible from ANY scroll depth */}
       {mobileMenuOpen && (
