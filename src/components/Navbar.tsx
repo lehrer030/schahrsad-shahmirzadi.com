@@ -200,6 +200,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -207,6 +208,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
       const scrollY = window.scrollY || window.pageYOffset;
+
+      // Beim Scrollen merken, um z.B. den festen Menü-Button mobil dauerhaft anzuzeigen
+      setIsScrolled(scrollY > 40);
 
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
       if (clientHeight + scrollY >= scrollHeight - 90) {
@@ -507,16 +511,81 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       )}
 
-      {/* Mobile Drawer Menu: ALL 11 ITEMS FROM WORDPRESS PRESERVED, OPTIMIZED FOR MOBILE & TABLET */}
+      {/* Mobile Permanent Floating Hamburger Menu Button: Dauerhaft oben rechts beim Scrollen */}
+      <button
+        type="button"
+        onClick={() => setMobileMenuOpen(prev => !prev)}
+        aria-label={mobileMenuOpen ? 'Navigation schließen' : 'Navigation öffnen (10 Bereiche)'}
+        className={`lg:hidden fixed top-3 right-3 rtl:right-auto rtl:left-3 z-50 w-11 h-11 rounded-full bg-stone-900/95 hover:bg-stone-900 text-white shadow-xl hover:shadow-2xl border border-stone-700/60 active:scale-95 transition-all duration-300 cursor-pointer flex items-center justify-center ${
+          isScrolled || mobileMenuOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-90 pointer-events-none'
+        }`}
+      >
+        {mobileMenuOpen ? (
+          <X className="w-5 h-5 text-white" />
+        ) : (
+          <Menu className="w-5 h-5 text-white" />
+        )}
+      </button>
+
+      {/* Mobile Drawer Menu: Fixed overlay accessible from ANY scroll depth */}
       {mobileMenuOpen && (
-        <>
+        <div className="lg:hidden fixed inset-0 z-50 flex flex-col justify-start">
+          {/* Backdrop */}
           <div
-            className="lg:hidden fixed inset-0 bg-stone-900/40 backdrop-blur-2xs z-40 transition-opacity"
+            className="fixed inset-0 bg-stone-950/60 backdrop-blur-xs transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <div className="lg:hidden absolute top-full inset-x-0 bg-[#faf8f5] border-b border-stone-300 px-4 pt-4 pb-8 space-y-4 max-h-[80vh] overflow-y-auto shadow-2xl z-50 animate-in slide-in-from-top-2 duration-150">
-            <div className="flex items-center justify-between border-b border-stone-200 pb-2">
+
+          {/* Drawer content sliding down from top */}
+          <div className="relative w-full max-h-[88vh] bg-[#faf8f5] border-b border-stone-300 px-4 pt-3.5 pb-6 space-y-3.5 overflow-y-auto shadow-2xl z-10 animate-in slide-in-from-top duration-200">
+            {/* Header row inside drawer: Brand + Language Switcher + Close button */}
+            <div className="flex items-center justify-between pb-2.5 border-b border-stone-200">
+              <div className="flex items-center space-x-2 rtl:space-x-reverse min-w-0">
+                <span className="text-base font-serif font-bold text-stone-900 tracking-wider">
+                  SchirZan
+                </span>
+                <span className="text-stone-300 text-sm">|</span>
+                <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
+                  <button
+                    onClick={() => onToggleLang('de')}
+                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
+                      currentLang === 'de' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                    }`}
+                  >
+                    DE
+                  </button>
+                  <button
+                    onClick={() => onToggleLang('en')}
+                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
+                      currentLang === 'en' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                    }`}
+                  >
+                    EN
+                  </button>
+                  <button
+                    onClick={() => onToggleLang('fa')}
+                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
+                      currentLang === 'fa' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                    }`}
+                  >
+                    فارسی
+                  </button>
+                </div>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-1.5 rounded-full hover:bg-stone-200 text-stone-700 hover:text-stone-950 transition-colors cursor-pointer"
+                aria-label="Menü schließen"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Section count / title */}
+            <div className="flex items-center justify-between pt-0.5">
               <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
                 {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
               </span>
@@ -525,19 +594,21 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+            {/* List of 10 items */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {ORIGINAL_11_MENU_ITEMS.map((item) => {
                 const isActive = !item.isContact && activeMenuId === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleNavigateToItem(item)}
-                    className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${isActive
-                      ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
-                      : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
-                      }`}
+                    className={`w-full p-2.5 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
+                      isActive
+                        ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
+                        : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
+                    }`}
                   >
-                    <div className="flex items-center gap-2.5 sm:gap-3 min-w-0">
+                    <div className="flex items-center gap-2.5 min-w-0">
                       <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
                         {item.num}
                       </span>
@@ -554,19 +625,20 @@ export const Navbar: React.FC<NavbarProps> = ({
               })}
             </div>
 
-            <div className="pt-2">
+            {/* Contact Button */}
+            <div className="pt-1 pb-1">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenContact();
                 }}
-                className="w-full py-2.5 sm:py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
+                className="w-full py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
               >
                 {currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}
               </button>
             </div>
           </div>
-        </>
+        </div>
       )}
     </header>
   );
