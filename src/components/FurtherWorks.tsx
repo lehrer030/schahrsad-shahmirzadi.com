@@ -46,74 +46,147 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
             >
               <div>
                 
-                {/* Photo Preview */}
-                {work.previewImage && (
-                  <div
-                    className="relative overflow-hidden rounded mb-3 bg-stone-100 aspect-[16/10] cursor-pointer group/img"
-                    onClick={() => {
-                      if (onOpenLightbox && work.galleryPhotos && work.galleryPhotos.length > 0) {
-                        onOpenLightbox(work.galleryPhotos, 0);
-                      } else if (onOpenLightbox && work.previewImage) {
-                        onOpenLightbox([{
-                          id: work.id,
-                          src: work.previewImage,
-                          alt: work.titleDe,
-                          captionDe: work.titleDe,
-                          captionEn: work.titleEn,
-                          captionFa: work.titleFa
-                        }], 0);
-                      }
-                    }}
-                  >
-                    <img
-                      src={resolveAsset(work.previewImage)}
-                      alt={work.titleDe}
-                      draggable={false}
-                      className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
-                      loading="lazy"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        const count = parseInt(target.dataset.fallbackCount || '0', 10);
-                        target.dataset.fallbackCount = String(count + 1);
-                        if (count === 0) {
-                          if (target.src.endsWith('.webp')) {
-                            target.src = target.src.replace(/\.webp$/, '.jpg');
-                          } else if (target.src.endsWith('.jpg')) {
-                            target.src = target.src.replace(/\.jpg$/, '.jpeg');
-                          } else if (target.src.endsWith('.jpeg')) {
-                            target.src = target.src.replace(/\.jpeg$/, '.webp');
+                {/* Photo Preview & Badges drum herum */}
+                {work.previewImage && (() => {
+                  const ampBadge = work.badges?.find(b => b.position === 'top-left' || b.name.includes('AMP'));
+                  const perspaBadge = work.badges?.find(b => b.position === 'bottom-left' || b.name.includes('PERSPA') || b.name.includes('Spider'));
+                  const ipaBadge = work.badges?.find(b => b.position === 'bottom-right' || b.name.includes('IPA') || b.name.includes('ND') || (b !== ampBadge && b !== perspaBadge));
+
+                  return (
+                    <div className="space-y-2 mb-3">
+                      {/* Top Row: AMP badge if present */}
+                      {ampBadge && (
+                        <div className="flex justify-start">
+                          <a
+                            href={ampBadge.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${ampBadge.name}: ${ampBadge.award}`}
+                            className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-28 sm:w-32 h-14 cursor-pointer"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            <img
+                              src={resolveAsset(ampBadge.badgeImage)}
+                              alt={ampBadge.name}
+                              className="max-h-8 max-w-full object-contain"
+                            />
+                            <span className="text-[9px] text-stone-500 font-sans mt-0.5">{ampBadge.year}</span>
+                          </a>
+                        </div>
+                      )}
+
+                      <div
+                        className="relative overflow-hidden rounded bg-stone-100 aspect-[16/10] cursor-pointer group/img border border-stone-200/80"
+                        onClick={() => {
+                          if (onOpenLightbox && work.galleryPhotos && work.galleryPhotos.length > 0) {
+                            onOpenLightbox(work.galleryPhotos, 0);
+                          } else if (onOpenLightbox && work.previewImage) {
+                            onOpenLightbox([{
+                              id: work.id,
+                              src: work.previewImage,
+                              alt: work.titleDe,
+                              captionDe: work.titleDe,
+                              captionEn: work.titleEn,
+                              captionFa: work.titleFa
+                            }], 0);
                           }
-                        } else if (count === 1 && target.src.includes('-scaled')) {
-                          target.src = target.src.replace('-scaled', '');
-                        }
-                      }}
-                    />
-                    <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
+                        }}
+                      >
+                        <img
+                          src={resolveAsset(work.previewImage)}
+                          alt={work.titleDe}
+                          draggable={false}
+                          className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
+                          loading="lazy"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            const count = parseInt(target.dataset.fallbackCount || '0', 10);
+                            target.dataset.fallbackCount = String(count + 1);
+                            if (count === 0) {
+                              if (target.src.endsWith('.webp')) {
+                                target.src = target.src.replace(/\.webp$/, '.jpg');
+                              } else if (target.src.endsWith('.jpg')) {
+                                target.src = target.src.replace(/\.jpg$/, '.jpeg');
+                              } else if (target.src.endsWith('.jpeg')) {
+                                target.src = target.src.replace(/\.jpeg$/, '.webp');
+                              }
+                            } else if (count === 1 && target.src.includes('-scaled')) {
+                              target.src = target.src.replace('-scaled', '');
+                            }
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
 
-                    {/* Watermark badge on image */}
-                    <div className="absolute bottom-2 left-2 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs">
-                      SchirZan | Schahrsad Shahmirzadi
-                    </div>
-                    
-                    {/* Photo count indicator */}
-                    {work.galleryPhotos && work.galleryPhotos.length > 1 && (
-                      <div className="absolute bottom-2 right-2 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
-                        <ImageIcon className="w-3 h-3 text-stone-300" />
-                        <span>
-                          {currentLang === 'fa'
-                            ? `${work.galleryPhotos.length} تصویر`
-                            : currentLang === 'de'
-                            ? `${work.galleryPhotos.length} Photos`
-                            : `${work.galleryPhotos.length} Photos`}
-                        </span>
+                        {/* Photo count indicator bottom-left */}
+                        {work.galleryPhotos && work.galleryPhotos.length > 1 && (
+                          <div className="absolute bottom-2 left-2 rtl:left-auto rtl:right-2 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
+                            <ImageIcon className="w-3 h-3 text-stone-300" />
+                            <span>
+                              {currentLang === 'fa'
+                                ? `${work.galleryPhotos.length} تصویر`
+                                : currentLang === 'de'
+                                ? `${work.galleryPhotos.length} Photos`
+                                : `${work.galleryPhotos.length} Photos`}
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Watermark badge on image: STRICTLY BOTTOM-RIGHT per customer document */}
+                        <div className="absolute bottom-2 right-2 rtl:right-auto rtl:left-2 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                          SchirZan | Schahrsad Shahmirzadi
+                        </div>
+
+                        <div className="absolute top-2 right-2 rtl:right-auto rtl:left-2 bg-white/90 p-1.5 rounded opacity-0 group-hover/img:opacity-100 transition-opacity shadow-sm">
+                          <Eye className="w-3.5 h-3.5 text-stone-700" />
+                        </div>
                       </div>
-                    )}
 
-                    <div className="absolute top-2 right-2 bg-white/90 p-1.5 rounded opacity-0 group-hover/img:opacity-100 transition-opacity shadow-sm">
-                      <Eye className="w-3.5 h-3.5 text-stone-700" />
+                      {/* Bottom Row Badges: PERSPA bottom-left, IPA/other bottom-right */}
+                      {(perspaBadge || ipaBadge) && (
+                        <div className="grid grid-cols-2 gap-2 pt-1 items-center">
+                          <div className="flex justify-start">
+                            {perspaBadge && (
+                              <a
+                                href={perspaBadge.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`${perspaBadge.name}: ${perspaBadge.award}`}
+                                className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-full h-14 cursor-pointer"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <img
+                                  src={resolveAsset(perspaBadge.badgeImage)}
+                                  alt={perspaBadge.name}
+                                  className="max-h-8 max-w-full object-contain"
+                                />
+                                <span className="text-[9px] text-stone-500 font-sans mt-0.5">{perspaBadge.year}</span>
+                              </a>
+                            )}
+                          </div>
+                          <div className="flex justify-end">
+                            {ipaBadge && (
+                              <a
+                                href={ipaBadge.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title={`${ipaBadge.name}: ${ipaBadge.award}`}
+                                className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-full h-14 cursor-pointer"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <img
+                                  src={resolveAsset(ipaBadge.badgeImage)}
+                                  alt={ipaBadge.name}
+                                  className="max-h-8 max-w-full object-contain"
+                                />
+                                <span className="text-[9px] text-stone-500 font-sans mt-0.5">{ipaBadge.year}</span>
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                )}
+                  );
+                })()}
 
                 {/* Number & Category */}
                 <div className="flex items-center justify-between text-[11px] font-mono text-stone-500 mb-1.5">

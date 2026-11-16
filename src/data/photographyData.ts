@@ -62,6 +62,7 @@ export interface FurtherWork {
   awardsEn: string;
   awardsFa: string;
   badgeNames: string[];
+  badges?: AwardBadge[];
   link?: string;
   previewImage?: string;
   galleryPhotos?: PhotoItem[];
@@ -441,6 +442,35 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Honorable Mention & Official Selection · AMP 2026 — Honorable Mention · PERSPA 2026 — Honorable Mention',
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 HM', 'AMP 2026 HM', 'PERSPA 2026 HM'],
+    badges: [
+      {
+        id: 'amp-echoes',
+        name: 'Architecture MasterPrize 2026',
+        award: 'Student Photography · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/amp_2026_student_hm.png',
+        position: 'top-left',
+        link: 'https://architectureprize.com/'
+      },
+      {
+        id: 'perspa-echoes',
+        name: 'PERSPA 2026',
+        award: 'Black and White · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/perspa_2026_bw_hm.png',
+        position: 'bottom-left',
+        link: 'https://architectureperspectiveawards.com/'
+      },
+      {
+        id: 'ipa-echoes',
+        name: 'IPA 2026',
+        award: 'Architecture · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/ipa_2026_hm_new.png',
+        position: 'bottom-right',
+        link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26'
+      }
+    ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26',
     descriptionDe: 'Diese Photographie zeigt einen historischen Wasserturm, der, obwohl deutlich erkennbar, nur als reine Spiegelung in der Glasfassade des Bahnhofs erscheint und mit den vorbeiziehenden Wolken verschmilzt. Die Wolken steigen hinter der Fassade wie Dampf auf, hüllen Turm und Gebäude ein und schaffen ein völlig neues Bild. In diesem flüchtigen Zusammenspiel von Licht und Architektur stellt das Werk still die Frage, wo die Wirklichkeit liegt: im physischen Turm selbst oder in diesem wandelbaren Bild aus Glas, Reflexion und aufsteigendem »Dampf«?',
     descriptionEn: 'This photograph shows a historic water tower that, although clearly recognisable, appears only as a pure reflection in the glass façade of the station, merging with the passing clouds. The clouds rise behind the façade like steam, enveloping tower and building and creating an image that seems entirely new. In this fleeting interplay of light and architecture, the work quietly raises the question of where reality lies: in the physical tower itself, or in this shifting image of glass, reflection, and rising “steam”?',
@@ -1247,7 +1277,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
-    link: 'http://www.licc.uk/winners/winner.php?id=125857',
+    badges: [
+      {
+        id: 'licc-revised',
+        name: 'London International Creative Competition 2025',
+        award: 'Shortlist / Official Selection',
+        year: '2025',
+        badgeImage: '/images/badges_custom/licc_2025_shortlist.jpg',
+        position: 'top-left',
+        link: 'https://www.licc.uk/winners/winner.php?id=125857'
+      }
+    ],
+    link: 'https://www.licc.uk/winners/winner.php?id=125857',
     descriptionDe: 'Internationale Auszeichnung bei den London International Creative Competition (LICC 2025) für die überarbeitete Fassung der Solitär-Serie.',
     descriptionEn: 'International recognition at London International Creative Competition (LICC 2025) for the revised edition of the Solitaire series.',
     descriptionFa: 'برگزیده رسمی در رقابت بین‌المللی خلاقیت لندن LICC 2025 برای نسخه بازنگری‌شده تک‌بنا.',
@@ -1274,6 +1315,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Shortlist',
     awardsFa: 'LICC 2025 — فهرست کوتاه (Shortlisted)',
     badgeNames: ['LICC 2025 Shortlisted'],
+    badges: [
+      {
+        id: 'licc-perspectives',
+        name: 'London International Creative Competition 2025',
+        award: 'Shortlist',
+        year: '2025',
+        badgeImage: '/images/badges_custom/licc_2025_shortlist.jpg',
+        position: 'top-left',
+        link: 'https://www.licc.uk/winners/winner.php?id=125858'
+      }
+    ],
     link: 'https://www.licc.uk/winners/winner.php?id=125858',
     descriptionDe: 'Neue Perspektiven auf den Solitär: Erweiterte visuelle Erkundung von Fluchtpunkten, Materialoberflächen und Himmelsspiegelungen bei der London International Creative Competition (LICC 2025).',
     descriptionEn: 'New perspectives on the solitaire: Expanded exploration of vanishing lines, material textures, and reflections at the London International Creative Competition (LICC 2025).',
@@ -1301,6 +1353,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'Black & White Spider Awards 2025 — Nominee',
     awardsFa: 'Black & White Spider Awards 2025 — نامزد دریافت جایزه (Nominee)',
     badgeNames: ['Spider Awards 2025 Nominee'],
+    badges: [
+      {
+        id: 'spider-solitaire',
+        name: 'Black & White Spider Awards 2025',
+        award: 'Nominee · Architecture',
+        year: '2025',
+        badgeImage: '/images/badges_custom/spider_awards_2025_nominee.jpg',
+        position: 'bottom-left',
+        link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238'
+      }
+    ],
     link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=651&fid=309238',
     descriptionDe: 'Monochrome Reduktion der Solitär-Architektur auf reine geometrische Kontraste, Hell-Dunkel-Verläufe und architektonische Zeitlosigkeit.',
     descriptionEn: 'Monochrome reduction of solitary architecture to pure geometric contrasts, chiaroscuro gradations, and timeless form.',
@@ -1328,6 +1391,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2025 — Honorable Mention',
     awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['IPA 2025 HM'],
+    badges: [
+      {
+        id: 'ipa-2025-solitaire',
+        name: 'International Photography Awards (IPA) 2025',
+        award: 'Honorable Mention · Architecture, Abstract',
+        year: '2025',
+        badgeImage: '/images/badges_custom/ipa_2025_hm.png',
+        position: 'bottom-right',
+        link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25'
+      }
+    ],
     link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
     descriptionDe: 'Die originale Prämierungsserie der International Photography Awards 2025: Der Solitär im lebendigen Lichtdialog des urbanen Frühlings.',
     descriptionEn: 'The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue.',
@@ -1355,6 +1429,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'ND Awards 2025 — Honorable Mention',
     awardsFa: 'ND Awards 2025 — تقدیر ویژه (Honorable Mention)',
     badgeNames: ['ND Awards 2025 HM'],
+    badges: [
+      {
+        id: 'nd-awards-solitaire',
+        name: 'ND Awards 2025',
+        award: 'Honorable Mention · Architecture',
+        year: '2025',
+        badgeImage: '/images/badges_custom/nd_awards_2025_hm.png',
+        position: 'bottom-right',
+        link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/'
+      }
+    ],
     link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
     descriptionDe: 'Kompakte kuratierte Fassung der Solitär-Serie, fokussiert auf die prägnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum.',
     descriptionEn: 'Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky.',
@@ -1570,6 +1655,35 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Honorable Mention & Official Selection · AMP 2026 — Honorable Mention · PERSPA 2026 — Honorable Mention',
     awardsFa: 'IPA 2026 — تقدیر و برگزیده رسمی · AMP 2026 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 HM', 'AMP 2026 HM', 'PERSPA 2026 HM'],
+    badges: [
+      {
+        id: 'amp-echoes',
+        name: 'Architecture MasterPrize 2026',
+        award: 'Student Photography · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/amp_2026_student_hm.png',
+        position: 'top-left',
+        link: 'https://architectureprize.com/'
+      },
+      {
+        id: 'perspa-echoes',
+        name: 'PERSPA 2026',
+        award: 'Black and White · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/perspa_2026_bw_hm.png',
+        position: 'bottom-left',
+        link: 'https://architectureperspectiveawards.com/'
+      },
+      {
+        id: 'ipa-echoes',
+        name: 'IPA 2026',
+        award: 'Architecture · Honorable Mention',
+        year: '2026',
+        badgeImage: '/images/badges_custom/ipa_2026_hm_new.png',
+        position: 'bottom-right',
+        link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26'
+      }
+    ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26',
     descriptionDe: 'Diese Photographie zeigt einen historischen Wasserturm, der, obwohl deutlich erkennbar, nur als reine Spiegelung in der Glasfassade des Bahnhofs erscheint und mit den vorbeiziehenden Wolken verschmilzt. Die Wolken steigen hinter der Fassade wie Dampf auf, hüllen Turm und Gebäude ein und schaffen ein völlig neues Bild. In diesem flüchtigen Zusammenspiel von Licht und Architektur stellt das Werk still die Frage, wo die Wirklichkeit liegt: im physischen Turm selbst oder in diesem wandelbaren Bild aus Glas, Reflexion und aufsteigendem »Dampf«?',
     descriptionEn: 'This photograph shows a historic water tower that, although clearly recognisable, appears only as a pure reflection in the glass façade of the station, merging with the passing clouds. The clouds rise behind the façade like steam, enveloping tower and building and creating an image that seems entirely new. In this fleeting interplay of light and architecture, the work quietly raises the question of where reality lies: in the physical tower itself, or in this shifting image of glass, reflection, and rising “steam”?',

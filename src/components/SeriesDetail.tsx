@@ -52,15 +52,15 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={`${badge.name}: ${awardText}`}
-        className="group flex flex-col items-center justify-center w-full h-16 sm:h-20 p-1.5 sm:p-2 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer"
+        className="group flex flex-col items-center justify-center w-full h-20 sm:h-24 p-2 sm:p-2.5 bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-600 rounded-xl shadow-xs transition-all duration-300 hover:scale-103 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-8 sm:max-h-12 max-w-full object-contain filter group-hover:brightness-105"
+          className="max-h-11 sm:max-h-15 max-w-full object-contain filter group-hover:brightness-105"
         />
-        <span className="text-[10px] text-stone-600 group-hover:text-amber-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
+        <span className="text-[10.5px] sm:text-xs text-stone-600 group-hover:text-amber-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover:opacity-100" />
         </span>
@@ -219,21 +219,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </div>
               </div>
 
-              {/* Direct Museum Beitext Plaque under Photo 1 */}
-              {(firstPhoto.captionDe || firstPhoto.captionFa || series.titleDe) && firstPhoto.captionDe !== 'Image 01' && (
-                <div className="w-full p-2.5 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
-                  <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
-                    {currentLang === 'de'
-                      ? (firstPhoto.captionDe || series.titleDe)
-                      : currentLang === 'fa'
-                      ? (firstPhoto.captionFa || series.titleFa)
-                      : (firstPhoto.captionEn || series.titleEn)}
-                  </p>
-                </div>
-              )}
-
-              {/* BOTTOM ROW: Equal Proportion Badges */}
-              <div className={`w-full pt-1 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
+              {/* BOTTOM ROW: Equal Proportion Badges (PERSPA / BIFA / IPA) */}
+              <div className={`w-full pt-2 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
                 <div className="flex justify-start">
                   {renderBadgeItem(perspaBadge)}
                 </div>

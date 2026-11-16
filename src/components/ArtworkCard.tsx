@@ -24,9 +24,8 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   const otherBadges = series.badges.filter(b => b !== ampBadge && b !== ipaBadge);
   const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
   const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
-  const firstPhoto = series.photos[0];
 
-  // Helper to render uniform badge item with equal proportions
+  // Helper to render uniform badge item with equal proportions (larger per customer feedback)
   const renderBadgeItem = (badge: AwardBadge | null | undefined) => {
     if (!badge) return null;
 
@@ -39,15 +38,15 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className="group/badge flex flex-col items-center justify-center w-full h-16 sm:h-20 p-1.5 sm:p-2 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all duration-200 cursor-pointer"
+        className="group/badge flex flex-col items-center justify-center w-full h-20 sm:h-24 p-2 sm:p-2.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded-lg shadow-2xs transition-all duration-200 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-8 sm:max-h-11 max-w-full object-contain filter group-hover/badge:brightness-105"
+          className="max-h-11 sm:max-h-15 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
-        <span className="text-[10px] text-stone-500 group-hover/badge:text-stone-800 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
+        <span className="text-[10.5px] sm:text-xs text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100" />
         </span>
@@ -101,7 +100,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           
           {/* TOP ROW: AMP ALWAYS TOP-LEFT */}
           <div className="w-full flex justify-start mb-3">
-            <div className="w-28 sm:w-36">
+            <div className="w-32 sm:w-44">
               {renderBadgeItem(ampBadge)}
             </div>
           </div>
@@ -142,32 +141,14 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               </button>
             </div>
 
-            {/* Watermark logo bottom-right */}
+            {/* Watermark logo bottom-right (Rechtsschutzmarke direkt rechts unten auf dem Bild) */}
             <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/50 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs">
               SchirZan | Schahrsad Shahmirzadi
             </div>
           </div>
 
-          {/* Museum Beitext Plaque directly below Artwork */}
-          <div className="w-full mt-2.5 px-3 py-2 bg-[#faf8f5] border border-stone-200/90 rounded text-center">
-            <p className="text-xs sm:text-sm font-medium text-stone-900 leading-snug">
-              {currentLang === 'de'
-                ? (firstPhoto?.captionDe || series.titleDe)
-                : currentLang === 'fa'
-                ? (firstPhoto?.captionFa || series.titleFa)
-                : (firstPhoto?.captionEn || series.titleEn)}
-            </p>
-            <span className="text-[10px] text-stone-500 font-mono tracking-wider block mt-0.5">
-              {currentLang === 'de'
-                ? `Hauptwerk · Bild 01 von ${series.photos.length} · © SchirZan`
-                : currentLang === 'fa'
-                ? `اثر اصلی · تصویر ۰۱ از ${series.photos.length} · © شیرزن`
-                : `Lead Work · Image 01 of ${series.photos.length} · © SchirZan`}
-            </span>
-          </div>
-
-          {/* BOTTOM ROW: Equal Proportion Badges */}
-          <div className={`w-full mt-4 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
+          {/* BOTTOM ROW: Equal Proportion Badges (PERSPA / BIFA / IPA) */}
+          <div className={`w-full mt-3.5 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
             {/* Bottom-Left: PERSPA */}
             <div className="flex justify-start">
               {renderBadgeItem(perspaBadge)}
@@ -192,7 +173,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         <div className="lg:col-span-5 space-y-6 bg-[#faf8f5] border border-stone-200 rounded p-6 sm:p-8">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500 font-medium block mb-2">
-              {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'Exhibition Notes'}
+              {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'About the Artwork'}
             </span>
             <p className="text-sm sm:text-base text-stone-800 leading-relaxed font-normal">
               {currentLang === 'de'
