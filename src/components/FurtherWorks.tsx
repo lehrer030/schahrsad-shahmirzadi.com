@@ -37,46 +37,25 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </h3>
         </div>
 
-        {/* Works Grid: Responsive 1 / 2 / 3 / 4 Columns with Image Previews */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 sm:gap-5 w-full">
+        {/* Works Grid: Responsive 1 / 2 / 3 Columns matching AwardReferencesSection */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full">
           {works.map((work, idx) => (
             <div
               key={work.id}
-              className="group bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded p-4 sm:p-5 transition-all duration-200 flex flex-col justify-between"
+              className="group bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-4 sm:p-5 transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-md"
             >
               <div>
                 
-                {/* Photo Preview & Badges drum herum */}
+                {/* Photo Preview & Badges - Clean Gallery proportions matching AwardReferencesSection */}
                 {work.previewImage && (() => {
                   const ampBadge = work.badges?.find(b => b.position === 'top-left' || b.name.includes('AMP'));
                   const perspaBadge = work.badges?.find(b => b.position === 'bottom-left' || b.name.includes('PERSPA') || b.name.includes('Spider'));
                   const ipaBadge = work.badges?.find(b => b.position === 'bottom-right' || b.name.includes('IPA') || b.name.includes('ND') || (b !== ampBadge && b !== perspaBadge));
 
                   return (
-                    <div className="space-y-2 mb-3">
-                      {/* Top Row: AMP badge if present */}
-                      {ampBadge && (
-                        <div className="flex justify-start">
-                          <a
-                            href={ampBadge.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`${ampBadge.name}: ${ampBadge.award}`}
-                            className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-28 sm:w-32 h-14 cursor-pointer"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            <img
-                              src={resolveAsset(ampBadge.badgeImage)}
-                              alt={ampBadge.name}
-                              className="max-h-8 max-w-full object-contain"
-                            />
-                            <span className="text-[9px] text-stone-500 font-sans mt-0.5">{ampBadge.year}</span>
-                          </a>
-                        </div>
-                      )}
-
+                    <div className="mb-3.5">
                       <div
-                        className="relative overflow-hidden rounded bg-stone-100 aspect-[3/4] cursor-pointer group/img border border-stone-200/80"
+                        className="relative overflow-hidden rounded-xl bg-stone-900 aspect-[3/4] cursor-pointer group/img border border-stone-200/80 flex items-center justify-center select-none"
                         onClick={() => {
                           if (onOpenLightbox && work.galleryPhotos && work.galleryPhotos.length > 0) {
                             onOpenLightbox(work.galleryPhotos, 0);
@@ -96,7 +75,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                           src={resolveAsset(work.previewImage)}
                           alt={work.titleDe}
                           draggable={false}
-                          className="w-full h-full object-cover group-hover/img:scale-102 transition-transform duration-500 ease-out select-none"
+                          className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500 ease-out select-none protected-art"
                           loading="lazy"
                           onError={(e) => {
                             const target = e.currentTarget;
@@ -115,75 +94,84 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                             }
                           }}
                         />
-                        <div className="absolute inset-0 bg-stone-900/10 group-hover/img:bg-transparent transition-colors" />
+                        <div className="absolute inset-0 bg-stone-950/20 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                          <div className="bg-white/95 backdrop-blur-xs text-stone-900 rounded-full px-3 py-1.5 shadow-lg flex items-center gap-1.5 text-xs font-mono font-semibold transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
+                            <Eye className="w-3.5 h-3.5 text-amber-800" />
+                            <span>{currentLang === 'fa' ? 'مشاهده بزرگ‌تر' : currentLang === 'en' ? 'Enlarge' : 'Großansicht'}</span>
+                          </div>
+                        </div>
 
-                        {/* Photo count indicator bottom-left */}
+                        {/* Top-Left AMP Badge if present */}
+                        {ampBadge && (
+                          <a
+                            href={ampBadge.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${ampBadge.name}: ${ampBadge.award}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="absolute top-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+                          >
+                            <img
+                              src={resolveAsset(ampBadge.badgeImage)}
+                              alt={ampBadge.name}
+                              className="h-6 sm:h-7 w-auto object-contain"
+                            />
+                          </a>
+                        )}
+
+                        {/* Bottom-Left PERSPA / Spider Badge if present */}
+                        {perspaBadge && (
+                          <a
+                            href={perspaBadge.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${perspaBadge.name}: ${perspaBadge.award}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+                          >
+                            <img
+                              src={resolveAsset(perspaBadge.badgeImage)}
+                              alt={perspaBadge.name}
+                              className="h-6 sm:h-7 w-auto object-contain"
+                            />
+                          </a>
+                        )}
+
+                        {/* Top-Right IPA / ND Badge if present */}
+                        {ipaBadge && (
+                          <a
+                            href={ipaBadge.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={`${ipaBadge.name}: ${ipaBadge.award}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className="absolute top-2.5 right-2.5 rtl:right-auto rtl:left-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+                          >
+                            <img
+                              src={resolveAsset(ipaBadge.badgeImage)}
+                              alt={ipaBadge.name}
+                              className="h-6 sm:h-7 w-auto object-contain"
+                            />
+                          </a>
+                        )}
+
+                        {/* Photo count indicator bottom-left (shifted above perspa badge if present) */}
                         {work.galleryPhotos && work.galleryPhotos.length > 1 && (
-                          <div className="absolute bottom-2 left-2 rtl:left-auto rtl:right-2 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm">
+                          <div className={`absolute ${perspaBadge ? 'bottom-11' : 'bottom-2.5'} left-2.5 rtl:left-auto rtl:right-2.5 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm z-10`}>
                             <ImageIcon className="w-3 h-3 text-stone-300" />
                             <span>
                               {currentLang === 'fa'
                                 ? `${work.galleryPhotos.length} تصویر`
-                                : currentLang === 'de'
-                                ? `${work.galleryPhotos.length} Photos`
                                 : `${work.galleryPhotos.length} Photos`}
                             </span>
                           </div>
                         )}
 
                         {/* Watermark badge on image: STRICTLY BOTTOM-RIGHT per customer document */}
-                        <div className="absolute bottom-2 right-2 rtl:right-auto rtl:left-2 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs">
+                        <div className="absolute bottom-2.5 right-2.5 rtl:right-auto rtl:left-2.5 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs z-10">
                           SchirZan | Schahrsad Shahmirzadi
                         </div>
-
-                        <div className="absolute top-2 right-2 rtl:right-auto rtl:left-2 bg-white/90 p-1.5 rounded opacity-0 group-hover/img:opacity-100 transition-opacity shadow-sm">
-                          <Eye className="w-3.5 h-3.5 text-stone-700" />
-                        </div>
                       </div>
-
-                      {/* Bottom Row Badges: PERSPA bottom-left, IPA/other bottom-right */}
-                      {(perspaBadge || ipaBadge) && (
-                        <div className="grid grid-cols-2 gap-2 pt-1 items-center">
-                          <div className="flex justify-start">
-                            {perspaBadge && (
-                              <a
-                                href={perspaBadge.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title={`${perspaBadge.name}: ${perspaBadge.award}`}
-                                className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-full h-14 cursor-pointer"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                <img
-                                  src={resolveAsset(perspaBadge.badgeImage)}
-                                  alt={perspaBadge.name}
-                                  className="max-h-8 max-w-full object-contain"
-                                />
-                                <span className="text-[9px] text-stone-500 font-sans mt-0.5">{perspaBadge.year}</span>
-                              </a>
-                            )}
-                          </div>
-                          <div className="flex justify-end">
-                            {ipaBadge && (
-                              <a
-                                href={ipaBadge.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                title={`${ipaBadge.name}: ${ipaBadge.award}`}
-                                className="flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded transition-all w-full h-14 cursor-pointer"
-                                onClick={(e) => e.stopPropagation()}
-                              >
-                                <img
-                                  src={resolveAsset(ipaBadge.badgeImage)}
-                                  alt={ipaBadge.name}
-                                  className="max-h-8 max-w-full object-contain"
-                                />
-                                <span className="text-[9px] text-stone-500 font-sans mt-0.5">{ipaBadge.year}</span>
-                              </a>
-                            )}
-                          </div>
-                        </div>
-                      )}
                     </div>
                   );
                 })()}

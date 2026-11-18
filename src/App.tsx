@@ -320,7 +320,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
                ------------------------------------------------------------- */}
-          <section id="architecture" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-4">
+          <section id="architecture" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-4 max-w-6xl mx-auto w-full">
 
             {/* Category Sticky Heading / Divider */}
             <div className="border-b border-stone-200 pb-4 mb-8">
@@ -374,7 +374,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 2: FINE ART
                ------------------------------------------------------------- */}
-          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
@@ -405,7 +405,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
@@ -436,7 +436,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 4: PORTRAITS
                ------------------------------------------------------------- */}
-          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200 pb-4 mb-8">
               <div className="space-y-1.5 max-w-2xl">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">

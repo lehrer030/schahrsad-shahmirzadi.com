@@ -38,15 +38,15 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className="group/badge flex flex-col items-center justify-center w-full h-20 sm:h-24 p-2 sm:p-2.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded-lg shadow-2xs transition-all duration-200 cursor-pointer"
+        className="group/badge flex flex-col items-center justify-center w-full h-14 sm:h-16 p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded-lg shadow-2xs transition-all duration-200 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-11 sm:max-h-15 max-w-full object-contain filter group-hover/badge:brightness-105"
+          className="max-h-8 sm:max-h-9 max-w-full object-contain filter group-hover/badge:brightness-105"
         />
-        <span className="text-[10.5px] sm:text-xs text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1">
+        <span className="text-[10px] text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium tracking-tight truncate w-full text-center mt-0.5 flex items-center justify-center gap-1">
           <span>{badge.year}</span>
           <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100" />
         </span>
@@ -55,19 +55,19 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
   };
 
   return (
-    <article className="bg-white border border-stone-200 rounded p-6 sm:p-8 lg:p-10 w-full">
+    <article className="bg-white border border-stone-200/90 rounded-2xl p-6 sm:p-8 shadow-xs w-full">
       
       {/* Title & Top Metadata Header */}
-      <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-200 pb-5">
+      <div className="mb-6 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-stone-200 pb-5">
         <div>
-          <span className="text-xs font-mono uppercase tracking-widest text-stone-500 font-medium">
+          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
             {currentLang === 'de'
               ? series.subtitleDe
               : currentLang === 'fa'
               ? series.subtitleFa
               : series.subtitleEn}
           </span>
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 mt-1 font-bold">
+          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
             {currentLang === 'de'
               ? series.titleDe
               : currentLang === 'fa'
@@ -78,7 +78,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
 
         <button
           onClick={() => onOpenSeries(series.id)}
-          className="inline-flex items-center gap-2 px-5 py-2.5 bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium rounded transition-all duration-200 self-start md:self-auto cursor-pointer"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium rounded-lg transition-all duration-200 self-start md:self-auto cursor-pointer"
         >
           <Images className="w-4 h-4" />
           <span>
@@ -92,36 +92,36 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         </button>
       </div>
 
-      {/* Responsive Layout: On large screens, photo on one side, editorial curation panel on the other! */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* Responsive Layout: Cover image sized to match Award cards proportions! */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         
-        {/* Left / Center Column: The Visual Presentation Matching Her Exact Mockup */}
-        <div className="lg:col-span-7 flex flex-col items-center w-full max-w-xl mx-auto">
+        {/* Left / Center Column: Image matching exact size of Award cards */}
+        <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
           
           {/* TOP ROW: AMP ALWAYS TOP-LEFT */}
-          <div className="w-full flex justify-start mb-3">
-            <div className="w-32 sm:w-44">
+          <div className="w-full flex justify-start mb-2.5">
+            <div className="w-28 sm:w-36">
               {renderBadgeItem(ampBadge)}
             </div>
           </div>
 
-          {/* MAIN COVER PHOTO */}
+          {/* MAIN COVER PHOTO: aspect-[3/4] matching Award images size */}
           <div
             onClick={() => onOpenSeries(series.id)}
-            className="group/img relative rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer w-full transition-all duration-300"
+            className="group/img relative rounded-xl overflow-hidden bg-stone-900 border border-stone-200/90 cursor-pointer w-full aspect-[3/4] transition-all duration-300"
           >
             <img
               src={resolveAsset(series.coverImage)}
               alt={series.titleEn}
               draggable={false}
-              className="w-full h-auto max-h-[520px] object-contain mx-auto transition-transform duration-500 group-hover/img:scale-[1.01] select-none"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105 select-none"
               loading="lazy"
             />
 
             {/* Hover actions */}
             <div className="absolute inset-0 bg-stone-900/30 opacity-0 group-hover/img:opacity-100 transition-opacity duration-200 flex items-center justify-center p-4 gap-3">
-              <span className="px-4 py-2 bg-white text-stone-900 border border-stone-200 rounded text-xs font-medium tracking-wide flex items-center gap-2">
-                <Images className="w-4 h-4 text-stone-700" />
+              <span className="px-3.5 py-1.5 bg-white text-stone-900 border border-stone-200 rounded text-xs font-medium tracking-wide flex items-center gap-1.5">
+                <Images className="w-3.5 h-3.5 text-stone-700" />
                 {currentLang === 'de'
                   ? `${series.photos.length} Werke ansehen`
                   : currentLang === 'fa'
@@ -134,7 +134,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
                   e.stopPropagation();
                   onOpenLightbox(series.photos, 0);
                 }}
-                className="p-2 bg-white text-stone-900 rounded hover:bg-stone-100 transition-colors cursor-pointer"
+                className="p-1.5 bg-white text-stone-900 rounded hover:bg-stone-100 transition-colors cursor-pointer"
                 title="Vollbild"
               >
                 <Maximize2 className="w-4 h-4 text-stone-700" />
@@ -142,13 +142,13 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
             </div>
 
             {/* Watermark logo bottom-right (Rechtsschutzmarke direkt rechts unten auf dem Bild) */}
-            <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/50 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs">
+            <div className="absolute bottom-2.5 right-2.5 text-[9.5px] sm:text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs">
               SchirZan | Schahrsad Shahmirzadi
             </div>
           </div>
 
           {/* BOTTOM ROW: Equal Proportion Badges (PERSPA / BIFA / IPA) */}
-          <div className={`w-full mt-3.5 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-3 items-center`}>
+          <div className={`w-full mt-2.5 grid ${bifaBadge ? 'grid-cols-3' : 'grid-cols-2'} gap-2 sm:gap-2.5 items-center`}>
             {/* Bottom-Left: PERSPA */}
             <div className="flex justify-start">
               {renderBadgeItem(perspaBadge)}
@@ -170,7 +170,7 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         </div>
 
         {/* Right Column: Editorial Exhibition Curation Panel */}
-        <div className="lg:col-span-5 space-y-6 bg-[#faf8f5] border border-stone-200 rounded p-6 sm:p-8">
+        <div className="lg:col-span-7 space-y-5 bg-[#faf8f5] border border-stone-200/90 rounded-2xl p-5 sm:p-7">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500 font-medium block mb-2">
               {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'About the Artwork'}
