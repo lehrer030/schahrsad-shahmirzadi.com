@@ -12,25 +12,16 @@ export const scrollToElementWithOffset = (
     if (!el) return;
 
     // Accurately determine the bottom edge of the sticky header on screen.
-    // On mobile & tablet (< 1024px), the indicator bar is the bottom-most element of the sticky header.
     let headerHeight = 0;
-    const indicator = document.getElementById('mobile-section-indicator');
     const header = document.querySelector('header');
 
-    if (window.innerWidth < 1024) {
-      if (indicator) {
-        headerHeight = indicator.getBoundingClientRect().bottom;
-      } else if (header) {
-        // On startpage, the sticky indicator is hidden until scrolled to works; account for its +34px height
-        headerHeight = header.getBoundingClientRect().height + 34;
-      }
-    } else if (header) {
+    if (header) {
       headerHeight = header.getBoundingClientRect().height;
     }
 
     // Safety fallback if header is not yet rendered or inflated by temporary overlays
-    if (!headerHeight || headerHeight > 220 || headerHeight < 50) {
-      headerHeight = window.innerWidth < 1024 ? 132 : 176;
+    if (!headerHeight || headerHeight > 220 || headerHeight < 40) {
+      headerHeight = window.innerWidth < 1024 ? 90 : 100;
     }
 
     // Exact equal spacing: on mobile px-4 is 16px (1rem).

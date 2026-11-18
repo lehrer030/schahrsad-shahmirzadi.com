@@ -65,4 +65,14 @@
     font-family: 'Cinzel', Georgia, serif;
     letter-spacing: 0.02em;
   }
+
+  /* Verstecke Scrollbalken für horizontale Navigationsleisten */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+

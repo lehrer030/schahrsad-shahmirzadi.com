@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { scrollToElementWithOffset } from '../utils/scrollHelper';
@@ -201,6 +201,26 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
   const [isScrolled, setIsScrolled] = useState(false);
+  const navScrollRef = useRef<HTMLDivElement>(null);
+  const activeItemRef = useRef<HTMLButtonElement>(null);
+
+  // Automatisches horizontales Nachführen des aktiven Menüpunkts auf Mobilgeräten & Tablets
+  useEffect(() => {
+    if (activeItemRef.current && navScrollRef.current) {
+      const container = navScrollRef.current;
+      const item = activeItemRef.current;
+      const containerRect = container.getBoundingClientRect();
+      const itemRect = item.getBoundingClientRect();
+
+      if (itemRect.left < containerRect.left + 24 || itemRect.right > containerRect.right - 24) {
+        item.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
+    }
+  }, [activeMenuId]);
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -251,8 +271,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const currentSection = ORIGINAL_11_MENU_ITEMS.find(s => s.id === activeMenuId);
 
   const handleNavigateToItem = (item: OriginalMenuItem) => {
     setMobileMenuOpen(false);
@@ -365,13 +383,14 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       )}
 
+      {/* Row 1: Brand & Actions Bar */}
       <div
         id="brand-header-bar"
-        className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 xl:gap-4 ${
-          isScrolled ? 'h-11 sm:h-12 py-1' : 'min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5'
+        className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 sm:gap-4 ${
+          isScrolled ? 'h-10 sm:h-12 py-1' : 'h-12 sm:h-14 lg:h-16 py-1.5 sm:py-2'
         }`}
       >
-        {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi (Kein Bild-Logo gemäß Kundenwunsch) */}
+        {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi */}
         <button
           onClick={onGoHome}
           className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0 shrink"
@@ -379,15 +398,15 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
             <span
               className={`font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
-                isScrolled ? 'text-base sm:text-lg' : 'text-lg sm:text-2xl'
+                isScrolled ? 'text-base sm:text-lg lg:text-xl' : 'text-lg sm:text-xl lg:text-2xl'
               }`}
             >
               SchirZan
             </span>
-            <span className={`text-stone-300 font-light transition-all ${isScrolled ? 'hidden' : 'text-sm sm:text-lg hidden sm:inline'}`}>|</span>
+            <span className="text-stone-300 font-light text-sm sm:text-lg">|</span>
             <span
               className={`text-stone-700 font-serif tracking-wide font-medium transition-all ${
-                isScrolled ? 'hidden' : 'text-xs sm:text-base hidden sm:inline truncate'
+                isScrolled ? 'text-xs sm:text-sm lg:text-base hidden xs:inline truncate' : 'text-xs sm:text-base truncate'
               }`}
             >
               {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
@@ -395,54 +414,16 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </button>
 
-        {/* Desktop Header Navigation: Alle 10 Themen in EINER horizontalen Reihe (auch beim Scrollen als schlanke Linie mit Appear-Effekt) */}
-        <nav className="hidden lg:flex items-center justify-center shrink min-w-0" aria-label="Hauptnavigation">
-          <div className="flex items-center gap-0.5 xl:gap-1.5 2xl:gap-2 flex-nowrap justify-center">
-            {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
-              const isActive = !item.isContact && activeMenuId === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavigateToItem(item)}
-                  className={`group px-1.5 xl:px-2.5 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
-                    isScrolled
-                      ? 'py-0.5 xl:py-1 text-[11px] xl:text-[11.5px]'
-                      : 'py-1 xl:py-1.5 text-[11px] xl:text-xs'
-                  } ${
-                    isActive
-                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
-                  }`}
-                  title={getItemLabel(item)}
-                >
-                  <span
-                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
-                      isActive
-                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                    }`}
-                  >
-                    {item.num}
-                  </span>
-                  <span className="whitespace-nowrap">
-                    {getHeaderItemLabel(item)}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </nav>
-
-        {/* Right Tools: Language Switcher (DE / EN / FA) & Contact */}
-        <div className="flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+        {/* Right Tools: Language Switcher (DE / EN / FA) & Contact & Mobile Hamburger */}
+        <div className="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
           {/* Trilingual Switcher (DE / EN / FA) */}
           <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
             isScrolled ? 'scale-95' : 'scale-100'
           }`}>
-            <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0" />
+            <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0 hidden xs:inline" />
             <button
               onClick={() => onToggleLang('de')}
-              className={`px-2 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'de'
+              className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'de'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -452,7 +433,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => onToggleLang('en')}
-              className={`px-2 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'en'
+              className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'en'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -462,7 +443,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => onToggleLang('fa')}
-              className={`px-2.5 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'fa'
+              className={`px-2 sm:px-2.5 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'fa'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -472,43 +453,71 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Separate Contact Button on the right */}
+          {/* Contact Button */}
           <button
             onClick={onOpenContact}
-            className={`hidden sm:inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
-              isScrolled ? 'px-2.5 py-1 text-[11px]' : 'px-3.5 py-1.5 text-xs'
+            className={`inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
+              isScrolled ? 'px-2 sm:px-2.5 py-1 text-[11px]' : 'px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs'
             }`}
           >
             <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
           </button>
 
-          {/* Mobile Navigation Toggle Button */}
+          {/* Mobile Drawer Toggle (for users who prefer full vertical drawer) */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-stone-700 hover:text-stone-900 transition-colors cursor-pointer"
+            className="lg:hidden p-1.5 text-stone-700 hover:text-stone-900 transition-colors cursor-pointer rounded hover:bg-stone-200/60"
             aria-label="Navigation Menu"
+            title="Menü"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
-
       </div>
 
-      {/* Mobile & Tablet Live Section Indicator Bar (Only rendered when scrolled into section 01-10) */}
-      {currentSection && (
-        <div id="mobile-section-indicator" className="lg:hidden bg-[#f7f5f0]/95 backdrop-blur-xs border-t border-stone-200/80 px-3 sm:px-6 py-1.5 flex items-center text-xs transition-colors shadow-2xs">
-          <div className="flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-600 shrink-0 animate-pulse" />
-            <span className="text-[9.5px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-100/90 px-1.5 py-0.5 rounded border border-amber-200/80 shrink-0">
-              {currentSection.num}
-            </span>
-            <span className="text-stone-300 text-xs shrink-0">/</span>
-            <span className="font-serif font-bold text-stone-900 truncate text-[11px] sm:text-xs tracking-tight">
-              {currentLang === 'fa' ? currentSection.shortFa : currentLang === 'de' ? currentSection.shortDe : currentSection.shortEn}
-            </span>
+      {/* Row 2: 10 Topics Navigation Bar - 2. Zeile im Header (vollständig responsiv auf Desktop & Mobil) */}
+      <nav
+        id="topics-navigation-bar"
+        className="w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300"
+        aria-label="Themen-Navigation"
+      >
+        <div className="max-w-[1720px] mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20">
+          <div
+            ref={navScrollRef}
+            className="flex items-center lg:justify-center gap-1 sm:gap-1.5 xl:gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1 sm:py-1.5 flex-nowrap"
+          >
+            {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
+              const isActive = !item.isContact && activeMenuId === item.id;
+              return (
+                <button
+                  key={item.id}
+                  ref={isActive ? activeItemRef : null}
+                  onClick={() => handleNavigateToItem(item)}
+                  className={`group px-2 sm:px-2.5 py-1 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap text-xs ${
+                    isActive
+                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/70'
+                  }`}
+                  title={getItemLabel(item)}
+                >
+                  <span
+                    className={`font-mono text-[9.5px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                      isActive
+                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                    }`}
+                  >
+                    {item.num}
+                  </span>
+                  <span>
+                    {getHeaderItemLabel(item)}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
-      )}
+      </nav>
 
       {/* Mobile Drawer Menu: Fixed overlay accessible from ANY scroll depth */}
       {mobileMenuOpen && (
