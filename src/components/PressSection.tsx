@@ -7,7 +7,6 @@ import {
 } from '../data/photographyData';
 import {
   ExternalLink,
-  BookOpen,
   MapPin,
   Calendar,
   Sparkles,
@@ -15,6 +14,7 @@ import {
 } from 'lucide-react';
 import { PublicationsGallery } from './PublicationsGallery';
 import { resolveAsset } from '../utils/resolveAsset';
+import { SectionHeader } from './SectionHeader';
 
 const EXHIBITION_ARTWORK_IMAGES: Record<string, string> = {
   'trieste-photo-days-2026': '/images/2026_07_In-Between-Spaces-scaled.jpg',
@@ -32,32 +32,19 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
       
       {/* 1. Ausstellungen / Exhibitions 2026 (Trieste Photo Days & Fringe, Italien) */}
       <section id="exhibitions" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
-        <div className="border-b border-stone-100 pb-6 mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
-            <MapPin className="w-4 h-4 text-amber-700" />
-            <span>
-              {currentLang === 'de'
-                ? 'Ausstellungen & Festivals'
-                : currentLang === 'fa'
-                ? 'نمایشگاه‌ها و رویدادهای بین‌المللی'
-                : 'Exhibitions & Festivals'}
-            </span>
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
-            {currentLang === 'de'
-              ? 'Gruppenausstellungen 2026 – Trieste Photo Days'
-              : currentLang === 'fa'
-              ? 'نمایشگاه‌های گروهی ۲۰۲۶ – روزهای عکاسی تریست ایتالیا'
-              : 'Group Exhibitions 2026 – Trieste Photo Days'}
-          </h3>
-          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
-            {currentLang === 'de'
-              ? 'Internationale Ausstellungsbeteiligungen beim renommierten Festival in Triest, Italien.'
-              : currentLang === 'fa'
-              ? 'حضور در نمایشگاه‌های بین‌المللی در فستیوال معتبر عکاسی تریست در کشور ایتالیا.'
-              : 'International group exhibition showcases at the renowned photography festival in Trieste, Italy.'}
-          </p>
-        </div>
+        <SectionHeader
+          num="03"
+          shortTitleDe="Ausstellungen"
+          shortTitleEn="Exhibitions"
+          shortTitleFa="نمایشگاه‌ها"
+          fullTitleDe="Ausstellungen – Gruppenausstellungen 2026 (Trieste Photo Days)"
+          fullTitleEn="Exhibitions – Group Exhibitions 2026 (Trieste Photo Days)"
+          fullTitleFa="نمایشگاه‌ها – نمایشگاه‌های گروهی ۲۰۲۶ (روزهای عکاسی تریست ایتالیا)"
+          descDe="Internationale Ausstellungsbeteiligungen beim renommierten Festival in Triest, Italien (Sala Veruda & Photo Fringe)."
+          descEn="International group exhibition showcases at the renowned photography festival in Trieste, Italy."
+          descFa="حضور در نمایشگاه‌های بین‌المللی در فستیوال معتبر عکاسی تریست در کشور ایتالیا."
+          currentLang={currentLang}
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {EXHIBITIONS_DATA.map((ex) => {
@@ -171,61 +158,38 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
 
       {/* 2. Publications, Winners E-Books, Videos & Editor's Choice */}
       <section id="publications" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
-        <div className="border-b border-stone-100 pb-6 mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold mb-1">
-            <BookOpen className="w-4 h-4 text-amber-700" />
-            <span>
-              {currentLang === 'de'
-                ? 'Photographie, Editor’s Choice, Videos & E-Books'
-                : currentLang === 'fa'
-                ? 'عکاسی، انتخاب‌های ویژه سردبیر، ویدیوها و کتاب‌ها'
-                : 'Photography, Editor’s Choice, Videos & E-Books'}
-            </span>
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
-            {currentLang === 'de'
-              ? 'Photography, Editor’s Choice, Videos & E-Books'
-              : currentLang === 'fa'
-              ? 'عکاسی، برگزیدگان سردبیر، فیلم‌های مستند و کتاب‌های رسمی'
-              : 'Photography, Editor’s Choice, Videos & E-Books'}
-          </h3>
-          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
-            {currentLang === 'de'
-              ? 'Offizielle Druckausgaben mit Hardcover ISBN, kuratierte Editor’s Choice Galerien (Global Lens & PERSPA), Spider Awards Preisträgerfilme und internationale Gewinner-Jahrbücher mit Beitexten.'
-              : currentLang === 'fa'
-              ? 'انتشارات رسمی چاپی با شابک، گالری‌های برگزیده سردبیر (گلوبال لنز و پرسپا)، فیلم‌های مستند جوایز اسپایدر و کتاب‌های سالانه با توضیحات کامل.'
-              : 'Official print editions with hardcover ISBN, curated Editor’s Choice galleries (Global Lens & PERSPA), Spider Awards winning films, and international annual compendiums with detailed captions.'}
-          </p>
-        </div>
+        <SectionHeader
+          num="04"
+          shortTitleDe="Publikationen"
+          shortTitleEn="Publications"
+          shortTitleFa="نشریات"
+          fullTitleDe="Publikationen – Photography, Editor's Choice, Videos & E-Books"
+          fullTitleEn="Publications – Photography, Editor's Choice, Videos & E-Books"
+          fullTitleFa="نشریات – عکاسی، انتخاب‌های ویژه سردبیر، ویدیوها و کتاب‌ها"
+          descDe="Offizielle Druckausgaben mit Hardcover ISBN, kuratierte Editor’s Choice Galerien (Global Lens & PERSPA), Spider Awards Preisträgerfilme und internationale Gewinner-Jahrbücher mit Beitexten."
+          descEn="Official print editions with hardcover ISBN, curated Editor’s Choice galleries (Global Lens & PERSPA), Spider Awards winning films, and international annual compendiums."
+          descFa="انتشارات رسمی چاپی با شابک، گالری‌های برگزیده سردبیر، فیلم‌های مستند جوایز اسپایدر و کتاب‌های سالانه رسمی."
+          currentLang={currentLang}
+        />
 
         <PublicationsGallery currentLang={currentLang} onOpenLightbox={onOpenLightbox} />
       </section>
 
-    {/* 3. Press Coverage & Features */}
+      {/* 3. Press Coverage & Features */}
       <section id="press-features" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
-        <div className="border-b border-stone-100 pb-6 mb-8">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            {currentLang === 'de'
-              ? 'Internationale Medienberichte'
-              : currentLang === 'fa'
-              ? 'بازتاب در رسانه‌های بین‌المللی'
-              : 'International Media'}
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
-            {currentLang === 'de'
-              ? 'Press & Features'
-              : currentLang === 'fa'
-              ? 'مطبوعات و مصاحبه‌ها'
-              : 'Press & Features'}
-          </h3>
-          <p className="text-sm text-stone-700 mt-2 font-normal max-w-2xl leading-relaxed">
-            {currentLang === 'de'
-              ? 'Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan.'
-              : currentLang === 'fa'
-              ? 'پوشش مطبوعاتی و نقدهای رسانه‌های تخصصی پیرامون آثار معماری و افتخارات شیرزن.'
-              : 'International journalistic coverage and critical reception of SchirZan’s architectural photographs and honors.'}
-          </p>
-        </div>
+        <SectionHeader
+          num="05"
+          shortTitleDe="Presse"
+          shortTitleEn="Press"
+          shortTitleFa="مطبوعات"
+          fullTitleDe="Presse – Internationale Medienberichte & Rezensionen"
+          fullTitleEn="Press – Media Coverage & Features"
+          fullTitleFa="مطبوعات – بازتاب در رسانه‌های بین‌المللی و نقدها"
+          descDe="Internationale Berichterstattung und Rezensionen über die architektonischen Werke und Auszeichnungen von SchirZan."
+          descEn="International journalistic coverage and critical reception of SchirZan’s architectural photographs and honors."
+          descFa="پوشش مطبوعاتی و نقدهای رسانه‌های تخصصی پیرامون آثار معماری و افتخارات شیرزن."
+          currentLang={currentLang}
+        />
 
         <div className="grid grid-cols-1 gap-6">
           {PRESS_ITEMS.map((item, idx) => (

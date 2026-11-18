@@ -1,7 +1,8 @@
 import React from 'react';
 import { ACADEMIC_MILESTONES, type Language } from '../data/photographyData';
-import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap, MapPin, Camera, Compass, Heart } from 'lucide-react';
+import { ExternalLink, Sparkles, Trophy, GraduationCap, MapPin, Camera, Compass, Heart } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
+import { SectionHeader } from './SectionHeader';
 
 interface ArtistVitaProps {
   currentLang: Language;
@@ -16,15 +17,20 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
          ========================================================================= */}
       <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
         
-        {/* Top Header */}
-        <div className="border-b border-stone-100 pb-4">
-          <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            {currentLang === 'de' ? 'Biografie & Werdegang' : currentLang === 'fa' ? 'زندگینامه و سوابق' : 'Biography & Profile'}
-          </span>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold mt-1">
-            {currentLang === 'de' ? 'Biography · SchirZan | Schahrsad Shahmirzadi' : currentLang === 'fa' ? 'زندگینامه · شیرزن | شهزاد شاهمیرزادی' : 'Biography · SchirZan | Schahrsad Shahmirzadi'}
-          </h3>
-        </div>
+        {/* 07 Biografie Header – Matching Navbar 07 */}
+        <SectionHeader
+          num="07"
+          shortTitleDe="Biografie"
+          shortTitleEn="Biography"
+          shortTitleFa="زندگی‌نامه"
+          fullTitleDe="Biografie – Persönliche Identität & Werdegang"
+          fullTitleEn="Biography – Personal Identity & Profile"
+          fullTitleFa="زندگی‌نامه – هویت فردی، سوابق و افتخارات شیرزن"
+          descDe="Schahrsad Shahmirzadi (Künstlername SchirZan | شیر زن): Deutsch-iranische Wurzeln, fotografische Entdeckung und internationale Auszeichnungen."
+          descEn="Schahrsad Shahmirzadi (Artist Name SchirZan): German-Iranian heritage, discovery of photography, and international acclaim."
+          descFa="شهزاد شاهمیرزادی (نام هنری شیرزن): ریشه‌های آلمانی-ایرانی، کشف هنر عکاسی و موفقیت‌های بین‌المللی."
+          currentLang={currentLang}
+        />
 
         {/* Hero Portrait: Steve Barret Photo (from WordPress /vita/) */}
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
@@ -288,25 +294,20 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
          ========================================================================= */}
       <section id="education" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
 
-        {/* Header & Tagline */}
-        <div className="border-b border-stone-100 pb-6 space-y-2">
-          <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            <GraduationCap className="w-4 h-4 text-amber-800" />
-            <span>
-              {currentLang === 'de'
-                ? 'Bildung & Werdegang'
-                : currentLang === 'fa'
-                  ? 'تحصیلات، حرفه و کارشناسی ارشد'
-                  : 'Education & Career'}
-            </span>
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
-            {currentLang === 'de'
-              ? 'Education, Professional Career & Master’s Studies'
-              : currentLang === 'fa'
-                ? 'تحصیلات، مسیر شغلی و مقطع کارشناسی ارشد'
-                : 'Education, Professional Career & Master’s Studies'}
-          </h3>
+        {/* 08 Bildungsweg Header – Matching Navbar 08 */}
+        <SectionHeader
+          num="08"
+          shortTitleDe="Bildungsweg"
+          shortTitleEn="Education"
+          shortTitleFa="تحصیلات"
+          fullTitleDe="Bildungsweg – Interdisziplinäre akademische Ausbildung & Werdegang"
+          fullTitleEn="Education – Interdisciplinary Academic Education & Career"
+          fullTitleFa="تحصیلات – تحصیلات دانشگاهی بین‌رشته‌ای و مسیر حرفه‌ای"
+          descDe="Vom Evangelischen Gymnasium Graues Kloster über Rechtswissenschaften (FU Berlin), Berliner Polizei (LKA Berlin) bis zum Master of Science (M.Sc.) an der Universität Koblenz."
+          descEn="From Graues Kloster Gymnasium and law studies at FU Berlin, Berlin Police (LKA) to Master of Science (M.Sc.) at the University of Koblenz."
+          descFa="از دیپلم دبیرستان گراوئن کلوستر و تحصیلات حقوق، پلیس برلین (LKA) تا مقطع کارشناسی ارشد علوم محیط زیست دانشگاه کوبلنتس."
+          currentLang={currentLang}
+        />
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
@@ -322,7 +323,6 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               </>
             )}
           </p>
-        </div>
 
         {/* Official Campus Image: Universität Koblenz (ZFUW) */}
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
@@ -476,27 +476,20 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
          ========================================================================= */}
       <section id="engagement" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
 
-        {/* Header & Hero Image with Mission Statement */}
-        <div className="border-b border-stone-100 pb-8 space-y-6">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-              <Leaf className="w-4 h-4 text-emerald-700" />
-              <span>
-                {currentLang === 'de'
-                  ? 'Gesellschaftliches Engagement'
-                  : currentLang === 'fa'
-                    ? 'مسئولیت اجتماعی، محیط زیست و صلح'
-                    : 'Social & Environmental Advocacy'}
-              </span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
-              {currentLang === 'de'
-                ? 'Committed to Environmental Protection, Human Rights & Peace'
-                : currentLang === 'fa'
-                  ? 'متعهد به حفاظت از محیط زیست، حقوق بشر و صلح'
-                  : 'Committed to Environmental Protection, Human Rights & Peace'}
-            </h3>
-          </div>
+        {/* 09 Engagement Header – Matching Navbar 09 */}
+        <SectionHeader
+          num="09"
+          shortTitleDe="Engagement"
+          shortTitleEn="Advocacy"
+          shortTitleFa="فعالیت‌ها"
+          fullTitleDe="Engagement – Umweltschutz, Menschenrechte & Frieden"
+          fullTitleEn="Advocacy – Environmental Protection, Human Rights & Peace"
+          fullTitleFa="فعالیت‌ها – حفاظت از محیط زیست، حقوق بشر و صلح"
+          descDe="Solidarität mit benachteiligten Menschen, Berliner Halbmarathon Spendenlauf für ECCHR Menschenrechte und ehrenamtlicher Einsatz für den Gewässerschutz."
+          descEn="Standing in solidarity with disadvantaged communities, Berlin Half Marathon charity run for human rights, and environmental advocacy."
+          descFa="همبستگی با آسیب‌دیدگان، دویدن در نیمه‌ماراتن برلین برای حمایت از حقوق بشر ECCHR و فعالیت‌های محیط زیستی."
+          currentLang={currentLang}
+        />
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             {/* Mission Text */}
@@ -555,7 +548,6 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               </div>
             </div>
           </div>
-        </div>
 
         {/* Cohesive Main Feature: Personal Sporting Projects (Running) & ECCHR Spendenlauf */}
         <div id="spendenlauf-ecchr" className="p-6 sm:p-8 rounded-3xl bg-[#faf8f5] border border-stone-200/90 space-y-6">

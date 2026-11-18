@@ -3,6 +3,7 @@ import { Play, ExternalLink, Trophy, Flame, Award, Eye, Heart, MapPin } from 'lu
 import type { Language, PhotoItem } from '../data/photographyData';
 import { GALLERY_PAGE_DATA } from '../data/galleryData';
 import { resolveAsset } from '../utils/resolveAsset';
+import { SectionHeader } from './SectionHeader';
 
 interface GallerySectionProps {
   currentLang: Language;
@@ -17,35 +18,20 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
 
   return (
     <section id="gallery" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
-      {/* Section Top Header */}
-      <div className="border-b border-stone-200 pb-4 mb-8">
-        <div className="space-y-1.5 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-stone-100 text-stone-700 text-xs font-medium uppercase tracking-wider">
-            <Trophy className="w-3.5 h-3.5 text-amber-600" />
-            <span>
-              {currentLang === 'de'
-                ? 'Originale WordPress-Galerie'
-                : currentLang === 'fa'
-                  ? 'گالری اصلی وردپرس'
-                  : 'Original WordPress Gallery'}
-            </span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-            {currentLang === 'de'
-              ? 'Galerie: Sport, Engagement & IPA Athen'
-              : currentLang === 'fa'
-                ? 'گالری: ورزش، فعالیت اجتماعی و فستیوال آتن'
-                : 'Gallery: Sports, Advocacy & IPA Athens'}
-          </h2>
-          <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
-            {currentLang === 'de'
-              ? 'Dokumentarische Aufnahmen, Weltmeister-Video und Impressionen der internationalen Preisverleihung.'
-              : currentLang === 'fa'
-                ? 'تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی.'
-                : 'Documentary photography, world champion video, and international award gala impressions.'}
-          </p>
-        </div>
-      </div>
+      {/* 10 Galerie Header – Matching Navbar 10 */}
+      <SectionHeader
+        num="10"
+        shortTitleDe="Galerie"
+        shortTitleEn="Gallery"
+        shortTitleFa="گالری"
+        fullTitleDe="Galerie – Sport, Engagement & IPA Athen Gala"
+        fullTitleEn="Gallery – Sports, Advocacy & IPA Athens Gala"
+        fullTitleFa="گالری – ورزش، فعالیت‌های اجتماعی و جشن آتن"
+        descDe="Dokumentarische Aufnahmen, Weltmeister-Video und Impressionen der internationalen Preisverleihung."
+        descEn="Documentary photography, world champion video, and international award gala impressions."
+        descFa="تصاویر مستند، ویدیوی قهرمانی جهان و لحظات اهدای جوایز بین‌المللی."
+        currentLang={currentLang}
+      />
 
       <div className="space-y-16 sm:space-y-24">
         {/* =========================================================================

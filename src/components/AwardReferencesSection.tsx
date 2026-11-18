@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import type { Language, PhotoItem } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
+import { SectionHeader } from './SectionHeader';
 
 interface AwardReferencesSectionProps {
   currentLang: Language;
@@ -843,70 +844,55 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
   return (
     <div className="space-y-12 max-w-6xl mx-auto py-8">
 
-      {/* Editorial Section Header */}
-      <div className="border-b border-stone-200 pb-8 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div className="max-w-3xl space-y-3">
-          <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-            <Trophy className="w-3.5 h-3.5 text-amber-700" />
-            <span>
-              {currentLang === 'fa'
-                ? 'مراجع رسمی و استعلام جوایز'
-                : 'International Award References & Verifications'}
+      {/* 02 Awards Header – Matching Navbar 02 */}
+      <SectionHeader
+        num="02"
+        shortTitleDe="Awards"
+        shortTitleEn="Awards"
+        shortTitleFa="جوایز"
+        fullTitleDe="Awards – Internationale Photopreis-Referenzen"
+        fullTitleEn="Awards – International Photography Honors & Directory"
+        fullTitleFa="جوایز – مراجع بین‌المللی عکاسی و استعلام رسمی"
+        descDe="Vollständige Übersicht aller internationalen Photopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn."
+        descEn="Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions."
+        descFa="فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان."
+        currentLang={currentLang}
+        extraRight={
+          <div className="flex flex-wrap items-center gap-2 text-xs">
+            <span className="text-stone-500 font-mono flex items-center gap-1.5 mr-1 text-[11px]">
+              <Filter className="w-3.5 h-3.5 text-stone-400" />
+              <span>{currentLang === 'fa' ? 'فیلتر:' : 'Filter:'}</span>
             </span>
+            <button
+              onClick={() => setFilterYear('all')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === 'all'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+                }`}
+            >
+              {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
+            </button>
+            <button
+              onClick={() => setFilterYear('2026')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2026'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+                }`}
+            >
+              2026 (6)
+            </button>
+            <button
+              onClick={() => setFilterYear('2025')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2025'
+                ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
+                : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
+                }`}
+            >
+              2025 (5)
+            </button>
           </div>
-
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
-            {currentLang === 'de'
-              ? 'Internationale Auszeichnungen & Zertifikate'
-              : currentLang === 'fa'
-                ? 'جوایز بین‌المللی، داوری و لینک‌های تایید رسمی'
-                : 'International Photography Award References & Directory'}
-          </h2>
-
-          <p className="text-xs sm:text-[13px] text-stone-500 leading-relaxed font-normal pt-1">
-            {currentLang === 'de'
-              ? 'Vollständige Übersicht aller internationalen Photopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn.'
-              : currentLang === 'fa'
-                ? 'فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان.'
-                : 'Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions.'}
-          </p>
-        </div>
-
-        {/* Quick Filter Bar */}
-        <div className="flex flex-wrap items-center gap-2 text-xs shrink-0 self-start md:self-end">
-          <span className="text-stone-500 font-mono flex items-center gap-1.5 mr-1 text-[11px]">
-            <Filter className="w-3.5 h-3.5 text-stone-400" />
-            <span>{currentLang === 'fa' ? 'فیلتر:' : 'Filter:'}</span>
-          </span>
-          <button
-            onClick={() => setFilterYear('all')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === 'all'
-              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-              }`}
-          >
-            {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
-          </button>
-          <button
-            onClick={() => setFilterYear('2026')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2026'
-              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-              }`}
-          >
-            2026 (6)
-          </button>
-          <button
-            onClick={() => setFilterYear('2025')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors cursor-pointer border ${filterYear === '2025'
-              ? 'bg-stone-900 text-white border-stone-900 font-semibold shadow-2xs'
-              : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
-              }`}
-          >
-            2025 (5)
-          </button>
-        </div>
-      </div>
+        }
+      />
 
       {/* Competitions Cards Grid */}
       <div className="space-y-6">

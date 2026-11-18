@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
+import { SectionHeader } from './SectionHeader';
 
 interface KickboxingFullSectionProps {
   currentLang: Language;
@@ -225,51 +226,20 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
     <section id="kickboxing" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
       
-      {/* Editorial Section Header */}
-      <div className="border-b border-stone-200 pb-8 mb-10">
-        <div className="flex flex-col xl:flex-row xl:items-start justify-between gap-8">
-          <div className="space-y-4 flex-1 min-w-0 max-w-4xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-              <Trophy className="w-3.5 h-3.5 text-amber-700" />
-              <span>
-                {currentLang === 'fa' ? 'پیشینه ورزشی و قهرمانی' : 'Sportliche Laufbahn & Weltmeistertitel'}
-              </span>
-            </div>
-
-            <div className="space-y-2">
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-serif text-stone-900 font-bold leading-snug tracking-normal text-balance">
-                {currentLang === 'fa' ? (
-                  'شهزاد شاهمیرزادی · شیرزن – ۱۰ بار قهرمان جهان در کیک‌بوکسینگ'
-                ) : currentLang === 'en' ? (
-                  <>
-                    Schahrsad Shahmirzadi · SchirZan –{' '}
-                    <span className="whitespace-nowrap">10-Time</span> Kickboxing World Champion
-                  </>
-                ) : (
-                  <>
-                    Schahrsad Shahmirzadi · SchirZan –{' '}
-                    <span className="whitespace-nowrap">10-fache</span> Kickbox-Weltmeisterin
-                  </>
-                )}
-              </h2>
-
-              <div className="flex items-center gap-2 pt-0.5">
-                <span className="text-xs text-stone-600 font-mono font-medium">
-                  {currentLang === 'fa' ? '۱۰ عنوان قهرمانی جهان WKU' : '10× WKU World Championship Title'}
-                </span>
-              </div>
-            </div>
-
-            <p className="text-xs sm:text-[13px] text-stone-500 leading-relaxed font-normal pt-1">
-              {currentLang === 'fa'
-                ? 'در طول دوران فعالیت قهرمانی، شهزاد شاهمیرزادی یکی از موفق‌ترین بانوان کیک‌بوکسینگ تاریخ آلمان به شمار می‌رفت. ورزش برای او کانون انضباط، استقامت و تمرکز ذهنی سازش‌ناپذیر بود که در زیبایی‌شناسی عکاسی او نیز متجلی است.'
-                : currentLang === 'en'
-                ? 'During her active competitive career, Schahrsad Shahmirzadi was one of Germany’s most accomplished female kickboxers. For her, sport represented mental fortitude, relentless focus, and character—qualities that resonate deeply throughout her fine art and architectural photography.'
-                : 'Während ihrer aktiven Wettkampfkarriere gehörte Schahrsad Shahmirzadi zu den erfolgreichsten deutschen Kickboxerinnen. Für sie war der Sport weit mehr als körperliche Höchstleistung: Er war die Schule der Konzentration, Disziplin und Willenskraft, die sich heute in ihrer präzisen photographischen Ästhetik widerspiegelt.'}
-            </p>
-          </div>
-
-          {/* Editorial pull-quote */}
+      {/* 06 Kickboxen Header – Matching Navbar 06 */}
+      <SectionHeader
+        num="06"
+        shortTitleDe="Kickboxen"
+        shortTitleEn="Kickboxing"
+        shortTitleFa="کیک‌بوکسینگ"
+        fullTitleDe="Kickboxen – 10-fache Weltmeisterin SchirZan | Schahrsad Shahmirzadi"
+        fullTitleEn="Kickboxing – 10-Time World Champion SchirZan | Schahrsad Shahmirzadi"
+        fullTitleFa="کیک‌بوکسینگ – ۱۰ بار قهرمان جهان شیرزن | شهزاد شاهمیرزادی"
+        descDe="Erfolgreichste deutsche Kickboxerin: 10-fache Weltmeisterin (WKU, ISKA, ICO), zweifache Europameisterin, dreifache Weltcupsiegerin und Trägerin des 3. Dan (Schwarzer Gürtel). Disziplin, mentale Stärke und Willenskraft."
+        descEn="One of Germany’s most accomplished female kickboxers: 10× World Champion (WKU, ISKA, ICO), 2× European Champion, 3× World Cup Winner and 3rd Dan Black Belt."
+        descFa="یکی از پرافتخارترین بانوان کیک‌بوکسینگ آلمان: ۱۰ بار قهرمان جهان (WKU, ISKA, ICO)، ۲ بار قهرمان اروپا، ۳ بار قهرمان جام جهانی و دارنده دان ۳ کمربند سیاه."
+        currentLang={currentLang}
+        extraRight={
           <div className="lg:max-w-xs shrink-0 bg-[#faf8f5] border-l-2 border-amber-800/80 p-4 sm:p-5 rounded-r-lg shadow-2xs">
             <span className="text-3xl font-serif text-amber-800/30 leading-none select-none block -mb-2">“</span>
             <p className="text-base sm:text-lg font-serif italic text-stone-800 leading-snug">
@@ -283,8 +253,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               — SchirZan
             </div>
           </div>
-        </div>
-      </div>
+        }
+      />
 
       {/* Key Pillars Stats: 5-Column Responsive Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-12">

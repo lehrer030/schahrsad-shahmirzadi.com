@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar, type NavigationCategory } from './components/Navbar';
 import { HeaderIntro } from './components/HeaderIntro';
+import { SectionHeader } from './components/SectionHeader';
 import { ArtworkCard } from './components/ArtworkCard';
 import { SeriesDetail } from './components/SeriesDetail';
 import { FurtherWorks } from './components/FurtherWorks';
@@ -318,16 +319,35 @@ export default function App() {
         <div className="max-w-[1720px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8 sm:py-12 space-y-20 sm:space-y-28">
 
           {/* -------------------------------------------------------------
-                SECTION 1: ARCHITECTURE (PRIMARY FOCUS)
+                SECTION 1: PHOTOGRAPHIE (WERKE & AUSZEICHNUNGEN)
                ------------------------------------------------------------- */}
           <section id="architecture" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-4 max-w-6xl mx-auto w-full">
 
-            {/* Category Sticky Heading / Divider */}
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+            {/* 01 Photographie Header – Matching Navbar 01 */}
+            <SectionHeader
+              num="01"
+              shortTitleDe="Photographie"
+              shortTitleEn="Photography"
+              shortTitleFa="عکاسی"
+              fullTitleDe="Photographie – Werke & Auszeichnungen"
+              fullTitleEn="Photography – Works & International Awards"
+              fullTitleFa="عکاسی – آثار و جوایز بین‌المللی"
+              descDe="Prämierte Werkgruppen zeitgenössischer Architektur-, Fine-Art- und Dokumentarphotographie."
+              descEn="Award-winning photographic series in architecture, fine art, documentary, and portraits."
+              descFa="مجموعه‌های برگزیده عکاسی در حوزه‌های معماری، هنرهای زیبا، مستند اجتماعی و پرتره."
+              currentLang={currentLang}
+            />
+
+            {/* Sub-Category Heading: Architektur */}
+            <div className="border-b border-stone-200/60 pb-3 mb-8">
+              <div className="space-y-1 max-w-2xl">
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  <span>{currentLang === 'fa' ? 'بخش ۱ · تمرکز اصلی' : 'Bereich 1.1 · Schwerpunkt'}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
-                </h2>
+                </h3>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? 'Prämierte Architekturphotographien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.'
@@ -372,14 +392,18 @@ export default function App() {
 
 
           {/* -------------------------------------------------------------
-                SECTION 2: FINE ART
+                SECTION 1.2: FINE ART
                ------------------------------------------------------------- */}
-          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+            <div className="border-b border-stone-200/60 pb-3 mb-8">
+              <div className="space-y-1 max-w-2xl">
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  <span>{currentLang === 'fa' ? 'بخش ۲' : 'Bereich 1.2'}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
-                </h2>
+                </h3>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? 'Photographische Arbeiten im Bereich Fine Art und Bildkomposition.'
@@ -403,14 +427,18 @@ export default function App() {
 
 
           {/* -------------------------------------------------------------
-                SECTION 3: SOCIAL & ENVIRONMENTAL THEMES
+                SECTION 1.3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+            <div className="border-b border-stone-200/60 pb-3 mb-8">
+              <div className="space-y-1 max-w-2xl">
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  <span>{currentLang === 'fa' ? 'بخش ۳' : 'Bereich 1.3'}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
-                </h2>
+                </h3>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? 'Photographische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.'
@@ -434,14 +462,18 @@ export default function App() {
 
 
           {/* -------------------------------------------------------------
-                SECTION 4: PORTRAITS
+                SECTION 1.4: PORTRAITS
                ------------------------------------------------------------- */}
-          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 max-w-6xl mx-auto w-full">
-            <div className="border-b border-stone-200 pb-4 mb-8">
-              <div className="space-y-1.5 max-w-2xl">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight">
+          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+            <div className="border-b border-stone-200/60 pb-3 mb-8">
+              <div className="space-y-1 max-w-2xl">
+                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+                  <span>{currentLang === 'fa' ? 'بخش ۴' : 'Bereich 1.4'}</span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
-                </h2>
+                </h3>
                 <p className="text-xs sm:text-[13px] text-stone-500 font-normal leading-relaxed">
                   {currentLang === 'de'
                     ? 'Photographische Porträts und Selbstporträts.'
