@@ -244,7 +244,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       year: '2026',
       award: 'Honorable Mention & Editor’s Choice',
       awardFa: 'تقدیر ویژه و انتخاب سردبیر',
-      badgeImage: '/images/email_badges/perspa_2026_silver.png',
+      badgeImage: '/images/badges_custom/perspa_2026_bw_hm.png',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-132',
       position: 'bottom-left'
     },
@@ -267,16 +267,6 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       badgeImage: '/images/email_badges/ipa_2026_hm_ribbon.png',
       link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25',
       position: 'bottom-right'
-    },
-    {
-      id: 'amp-2025-winner',
-      name: 'Architecture MasterPrize 2025',
-      year: '2025',
-      award: 'Student Photography Winner (Other Exterior)',
-      awardFa: 'برنده جایزه عکاسی دانشجویی (معماری بیرونی)',
-      badgeImage: '/images/email_badges/amp_2025_winner.png',
-      link: 'https://architectureprize.com/winners/winner.php?id=8533',
-      position: 'top-left'
     }
   ],
   photos: [
@@ -522,11 +512,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-architectural-piano",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613457-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613457-25',
@@ -612,11 +602,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-elegance-of-structure-bw",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722624977-26"
       }
 ],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
@@ -660,11 +650,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-elegance-of-structure-color",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613460-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613460-25',
@@ -878,10 +868,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Mirrored (بازتاب)',
     category: 'Architecture / Single Shot',
     categoryFa: 'معماری / تک عکس',
-    awardsDe: 'IPA 2026 — Official Selection',
-    awardsEn: 'IPA 2026 — Official Selection',
-    awardsFa: 'IPA 2026 — برگزیده رسمی',
-    badgeNames: ['IPA 2026 OS'],
+    awardsDe: 'IPA 2026 — Honorable Mention & Official Selection',
+    awardsEn: 'IPA 2026 — Honorable Mention & Official Selection',
+    awardsFa: 'IPA 2026 — تقدیر ویژه و برگزیده رسمی',
+    badgeNames: ['IPA 2026 HM'],
     badges: [
 
       {
@@ -891,7 +881,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "year": "2026",
             "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26',
@@ -1074,10 +1064,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Hephaestus’ Legacy (میراث هفائستوس)',
     category: 'Architecture / Historic',
     categoryFa: 'معماری / تاریخی',
-    awardsDe: 'BIFA 2026 — Honorable Mention · PERSPA 2026 — Editor’s Choice · IPA 2026 — Official Selection',
-    awardsEn: 'BIFA 2026 — Honorable Mention · PERSPA 2026 — Editor’s Choice · IPA 2026 — Official Selection',
-    awardsFa: 'BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
-    badgeNames: ['BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
+    awardsDe: 'BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
+    awardsEn: 'BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
+    awardsFa: 'BIFA 2026 — تقدیر ویژه · IPA 2026 — برگزیده رسمی',
+    badgeNames: ['BIFA 2026 HM', 'IPA 2026 OS'],
     badges: [
 
       {
@@ -1090,22 +1080,13 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "link": "https://budapestfotoawards.com/"
       },
       {
-            "id": "perspa-hephaestus-legacy",
-            "name": "PERSPA 2026",
-            "award": "Black and White · Honorable Mention",
-            "year": "2026",
-            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
-            "position": "bottom-left",
-            "link": "https://architectureperspectiveawards.com/"
-      },
-      {
             "id": "ipa-hephaestus-legacy",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722626529-26"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722626529-26',
@@ -1163,10 +1144,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Steps of Sustainability (پله‌های پایداری)',
     category: 'Architecture / Sustainable Design',
     categoryFa: 'معماری / طراحی پایدار',
-    awardsDe: 'AMP 2025 — Honorable Mention · PERSPA 2026 — Honorable Mention',
-    awardsEn: 'AMP 2025 — Honorable Mention · PERSPA 2026 — Honorable Mention',
-    awardsFa: 'AMP 2025 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
-    badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM'],
+    awardsDe: 'AMP 2025 — Honorable Mention',
+    awardsEn: 'AMP 2025 — Honorable Mention',
+    awardsFa: 'AMP 2025 — تقدیر ویژه',
+    badgeNames: ['AMP 2025 HM'],
     badges: [
 
       {
@@ -1177,15 +1158,6 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "badgeImage": "/images/2026_01_winners_badge-AMP-2025-1024x474.webp",
             "position": "top-left",
             "link": "https://architectureprize.com/"
-      },
-      {
-            "id": "perspa-steps-of-sustainability",
-            "name": "PERSPA 2026",
-            "award": "Black and White · Honorable Mention",
-            "year": "2026",
-            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
-            "position": "bottom-left",
-            "link": "https://architectureperspectiveawards.com/"
       }
 ],
     link: 'https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816',
@@ -1260,11 +1232,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-dimensions-of-sustainability",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25',
@@ -1394,11 +1366,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-fragments-of-memory",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25',
@@ -1465,11 +1437,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "ipa-symmetric-networks",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Architecture · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25',
@@ -2071,11 +2043,11 @@ export const FINE_ART_WORKS: FurtherWork[] = [
       {
             "id": "ipa-between-space-time",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Fine Art · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25',
@@ -2263,11 +2235,11 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
       {
             "id": "ipa-life-love-freedom-iran",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "Special / Other · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26',
@@ -2415,11 +2387,11 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
       {
             "id": "ipa-kickboxing-self-portrait",
             "name": "IPA 2026",
-            "award": "Architecture · Honorable Mention & Official Selection",
+            "award": "People / Self-Portrait · Official Selection",
             "year": "2026",
-            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
-            "link": "https://www.photoawards.com/"
+            "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26',
@@ -2718,9 +2690,9 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     titleDe: 'PERSPA 2026 – Editor’s Choice Galerie in Bourges, Frankreich',
     titleEn: 'PERSPA 2026 – Editor’s Choice Gallery in Bourges, France',
     titleFa: 'گالری برگزیدگان سردبیر PERSPA فرانسه ۲۰۲۶',
-    subtitleDe: 'Auswahl für Solitaire, Elegance of Structure & Hephaestus’ Legacy',
-    subtitleEn: 'Triple Selection: Solitaire, Elegance of Structure & Hephaestus’ Legacy',
-    subtitleFa: 'انتخاب سه‌گانه آثار برجسته معماری',
+    subtitleDe: 'Auswahl für Solitaire & Elegance of Structure',
+    subtitleEn: 'Selection: Solitaire & Elegance of Structure',
+    subtitleFa: 'انتخاب آثار برجسته معماری (سولیتر و الگانس)',
     publisher: 'Prix de la Perspective Architecturale',
     detailsDe: 'Ausgewählt für die kuratierte offizielle Editor’s Choice Galerie in Frankreich.',
     detailsEn: 'Selected for the official curated gallery showcase in France.',
@@ -2730,7 +2702,7 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
     linkTextEn: 'Open PERSPA Gallery →',
     linkTextFa: 'مشاهده گالری رسمی PERSPA ←',
     type: 'editors-choice',
-    coverImage: '/images/2026_09_os-06-hephaestus-legacy-01-scaled.webp'
+    coverImage: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp'
   },
   {
     id: 'ipa-annual-book-2025',

@@ -971,10 +971,10 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </h4>
           <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
             {currentLang === 'fa'
-              ? 'شهزاد شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در پلیس برلین خدمت کرد. در بازه ۲۰۱۵ تا ۲۰۲۳، او مشمول طرح حمایت از ورزش قهرمانی بود و بارها برای موفقیت‌های ورزشی خود مورد تقدیر رسمی قرار گرفت.'
+              ? 'شهزاد شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در پلیس برلین خدمت کرد. در بازه ۲۰۱۵ تا ۲۰۲۳، او مشمول طرح حمایت از ورزش قهرمانی بود و ۳ بار (3×) برای موفقیت‌های ورزشی خود در پلیس مورد تقدیر و تجلیل رسمی قرار گرفت (۲۰۱۴ و ۲۰۱۶ توسط سنای امور داخلی و ورزش برلین، ۲۰۱۴ توسط رئیس پلیس برلین و ۲۰۱۴ در چارچوب تجلیل سراسری از ورزشکاران نخبه پلیس DPSK).'
               : currentLang === 'en'
-                ? 'Schahrsad Shahmirzadi was with the Berlin Police from 2009 to 2024. From 2015 to 2023, she received needs-based elite sports support and was honoured multiple times for her sporting achievements.'
-                : 'Schahrsad Shahmirzadi war von 2009 bis 2024 bei der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie anlassbezogene Spitzensportförderung und wurde mehrfach für ihre sportlichen Erfolge gewürdigt.'}
+                ? 'Schahrsad Shahmirzadi was with the Berlin Police from 2009 to 2024. From 2015 to 2023, she received needs-based elite sports support and was honoured 3 times (3×) by the police for her athletic achievements (2014 & 2016 by the Senate Department for the Interior and Sports, 2014 by the Berlin Police President, and 2014 within the nationwide honours for top police athletes DPSK).'
+                : 'Schahrsad Shahmirzadi war von 2009 bis 2024 bei der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie anlassbezogene Spitzensportförderung und wurde 3× für ihre sportlichen Erfolge bei der Polizei ausgezeichnet (2014 & 2016 durch die Senatsverwaltung für Inneres und Sport, 2014 durch den Polizeipräsidenten in Berlin sowie 2014 im Rahmen der bundesweiten Ehrung der Spitzen-Polizeisportlerinnen DPSK).'}
           </p>
         </div>
 

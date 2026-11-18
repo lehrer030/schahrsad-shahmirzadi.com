@@ -465,9 +465,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'hm',
-        labelDe: '3× Lobende Erwähnung · Honorable Mention',
-        labelEn: '3× Honorable Mentions',
-        labelFa: '۳ عنوان تقدیر ویژه · Honorable Mention',
+        labelDe: '2× Lobende Erwähnung · Honorable Mention',
+        labelEn: '2× Honorable Mentions',
+        labelFa: '۲ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
@@ -478,19 +478,14 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             title: 'Echoes of a Water Tower',
             category: 'Black and White',
             zoomUrl: 'https://perspa.fr/winners/architectural-perspective/#work-211'
-          },
-          {
-            title: 'Steps of Sustainability',
-            category: 'Stairs',
-            zoomUrl: 'https://perspa.fr/winners/architectural-perspective/'
           }
         ]
       },
       {
         type: 'editor',
-        labelDe: '3× Empfehlung der Redaktion · Editor’s Choice',
-        labelEn: '3× Editor’s Choice',
-        labelFa: '۳ انتخاب ویژه سردبیر · Editor’s Choice',
+        labelDe: '2× Empfehlung der Redaktion · Editor’s Choice',
+        labelEn: '2× Editor’s Choice',
+        labelFa: '۲ انتخاب ویژه سردبیر · Editor’s Choice',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
@@ -499,11 +494,6 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
           },
           {
             title: 'Elegance of Structure – Black and White',
-            category: 'Architectural Perspective',
-            zoomUrl: 'https://perspa.fr/editor-choice/'
-          },
-          {
-            title: 'Hephaestus’ Legacy',
             category: 'Architectural Perspective',
             zoomUrl: 'https://perspa.fr/editor-choice/'
           }
