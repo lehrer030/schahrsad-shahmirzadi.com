@@ -278,9 +278,9 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           fullTitleDe="Bildungsweg – Interdisziplinäre akademische Ausbildung & Werdegang"
           fullTitleEn="Education – Interdisciplinary Academic Education & Career"
           fullTitleFa="تحصیلات – تحصیلات دانشگاهی بین‌رشته‌ای و مسیر حرفه‌ای"
-          descDe="Vom Evangelischen Gymnasium Graues Kloster über Rechtswissenschaften (FU Berlin), Berliner Polizei (LKA Berlin) bis zum Master of Science (M.Sc.) an der Universität Koblenz."
-          descEn="From Graues Kloster Gymnasium and law studies at FU Berlin, Berlin Police (LKA) to Master of Science (M.Sc.) at the University of Koblenz."
-          descFa="از دیپلم دبیرستان گراوئن کلوستر و تحصیلات حقوق، پلیس برلین (LKA) تا مقطع کارشناسی ارشد علوم محیط زیست دانشگاه کوبلنتس."
+          descDe="Vom Evangelischen Gymnasium Graues Kloster über Rechtswissenschaften (FU Berlin), Berliner Polizei (LKA Berlin) bis zum laufenden Masterstudium (kurz vor dem Abschluss M.Sc.) an der Universität Koblenz."
+          descEn="From Graues Kloster Gymnasium and law studies at FU Berlin, Berlin Police (LKA) to ongoing Master’s studies (nearing M.Sc. completion) at the University of Koblenz."
+          descFa="از دیپلم دبیرستان گراوئن کلوستر و تحصیلات حقوق، پلیس برلین (LKA) تا تحصیلات جاری کارشناسی ارشد (در آستانه اخذ مدرک M.Sc.) دانشگاه کوبلنتس."
           currentLang={currentLang}
         />
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
@@ -333,12 +333,12 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               </span>
             </div>
             <div className="flex flex-col sm:items-end gap-1 text-left sm:text-right rtl:sm:text-left">
-              <span className="font-mono text-[11px] font-semibold text-emerald-900 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full inline-block">
+              <span className="font-mono text-[11px] font-semibold text-amber-900 bg-amber-50 border border-amber-200/80 px-2.5 py-0.5 rounded-full inline-block">
                 {currentLang === 'de'
-                  ? 'M.Sc. in Angewandten Umweltwissenschaften: kurz vor Abschluss'
+                  ? 'Laufendes Masterstudium · Kurz vor dem Abschluss (M.Sc.)'
                   : currentLang === 'fa'
-                  ? 'کارشناسی ارشد علوم کاربردی محیط زیست: در آستانه فارغ‌التحصیلی'
-                  : 'M.Sc. in Applied Environmental Sciences: nearing completion'}
+                  ? 'تحصیلات جاری کارشناسی ارشد · در آستانه فارغ‌التحصیلی (M.Sc.)'
+                  : 'Ongoing Master’s programme · Nearing completion (M.Sc.)'}
               </span>
               <span className="text-[10px] font-mono text-stone-500 block">
                 {currentLang === 'de'

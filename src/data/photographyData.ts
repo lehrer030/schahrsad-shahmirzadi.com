@@ -2503,15 +2503,15 @@ export const ACADEMIC_MILESTONES: EducationMilestone[] = [
   },
   {
     period: 'Seit 2024',
-    fieldDe: 'Masterstudium Angewandte Umweltwissenschaften im Fernstudium',
-    fieldEn: 'M.Sc. in Applied Environmental Sciences via Distance Learning',
-    fieldFa: 'کارشناسی ارشد علوم کاربردی محیط زیست · آموزش مجازی',
+    fieldDe: 'Laufendes Masterstudium: Angewandte Umweltwissenschaften (Fernstudium)',
+    fieldEn: 'Ongoing Master’s Programme: Applied Environmental Sciences (Distance Learning)',
+    fieldFa: 'تحصیلات جاری کارشناسی ارشد: علوم کاربردی محیط زیست · آموزش مجازی',
     institutionDe: 'Universität Koblenz – ZFUW: Zentrum für Fernstudien und Universitäre Weiterbildung',
     institutionEn: 'University of Koblenz – Centre for Distance Studies and Further Education ZFUW',
     institutionFa: 'دانشگاه کوبلنتس – مرکز آموزش‌های مجازی و تکمیلی دانشگاهی ZFUW',
-    degreeDe: 'M.Sc. in Angewandten Umweltwissenschaften: kurz vor Abschluss · Seit 2024 · Derzeit im 5. Semester (Stand November 2026)',
-    degreeEn: 'M.Sc. in Applied Environmental Sciences: nearing completion · Since 2024 · Currently in 5th Semester (as of November 2026)',
-    degreeFa: 'کارشناسی ارشد علوم کاربردی محیط زیست: در آستانه اتمام · از ۲۰۲۴ · در حال حاضر در ترم ۵ (نوامبر ۲۰۲۶)'
+    degreeDe: 'Laufendes Studium, kurz vor dem Masterabschluss (M.Sc.) · Seit 2024 · Derzeit im 5. Semester (Stand: November 2026)',
+    degreeEn: 'Ongoing studies, nearing Master’s completion (M.Sc.) · Since 2024 · Currently in 5th Semester (as of November 2026)',
+    degreeFa: 'تحصیلات جاری، در آستانه فارغ‌التحصیلی مقطع کارشناسی ارشد (M.Sc.) · از ۲۰۲۴ · در حال حاضر در ترم ۵ (نوامبر ۲۰۲۶)'
   }
 ];
 
