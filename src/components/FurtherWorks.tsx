@@ -169,20 +169,16 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
 
   const renderThumbnailStrip = (work: FurtherWork) => {
     const photos = work.galleryPhotos;
-    if (!photos || photos.length === 0) return null;
+    if (!photos || photos.length <= 1) return null;
     const count = photos.length;
 
     return (
       <div className="pt-1">
         <span className="text-[10.5px] font-mono text-stone-500 uppercase tracking-wider block mb-1.5 font-semibold">
           {currentLang === 'de'
-            ? count === 1
-              ? 'Photo der Serie (1):'
-              : `Photos der Serie (${count}):`
+            ? `Photos der Serie (${count}):`
             : currentLang === 'fa'
             ? `تصاویر مجموعه (${count}):`
-            : count === 1
-            ? 'Series Photo (1):'
             : `Series Photos (${count}):`}
         </span>
         <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
