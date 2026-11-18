@@ -174,8 +174,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       title: currentLang === 'en'
         ? 'Berliner Kurier: “Berlin’s Kickboxing World Champion: A Policewoman Beat Me Up”'
         : currentLang === 'fa'
-        ? 'روزنامه Berliner Kurier: «قهرمان کیک‌بوکسینگ جهان در برلین: یک افسر پلیس مرا شکست داد»'
-        : 'Berliner Kurier: „Berlins Kickbox-Weltmeisterin: Eine Polizistin hat mich vermöbelt“',
+          ? 'روزنامه Berliner Kurier: «قهرمان کیک‌بوکسینگ جهان در برلین: یک افسر پلیس مرا شکست داد»'
+          : 'Berliner Kurier: „Berlins Kickbox-Weltmeisterin: Eine Polizistin hat mich vermöbelt“',
       url: 'https://www.berliner-kurier.de/archiv/berlins-kickbox-weltmeisterin-eine-polizistin-hat-mich-vermoebelt-li.1597461',
       source: 'Berliner Kurier',
       date: 'Archiv'
@@ -184,8 +184,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       title: currentLang === 'en'
         ? 'Berliner Kurier: “Open to Everyone: Truly Berlin. Truly Multicultural. Truly Police.”'
         : currentLang === 'fa'
-        ? 'روزنامه Berliner Kurier: «به روی همه باز است: اصالتاً برلینی، چندفرهنگی و متعلق به پلیس»'
-        : 'Berliner Kurier: „Offen für alle – echt Berlin, echt multikulti, echt Polizei“',
+          ? 'روزنامه Berliner Kurier: «به روی همه باز است: اصالتاً برلینی، چندفرهنگی و متعلق به پلیس»'
+          : 'Berliner Kurier: „Offen für alle – echt Berlin, echt multikulti, echt Polizei“',
       url: 'https://www.berliner-kurier.de/archiv/offen-fuer-alle-echt-berlin-echt-multikulti-echt-polizei-li.1480689',
       source: 'Berliner Kurier',
       date: 'Archiv'
@@ -194,8 +194,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       title: currentLang === 'en'
         ? 'Land NRW Press Release: “Elite Police Athletes Became Olympic, European and World Champions”'
         : currentLang === 'fa'
-        ? 'بیانیه رسمی ایالت NRW: «ورزشکاران نخبه پلیس قهرمان المپیک، اروپا و جهان شدند»'
-        : 'Land NRW Pressemitteilung: „Spitzensportler der Polizei wurden Olympiasieger, Europa- und Weltmeister“',
+          ? 'بیانیه رسمی ایالت NRW: «ورزشکاران نخبه پلیس قهرمان المپیک، اروپا و جهان شدند»'
+          : 'Land NRW Pressemitteilung: „Spitzensportler der Polizei wurden Olympiasieger, Europa- und Weltmeister“',
       url: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister',
       source: currentLang === 'en' ? 'State Portal North Rhine-Westphalia' : 'Landesportal Nordrhein-Westfalen',
       date: 'Offizielle Mitteilung'
@@ -204,8 +204,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       title: currentLang === 'en'
         ? 'transform magazine: “Taking Up Space Through Martial Arts”'
         : currentLang === 'fa'
-        ? 'مجله transform: «فضاسازی از طریق هنرهای رزمی»'
-        : 'transform magazin: „Durch Kampfsport Raum einnehmen“',
+          ? 'مجله transform: «فضاسازی از طریق هنرهای رزمی»'
+          : 'transform magazin: „Durch Kampfsport Raum einnehmen“',
       url: 'https://transform-magazin.de/schahrsad/',
       source: 'transform magazin',
       date: 'Interview'
@@ -214,8 +214,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       title: currentLang === 'en'
         ? 'Kampfkunst Budo International: Report on the Professional European Championship Title Bout (pp. 122–123)'
         : currentLang === 'fa'
-        ? 'مجله بین‌المللی هنرهای رزمی: گزارش مبارزه قهرمانی حرفه‌ای اروپا (صفحات ۱۲۲–۱۲۳)'
-        : 'Kampfkunst Budo International: Reportage über den Profi-Europameisterschaftstitelkampf (S. 122–123)',
+          ? 'مجله بین‌المللی هنرهای رزمی: گزارش مبارزه قهرمانی حرفه‌ای اروپا (صفحات ۱۲۲–۱۲۳)'
+          : 'Kampfkunst Budo International: Reportage über den Profi-Europameisterschaftstitelkampf (S. 122–123)',
       url: 'https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_',
       source: 'Kampfkunst-International',
       date: 'Magazin'
@@ -225,7 +225,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   return (
     <section id="kickboxing" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
-      
+
       {/* 06 Kickboxen Header – Matching Navbar 06 */}
       <SectionHeader
         num="06"
@@ -246,8 +246,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {currentLang === 'fa'
                 ? 'پیروزی در ذهن آغاز می‌شود!'
                 : currentLang === 'en'
-                ? 'Winning starts in the mind!'
-                : 'Gewinnen fängt im Kopf an!'}
+                  ? 'Winning starts in the mind!'
+                  : 'Gewinnen fängt im Kopf an!'}
             </p>
             <div className="mt-2 text-[11px] font-mono uppercase tracking-wider text-stone-400">
               — SchirZan
@@ -273,7 +273,11 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           <Award className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
           <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">2× / 1×</div>
           <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
-            {currentLang === 'fa' ? 'قهرمان جام جهانی و مسابقات هنرهای رزمی' : 'World Cup & WMAG Winner'}
+            {currentLang === 'fa'
+              ? 'قهرمان جام جهانی و مسابقات جهانی هنرهای رزمی (World Martial Arts Games)'
+              : currentLang === 'en'
+              ? 'World Cup & World Martial Arts Games Winner'
+              : 'Weltcup & World Martial Arts Games Siegerin'}
           </div>
           <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'فدراسیون‌های WKU و IAKSA / WMAC' : 'WKU & IAKSA / WMAC'}
@@ -304,7 +308,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       </div>
 
       <div className="space-y-12 max-w-5xl mx-auto">
-        
+
         {/* Section A: Werdegang & Sportliche Entwicklung */}
         <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
           <div className="border-b border-stone-100 pb-4">
@@ -315,8 +319,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {currentLang === 'fa'
                 ? 'از سالن تمرین تا سکوی افتخار جهانی'
                 : currentLang === 'en'
-                ? 'Sporting Development & Competitive Career'
-                : 'Vom Berliner Dojo zur Weltspitze'}
+                  ? 'Sporting Development & Competitive Career'
+                  : 'Vom Berliner Dojo zur Weltspitze'}
             </h3>
           </div>
 
@@ -376,8 +380,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   {currentLang === 'fa'
                     ? 'مبارزات عنوان قهرمانی حرفه‌ای جهان – فول‌کنتاکت کیک‌بوکسینگ، −۵۷٫۵ کیلوگرم'
                     : currentLang === 'de'
-                    ? 'Profi-Weltmeisterschaftstitelkämpfe – Vollkontakt Kickboxen, −57,5 kg'
-                    : 'Professional World Title Bouts – Full-Contact Kickboxing, −57.5 kg'}
+                      ? 'Profi-Weltmeisterschaftstitelkämpfe – Vollkontakt Kickboxen, −57,5 kg'
+                      : 'Professional World Title Bouts – Full-Contact Kickboxing, −57.5 kg'}
                 </span>
               </h4>
               <span className="text-[11px] font-mono text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200 font-semibold">
@@ -555,140 +559,140 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               </table>
             </div>
 
-          {/* TABLE 1: Professional European Title Bout */}
-          <div className="space-y-3 pt-4 border-t border-stone-100">
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <h4 className="text-sm sm:text-base font-serif font-bold text-stone-900 flex items-center gap-2">
-                <Shield className="w-4 h-4 text-amber-800 shrink-0" />
-                <span>
-                  {currentLang === 'fa'
-                    ? 'مبارزه عنوان قهرمانی حرفه‌ای اروپا – فول‌کنتاکت کیک‌بوکسینگ، −۵۷٫۵ کیلوگرم'
-                    : currentLang === 'de'
-                    ? 'Profi-Europameisterschaftstitelkampf – Vollkontakt Kickboxen, −57,5 kg'
-                    : 'Professional European Title Bout – Full-Contact Kickboxing, −57.5 kg'}
+            {/* TABLE 1: Professional European Title Bout */}
+            <div className="space-y-3 pt-4 border-t border-stone-100">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h4 className="text-sm sm:text-base font-serif font-bold text-stone-900 flex items-center gap-2">
+                  <Shield className="w-4 h-4 text-amber-800 shrink-0" />
+                  <span>
+                    {currentLang === 'fa'
+                      ? 'مبارزه عنوان قهرمانی حرفه‌ای اروپا – فول‌کنتاکت کیک‌بوکسینگ، −۵۷٫۵ کیلوگرم'
+                      : currentLang === 'de'
+                        ? 'Profi-Europameisterschaftstitelkampf – Vollkontakt Kickboxen, −57,5 kg'
+                        : 'Professional European Title Bout – Full-Contact Kickboxing, −57.5 kg'}
+                  </span>
+                </h4>
+                <span className="text-[11px] font-mono text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200 font-semibold">
+                  7 Runden · WKU Pro Title
                 </span>
-              </h4>
-              <span className="text-[11px] font-mono text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-200 font-semibold">
-                7 Runden · WKU Pro Title
-              </span>
-            </div>
-
-            {/* Mobile Responsive Fight Card (md:hidden) — No horizontal scrolling */}
-            <div className="md:hidden space-y-3">
-              <div className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
-                <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
-                  <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-stone-700">
-                    <Calendar className="w-3.5 h-3.5 text-stone-400" />
-                    <span>{currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}</span>
-                  </div>
-                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                    <Trophy className="w-3 h-3 text-emerald-700" />
-                    <span>{currentLang === 'fa' ? 'پیروزی (UD)' : currentLang === 'de' ? 'Sieg (UD)' : 'Win (UD)'}</span>
-                  </span>
-                </div>
-
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
-                    {currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}
-                  </span>
-                  <h5 className="font-serif font-bold text-base text-stone-900 pt-0.5">
-                    {currentLang === 'fa' ? 'کارمن برتیچی · کرواسی' : currentLang === 'de' ? 'Karmen Bertici · Kroatien' : 'Karmen Bertici · Croatia'}
-                  </h5>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-stone-100">
-                  <div>
-                    <span className="text-[10px] text-stone-400 font-mono block">
-                      {currentLang === 'fa' ? 'عنوان و راندها' : currentLang === 'de' ? 'Titel & Runden' : 'Title & Rounds'}
-                    </span>
-                    <span className="font-medium text-stone-800 text-[11px] block">
-                      WKU European Title (7 Runden)
-                    </span>
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-stone-400 font-mono block">
-                      {currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}
-                    </span>
-                    <span className="font-medium text-stone-800 text-[11px] block">
-                      {currentLang === 'fa' ? 'رأی قاطع داوران' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
-                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
-                </div>
               </div>
-            </div>
 
-            {/* Desktop Full Table (hidden md:block) */}
-            <div className="hidden md:block overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
-              <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
-                <thead>
-                  <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
-                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'تاریخ' : currentLang === 'de' ? 'Datum' : 'Date'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'محل برگزاری' : currentLang === 'de' ? 'Austragungsort' : 'Venue'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'فدراسیون / عنوان' : currentLang === 'de' ? 'Verband / Titel' : 'Federation / Title'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'نتیجه' : currentLang === 'de' ? 'Ergebnis' : 'Result'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}</th>
-                    <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'راندها' : currentLang === 'de' ? 'Runden' : 'Rounds'}</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-stone-100 font-normal text-stone-800">
-                  <tr className="hover:bg-[#faf8f5] transition-colors">
-                    <td className="py-3.5 px-4 font-mono font-medium text-stone-600 whitespace-nowrap">
-                      {currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}
-                    </td>
-                    <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
+              {/* Mobile Responsive Fight Card (md:hidden) — No horizontal scrolling */}
+              <div className="md:hidden space-y-3">
+                <div className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+                  <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+                    <div className="flex items-center gap-1.5 font-mono text-xs font-semibold text-stone-700">
+                      <Calendar className="w-3.5 h-3.5 text-stone-400" />
+                      <span>{currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}</span>
+                    </div>
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                      <Trophy className="w-3 h-3 text-emerald-700" />
+                      <span>{currentLang === 'fa' ? 'پیروزی (UD)' : currentLang === 'de' ? 'Sieg (UD)' : 'Win (UD)'}</span>
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold block">
+                      {currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}
+                    </span>
+                    <h5 className="font-serif font-bold text-base text-stone-900 pt-0.5">
                       {currentLang === 'fa' ? 'کارمن برتیچی · کرواسی' : currentLang === 'de' ? 'Karmen Bertici · Kroatien' : 'Karmen Bertici · Croatia'}
-                    </td>
-                    <td className="py-3.5 px-4 text-stone-700">
-                      Schloss Diedersdorf, Brandenburg
-                    </td>
-                    <td className="py-3.5 px-4 text-stone-800 font-medium">
-                      WKU European Championship
-                    </td>
-                    <td className="py-3.5 px-4 text-center">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
-                        <Trophy className="w-3 h-3 text-emerald-700" />
-                        <span>{currentLang === 'fa' ? 'پیروزی' : currentLang === 'de' ? 'Sieg' : 'Win'}</span>
+                    </h5>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 text-xs pt-1 border-t border-stone-100">
+                    <div>
+                      <span className="text-[10px] text-stone-400 font-mono block">
+                        {currentLang === 'fa' ? 'عنوان و راندها' : currentLang === 'de' ? 'Titel & Runden' : 'Title & Rounds'}
                       </span>
-                    </td>
-                    <td className="py-3.5 px-4 text-stone-700 whitespace-nowrap">
-                      {currentLang === 'fa' ? 'رأی قاطع داوران (UD)' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
-                    </td>
-                    <td className="py-3.5 px-4 text-center font-mono font-semibold text-stone-700 whitespace-nowrap">
-                      7
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                      <span className="font-medium text-stone-800 text-[11px] block">
+                        WKU European Title (7 Runden)
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-stone-400 font-mono block">
+                        {currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}
+                      </span>
+                      <span className="font-medium text-stone-800 text-[11px] block">
+                        {currentLang === 'fa' ? 'رأی قاطع داوران' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                      </span>
+                    </div>
+                  </div>
 
-            <div className="p-3.5 bg-stone-50 border border-stone-200/80 rounded-xl text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2">
-              <div>
-                <strong className="text-stone-900">{currentLang === 'fa' ? 'پوشش رسانه‌ای:' : 'Medienbericht / Fachpresse:'} </strong>
-                <span>
-                  {currentLang === 'fa'
-                    ? 'گزارش اختصاصی در مجله تخصصی Kampfkunst Budo International، نوامبر ۲۰۱۴، صفحات ۱۲۲–۱۲۳.'
-                    : 'Ausführliche Reportage im internationalen Fachmagazin Kampfkunst Budo International, Ausgabe November 2014, S. 122–123.'}
-                </span>
+                  <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
+                    <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                    <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                  </div>
+                </div>
               </div>
-              <a
-                href="https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 font-mono text-xs font-semibold hover:underline"
-              >
-                <span>{currentLang === 'fa' ? 'مطالعه در Issuu' : 'Bericht auf Issuu ansehen'}</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
 
-          {/* Official Fight Photos from WordPress Original */}
+              {/* Desktop Full Table (hidden md:block) */}
+              <div className="hidden md:block overflow-x-auto rounded-2xl border border-stone-200/90 shadow-2xs bg-white">
+                <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr className="bg-stone-100/90 border-b border-stone-200 text-stone-700 font-mono text-[11px] uppercase tracking-wider">
+                      <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'تاریخ' : currentLang === 'de' ? 'Datum' : 'Date'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'حریف' : currentLang === 'de' ? 'Gegnerin' : 'Opponent'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'محل برگزاری' : currentLang === 'de' ? 'Austragungsort' : 'Venue'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'فدراسیون / عنوان' : currentLang === 'de' ? 'Verband / Titel' : 'Federation / Title'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'نتیجه' : currentLang === 'de' ? 'Ergebnis' : 'Result'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold">{currentLang === 'fa' ? 'نحوه پیروزی' : currentLang === 'de' ? 'Wertung' : 'Method'}</th>
+                      <th scope="col" className="py-3 px-4 font-semibold text-center">{currentLang === 'fa' ? 'راندها' : currentLang === 'de' ? 'Runden' : 'Rounds'}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-stone-100 font-normal text-stone-800">
+                    <tr className="hover:bg-[#faf8f5] transition-colors">
+                      <td className="py-3.5 px-4 font-mono font-medium text-stone-600 whitespace-nowrap">
+                        {currentLang === 'fa' ? '۹ اکتبر ۲۰۱۴' : currentLang === 'de' ? '9. Okt. 2014' : '9 Oct 2014'}
+                      </td>
+                      <td className="py-3.5 px-4 font-semibold text-stone-900 whitespace-nowrap">
+                        {currentLang === 'fa' ? 'کارمن برتیچی · کرواسی' : currentLang === 'de' ? 'Karmen Bertici · Kroatien' : 'Karmen Bertici · Croatia'}
+                      </td>
+                      <td className="py-3.5 px-4 text-stone-700">
+                        Schloss Diedersdorf, Brandenburg
+                      </td>
+                      <td className="py-3.5 px-4 text-stone-800 font-medium">
+                        WKU European Championship
+                      </td>
+                      <td className="py-3.5 px-4 text-center">
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                          <Trophy className="w-3 h-3 text-emerald-700" />
+                          <span>{currentLang === 'fa' ? 'پیروزی' : currentLang === 'de' ? 'Sieg' : 'Win'}</span>
+                        </span>
+                      </td>
+                      <td className="py-3.5 px-4 text-stone-700 whitespace-nowrap">
+                        {currentLang === 'fa' ? 'رأی قاطع داوران (UD)' : currentLang === 'de' ? 'Einstimmiger Punktsieg' : 'Unanimous decision'}
+                      </td>
+                      <td className="py-3.5 px-4 text-center font-mono font-semibold text-stone-700 whitespace-nowrap">
+                        7
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="p-3.5 bg-stone-50 border border-stone-200/80 rounded-xl text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2">
+                <div>
+                  <strong className="text-stone-900">{currentLang === 'fa' ? 'پوشش رسانه‌ای:' : 'Medienbericht / Fachpresse:'} </strong>
+                  <span>
+                    {currentLang === 'fa'
+                      ? 'گزارش اختصاصی در مجله تخصصی Kampfkunst Budo International، نوامبر ۲۰۱۴، صفحات ۱۲۲–۱۲۳.'
+                      : 'Ausführliche Reportage im internationalen Fachmagazin Kampfkunst Budo International, Ausgabe November 2014, S. 122–123.'}
+                  </span>
+                </div>
+                <a
+                  href="https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-amber-800 hover:text-amber-950 font-mono text-xs font-semibold hover:underline"
+                >
+                  <span>{currentLang === 'fa' ? 'مطالعه در Issuu' : 'Bericht auf Issuu ansehen'}</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+
+            {/* Official Fight Photos from WordPress Original */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-3">
               {/* Fight Photo 1: vs Sofia Cavallo */}
               <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
@@ -848,7 +852,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
 
         {/* Section E: Kampfname, Mentale Stärke & Team */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-          
+
           {/* Card 1 (Links): Trainer & Team - Mentoren, Trainer & Wegbegleiter */}
           <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4 flex flex-col justify-between">
             <div className="space-y-4">
@@ -856,7 +860,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 <Users className="w-4 h-4" />
                 <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Coaches and Team' : 'Trainer & Team'}</span>
               </div>
-              
+
               <h4 className="font-serif font-bold text-lg sm:text-xl text-stone-900">
                 {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Coaches and Team' : 'Mentoren, Trainer & Wegbegleiter'}
               </h4>
@@ -890,8 +894,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 {currentLang === 'fa'
                   ? '«حمایت‌ها و تجربیات مشترک با آن‌ها زندگی مرا برای همیشه شکل داد. از صمیم قلب برای وجودشان سپاسگزارم.»'
                   : currentLang === 'en'
-                  ? '“Their support and our shared experiences have shaped who I am and will stay with me throughout my life. For that, I am deeply grateful.”'
-                  : '„Ihre Unterstützung und die gemeinsamen Erfahrungen haben mich für mein Leben geprägt. Dafür bin ich ihnen von Herzen dankbar.“'}
+                    ? '“Their support and our shared experiences have shaped who I am and will stay with me throughout my life. For that, I am deeply grateful.”'
+                    : '„Ihre Unterstützung und die gemeinsamen Erfahrungen haben mich für mein Leben geprägt. Dafür bin ich ihnen von Herzen dankbar.“'}
               </p>
             </div>
           </div>
@@ -903,7 +907,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 <Sparkles className="w-4 h-4" />
                 <span>{currentLang === 'fa' ? 'نام رزم و قدرت درونی' : currentLang === 'en' ? 'Ring Name & Inner Strength' : 'Kampfname & Mentale Stärke'}</span>
               </div>
-              
+
               <h4 className="font-serif font-bold text-lg sm:text-xl text-stone-900">
                 {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'Ring Name & Inner Strength – In Sport and in Life' : 'Von »Prinzessin« zu »SchirZan« · Innere Stärke'}
               </h4>
@@ -912,8 +916,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 {currentLang === 'fa'
                   ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
                   : currentLang === 'en'
-                  ? 'From 2009 to 2023, she was known by her former ring name “Prinzessin” (“Princess”), a translation of her first name, Schahrsad. She no longer uses this name and is now known as “SchirZan”.'
-                  : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
+                    ? 'From 2009 to 2023, she was known by her former ring name “Prinzessin” (“Princess”), a translation of her first name, Schahrsad. She no longer uses this name and is now known as “SchirZan”.'
+                    : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
               </p>
 
               <div className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-3 border-t border-stone-100 space-y-2.5">
@@ -924,15 +928,15 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   {currentLang === 'fa'
                     ? 'برای شهزاد شاهمیرزادی، کیک‌بوکسینگ فراتر از یک ورزش بود: او را سرپا و استوار نگه می‌داشت، انضباط او را تقویت می‌کرد و در غلبه بر شکست‌ها یاری‌اش می‌رساند. قدرت ذهنی دست‌کم به اندازه آمادگی جسمانی برایش اهمیت داشت—و تاب‌آوری و اعتمادبه‌نفس او را در زندگی روزمره و محیط کار بارور می‌ساخت.'
                     : currentLang === 'en'
-                    ? 'For Schahrsad Shahmirzadi, kickboxing was more than a sport: it kept her grounded, strengthened her discipline, and helped her overcome setbacks. Mental strength was at least as important to her as physical preparation—and also fostered resilience and self-confidence in everyday life and at work.'
-                    : 'Für Schahrsad Shahmirzadi war Kickboxen mehr als ein Sport: Es gab ihr Erdung, stärkte ihre Disziplin und half ihr, Rückschläge zu überwinden. Mentale Stärke war ihr mindestens ebenso wichtig wie physische Vorbereitung – und förderte auch im Alltag und Beruf Widerstandskraft und Selbstvertrauen.'}
+                      ? 'For Schahrsad Shahmirzadi, kickboxing was more than a sport: it kept her grounded, strengthened her discipline, and helped her overcome setbacks. Mental strength was at least as important to her as physical preparation—and also fostered resilience and self-confidence in everyday life and at work.'
+                      : 'Für Schahrsad Shahmirzadi war Kickboxen mehr als ein Sport: Es gab ihr Erdung, stärkte ihre Disziplin und half ihr, Rückschläge zu überwinden. Mentale Stärke war ihr mindestens ebenso wichtig wie physische Vorbereitung – und förderte auch im Alltag und Beruf Widerstandskraft und Selbstvertrauen.'}
                 </p>
                 <p>
                   {currentLang === 'fa'
                     ? 'او شجاعت، پشتکار، اراده پولادین و باور به خود را ارکان اصلی موفقیت می‌دانست. همراهی تیمی پشتیبان، تنوع و لذت بردن از آنچه انجام می‌داد نیز به همان اندازه مهم بودند. طبیعت به او نیرویی مضاعف می‌بخشید و در پذیرش شکست‌ها و تجدید قوا یاری‌رسانش بود.'
                     : currentLang === 'en'
-                    ? 'She considered courage, perseverance, willpower, and self-belief essential to her success. A supportive team, versatility, and enjoyment of what she did were equally important. Nature gave her additional strength, helping her process defeats and recharge.'
-                    : 'Mut, Beharrlichkeit, Willenskraft und der Glaube an sich selbst betrachtete sie als unverzichtbar für ihren Erfolg. Ein unterstützendes Team, Vielseitigkeit und die Freude an dem, was sie tat, waren ebenso wichtig. Die Natur gab ihr zusätzliche Kraft, um Niederlagen zu verarbeiten und neue Energie zu schöpfen.'}
+                      ? 'She considered courage, perseverance, willpower, and self-belief essential to her success. A supportive team, versatility, and enjoyment of what she did were equally important. Nature gave her additional strength, helping her process defeats and recharge.'
+                      : 'Mut, Beharrlichkeit, Willenskraft und der Glaube an sich selbst betrachtete sie als unverzichtbar für ihren Erfolg. Ein unterstützendes Team, Vielseitigkeit und die Freude an dem, was sie tat, waren ebenso wichtig. Die Natur gab ihr zusätzliche Kraft, um Niederlagen zu verarbeiten und neue Energie zu schöpfen.'}
                 </p>
               </div>
             </div>
@@ -950,15 +954,15 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             {currentLang === 'fa'
               ? 'نمایندگی آلمان و عضویت در تیم ملی'
               : currentLang === 'de'
-              ? 'Im Nationalteam für Deutschland'
-              : 'Competing for the German National Team'}
+                ? 'Im Nationalteam für Deutschland'
+                : 'Competing for the German National Team'}
           </h4>
           <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
             {currentLang === 'fa'
               ? 'با وجود آن‌که شهزاد شاهمیرزادی دارای ریشه‌های دوگانه آلمانی و ایرانی است، در تمام دوران فعالیت قهرمانی کیک‌بوکسینگ منحصراً برای کشور آلمان به میدان رفت. او عضو رسمی تیم ملی آلمان بود و تمامی عناوین قهرمانی و موفقیت‌های بزرگ ورزشی خود را زیر پرچم آلمان کسب نمود.'
               : currentLang === 'en'
-              ? 'Although Schahrsad Shahmirzadi has both German and Iranian roots, she competed exclusively for Germany in kickboxing. She was a member of the German national team and won all her titles and achieved all her sporting successes under the German flag.'
-              : 'Obwohl Schahrsad Shahmirzadi sowohl deutsche als auch iranische Wurzeln hat, trat sie im Kickboxen ausschließlich für Deutschland an. Sie war Mitglied der deutschen Nationalmannschaft und gewann all ihre Titel und sportlichen Erfolge unter deutscher Flagge.'}
+                ? 'Although Schahrsad Shahmirzadi has both German and Iranian roots, she competed exclusively for Germany in kickboxing. She was a member of the German national team and won all her titles and achieved all her sporting successes under the German flag.'
+                : 'Obwohl Schahrsad Shahmirzadi sowohl deutsche als auch iranische Wurzeln hat, trat sie im Kickboxen ausschließlich für Deutschland an. Sie war Mitglied der deutschen Nationalmannschaft und gewann all ihre Titel und sportlichen Erfolge unter deutscher Flagge.'}
           </p>
         </div>
 
@@ -974,15 +978,15 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 {currentLang === 'fa'
                   ? 'دان ۳ در کیک‌بوکسینگ'
                   : currentLang === 'de'
-                  ? '3. Dan im Kickboxen'
-                  : '3rd Dan in Kickboxing'}
+                    ? '3. Dan im Kickboxen'
+                    : '3rd Dan in Kickboxing'}
               </h4>
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
                 {currentLang === 'fa'
                   ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
                   : currentLang === 'en'
-                  ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
-                  : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
+                    ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
+                    : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
               </p>
             </div>
 
@@ -1010,37 +1014,37 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             {currentLang === 'fa'
               ? 'مسابقات – تجارب و دستاوردهای برگزیده'
               : currentLang === 'de'
-              ? 'Wettkämpfe – Ausgewählte Erfolge und Erfahrungen'
-              : 'Competitions – Selected Achievements and Experiences'}
+                ? 'Wettkämpfe – Ausgewählte Erfolge und Erfahrungen'
+                : 'Competitions – Selected Achievements and Experiences'}
           </h4>
           <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
             <p>
               {currentLang === 'fa'
                 ? 'در سال ۲۰۱۳، او با فتح دو عنوان نخست قهرمانی جهان آماتور در فول‌کنتاکت و K-1 در فدراسیون WKU/WKUWORLD به رویای دیرینه خود دست یافت. عناوین قهرمانی جهان دیگری در سازمان‌های معتبر از جمله ISKA و ICO به دنبال آن آمدند.'
                 : currentLang === 'en'
-                ? 'In 2013, she fulfilled a long-held dream by winning her first two amateur world titles in full-contact kickboxing and K-1 with WKU/WKUWORLD. Further world titles followed in other federations, including ISKA and ICO.'
-                : '2013 erfüllte sie sich mit dem Gewinn ihrer ersten beiden Amateur-Weltmeistertitel im Vollkontakt und K-1 bei der WKU/WKUWORLD einen lang gehegten Traum. Weitere Weltmeistertitel folgten in weiteren Spitzenverbänden wie ISKA und ICO.'}
+                  ? 'In 2013, she fulfilled a long-held dream by winning her first two amateur world titles in full-contact kickboxing and K-1 with WKU/WKUWORLD. Further world titles followed in other federations, including ISKA and ICO.'
+                  : '2013 erfüllte sie sich mit dem Gewinn ihrer ersten beiden Amateur-Weltmeistertitel im Vollkontakt und K-1 bei der WKU/WKUWORLD einen lang gehegten Traum. Weitere Weltmeistertitel folgten in weiteren Spitzenverbänden wie ISKA und ICO.'}
             </p>
             <p>
               {currentLang === 'fa'
                 ? 'پس از موفقیت‌های متعدد آماتور، او در سال ۲۰۱۵ وارد دنیای حرفه‌ای شد. نقطه عطف او در سال ۲۰۱۶ رقم خورد: در ۱۳ اکتبر، او قهرمان حرفه‌ای جهان WKU/WKUWORLD در فول‌کنتاکت بانوان وزن منهای ۵۷٫۵ کیلوگرم شد و در سال ۲۰۱۷ با موفقیت از عنوان قهرمانی خود دفاع کرد.'
                 : currentLang === 'en'
-                ? 'After numerous amateur successes, she turned professional in 2015. Her breakthrough came in 2016: on 13 October, she became WKU/WKUWORLD Professional World Champion in women’s full-contact kickboxing, −57.5 kg. She successfully defended her title in 2017.'
-                : 'Nach zahlreichen Amateur-Erfolgen wechselte sie 2015 ins Profilager. Der internationale Durchbruch gelang ihr 2016: Am 13. Oktober wurde sie WKU/WKUWORLD Profi-Weltmeisterin im Vollkontakt-Kickboxen der Damen bis 57,5 kg. Ihren Titel verteidigte sie 2017 erfolgreich.'}
+                  ? 'After numerous amateur successes, she turned professional in 2015. Her breakthrough came in 2016: on 13 October, she became WKU/WKUWORLD Professional World Champion in women’s full-contact kickboxing, −57.5 kg. She successfully defended her title in 2017.'
+                  : 'Nach zahlreichen Amateur-Erfolgen wechselte sie 2015 ins Profilager. Der internationale Durchbruch gelang ihr 2016: Am 13. Oktober wurde sie WKU/WKUWORLD Profi-Weltmeisterin im Vollkontakt-Kickboxen der Damen bis 57,5 kg. Ihren Titel verteidigte sie 2017 erfolgreich.'}
             </p>
             <p>
               {currentLang === 'fa'
                 ? 'در سال ۲۰۲۳، او در رویداد LeySha Fight Night در برلین که با همراهی شریک ورزشی‌اش سازماندهی شده بود، در نبردی دشوار برابر مبارز نامدار یونانی آنتونیا پریفتی (Andonia Prifti) بر سر کمربند جهانی K-1 وزن منهای ۵۷٫۵ کیلوگرم تن به شکستی آموزنده داد.'
                 : currentLang === 'en'
-                ? 'In 2023, she suffered a difficult defeat against the renowned Greek fighter Andonia Prifti at the LeySha Fight Night, an event she and her partner had organised themselves. The bout was for the WKU women’s K-1 world title, −57.5 kg.'
-                : '2023 musste sie bei der selbst initiierten und organisierten LeySha Fight Night in Berlin eine schmerzhafte Niederlage gegen die renommierte griechische Spitzenkämpferin Andonia Prifti um den WKU K-1 Weltmeistertitel bis 57,5 kg hinnehmen.'}
+                  ? 'In 2023, she suffered a difficult defeat against the renowned Greek fighter Andonia Prifti at the LeySha Fight Night, an event she and her partner had organised themselves. The bout was for the WKU women’s K-1 world title, −57.5 kg.'
+                  : '2023 musste sie bei der selbst initiierten und organisierten LeySha Fight Night in Berlin eine schmerzhafte Niederlage gegen die renommierte griechische Spitzenkämpferin Andonia Prifti um den WKU K-1 Weltmeistertitel bis 57,5 kg hinnehmen.'}
             </p>
             <p className="italic text-stone-800 bg-[#faf8f5] p-3 rounded-xl border border-stone-200/70 font-medium">
               {currentLang === 'fa'
                 ? 'در اواخر اکتبر ۲۰۲۶، او بازنشستگی رسمی خود را از ورزش قهرمانی و میادین کیک‌بوکسینگ اعلام کرد.'
                 : currentLang === 'en'
-                ? 'In late October 2026, she announced her retirement from kickboxing.'
-                : 'Ende Oktober 2026 gab sie ihren offiziellen Rücktritt vom aktiven Leistungssport im Kickboxen bekannt.'}
+                  ? 'In late October 2026, she announced her retirement from kickboxing.'
+                  : 'Ende Oktober 2026 gab sie ihren offiziellen Rücktritt vom aktiven Leistungssport im Kickboxen bekannt.'}
             </p>
           </div>
         </div>
