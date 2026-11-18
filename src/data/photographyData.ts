@@ -1544,7 +1544,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'London International Creative Competition 2025',
         award: 'Shortlist / Official Selection',
         year: '2025',
-        badgeImage: '/images/badges_custom/licc_2025_shortlist.jpg',
+        badgeImage: '/images/badges_custom/licc_2025_official_selection.png',
         position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125857'
       }
@@ -1582,7 +1582,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'London International Creative Competition 2025',
         award: 'Shortlist',
         year: '2025',
-        badgeImage: '/images/badges_custom/licc_2025_shortlist.jpg',
+        badgeImage: '/images/badges_custom/licc_2025_shortlist.png',
         position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125858'
       }
@@ -1783,7 +1783,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
             "position": "top-left",
             "link": "https://www.licc.uk/"
       }
@@ -1854,7 +1854,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
             "position": "top-left",
             "link": "https://www.licc.uk/"
       }
@@ -2063,7 +2063,7 @@ export const FINE_ART_WORKS: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
             "position": "top-left",
             "link": "https://www.licc.uk/"
       },
@@ -2127,7 +2127,7 @@ export const FINE_ART_WORKS: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
             "position": "top-left",
             "link": "https://www.licc.uk/"
       }
@@ -2358,7 +2358,7 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
             "position": "top-left",
             "link": "https://www.licc.uk/"
       }
