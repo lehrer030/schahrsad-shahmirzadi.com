@@ -49,13 +49,6 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 {/* Photo Preview & Badges - Clean Gallery proportions matching AwardReferencesSection */}
                 {work.previewImage && (() => {
                   const badges = work.badges || [];
-                  const ampBadge = badges.find(b => b.name.includes('AMP') || b.name.includes('Architecture MasterPrize') || b.position === 'top-left');
-                  const perspaBadge = badges.find(b => (b.name.includes('PERSPA') || b.name.includes('Spider') || b.name.includes('BIFA') || b.position === 'bottom-left') && b !== ampBadge);
-                  const ipaBadge = badges.find(b => (b.name.includes('IPA') || b.name.includes('ND') || b.name.includes('LICC') || b.name.includes('URBAN') || b.position === 'bottom-right' || b.position === 'top-right') && b !== ampBadge && b !== perspaBadge);
-
-                  const topLeftBadge = ampBadge || (badges.length === 1 ? badges[0] : (!ampBadge ? (ipaBadge || perspaBadge || badges[0]) : null));
-                  const topRightBadge = (ipaBadge && ipaBadge !== topLeftBadge) ? ipaBadge : (badges.length >= 2 && badges[1] !== topLeftBadge && badges[1] !== perspaBadge ? badges[1] : null);
-                  const bottomLeftBadge = (perspaBadge && perspaBadge !== topLeftBadge && perspaBadge !== topRightBadge) ? perspaBadge : (badges.length >= 3 && badges[2] !== topLeftBadge && badges[2] !== topRightBadge ? badges[2] : null);
 
                   return (
                     <div className="mb-3.5">
@@ -106,63 +99,9 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                           </div>
                         </div>
 
-                        {/* Top-Left Badge */}
-                        {topLeftBadge && (
-                          <a
-                            href={topLeftBadge.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`${topLeftBadge.name}: ${topLeftBadge.award}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="absolute top-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                          >
-                            <img
-                              src={resolveAsset(topLeftBadge.badgeImage)}
-                              alt={topLeftBadge.name}
-                              className="h-6 sm:h-7 w-auto object-contain"
-                            />
-                          </a>
-                        )}
-
-                        {/* Bottom-Left Badge */}
-                        {bottomLeftBadge && (
-                          <a
-                            href={bottomLeftBadge.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`${bottomLeftBadge.name}: ${bottomLeftBadge.award}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                          >
-                            <img
-                              src={resolveAsset(bottomLeftBadge.badgeImage)}
-                              alt={bottomLeftBadge.name}
-                              className="h-6 sm:h-7 w-auto object-contain"
-                            />
-                          </a>
-                        )}
-
-                        {/* Top-Right Badge */}
-                        {topRightBadge && (
-                          <a
-                            href={topRightBadge.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={`${topRightBadge.name}: ${topRightBadge.award}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="absolute top-2.5 right-2.5 rtl:right-auto rtl:left-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                          >
-                            <img
-                              src={resolveAsset(topRightBadge.badgeImage)}
-                              alt={topRightBadge.name}
-                              className="h-6 sm:h-7 w-auto object-contain"
-                            />
-                          </a>
-                        )}
-
-                        {/* Photo count indicator bottom-left (shifted above bottom-left badge if present) */}
+                        {/* Photo count indicator bottom-left */}
                         {work.galleryPhotos && work.galleryPhotos.length > 1 && (
-                          <div className={`absolute ${bottomLeftBadge ? 'bottom-11' : 'bottom-2.5'} left-2.5 rtl:left-auto rtl:right-2.5 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm z-10`}>
+                          <div className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 bg-stone-900/80 backdrop-blur-xs text-white text-[10px] font-mono px-2 py-0.5 rounded flex items-center gap-1 shadow-sm z-10">
                             <ImageIcon className="w-3 h-3 text-stone-300" />
                             <span>
                               {currentLang === 'fa'
@@ -177,6 +116,32 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                           SchirZan | Schahrsad Shahmirzadi
                         </div>
                       </div>
+
+                      {/* Award Badges: Positioned cleanly outside the photo at the margin so they don't distract */}
+                      {badges.length > 0 && (
+                        <div className={`mt-2.5 grid ${badges.length === 1 ? 'grid-cols-1' : badges.length === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-2 items-center`}>
+                          {badges.map((b) => (
+                            <a
+                              key={b.id || b.name}
+                              href={b.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              title={`${b.name}: ${b.award}`}
+                              onClick={(e) => e.stopPropagation()}
+                              className="group/badge flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-amber-700/60 rounded-lg transition-all w-full h-13 sm:h-14 cursor-pointer shadow-2xs hover:shadow-xs"
+                            >
+                              <img
+                                src={resolveAsset(b.badgeImage)}
+                                alt={b.name}
+                                className="max-h-7 max-w-full object-contain group-hover/badge:brightness-105 transition-all"
+                              />
+                              <span className="text-[9.5px] text-stone-500 group-hover/badge:text-stone-800 font-sans font-medium mt-0.5 truncate max-w-full text-center">
+                                {b.name}
+                              </span>
+                            </a>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   );
                 })()}

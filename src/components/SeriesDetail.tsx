@@ -189,7 +189,16 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </span>
               </div>
 
-              {/* PHOTO 1 CONTAINER with Corner Badge Overlays - Exact matching aspect-[3/4] */}
+              {/* TOP ROW: AMP ALWAYS TOP-LEFT (OUTSIDE OF IMAGE) */}
+              {ampBadge && (
+                <div className="w-full flex justify-start mb-2">
+                  <div className="w-28 sm:w-36">
+                    {renderBadgeItem(ampBadge)}
+                  </div>
+                </div>
+              )}
+
+              {/* PHOTO 1 CONTAINER - Clean image, NO BADGES OVERLAYING THE ARTWORK */}
               <div
                 onClick={() => onOpenLightbox(series.photos, 0)}
                 className="group/first relative rounded-xl overflow-hidden bg-stone-900 border border-stone-200/90 shadow-md cursor-pointer w-full aspect-[3/4] flex items-center justify-center select-none"
@@ -206,60 +215,6 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                     <Maximize2 className="w-5 h-5" />
                   </span>
                 </div>
-
-                {/* Top-Left AMP Badge */}
-                {ampBadge && (
-                  <a
-                    href={ampBadge.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`${ampBadge.name}: ${ampBadge.award}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="absolute top-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                  >
-                    <img
-                      src={resolveAsset(ampBadge.badgeImage)}
-                      alt={ampBadge.name}
-                      className="h-6 sm:h-7 w-auto object-contain"
-                    />
-                  </a>
-                )}
-
-                {/* Bottom-Left PERSPA Badge */}
-                {perspaBadge && (
-                  <a
-                    href={perspaBadge.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`${perspaBadge.name}: ${perspaBadge.award}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                  >
-                    <img
-                      src={resolveAsset(perspaBadge.badgeImage)}
-                      alt={perspaBadge.name}
-                      className="h-6 sm:h-7 w-auto object-contain"
-                    />
-                  </a>
-                )}
-
-                {/* Top-Right IPA Badge */}
-                {ipaBadge && (
-                  <a
-                    href={ipaBadge.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title={`${ipaBadge.name}: ${ipaBadge.award}`}
-                    onClick={(e) => e.stopPropagation()}
-                    className="absolute top-2.5 right-2.5 rtl:right-auto rtl:left-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
-                  >
-                    <img
-                      src={resolveAsset(ipaBadge.badgeImage)}
-                      alt={ipaBadge.name}
-                      className="h-6 sm:h-7 w-auto object-contain"
-                    />
-                  </a>
-                )}
 
                 <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/50 px-2 py-0.5 rounded backdrop-blur-xs shadow-xs z-10">
                   SchirZan | Schahrsad Shahmirzadi
