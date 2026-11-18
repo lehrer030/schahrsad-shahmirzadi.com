@@ -967,51 +967,26 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </p>
         </div>
 
-        {/* Section F2: 3rd Dan & Sports Support Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Card: 3rd Dan in Kickboxing */}
-          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
-            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
-              <Sparkles className="w-4 h-4 text-amber-700" />
-              <span>{currentLang === 'fa' ? 'درجه استادی' : currentLang === 'de' ? 'Meistergrad' : 'Black Belt'}</span>
-            </div>
-            <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
-              {currentLang === 'fa'
-                ? 'دان ۳ در کیک‌بوکسینگ'
-                : currentLang === 'de'
-                ? '3. Dan im Kickboxen'
-                : '3rd Dan in Kickboxing'}
-            </h4>
-            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-              {currentLang === 'fa'
-                ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
-                : currentLang === 'en'
-                ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
-                : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
-            </p>
+        {/* Section F2: 3rd Dan */}
+        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
+          <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+            <Sparkles className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'درجه استادی' : currentLang === 'de' ? 'Meistergrad' : 'Black Belt'}</span>
           </div>
-
-          {/* Card: Sports Support */}
-          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
-            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
-              <Shield className="w-4 h-4 text-amber-700" />
-              <span>{currentLang === 'fa' ? 'حمایت‌های ورزشی' : currentLang === 'de' ? 'Sportförderung' : 'Sports Support'}</span>
-            </div>
-            <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
-              {currentLang === 'fa'
-                ? 'حمایت ورزشی پلیس برلین (۲۰۰۹–۲۰۲۴)'
-                : currentLang === 'de'
-                ? 'Sportförderung der Berliner Polizei'
-                : 'Sports Support from the Berlin Police'}
-            </h4>
-            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-              {currentLang === 'fa'
-                ? 'شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در خدمت پلیس برلین بود. در فاصله سال‌های ۲۰۱۵ تا ۲۰۲۳، او از حمایت‌های ویژه ورزشی متناسب با رقابت‌ها و مسابقات برخوردار شد و بارها به خاطر دستاوردهای درخشان ورزشی مورد تجلیل قرار گرفت. او همواره از این حمایت‌ها قدردان است.'
-                : currentLang === 'en'
-                ? 'Shahmirzadi worked for the Berlin Police from 2009 to 2024. From 2015 to 2023, she received competition-based, event-specific sports support and was honoured several times for her sporting achievements. She remains grateful for this support.'
-                : 'Shahmirzadi war von 2009 bis 2024 im Dienst der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie eine wettkampfbezogene, anlassbezogene Sportförderung und wurde mehrfach für ihre sportlichen Spitzenleistungen geehrt. Für diese Unterstützung ist sie der Berliner Polizei weiterhin dankbar.'}
-            </p>
-          </div>
+          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'دان ۳ در کیک‌بوکسینگ'
+              : currentLang === 'de'
+              ? '3. Dan im Kickboxen'
+              : '3rd Dan in Kickboxing'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+            {currentLang === 'fa'
+              ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
+              : currentLang === 'en'
+              ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
+              : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
+          </p>
         </div>
 
         {/* Section F3: Competitions – Selected Achievements and Experiences */}

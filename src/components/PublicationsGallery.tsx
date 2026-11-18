@@ -45,58 +45,58 @@ const PERSPA_SERIES_LIST: PerspaSeriesItem[] = [
       {
         id: 'solitaire-01',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature I',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature I · PERSPA Editor’s Choice 2026',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature I · PERSPA Editor’s Choice 2026',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۱'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 1',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · PERSPA Editor’s Choice 2026 (Aufnahme 1 von 7)',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · PERSPA Editor’s Choice 2026 (Work 1 of 7)',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۱ از ۷)'
       },
       {
         id: 'solitaire-02',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-02-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature II',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature II',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature II',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۲'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 2',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 2 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 2 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۲ از ۷)'
       },
       {
         id: 'solitaire-03',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-03-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature III',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature III',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature III',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۳'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 3',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 3 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 3 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۳ از ۷)'
       },
       {
         id: 'solitaire-04',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-04-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature IV',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature IV',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature IV',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۴'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 4',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 4 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 4 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۴ از ۷)'
       },
       {
         id: 'solitaire-05',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-05-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature V',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature V',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature V',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۵'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 5',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 5 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 5 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۵ از ۷)'
       },
       {
         id: 'solitaire-06',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-06-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature VI',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature VI',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature VI',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۶'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 6',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 6 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 6 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۶ از ۷)'
       },
       {
         id: 'solitaire-07',
         src: '/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-07-scaled.webp',
-        alt: 'The Solitaire as Abstraction – In Harmony with Nature VII',
-        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature VII',
-        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature VII',
-        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت ۷'
+        alt: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 7',
+        captionDe: 'The Solitaire as Abstraction – In Harmony with Nature · Aufnahme 7 von 7',
+        captionEn: 'The Solitaire as Abstraction – In Harmony with Nature · Work 7 of 7',
+        captionFa: 'تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت (اثر ۷ از ۷)'
       }
     ]
   },

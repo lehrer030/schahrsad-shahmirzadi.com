@@ -286,15 +286,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
-                Im Jahr 2004 legte sie ihr Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster ab. Nach dem Grundstudium der Rechtswissenschaften an der Freien Universität Berlin trat sie in den Dienst der Berliner Polizei ein, um berufliche Laufbahn und Leistungssport zu verbinden (zuletzt LKA Berlin). Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend den Master of Science (M.Sc.) in Angewandten Umweltwissenschaften an der Universität Koblenz.
+                Im Anschluss an ihr Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Parallel zu ihrer leistungssportlichen Laufbahn im Kickboxen trat sie in den Dienst der Berliner Polizei ein, wo sie zuletzt in der Zentralstelle für Prävention beim Landeskriminalamt (LKA Berlin) als Ansprechperson für gruppenbezogene Menschenfeindlichkeit tätig war.
               </>
             ) : currentLang === 'fa' ? (
               <>
-                در سال ۲۰۰۴، او دیپلم خود (Abitur) را از دبیرستان تاریخی گراوئن کلوستر دریافت کرد. پس از گذراندن دروس پایه حقوق در دانشگاه آزاد برلین (FU Berlin)، برای تلفیق کار حرفه‌ای با ورزش قهرمانی به پلیس برلین پیوست و آخرین مسئولیت او در اداره تحقیقات جنایی ایالت برلین (LKA) بود. او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به کار است و دوره کارشناسی ارشد ناپیوسته علوم محیط زیست کاربردی (M.Sc.) را در دانشگاه کوبلنتس می‌گذراند.
+                پس از اخذ دیپلم از دبیرستان تاریخی گراوئن کلوستر در برلین در سال ۲۰۰۴، او به تحصیل در رشته حقوق پرداخت. همزمان با دوران ورزش قهرمانی در کیک‌بوکسینگ، به خدمت پلیس برلین درآمد و در آخرین مسئولیت خود در اداره تحقیقات جنایی ایالت برلین (LKA) به عنوان مسئول تماس و پیشگیری از جرایم ناشی از نفرت و انسان‌ستیزی سازمان‌یافته فعالیت نمود.
               </>
             ) : (
               <>
-                In 2004, she completed her Abitur at the long-established Evangelisches Gymnasium zum Grauen Kloster. After completing her foundation studies in law at Freie Universität Berlin, she joined the Berlin Police to combine her professional career with elite sport. Her most recent role within the police was at the Berlin State Criminal Police Office (LKA). She currently works at the Ministry of the Environment in Potsdam while pursuing a part-time Master of Science (M.Sc.) in Applied Environmental Sciences at the University of Koblenz.
+                Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she joined the Berlin Police, where she most recently served in the Central Office for Prevention at the State Criminal Police Office (LKA) as a Contact Person for Group-Focused Enmity.
               </>
             )}
           </p>
