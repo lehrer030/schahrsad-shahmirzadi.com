@@ -1050,28 +1050,6 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                   </div>
                                 </div>
 
-                                {/* Top Badges: Honor Badge + Year Badge */}
-                                <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-2 pointer-events-none">
-                                  <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10.5px] font-mono font-bold tracking-tight shadow-md backdrop-blur-md border ${badgeInfo.className}`}>
-                                    {isTopHonor ? <Trophy className="w-3 h-3 text-amber-200" /> : <Award className="w-3 h-3 text-white" />}
-                                    <span>{badgeInfo.label}</span>
-                                  </span>
-                                  <span className="px-2.5 py-1 rounded-md bg-stone-950/85 backdrop-blur-md text-white text-[11px] font-mono font-semibold tracking-tight shadow-md">
-                                    {comp.year}
-                                  </span>
-                                </div>
-
-                                {/* Bottom-Left Competition Symbol Badge matching FurtherWorks */}
-                                {comp.badgeImage && (
-                                  <div className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 z-10 pointer-events-none">
-                                    <img
-                                      src={resolveAsset(comp.badgeImage)}
-                                      alt={comp.name}
-                                      className="h-6 sm:h-7 w-auto object-contain"
-                                    />
-                                  </div>
-                                )}
-
                                 {/* Watermark bottom-right */}
                                 <div className="absolute bottom-2.5 right-2.5 rtl:right-auto rtl:left-2.5 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs z-10">
                                   SchirZan | Schahrsad Shahmirzadi
@@ -1082,6 +1060,33 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                 <Award className="w-10 h-10 text-amber-700/50" />
                               </div>
                             )}
+
+                            {/* Award Badges Bar: Sauber außerhalb des Bildes positioniert, um nicht vom Kunstwerk abzulenken */}
+                            <div className="px-4 pt-3 pb-2 border-b border-stone-100 flex items-center justify-between gap-2 flex-wrap bg-stone-50/50">
+                              <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold tracking-tight border ${
+                                isTopHonor 
+                                  ? 'bg-amber-100 text-amber-950 border-amber-300' 
+                                  : 'bg-white text-stone-800 border-stone-200/90 shadow-2xs'
+                              }`}>
+                                {isTopHonor ? <Trophy className="w-3 h-3 text-amber-700" /> : <Award className="w-3 h-3 text-stone-500" />}
+                                <span>{badgeInfo.label}</span>
+                              </span>
+
+                              <div className="flex items-center gap-1.5 shrink-0">
+                                {comp.badgeImage && (
+                                  <div className="p-0.5 bg-white rounded border border-stone-200/80 shadow-2xs">
+                                    <img
+                                      src={resolveAsset(comp.badgeImage)}
+                                      alt={comp.name}
+                                      className="h-5 w-auto object-contain"
+                                    />
+                                  </div>
+                                )}
+                                <span className="px-2 py-0.5 rounded bg-white border border-stone-200/80 text-stone-700 text-[10.5px] font-mono font-bold shadow-2xs">
+                                  {comp.year}
+                                </span>
+                              </div>
+                            </div>
 
                             {/* Card Content: Thema / Kategorie + Werk-Titel + Wettbewerb */}
                             <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between space-y-3.5">
