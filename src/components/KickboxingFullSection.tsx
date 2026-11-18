@@ -20,7 +20,7 @@ interface KickboxingFullSectionProps {
 }
 
 export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ currentLang }) => {
-  const [showAllAmateur, setShowAllAmateur] = useState(false);
+  const [showAllAmateur, setShowAllAmateur] = useState(true);
 
   const amateurTitles = [
     {
@@ -159,38 +159,64 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       titleEn: 'Honoured in the high-profile nationwide campaign and commercial "Ode to Sport" by L&T Sport',
       titleFa: 'تجلیل در تیزر تبلیغاتی تلویزیونی سراسری «قصیده‌ای برای ورزش» (L&T Sport)',
       link: 'https://www.youtube.com/watch?v=p9cGqvKUnV8&pp=ygUQb2RlIGFuIGRlbiBzcG9ydA%3D%3D'
+    },
+    {
+      period: 'L&T Sport',
+      titleDe: 'Beitrag zum Motivationsbuch „Und weiter“ von L&T Sport',
+      titleEn: 'Contribution to L&T Sport’s motivational book “Und weiter”',
+      titleFa: 'مشارکت در نگارش کتاب انگیزشی «Und weiter» توسط L&T Sport'
     }
   ];
 
   const mediaLinks = [
     {
-      title: 'Berliner Kurier: „Berlins Kickbox-Weltmeisterin: Eine Polizistin hat mich vermöbelt“',
+      title: currentLang === 'en'
+        ? 'Berliner Kurier: “Berlin’s Kickboxing World Champion: A Policewoman Beat Me Up”'
+        : currentLang === 'fa'
+        ? 'روزنامه Berliner Kurier: «قهرمان کیک‌بوکسینگ جهان در برلین: یک افسر پلیس مرا شکست داد»'
+        : 'Berliner Kurier: „Berlins Kickbox-Weltmeisterin: Eine Polizistin hat mich vermöbelt“',
       url: 'https://www.berliner-kurier.de/archiv/berlins-kickbox-weltmeisterin-eine-polizistin-hat-mich-vermoebelt-li.1597461',
       source: 'Berliner Kurier',
       date: 'Archiv'
     },
     {
-      title: 'Berliner Kurier: „Offen für alle – echt Berlin, echt multikulti, echt Polizei“',
+      title: currentLang === 'en'
+        ? 'Berliner Kurier: “Open to Everyone: Truly Berlin. Truly Multicultural. Truly Police.”'
+        : currentLang === 'fa'
+        ? 'روزنامه Berliner Kurier: «به روی همه باز است: اصالتاً برلینی، چندفرهنگی و متعلق به پلیس»'
+        : 'Berliner Kurier: „Offen für alle – echt Berlin, echt multikulti, echt Polizei“',
       url: 'https://www.berliner-kurier.de/archiv/offen-fuer-alle-echt-berlin-echt-multikulti-echt-polizei-li.1480689',
       source: 'Berliner Kurier',
       date: 'Archiv'
     },
     {
-      title: 'Land NRW Pressemitteilung: Innenminister ehrt Spitzensportler der Polizei',
+      title: currentLang === 'en'
+        ? 'Land NRW Press Release: “Elite Police Athletes Became Olympic, European and World Champions”'
+        : currentLang === 'fa'
+        ? 'بیانیه رسمی ایالت NRW: «ورزشکاران نخبه پلیس قهرمان المپیک، اروپا و جهان شدند»'
+        : 'Land NRW Pressemitteilung: „Spitzensportler der Polizei wurden Olympiasieger, Europa- und Weltmeister“',
       url: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister',
-      source: 'Landesportal Nordrhein-Westfalen',
+      source: currentLang === 'en' ? 'State Portal North Rhine-Westphalia' : 'Landesportal Nordrhein-Westfalen',
       date: 'Offizielle Mitteilung'
     },
     {
-      title: 'Transform Magazin: Porträt Schahrsad',
+      title: currentLang === 'en'
+        ? 'transform magazine: “Taking Up Space Through Martial Arts”'
+        : currentLang === 'fa'
+        ? 'مجله transform: «فضاسازی از طریق هنرهای رزمی»'
+        : 'transform magazin: „Durch Kampfsport Raum einnehmen“',
       url: 'https://transform-magazin.de/schahrsad/',
-      source: 'Transform Magazin',
-      date: 'Feature'
+      source: 'transform magazin',
+      date: 'Interview'
     },
     {
-      title: 'Kampfkunst Budo International: Reportage über den Profi-Europameisterschaftstitelkampf',
+      title: currentLang === 'en'
+        ? 'Kampfkunst Budo International: Report on the Professional European Championship Title Bout (pp. 122–123)'
+        : currentLang === 'fa'
+        ? 'مجله بین‌المللی هنرهای رزمی: گزارش مبارزه قهرمانی حرفه‌ای اروپا (صفحات ۱۲۲–۱۲۳)'
+        : 'Kampfkunst Budo International: Reportage über den Profi-Europameisterschaftstitelkampf (S. 122–123)',
       url: 'https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_',
-      source: 'Kampfkunst-International (S. 122–123)',
+      source: 'Kampfkunst-International',
       date: 'Magazin'
     }
   ];
@@ -249,6 +275,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             <p className="text-base sm:text-lg font-serif italic text-stone-800 leading-snug">
               {currentLang === 'fa'
                 ? 'پیروزی در ذهن آغاز می‌شود!'
+                : currentLang === 'en'
+                ? 'Winning starts in the mind!'
                 : 'Gewinnen fängt im Kopf an!'}
             </p>
             <div className="mt-2 text-[11px] font-mono uppercase tracking-wider text-stone-400">
@@ -322,11 +350,13 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
           <div className="border-b border-stone-100 pb-4">
             <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-              {currentLang === 'fa' ? 'رشد و پرورش ورزشی' : 'Sportliche Entwicklung & Wettkampfkarriere'}
+              {currentLang === 'fa' ? 'رشد و پرورش ورزشی' : currentLang === 'en' ? 'Sporting Development & Competitive Career' : 'Sportliche Entwicklung & Wettkampfkarriere'}
             </span>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
               {currentLang === 'fa'
                 ? 'از سالن تمرین تا سکوی افتخار جهانی'
+                : currentLang === 'en'
+                ? 'Sporting Development & Competitive Career'
                 : 'Vom Berliner Dojo zur Weltspitze'}
             </h3>
           </div>
@@ -774,7 +804,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 {currentLang === 'fa' ? 'فهرست رسمی عناوین' : currentLang === 'en' ? 'Championship Overview' : 'Wettkampferfolge im Überblick'}
               </span>
               <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
-                {currentLang === 'fa' ? 'افتخارات آماتور و بین‌المللی' : currentLang === 'en' ? 'Amateur & World Cup Achievements' : 'Amateur- & Weltcup-Erfolge'}
+                {currentLang === 'fa' ? 'افتخارات آماتور و بین‌المللی' : currentLang === 'en' ? 'Amateur Kickboxing Achievements' : 'Amateur- & Weltcup-Erfolge'}
               </h3>
             </div>
 
@@ -858,43 +888,55 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         {/* Section E: Kampfname, Mentale Stärke & Team */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          {/* Card 1: Ring Name & Mentale Stärke */}
+          {/* Card 1: Ring Name & Mentale Stärke / Inner Strength */}
           <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
             <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
               <Sparkles className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'نام رزم و فلسفه' : 'Kampfname & Mentale Stärke'}</span>
+              <span>{currentLang === 'fa' ? 'نام رزم و قدرت درونی' : currentLang === 'en' ? 'Ring Name & Inner Strength' : 'Kampfname & Mentale Stärke'}</span>
             </div>
             
             <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'From "Princess" to "SchirZan"' : 'Von »Prinzessin« zu »SchirZan«'}
+              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'Ring Name & Inner Strength – In Sport and in Life' : 'Von »Prinzessin« zu »SchirZan« · Innere Stärke'}
             </h4>
 
             <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
               {currentLang === 'fa'
                 ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
                 : currentLang === 'en'
-                ? 'From 2009 to 2023, she entered the ring under the fight name "Princess" (a translation of her first name Schahrsad). Today she appears as "SchirZan" – the Persian compound of Shir (lion) and Zan (woman), standing for courage, dignity, and women’s rights.'
+                ? 'From 2009 to 2023, she was known by her former ring name “Prinzessin” (“Princess”), a translation of her first name, Schahrsad. She no longer uses this name and is now known as “SchirZan”.'
                 : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
             </p>
 
-            <p className="text-xs text-stone-600 leading-relaxed font-normal pt-1 border-t border-stone-100">
-              {currentLang === 'fa'
-                ? 'قدرت ذهنی برای او به اندازه آمادگی جسمانی حیاتی بود: شجاعت، اراده تزلزل‌ناپذیر و اتصال با طبیعت که به او توان بازسازی و غلبه بر هر مانعی را می‌بخشید.'
-                : currentLang === 'en'
-                ? 'Mental strength was as essential to her as physical preparation: courage, willpower, and nature as a source of energy gave her steadfast resilience in sport and professional life.'
-                : 'Mentale Stärke war ihr ebenso wichtig wie körperliche Vorbereitung: Mut, Willenskraft und die Natur als Kraftquelle gaben ihr Standfestigkeit im Sport wie im Berufsleben.'}
-            </p>
+            <div className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-2 border-t border-stone-100 space-y-2">
+              <h5 className="font-serif font-bold text-stone-900 text-xs sm:text-sm">
+                {currentLang === 'fa' ? 'قدرت درونی – در ورزش و در زندگی' : currentLang === 'en' ? 'Inner Strength – In Sport and in Life' : 'Innere Stärke – Im Sport und im Leben'}
+              </h5>
+              <p>
+                {currentLang === 'fa'
+                  ? 'برای شهزاد شاهمیرزادی، کیک‌بوکسینگ فراتر از یک ورزش بود: او را سرپا و استوار نگه می‌داشت، انضباط او را تقویت می‌کرد و در غلبه بر شکست‌ها یاری‌اش می‌رساند. قدرت ذهنی دست‌کم به اندازه آمادگی جسمانی برایش اهمیت داشت—و تاب‌آوری و اعتمادبه‌نفس او را در زندگی روزمره و محیط کار بارور می‌ساخت.'
+                  : currentLang === 'en'
+                  ? 'For Schahrsad Shahmirzadi, kickboxing was more than a sport: it kept her grounded, strengthened her discipline, and helped her overcome setbacks. Mental strength was at least as important to her as physical preparation—and also fostered resilience and self-confidence in everyday life and at work.'
+                  : 'Für Schahrsad Shahmirzadi war Kickboxen mehr als ein Sport: Es gab ihr Erdung, stärkte ihre Disziplin und half ihr, Rückschläge zu überwinden. Mentale Stärke war ihr mindestens ebenso wichtig wie physische Vorbereitung – und förderte auch im Alltag und Beruf Widerstandskraft und Selbstvertrauen.'}
+              </p>
+              <p>
+                {currentLang === 'fa'
+                  ? 'او شجاعت، پشتکار، اراده پولادین و باور به خود را ارکان اصلی موفقیت می‌دانست. همراهی تیمی پشتیبان، تنوع و لذت بردن از آنچه انجام می‌داد نیز به همان اندازه مهم بودند. طبیعت به او نیرویی مضاعف می‌بخشید و در پذیرش شکست‌ها و تجدید قوا یاری‌رسانش بود.'
+                  : currentLang === 'en'
+                  ? 'She considered courage, perseverance, willpower, and self-belief essential to her success. A supportive team, versatility, and enjoyment of what she did were equally important. Nature gave her additional strength, helping her process defeats and recharge.'
+                  : 'Mut, Beharrlichkeit, Willenskraft und der Glaube an sich selbst betrachtete sie als unverzichtbar für ihren Erfolg. Ein unterstützendes Team, Vielseitigkeit und die Freude an dem, was sie tat, waren ebenso wichtig. Die Natur gab ihr zusätzliche Kraft, um Niederlagen zu verarbeiten und neue Energie zu schöpfen.'}
+              </p>
+            </div>
           </div>
 
-          {/* Card 2: Trainer & Team - Erfolgreiche Partnerschaften */}
+          {/* Card 2: Trainer & Team - Coaches and Team */}
           <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
             <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
               <Users className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Successful Partnerships' : 'Erfolgreiche Partnerschaften'}</span>
+              <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Coaches and Team' : 'Trainer & Team'}</span>
             </div>
             
             <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Mentors, Coaches & Training Partners' : 'Mentoren, Trainer & Wegbegleiter'}
+              {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Coaches and Team' : 'Mentoren, Trainer & Wegbegleiter'}
             </h4>
 
             <ul className="text-xs text-stone-700 space-y-2.5 leading-relaxed">
@@ -953,6 +995,98 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               ? 'Although Schahrsad Shahmirzadi has both German and Iranian roots, she competed exclusively for Germany in kickboxing. She was a member of the German national team and won all her titles and achieved all her sporting successes under the German flag.'
               : 'Obwohl Schahrsad Shahmirzadi sowohl deutsche als auch iranische Wurzeln hat, trat sie im Kickboxen ausschließlich für Deutschland an. Sie war Mitglied der deutschen Nationalmannschaft und gewann all ihre Titel und sportlichen Erfolge unter deutscher Flagge.'}
           </p>
+        </div>
+
+        {/* Section F2: 3rd Dan & Sports Support Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Card: 3rd Dan in Kickboxing */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
+            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+              <Sparkles className="w-4 h-4 text-amber-700" />
+              <span>{currentLang === 'fa' ? 'درجه استادی' : currentLang === 'de' ? 'Meistergrad' : 'Black Belt'}</span>
+            </div>
+            <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+              {currentLang === 'fa'
+                ? 'دان ۳ در کیک‌بوکسینگ'
+                : currentLang === 'de'
+                ? '3. Dan im Kickboxen'
+                : '3rd Dan in Kickboxing'}
+            </h4>
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+              {currentLang === 'fa'
+                ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
+                : currentLang === 'en'
+                ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
+                : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
+            </p>
+          </div>
+
+          {/* Card: Sports Support */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
+            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+              <Shield className="w-4 h-4 text-amber-700" />
+              <span>{currentLang === 'fa' ? 'حمایت‌های ورزشی' : currentLang === 'de' ? 'Sportförderung' : 'Sports Support'}</span>
+            </div>
+            <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+              {currentLang === 'fa'
+                ? 'حمایت ورزشی پلیس برلین (۲۰۰۹–۲۰۲۴)'
+                : currentLang === 'de'
+                ? 'Sportförderung der Berliner Polizei'
+                : 'Sports Support from the Berlin Police'}
+            </h4>
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+              {currentLang === 'fa'
+                ? 'شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در خدمت پلیس برلین بود. در فاصله سال‌های ۲۰۱۵ تا ۲۰۲۳، او از حمایت‌های ویژه ورزشی متناسب با رقابت‌ها و مسابقات برخوردار شد و بارها به خاطر دستاوردهای درخشان ورزشی مورد تجلیل قرار گرفت. او همواره از این حمایت‌ها قدردان است.'
+                : currentLang === 'en'
+                ? 'Shahmirzadi worked for the Berlin Police from 2009 to 2024. From 2015 to 2023, she received competition-based, event-specific sports support and was honoured several times for her sporting achievements. She remains grateful for this support.'
+                : 'Shahmirzadi war von 2009 bis 2024 im Dienst der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie eine wettkampfbezogene, anlassbezogene Sportförderung und wurde mehrfach für ihre sportlichen Spitzenleistungen geehrt. Für diese Unterstützung ist sie der Berliner Polizei weiterhin dankbar.'}
+            </p>
+          </div>
+        </div>
+
+        {/* Section F3: Competitions – Selected Achievements and Experiences */}
+        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
+          <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+            <Trophy className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'تجارب و رویدادهای سرنوشت‌ساز' : currentLang === 'de' ? 'Ausgewählte Meilensteine' : 'Key Milestones'}</span>
+          </div>
+          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'مسابقات – تجارب و دستاوردهای برگزیده'
+              : currentLang === 'de'
+              ? 'Wettkämpfe – Ausgewählte Erfolge und Erfahrungen'
+              : 'Competitions – Selected Achievements and Experiences'}
+          </h4>
+          <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
+            <p>
+              {currentLang === 'fa'
+                ? 'در سال ۲۰۱۳، او با فتح دو عنوان نخست قهرمانی جهان آماتور در فول‌کنتاکت و K-1 در فدراسیون WKU/WKUWORLD به رویای دیرینه خود دست یافت. عناوین قهرمانی جهان دیگری در سازمان‌های معتبر از جمله ISKA و ICO به دنبال آن آمدند.'
+                : currentLang === 'en'
+                ? 'In 2013, she fulfilled a long-held dream by winning her first two amateur world titles in full-contact kickboxing and K-1 with WKU/WKUWORLD. Further world titles followed in other federations, including ISKA and ICO.'
+                : '2013 erfüllte sie sich mit dem Gewinn ihrer ersten beiden Amateur-Weltmeistertitel im Vollkontakt und K-1 bei der WKU/WKUWORLD einen lang gehegten Traum. Weitere Weltmeistertitel folgten in weiteren Spitzenverbänden wie ISKA und ICO.'}
+            </p>
+            <p>
+              {currentLang === 'fa'
+                ? 'پس از موفقیت‌های متعدد آماتور، او در سال ۲۰۱۵ وارد دنیای حرفه‌ای شد. نقطه عطف او در سال ۲۰۱۶ رقم خورد: در ۱۳ اکتبر، او قهرمان حرفه‌ای جهان WKU/WKUWORLD در فول‌کنتاکت بانوان وزن منهای ۵۷٫۵ کیلوگرم شد و در سال ۲۰۱۷ با موفقیت از عنوان قهرمانی خود دفاع کرد.'
+                : currentLang === 'en'
+                ? 'After numerous amateur successes, she turned professional in 2015. Her breakthrough came in 2016: on 13 October, she became WKU/WKUWORLD Professional World Champion in women’s full-contact kickboxing, −57.5 kg. She successfully defended her title in 2017.'
+                : 'Nach zahlreichen Amateur-Erfolgen wechselte sie 2015 ins Profilager. Der internationale Durchbruch gelang ihr 2016: Am 13. Oktober wurde sie WKU/WKUWORLD Profi-Weltmeisterin im Vollkontakt-Kickboxen der Damen bis 57,5 kg. Ihren Titel verteidigte sie 2017 erfolgreich.'}
+            </p>
+            <p>
+              {currentLang === 'fa'
+                ? 'در سال ۲۰۲۳، او در رویداد LeySha Fight Night در برلین که با همراهی شریک ورزشی‌اش سازماندهی شده بود، در نبردی دشوار برابر مبارز نامدار یونانی آنتونیا پریفتی (Andonia Prifti) بر سر کمربند جهانی K-1 وزن منهای ۵۷٫۵ کیلوگرم تن به شکستی آموزنده داد.'
+                : currentLang === 'en'
+                ? 'In 2023, she suffered a difficult defeat against the renowned Greek fighter Andonia Prifti at the LeySha Fight Night, an event she and her partner had organised themselves. The bout was for the WKU women’s K-1 world title, −57.5 kg.'
+                : '2023 musste sie bei der selbst initiierten und organisierten LeySha Fight Night in Berlin eine schmerzhafte Niederlage gegen die renommierte griechische Spitzenkämpferin Andonia Prifti um den WKU K-1 Weltmeistertitel bis 57,5 kg hinnehmen.'}
+            </p>
+            <p className="italic text-stone-800 bg-[#faf8f5] p-3 rounded-xl border border-stone-200/70 font-medium">
+              {currentLang === 'fa'
+                ? 'در اواخر اکتبر ۲۰۲۶، او بازنشستگی رسمی خود را از ورزش قهرمانی و میادین کیک‌بوکسینگ اعلام کرد.'
+                : currentLang === 'en'
+                ? 'In late October 2026, she announced her retirement from kickboxing.'
+                : 'Ende Oktober 2026 gab sie ihren offiziellen Rücktritt vom aktiven Leistungssport im Kickboxen bekannt.'}
+            </p>
+          </div>
         </div>
 
 
