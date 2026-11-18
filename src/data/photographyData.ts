@@ -571,6 +571,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'elegance-of-structure-bw',
+    themeGroup: 'elegance-of-structure',
     titleDe: 'Elegance of Structure – Black and White',
     titleEn: 'Elegance of Structure – Black and White',
     titleFa: 'Elegance of Structure – Black and White (شکوه ساختار – سیاه و سفید)',
@@ -628,6 +629,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'elegance-of-structure-color',
+    themeGroup: 'elegance-of-structure',
     titleDe: 'Elegance of Structure – An Interior Symphony of Light, Forms and Lines',
     titleEn: 'Elegance of Structure – An Interior Symphony of Light, Forms and Lines',
     titleFa: 'Elegance of Structure – سمفونی درونی نور، فرم‌ها و خطوط',
@@ -866,6 +868,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'mirrored-single',
+    themeGroup: 'mirrored',
     titleDe: 'Mirrored',
     titleEn: 'Mirrored',
     titleFa: 'Mirrored (بازتاب)',
@@ -905,6 +908,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'mirrored-ii',
+    themeGroup: 'mirrored',
     titleDe: 'Mirrored II',
     titleEn: 'Mirrored II',
     titleFa: 'Mirrored II (بازتاب ۲)',
@@ -944,6 +948,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'mirrored-iii-bw',
+    themeGroup: 'mirrored',
     titleDe: 'Mirrored III (Black & White)',
     titleEn: 'Mirrored III (Black & White)',
     titleFa: 'Mirrored III (Black & White) (بازتاب ۳ سیاه و سفید)',
@@ -1516,6 +1521,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'solitaire-revised-licc',
+    themeGroup: 'solitaire-2025',
     titleDe: 'The Solitaire as an Abstraction (Revised)',
     titleEn: 'The Solitaire as an Abstraction (Revised)',
     titleFa: 'The Solitaire as an Abstraction (Revised)',
@@ -1554,6 +1560,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'solitaire-new-perspectives',
+    themeGroup: 'solitaire-2025',
     titleDe: 'The Solitaire as an Abstraction – New Perspectives',
     titleEn: 'The Solitaire as an Abstraction – New Perspectives',
     titleFa: 'The Solitaire as an Abstraction – New Perspectives',
@@ -1592,6 +1599,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'bw-solitaire',
+    themeGroup: 'solitaire-2025',
     titleDe: 'Black & White Solitaire',
     titleEn: 'Black & White Solitaire',
     titleFa: 'Black & White Solitaire (تک‌بنای سیاه‌وسفید)',

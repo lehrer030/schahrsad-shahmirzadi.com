@@ -257,19 +257,16 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
     );
   };
 
-  // Group consecutive multi-photo works that share the same themeGroup so series of one theme sit side-by-side,
-  // while standalone series and single-image works present in the wide horizontal layout.
+  // Group consecutive works that share the same themeGroup (same location/series) side-by-side,
+  // while distinct standalone works present in the wide horizontal layout.
   type WorkItemWithIdx = { work: FurtherWork; idx: number };
   const groupedBlocks: { isThemePair: boolean; items: WorkItemWithIdx[] }[] = [];
   works.forEach((work, idx) => {
-    const isMultiPhoto = (work.galleryPhotos?.length || 0) > 1;
     const prevBlock = groupedBlocks[groupedBlocks.length - 1];
     if (
       work.themeGroup &&
-      isMultiPhoto &&
       prevBlock &&
-      prevBlock.items[0].work.themeGroup === work.themeGroup &&
-      (prevBlock.items[0].work.galleryPhotos?.length || 0) > 1
+      prevBlock.items[0].work.themeGroup === work.themeGroup
     ) {
       prevBlock.items.push({ work, idx });
       prevBlock.isThemePair = true;
@@ -293,14 +290,18 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </h3>
         </div>
 
-        {/* Works Container: Stacked horizontal presentation with side-by-side pairing for multi-series of the same theme */}
+        {/* Works Container: Stacked horizontal presentation with side-by-side pairing for series of the same theme/location */}
         {layout === 'stacked' ? (
           <div className="flex flex-col space-y-6 sm:space-y-8 w-full">
             {groupedBlocks.map((block) =>
               block.isThemePair ? (
                 <div
                   key={block.items.map((item) => item.work.id).join('-')}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full"
+                  className={`grid ${
+                    block.items.length >= 3
+                      ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+                      : 'grid-cols-1 lg:grid-cols-2'
+                  } gap-6 w-full`}
                 >
                   {block.items.map(({ work, idx }) => (
                     <article
