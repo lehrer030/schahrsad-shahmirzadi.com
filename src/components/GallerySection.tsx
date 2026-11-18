@@ -298,7 +298,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                       src={resolveAsset(photo.src)}
                       alt={photo.alt}
                       loading="lazy"
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105 protected-art"
+                      className={`w-full h-full object-cover ${photo.objectPosition || 'object-top'} transition-transform duration-500 group-hover:scale-105 protected-art`}
                       onError={(e) => {
                         const target = e.currentTarget;
                         if (target.src.endsWith('.webp')) {

@@ -16,6 +16,7 @@ export interface PhotoItem {
   id: string;
   src: string;
   alt: string;
+  objectPosition?: string;
   captionDe?: string;
   captionEn?: string;
   captionFa?: string;
