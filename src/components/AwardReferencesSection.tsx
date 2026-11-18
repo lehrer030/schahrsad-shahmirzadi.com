@@ -171,7 +171,7 @@ export const getHonorBadgeInfo = (type: string, lang: Language) => {
     case 'hm':
       return {
         label: lang === 'fa' ? 'تقدیر ویژه' : lang === 'en' ? 'Honorable Mention' : 'Lobende Erwähnung',
-        className: 'bg-stone-900/90 text-amber-300 border-amber-400/40'
+        className: 'bg-stone-900/90 text-white border-white/30'
       };
     case 'selection':
       return {
@@ -847,12 +847,12 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
       {/* 02 Awards Header – Matching Navbar 02 */}
       <SectionHeader
         num="02"
-        shortTitleDe="Awards"
-        shortTitleEn="Awards"
-        shortTitleFa="جوایز"
-        fullTitleDe="Awards – Internationale Photopreis-Referenzen"
-        fullTitleEn="Awards – International Photography Honors & Directory"
-        fullTitleFa="جوایز – مراجع بین‌المللی عکاسی و استعلام رسمی"
+        shortTitleDe="Int'l Awards"
+        shortTitleEn="Int'l Awards"
+        shortTitleFa="جوایز بین‌المللی"
+        fullTitleDe="Int'l Awards – Internationale Photopreis-Referenzen"
+        fullTitleEn="Int'l Awards – International Photography Honors & Directory"
+        fullTitleFa="جوایز بین‌المللی – مراجع عکاسی و استعلام رسمی"
         descDe="Vollständige Übersicht aller internationalen Photopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn."
         descEn="Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions."
         descFa="فهرست جامع تمامی جوایز بین‌المللی عکاسی، کاتالوگ‌های رسمی برگزیدگان و لینک‌های زوم مستقیم جهت استعلام اصالت افتخارات از ایالات متحده، فرانسه، ایتالیا و انگلستان."
@@ -1053,7 +1053,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                 {/* Top Badges: Honor Badge + Year Badge */}
                                 <div className="absolute top-2.5 inset-x-2.5 flex items-center justify-between gap-2 pointer-events-none">
                                   <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10.5px] font-mono font-bold tracking-tight shadow-md backdrop-blur-md border ${badgeInfo.className}`}>
-                                    {isTopHonor ? <Trophy className="w-3 h-3 text-amber-200" /> : <Award className="w-3 h-3 text-amber-400" />}
+                                    {isTopHonor ? <Trophy className="w-3 h-3 text-amber-200" /> : <Award className="w-3 h-3 text-white" />}
                                     <span>{badgeInfo.label}</span>
                                   </span>
                                   <span className="px-2.5 py-1 rounded-md bg-stone-950/85 backdrop-blur-md text-white text-[11px] font-mono font-semibold tracking-tight shadow-md">
