@@ -960,6 +960,24 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </p>
         </div>
 
+        {/* Section F2: Spitzensportförderung & Dienst */}
+        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
+          <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+            <Shield className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'حمایت از ورزش قهرمانی و خدمت در پلیس' : currentLang === 'en' ? 'Elite Sports Support & Service' : 'Spitzensportförderung & Dienst'}</span>
+          </div>
+          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa' ? 'پلیس برلین (۲۰۰۹–۲۰۲۴)' : currentLang === 'en' ? 'Berlin Police (2009–2024)' : 'Polizei Berlin (2009–2024)'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+            {currentLang === 'fa'
+              ? 'شهزاد شاهمیرزادی از سال ۲۰۰۹ تا ۲۰۲۴ در پلیس برلین خدمت کرد. در بازه ۲۰۱۵ تا ۲۰۲۳، او مشمول طرح حمایت از ورزش قهرمانی بود و بارها برای موفقیت‌های ورزشی خود مورد تقدیر رسمی قرار گرفت.'
+              : currentLang === 'en'
+                ? 'Schahrsad Shahmirzadi was with the Berlin Police from 2009 to 2024. From 2015 to 2023, she received needs-based elite sports support and was honoured multiple times for her sporting achievements.'
+                : 'Schahrsad Shahmirzadi war von 2009 bis 2024 bei der Berliner Polizei tätig. Von 2015 bis 2023 erhielt sie anlassbezogene Spitzensportförderung und wurde mehrfach für ihre sportlichen Erfolge gewürdigt.'}
+          </p>
+        </div>
+
         {/* Section F2: 3rd Dan */}
         <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs">
           <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between">
