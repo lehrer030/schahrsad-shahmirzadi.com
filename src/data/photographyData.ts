@@ -336,16 +336,16 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   titleDe: 'Der Solitär als Abstraktion – Überarbeitete Fassung',
   titleEn: 'The Solitaire as an Abstraction (Revised)',
   titleFa: 'The Solitaire as an Abstraction (Revised) – تک‌بنا به مثابه انتزاع، نسخه بازنگری‌شده',
-  subtitleDe: 'Architektur · Abstrakt · 5 Werke',
-  subtitleEn: 'Architecture · Abstract · 5 Works',
-  subtitleFa: 'معماری · انتزاعی · ۵ اثر',
+  subtitleDe: 'Architektur · Abstrakt · 7 Werke',
+  subtitleEn: 'Architecture · Abstract · 7 Works',
+  subtitleFa: 'معماری · انتزاعی · ۷ اثر',
   descriptionDe: `Diese Serie wurde für IPA 2026 neu überarbeitet. Sie fängt moderne urbane Architektur im Spiel von Licht und Schatten ein. Klare Linien, geometrische Strukturen und markante Perspektiven vermitteln sowohl Energie als auch Ästhetik. Reflexionen und das Zusammenspiel von Gebäude und Himmel schaffen Tiefe und laden zum Erkunden ein, während sorgfältig gewählte Blickwinkel eine Spannung zwischen Strenge und Leichtigkeit offenbaren. Die Serie, präsentiert in verschiedenen Versionen, wurde mehrfach bei internationalen Photographie-Preisen ausgezeichnet.`,
   descriptionEn: `This series has been newly reworked for IPA 2026. It captures modern urban architecture in a play of light and shadow. Clear lines, geometric structures, and distinctive perspectives convey both energy and aesthetics. Reflections and the interplay between building and sky create depth and invite exploration, while carefully chosen angles reveal a tension between rigor and lightness. The series, presented in different versions, has been honored multiple times at international photography awards.`,
   descriptionFa: `این مجموعه برای مسابقات IPA 2026 بازنگری شده است. خطوط دقیق، تقارن و بازتاب‌های آسمان، گفت‌وگویی زنده میان معماری شهری و فضای بیکران خلق می‌کنند.`,
   personalNoteDe: 'Persönliche Anmerkung: The Solitaire as an Abstraction entstand am Vatertag, dem 29. Mai 2025, in Berlin-Halensee und ist meinem Vater Kh. Shahmirzadi gewidmet.',
   personalNoteEn: 'Personal Note: The Solitaire as an Abstraction was created on Father’s Day, May 29, 2025, in Berlin-Halensee and is dedicated to my father, Kh. Shahmirzadi.',
   personalNoteFa: 'یادداشت و تقدیم شخصی: مجموعه The Solitaire as an Abstraction در روز پدر، ۲۹ مه ۲۰۲۵، در برلین-هالنزه‌ خلق شد و به پدرم خ. شاهمیرزادی تقدیم گردیده است.',
-  coverImage: '/images/wetransfer/solitaire_revised_01.webp',
+  coverImage: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
   badges: [
     {
       id: 'amp-2026-winner',
@@ -363,7 +363,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       year: '2026',
       award: 'Second Prize (Abstract Architecture)',
       awardFa: 'جایزه دوم (معماری انتزاعی)',
-      badgeImage: '/images/email_badges/perspa_2026_second.png',
+      badgeImage: '/images/docx_badges/perspa_2026_second_prize_abstract.jpeg',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-412',
       position: 'bottom-left'
     },
@@ -373,7 +373,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       year: '2026',
       award: 'Official Selection (Non-Professional)',
       awardFa: 'برگزیده رسمی بخش غیرحرفه‌ای',
-      badgeImage: '/images/email_badges/ipa_2026_os_ribbon.png',
+      badgeImage: '/images/docx_badges/ipa_2026_official_selection_rose.png',
       link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722617898-26',
       position: 'bottom-right'
     }
@@ -381,7 +381,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   photos: [
     {
       id: 'solitaire-revised-01',
-      src: '/images/wetransfer/solitaire_revised_01.webp',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
       alt: 'The Solitaire as an Abstraction (Revised) 01',
       captionDe: 'Image 01',
       captionEn: 'Image 01',
@@ -389,7 +389,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-02',
-      src: '/images/wetransfer/solitaire_revised_02.webp',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_02.jpeg',
       alt: 'The Solitaire as an Abstraction (Revised) 02',
       captionDe: 'Image 02',
       captionEn: 'Image 02',
@@ -397,7 +397,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-03',
-      src: '/images/wetransfer/solitaire_revised_03.webp',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_03.jpeg',
       alt: 'The Solitaire as an Abstraction (Revised) 03',
       captionDe: 'Image 03',
       captionEn: 'Image 03',
@@ -405,7 +405,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-04',
-      src: '/images/wetransfer/solitaire_revised_04.webp',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_04.jpeg',
       alt: 'The Solitaire as an Abstraction (Revised) 04',
       captionDe: 'Image 04',
       captionEn: 'Image 04',
@@ -413,11 +413,27 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
     },
     {
       id: 'solitaire-revised-05',
-      src: '/images/wetransfer/solitaire_revised_05.webp',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg',
       alt: 'The Solitaire as an Abstraction (Revised) 05',
       captionDe: 'Image 05',
       captionEn: 'Image 05',
       captionFa: 'تصویر ۰۵'
+    },
+    {
+      id: 'solitaire-revised-06',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_06.jpeg',
+      alt: 'The Solitaire as an Abstraction (Revised) 06',
+      captionDe: 'Image 06',
+      captionEn: 'Image 06',
+      captionFa: 'تصویر ۰۶'
+    },
+    {
+      id: 'solitaire-revised-07',
+      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_07.jpeg',
+      alt: 'The Solitaire as an Abstraction (Revised) 07',
+      captionDe: 'Image 07',
+      captionEn: 'Image 07',
+      captionFa: 'تصویر ۰۷'
     }
   ]
 };
@@ -524,7 +540,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "LICC 2025",
             "award": "London International Creative Competition · Official Selection",
             "year": "2025",
-            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
+            "badgeImage": "/images/docx_badges/licc_2025_official_selection.png",
             "position": "top-right",
             "link": "http://www.licc.uk/winners/winner.php?id=2-37822-25&OS=true"
       }
@@ -611,7 +627,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722624977-26"
       }
 ],
-    link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
+    link: 'https://perspa.fr/2026/architectural-perspective/elegance-of-structure-black-and-white-2/',
     descriptionDe: 'Diese Photographie zeigt das Interieur der Griechischen Nationaloper in Athen, wo Licht, Materialien und Raumrhythmus präzise harmonieren. Architektur und Design verschmelzen zu einer geometrischen Komposition, in der Glasflächen, schlanke Säulen und sorgfältig durchdachte Details das Foyer in eine Bühne für Licht, Perspektive und Bewegung verwandeln. Dieser Raum übte eine geradezu magnetische Anziehungskraft auf mich aus und bleibt bis heute das eindrucksvollste Beispiel für Innenarchitektur, das ich je erlebt habe.',
     descriptionEn: 'This photograph shows the interior of the Greek National Opera in Athens, where light, materials, and spatial rhythm are precisely harmonised. Architecture and design merge into a geometric composition in which glass surfaces, slender columns, and carefully considered details transform the foyer into a stage for light, perspective, and movement. This space exerted a magnetic pull on me and remains, to this day, the most compelling example of interior architecture I have ever experienced.',
     descriptionFa: 'این عکس فضای داخلی اپرای ملی یونان در آتن را به تصویر می‌کشد که در آن نور، مصالح و ریتم فضایی پیوندی هماهنگ و چشم‌نواز پدید آورده‌اند.',
@@ -1072,10 +1088,10 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'Hephaestus’ Legacy (میراث هفائستوس)',
     category: 'Architecture / Historic',
     categoryFa: 'معماری / تاریخی',
-    awardsDe: 'BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
-    awardsEn: 'BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
-    awardsFa: 'BIFA 2026 — تقدیر ویژه · IPA 2026 — برگزیده رسمی',
-    badgeNames: ['BIFA 2026 HM', 'IPA 2026 OS'],
+    awardsDe: 'PERSPA 2026 — Editor’s Choice · BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
+    awardsEn: 'PERSPA 2026 — Editor’s Choice · BIFA 2026 — Honorable Mention · IPA 2026 — Official Selection',
+    awardsFa: 'PERSPA 2026 — انتخاب سردبیر · BIFA 2026 — تقدیر ویژه · IPA 2026 — برگزیده رسمی',
+    badgeNames: ['PERSPA Editor’s Choice', 'BIFA 2026 HM', 'IPA 2026 OS'],
     badges: [
 
       {
@@ -1097,7 +1113,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722626529-26"
       }
 ],
-    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722626529-26',
+    link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/',
     descriptionDe: 'Der Hephaistos-Tempel ist dem Gott der Schmiede und des Feuers geweiht – ein Werk der Architektur reich an Symbolik und Handwerkskunst. Diese Serie stellt die Säulen ins Zentrum, wie sie Licht und Schatten in den Raum ziehen und Stärke sowie Kraft widerspiegeln. So entsteht ein visueller Dialog zwischen antiker Technik, mythologischer Inspiration und der zeitlosen Schönheit der Steinarchitektur.',
     descriptionEn: 'The Temple of Hephaistos is dedicated to the god of blacksmiths and fire—a work of architecture rich in symbolism and craftsmanship. This series places its columns at the center as they draw light and shadow into the space, reflecting strength and power. In doing so, a visual dialogue emerges between ancient technique, mythological inspiration, and the timeless beauty of stone architecture.',
     descriptionFa: 'معبد هفائستوس، وقف خدای صنعتگری و آتش؛ این مجموعه ستون‌های کهن را در گفت‌وگوی ابدی نور و سایه به تصویر می‌کشد.',
@@ -1164,7 +1180,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "Architecture MasterPrize 2025",
             "award": "Student Photography · Honorable Mention",
             "year": "2025",
-            "badgeImage": "/images/2026_01_winners_badge-AMP-2025-Honorable-Mention-1024x474.webp",
+            "badgeImage": "/images/docx_badges/amp_2025_student_hm_orange.png",
             "position": "top-left",
             "link": "https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816"
       },
@@ -1173,9 +1189,9 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "PERSPA 2026",
             "award": "Stairs · Honorable Mention",
             "year": "2026",
-            "badgeImage": "/images/2026_10_perspa-awards-2026-honourable-mention-stairs-300x300.webp",
+            "badgeImage": "/images/docx_badges/perspa_2026_hm_stairs.png",
             "position": "bottom-left",
-            "link": "https://perspa.fr/winners/architectural-perspective/"
+            "link": "https://perspa.fr/winners/architectural-perspective/#work-152"
       }
 ],
     link: 'https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816',
@@ -1537,7 +1553,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'London International Creative Competition 2025',
         award: 'Shortlist',
         year: '2025',
-        badgeImage: '/images/badges_custom/licc_2025_shortlist.png',
+        badgeImage: '/images/docx_badges/licc_2025_shortlist.png',
         position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125857'
       }
@@ -1546,16 +1562,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Internationale Auszeichnung bei den London International Creative Competition (LICC 2025) für die überarbeitete Fassung der Solitär-Serie.',
     descriptionEn: 'International recognition at London International Creative Competition (LICC 2025) for the revised edition of the Solitaire series.',
     descriptionFa: 'برگزیده رسمی در رقابت بین‌المللی خلاقیت لندن LICC 2025 برای نسخه بازنگری‌شده تک‌بنا.',
-    previewImage: '/images/wetransfer/solitaire_revised_01.webp',
+    previewImage: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
     galleryPhotos: [
-      {
-        id: 'solitaire-revised-licc-01',
-        src: '/images/wetransfer/solitaire_revised_01.webp',
-        alt: 'The Solitaire as an Abstraction (Revised)',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده)'
-      }
+      { id: 'solitaire-revised-licc-01', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۱' },
+      { id: 'solitaire-revised-licc-02', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_02.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۲' },
+      { id: 'solitaire-revised-licc-03', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_03.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۳' },
+      { id: 'solitaire-revised-licc-04', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_04.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۴' },
+      { id: 'solitaire-revised-licc-05', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۵' },
+      { id: 'solitaire-revised-licc-06', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_06.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 06', captionDe: 'Image 06', captionEn: 'Image 06', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۶' },
+      { id: 'solitaire-revised-licc-07', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_07.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 07', captionDe: 'Image 07', captionEn: 'Image 07', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۷' }
     ]
   },
   {
@@ -1576,7 +1591,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'London International Creative Competition 2025',
         award: 'Shortlist',
         year: '2025',
-        badgeImage: '/images/badges_custom/licc_2025_shortlist.png',
+        badgeImage: '/images/docx_badges/licc_2025_shortlist.png',
         position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125858'
       }
@@ -1585,16 +1600,13 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Neue Perspektiven auf den Solitär: Erweiterte visuelle Erkundung von Fluchtpunkten, Materialoberflächen und Himmelsspiegelungen bei der London International Creative Competition (LICC 2025).',
     descriptionEn: 'New perspectives on the solitaire: Expanded exploration of vanishing lines, material textures, and reflections at the London International Creative Competition (LICC 2025).',
     descriptionFa: 'دیدگاه‌های نو به تک‌بنا: کاوش گسترده در نقاط گریز و بافت مصالح در رقابت LICC 2025.',
-    previewImage: '/images/wetransfer/solitaire_revised_02.webp',
+    previewImage: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_01.jpeg',
     galleryPhotos: [
-      {
-        id: 'solitaire-new-perspectives-01',
-        src: '/images/wetransfer/solitaire_revised_02.webp',
-        alt: 'The Solitaire as an Abstraction – New Perspectives',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو'
-      }
+      { id: 'solitaire-new-perspectives-01', src: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_01.jpeg', alt: 'The Solitaire as an Abstraction – New Perspectives 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو ۰۱' },
+      { id: 'solitaire-new-perspectives-02', src: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_02.jpeg', alt: 'The Solitaire as an Abstraction – New Perspectives 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو ۰۲' },
+      { id: 'solitaire-new-perspectives-03', src: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_03.jpeg', alt: 'The Solitaire as an Abstraction – New Perspectives 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو ۰۳' },
+      { id: 'solitaire-new-perspectives-04', src: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_04.jpeg', alt: 'The Solitaire as an Abstraction – New Perspectives 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو ۰۴' },
+      { id: 'solitaire-new-perspectives-05', src: '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_05.jpeg', alt: 'The Solitaire as an Abstraction – New Perspectives 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تک‌بنا به مثابه انتزاع – چشم‌اندازهای نو ۰۵' }
     ]
   },
   {
@@ -1654,7 +1666,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'Architecture MasterPrize 2025',
         award: 'Student Photography Winner (Other Exterior)',
         year: '2025',
-        badgeImage: '/images/2026_01_winners_badge-AMP-2025-1024x474.webp',
+        badgeImage: '/images/docx_badges/amp_2025_hm_orange.png',
         position: 'top-left',
         link: 'https://architectureprize.com/winners/winner.php?id=8533'
       },
@@ -1663,57 +1675,27 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'International Photography Awards (IPA) 2025',
         award: 'Honorable Mention · Architecture, Abstract',
         year: '2025',
-        badgeImage: '/images/badges_custom/ipa_2025_hm.png',
+        badgeImage: '/images/docx_badges/ipa_2025_hm_green.png',
         position: 'bottom-right',
-        link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25'
+        link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722606309-25'
       }
     ],
-    link: 'https://www.photoawards.com/winner/zoom.php?eid=8-1722606309-25',
-    descriptionDe: 'Die originale Prämierungsserie der International Photography Awards 2025: Der Solitär im lebendigen Lichtdialog des urbanen Frühlings.',
-    descriptionEn: 'The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue.',
-    descriptionFa: 'مجموعه برگزیده اولیه در جوایز جهانی عکاسی IPA ۲۰۲۵: تک‌بنا در گفت‌وگوی پویای نور روز شهری.',
-    previewImage: '/images/2025_09_image00001-scaled.webp',
+    link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722606309-25',
+    descriptionDe: 'Die originale Prämierungsserie der International Photography Awards 2025: Der Solitär im lebendigen Lichtdialog des urbanen Frühlings (10 Werke).',
+    descriptionEn: 'The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue (10 Works).',
+    descriptionFa: 'مجموعه برگزیده اولیه در جوایز جهانی عکاسی IPA ۲۰۲۵: تک‌بنا در گفت‌وگوی پویای نور روز شهری (۱۰ اثر).',
+    previewImage: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_01.jpeg',
     galleryPhotos: [
-      {
-        id: 'solitaire-ipa-2025-01',
-        src: '/images/2025_09_image00001-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 01',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تصویر ۱'
-      },
-      {
-        id: 'solitaire-ipa-2025-02',
-        src: '/images/2025_09_image00002-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 02',
-        captionDe: 'Image 02',
-        captionEn: 'Image 02',
-        captionFa: 'تصویر ۲'
-      },
-      {
-        id: 'solitaire-ipa-2025-03',
-        src: '/images/2025_09_image00003-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 03',
-        captionDe: 'Image 03',
-        captionEn: 'Image 03',
-        captionFa: 'تصویر ۳'
-      },
-      {
-        id: 'solitaire-ipa-2025-04',
-        src: '/images/2025_09_image00004-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 04',
-        captionDe: 'Image 04',
-        captionEn: 'Image 04',
-        captionFa: 'تصویر ۴'
-      },
-      {
-        id: 'solitaire-ipa-2025-05',
-        src: '/images/2025_09_image00005-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 05',
-        captionDe: 'Image 05',
-        captionEn: 'Image 05',
-        captionFa: 'تصویر ۵'
-      }
+      { id: 'solitaire-ipa-2025-01', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_01.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تصویر ۱' },
+      { id: 'solitaire-ipa-2025-02', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_02.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تصویر ۲' },
+      { id: 'solitaire-ipa-2025-03', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_03.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تصویر ۳' },
+      { id: 'solitaire-ipa-2025-04', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_04.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تصویر ۴' },
+      { id: 'solitaire-ipa-2025-05', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_05.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تصویر ۵' },
+      { id: 'solitaire-ipa-2025-06', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_06.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 06', captionDe: 'Image 06', captionEn: 'Image 06', captionFa: 'تصویر ۶' },
+      { id: 'solitaire-ipa-2025-07', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_07.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 07', captionDe: 'Image 07', captionEn: 'Image 07', captionFa: 'تصویر ۷' },
+      { id: 'solitaire-ipa-2025-08', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_08.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 08', captionDe: 'Image 08', captionEn: 'Image 08', captionFa: 'تصویر ۸' },
+      { id: 'solitaire-ipa-2025-09', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_09.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 09', captionDe: 'Image 09', captionEn: 'Image 09', captionFa: 'تصویر ۹' },
+      { id: 'solitaire-ipa-2025-10', src: '/images/series_solitaire/solitaire_ipa/solitaire_ipa_10.jpeg', alt: 'The Solitaire as an Abstraction (IPA 2025) – 10', captionDe: 'Image 10', captionEn: 'Image 10', captionFa: 'تصویر ۱۰' }
     ]
   },
   {
@@ -1740,35 +1722,16 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       }
     ],
     link: 'https://ndawards.net/winners-gallery/nd-awards-2025/non-professional/other/hm/23252/',
-    descriptionDe: 'Kompakte kuratierte Fassung der Solitär-Serie, fokussiert auf die prägnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum.',
-    descriptionEn: 'Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky.',
-    descriptionFa: 'نسخه گزیده و فشرده مجموعه تک‌بنا با تمرکز بر بارزترین کشش‌های فرمی میان شیشه، فولاد و آسمان.',
-    previewImage: '/images/2025_09_image00002-scaled.webp',
+    descriptionDe: 'Kompakte kuratierte Fassung der Solitär-Serie, fokussiert auf die prägnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum (5 Werke).',
+    descriptionEn: 'Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky (5 Works).',
+    descriptionFa: 'نسخه گزیده و فشرده مجموعه تک‌بنا با تمرکز بر بارزترین کشش‌های فرمی میان شیشه، فولاد و آسمان (۵ اثر).',
+    previewImage: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_01.jpeg',
     galleryPhotos: [
-      {
-        id: 'solitaire-short-version-01',
-        src: '/images/2025_09_image00002-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (Short Version) – Image 01',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تصویر ۱'
-      },
-      {
-        id: 'solitaire-short-version-02',
-        src: '/images/2025_09_image00003-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (Short Version) – Image 02',
-        captionDe: 'Image 02',
-        captionEn: 'Image 02',
-        captionFa: 'تصویر ۲'
-      },
-      {
-        id: 'solitaire-short-version-03',
-        src: '/images/2025_09_image00004-scaled.webp',
-        alt: 'The Solitaire as an Abstraction (Short Version) – Image 03',
-        captionDe: 'Image 03',
-        captionEn: 'Image 03',
-        captionFa: 'تصویر ۳'
-      }
+      { id: 'solitaire-short-version-01', src: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_01.jpeg', alt: 'The Solitaire as an Abstraction (Short Version) – 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تصویر ۱' },
+      { id: 'solitaire-short-version-02', src: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_02.jpeg', alt: 'The Solitaire as an Abstraction (Short Version) – 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تصویر ۲' },
+      { id: 'solitaire-short-version-03', src: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_03.jpeg', alt: 'The Solitaire as an Abstraction (Short Version) – 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تصویر ۳' },
+      { id: 'solitaire-short-version-04', src: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_04.jpeg', alt: 'The Solitaire as an Abstraction (Short Version) – 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تصویر ۴' },
+      { id: 'solitaire-short-version-05', src: '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_05.jpeg', alt: 'The Solitaire as an Abstraction (Short Version) – 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تصویر ۵' }
     ]
   },
   {
@@ -1971,7 +1934,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "Black & White Spider Awards 2025",
             "award": "Spider Awards 2025 · Nominee",
             "year": "2025",
-            "badgeImage": "/images/badges_custom/spider_awards_2025_nominee.jpg",
+            "badgeImage": "/images/docx_badges/spider_20th_nominee.png",
             "position": "bottom-left",
             "link": "https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=653&fid=309240"
       }

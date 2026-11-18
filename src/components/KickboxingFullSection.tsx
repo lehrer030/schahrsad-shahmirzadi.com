@@ -10,7 +10,8 @@ import {
   Users,
   Sparkles,
   Calendar,
-  MapPin
+  MapPin,
+  Heart
 } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
@@ -861,28 +862,29 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
 
               <ul className="text-xs sm:text-sm text-stone-700 space-y-3 leading-relaxed font-normal">
                 <li>
-                  <strong className="text-stone-900 font-semibold">Michael C.: </strong>
+                  <strong className="text-amber-800 font-semibold">Michael C.: </strong>
                   {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : currentLang === 'en' ? 'Taught the technical fundamentals and laid the groundwork.' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
                 </li>
                 <li>
-                  <strong className="text-stone-900 font-semibold">Ferdinand Mack: </strong>
+                  <strong className="text-amber-800 font-semibold">Ferdinand Mack: </strong>
                   {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'German kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
                 </li>
                 <li>
-                  <strong className="text-stone-900 font-semibold">Gia K. & Asly A.: </strong>
+                  <strong className="text-amber-800 font-semibold">Gia K. & Asly A.: </strong>
                   {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : currentLang === 'en' ? 'Long-standing athletic sparring and training partners.' : 'Als langjährige sportliche Trainingspartner.'}
                 </li>
                 <li>
-                  <strong className="text-stone-900 font-semibold">Steve Barret: </strong>
+                  <strong className="text-amber-800 font-semibold">Steve Barret: </strong>
                   {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : currentLang === 'en' ? 'Artist, coach, and manager in professional combat sports (from 2018); joint LeySha Fight Night Berlin 2023 and music video "Stay With Me".' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
                 </li>
               </ul>
             </div>
 
-            {/* Persönliche Anmerkung / Personal Note */}
+            {/* Persönliche Anmerkung / Personal Note mit Herz-Symbol */}
             <div className="pt-3 border-t border-stone-100 bg-[#faf8f5] p-3.5 sm:p-4 rounded-xl border border-stone-200/80">
-              <span className="text-[10px] sm:text-xs uppercase font-mono tracking-wider font-bold text-amber-900 block mb-1">
-                {currentLang === 'fa' ? 'یادداشت شخصی' : currentLang === 'en' ? 'Personal Note' : 'Persönliche Anmerkung'}
+              <span className="text-[10px] sm:text-xs uppercase font-mono tracking-wider font-bold text-amber-900 flex items-center gap-1.5 mb-1">
+                <span>{currentLang === 'fa' ? 'یادداشت شخصی' : currentLang === 'en' ? 'Personal Note' : 'Persönliche Anmerkung'}</span>
+                <Heart className="w-3.5 h-3.5 text-red-600 fill-red-600 inline shrink-0" />
               </span>
               <p className="text-xs sm:text-sm italic text-stone-800 leading-relaxed font-serif">
                 {currentLang === 'fa'
