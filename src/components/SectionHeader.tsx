@@ -36,34 +36,36 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 
   return (
     <div className="border-b-2 border-stone-200/90 pb-5 mb-8 sm:mb-10 relative">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div className="space-y-2.5 max-w-4xl">
-          {/* Header pill matching navbar */}
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#1c1917] text-white shadow-xs">
-            <span className="px-1.5 py-0.5 rounded bg-amber-400 text-stone-950 font-mono font-bold text-xs tracking-tight">
-              {num}
-            </span>
-            <span className="font-mono text-xs font-semibold tracking-wider uppercase text-stone-100">
-              {shortTitle}
-            </span>
-          </div>
-
-          {/* Prominent main title */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-stone-900 font-bold tracking-tight leading-tight">
-            {fullTitle}
-          </h2>
-
-          {/* Explanatory description if provided */}
-          {desc && (
-            <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed max-w-3xl pt-0.5">
-              {desc}
-            </p>
-          )}
+      <div className="space-y-2.5 w-full">
+        {/* Header pill matching navbar */}
+        <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#1c1917] text-white shadow-xs">
+          <span className="px-1.5 py-0.5 rounded bg-amber-400 text-stone-950 font-mono font-bold text-xs tracking-tight">
+            {num}
+          </span>
+          <span className="font-mono text-xs font-semibold tracking-wider uppercase text-stone-100">
+            {shortTitle}
+          </span>
         </div>
 
-        {extraRight && (
-          <div className="shrink-0 self-start md:self-end">
-            {extraRight}
+        {/* Prominent main title - full width so long titles stay on a single line on desktop */}
+        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-[32px] font-serif text-stone-900 font-bold tracking-tight leading-tight lg:whitespace-nowrap">
+          {fullTitle}
+        </h2>
+
+        {/* Explanatory description and optional right-side controls */}
+        {(desc || extraRight) && (
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pt-0.5">
+            {desc ? (
+              <p className="text-xs sm:text-sm text-stone-600 font-normal leading-relaxed max-w-3xl">
+                {desc}
+              </p>
+            ) : <div />}
+
+            {extraRight && (
+              <div className="shrink-0 self-start md:self-end">
+                {extraRight}
+              </div>
+            )}
           </div>
         )}
       </div>

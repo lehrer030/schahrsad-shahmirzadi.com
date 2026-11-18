@@ -465,9 +465,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'hm',
-        labelDe: '2× Lobende Erwähnung · Honorable Mention',
-        labelEn: '2× Honorable Mentions',
-        labelFa: '۲ عنوان تقدیر ویژه · Honorable Mention',
+        labelDe: '3× Lobende Erwähnung · Honorable Mention',
+        labelEn: '3× Honorable Mentions',
+        labelFa: '۳ عنوان تقدیر ویژه · Honorable Mention',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
@@ -478,6 +478,11 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             title: 'Echoes of a Water Tower',
             category: 'Black and White',
             zoomUrl: 'https://perspa.fr/winners/architectural-perspective/#work-211'
+          },
+          {
+            title: 'Steps of Sustainability',
+            category: 'Stairs',
+            zoomUrl: 'https://perspa.fr/winners/architectural-perspective/'
           }
         ]
       },
@@ -853,11 +858,11 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
       {/* 02 Awards Header – Matching Navbar 02 */}
       <SectionHeader
         num="02"
-        shortTitleDe="Int'l Awards"
-        shortTitleEn="Int'l Awards"
+        shortTitleDe="International Awards"
+        shortTitleEn="International Awards"
         shortTitleFa="جوایز بین‌المللی"
-        fullTitleDe="Int'l Awards – Internationale Photopreis-Referenzen"
-        fullTitleEn="Int'l Awards – International Photography Honors & Directory"
+        fullTitleDe="International Awards – Internationale Photopreis-Referenzen"
+        fullTitleEn="International Awards – International Photography Honors & Directory"
         fullTitleFa="جوایز بین‌المللی – مراجع عکاسی و استعلام رسمی"
         descDe="Vollständige Übersicht aller internationalen Photopreise, offiziellen Siegel, Fachjurys und Verifikationslinks führender Institutionen aus den USA, Frankreich, Italien, Großbritannien und Ungarn."
         descEn="Complete register of international photography honors, official juror panels, winner compendiums, and verified direct zoom links across premier institutions."

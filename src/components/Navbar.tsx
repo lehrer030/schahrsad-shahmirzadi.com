@@ -61,11 +61,11 @@ export const ORIGINAL_11_MENU_ITEMS: OriginalMenuItem[] = [
   {
     id: 'award-references',
     num: '02',
-    labelEn: "Int'l Photography Award References",
-    labelDe: "Int'l Photopreis-Referenzen & Awards",
+    labelEn: "International Photography Award References",
+    labelDe: "Internationale Photopreis-Referenzen & Awards",
     labelFa: 'مراجع جوایز بین‌المللی عکاسی',
-    shortDe: "Int'l Awards",
-    shortEn: "Int'l Awards",
+    shortDe: "International Awards",
+    shortEn: "International Awards",
     shortFa: 'جوایز بین‌المللی',
     targetId: 'award-references',
     category: 'press'

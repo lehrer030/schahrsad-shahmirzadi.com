@@ -54,6 +54,7 @@ export interface PhotoSeries {
 
 export interface FurtherWork {
   id: string;
+  themeGroup?: string;
   titleDe: string;
   titleEn: string;
   titleFa: string;
@@ -244,7 +245,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       year: '2026',
       award: 'Honorable Mention & Editor’s Choice',
       awardFa: 'تقدیر ویژه و انتخاب سردبیر',
-      badgeImage: '/images/badges_custom/perspa_2026_bw_hm.png',
+      badgeImage: '/images/2026_10_perspa-awards-2026-honourable-mention-abstract-300x300.webp',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-132',
       position: 'bottom-left'
     },
@@ -503,11 +504,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       {
             "id": "spider-architectural-piano",
             "name": "Black & White Spider Awards 2025",
-            "award": "Spider Awards 2025 · Nominee",
+            "award": "Spider Awards 2025 · Honorable Mention & Nominee",
             "year": "2025",
             "badgeImage": "/images/2025_12_spiderfellow20thwinner-150x150.webp",
             "position": "bottom-left",
-            "link": "https://www.thespiderawards.com/"
+            "link": "https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=653&fid=309239"
       },
       {
             "id": "ipa-architectural-piano",
@@ -517,6 +518,15 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "badgeImage": "/images/email_badges/ipa_2026_os_ribbon.png",
             "position": "bottom-right",
             "link": "https://www.photoawards.com/social/zoom.php?eid=8-1722613457-25"
+      },
+      {
+            "id": "licc-architectural-piano",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/badges_custom/licc_2025_official_selection.png",
+            "position": "top-right",
+            "link": "http://www.licc.uk/winners/winner.php?id=2-37822-25&OS=true"
       }
 ],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613457-25',
@@ -580,15 +590,6 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
             "position": "top-left",
             "link": "https://architectureprize.com/"
-      },
-      {
-            "id": "perspa-elegance-of-structure-bw",
-            "name": "PERSPA 2026",
-            "award": "Black and White · Honorable Mention",
-            "year": "2026",
-            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
-            "position": "bottom-left",
-            "link": "https://architectureperspectiveawards.com/"
       },
       {
             "id": "bifa-elegance-of-structure-bw",
@@ -699,6 +700,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'cloud-mirror-architecture-i',
+    themeGroup: 'cloud-mirror',
     titleDe: 'Cloud Mirror Architecture I: Heaven’s Bridge',
     titleEn: 'Cloud Mirror Architecture I: Heaven’s Bridge',
     titleFa: 'Cloud Mirror Architecture I: Heaven’s Bridge (معماری آینه ابرها ۱: پل بهشت)',
@@ -789,6 +791,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'cloud-mirror-architecture-ii',
+    themeGroup: 'cloud-mirror',
     titleDe: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
     titleEn: 'Cloud Mirror Architecture II: Stormy Sea (Black & White)',
     titleFa: 'Cloud Mirror Architecture II: Stormy Sea (B&W) (دریای طوفانی)',
@@ -1139,25 +1142,35 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'steps-of-sustainability',
+    themeGroup: 'sustainability',
     titleDe: 'Steps of Sustainability',
     titleEn: 'Steps of Sustainability',
     titleFa: 'Steps of Sustainability (پله‌های پایداری)',
     category: 'Architecture / Sustainable Design',
     categoryFa: 'معماری / طراحی پایدار',
-    awardsDe: 'AMP 2025 — Honorable Mention',
-    awardsEn: 'AMP 2025 — Honorable Mention',
-    awardsFa: 'AMP 2025 — تقدیر ویژه',
-    badgeNames: ['AMP 2025 HM'],
+    awardsDe: 'AMP 2025 — Honorable Mention · PERSPA 2026 — Honorable Mention',
+    awardsEn: 'AMP 2025 — Honorable Mention · PERSPA 2026 — Honorable Mention',
+    awardsFa: 'AMP 2025 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
+    badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM'],
     badges: [
 
       {
             "id": "amp-2025-steps-of-sustainability",
             "name": "Architecture MasterPrize 2025",
-            "award": "Architecture MasterPrize 2025",
+            "award": "Student Photography · Honorable Mention",
             "year": "2025",
-            "badgeImage": "/images/2026_01_winners_badge-AMP-2025-1024x474.webp",
+            "badgeImage": "/images/2026_01_winners_badge-AMP-2025-Honorable-Mention-1024x474.webp",
             "position": "top-left",
-            "link": "https://architectureprize.com/"
+            "link": "https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816"
+      },
+      {
+            "id": "perspa-steps-of-sustainability",
+            "name": "PERSPA 2026",
+            "award": "Stairs · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/2026_10_perspa-awards-2026-honourable-mention-stairs-300x300.webp",
+            "position": "bottom-left",
+            "link": "https://perspa.fr/winners/architectural-perspective/"
       }
 ],
     link: 'https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816',
@@ -1218,6 +1231,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'dimensions-of-sustainability',
+    themeGroup: 'sustainability',
     titleDe: 'Dimensions of Sustainability',
     titleEn: 'Dimensions of Sustainability',
     titleFa: 'Dimensions of Sustainability (ابعاد پایداری)',
@@ -1507,17 +1521,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     titleFa: 'The Solitaire as an Abstraction (Revised)',
     category: 'Architecture / Abstract',
     categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'LICC 2025 — Official Selection',
-    awardsEn: 'LICC 2025 — Official Selection',
-    awardsFa: 'LICC 2025 — برگزیده رسمی',
-    badgeNames: ['LICC 2025 OS'],
+    awardsDe: 'LICC 2025 — Shortlist',
+    awardsEn: 'LICC 2025 — Shortlist',
+    awardsFa: 'LICC 2025 — فهرست کوتاه (Shortlisted)',
+    badgeNames: ['LICC 2025 Shortlisted'],
     badges: [
       {
         id: 'licc-revised',
         name: 'London International Creative Competition 2025',
-        award: 'Shortlist / Official Selection',
+        award: 'Shortlist',
         year: '2025',
-        badgeImage: '/images/badges_custom/licc_2025_official_selection.png',
+        badgeImage: '/images/badges_custom/licc_2025_shortlist.png',
         position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125857'
       }
@@ -1616,16 +1630,26 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'solitaire-ipa-2025',
+    themeGroup: 'solitaire-2025',
     titleDe: 'The Solitaire as an Abstraction',
     titleEn: 'The Solitaire as an Abstraction',
     titleFa: 'The Solitaire as an Abstraction',
     category: 'Architecture / Abstract',
     categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'IPA 2025 — Honorable Mention',
-    awardsEn: 'IPA 2025 — Honorable Mention',
-    awardsFa: 'IPA 2025 — تقدیر ویژه (Honorable Mention)',
-    badgeNames: ['IPA 2025 HM'],
+    awardsDe: 'AMP 2025 — Winner (Student / Other Exterior) · IPA 2025 — Honorable Mention',
+    awardsEn: 'AMP 2025 — Winner (Student / Other Exterior) · IPA 2025 — Honorable Mention',
+    awardsFa: 'AMP 2025 — برنده اصلی · IPA 2025 — تقدیر ویژه',
+    badgeNames: ['AMP 2025 Winner', 'IPA 2025 HM'],
     badges: [
+      {
+        id: 'amp-2025-solitaire',
+        name: 'Architecture MasterPrize 2025',
+        award: 'Student Photography Winner (Other Exterior)',
+        year: '2025',
+        badgeImage: '/images/2026_01_winners_badge-AMP-2025-1024x474.webp',
+        position: 'top-left',
+        link: 'https://architectureprize.com/winners/winner.php?id=8533'
+      },
       {
         id: 'ipa-2025-solitaire',
         name: 'International Photography Awards (IPA) 2025',
@@ -1686,6 +1710,7 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'solitaire-short-version',
+    themeGroup: 'solitaire-2025',
     titleDe: 'The Solitaire as an Abstraction (Short Version)',
     titleEn: 'The Solitaire as an Abstraction (Short Version)',
     titleFa: 'The Solitaire as an Abstraction (نسخه کوتاه)',
@@ -1938,9 +1963,9 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
             "name": "Black & White Spider Awards 2025",
             "award": "Spider Awards 2025 · Nominee",
             "year": "2025",
-            "badgeImage": "/images/2025_12_spiderfellow20thwinner-150x150.webp",
+            "badgeImage": "/images/badges_custom/spider_awards_2025_nominee.jpg",
             "position": "bottom-left",
-            "link": "https://www.thespiderawards.com/"
+            "link": "https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=653&fid=309240"
       }
 ],
     link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=653&fid=309240',

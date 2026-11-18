@@ -217,7 +217,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   ];
 
   return (
-    <section id="kickboxing" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200 relative">
+    <section id="kickboxing" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
 
       {/* 06 Kickboxen Header – Matching Navbar 06 */}
@@ -270,8 +270,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             {currentLang === 'fa'
               ? 'قهرمان جام جهانی و مسابقات جهانی هنرهای رزمی (World Martial Arts Games)'
               : currentLang === 'en'
-              ? 'World Cup & World Martial Arts Games Winner'
-              : 'Weltcup & World Martial Arts Games Siegerin'}
+                ? 'World Cup & World Martial Arts Games Winner'
+                : 'Weltcup & World Martial Arts Games Siegerin'}
           </div>
           <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'فدراسیون‌های WKU و IAKSA / WMAC' : 'WKU & IAKSA / WMAC'}
@@ -808,8 +808,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {currentLang === 'fa'
                 ? 'تقدیرهای رسمی از سوی وزارت کشور، پلیس و شهرها'
                 : currentLang === 'en'
-                ? 'Recognition for Outstanding Sporting Achievements'
-                : 'Anerkennung für herausragende sportliche Leistungen'}
+                  ? 'Recognition for Outstanding Sporting Achievements'
+                  : 'Anerkennung für herausragende sportliche Leistungen'}
             </h3>
           </div>
 

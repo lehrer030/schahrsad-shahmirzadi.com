@@ -20,7 +20,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
   sectionTitleDe = 'Weitere Werke',
   sectionTitleEn = 'Further Works',
   sectionTitleFa = 'سایر آثار',
-  layout = 'grid',
+  layout = 'stacked',
   onOpenLightbox,
   onOpenSeries
 }) => {
@@ -167,48 +167,116 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
     </div>
   );
 
-  const renderActionBar = (work: FurtherWork) => (
-    <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
-      <button
-        type="button"
-        onClick={() => {
-          if (onOpenSeries) {
-            onOpenSeries(work.id);
-          } else if (onOpenLightbox && work.galleryPhotos) {
-            onOpenLightbox(work.galleryPhotos, 0);
-          }
-        }}
-        className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors cursor-pointer group/btn"
-      >
-        <span className="group-hover/btn:underline">
-          {currentLang === 'fa'
-            ? `مشاهده سری کامل · ${work.galleryPhotos?.length || 1} اثر ←`
-            : currentLang === 'de'
-            ? `Serie ansehen · ${work.galleryPhotos?.length || 1} Photos →`
-            : `View Series · ${work.galleryPhotos?.length || 1} Photos →`}
-        </span>
-      </button>
+  const renderThumbnailStrip = (work: FurtherWork) => {
+    const photos = work.galleryPhotos;
+    if (!photos || photos.length === 0) return null;
+    const count = photos.length;
 
-      {work.link && (
-        <a
-          href={work.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-[11px] font-medium text-stone-500 hover:text-stone-900 transition-colors shrink-0"
-          title={currentLang === 'fa' ? 'مشاهده جایزه' : currentLang === 'en' ? 'View award' : 'Auszeichnung ansehen'}
+    return (
+      <div className="pt-1">
+        <span className="text-[10.5px] font-mono text-stone-500 uppercase tracking-wider block mb-1.5 font-semibold">
+          {currentLang === 'de'
+            ? count === 1
+              ? 'Photo der Serie (1):'
+              : `Photos der Serie (${count}):`
+            : currentLang === 'fa'
+            ? `تصاویر مجموعه (${count}):`
+            : count === 1
+            ? 'Series Photo (1):'
+            : `Series Photos (${count}):`}
+        </span>
+        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+          {photos.map((photo, pIdx) => (
+            <button
+              key={photo.id || pIdx}
+              type="button"
+              onClick={() => {
+                if (onOpenLightbox) {
+                  onOpenLightbox(photos, pIdx);
+                }
+              }}
+              className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border border-stone-200/90 hover:border-amber-700/80 shrink-0 group/thumb cursor-pointer shadow-2xs hover:shadow-xs transition-all"
+              title={photo.alt || `Photo ${pIdx + 1}`}
+            >
+              <img
+                src={resolveAsset(photo.src)}
+                alt={photo.alt || `Photo ${pIdx + 1}`}
+                className="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-300 select-none protected-art"
+                loading="lazy"
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const renderActionBar = (work: FurtherWork) => {
+    const count = work.galleryPhotos?.length || 1;
+    return (
+      <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onClick={() => {
+            if (onOpenSeries) {
+              onOpenSeries(work.id);
+            } else if (onOpenLightbox && work.galleryPhotos) {
+              onOpenLightbox(work.galleryPhotos, 0);
+            }
+          }}
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors cursor-pointer group/btn"
         >
-          <span>
-            {currentLang === 'de'
-              ? 'Auszeichnung ansehen'
-              : currentLang === 'fa'
-              ? 'جایزه'
-              : 'View Award'}
+          <span className="group-hover/btn:underline">
+            {currentLang === 'fa'
+              ? `مشاهده سری کامل · ${count} اثر ←`
+              : currentLang === 'de'
+              ? `${count === 1 ? 'Werk' : 'Serie'} ansehen · ${count} ${count === 1 ? 'Photo' : 'Photos'} →`
+              : `View ${count === 1 ? 'Work' : 'Series'} · ${count} ${count === 1 ? 'Photo' : 'Photos'} →`}
           </span>
-          <ExternalLink className="w-3 h-3 text-stone-400" />
-        </a>
-      )}
-    </div>
-  );
+        </button>
+
+        {work.link && (
+          <a
+            href={work.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-[11px] font-medium text-stone-500 hover:text-stone-900 transition-colors shrink-0"
+            title={currentLang === 'fa' ? 'مشاهده جایزه' : currentLang === 'en' ? 'View award' : 'Auszeichnung ansehen'}
+          >
+            <span>
+              {currentLang === 'de'
+                ? 'Auszeichnung ansehen'
+                : currentLang === 'fa'
+                ? 'جایزه'
+                : 'View Award'}
+            </span>
+            <ExternalLink className="w-3 h-3 text-stone-400" />
+          </a>
+        )}
+      </div>
+    );
+  };
+
+  // Group consecutive multi-photo works that share the same themeGroup so series of one theme sit side-by-side,
+  // while standalone series and single-image works present in the wide horizontal layout.
+  type WorkItemWithIdx = { work: FurtherWork; idx: number };
+  const groupedBlocks: { isThemePair: boolean; items: WorkItemWithIdx[] }[] = [];
+  works.forEach((work, idx) => {
+    const isMultiPhoto = (work.galleryPhotos?.length || 0) > 1;
+    const prevBlock = groupedBlocks[groupedBlocks.length - 1];
+    if (
+      work.themeGroup &&
+      isMultiPhoto &&
+      prevBlock &&
+      prevBlock.items[0].work.themeGroup === work.themeGroup &&
+      (prevBlock.items[0].work.galleryPhotos?.length || 0) > 1
+    ) {
+      prevBlock.items.push({ work, idx });
+      prevBlock.isThemePair = true;
+    } else {
+      groupedBlocks.push({ isThemePair: false, items: [{ work, idx }] });
+    }
+  });
 
   return (
     <section className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-stone-200 w-full">
@@ -225,61 +293,56 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </h3>
         </div>
 
-        {/* Works Container: Either stacked untereinander or responsive 3-column grid */}
+        {/* Works Container: Stacked horizontal presentation with side-by-side pairing for multi-series of the same theme */}
         {layout === 'stacked' ? (
           <div className="flex flex-col space-y-6 sm:space-y-8 w-full">
-            {works.map((work, idx) => (
-              <article
-                key={work.id}
-                className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-                  <div className="lg:col-span-4 flex flex-col items-center w-full max-w-[280px] sm:max-w-[320px] mx-auto">
-                    {renderPhotoBlock(work)}
-                  </div>
-                  <div className="lg:col-span-8 flex flex-col justify-start space-y-3.5">
-                    {renderDetailsBlock(work, idx, true)}
-
-                    {/* Preview-Leiste der Serien-Photos (schließt den leeren Raum sinnvoll) */}
-                    {work.galleryPhotos && work.galleryPhotos.length > 1 && (
-                      <div className="pt-1">
-                        <span className="text-[10.5px] font-mono text-stone-500 uppercase tracking-wider block mb-1.5 font-semibold">
-                          {currentLang === 'de'
-                            ? `Photos der Serie (${work.galleryPhotos.length}):`
-                            : currentLang === 'fa'
-                            ? `تصاویر مجموعه (${work.galleryPhotos.length}):`
-                            : `Series Photos (${work.galleryPhotos.length}):`}
-                        </span>
-                        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
-                          {work.galleryPhotos.map((photo, pIdx) => (
-                            <button
-                              key={photo.id || pIdx}
-                              type="button"
-                              onClick={() => {
-                                if (onOpenLightbox && work.galleryPhotos) {
-                                  onOpenLightbox(work.galleryPhotos, pIdx);
-                                }
-                              }}
-                              className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border border-stone-200/90 hover:border-amber-700/80 shrink-0 group/thumb cursor-pointer shadow-2xs hover:shadow-xs transition-all"
-                              title={photo.alt || `Photo ${pIdx + 1}`}
-                            >
-                              <img
-                                src={resolveAsset(photo.src)}
-                                alt={photo.alt || `Photo ${pIdx + 1}`}
-                                className="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-300 select-none protected-art"
-                                loading="lazy"
-                              />
-                            </button>
-                          ))}
+            {groupedBlocks.map((block) =>
+              block.isThemePair ? (
+                <div
+                  key={block.items.map((item) => item.work.id).join('-')}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full"
+                >
+                  {block.items.map(({ work, idx }) => (
+                    <article
+                      key={work.id}
+                      className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-2xs hover:shadow-md flex flex-col justify-between"
+                    >
+                      <div className="space-y-4">
+                        <div className="w-full max-w-[280px] sm:max-w-[300px] mx-auto">
+                          {renderPhotoBlock(work)}
+                        </div>
+                        <div className="space-y-3">
+                          {renderDetailsBlock(work, idx, false)}
+                          {renderThumbnailStrip(work)}
                         </div>
                       </div>
-                    )}
-
-                    {renderActionBar(work)}
-                  </div>
+                      {renderActionBar(work)}
+                    </article>
+                  ))}
                 </div>
-              </article>
-            ))}
+              ) : (
+                (() => {
+                  const { work, idx } = block.items[0];
+                  return (
+                    <article
+                      key={work.id}
+                      className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
+                    >
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                        <div className="lg:col-span-4 flex flex-col items-center w-full max-w-[280px] sm:max-w-[320px] mx-auto">
+                          {renderPhotoBlock(work)}
+                        </div>
+                        <div className="lg:col-span-8 flex flex-col justify-start space-y-3.5">
+                          {renderDetailsBlock(work, idx, true)}
+                          {renderThumbnailStrip(work)}
+                          {renderActionBar(work)}
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })()
+              )
+            )}
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full">

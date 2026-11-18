@@ -378,6 +378,7 @@ export default function App() {
             <FurtherWorks
               works={FURTHER_WORKS_ARCHITECTURE}
               currentLang={currentLang}
+              layout="stacked"
               sectionTitleDe="Weitere Arbeiten der Architektur"
               sectionTitleEn="Further Works in Architecture"
               sectionTitleFa="سایر آثار معماری"
@@ -409,6 +410,7 @@ export default function App() {
             <FurtherWorks
               works={FINE_ART_WORKS}
               currentLang={currentLang}
+              layout="stacked"
               sectionTitleDe="Fine Art – Werkserien"
               sectionTitleEn="Fine Art – Series"
               sectionTitleFa="هنرهای زیبا – مجموعه‌ها"
@@ -472,6 +474,7 @@ export default function App() {
             <FurtherWorks
               works={PORTRAIT_WORKS}
               currentLang={currentLang}
+              layout="stacked"
               sectionTitleDe="Porträts & Selbstporträts"
               sectionTitleEn="Portraits & Self-Portraits"
               sectionTitleFa="پرتره‌ها و خودنگاره‌ها"
