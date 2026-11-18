@@ -16,7 +16,6 @@ import { LegalModal } from './components/LegalModal';
 import { ContactModal } from './components/ContactModal';
 import { CookieBanner } from './components/CookieBanner';
 import { BackToTop } from './components/BackToTop';
-import { MobileFloatingContact } from './components/MobileFloatingContact';
 import { ImageProtectionToast } from './components/ImageProtectionToast';
 import { scrollToElementWithOffset } from './utils/scrollHelper';
 import {
@@ -576,12 +575,6 @@ export default function App() {
 
       {/* MODERN MUST-HAVES: Back to Top Floating Action Button */}
       <BackToTop />
-
-      {/* MODERN MUST-HAVES: Mobile Floating Contact Button (Bottom Left) */}
-      <MobileFloatingContact
-        onOpenContact={() => setContactModalOpen(true)}
-        currentLang={currentLang}
-      />
 
       {/* MODERN MUST-HAVES: Digital Copyright Protection Toast */}
       <ImageProtectionToast
