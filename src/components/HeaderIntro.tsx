@@ -59,13 +59,13 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
 
             {/* Main Personal Title */}
             <div className="space-y-2">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[2.65rem] xl:text-[3.15rem] font-serif tracking-tight text-stone-900 leading-[1.15] font-bold break-words">
-                {currentLang === 'fa' ? 'شیرزن | شهزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
+              <h1 className="text-[clamp(1.15rem,3.1vw,2.75rem)] font-serif tracking-tight text-stone-900 leading-[1.2] font-bold whitespace-nowrap">
+                {currentLang === 'fa' ? 'شیرزن | شهرزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
               </h1>
 
               {/* Subtitle / Artist Designation */}
               <div className="pt-0.5">
-                <p className="text-sm sm:text-base font-serif italic text-amber-900 font-semibold tracking-wide">
+                <p className="text-xs sm:text-sm md:text-base font-serif italic text-amber-900 font-semibold tracking-wide whitespace-normal sm:whitespace-nowrap">
                   {currentLang === 'de'
                     ? 'Photographin & Bildende Künstlerin | 10-fache Kickbox-Weltmeisterin'
                     : currentLang === 'fa'
@@ -280,7 +280,7 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               <div className="pt-3 border-t border-stone-100 space-y-2.5">
                 <div className="flex items-start justify-between gap-3">
                   <div className="space-y-1">
-                    <h3 className="font-serif text-stone-900 font-bold text-base leading-snug">
+                    <h3 className="font-serif text-stone-900 font-bold text-base leading-snug whitespace-nowrap">
                       {currentLang === 'fa' ? 'شیرزن | شهرزاد شاهمیرزادی' : 'SchirZan | Schahrsad Shahmirzadi'}
                     </h3>
                     <p className="text-xs text-stone-600 font-normal">
