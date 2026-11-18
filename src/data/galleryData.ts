@@ -105,7 +105,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     photos: [
       {
         id: 'run-gallery-01',
-        src: './images/2026_10_image00001-scaled.webp',
+        src: '/images/running/running_01.webp',
         alt: 'Berlin Marathon 2026 – Finisher & Gleichberechtigung',
         locationDe: 'Berlin Marathon 2026 · Berlin',
         locationEn: 'Berlin Marathon 2026 · Berlin',
@@ -116,7 +116,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       },
       {
         id: 'run-gallery-02',
-        src: './images/2026_10_image00002-scaled.webp',
+        src: '/images/running/running_02.webp',
         alt: 'BMW BERLIN-MARATHON 2026 – Wall of Fame',
         locationDe: 'Berlin Marathon 2026 · Wall of Fame',
         locationEn: 'Berlin Marathon 2026 · Wall of Fame',
@@ -127,7 +127,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       },
       {
         id: 'run-gallery-03',
-        src: './images/running_halfmarathon_bib_peace.webp',
+        src: '/images/running/running_03.webp',
         alt: 'Berliner Halbmarathon 2025: SchirZan mit Startnummer',
         locationDe: 'Berliner Halbmarathon 2025 · Berlin',
         locationEn: 'Berlin Half Marathon 2025 · Berlin',
@@ -138,7 +138,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       },
       {
         id: 'run-gallery-04',
-        src: './images/running_brandenburger_tor.webp',
+        src: '/images/running/running_04.webp',
         alt: 'Berliner Halbmarathon 2025 am Brandenburger Tor',
         locationDe: 'Brandenburger Tor · Berlin',
         locationEn: 'Brandenburg Gate · Berlin',
@@ -149,18 +149,18 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       },
       {
         id: 'run-gallery-05',
-        src: './images/2026_05_image00001-scaled-1.webp',
-        alt: '45. Berliner Halbmarathon: Running for Free Iran',
+        src: '/images/running/running_05.webp',
+        alt: '45. Berliner Halbmarathon: Sport & Demokratie',
         locationDe: '45. Berliner Halbmarathon · Berlin',
         locationEn: '45th Berlin Half Marathon · Berlin',
         locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
-        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
-        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
+        captionDe: '45. Berliner Halbmarathon: Sport & Demokratie — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
+        captionEn: '45th Berlin Half Marathon: Sport & Democracy — A powerful tribute to freedom, equality, and women’s rights.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: ورزش و مردم‌سالاری — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
       },
       {
         id: 'run-gallery-06',
-        src: './images/2026_05_image00002-scaled.webp',
+        src: '/images/running/running_06.webp',
         alt: '45. Berliner Halbmarathon: Finisher-Medaille & Iran-Flagge',
         locationDe: '45. Berliner Halbmarathon · Berlin',
         locationEn: '45th Berlin Half Marathon · Berlin',
