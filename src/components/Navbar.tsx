@@ -202,6 +202,17 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // Body-Scroll sperren, wenn das mobile Menü geöffnet ist
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prevOverflow;
+      };
+    }
+  }, [mobileMenuOpen]);
+
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
     const handleScroll = () => {
@@ -358,24 +369,25 @@ export const Navbar: React.FC<NavbarProps> = ({
       )}
 
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 w-full ${
+        className={`sticky top-0 z-40 transition-all duration-300 w-full ${
           isScrolled
             ? 'bg-[#faf8f5]/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs'
             : 'bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900'
         }`}
-        style={{ position: 'sticky', top: 0, zIndex: 50 }}
+        style={{ position: 'sticky', top: 0, zIndex: 40 }}
       >
-        {/* Row 1: Brand & Actions Bar - halbiert sich harmonisch beim Scrollen */}
+        {/* Row 1: Brand & Top Action Bar */}
         <div
           id="brand-header-bar"
           className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 sm:gap-4 ${
-            isScrolled ? 'h-9 sm:h-10 py-1' : 'h-14 sm:h-16 py-2'
+            isScrolled ? 'h-10 sm:h-11 py-1' : 'h-13 sm:h-15 py-1.5'
           }`}
         >
-          {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi (bleibt immer vollständig sichtbar) */}
+          {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi (bleibt immer voll ausgeschrieben und lesbar) */}
           <button
             onClick={onGoHome}
-            className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0 shrink"
+            className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0"
+            aria-label="Zur Startseite"
           >
             <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
               <span
@@ -385,14 +397,14 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 SchirZan
               </span>
-              <span className={`text-stone-300 font-light transition-all ${
+              <span className={`text-stone-300 font-light transition-all shrink-0 ${
                 isScrolled ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'
               }`}>
                 |
               </span>
               <span
-                className={`text-stone-700 font-serif tracking-wide font-medium transition-all truncate ${
-                  isScrolled ? 'text-[11px] sm:text-xs lg:text-sm' : 'text-xs sm:text-sm lg:text-base'
+                className={`text-stone-800 font-serif tracking-wide font-medium transition-all whitespace-nowrap overflow-hidden text-ellipsis ${
+                  isScrolled ? 'text-xs sm:text-sm lg:text-base' : 'text-xs sm:text-sm lg:text-base'
                 }`}
               >
                 {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
@@ -400,39 +412,45 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </button>
 
-          {/* Right Tools: Language Switcher (DE / EN / FA) & Contact & Mobile Hamburger */}
-          <div className="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
+          {/* Desktop Right Tools: Language Switcher (DE / EN / FA) & Contact (visible on lg+) */}
+          <div className="hidden lg:flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
             {/* Trilingual Switcher (DE / EN / FA) */}
             <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
               isScrolled ? 'scale-90 sm:scale-95' : 'scale-100'
             }`}>
-              <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0 hidden xs:inline" />
+              <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0" />
               <button
+                type="button"
                 onClick={() => onToggleLang('de')}
-                className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'de'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-                  }`}
+                className={`px-2 py-0.5 rounded text-xs transition-all cursor-pointer ${
+                  currentLang === 'de'
+                    ? 'bg-stone-900 text-white font-semibold'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
                 title="Deutsch"
               >
                 DE
               </button>
               <button
+                type="button"
                 onClick={() => onToggleLang('en')}
-                className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'en'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-                  }`}
+                className={`px-2 py-0.5 rounded text-xs transition-all cursor-pointer ${
+                  currentLang === 'en'
+                    ? 'bg-stone-900 text-white font-semibold'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
                 title="English"
               >
                 EN
               </button>
               <button
+                type="button"
                 onClick={() => onToggleLang('fa')}
-                className={`px-2 sm:px-2.5 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'fa'
-                  ? 'bg-stone-900 text-white font-medium'
-                  : 'text-stone-600 hover:text-stone-900'
-                  }`}
+                className={`px-2.5 py-0.5 rounded text-xs transition-all cursor-pointer ${
+                  currentLang === 'fa'
+                    ? 'bg-stone-900 text-white font-semibold'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
                 title="فارسی"
               >
                 فارسی
@@ -441,153 +459,258 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             {/* Contact Button */}
             <button
+              type="button"
               onClick={onOpenContact}
               className={`inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
-                isScrolled ? 'px-2 sm:px-2.5 py-0.5 sm:py-1 text-[11px]' : 'px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs'
+                isScrolled ? 'px-2.5 py-1 text-[11px]' : 'px-3.5 py-1.5 text-xs'
               }`}
             >
               <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
             </button>
+          </div>
 
-            {/* Mobile Drawer Toggle (for users who prefer full vertical drawer) */}
+          {/* Mobile Menu Toggle Button: Sehr groß, taktil, prominent & unübersehbar */}
+          <div className="flex lg:hidden items-center shrink-0">
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`lg:hidden text-stone-700 hover:text-stone-900 transition-all cursor-pointer rounded hover:bg-stone-200/60 ${
-                isScrolled ? 'p-1' : 'p-1.5'
+              type="button"
+              onClick={() => setMobileMenuOpen(prev => !prev)}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg font-medium transition-all cursor-pointer shadow-xs select-none ${
+                mobileMenuOpen
+                  ? 'bg-amber-600 text-white ring-2 ring-amber-400/40'
+                  : 'bg-stone-900 hover:bg-stone-800 text-white'
               }`}
-              aria-label="Navigation Menu"
-              title="Menü"
+              aria-label={mobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
+              aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? (
+                <>
+                  <X className="w-4 h-4 text-white" />
+                  <span className="text-xs font-semibold">
+                    {currentLang === 'fa' ? 'بستن' : currentLang === 'en' ? 'Close' : 'Schließen'}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <Menu className="w-4 h-4 text-white" />
+                  <span className="text-xs font-semibold">
+                    {currentLang === 'fa' ? 'منو' : currentLang === 'en' ? 'Menu' : 'Menü'}
+                  </span>
+                </>
+              )}
             </button>
           </div>
         </div>
 
-      {/* Row 2: 10 Topics Navigation Bar - AUSSCHLIESSLICH auf Desktop & großen Bildschirmen (hidden lg:block) */}
-      <nav
-        id="topics-navigation-bar"
-        className={`hidden lg:block w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300 ${
-          isScrolled ? 'py-0.5' : 'py-1.5'
-        }`}
-        aria-label="Themen-Navigation"
-      >
-        <div className="max-w-[1720px] mx-auto px-4 lg:px-8 xl:px-12 2xl:px-20">
-          <div className="flex items-center justify-center gap-1.5 xl:gap-2 flex-nowrap">
-            {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
-              const isActive = !item.isContact && activeMenuId === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 xl:px-2.5 py-1 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1.5 shrink-0 whitespace-nowrap text-xs ${
-                    isActive
-                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/70'
-                  }`}
-                  title={getItemLabel(item)}
-                >
-                  <span
-                    className={`font-mono text-[9.5px] xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
-                      isActive
-                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                    }`}
-                  >
-                    {item.num}
-                  </span>
-                  <span>
-                    {getHeaderItemLabel(item)}
-                  </span>
-                </button>
-              );
-            })}
+        {/* Row 2 on Mobile: Utility Bar mit Sprachumschalter & Schnellkontakt */}
+        <div
+          id="mobile-utility-bar"
+          className="lg:hidden w-full bg-[#f4efe8]/95 border-t border-stone-200/80 px-3 sm:px-6 py-1 flex items-center justify-between gap-2"
+        >
+          {/* Trilingual Switcher (DE / EN / FA) */}
+          <div className="flex items-center bg-white border border-stone-200/90 p-0.5 rounded text-xs shadow-2xs">
+            <Globe className="w-3 h-3 text-stone-400 ml-1 mr-1 shrink-0" />
+            <button
+              type="button"
+              onClick={() => onToggleLang('de')}
+              className={`px-2 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
+                currentLang === 'de'
+                  ? 'bg-stone-900 text-white font-semibold'
+                  : 'text-stone-600 hover:text-stone-900'
+              }`}
+              title="Deutsch"
+            >
+              DE
+            </button>
+            <button
+              type="button"
+              onClick={() => onToggleLang('en')}
+              className={`px-2 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
+                currentLang === 'en'
+                  ? 'bg-stone-900 text-white font-semibold'
+                  : 'text-stone-600 hover:text-stone-900'
+              }`}
+              title="English"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              onClick={() => onToggleLang('fa')}
+              className={`px-2.5 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
+                currentLang === 'fa'
+                  ? 'bg-stone-900 text-white font-semibold'
+                  : 'text-stone-600 hover:text-stone-900'
+              }`}
+              title="فارسی"
+            >
+              فارسی
+            </button>
           </div>
+
+          {/* Quick Contact Button */}
+          <button
+            type="button"
+            onClick={onOpenContact}
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 hover:bg-stone-800 text-white text-[11px] font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
+          >
+            <Mail className="w-3 h-3" />
+            <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+          </button>
         </div>
-      </nav>
 
-      {/* Mobile Drawer Menu: Fixed overlay accessible from ANY scroll depth */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 flex flex-col justify-start">
-          {/* Backdrop */}
-          <div
-            className="fixed inset-0 bg-stone-950/60 backdrop-blur-xs transition-opacity"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-
-          {/* Drawer content sliding down from top */}
-          <div className="relative w-full max-h-[88vh] bg-[#faf8f5] border-b border-stone-300 px-4 pt-3.5 pb-6 space-y-3.5 overflow-y-auto shadow-2xl z-10 animate-in slide-in-from-top duration-200">
-            {/* Header row inside drawer: Brand + Language Switcher + Close button */}
-            <div className="flex items-center justify-between pb-2.5 border-b border-stone-200">
-              <div className="flex items-center space-x-2 rtl:space-x-reverse min-w-0">
-                <span className="text-base font-serif font-bold text-stone-900 tracking-wider">
-                  SchirZan
-                </span>
-                <span className="text-stone-300 text-sm">|</span>
-                <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
-                  <button
-                    onClick={() => onToggleLang('de')}
-                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
-                      currentLang === 'de' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                    }`}
-                  >
-                    DE
-                  </button>
-                  <button
-                    onClick={() => onToggleLang('en')}
-                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
-                      currentLang === 'en' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                    }`}
-                  >
-                    EN
-                  </button>
-                  <button
-                    onClick={() => onToggleLang('fa')}
-                    className={`px-2 py-0.5 rounded text-[11px] font-medium transition-all ${
-                      currentLang === 'fa' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                    }`}
-                  >
-                    فارسی
-                  </button>
-                </div>
-              </div>
-
-              {/* Close Button */}
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-1.5 rounded-full hover:bg-stone-200 text-stone-700 hover:text-stone-950 transition-colors cursor-pointer"
-                aria-label="Menü schließen"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Section count / title */}
-            <div className="flex items-center justify-between pt-0.5">
-              <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
-                {currentLang === 'de' ? 'Bereiche der Website' : currentLang === 'fa' ? 'فهرست بخش‌های سایت' : 'Site Sections'}
-              </span>
-              <span className="text-[10px] font-mono text-stone-500">
-                {currentLang === 'de' ? '10 Bereiche' : currentLang === 'fa' ? '۱۰ بخش' : '10 Sections'}
-              </span>
-            </div>
-
-            {/* Vertikales Menü: Alle 10 Themen sauber untereinander wie am Anfang */}
-            <div className="flex flex-col space-y-2">
+        {/* Row 2: 10 Topics Navigation Bar - Desktop & Large Screens (lg:block) */}
+        <nav
+          id="topics-navigation-bar"
+          className={`hidden lg:block w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300 ${
+            isScrolled ? 'py-0.5' : 'py-1.5'
+          }`}
+          aria-label="Themen-Navigation"
+        >
+          <div className="max-w-[1720px] mx-auto px-4 lg:px-8 xl:px-12 2xl:px-20">
+            <div className="flex items-center justify-center gap-1.5 xl:gap-2 flex-nowrap">
               {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
                 const isActive = !item.isContact && activeMenuId === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleNavigateToItem(item)}
+                    className={`group px-2 xl:px-2.5 py-1 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1.5 shrink-0 whitespace-nowrap text-xs ${
+                      isActive
+                        ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                        : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/70'
+                    }`}
+                    title={getItemLabel(item)}
+                  >
+                    <span
+                      className={`font-mono text-[9.5px] xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                        isActive
+                          ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                          : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
+                      }`}
+                    >
+                      {item.num}
+                    </span>
+                    <span>
+                      {getHeaderItemLabel(item)}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile Navigation Drawer: Absolut stabil AUSSERHALB des Headers gerendert */}
+      {mobileMenuOpen && (
+        <div
+          className="lg:hidden fixed inset-0 z-[100] flex flex-col justify-start"
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 100 }}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation Menü"
+        >
+          {/* Full-screen Dark Backdrop */}
+          <div
+            className="fixed inset-0 bg-stone-950/70 backdrop-blur-xs transition-opacity duration-200"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Drawer content sliding down from top */}
+          <div className="relative w-full max-h-[92vh] bg-[#faf8f5] border-b-2 border-amber-600/30 px-4 pt-3.5 pb-6 space-y-3 overflow-y-auto shadow-2xl z-10 animate-in slide-in-from-top duration-200">
+            {/* Header row inside drawer: Brand + Prominenter Schließen-Button */}
+            <div className="flex items-center justify-between pb-2.5 border-b border-stone-200">
+              <div className="flex items-center space-x-1.5 rtl:space-x-reverse min-w-0">
+                <span className="text-base font-serif font-bold text-stone-900 tracking-wider">
+                  SchirZan
+                </span>
+                <span className="text-stone-300 text-sm">|</span>
+                <span className="text-xs font-serif text-stone-700 font-medium truncate">
+                  {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
+                </span>
+              </div>
+
+              {/* Prominenter Close Button */}
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-stone-200 active:bg-stone-300 text-stone-800 transition-colors cursor-pointer border border-stone-200 shadow-2xs"
+                aria-label="Menü schließen"
+              >
+                <X className="w-4 h-4 text-stone-900" />
+                <span className="text-xs font-semibold">
+                  {currentLang === 'fa' ? 'بستن' : currentLang === 'en' ? 'Close' : 'Schließen'}
+                </span>
+              </button>
+            </div>
+
+            {/* Language Switcher inside drawer */}
+            <div className="flex items-center justify-between bg-stone-100/90 p-2 rounded-lg border border-stone-200">
+              <span className="text-xs font-medium text-stone-700 flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5 text-stone-500" />
+                <span>{currentLang === 'fa' ? 'زبان:' : currentLang === 'en' ? 'Language:' : 'Sprache:'}</span>
+              </span>
+              <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
+                <button
+                  type="button"
+                  onClick={() => onToggleLang('de')}
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
+                    currentLang === 'de' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  DE
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onToggleLang('en')}
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
+                    currentLang === 'en' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onToggleLang('fa')}
+                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
+                    currentLang === 'fa' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                >
+                  فارسی
+                </button>
+              </div>
+            </div>
+
+            {/* Section count / title */}
+            <div className="flex items-center justify-between pt-0.5">
+              <span className="text-[11px] uppercase tracking-widest text-amber-800 font-mono font-bold">
+                {currentLang === 'fa' ? 'فهرست بخش‌های سایت' : currentLang === 'en' ? 'Site Sections' : 'Bereiche der Website'}
+              </span>
+              <span className="text-[10px] font-mono text-stone-500">
+                {currentLang === 'fa' ? '۱۰ بخش' : currentLang === 'en' ? '10 Sections' : '10 Bereiche'}
+              </span>
+            </div>
+
+            {/* Vertikales Menü: Alle 10 Themen sauber untereinander mit großer Touch-Fläche */}
+            <div className="flex flex-col space-y-1.5">
+              {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
+                const isActive = !item.isContact && activeMenuId === item.id;
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => handleNavigateToItem(item)}
                     className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
                       isActive
-                        ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
-                        : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
+                        ? 'bg-amber-50/95 border-amber-400 text-amber-950 font-semibold ring-1 ring-amber-300'
+                        : 'bg-white border-stone-200/90 hover:bg-stone-50 text-stone-900'
                     }`}
                   >
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <span className={`text-[10px] font-mono font-bold w-5 shrink-0 ${isActive ? 'text-amber-900' : 'text-amber-800'}`}>
+                      <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                        isActive ? 'bg-amber-400 text-stone-950 border border-amber-300' : 'bg-stone-100 text-amber-800 border border-stone-200'
+                      }`}>
                         {item.num}
                       </span>
                       <div className="shrink-0">{getItemIcon(item.id)}</div>
@@ -595,7 +718,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         {getItemLabel(item)}
                       </span>
                     </div>
-                    <span className={`text-xs shrink-0 ml-1.5 ${isActive ? 'text-amber-700' : 'text-stone-300 group-hover:text-stone-500'}`}>
+                    <span className={`text-xs shrink-0 ml-1.5 ${isActive ? 'text-amber-800 font-bold' : 'text-stone-400 group-hover:text-stone-600'}`}>
                       →
                     </span>
                   </button>
@@ -604,21 +727,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             {/* Contact Button */}
-            <div className="pt-1 pb-1">
+            <div className="pt-1.5 pb-1">
               <button
+                type="button"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onOpenContact();
                 }}
-                className="w-full py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs"
+                className="w-full py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold tracking-wide transition-all text-center cursor-pointer shadow-xs flex items-center justify-center gap-2"
               >
-                {currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}
+                <Mail className="w-4 h-4" />
+                <span>{currentLang === 'de' ? 'Direkte Nachricht senden · Kontakt' : currentLang === 'fa' ? 'ارسال پیام مستقیم · تماس' : 'Send Direct Message · Contact'}</span>
               </button>
             </div>
           </div>
         </div>
       )}
-    </header>
     </>
   );
 };

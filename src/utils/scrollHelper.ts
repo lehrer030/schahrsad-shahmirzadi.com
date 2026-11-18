@@ -12,19 +12,11 @@ export const scrollToElementWithOffset = (
     if (!el) return;
 
     // Accurately determine the visible sticky header height
-    const brandBar = document.getElementById('brand-header-bar');
-    const topicsBar = document.getElementById('topics-navigation-bar');
-    let headerHeight = 0;
+    const headerEl = document.querySelector('header');
+    let headerHeight = headerEl ? headerEl.getBoundingClientRect().height : 0;
 
-    if (brandBar) {
-      headerHeight += brandBar.getBoundingClientRect().height;
-    }
-    if (topicsBar && window.getComputedStyle(topicsBar).display !== 'none') {
-      headerHeight += topicsBar.getBoundingClientRect().height;
-    }
-
-    if (!headerHeight || headerHeight < 40 || headerHeight > 200) {
-      headerHeight = window.innerWidth < 1024 ? 54 : 96;
+    if (!headerHeight || headerHeight < 40 || headerHeight > 220) {
+      headerHeight = window.innerWidth < 1024 ? 76 : 96;
     }
 
     const topMargin = window.innerWidth < 640 ? 12 : 20;
