@@ -845,90 +845,94 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         </div>
 
         {/* Section E: Kampfname, Mentale Stärke & Team */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           
-          {/* Card 1: Ring Name & Mentale Stärke / Inner Strength */}
-          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
-            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
-              <Sparkles className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'نام رزم و قدرت درونی' : currentLang === 'en' ? 'Ring Name & Inner Strength' : 'Kampfname & Mentale Stärke'}</span>
+          {/* Card 1 (Links): Trainer & Team - Mentoren, Trainer & Wegbegleiter */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+                <Users className="w-4 h-4" />
+                <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Coaches and Team' : 'Trainer & Team'}</span>
+              </div>
+              
+              <h4 className="font-serif font-bold text-lg sm:text-xl text-stone-900">
+                {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Coaches and Team' : 'Mentoren, Trainer & Wegbegleiter'}
+              </h4>
+
+              <ul className="text-xs sm:text-sm text-stone-700 space-y-3 leading-relaxed font-normal">
+                <li>
+                  <strong className="text-stone-900 font-semibold">Michael C.: </strong>
+                  {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : currentLang === 'en' ? 'Taught the technical fundamentals and laid the groundwork.' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
+                </li>
+                <li>
+                  <strong className="text-stone-900 font-semibold">Ferdinand Mack: </strong>
+                  {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'German kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
+                </li>
+                <li>
+                  <strong className="text-stone-900 font-semibold">Gia K. & Asly A.: </strong>
+                  {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : currentLang === 'en' ? 'Long-standing athletic sparring and training partners.' : 'Als langjährige sportliche Trainingspartner.'}
+                </li>
+                <li>
+                  <strong className="text-stone-900 font-semibold">Steve Barret: </strong>
+                  {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : currentLang === 'en' ? 'Artist, coach, and manager in professional combat sports (from 2018); joint LeySha Fight Night Berlin 2023 and music video "Stay With Me".' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
+                </li>
+              </ul>
             </div>
-            
-            <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'Ring Name & Inner Strength – In Sport and in Life' : 'Von »Prinzessin« zu »SchirZan« · Innere Stärke'}
-            </h4>
-
-            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-              {currentLang === 'fa'
-                ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
-                : currentLang === 'en'
-                ? 'From 2009 to 2023, she was known by her former ring name “Prinzessin” (“Princess”), a translation of her first name, Schahrsad. She no longer uses this name and is now known as “SchirZan”.'
-                : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
-            </p>
-
-            <div className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-2 border-t border-stone-100 space-y-2">
-              <h5 className="font-serif font-bold text-stone-900 text-xs sm:text-sm">
-                {currentLang === 'fa' ? 'قدرت درونی – در ورزش و در زندگی' : currentLang === 'en' ? 'Inner Strength – In Sport and in Life' : 'Innere Stärke – Im Sport und im Leben'}
-              </h5>
-              <p>
-                {currentLang === 'fa'
-                  ? 'برای شهزاد شاهمیرزادی، کیک‌بوکسینگ فراتر از یک ورزش بود: او را سرپا و استوار نگه می‌داشت، انضباط او را تقویت می‌کرد و در غلبه بر شکست‌ها یاری‌اش می‌رساند. قدرت ذهنی دست‌کم به اندازه آمادگی جسمانی برایش اهمیت داشت—و تاب‌آوری و اعتمادبه‌نفس او را در زندگی روزمره و محیط کار بارور می‌ساخت.'
-                  : currentLang === 'en'
-                  ? 'For Schahrsad Shahmirzadi, kickboxing was more than a sport: it kept her grounded, strengthened her discipline, and helped her overcome setbacks. Mental strength was at least as important to her as physical preparation—and also fostered resilience and self-confidence in everyday life and at work.'
-                  : 'Für Schahrsad Shahmirzadi war Kickboxen mehr als ein Sport: Es gab ihr Erdung, stärkte ihre Disziplin und half ihr, Rückschläge zu überwinden. Mentale Stärke war ihr mindestens ebenso wichtig wie physische Vorbereitung – und förderte auch im Alltag und Beruf Widerstandskraft und Selbstvertrauen.'}
-              </p>
-              <p>
-                {currentLang === 'fa'
-                  ? 'او شجاعت، پشتکار، اراده پولادین و باور به خود را ارکان اصلی موفقیت می‌دانست. همراهی تیمی پشتیبان، تنوع و لذت بردن از آنچه انجام می‌داد نیز به همان اندازه مهم بودند. طبیعت به او نیرویی مضاعف می‌بخشید و در پذیرش شکست‌ها و تجدید قوا یاری‌رسانش بود.'
-                  : currentLang === 'en'
-                  ? 'She considered courage, perseverance, willpower, and self-belief essential to her success. A supportive team, versatility, and enjoyment of what she did were equally important. Nature gave her additional strength, helping her process defeats and recharge.'
-                  : 'Mut, Beharrlichkeit, Willenskraft und der Glaube an sich selbst betrachtete sie als unverzichtbar für ihren Erfolg. Ein unterstützendes Team, Vielseitigkeit und die Freude an dem, was sie tat, waren ebenso wichtig. Die Natur gab ihr zusätzliche Kraft, um Niederlagen zu verarbeiten und neue Energie zu schöpfen.'}
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2: Trainer & Team - Coaches and Team */}
-          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
-            <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
-              <Users className="w-4 h-4" />
-              <span>{currentLang === 'fa' ? 'مربیان و همراهان' : currentLang === 'en' ? 'Coaches and Team' : 'Trainer & Team'}</span>
-            </div>
-            
-            <h4 className="font-serif font-bold text-lg text-stone-900">
-              {currentLang === 'fa' ? 'یاران و مربیان راه قهرمانی' : currentLang === 'en' ? 'Coaches and Team' : 'Mentoren, Trainer & Wegbegleiter'}
-            </h4>
-
-            <ul className="text-xs text-stone-700 space-y-2.5 leading-relaxed">
-              <li>
-                <strong className="text-amber-900 font-bold">Michael C.: </strong>
-                {currentLang === 'fa' ? 'آموزش اصول فنی و پایه‌گذاری مسیر اولیه قهرمانی' : currentLang === 'en' ? 'Taught the technical fundamentals and laid the groundwork.' : 'Vermittelte die technischen Grundlagen und schuf das Fundament.'}
-              </li>
-              <li>
-                <strong className="text-amber-900 font-bold">Ferdinand Mack: </strong>
-                {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'German kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
-              </li>
-              <li>
-                <strong className="text-amber-900 font-bold">Gia K. & Asly A.: </strong>
-                {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : currentLang === 'en' ? 'Long-standing athletic sparring and training partners.' : 'Als langjährige sportliche Trainingspartner.'}
-              </li>
-              <li>
-                <strong className="text-amber-900 font-bold">Steve Barret: </strong>
-                {currentLang === 'fa' ? 'هنرمند، مربی و مدیر برنامه‌های حرفه‌ای او؛ طراح رویداد LeySha Fight Night و سازنده ویدیوی Stay With Me' : currentLang === 'en' ? 'Artist, coach, and manager in professional combat sports (from 2018); joint LeySha Fight Night Berlin 2023 and music video "Stay With Me".' : 'Künstler, Trainer und Manager im Profibereich (ab 2018); gemeinsame LeySha Fight Night Berlin 2023 und Musikvideo „Stay With Me“.'}
-              </li>
-            </ul>
 
             {/* Persönliche Anmerkung / Personal Note */}
-            <div className="pt-3 border-t border-stone-100 bg-amber-50/60 p-3.5 rounded-xl border border-amber-200/60">
-              <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-amber-900 block mb-1">
+            <div className="pt-3 border-t border-stone-100 bg-[#faf8f5] p-3.5 sm:p-4 rounded-xl border border-stone-200/80">
+              <span className="text-[10px] sm:text-xs uppercase font-mono tracking-wider font-bold text-amber-900 block mb-1">
                 {currentLang === 'fa' ? 'یادداشت شخصی' : currentLang === 'en' ? 'Personal Note' : 'Persönliche Anmerkung'}
               </span>
-              <p className="text-xs italic text-stone-800 leading-relaxed font-serif">
+              <p className="text-xs sm:text-sm italic text-stone-800 leading-relaxed font-serif">
                 {currentLang === 'fa'
                   ? '«حمایت‌ها و تجربیات مشترک با آن‌ها زندگی مرا برای همیشه شکل داد. از صمیم قلب برای وجودشان سپاسگزارم.»'
                   : currentLang === 'en'
                   ? '“Their support and our shared experiences have shaped who I am and will stay with me throughout my life. For that, I am deeply grateful.”'
                   : '„Ihre Unterstützung und die gemeinsamen Erfahrungen haben mich für mein Leben geprägt. Dafür bin ich ihnen von Herzen dankbar.“'}
               </p>
+            </div>
+          </div>
+
+          {/* Card 2 (Rechts): Ring Name & Mentale Stärke / Inner Strength */}
+          <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+                <Sparkles className="w-4 h-4" />
+                <span>{currentLang === 'fa' ? 'نام رزم و قدرت درونی' : currentLang === 'en' ? 'Ring Name & Inner Strength' : 'Kampfname & Mentale Stärke'}</span>
+              </div>
+              
+              <h4 className="font-serif font-bold text-lg sm:text-xl text-stone-900">
+                {currentLang === 'fa' ? 'از «پرنسس» تا «شیرزن»' : currentLang === 'en' ? 'Ring Name & Inner Strength – In Sport and in Life' : 'Von »Prinzessin« zu »SchirZan« · Innere Stärke'}
+              </h4>
+
+              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+                {currentLang === 'fa'
+                  ? 'از سال ۲۰۰۹ تا ۲۰۲۳، او در رینگ با نام «پرنسس» (ترجمه نام خود شهزاد) شناخته می‌شد. امروز او با افتخار نام «شیرزن» (شیر + زن) را برگزیده است—نمادی اصیل از شجاعت، ایستادگی و قدرت درونی زنان.'
+                  : currentLang === 'en'
+                  ? 'From 2009 to 2023, she was known by her former ring name “Prinzessin” (“Princess”), a translation of her first name, Schahrsad. She no longer uses this name and is now known as “SchirZan”.'
+                  : 'Von 2009 bis 2023 stieg sie unter dem Ringnamen „Prinzessin“ in den Ring (einer Übersetzung ihres Vornamens Schahrsad). Heute tritt sie als „SchirZan“ auf – die persische Verbindung von Shir (Löwe) und Zan (Frau), die für Mut, Würde und Frauenrechte steht.'}
+              </p>
+
+              <div className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-3 border-t border-stone-100 space-y-2.5">
+                <h5 className="font-serif font-bold text-stone-900 text-xs sm:text-sm">
+                  {currentLang === 'fa' ? 'قدرت درونی – در ورزش و در زندگی' : currentLang === 'en' ? 'Inner Strength – In Sport and in Life' : 'Innere Stärke – Im Sport und im Leben'}
+                </h5>
+                <p>
+                  {currentLang === 'fa'
+                    ? 'برای شهزاد شاهمیرزادی، کیک‌بوکسینگ فراتر از یک ورزش بود: او را سرپا و استوار نگه می‌داشت، انضباط او را تقویت می‌کرد و در غلبه بر شکست‌ها یاری‌اش می‌رساند. قدرت ذهنی دست‌کم به اندازه آمادگی جسمانی برایش اهمیت داشت—و تاب‌آوری و اعتمادبه‌نفس او را در زندگی روزمره و محیط کار بارور می‌ساخت.'
+                    : currentLang === 'en'
+                    ? 'For Schahrsad Shahmirzadi, kickboxing was more than a sport: it kept her grounded, strengthened her discipline, and helped her overcome setbacks. Mental strength was at least as important to her as physical preparation—and also fostered resilience and self-confidence in everyday life and at work.'
+                    : 'Für Schahrsad Shahmirzadi war Kickboxen mehr als ein Sport: Es gab ihr Erdung, stärkte ihre Disziplin und half ihr, Rückschläge zu überwinden. Mentale Stärke war ihr mindestens ebenso wichtig wie physische Vorbereitung – und förderte auch im Alltag und Beruf Widerstandskraft und Selbstvertrauen.'}
+                </p>
+                <p>
+                  {currentLang === 'fa'
+                    ? 'او شجاعت، پشتکار، اراده پولادین و باور به خود را ارکان اصلی موفقیت می‌دانست. همراهی تیمی پشتیبان، تنوع و لذت بردن از آنچه انجام می‌داد نیز به همان اندازه مهم بودند. طبیعت به او نیرویی مضاعف می‌بخشید و در پذیرش شکست‌ها و تجدید قوا یاری‌رسانش بود.'
+                    : currentLang === 'en'
+                    ? 'She considered courage, perseverance, willpower, and self-belief essential to her success. A supportive team, versatility, and enjoyment of what she did were equally important. Nature gave her additional strength, helping her process defeats and recharge.'
+                    : 'Mut, Beharrlichkeit, Willenskraft und der Glaube an sich selbst betrachtete sie als unverzichtbar für ihren Erfolg. Ein unterstützendes Team, Vielseitigkeit und die Freude an dem, was sie tat, waren ebenso wichtig. Die Natur gab ihr zusätzliche Kraft, um Niederlagen zu verarbeiten und neue Energie zu schöpfen.'}
+                </p>
+              </div>
             </div>
           </div>
 
