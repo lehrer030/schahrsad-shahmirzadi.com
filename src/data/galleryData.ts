@@ -105,14 +105,14 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     photos: [
       {
         id: 'run-gallery-01',
-        src: './images/2026_10_image00001-scaled.webp',
-        alt: 'BMW BERLIN-MARATHON 2026 — Finisher-Medaille & Friedenszeichen',
-        locationDe: 'BMW BERLIN-MARATHON 2026 · Berlin',
-        locationEn: 'BMW BERLIN-MARATHON 2026 · Berlin',
-        locationFa: 'ماراتن برلین ۲۰۲۶ · برلین',
-        captionDe: 'Berlin Marathon 2026 — Ich bin als deutsch-iranische Frau gelaufen: für Würde und Gleichberechtigung, gegen patriarchale Strukturen in Familien.',
-        captionEn: 'Berlin Marathon 2026 — I ran as a German-Iranian woman: for dignity and equality, against patriarchal structures within families.',
-        captionFa: 'ماراتن برلین ۲۰۲۶ — من به عنوان زنی ایرانی-آلمانی دویدم: برای کرامت و برابری، علیه ساختارهای پدرسالارانه در خانواده‌ها.'
+        src: './images/2026_05_image00001-scaled-1.webp',
+        alt: '45. Berliner Halbmarathon: Running for Free Iran',
+        locationDe: '45. Berliner Halbmarathon · Berlin',
+        locationEn: '45th Berlin Half Marathon · Berlin',
+        locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
+        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
+        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
       },
       {
         id: 'run-gallery-02',
@@ -126,29 +126,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'کلیه شرکت‌کنندگان ماراتن بی‌ام‌و برلین ۲۰۲۶ به همراه تمامی قهرمانان از سال ۱۹۷۴ تا ۲۰۲۵ به ترتیب حروف الفبا بر روی تالار مشاهیر (Wall of Fame) ثبت شده‌اند.'
       },
       {
-        id: 'run-gallery-05',
-        src: './images/2026_05_image00001-scaled.webp',
-        alt: 'SchirZan mit Deutschlandfahne — Sport & Demokratie',
-        locationDe: 'Berlin · Sport & Demokratie',
-        locationEn: 'Berlin · Sports & Democracy',
-        locationFa: 'برلین · ورزش و دموکراسی',
-        captionDe: 'Sportliche Botschaft für demokratischen Zusammenhalt, Freiheit und Menschenwürde.',
-        captionEn: 'Sporting commitment to democratic cohesion, freedom, and human dignity.',
-        captionFa: 'پیام ورزشی برای همبستگی دموکراتیک، آزادی و کرامت انسانی.'
-      },
-      {
-        id: 'run-gallery-06',
-        src: './images/2026_05_image00002-scaled.webp',
-        alt: '45. Berliner Halbmarathon: Running for Free Iran',
-        locationDe: '45. Berliner Halbmarathon · Berlin',
-        locationEn: '45th Berlin Half Marathon · Berlin',
-        locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
-        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
-        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
-      },
-      {
-        id: 'run-gallery-07',
+        id: 'run-gallery-03',
         src: './images/2026_08_Adidas-City-Night-Run-Berlin-2026-1536x2048.webp',
         alt: 'Adidas City Night Run Berlin 2026',
         locationDe: 'Gedächtniskirche · Berlin',
@@ -159,7 +137,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
       },
       {
-        id: 'run-gallery-08',
+        id: 'run-gallery-04',
         src: './images/2026_08_ecchr-human-rights-support-4-1536x2048.webp',
         alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
         locationDe: 'Spendenlauf 2027 · ECCHR Berlin',
