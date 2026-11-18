@@ -31,7 +31,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
     <div className="space-y-12 sm:space-y-16 max-w-5xl mx-auto">
       
       {/* 1. Ausstellungen / Exhibitions 2026 (Trieste Photo Days & Fringe, Italien) */}
-      <section id="exhibitions" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="exhibitions" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <SectionHeader
           num="03"
           shortTitleDe="Ausstellungen"
@@ -157,7 +157,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
       </section>
 
       {/* 2. Publications, Winners E-Books, Videos & Editor's Choice */}
-      <section id="publications" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="publications" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <SectionHeader
           num="04"
           shortTitleDe="Publikationen"
@@ -176,7 +176,7 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
       </section>
 
       {/* 3. Press Coverage & Features */}
-      <section id="press-features" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
+      <section id="press-features" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs">
         <SectionHeader
           num="05"
           shortTitleDe="Presse"

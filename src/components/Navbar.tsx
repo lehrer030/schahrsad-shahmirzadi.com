@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Globe, Menu, X, Sparkles, Trophy, BookOpen, MapPin, Award, Newspaper, Heart, GraduationCap, Mail, User, Image as ImageIcon, ExternalLink } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { scrollToElementWithOffset } from '../utils/scrollHelper';
@@ -201,26 +201,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
   const [isScrolled, setIsScrolled] = useState(false);
-  const navScrollRef = useRef<HTMLDivElement>(null);
-  const activeItemRef = useRef<HTMLButtonElement>(null);
-
-  // Automatisches horizontales Nachführen des aktiven Menüpunkts auf Mobilgeräten & Tablets
-  useEffect(() => {
-    if (activeItemRef.current && navScrollRef.current) {
-      const container = navScrollRef.current;
-      const item = activeItemRef.current;
-      const containerRect = container.getBoundingClientRect();
-      const itemRect = item.getBoundingClientRect();
-
-      if (itemRect.left < containerRect.left + 24 || itemRect.right > containerRect.right - 24) {
-        item.scrollIntoView({
-          behavior: 'smooth',
-          inline: 'center',
-          block: 'nearest'
-        });
-      }
-    }
-  }, [activeMenuId]);
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -286,10 +266,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
     setActiveMenuId(item.id);
 
-    // Direct, exact scroll so the clicked heading/card sits immediately under the sticky header
-    // with equal top spacing matching the left screen margin (16px on mobile matching px-4)
+    // Präzises Scrollen zur Zielsektion mit kurzem Delay für sanftes Schließen des Mobilmenüs
     const targetId = item.id === 'biography' ? 'biography-profile' : item.targetId;
-    scrollToElementWithOffset(targetId, 60);
+    setTimeout(() => {
+      scrollToElementWithOffset(targetId);
+    }, 100);
   };
 
   const getItemLabel = (item: OriginalMenuItem) => {
@@ -475,25 +456,21 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       </div>
 
-      {/* Row 2: 10 Topics Navigation Bar - 2. Zeile im Header (vollständig responsiv auf Desktop & Mobil) */}
+      {/* Row 2: 10 Topics Navigation Bar - AUSSCHLIESSLICH auf Desktop & großen Bildschirmen (hidden lg:block) */}
       <nav
         id="topics-navigation-bar"
-        className="w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300"
+        className="hidden lg:block w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300"
         aria-label="Themen-Navigation"
       >
-        <div className="max-w-[1720px] mx-auto px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-20">
-          <div
-            ref={navScrollRef}
-            className="flex items-center lg:justify-center gap-1 sm:gap-1.5 xl:gap-2 overflow-x-auto no-scrollbar scroll-smooth py-1 sm:py-1.5 flex-nowrap"
-          >
+        <div className="max-w-[1720px] mx-auto px-4 lg:px-8 xl:px-12 2xl:px-20">
+          <div className="flex items-center justify-center gap-1.5 xl:gap-2 py-1.5 flex-nowrap">
             {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
               const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
                   key={item.id}
-                  ref={isActive ? activeItemRef : null}
                   onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 sm:px-2.5 py-1 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 sm:gap-1.5 shrink-0 whitespace-nowrap text-xs ${
+                  className={`group px-2 xl:px-2.5 py-1 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1.5 shrink-0 whitespace-nowrap text-xs ${
                     isActive
                       ? 'bg-stone-900 text-white shadow-xs font-semibold'
                       : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/70'
@@ -501,7 +478,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   title={getItemLabel(item)}
                 >
                   <span
-                    className={`font-mono text-[9.5px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                    className={`font-mono text-[9.5px] xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
                       isActive
                         ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
                         : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
@@ -586,15 +563,15 @@ export const Navbar: React.FC<NavbarProps> = ({
               </span>
             </div>
 
-            {/* List of 10 items */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {ORIGINAL_11_MENU_ITEMS.map((item) => {
+            {/* Vertikales Menü: Alle 10 Themen sauber untereinander wie am Anfang */}
+            <div className="flex flex-col space-y-2">
+              {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
                 const isActive = !item.isContact && activeMenuId === item.id;
                 return (
                   <button
                     key={item.id}
                     onClick={() => handleNavigateToItem(item)}
-                    className={`w-full p-2.5 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
+                    className={`w-full p-2.5 sm:p-3 rounded-xl border transition-all flex items-center justify-between text-left rtl:text-right cursor-pointer group shadow-2xs ${
                       isActive
                         ? 'bg-amber-50/90 border-amber-300 text-amber-950 font-semibold'
                         : 'bg-white border-stone-200/80 hover:bg-stone-50 text-stone-900'
@@ -605,7 +582,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                         {item.num}
                       </span>
                       <div className="shrink-0">{getItemIcon(item.id)}</div>
-                      <span className="text-xs truncate">
+                      <span className="text-xs sm:text-sm font-medium truncate">
                         {getItemLabel(item)}
                       </span>
                     </div>

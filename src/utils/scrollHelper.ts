@@ -11,25 +11,26 @@ export const scrollToElementWithOffset = (
     const el = typeof target === 'string' ? document.getElementById(target) : target;
     if (!el) return;
 
-    // Accurately determine the bottom edge of the sticky header on screen.
+    // Accurately determine the visible sticky header height
+    const brandBar = document.getElementById('brand-header-bar');
+    const topicsBar = document.getElementById('topics-navigation-bar');
     let headerHeight = 0;
-    const header = document.querySelector('header');
 
-    if (header) {
-      headerHeight = header.getBoundingClientRect().height;
+    if (brandBar) {
+      headerHeight += brandBar.getBoundingClientRect().height;
+    }
+    if (topicsBar && window.getComputedStyle(topicsBar).display !== 'none') {
+      headerHeight += topicsBar.getBoundingClientRect().height;
     }
 
-    // Safety fallback if header is not yet rendered or inflated by temporary overlays
-    if (!headerHeight || headerHeight > 220 || headerHeight < 40) {
-      headerHeight = window.innerWidth < 1024 ? 90 : 100;
+    if (!headerHeight || headerHeight < 40 || headerHeight > 200) {
+      headerHeight = window.innerWidth < 1024 ? 54 : 96;
     }
 
-    // Exact equal spacing: on mobile px-4 is 16px (1rem).
-    // The top gap between the bottom of sticky header and top of section card equals the left margin!
-    const topMargin = window.innerWidth < 640 ? 16 : (window.innerWidth < 1024 ? 20 : 24);
+    const topMargin = window.innerWidth < 640 ? 12 : 20;
 
     const elementPosition = el.getBoundingClientRect().top + window.pageYOffset;
-    const targetScrollY = Math.max(0, elementPosition - headerHeight - topMargin);
+    const targetScrollY = Math.max(0, Math.round(elementPosition - headerHeight - topMargin));
 
     window.scrollTo({
       top: targetScrollY,

@@ -17,7 +17,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   const { kickboxing, running, athensGala } = GALLERY_PAGE_DATA;
 
   return (
-    <section id="gallery" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+    <section id="gallery" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200">
       {/* 10 Galerie Header – Matching Navbar 10 */}
       <SectionHeader
         num="10"

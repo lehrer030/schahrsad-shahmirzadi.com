@@ -321,7 +321,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1: PHOTOGRAPHIE (WERKE & AUSZEICHNUNGEN)
                ------------------------------------------------------------- */}
-          <section id="architecture" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-4 max-w-6xl mx-auto w-full">
+          <section id="architecture" className="scroll-mt-16 lg:scroll-mt-28 pt-4 max-w-6xl mx-auto w-full">
 
             {/* 01 Photographie Header – Matching Navbar 01 */}
             <SectionHeader
@@ -394,7 +394,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1.2: FINE ART
                ------------------------------------------------------------- */}
-          <section id="fine-art" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+          <section id="fine-art" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
                 <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
@@ -429,7 +429,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1.3: SOCIAL & ENVIRONMENTAL THEMES
                ------------------------------------------------------------- */}
-          <section id="social-environmental" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+          <section id="social-environmental" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
                 <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
@@ -465,7 +465,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 1.4: PORTRAITS
                ------------------------------------------------------------- */}
-          <section id="portraits" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
+          <section id="portraits" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
                 <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
@@ -500,7 +500,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 2: INTERNATIONAL PHOTOGRAPHY AWARD REFERENCES & PHOTOART
                ------------------------------------------------------------- */}
-          <section id="award-references" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
+          <section id="award-references" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200 relative">
             <div id="photoart" className="absolute -top-24 left-0 pointer-events-none" />
             <AwardReferencesSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
           </section>
@@ -509,7 +509,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 3: EXHIBITIONS, PUBLICATIONS, VIDEOS & PRESS
                ------------------------------------------------------------- */}
-          <div id="press" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+          <div id="press" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200">
             <PressSection currentLang={currentLang} onOpenLightbox={handleOpenLightbox} />
           </div>
 
@@ -523,7 +523,7 @@ export default function App() {
           {/* -------------------------------------------------------------
                 SECTION 5: BIOGRAPHY, ACADEMIC EDUCATION & COMMITMENT
                ------------------------------------------------------------- */}
-          <div id="biography" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200">
+          <div id="biography" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200">
             <ArtistVita currentLang={currentLang} />
           </div>
 

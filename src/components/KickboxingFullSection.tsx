@@ -217,7 +217,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
   ];
 
   return (
-    <section id="kickboxing" className="scroll-mt-[148px] lg:scroll-mt-[190px] pt-6 border-t border-stone-200 relative">
+    <section id="kickboxing" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200 relative">
       <div id="kickboxen" className="absolute -top-24 left-0 pointer-events-none" />
 
       {/* 06 Kickboxen Header – Matching Navbar 06 */}

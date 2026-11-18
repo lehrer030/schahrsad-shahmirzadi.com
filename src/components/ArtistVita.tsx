@@ -15,7 +15,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
       {/* =========================================================================
           SECTION 1: BIOGRAFIE (ORIGINAL WORDPRESS POST 6: /vita/)
          ========================================================================= */}
-      <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
+      <section id="biography-profile" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
         
         {/* 07 Biografie Header – Matching Navbar 07 */}
         <SectionHeader
@@ -267,7 +267,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
       {/* =========================================================================
           SECTION 2: EDUCATION, PROFESSIONAL CAREER & MASTER’S STUDIES (WP Post 1728)
          ========================================================================= */}
-      <section id="education" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
+      <section id="education" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
 
         {/* 08 Bildungsweg Header – Matching Navbar 08 */}
         <SectionHeader
@@ -449,7 +449,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
       {/* =========================================================================
           SECTION 3: COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (WP Post 435)
          ========================================================================= */}
-      <section id="engagement" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
+      <section id="engagement" className="scroll-mt-16 lg:scroll-mt-28 bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
 
         {/* 09 Engagement Header – Matching Navbar 09 */}
         <SectionHeader
