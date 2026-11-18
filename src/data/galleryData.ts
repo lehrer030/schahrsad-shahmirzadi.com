@@ -214,13 +214,13 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       {
         id: 'ipa-athens-03',
         src: './images/2025_11_image00014-1024x768.webp',
-        alt: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 - Athen',
+        alt: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 – Athen',
         locationDe: 'IPA Gala 2025 · Athen',
         locationEn: 'IPA Gala 2025 · Athens',
         locationFa: 'مراسم گالا IPA ۲۰۲۵ · آتن',
-        captionDe: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 - Athen: Die feierliche Abendveranstaltung.',
-        captionEn: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 - Athens: The festive evening gala.',
-        captionFa: 'جوایز بین‌المللی عکاسی (IPA)، فستیوال عکس و گالا ۲۰۲۵ - آتن: شب پرشکوه گالا.'
+        captionDe: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 – Athen',
+        captionEn: 'International Photography Awards (IPA), Photo-Fest & Gala 2025 – Athens',
+        captionFa: 'جوایز بین‌المللی عکاسی (IPA)، فستیوال عکس و گالا ۲۰۲۵ – آتن'
       },
       {
         id: 'ipa-athens-04',
