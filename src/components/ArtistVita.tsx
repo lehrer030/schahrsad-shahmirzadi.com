@@ -1,6 +1,6 @@
 import React from 'react';
 import { ACADEMIC_MILESTONES, type Language } from '../data/photographyData';
-import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap, MapPin } from 'lucide-react';
+import { ExternalLink, Leaf, Sparkles, Trophy, GraduationCap, MapPin, Camera, Compass, Heart } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 
 interface ArtistVitaProps {
@@ -11,118 +11,281 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
   return (
     <div className="space-y-12 sm:space-y-16 max-w-5xl mx-auto">
 
-      {/* 1. BIOGRAFIE & BERUFLICHER WERDEGANG */}
-      <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+      {/* =========================================================================
+          SECTION 1: BIOGRAFIE (ORIGINAL WORDPRESS POST 6: /vita/)
+         ========================================================================= */}
+      <section id="biography-profile" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
+        
+        {/* Top Header */}
         <div className="border-b border-stone-100 pb-4">
           <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-            {currentLang === 'de' ? 'Biografie & Werdegang' : currentLang === 'fa' ? 'زندگینامه و سوابق حرفه‌ای' : 'Biography & Career'}
+            {currentLang === 'de' ? 'Biografie & Werdegang' : currentLang === 'fa' ? 'زندگینامه و سوابق' : 'Biography & Profile'}
           </span>
           <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold mt-1">
-            {currentLang === 'de' ? 'Beruflicher Hintergrund & Künstlerische Projekte' : currentLang === 'fa' ? 'پیشینه حرفه‌ای و پروژه‌های هنری' : 'Professional Background & Artistic Projects'}
+            {currentLang === 'de' ? 'Biography · SchirZan | Schahrsad Shahmirzadi' : currentLang === 'fa' ? 'زندگینامه · شیرزن | شهزاد شاهمیرزادی' : 'Biography · SchirZan | Schahrsad Shahmirzadi'}
           </h3>
         </div>
-        {/* Personal Identity Block */}
+
+        {/* Hero Portrait: Steve Barret Photo (from WordPress /vita/) */}
+        <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
+          <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[460px] w-full overflow-hidden bg-stone-100">
+            <img
+              src={resolveAsset('/images/2025_07_image00003-scaled.webp')}
+              onError={(e) => {
+                const img = e.currentTarget;
+                if (!img.src.endsWith('.jpg')) {
+                  img.src = resolveAsset('/images/2025_07_image00003.jpg');
+                }
+              }}
+              alt="SchirZan | Schahrsad Shahmirzadi – Photo by Steve Barret"
+              className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.01]"
+              loading="lazy"
+            />
+          </div>
+          <div className="p-3 sm:p-4 bg-stone-50/90 border-t border-stone-200/80 flex items-center justify-between text-xs text-stone-600">
+            <span className="font-serif italic font-medium text-stone-800">
+              SchirZan | Schahrsad Shahmirzadi
+            </span>
+            <span className="font-mono text-[11px] text-stone-500">
+              Photo by Steve Barret
+            </span>
+          </div>
+        </div>
+
+        {/* 1. Personal Identity Block */}
         <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/50 border border-amber-200/70 space-y-3">
           <div className="flex items-center gap-2 text-amber-900 font-mono text-xs uppercase tracking-wider font-bold">
             <Sparkles className="w-4 h-4 text-amber-700" />
-            <span>{currentLang === 'fa' ? 'هویت فردی و پیشینه فرهنگی' : 'Personal Identity'}</span>
+            <span>{currentLang === 'fa' ? 'هویت فردی' : 'Personal Identity'}</span>
           </div>
           <h4 className="text-lg font-serif font-bold text-stone-900">
             {currentLang === 'fa'
-              ? 'شهزاد شاهمیرزادی · پیشینه و هویت'
+              ? 'شهزاد شاهمیرزادی · هویت و پیشینه فرهنگی'
               : currentLang === 'de'
-              ? 'Persönliche Identität & Bikulturelle Herkunft'
-              : 'Personal Identity & Dual Heritage'}
+              ? 'Persönliche Identität'
+              : 'Personal Identity'}
           </h4>
           <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
             {currentLang === 'de'
               ? 'Schahrsad Shahmirzadi, geboren am 4. Februar 1985 in Berlin, ist deutsch-iranischer Herkunft. Ihre Mutter ist Deutsche, ihr Vater stammte aus dem Iran. Sie wuchs in Berlin-Wilmersdorf auf. Ihre bikulturelle Herkunft prägt ihr Identitätsverständnis und ihr Engagement für gesellschaftliche Vielfalt.'
               : currentLang === 'fa'
-              ? 'شهزاد شاهمیرزادی متولد ۴ فوریه ۱۹۸۵ در برلین، دارای اصالت دوگانه ایرانی-آلمانی است. مادر او آلمانی و پدرش اهل ایران بود. او در منطقه ویلمرسدورف برلین بزرگ شد. این پیشینه دوگانه فرهنگی، بینش هویتی و تعهد استوار او به تنوع و برابری در جامعه را شکل داده است.'
+              ? 'شهزاد شاهمیرزادی، متولد ۴ فوریه ۱۹۸۵ در برلین، دارای اصالت دوگانه ایرانی-آلمانی است. مادر او آلمانی و پدرش اهل ایران بود. او در برلین-ویلمرسدورف بزرگ شد. میراث دوگانه فرهنگی او، درک هویتی و تعهد او به تنوع در جامعه را شکل می‌دهد.'
               : 'Schahrsad Shahmirzadi, born on February 4, 1985, in Berlin, is German-Iranian. Her mother is German, and her father was from Iran. She grew up in Berlin-Wilmersdorf. Her dual cultural heritage shapes her sense of identity and her commitment to diversity in society.'}
           </p>
         </div>
 
-        {/* Additional 2 Pillars: Professional Background & Artistic Projects (Biografie) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-
-          {/* Pillar: Professional Background / Water Protection */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
-                  <Leaf className="w-5 h-5" />
-                </div>
-                <span className="text-[11px] font-mono font-semibold text-emerald-800 uppercase tracking-wider">
-                  Professional Background
-                </span>
-              </div>
-              <h4 className="text-lg font-serif font-bold text-stone-900">
-                {currentLang === 'fa'
-                  ? 'حفاظت از منابع آب، محیط زیست و مطالعات آکادمیک'
-                  : currentLang === 'de'
-                    ? 'Beruflicher Hintergrund & Umweltwissenschaften'
-                    : 'Professional Background & Environmental Sciences'}
-              </h4>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                {currentLang === 'de'
-                  ? 'Seit 2024 ist Schahrsad Shahmirzadi im Umweltministerium in Potsdam tätig und befasst sich mit Gewässerschutzthemen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser LAWA. Berufsbegleitend absolviert sie ein Masterstudium in Angewandten Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz, um ihr fundiertes Fachwissen im Umweltschutz weiter auszubauen.'
-                  : currentLang === 'fa'
-                    ? 'از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام در حوزه مسائل منابع آب و در کارگروه فدرال آب LAWA فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.'
-                    : 'Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water issues including work within the German Working Group on Water Issues LAWA. Alongside, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.'}
-              </p>
-            </div>
-            <div className="pt-2 border-t border-stone-200/60 text-[11px] font-mono text-emerald-900 font-semibold">
-              Umweltministerium Potsdam · Universität Koblenz
-            </div>
+        {/* 2. Artist Name SchirZan */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/90 space-y-4">
+          <div className="flex items-center gap-2 text-stone-900 font-mono text-xs uppercase tracking-wider font-bold">
+            <Heart className="w-4 h-4 text-red-600" />
+            <span>{currentLang === 'fa' ? 'نام هنری شیرزن' : currentLang === 'de' ? 'Künstlername SchirZan' : 'Artist Name SchirZan'}</span>
           </div>
+          <h4 className="text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'مفهوم و آرمان نام هنری «شیرزن»'
+              : currentLang === 'de'
+              ? 'Künstlername SchirZan'
+              : 'Artist Name SchirZan'}
+          </h4>
+          <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
+            <p>
+              {currentLang === 'de'
+                ? 'Ihr Künstlername SchirZan stammt aus dem Persischen und setzt sich aus zwei Wörtern zusammen:'
+                : currentLang === 'fa'
+                ? 'نام هنری او، شیرزن (SchirZan)، از زبان فارسی برگرفته شده و از دو واژه ترکیب یافته است:'
+                : 'Her artist name, SchirZan, comes from Persian and combines two words:'}
+            </p>
+            <ul className="space-y-1.5 pl-4 rtl:pr-4 font-medium text-stone-800">
+              <li>• <strong>Schir (شیر)</strong>: {currentLang === 'de' ? 'bedeutet „Löwe“' : currentLang === 'fa' ? 'به معنای «شیر»' : 'meaning “lion”'}</li>
+              <li>• <strong>Zan (زن)</strong>: {currentLang === 'de' ? 'bedeutet „Frau“' : currentLang === 'fa' ? 'به معنای «زن»' : 'meaning “woman”'}</li>
+            </ul>
+            <p>
+              {currentLang === 'de'
+                ? 'Zusammen bedeutet „SchirZan“ „Löwenfrau“ oder „Löwin“ und steht für den Mut, den eigenen Weg zu gehen.'
+                : currentLang === 'fa'
+                ? 'در کنار یکدیگر، «شیرزن» به معنای «زن شیردل» یا «شیرماده» است و نمادی از شجاعت برای پیمودن مسیر شخصی خود می‌باشد.'
+                : 'Together, “SchirZan” means “lion-woman” or “lioness” and represents the courage to follow one’s own path.'}
+            </p>
+            <p className="italic text-stone-800 bg-white/80 p-3 rounded-xl border border-stone-200/70">
+              {currentLang === 'de'
+                ? '„SchirZan“ steht auch dafür, benachteiligte Menschen zu unterstützen, ihren Stimmen Gehör zu verschaffen und sich für Gerechtigkeit, Gleichberechtigung und Menschlichkeit einzusetzen.'
+                : currentLang === 'fa'
+                ? '«شیرزن» همچنین نماد حمایت از افراد محروم و حاشیه‌نشین، رساندن صدای آنان و ایستادگی در راه عدالت، برابری و انسانیت است.'
+                : '“SchirZan” also stands for supporting disadvantaged people, amplifying their voices, and standing up for justice, equality, and humanity.'}
+            </p>
+          </div>
+        </div>
 
-          {/* Pillar: Her Own Photographic and Artistic Projects */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/80 flex flex-col justify-between space-y-4">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <span className="text-[11px] font-mono font-semibold text-amber-800 uppercase tracking-wider">
-                  Artistic Projects
-                </span>
-              </div>
-              <h4 className="text-lg font-serif font-bold text-stone-900">
-                {currentLang === 'fa'
-                  ? 'پروژه‌های هنری و عکاسی با محوریت جامعه و محیط‌زیست'
-                  : currentLang === 'de'
-                    ? 'Eigene photographische und künstlerische Projekte'
-                    : 'Her Own Photographic and Artistic Projects'}
-              </h4>
-              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                {currentLang === 'de'
-                  ? 'In ihren photographischen und künstlerischen Arbeiten setzt sich SchirZan mit gesellschaftlichen und ökologischen Themen auseinander. Zu ihren prämierten Projekten zählen:'
-                  : currentLang === 'fa'
-                    ? 'در آثار عکاسی و هنری خود، شیرزن چالش‌های اجتماعی و زیست‌محیطی را بررسی می‌کند. از جمله پروژه‌های برجسته او:'
-                    : 'In her photographic and artistic work, SchirZan explores social and environmental issues. Key projects include:'}
-              </p>
-              <ul className="text-xs text-stone-800 space-y-1.5 leading-relaxed font-medium">
-                <li>• <strong>„In Between Spaces“</strong> · Trieste Photo Days & Urban Photo Awards</li>
-                <li>• <strong>„Berlin: Attack on Queer, Diversity and Freedom“</strong> · BIFA Honorable Mention</li>
-                <li>• <strong>„LIFE – LOVE – FREEDOM · IRAN“</strong> · IPA Official Selection</li>
-                <li>• <strong>„The Dignity of the Animal is Inviolable“</strong> · LICC Official Selection</li>
-              </ul>
-            </div>
-            <div className="pt-2 border-t border-stone-200/60">
+        {/* 3. Photographer & Artist – Multiple International Awards */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-white border border-stone-200/90 space-y-4 shadow-2xs">
+          <div className="flex items-center gap-2 text-amber-900 font-mono text-xs uppercase tracking-wider font-bold">
+            <Camera className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'عکاسی و هنر' : 'Photographer & Artist'}</span>
+          </div>
+          <h4 className="text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'عکاس و هنرمند – دارای جوایز متعدد بین‌المللی'
+              : currentLang === 'de'
+              ? 'Photographer & Artist – Multiple International Awards'
+              : 'Photographer & Artist – Multiple International Awards'}
+          </h4>
+          <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
+            <p>
+              {currentLang === 'de'
+                ? 'Sie arbeitet als Photographin und Künstlerin unter dem Namen SchirZan | Schahrsad Shahmirzadi.'
+                : currentLang === 'fa'
+                ? 'او با نام هنری شیرزن | شهزاد شاهمیرزادی (SchirZan | Schahrsad Shahmirzadi) به عنوان عکاس و هنرمند فعالیت می‌کند.'
+                : 'She works as a photographer and artist under the name SchirZan | Schahrsad Shahmirzadi.'}
+            </p>
+            <p>
+              {currentLang === 'de'
+                ? 'Obwohl sie die Photographie und Kunst erst im April 2025 für sich entdeckte, erlangte sie noch im selben Jahr internationale Anerkennung als non-professional Photographin. Ihr künstlerischer Schwerpunkt liegt auf der Architekturphotographie. Sie arbeitet auch in den Bereichen Abstraktion, Fine Art, Urban Spaces und widmet sich gesellschaftlich relevanten Themen.'
+                : currentLang === 'fa'
+                ? 'اگرچه او عکاسی و هنر را در آوریل ۲۰۲۵ کشف کرد، اما در همان سال موفق به کسب اعتبار و تحسین بین‌المللی به عنوان یک عکاس غیرحرفه‌ای شد. تمرکز اصلی هنری او بر عکاسی معماری است. او همچنین در حوزه‌های انتزاعی، فاین آرت، فضاهای شهری و کاوش پیرامون مضامین مهم اجتماعی فعالیت می‌کند.'
+                : 'Although she only discovered photography and art in April 2025, she gained international recognition as a non-professional photographer within that same year. Her primary artistic focus is architectural photography. She also works in abstract, fine art, urban spaces and explores socially relevant themes.'}
+            </p>
+            <p>
+              {currentLang === 'de'
+                ? 'Ihre Arbeiten wurden bei renommierten internationalen Wettbewerben ausgezeichnet oder ausgewählt, darunter der Architecture MasterPrize, die International Photography Awards (IPA), die Budapest International Foto Awards (BIFA), die ND Awards, die Black & White Spider Awards, die London International Creative Competition (LICC), PERSPA und die URBAN Photo Awards.'
+                : currentLang === 'fa'
+                ? 'آثار او در رقابت‌های معتبر بین‌المللی از جمله Architecture MasterPrize، International Photography Awards (IPA)، Budapest International Foto Awards (BIFA)، ND Awards، Black & White Spider Awards، London International Creative Competition (LICC)، PERSPA و URBAN Photo Awards برگزیده و تقدیر شده‌اند.'
+                : 'Her work has received awards or been selected by international competitions including the Architecture MasterPrize, the International Photography Awards (IPA), the Budapest International Foto Awards (BIFA), the ND Awards, the Black & White Spider Awards, the London International Creative Competition (LICC), PERSPA, and the URBAN Photo Awards.'}
+            </p>
+            <p>
+              {currentLang === 'de'
+                ? 'Zu ihren Erfolgen zählen zwei Gewinnerserien in der Kategorie „Other Exterior“ beim Architecture MasterPrize sowie zahlreiche Honorable Mentions, Shortlist-Platzierungen, Official Selections, Nominee- und Editor’s Choice-Auszeichnungen. Bei den International Photography Awards 2026 erhielt sie drei Honorable Mentions und 14 Official Selections.'
+                : currentLang === 'fa'
+                ? 'دستاوردهای او شامل دو مجموعه برنده عنوان اول در رده «Other Exterior» در مسابقات معتبر Architecture MasterPrize، همراه با چندین تقدیرنامه افتخاری (Honorable Mentions)، راه‌یابی به فهرست نهایی (Shortlist)، انتخاب رسمی (Official Selection)، نامزدی (Nominee) و برگزیده سردبیران (Editor’s Choice) است. در جوایز جهانی عکاسی IPA 2026، او موفق به دریافت ۳ تقدیرنامه و ۱۴ انتخاب رسمی گردید.'
+                : 'Her achievements include two winner series in the “Other Exterior” category at the Architecture MasterPrize, alongside multiple Honorable Mentions, shortlist placements, Official Selections, Nominee, and Editor’s Choice selections. At the International Photography Awards 2026, she received three Honorable Mentions and 14 Official Selections.'}
+            </p>
+            <div className="pt-2">
               <a
-                href="#social-environmental"
+                href="#photography-works"
                 className="text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors inline-flex items-center gap-1 font-mono"
               >
-                <span>{currentLang === 'fa' ? 'مشاهده مجموعه‌ها در گالری آثار ←' : 'Zu den Werkserien im Portfolio →'}</span>
+                <span>{currentLang === 'fa' ? 'مشاهده تمامی آثار در بخش عکاسی ←' : currentLang === 'de' ? 'Weitere Details in den Bereichen „Photographer & Art“ und „Photography Works“ ansehen →' : 'Further details can be found in the sections “Photographer & Art” and “Photography Works” →'}</span>
               </a>
             </div>
           </div>
-
         </div>
+
+        {/* 4. World Champion Kickboxing */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-[#faf8f5] border border-stone-200/90 space-y-4">
+          <div className="flex items-center gap-2 text-stone-900 font-mono text-xs uppercase tracking-wider font-bold">
+            <Trophy className="w-4 h-4 text-amber-600" />
+            <span>{currentLang === 'fa' ? 'کیک‌بوکسینگ حرفه‌ای' : 'World Champion Kickboxing'}</span>
+          </div>
+          <h4 className="text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'قهرمان جهان در کیک‌بوکسینگ'
+              : currentLang === 'de'
+              ? 'World Champion Kickboxing'
+              : 'World Champion Kickboxing'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+            {currentLang === 'de'
+              ? 'Während ihrer aktiven Wettkampfkarriere zählte Schahrsad Shahmirzadi zu den erfolgreichsten deutschen Kickboxerinnen. Zu ihren Titeln und Qualifikationen gehören:'
+              : currentLang === 'fa'
+              ? 'در دوران حرفه‌ای مسابقات ورزشی، شهزاد شاهمیرزادی یکی از موفق‌ترین کیک‌بوکسورهای زن آلمان به شمار می‌رفت. عناوین و افتخارات برجسته او عبارتند از:'
+              : 'During her competitive career, Schahrsad Shahmirzadi was one of Germany’s most successful female kickboxers. Her titles and qualifications include:'}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? '10-fache Weltmeisterin' : currentLang === 'fa' ? '۱۰ بار قهرمانی جهان' : '10-time World Champion'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                WKU, ISKA, ICO; {currentLang === 'de' ? 'darunter zwei Profititel der WKU' : currentLang === 'fa' ? 'از جمله دو عنوان حرفه‌ای در سازمان WKU' : 'including two professional titles with the WKU'}
+              </p>
+            </div>
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? '2-fache Europameisterin' : currentLang === 'fa' ? '۲ بار قهرمانی اروپا' : 'Two-time European Champion'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                ICO; {currentLang === 'de' ? 'darunter ein Profititel der WKU' : currentLang === 'fa' ? 'از جمله یک عنوان حرفه‌ای در سازمان WKU' : 'including one professional title with the WKU'}
+              </p>
+            </div>
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? '3-fache Weltcupsiegerin' : currentLang === 'fa' ? '۳ بار قهرمانی جام جهانی' : 'Three-time World Cup Winner'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                WKU, WMAC, IAKSA
+              </p>
+            </div>
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? 'Deutsche Meisterin Pro/Am' : currentLang === 'fa' ? 'قهرمان حرفه‌ای/آماتور آلمان' : 'German Pro/Am Champion'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                ISKA
+              </p>
+            </div>
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? '15-fache Deutsche Meisterin' : currentLang === 'fa' ? '۱۵ بار قهرمان ملی و بین‌المللی آلمان' : '15-time German or Int. German Champion'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                WAKO, WKA, WKU, ISKA, ICO, IAKSA, WKC
+              </p>
+            </div>
+            <div className="p-3.5 bg-white rounded-xl border border-stone-200/80 space-y-1">
+              <div className="font-serif font-bold text-sm text-stone-900">
+                {currentLang === 'de' ? '3. Dan (Schwarzgurt)' : currentLang === 'fa' ? 'کمربند مشکی دان ۳' : 'Third-degree Black Belt (3rd Dan)'}
+              </div>
+              <p className="text-[11px] text-stone-600">
+                {currentLang === 'de' ? 'Eine von wenigen Frauen mit dieser Graduierung' : currentLang === 'fa' ? 'یکی از معدود زنانی که به این درجه عالی ورزشی نائل آمده است' : 'One of the few women to hold this rank in kickboxing'}
+              </p>
+            </div>
+          </div>
+
+          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal pt-2">
+            {currentLang === 'de'
+              ? 'Sie kämpfte überwiegend im Vollkontakt-Kickboxen und K-1 in den Gewichtsklassen zwischen 55 und 60 kg. Ihre sportliche Laufbahn entwickelte sich vollständig in Deutschland, und alle Erfolge erzielte sie für Deutschland.'
+              : currentLang === 'fa'
+              ? 'او عمدتاً در رشته‌های فول‌کنتاکت کیک‌بوکسینگ و K-1 در رده‌های وزنی بین ۵۵ تا ۶۰ کیلوگرم به مبارزه پرداخت. کارنامه ورزشی او تماماً در آلمان تکوین یافت و او تمامی عناوین پرافتخار خود را با نمایندگی از آلمان به دست آورد.'
+              : 'She competed primarily in full-contact kickboxing and K-1, in weight divisions between 55 and 60 kg. Her sporting career developed entirely in Germany, and she achieved all her successes representing Germany.'}
+          </p>
+
+          <div className="pt-1">
+            <a
+              href="#kickboxen"
+              className="text-xs font-semibold text-amber-900 hover:text-amber-950 transition-colors inline-flex items-center gap-1 font-mono"
+            >
+              <span>{currentLang === 'fa' ? 'مشاهده تمامی مدال‌ها و بخش کیک‌بوکسینگ ←' : currentLang === 'de' ? 'Ausführliche Details im Abschnitt „Weltmeisterin Kickboxen“ ansehen →' : 'Further details can be found in the “World Champion Kickboxing” section →'}</span>
+            </a>
+          </div>
+        </div>
+
+        {/* 5. Multiple Paths (Vielfältige Wege) */}
+        <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/40 border border-amber-200/60 space-y-3">
+          <div className="flex items-center gap-2 text-amber-900 font-mono text-xs uppercase tracking-wider font-bold">
+            <Compass className="w-4 h-4 text-amber-700" />
+            <span>{currentLang === 'fa' ? 'مسیرهای چندگانه' : currentLang === 'de' ? 'Vielfältige Wege' : 'Multiple Paths'}</span>
+          </div>
+          <h4 className="text-lg font-serif font-bold text-stone-900">
+            {currentLang === 'fa'
+              ? 'پیوند هنر، ورزش، علم و عمل'
+              : currentLang === 'de'
+              ? 'Multiple Paths'
+              : 'Multiple Paths'}
+          </h4>
+          <p className="text-xs sm:text-sm text-stone-800 leading-relaxed font-medium italic">
+            {currentLang === 'de'
+              ? 'SchirZan | Schahrsad Shahmirzadi bringt Photographie, Sport, akademisches Studium und berufliche Praxis zusammen und schöpft aus diesen unterschiedlichen Bereichen eine vielschichtige und unverwechselbare Perspektive.'
+              : currentLang === 'fa'
+              ? 'شیرزن | شهزاد شاهمیرزادی عکاسی، ورزش، تحصیلات دانشگاهی و تجربیات حرفه‌ای را در کنار یکدیگر قرار داده و با بهره‌گیری از این حوزه‌های گوناگون، دیدگاهی گسترده، عمیق و منحصر‌به‌فرد را خلق می‌کند.'
+              : 'SchirZan | Schahrsad Shahmirzadi brings together photography, sport, academic study, and professional practice, drawing on these different fields to develop a broad and distinctive perspective.'}
+          </p>
+        </div>
+
       </section>
 
-      {/* 2. INTERDISCIPLINARY ACADEMIC EDUCATION SECTION (Original WordPress Post 1728) */}
+      {/* =========================================================================
+          SECTION 2: EDUCATION, PROFESSIONAL CAREER & MASTER’S STUDIES (WP Post 1728)
+         ========================================================================= */}
       <section id="education" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
 
         {/* Header & Tagline */}
@@ -131,34 +294,31 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             <GraduationCap className="w-4 h-4 text-amber-800" />
             <span>
               {currentLang === 'de'
-                ? 'Akademische Laufbahn'
+                ? 'Bildung & Werdegang'
                 : currentLang === 'fa'
-                  ? 'سوابق تحصیلی و دانشگاهی'
-                  : 'Academic Background'}
+                  ? 'تحصیلات، حرفه و کارشناسی ارشد'
+                  : 'Education & Career'}
             </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
             {currentLang === 'de'
-              ? 'Interdisziplinärer akademischer Bildungsweg'
+              ? 'Education, Professional Career & Master’s Studies'
               : currentLang === 'fa'
-                ? 'مسیر بین‌رشته‌ای آکادمیک'
-                : 'Interdisciplinary Academic Education'}
+                ? 'تحصیلات، مسیر شغلی و مقطع کارشناسی ارشد'
+                : 'Education, Professional Career & Master’s Studies'}
           </h3>
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
-                <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
-                verfügt über einen interdisziplinären Bildungs- und Berufsweg in den Bereichen Recht, Sicherheit und Umwelt mit einem Schwerpunkt im Wasserbereich.
+                Im Jahr 2004 legte sie ihr Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster ab. Nach dem Grundstudium der Rechtswissenschaften an der Freien Universität Berlin trat sie in den Dienst der Berliner Polizei ein, um berufliche Laufbahn und Leistungssport zu verbinden (zuletzt LKA Berlin). Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend den Master of Science (M.Sc.) in Angewandten Umweltwissenschaften an der Universität Koblenz.
               </>
             ) : currentLang === 'fa' ? (
               <>
-                <strong className="font-semibold text-stone-900">شهزاد شاهمیرزادی</strong>{' '}
-                دارای پیشینه‌ای بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و علوم محیط زیست با گرایش تخصصی مدیریت منابع آب است.
+                در سال ۲۰۰۴، او دیپلم خود (Abitur) را از دبیرستان تاریخی گراوئن کلوستر دریافت کرد. پس از گذراندن دروس پایه حقوق در دانشگاه آزاد برلین (FU Berlin)، برای تلفیق کار حرفه‌ای با ورزش قهرمانی به پلیس برلین پیوست و آخرین مسئولیت او در اداره تحقیقات جنایی ایالت برلین (LKA) بود. او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به کار است و دوره کارشناسی ارشد ناپیوسته علوم محیط زیست کاربردی (M.Sc.) را در دانشگاه کوبلنتس می‌گذراند.
               </>
             ) : (
               <>
-                <strong className="font-semibold text-stone-900">Schahrsad Shahmirzadi</strong>{' '}
-                possesses an interdisciplinary academic and professional background spanning law, security, and environmental sciences with a specialization in water management.
+                In 2004, she completed her Abitur at the long-established Evangelisches Gymnasium zum Grauen Kloster. After completing her foundation studies in law at Freie Universität Berlin, she joined the Berlin Police to combine her professional career with elite sport. Her most recent role within the police was at the Berlin State Criminal Police Office (LKA). She currently works at the Ministry of the Environment in Potsdam while pursuing a part-time Master of Science (M.Sc.) in Applied Environmental Sciences at the University of Koblenz.
               </>
             )}
           </p>
@@ -309,44 +469,11 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </div>
           </div>
         </div>
-
-        {/* Narrative Context: Interdisziplinärer akademischer Bildungsweg (WordPress Post 1728) */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#faf8f5] border border-stone-200/90 space-y-4">
-          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
-            {currentLang === 'de'
-              ? 'Interdisziplinärer akademischer Bildungsweg'
-              : currentLang === 'fa'
-                ? 'شرح مسیر بین‌رشته‌ای آکادمیک و شغلی'
-                : 'Interdisciplinary Academic Career'}
-          </h4>
-          <div className="text-xs sm:text-sm text-stone-700 leading-relaxed space-y-3 font-normal">
-            <p>
-              {currentLang === 'de'
-                ? 'Schahrsad Shahmirzadi verfügt über einen interdisziplinären Bildungs- und Berufsweg in den Bereichen Recht, Sicherheit und Umwelt mit einem Schwerpunkt im Wasserbereich.'
-                : currentLang === 'fa'
-                  ? 'شهزاد شاهمیرزادی دارای پیشینه‌ای جامع و بین‌رشته‌ای در حوزه‌های حقوق، امنیت عمومی و محیط زیست با تمرکز ویژه بر منابع آب است.'
-                  : 'Schahrsad Shahmirzadi possesses a comprehensive interdisciplinary background across law, public safety, and environmental sciences with a primary focus on water management.'}
-            </p>
-            <p>
-              {currentLang === 'de'
-                ? 'Nach dem Abitur am traditionsreichen Evangelischen Gymnasium zum Grauen Kloster in Berlin im Jahr 2004 studierte sie Rechtswissenschaften. Parallel zu ihrer Leistungssportkarriere im Kickboxen trat sie in den Dienst der Berliner Polizei ein, wo sie zuletzt in der Zentralstelle für Prävention beim Landeskriminalamt (LKA) als Ansprechperson für gruppenbezogene Menschenfeindlichkeit tätig war.'
-                : currentLang === 'fa'
-                ? 'پس از فارغ‌التحصیلی از دبیرستان تاریخی گراوئن کلوستر در برلین در سال ۲۰۰۴، او به تحصیل حقوق پرداخت. همگام با ورزش قهرمانی در کیک‌بوکسینگ، او به پلیس برلین پیوست و اخیراً در دفتر مرکزی پیشگیری در اداره مبارزه با جرایم (LKA) به عنوان مسئول رسیدگی به جرایم خصومت‌های گروهی خدمت می‌کرد.'
-                : 'Following her graduation from the historic Evangelisches Gymnasium zum Grauen Kloster in Berlin in 2004, she studied law. Alongside her high-performance kickboxing career, she joined the Berlin Police, where she most recently served in the Central Office for Prevention at the State Criminal Police Office (LKA) as a Contact Person for Group-Focused Enmity.'}
-            </p>
-            <p>
-              {currentLang === 'de'
-                ? 'Derzeit arbeitet sie im Umweltministerium in Potsdam und absolviert berufsbegleitend den Masterstudiengang Angewandte Umweltwissenschaften mit dem Abschluss Master of Science an der Universität Koblenz ZFUW.'
-                : currentLang === 'fa'
-                  ? 'او در حال حاضر در وزارت محیط زیست در پوتسدام مشغول به خدمت بوده و هم‌زمان دوره کارشناسی ارشد آموزش از راه دور «علوم کاربردی محیط زیست»، M.Sc.، را در دانشگاه کوبلنتس ZFUW می‌گذراند.'
-                  : 'She currently works at the Ministry of Environment in Potsdam and is completing an in-service distance Master of Science degree in Applied Environmental Sciences at the University of Koblenz ZFUW.'}
-            </p>
-          </div>
-        </div>
       </section>
 
-
-      {/* 3. COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (Original WordPress Post 435) */}
+      {/* =========================================================================
+          SECTION 3: COMMITTED TO ENVIRONMENTAL PROTECTION, HUMAN RIGHTS AND PEACE (WP Post 435)
+         ========================================================================= */}
       <section id="engagement" className="scroll-mt-[148px] lg:scroll-mt-[190px] bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-10">
 
         {/* Header & Hero Image with Mission Statement */}
@@ -364,7 +491,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 font-bold">
               {currentLang === 'de'
-                ? 'Engagiert für Umweltschutz, Menschenrechte & Frieden'
+                ? 'Committed to Environmental Protection, Human Rights & Peace'
                 : currentLang === 'fa'
                   ? 'متعهد به حفاظت از محیط زیست، حقوق بشر و صلح'
                   : 'Committed to Environmental Protection, Human Rights & Peace'}
@@ -377,15 +504,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               <p>
                 {currentLang === 'de' ? (
                   <>
-                    <strong className="text-stone-900 font-semibold">SchirZan</strong> engagiert sich für Umweltschutz, Menschenrechte und Frieden durch eigene Projekte, sportliche und photographische Initiativen sowie den stetigen Dialog in ihrer Gemeinschaft.
+                    Neben ihrer beruflichen und akademischen Laufbahn engagiert sich <strong className="text-stone-900 font-semibold">SchirZan | Schahrsad Shahmirzadi</strong> für Umweltschutz, Menschenrechte und Frieden durch eigene Projekte, sportliche und photographische Initiativen sowie den stetigen Dialog in ihrem persönlichen Umfeld.
                   </>
                 ) : currentLang === 'fa' ? (
                   <>
-                    <strong className="text-stone-900 font-semibold">شیرزن</strong> از طریق پروژه‌های شخصی، ابتکارات ورزشی و آثار عکاسی خود متعهد به ترویج حفاظت از محیط زیست، حقوق بشر و صلح است.
+                    در کنار فعالیت‌های حرفه‌ای و دانشگاهی، <strong className="text-stone-900 font-semibold">شیرزن | شهزاد شاهمیرزادی</strong> از طریق پروژه‌های شخصی، ابتکارات ورزشی و آثار عکاسی خود متعهد به ترویج حفاظت از محیط زیست، حقوق بشر و صلح است.
                   </>
                 ) : (
                   <>
-                    <strong className="text-stone-900 font-semibold">SchirZan</strong> is committed to environmental protection, human rights, and peace through her own projects, sporting and photographic initiatives, and conversations within her personal community.
+                    Alongside her professional and academic career, <strong className="text-stone-900 font-semibold">SchirZan | Schahrsad Shahmirzadi</strong> is committed to environmental protection, human rights, and peace through her own projects, sporting and photographic initiatives, and speaking engagements within her personal network.
                   </>
                 )}
               </p>
@@ -469,7 +596,7 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               >
                 <div className="aspect-3/4 sm:aspect-4/5 overflow-hidden bg-stone-100 relative">
                   <img
-                    src={resolveAsset('/images/2026_08_ecchr-human-rights-support-4-1152x1536.webp')}
+                    src={resolveAsset('/images/2026_08_ecchr-human-rights-support-4-1536x2048.webp')}
                     alt="SchirZan — Berlin Half Marathon 2027 · Support the fundraising run for ECCHR"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
