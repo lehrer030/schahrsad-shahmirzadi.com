@@ -189,16 +189,16 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </span>
               </div>
 
-              {/* PHOTO 1 CONTAINER with Corner Badge Overlays */}
+              {/* PHOTO 1 CONTAINER with Corner Badge Overlays - Exact matching aspect-[3/4] */}
               <div
                 onClick={() => onOpenLightbox(series.photos, 0)}
-                className="group/first relative rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md cursor-pointer"
+                className="group/first relative rounded-xl overflow-hidden bg-stone-900 border border-stone-200/90 shadow-md cursor-pointer w-full aspect-[3/4] flex items-center justify-center select-none"
               >
                 <img
                   src={resolveAsset(firstPhoto.src)}
                   alt={firstPhoto.alt}
                   draggable={false}
-                  className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/first:scale-[1.01] select-none"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover/first:scale-105 select-none protected-art"
                 />
 
                 <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/first:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
@@ -282,9 +282,9 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
               </div>
             </div>
 
-            {/* SUBSEQUENT PHOTOS: CLEAN, UNINTERRUPTED, STRICTLY NO BADGES (as requested!) */}
+            {/* SUBSEQUENT PHOTOS: EXACT MATCHING ASPECT-[3/4] UNIFORM SIZE (die Bilder unter 1) */}
             {subsequentPhotos.map((photo, index) => (
-              <div key={photo.id} className="space-y-3 pt-6 border-t border-stone-200">
+              <div key={photo.id} className="space-y-4 pt-8 border-t border-stone-200 max-w-xl mx-auto">
                 <div className="flex items-center justify-between text-xs text-stone-500 font-mono">
                   <span className="font-semibold text-amber-800">
                     {currentLang === 'de'
@@ -300,23 +300,23 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
                 <div
                   onClick={() => onOpenLightbox(series.photos, index + 1)}
-                  className="group/photo relative rounded-xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md max-w-xl mx-auto cursor-pointer"
+                  className="group/photo relative rounded-xl overflow-hidden bg-stone-900 border border-stone-200/90 shadow-md cursor-pointer w-full aspect-[3/4] flex items-center justify-center select-none"
                 >
                   <img
                     src={resolveAsset(photo.src)}
                     alt={photo.alt}
                     draggable={false}
-                    className="w-full h-auto max-h-[620px] object-contain mx-auto transition-transform duration-500 group-hover/photo:scale-[1.01] select-none"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover/photo:scale-105 select-none protected-art"
                     loading="lazy"
                   />
 
-                  <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/photo:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="absolute inset-0 bg-stone-900/20 opacity-0 group-hover/photo:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                     <span className="p-3 bg-white/95 rounded-full shadow-lg text-stone-900">
                       <Maximize2 className="w-5 h-5" />
                     </span>
                   </div>
 
-                  <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/50 px-2 py-0.5 rounded backdrop-blur-xs shadow-xs">
+                  <div className="absolute bottom-2.5 right-3 text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none drop-shadow-md bg-stone-900/50 px-2 py-0.5 rounded backdrop-blur-xs shadow-xs z-10">
                     SchirZan | Schahrsad Shahmirzadi
                   </div>
                 </div>
