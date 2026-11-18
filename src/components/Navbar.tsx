@@ -200,6 +200,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenuId, setActiveMenuId] = useState<string>('home');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   // Präzises ScrollSpy: Zu jedem Zeitpunkt leuchtet genau der eine aktuell sichtbare Bereich auf
   useEffect(() => {
@@ -207,6 +208,8 @@ export const Navbar: React.FC<NavbarProps> = ({
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = window.innerHeight;
       const scrollY = window.scrollY || window.pageYOffset;
+
+      setIsScrolled(scrollY > 50);
 
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
       if (clientHeight + scrollY >= scrollHeight - 90) {
@@ -305,126 +308,123 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header
-      className="sticky top-0 z-50 bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900 transition-colors w-full"
+      className={`sticky top-0 z-50 transition-all duration-300 w-full ${
+        isScrolled
+          ? 'bg-[#faf8f5]/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs'
+          : 'bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900'
+      }`}
       style={{ position: 'sticky', top: 0, zIndex: 50 }}
     >
       {/* Top Colored Spendenlauf Announcement Banner - Automatisch gesteuert nach Datum */}
       {isCampaignActive && (
-        <a
-          id="spendenlauf-banner"
-          href={SPENDENLAUF_CONFIG.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
-          className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            isScrolled ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-12 opacity-100'
+          }`}
         >
-          <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
-            <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-              <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
-                <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
-              </span>
-              <span className="font-semibold text-white tracking-wide truncate">
-                {currentLang === 'fa'
-                  ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
-                  : currentLang === 'en'
-                    ? 'Run for Human Rights 2027:'
-                    : 'Spendenlauf für Menschenrechte 2027:'}
-              </span>
-              <span className="font-normal text-white/95 group-hover:text-white transition-opacity hidden md:inline truncate">
-                {currentLang === 'fa'
-                  ? 'حمایت از کارزار شیرزن برای ECCHR'
-                  : currentLang === 'en'
-                    ? 'Support SchirZan’s fundraising campaign at ECCHR'
-                    : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+          <a
+            id="spendenlauf-banner"
+            href={SPENDENLAUF_CONFIG.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
+            className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
+          >
+            <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
+              <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
+                  <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
+                </span>
+                <span className="font-semibold text-white tracking-wide truncate">
+                  {currentLang === 'fa'
+                    ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
+                    : currentLang === 'en'
+                      ? 'Run for Human Rights 2027:'
+                      : 'Spendenlauf für Menschenrechte 2027:'}
+                </span>
+                <span className="font-normal text-white/95 group-hover:text-white transition-opacity hidden md:inline truncate">
+                  {currentLang === 'fa'
+                    ? 'حمایت از کارزار شیرزن برای ECCHR'
+                    : currentLang === 'en'
+                      ? 'Support SchirZan’s fundraising campaign at ECCHR'
+                      : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
+                </span>
+              </div>
+              <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-rose-50 group-hover:text-red-800 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
+                <span>
+                  {currentLang === 'fa'
+                    ? 'کمک آنلاین'
+                    : currentLang === 'en'
+                      ? 'Donate'
+                      : 'Jetzt spenden'}
+                </span>
+                <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
               </span>
             </div>
-            <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-rose-50 group-hover:text-red-800 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
-              <span>
-                {currentLang === 'fa'
-                  ? 'کمک آنلاین'
-                  : currentLang === 'en'
-                    ? 'Donate'
-                    : 'Jetzt spenden'}
-              </span>
-              <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
-            </span>
-          </div>
-        </a>
+          </a>
+        </div>
       )}
 
-      <div id="brand-header-bar" className="max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5 flex items-center justify-between gap-3 xl:gap-6">
-
+      <div
+        id="brand-header-bar"
+        className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-6 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 xl:gap-4 ${
+          isScrolled ? 'h-11 sm:h-12 py-1' : 'min-h-16 sm:min-h-18 lg:min-h-20 py-2 sm:py-2.5'
+        }`}
+      >
         {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi (Kein Bild-Logo gemäß Kundenwunsch) */}
         <button
           onClick={onGoHome}
           className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0 shrink"
         >
           <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
-            <span className="text-lg sm:text-2xl font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-colors shrink-0">
+            <span
+              className={`font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
+                isScrolled ? 'text-base sm:text-lg' : 'text-lg sm:text-2xl'
+              }`}
+            >
               SchirZan
             </span>
-            <span className="text-stone-300 text-sm sm:text-lg font-light hidden sm:inline">|</span>
-            <span className="text-stone-700 text-xs sm:text-base font-serif tracking-wide font-medium hidden sm:inline truncate">
+            <span className={`text-stone-300 font-light transition-all ${isScrolled ? 'hidden' : 'text-sm sm:text-lg hidden sm:inline'}`}>|</span>
+            <span
+              className={`text-stone-700 font-serif tracking-wide font-medium transition-all ${
+                isScrolled ? 'hidden' : 'text-xs sm:text-base hidden sm:inline truncate'
+              }`}
+            >
               {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
             </span>
           </div>
         </button>
 
-        {/* Desktop Header Navigation: 2 Rows of 5 items each (01-05 and 06-10) */}
-        <nav className="hidden lg:flex flex-col gap-1 items-center justify-center shrink min-w-0" aria-label="Hauptnavigation">
-          {/* Row 1: Items 01 to 05 */}
-          <div className="flex items-center gap-1 xl:gap-1.5 flex-nowrap justify-center">
-            {ORIGINAL_11_MENU_ITEMS.slice(0, 5).map((item) => {
+        {/* Desktop Header Navigation: Alle 10 Themen in EINER horizontalen Reihe (auch beim Scrollen als schlanke Linie mit Appear-Effekt) */}
+        <nav className="hidden lg:flex items-center justify-center shrink min-w-0" aria-label="Hauptnavigation">
+          <div className="flex items-center gap-0.5 xl:gap-1.5 2xl:gap-2 flex-nowrap justify-center">
+            {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
               const isActive = !item.isContact && activeMenuId === item.id;
               return (
                 <button
                   key={item.id}
                   onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${isActive
-                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
-                    }`}
+                  className={`group px-1.5 xl:px-2.5 rounded-md font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${
+                    isScrolled
+                      ? 'py-0.5 xl:py-1 text-[11px] xl:text-[11.5px]'
+                      : 'py-1 xl:py-1.5 text-[11px] xl:text-xs'
+                  } ${
+                    isActive
+                      ? 'bg-stone-900 text-white shadow-xs font-semibold'
+                      : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                  }`}
                   title={getItemLabel(item)}
                 >
                   <span
-                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${isActive
-                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                      }`}
-                  >
-                    {item.num}
-                  </span>
-                  <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
-                    {getHeaderItemLabel(item)}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Row 2: Items 06 to 10 */}
-          <div className="flex items-center gap-1 xl:gap-1.5 flex-nowrap justify-center">
-            {ORIGINAL_11_MENU_ITEMS.slice(5, 10).map((item) => {
-              const isActive = !item.isContact && activeMenuId === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavigateToItem(item)}
-                  className={`group px-2 xl:px-2.5 py-0.5 xl:py-1 rounded-md text-xs font-medium tracking-tight transition-all cursor-pointer flex items-center gap-1 xl:gap-1.5 shrink-0 ${isActive
-                    ? 'bg-stone-900 text-white shadow-xs font-semibold'
-                    : 'text-stone-700 hover:text-stone-950 hover:bg-stone-200/60'
+                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${
+                      isActive
+                        ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
+                        : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
                     }`}
-                  title={getItemLabel(item)}
-                >
-                  <span
-                    className={`font-mono text-[9px] xl:text-[9.5px] 2xl:text-[10px] font-bold px-1.5 py-0.5 rounded leading-none transition-colors shrink-0 ${isActive
-                      ? 'bg-amber-400 text-stone-950 font-bold border border-amber-300'
-                      : 'bg-stone-200/90 group-hover:bg-amber-100 text-stone-700 group-hover:text-amber-950 border border-stone-300/80 group-hover:border-amber-300'
-                      }`}
                   >
                     {item.num}
                   </span>
-                  <span className="whitespace-nowrap text-[11px] xl:text-[11.5px] 2xl:text-xs">
+                  <span className="whitespace-nowrap">
                     {getHeaderItemLabel(item)}
                   </span>
                 </button>
@@ -434,14 +434,15 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Right Tools: Language Switcher (DE / EN / FA) & Contact */}
-        <div className="flex items-center space-x-3 rtl:space-x-reverse shrink-0">
-
+        <div className="flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
           {/* Trilingual Switcher (DE / EN / FA) */}
-          <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
+          <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
+            isScrolled ? 'scale-95' : 'scale-100'
+          }`}>
             <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0" />
             <button
               onClick={() => onToggleLang('de')}
-              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'de'
+              className={`px-2 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'de'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -451,7 +452,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => onToggleLang('en')}
-              className={`px-2 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'en'
+              className={`px-2 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'en'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -461,7 +462,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             <button
               onClick={() => onToggleLang('fa')}
-              className={`px-2.5 py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'fa'
+              className={`px-2.5 py-0.5 xl:py-1 rounded text-xs transition-all cursor-pointer ${currentLang === 'fa'
                 ? 'bg-stone-900 text-white font-medium'
                 : 'text-stone-600 hover:text-stone-900'
                 }`}
@@ -474,7 +475,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Separate Contact Button on the right */}
           <button
             onClick={onOpenContact}
-            className="hidden sm:inline-flex items-center px-3.5 py-1.5 rounded bg-stone-900 hover:bg-stone-800 text-white text-xs font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
+            className={`hidden sm:inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
+              isScrolled ? 'px-2.5 py-1 text-[11px]' : 'px-3.5 py-1.5 text-xs'
+            }`}
           >
             <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
           </button>
