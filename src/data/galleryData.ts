@@ -126,28 +126,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'کلیه شرکت‌کنندگان ماراتن بی‌ام‌و برلین ۲۰۲۶ به همراه تمامی قهرمانان از سال ۱۹۷۴ تا ۲۰۲۵ به ترتیب حروف الفبا بر روی تالار مشاهیر (Wall of Fame) ثبت شده‌اند.'
       },
       {
-        id: 'run-gallery-03',
-        src: './images/2025_07_image00055-1-scaled.webp',
-        alt: 'Berliner Halbmarathon 2025 — SchirZan',
-        locationDe: 'Berliner Halbmarathon 2025 · Berlin',
-        locationEn: 'Berlin Half Marathon 2025 · Berlin',
-        locationFa: 'نیمه‌ماراتن برلین ۲۰۲۵ · برلین',
-        captionDe: 'Berliner Halbmarathon 2025: SchirZan mit Startnummer „SchirZan, B. Halbmarathon 2025, Für Umweltschutz & Frieden“.',
-        captionEn: 'Berlin Half Marathon 2025: SchirZan with personalized bib "For Environmental Protection & Peace".',
-        captionFa: 'نیمه‌ماراتن برلین ۲۰۲۵: شیرزن با شماره اختصاصی «برای حفاظت از محیط‌زیست و صلح».'
-      },
-      {
-        id: 'run-gallery-04',
-        src: './images/2025_07_image00056-1-scaled.webp',
-        alt: 'Berliner Halbmarathon 2025 — Brandenburger Tor',
-        locationDe: 'Brandenburger Tor · Berlin',
-        locationEn: 'Brandenburg Gate · Berlin',
-        locationFa: 'دروازه براندنبورگ · برلین',
-        captionDe: 'Berliner Halbmarathon 2025 am Brandenburger Tor: Lauf für Umweltschutz und Frieden durch die historische Mitte Berlins.',
-        captionEn: 'Berlin Half Marathon 2025 at the Brandenburg Gate: Running for environmental protection and peace through historic central Berlin.',
-        captionFa: 'نیمه‌ماراتن برلین ۲۰۲۵ در کنار دروازه براندنبورگ: دویدن برای حفاظت از محیط‌زیست و صلح در مرکز تاریخی برلین.'
-      },
-      {
         id: 'run-gallery-05',
         src: './images/2026_05_image00001-scaled.webp',
         alt: 'SchirZan mit Deutschlandfahne — Sport & Demokratie',
