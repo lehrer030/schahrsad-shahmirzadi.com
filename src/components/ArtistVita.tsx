@@ -32,31 +32,6 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           currentLang={currentLang}
         />
 
-        {/* Hero Portrait: Steve Barret Photo (from WordPress /vita/) */}
-        <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
-          <div className="relative aspect-[16/10] sm:aspect-[16/9] max-h-[460px] w-full overflow-hidden bg-stone-100">
-            <img
-              src={resolveAsset('/images/2025_07_image00003-scaled.webp')}
-              onError={(e) => {
-                const img = e.currentTarget;
-                if (!img.src.endsWith('.jpg')) {
-                  img.src = resolveAsset('/images/2025_07_image00003.jpg');
-                }
-              }}
-              alt="SchirZan | Schahrsad Shahmirzadi – Photo by Steve Barret"
-              className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-[1.01]"
-              loading="lazy"
-            />
-          </div>
-          <div className="p-3 sm:p-4 bg-stone-50/90 border-t border-stone-200/80 flex items-center justify-between text-xs text-stone-600">
-            <span className="font-serif italic font-medium text-stone-800">
-              SchirZan | Schahrsad Shahmirzadi
-            </span>
-            <span className="font-mono text-[11px] text-stone-500">
-              Photo by Steve Barret
-            </span>
-          </div>
-        </div>
 
         {/* 1. Personal Identity Block */}
         <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/50 border border-amber-200/70 space-y-3">
