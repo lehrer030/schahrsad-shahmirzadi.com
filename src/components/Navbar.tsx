@@ -316,21 +316,21 @@ export const Navbar: React.FC<NavbarProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
-          className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
+          className="group relative z-10 block bg-[#1c1917] hover:bg-[#262320] text-stone-200 transition-colors duration-200 border-b border-stone-800/80 shadow-2xs cursor-pointer"
         >
           <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
             <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-              <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
-                <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
+              <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-amber-400/15 shrink-0">
+                <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-400 fill-amber-400" />
               </span>
-              <span className="font-semibold tracking-wide truncate">
+              <span className="font-semibold text-stone-100 tracking-wide truncate">
                 {currentLang === 'fa'
                   ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
                   : currentLang === 'en'
                     ? 'Run for Human Rights 2027:'
                     : 'Spendenlauf für Menschenrechte 2027:'}
               </span>
-              <span className="font-normal opacity-95 group-hover:opacity-100 transition-opacity hidden md:inline truncate">
+              <span className="font-normal text-stone-300 group-hover:text-stone-100 transition-opacity hidden md:inline truncate">
                 {currentLang === 'fa'
                   ? 'حمایت از کارزار شیرزن برای ECCHR'
                   : currentLang === 'en'
@@ -338,7 +338,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
               </span>
             </div>
-            <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-amber-100 group-hover:text-red-900 px-2 sm:px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
+            <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-amber-400 text-stone-950 group-hover:bg-amber-300 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
               <span>
                 {currentLang === 'fa'
                   ? 'کمک آنلاین'
