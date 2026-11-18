@@ -452,6 +452,7 @@ export default function App() {
             <FurtherWorks
               works={SOCIAL_ENVIRONMENTAL_WORKS}
               currentLang={currentLang}
+              layout="stacked"
               sectionTitleDe="Social & Environmental Themes – Werkserien"
               sectionTitleEn="Social and Environmental Themes – Series"
               sectionTitleFa="مضامین اجتماعی و زیست‌محیطی – مجموعه‌ها"
