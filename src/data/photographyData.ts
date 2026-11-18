@@ -1406,15 +1406,47 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Die originale Prämierungsserie der International Photography Awards 2025: Der Solitär im lebendigen Lichtdialog des urbanen Frühlings.',
     descriptionEn: 'The original awarded series from the International Photography Awards 2025: The Solitaire in dynamic daylight dialogue.',
     descriptionFa: 'مجموعه برگزیده اولیه در جوایز جهانی عکاسی IPA ۲۰۲۵: تک‌بنا در گفت‌وگوی پویای نور روز شهری.',
-    previewImage: '/images/wetransfer/solitaire_harmony_01.webp',
+    previewImage: '/images/2025_09_image00001-scaled.webp',
     galleryPhotos: [
       {
         id: 'solitaire-ipa-2025-01',
-        src: '/images/wetransfer/solitaire_harmony_01.webp',
-        alt: 'The Solitaire as an Abstraction (IPA 2025)',
+        src: '/images/2025_09_image00001-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تک‌بنا به مثابه انتزاع – شیرزن'
+        captionFa: 'تصویر ۱'
+      },
+      {
+        id: 'solitaire-ipa-2025-02',
+        src: '/images/2025_09_image00002-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر ۲'
+      },
+      {
+        id: 'solitaire-ipa-2025-03',
+        src: '/images/2025_09_image00003-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر ۳'
+      },
+      {
+        id: 'solitaire-ipa-2025-04',
+        src: '/images/2025_09_image00004-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر ۴'
+      },
+      {
+        id: 'solitaire-ipa-2025-05',
+        src: '/images/2025_09_image00005-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (IPA 2025) – Image 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر ۵'
       }
     ]
   },
@@ -1444,15 +1476,31 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Kompakte kuratierte Fassung der Solitär-Serie, fokussiert auf die prägnantesten formalen Spannungen zwischen Glas, Stahl und Himmelsraum.',
     descriptionEn: 'Compact curated edition of the Solitaire series, focusing on the most salient tensions between glass, steel, and sky.',
     descriptionFa: 'نسخه گزیده و فشرده مجموعه تک‌بنا با تمرکز بر بارزترین کشش‌های فرمی میان شیشه، فولاد و آسمان.',
-    previewImage: '/images/wetransfer/solitaire_harmony_02.webp',
+    previewImage: '/images/2025_09_image00002-scaled.webp',
     galleryPhotos: [
       {
         id: 'solitaire-short-version-01',
-        src: '/images/wetransfer/solitaire_harmony_02.webp',
-        alt: 'The Solitaire as an Abstraction (Short Version)',
+        src: '/images/2025_09_image00002-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (Short Version) – Image 01',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
-        captionFa: 'تک‌بنا به مثابه انتزاع (نسخه کوتاه)'
+        captionFa: 'تصویر ۱'
+      },
+      {
+        id: 'solitaire-short-version-02',
+        src: '/images/2025_09_image00003-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (Short Version) – Image 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر ۲'
+      },
+      {
+        id: 'solitaire-short-version-03',
+        src: '/images/2025_09_image00004-scaled.webp',
+        alt: 'The Solitaire as an Abstraction (Short Version) – Image 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر ۳'
       }
     ]
   },
@@ -1629,11 +1677,11 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     descriptionDe: 'Zeitlose Präsenz im modernen Licht und Schatten: Columns in the Here and Now erforscht den zeitlosen Dialog zwischen monumentalen Säulen, scharfen Schatten und großstädtischem Licht.',
     descriptionEn: 'Timeless Presence in Modern Light and Shadow: Columns in the Here and Now explores the timeless dialogue between monumental columns, stark shadows, and metropolitan light.',
     descriptionFa: 'حضور جاودان در نور و سایه مدرن: کاوشی در گفت‌وگوی ابدی ستون‌های پرشکوه با نور کلان‌شهر در جوایز عکاسی اسپایدر.',
-    previewImage: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+    previewImage: '/images/2025_12_image00057-scaled.webp',
     galleryPhotos: [
       {
         id: 'columns-here-now-01',
-        src: '/images/2026_10_amp-2026-razor-pull-berlin-03-scaled.webp',
+        src: '/images/2025_12_image00057-scaled.webp',
         alt: 'Columns in the Here and Now',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
