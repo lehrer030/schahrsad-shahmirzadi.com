@@ -341,10 +341,6 @@ export default function App() {
             {/* Sub-Category Heading: Architektur */}
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                  <span>{currentLang === 'fa' ? 'بخش ۱ · تمرکز اصلی' : 'Bereich 1.1 · Schwerpunkt'}</span>
-                </div>
                 <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Architektur' : currentLang === 'fa' ? 'معماری' : 'Architecture'}
                 </h3>
@@ -397,10 +393,6 @@ export default function App() {
           <section id="fine-art" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                  <span>{currentLang === 'fa' ? 'بخش ۲' : 'Bereich 1.2'}</span>
-                </div>
                 <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Fine Art' : currentLang === 'fa' ? 'هنرهای زیبا' : 'Fine Art'}
                 </h3>
@@ -432,10 +424,6 @@ export default function App() {
           <section id="social-environmental" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                  <span>{currentLang === 'fa' ? 'بخش ۳' : 'Bereich 1.3'}</span>
-                </div>
                 <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Gesellschaft & Umwelt' : currentLang === 'fa' ? 'مضامین اجتماعی و زیست‌محیطی' : 'Social & Environmental Themes'}
                 </h3>
@@ -468,10 +456,6 @@ export default function App() {
           <section id="portraits" className="scroll-mt-16 lg:scroll-mt-28 pt-6 border-t border-stone-200/80 max-w-6xl mx-auto w-full">
             <div className="border-b border-stone-200/60 pb-3 mb-8">
               <div className="space-y-1 max-w-2xl">
-                <div className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-amber-800">
-                  <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                  <span>{currentLang === 'fa' ? 'بخش ۴' : 'Bereich 1.4'}</span>
-                </div>
                 <h3 className="text-xl sm:text-2xl font-serif text-stone-900 font-bold tracking-tight">
                   {currentLang === 'de' ? 'Porträts' : currentLang === 'fa' ? 'پرتره‌ها' : 'Portraits'}
                 </h3>
