@@ -256,8 +256,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         }
       />
 
-      {/* Key Pillars Stats: 5-Column Responsive Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4 mb-12">
+      {/* Key Pillars Stats: 4-Column Responsive Grid (Wettkampferfolge) */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-12">
         <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center">
           <Trophy className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
           <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">10×</div>
@@ -299,17 +299,6 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </div>
           <div className="text-[10px] text-stone-400 mt-0.5">
             {currentLang === 'fa' ? 'WAKO, WKA, WKU, ISKA, ICO' : 'In 7 Spitzen-Verbänden'}
-          </div>
-        </div>
-
-        <div className="bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-xs text-center col-span-2 md:col-span-1">
-          <Sparkles className="w-5 h-5 text-amber-600 mx-auto mb-1.5" />
-          <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">3. Dan</div>
-          <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
-            {currentLang === 'fa' ? 'دان ۳ مشکی · درجه استادی' : 'Schwarzer Gürtel · 3. Dan'}
-          </div>
-          <div className="text-[10px] text-stone-400 mt-0.5">
-            {currentLang === 'fa' ? 'یکی از معدود بانوان این رتبه' : 'Höchste meisterliche Reife'}
           </div>
         </div>
       </div>
@@ -968,25 +957,41 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         </div>
 
         {/* Section F2: 3rd Dan */}
-        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs space-y-3">
-          <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
-            <Sparkles className="w-4 h-4 text-amber-700" />
-            <span>{currentLang === 'fa' ? 'درجه استادی' : currentLang === 'de' ? 'Meistergrad' : 'Black Belt'}</span>
+        <div className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-8 shadow-xs">
+          <div className="flex flex-col md:flex-row md:items-center gap-6 justify-between">
+            <div className="space-y-3 flex-1">
+              <div className="flex items-center gap-2 text-amber-800 font-mono text-xs uppercase tracking-wider font-bold">
+                <Sparkles className="w-4 h-4 text-amber-700" />
+                <span>{currentLang === 'fa' ? 'درجه استادی' : currentLang === 'de' ? 'Meistergrad' : 'Black Belt'}</span>
+              </div>
+              <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
+                {currentLang === 'fa'
+                  ? 'دان ۳ در کیک‌بوکسینگ'
+                  : currentLang === 'de'
+                  ? '3. Dan im Kickboxen'
+                  : '3rd Dan in Kickboxing'}
+              </h4>
+              <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
+                {currentLang === 'fa'
+                  ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
+                  : currentLang === 'en'
+                  ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
+                  : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
+              </p>
+            </div>
+
+            {/* 3. Dan Meistergrad-Badge */}
+            <div className="shrink-0 bg-[#faf8f5] border border-stone-200/90 rounded-2xl p-5 text-center min-w-[220px] shadow-2xs self-center md:self-auto w-full md:w-auto">
+              <Sparkles className="w-6 h-6 text-amber-600 mx-auto mb-1.5" />
+              <div className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">3. Dan</div>
+              <div className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-stone-600 mt-1">
+                {currentLang === 'fa' ? 'دان ۳ مشکی · درجه استادی' : 'Schwarzer Gürtel · 3. Dan'}
+              </div>
+              <div className="text-[10px] text-stone-400 mt-0.5">
+                {currentLang === 'fa' ? 'یکی از معدود بانوان این رتبه' : 'Höchste meisterliche Reife'}
+              </div>
+            </div>
           </div>
-          <h4 className="text-base sm:text-lg font-serif font-bold text-stone-900">
-            {currentLang === 'fa'
-              ? 'دان ۳ در کیک‌بوکسینگ'
-              : currentLang === 'de'
-              ? '3. Dan im Kickboxen'
-              : '3rd Dan in Kickboxing'}
-          </h4>
-          <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-            {currentLang === 'fa'
-              ? 'شهزاد شاهمیرزادی یکی از معدود زنانی است که موفق به کسب کمربند مشکی دان ۳ در کیک‌بوکسینگ شده است. این درجه استادی بیانگر سال‌ها تجربه، مهارت‌های پیشرفته فنی و تعهدی استثنایی به هنرهای رزمی است.'
-              : currentLang === 'en'
-              ? 'Schahrsad Shahmirzadi is one of the few women to hold a third-degree black belt (3rd Dan) in kickboxing. This rank reflects many years of experience, advanced technical proficiency, and a particular commitment to martial arts.'
-              : 'Schahrsad Shahmirzadi ist eine der wenigen Frauen, die den 3. Dan (Schwarzgurt) im Kickboxen tragen. Dieser Meistergrad spiegelt langjährige Erfahrung, fortgeschrittenes technisches Können und eine besondere Hingabe an den Kampfsport wider.'}
-          </p>
         </div>
 
         {/* Section F3: Competitions – Selected Achievements and Experiences */}
