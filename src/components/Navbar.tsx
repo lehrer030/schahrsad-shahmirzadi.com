@@ -209,7 +209,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       const clientHeight = window.innerHeight;
       const scrollY = window.scrollY || window.pageYOffset;
 
-      setIsScrolled(scrollY > 50);
+      // Hysterese verhindert Flickern/Blinken an der Schwelle:
+      // Aktivierung ab 60px Scrolltiefe, Deaktivierung erst wieder unter 20px
+      setIsScrolled(prev => {
+        if (!prev && scrollY > 60) return true;
+        if (prev && scrollY < 20) return false;
+        return prev;
+      });
 
       // Wenn das Seitenende erreicht ist, Galerie aktivieren
       if (clientHeight + scrollY >= scrollHeight - 90) {
@@ -306,164 +312,167 @@ export const Navbar: React.FC<NavbarProps> = ({
   const isCampaignActive = new Date() <= new Date(SPENDENLAUF_CONFIG.endDate);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 w-full ${
-        isScrolled
-          ? 'bg-[#faf8f5]/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs'
-          : 'bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900'
-      }`}
-      style={{ position: 'sticky', top: 0, zIndex: 50 }}
-    >
-      {/* Top Colored Spendenlauf Announcement Banner - Automatisch gesteuert nach Datum */}
+    <>
+      {/* Top Colored Spendenlauf Announcement Banner - Befindet sich im normalen Dokumentfluss über dem Header */}
       {isCampaignActive && (
-        <div
-          className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isScrolled ? 'max-h-0 opacity-0 pointer-events-none' : 'max-h-12 opacity-100'
-          }`}
+        <a
+          id="spendenlauf-banner"
+          href={SPENDENLAUF_CONFIG.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
+          className="group relative z-30 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-2xs cursor-pointer"
         >
-          <a
-            id="spendenlauf-banner"
-            href={SPENDENLAUF_CONFIG.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Spendenlauf für Menschenrechte 2027 beim ECCHR online unterstützen"
-            className="group relative z-10 block bg-gradient-to-r from-red-700 via-rose-600 to-amber-600 hover:from-red-800 hover:via-rose-700 hover:to-amber-700 text-white transition-all duration-200 border-b border-red-800/40 shadow-xs cursor-pointer"
-          >
-            <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1 sm:py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
-              <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
-                  <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
-                </span>
-                <span className="font-semibold text-white tracking-wide truncate">
-                  {currentLang === 'fa'
-                    ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
-                    : currentLang === 'en'
-                      ? 'Run for Human Rights 2027:'
-                      : 'Spendenlauf für Menschenrechte 2027:'}
-                </span>
-                <span className="font-normal text-white/95 group-hover:text-white transition-opacity hidden md:inline truncate">
-                  {currentLang === 'fa'
-                    ? 'حمایت از کارزار شیرزن برای ECCHR'
-                    : currentLang === 'en'
-                      ? 'Support SchirZan’s fundraising campaign at ECCHR'
-                      : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
-                </span>
-              </div>
-              <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-rose-50 group-hover:text-red-800 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
-                <span>
-                  {currentLang === 'fa'
-                    ? 'کمک آنلاین'
-                    : currentLang === 'en'
-                      ? 'Donate'
-                      : 'Jetzt spenden'}
-                </span>
-                <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+          <div className="max-w-[1720px] mx-auto px-2.5 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-1.5 flex items-center justify-between sm:justify-center gap-1.5 sm:gap-3 text-[10px] sm:text-xs md:text-sm">
+            <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+              <span className="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white/20 shrink-0">
+                <Heart className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white fill-white animate-pulse" />
+              </span>
+              <span className="font-semibold text-white tracking-wide truncate">
+                {currentLang === 'fa'
+                  ? 'کمپین دویدن برای حقوق بشر ۲۰۲۷:'
+                  : currentLang === 'en'
+                    ? 'Run for Human Rights 2027:'
+                    : 'Spendenlauf für Menschenrechte 2027:'}
+              </span>
+              <span className="font-normal text-white/95 group-hover:text-white transition-opacity hidden md:inline truncate">
+                {currentLang === 'fa'
+                  ? 'حمایت از کارزار شیرزن برای ECCHR'
+                  : currentLang === 'en'
+                    ? 'Support SchirZan’s fundraising campaign at ECCHR'
+                    : 'Unterstützen Sie SchirZans Spendenkampagne beim ECCHR'}
               </span>
             </div>
-          </a>
-        </div>
+            <span className="inline-flex items-center gap-1 font-semibold text-[9.5px] sm:text-xs bg-white text-red-700 group-hover:bg-rose-50 group-hover:text-red-800 px-2.5 py-0.5 rounded-full shadow-xs transition-colors shrink-0 whitespace-nowrap">
+              <span>
+                {currentLang === 'fa'
+                  ? 'کمک آنلاین'
+                  : currentLang === 'en'
+                    ? 'Donate'
+                    : 'Jetzt spenden'}
+              </span>
+              <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+            </span>
+          </div>
+        </a>
       )}
 
-      {/* Row 1: Brand & Actions Bar */}
-      <div
-        id="brand-header-bar"
-        className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 sm:gap-4 ${
-          isScrolled ? 'h-10 sm:h-12 py-1' : 'h-12 sm:h-14 lg:h-16 py-1.5 sm:py-2'
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 w-full ${
+          isScrolled
+            ? 'bg-[#faf8f5]/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs'
+            : 'bg-[#faf8f5]/95 backdrop-blur-sm border-b border-stone-200 text-stone-900'
         }`}
+        style={{ position: 'sticky', top: 0, zIndex: 50 }}
       >
-        {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi */}
-        <button
-          onClick={onGoHome}
-          className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0 shrink"
+        {/* Row 1: Brand & Actions Bar - halbiert sich harmonisch beim Scrollen */}
+        <div
+          id="brand-header-bar"
+          className={`max-w-[1720px] mx-auto px-3 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-20 transition-all duration-300 ease-in-out flex items-center justify-between gap-2 sm:gap-4 ${
+            isScrolled ? 'h-9 sm:h-10 py-1' : 'h-14 sm:h-16 py-2'
+          }`}
         >
-          <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
-            <span
-              className={`font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
-                isScrolled ? 'text-base sm:text-lg lg:text-xl' : 'text-lg sm:text-xl lg:text-2xl'
-              }`}
-            >
-              SchirZan
-            </span>
-            <span className="text-stone-300 font-light text-sm sm:text-lg">|</span>
-            <span
-              className={`text-stone-700 font-serif tracking-wide font-medium transition-all ${
-                isScrolled ? 'text-xs sm:text-sm lg:text-base hidden xs:inline truncate' : 'text-xs sm:text-base truncate'
-              }`}
-            >
-              {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
-            </span>
-          </div>
-        </button>
-
-        {/* Right Tools: Language Switcher (DE / EN / FA) & Contact & Mobile Hamburger */}
-        <div className="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
-          {/* Trilingual Switcher (DE / EN / FA) */}
-          <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
-            isScrolled ? 'scale-95' : 'scale-100'
-          }`}>
-            <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0 hidden xs:inline" />
-            <button
-              onClick={() => onToggleLang('de')}
-              className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'de'
-                ? 'bg-stone-900 text-white font-medium'
-                : 'text-stone-600 hover:text-stone-900'
-                }`}
-              title="Deutsch"
-            >
-              DE
-            </button>
-            <button
-              onClick={() => onToggleLang('en')}
-              className={`px-1.5 sm:px-2 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'en'
-                ? 'bg-stone-900 text-white font-medium'
-                : 'text-stone-600 hover:text-stone-900'
-                }`}
-              title="English"
-            >
-              EN
-            </button>
-            <button
-              onClick={() => onToggleLang('fa')}
-              className={`px-2 sm:px-2.5 py-0.5 sm:py-1 rounded text-[11px] sm:text-xs transition-all cursor-pointer ${currentLang === 'fa'
-                ? 'bg-stone-900 text-white font-medium'
-                : 'text-stone-600 hover:text-stone-900'
-                }`}
-              title="فارسی"
-            >
-              فارسی
-            </button>
-          </div>
-
-          {/* Contact Button */}
+          {/* Brand / Artist Title: SchirZan | Schahrsad Shahmirzadi (bleibt immer vollständig sichtbar) */}
           <button
-            onClick={onOpenContact}
-            className={`inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
-              isScrolled ? 'px-2 sm:px-2.5 py-1 text-[11px]' : 'px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs'
-            }`}
+            onClick={onGoHome}
+            className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0 shrink"
           >
-            <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+            <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
+              <span
+                className={`font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
+                  isScrolled ? 'text-base sm:text-lg lg:text-xl' : 'text-lg sm:text-xl lg:text-2xl'
+                }`}
+              >
+                SchirZan
+              </span>
+              <span className={`text-stone-300 font-light transition-all ${
+                isScrolled ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'
+              }`}>
+                |
+              </span>
+              <span
+                className={`text-stone-700 font-serif tracking-wide font-medium transition-all truncate ${
+                  isScrolled ? 'text-[11px] sm:text-xs lg:text-sm' : 'text-xs sm:text-sm lg:text-base'
+                }`}
+              >
+                {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}
+              </span>
+            </div>
           </button>
 
-          {/* Mobile Drawer Toggle (for users who prefer full vertical drawer) */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-1.5 text-stone-700 hover:text-stone-900 transition-colors cursor-pointer rounded hover:bg-stone-200/60"
-            aria-label="Navigation Menu"
-            title="Menü"
-          >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+          {/* Right Tools: Language Switcher (DE / EN / FA) & Contact & Mobile Hamburger */}
+          <div className="flex items-center space-x-1.5 sm:space-x-2.5 rtl:space-x-reverse shrink-0">
+            {/* Trilingual Switcher (DE / EN / FA) */}
+            <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
+              isScrolled ? 'scale-90 sm:scale-95' : 'scale-100'
+            }`}>
+              <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0 hidden xs:inline" />
+              <button
+                onClick={() => onToggleLang('de')}
+                className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'de'
+                  ? 'bg-stone-900 text-white font-medium'
+                  : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                title="Deutsch"
+              >
+                DE
+              </button>
+              <button
+                onClick={() => onToggleLang('en')}
+                className={`px-1.5 sm:px-2 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'en'
+                  ? 'bg-stone-900 text-white font-medium'
+                  : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                title="English"
+              >
+                EN
+              </button>
+              <button
+                onClick={() => onToggleLang('fa')}
+                className={`px-2 sm:px-2.5 py-0.5 rounded text-[10.5px] sm:text-xs transition-all cursor-pointer ${currentLang === 'fa'
+                  ? 'bg-stone-900 text-white font-medium'
+                  : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                title="فارسی"
+              >
+                فارسی
+              </button>
+            </div>
+
+            {/* Contact Button */}
+            <button
+              onClick={onOpenContact}
+              className={`inline-flex items-center rounded bg-stone-900 hover:bg-stone-800 text-white font-medium tracking-wide transition-all cursor-pointer shadow-2xs ${
+                isScrolled ? 'px-2 sm:px-2.5 py-0.5 sm:py-1 text-[11px]' : 'px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-xs'
+              }`}
+            >
+              <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+            </button>
+
+            {/* Mobile Drawer Toggle (for users who prefer full vertical drawer) */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`lg:hidden text-stone-700 hover:text-stone-900 transition-all cursor-pointer rounded hover:bg-stone-200/60 ${
+                isScrolled ? 'p-1' : 'p-1.5'
+              }`}
+              aria-label="Navigation Menu"
+              title="Menü"
+            >
+              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          </div>
         </div>
-      </div>
 
       {/* Row 2: 10 Topics Navigation Bar - AUSSCHLIESSLICH auf Desktop & großen Bildschirmen (hidden lg:block) */}
       <nav
         id="topics-navigation-bar"
-        className="hidden lg:block w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300"
+        className={`hidden lg:block w-full bg-[#f6f3ee]/95 backdrop-blur-xs border-t border-stone-200/80 transition-all duration-300 ${
+          isScrolled ? 'py-0.5' : 'py-1.5'
+        }`}
         aria-label="Themen-Navigation"
       >
         <div className="max-w-[1720px] mx-auto px-4 lg:px-8 xl:px-12 2xl:px-20">
-          <div className="flex items-center justify-center gap-1.5 xl:gap-2 py-1.5 flex-nowrap">
+          <div className="flex items-center justify-center gap-1.5 xl:gap-2 flex-nowrap">
             {ORIGINAL_11_MENU_ITEMS.slice(0, 10).map((item) => {
               const isActive = !item.isContact && activeMenuId === item.id;
               return (
@@ -610,5 +619,6 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
       )}
     </header>
+    </>
   );
 };
