@@ -105,14 +105,14 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
     photos: [
       {
         id: 'run-gallery-01',
-        src: './images/2026_05_image00001-scaled-1.webp',
-        alt: '45. Berliner Halbmarathon: Running for Free Iran',
-        locationDe: '45. Berliner Halbmarathon · Berlin',
-        locationEn: '45th Berlin Half Marathon · Berlin',
-        locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
-        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
-        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
-        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
+        src: './images/2026_10_image00001-scaled.webp',
+        alt: 'Berlin Marathon 2026 – Finisher & Gleichberechtigung',
+        locationDe: 'Berlin Marathon 2026 · Berlin',
+        locationEn: 'Berlin Marathon 2026 · Berlin',
+        locationFa: 'ماراتن برلین ۲۰۲۶ · برلین',
+        captionDe: 'Berlin Marathon 2026 — Ich bin als deutsch-iranische Frau gelaufen: für Würde und Gleichberechtigung, gegen patriarchale Strukturen in Familien.',
+        captionEn: 'Berlin Marathon 2026 — Running as a German-Iranian woman: for dignity, equality, and against patriarchal structures in families.',
+        captionFa: 'ماراتن برلین ۲۰۲۶ — من به عنوان یک زن ایرانی-آلمانی دویدم: برای کرامت و برابری، علیه ساختارهای پدرسالارانه در خانواده‌ها.'
       },
       {
         id: 'run-gallery-02',
@@ -127,6 +127,50 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
       },
       {
         id: 'run-gallery-03',
+        src: './images/running_halfmarathon_bib_peace.webp',
+        alt: 'Berliner Halbmarathon 2025: SchirZan mit Startnummer',
+        locationDe: 'Berliner Halbmarathon 2025 · Berlin',
+        locationEn: 'Berlin Half Marathon 2025 · Berlin',
+        locationFa: 'نیمه‌ماراتن برلین ۲۰۲۵ · برلین',
+        captionDe: 'Berliner Halbmarathon 2025: SchirZan mit Startnummer „SchirZan, B. Halbmarathon 2025, Für Umweltschutz & Frieden“.',
+        captionEn: 'Berlin Half Marathon 2025: SchirZan wearing bib "SchirZan, B. Half Marathon 2025, For Environmental Protection & Peace".',
+        captionFa: 'نیمه‌ماراتن برلین ۲۰۲۵: شیرزن با شماره مسابقه «شیرزن، نیمه‌ماراتن برلین ۲۰۲۵، برای حفاظت از محیط زیست و صلح».'
+      },
+      {
+        id: 'run-gallery-04',
+        src: './images/running_brandenburger_tor.webp',
+        alt: 'Berliner Halbmarathon 2025 am Brandenburger Tor',
+        locationDe: 'Brandenburger Tor · Berlin',
+        locationEn: 'Brandenburg Gate · Berlin',
+        locationFa: 'دروازه براندنبورگ · برلین',
+        captionDe: 'Berliner Halbmarathon 2025 am Brandenburger Tor: Lauf für Umweltschutz und Frieden durch die historische Mitte Berlins.',
+        captionEn: 'Berlin Half Marathon 2025 at the Brandenburg Gate: Run for environmental protection and peace through Berlin’s historic center.',
+        captionFa: 'نیمه‌ماراتن برلین ۲۰۲۵ در کنار دروازه براندنبورگ: دویدن برای حفاظت از محیط زیست و صلح از قلب تاریخی برلین.'
+      },
+      {
+        id: 'run-gallery-05',
+        src: './images/2026_05_image00001-scaled-1.webp',
+        alt: '45. Berliner Halbmarathon: Running for Free Iran',
+        locationDe: '45. Berliner Halbmarathon · Berlin',
+        locationEn: '45th Berlin Half Marathon · Berlin',
+        locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
+        captionDe: '45. Berliner Halbmarathon: „Running for Free Iran“ — Kraftvolles sportliches Zeichen für Freiheit, Gleichberechtigung und Frauenrechte.',
+        captionEn: '45th Berlin Half Marathon: "Running for Free Iran" — A powerful tribute to freedom, equality, and women’s rights.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: «دویدن برای ایران آزاد» — نمادی پرتوان برای آزادی، برابری و حقوق زنان.'
+      },
+      {
+        id: 'run-gallery-06',
+        src: './images/2026_05_image00002-scaled.webp',
+        alt: '45. Berliner Halbmarathon: Finisher-Medaille & Iran-Flagge',
+        locationDe: '45. Berliner Halbmarathon · Berlin',
+        locationEn: '45th Berlin Half Marathon · Berlin',
+        locationFa: 'چهل و پنجمین نیمه‌ماراتن برلین · برلین',
+        captionDe: '45. Berliner Halbmarathon: SchirZan mit offizieller Finisher-Medaille und persischer Löwen- und Sonnenflagge — Friedlicher Protest und Hoffnung auf Selbstbestimmung.',
+        captionEn: '45th Berlin Half Marathon: SchirZan with official finisher medal and Persian Lion & Sun flag — Peaceful protest and hope for self-determination.',
+        captionFa: 'چهل و پنجمین نیمه‌ماراتن برلین: شیرزن با مدال رسمی فینیشر و پرچم شیر و خورشید ایران — اعتراضی صلح‌آمیز و امید به حق تعیین سرنوشت.'
+      },
+      {
+        id: 'run-gallery-07',
         src: './images/2026_08_Adidas-City-Night-Run-Berlin-2026-1536x2048.webp',
         alt: 'Adidas City Night Run Berlin 2026',
         locationDe: 'Gedächtniskirche · Berlin',
@@ -137,7 +181,7 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         captionFa: 'دو شبانه آدیداس برلین ۲۰۲۶: در همبستگی با قربانیان حادثه CSD ۲۰۲۶ – برای زندگی کوئیر، تنوع و آزادی در کنار کلیسای یادبود قیصر ویلهلم.'
       },
       {
-        id: 'run-gallery-04',
+        id: 'run-gallery-08',
         src: './images/2026_08_ecchr-human-rights-support-4-1536x2048.webp',
         alt: 'SchirZan — Fundraising Run for Human Rights 2027 (ECCHR)',
         locationDe: 'Spendenlauf 2027 · ECCHR Berlin',
