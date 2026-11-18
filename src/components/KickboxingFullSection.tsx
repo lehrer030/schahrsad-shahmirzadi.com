@@ -131,22 +131,16 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
     },
     {
       period: '2014 & 2016',
-      titleDe: 'Berlin Police sporting honours: 2014 and 2016 – Sportlerehrung durch die Senatsverwaltung für Inneres und Sport Berlin (SenInnDS)',
+      titleDe: 'Sportlerehrung der Berliner Polizei: 2014 und 2016 – Ehrung durch die Senatsverwaltung für Inneres und Sport (SenInnDS)',
       titleEn: 'Berlin Police sporting honours: 2014 and 2016 – Senate Department for the Interior and Sports Berlin (SenInnDS)',
       titleFa: 'تجلیل ورزشی پلیس برلین: ۲۰۱۴ و ۲۰۱۶ – اداره امور داخلی و ورزش سنای برلین (SenInnDS)'
     },
     {
-      period: '2014 & 2016',
-      titleDe: 'Zweifache Auszeichnung als herausragende Spitzensportlerin der Polizei durch den Innenminister des Landes Nordrhein-Westfalen Ralf Jäger',
-      titleEn: 'Honoured twice as an outstanding police athlete by the Minister of the Interior of North Rhine-Westphalia Ralf Jäger',
-      titleFa: 'دو بار تجلیل رسمی به عنوان ورزشکار نخبه پلیس توسط وزیر کشور ایالت نوردراین-وستفالن رالف یگر',
-      link: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister'
-    },
-    {
       period: '2014',
-      titleDe: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – Bundesweite Ehrung der Spitzen-Polizeisportlerinnen in Anerkennung für herausragende sportliche Leistungen',
+      titleDe: 'Bundesweite Ehrung der Spitzen-Polizeisportlerinnen (DPSK) in Anerkennung für herausragende sportliche Leistungen',
       titleEn: 'Sporting honours from the German federal and state police forces (DPSK): 2014 – In recognition of her outstanding sporting achievements',
-      titleFa: 'تجلیل ورزشی پلیس فدرال و ایالات آلمان (DPSK) ۲۰۱۴ – در تقدیر از دستاوردهای برجسته ورزشی'
+      titleFa: 'تجلیل ورزشی پلیس فدرال و ایالات آلمان (DPSK) ۲۰۱۴ – در تقدیر از دستاوردهای برجسته ورزشی',
+      link: 'https://www.land.nrw/pressemitteilung/spitzensportler-der-polizei-wurden-olympiasieger-europa-und-weltmeister'
     },
     {
       period: '2014',
