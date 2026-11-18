@@ -252,9 +252,9 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
       },
       {
         type: 'selection',
-        labelDe: '14× Offizielle Auswahl · Official Selection',
-        labelEn: '14× Official Selections',
-        labelFa: '۱۴ اثر منتخب رسمی · Official Selection',
+        labelDe: 'Sonder- & Porträtreihen · 2× Offizielle Auswahl',
+        labelEn: 'Special & People · 2× Official Selections',
+        labelFa: 'مجموعه‌های ویژه و پرتره · ۲ اثر منتخب رسمی',
         items: [
           {
             title: 'LIFE – LOVE – FREEDOM · IRAN',
@@ -267,7 +267,15 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             category: 'People, Self-Portrait – Student/Non-Pro',
             categoryFa: 'مردم، خودنگاره',
             zoomUrl: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26'
-          },
+          }
+        ]
+      },
+      {
+        type: 'selection',
+        labelDe: 'Architektur · 12× Offizielle Auswahl (Official Selection)',
+        labelEn: 'Architecture · 12× Official Selections',
+        labelFa: 'معماری · ۱۲ اثر منتخب رسمی (Official Selection)',
+        items: [
           {
             title: 'The Solitaire as an Abstraction (Revised)',
             category: 'Architecture, Abstract – Student/Non-Pro',
@@ -589,15 +597,23 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     honors: [
       {
         type: 'hm',
-        labelDe: '4× Lobende Erwähnung · Honorable Mention',
-        labelEn: '4× Honorable Mentions',
-        labelFa: '۴ عنوان تقدیر ویژه · Honorable Mention',
+        labelDe: 'Editorial & Photo-Essay · Lobende Erwähnung',
+        labelEn: 'Editorial & Photo Essay · Honorable Mention',
+        labelFa: 'عکاسی مطبوعاتی و مقاله تصویری · تقدیر ویژه',
         items: [
           {
             title: 'Berlin: Attack on Queer, Diversity and Freedom',
             category: 'Editorial – Photo Essay (Non-Pro)',
             zoomUrl: 'https://budapestfotoawards.com/winners/hm/2026/93-41283-26/'
-          },
+          }
+        ]
+      },
+      {
+        type: 'hm',
+        labelDe: 'Architektur · 3× Lobende Erwähnung (Honorable Mention)',
+        labelEn: 'Architecture · 3× Honorable Mentions',
+        labelFa: 'معماری · ۳ عنوان تقدیر ویژه (Honorable Mention)',
+        items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
             category: 'Architecture – Abstract (Non-Pro)',
@@ -995,7 +1011,15 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     </div>
 
                     {/* List of awarded works in generous Gallery-style Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    <div
+                      className={`grid gap-4 sm:gap-6 ${
+                        honorGroup.items.length === 1
+                          ? 'grid-cols-1 max-w-sm'
+                          : honorGroup.items.length === 2
+                          ? 'grid-cols-1 sm:grid-cols-2 max-w-2xl'
+                          : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                      }`}
+                    >
                       {honorGroup.items.map((item, itemIdx) => {
                         const thumbImg = getAwardWorkImage(item.title, item.image);
                         const workTitle = getAwardWorkTitle(item.title, currentLang);
