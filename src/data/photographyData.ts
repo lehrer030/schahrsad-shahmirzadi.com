@@ -871,85 +871,6 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     ]
   },
   {
-    id: 'black-red-gold',
-    titleDe: 'Black Red Gold – Office of the Federal President of Germany',
-    titleEn: 'Black Red Gold – Office of the Federal President of Germany',
-    titleFa: 'Black Red Gold – Office of the Federal President of Germany (سیاه سرخ طلایی)',
-    category: 'Architecture / Exterior',
-    categoryFa: 'معماری / سازه‌های بیرونی',
-    awardsDe: 'AMP 2026 — Honorable Mention (Other Exterior)',
-    awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
-    awardsFa: 'AMP 2026 — تقدیر ویژه سازه‌های بیرونی',
-    badgeNames: ['AMP 2026 HM'],
-    badges: [
-
-      {
-            "id": "amp-black-red-gold",
-            "name": "Architecture MasterPrize 2026",
-            "award": "Student Photography · Honorable Mention",
-            "year": "2026",
-            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
-            "position": "top-left",
-            "link": "https://architectureprize.com/"
-      }
-],
-    link: 'https://architectureprize.com/',
-    descriptionDe: 'Schwarz, Rot und Gold spiegeln sich in der Architektur des Bundespräsidialamtes in Berlin wider. Meine Serie übersetzt dies in eine abstrakte photographische Sequenz, entstanden unter demokratischen Bedingungen. Ausschnitte offenbaren die Vielfalt des Amtes durch Farbe. Trotz Überwachungskameras begann ich das Projekt mit Mut. Die Bundespolizei überprüfte kurz meine Arbeit und erkannte sie als Architekturphotographie an. Aus Respekt vor Sicherheitsbedenken stellte ich das Photographieren ein. Die Kontrolle war respektvoll – ein Tribut an die Demokratie! Alle Photographien sind unbearbeitet.',
-    descriptionEn: 'Black, red, and gold are reflected in the architecture of the Federal President’s Office in Berlin. My series translates this into an abstract photographic sequence, created under democratic conditions. Excerpts reveal the diversity of the office through color. Despite surveillance cameras, I began the project with courage. The federal police briefly checked my work and recognized it as architectural photography. Out of respect for security concerns, I stopped photographing. The control was respectful—a tribute to democracy! All photographs are unedited.',
-    descriptionFa: 'رنگ‌های سیاه، سرخ و طلایی در معماری دفتر ریاست‌جمهوری فدرال در برلین بازتاب یافته‌اند. این مجموعه ادای احترامی به دموکراسی و شفافیت مدنی است.',
-    previewImage: '/images/wetransfer/black_red_gold_01.webp',
-    galleryPhotos: [
-      {
-        id: 'black-red-gold-01',
-        src: '/images/wetransfer/black_red_gold_01.webp',
-        alt: 'Black Red Gold – Office of the Federal President 01',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'black-red-gold-02',
-        src: '/images/wetransfer/black_red_gold_02.webp',
-        alt: 'Black Red Gold – Office of the Federal President 02',
-        captionDe: 'Image 02',
-        captionEn: 'Image 02',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'black-red-gold-03',
-        src: '/images/wetransfer/black_red_gold_03.webp',
-        alt: 'Black Red Gold – Office of the Federal President 03',
-        captionDe: 'Image 03',
-        captionEn: 'Image 03',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'black-red-gold-04',
-        src: '/images/wetransfer/black_red_gold_04.webp',
-        alt: 'Black Red Gold – Office of the Federal President 04',
-        captionDe: 'Image 04',
-        captionEn: 'Image 04',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'black-red-gold-05',
-        src: '/images/wetransfer/black_red_gold_05.webp',
-        alt: 'Black Red Gold – Office of the Federal President 05',
-        captionDe: 'Image 05',
-        captionEn: 'Image 05',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'black-red-gold-06',
-        src: '/images/wetransfer/black_red_gold_06.webp',
-        alt: 'Black Red Gold – Office of the Federal President 06',
-        captionDe: 'Image 06',
-        captionEn: 'Image 06',
-        captionFa: 'تصویر'
-      }
-    ]
-  },
-  {
     id: 'mirrored-single',
     titleDe: 'Mirrored',
     titleEn: 'Mirrored',
@@ -1062,6 +983,85 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         alt: 'Mirrored III (Black & White)',
         captionDe: 'Image 01',
         captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      }
+    ]
+  },
+  {
+    id: 'black-red-gold',
+    titleDe: 'Black Red Gold – Office of the Federal President of Germany',
+    titleEn: 'Black Red Gold – Office of the Federal President of Germany',
+    titleFa: 'Black Red Gold – Office of the Federal President of Germany (سیاه سرخ طلایی)',
+    category: 'Architecture / Exterior',
+    categoryFa: 'معماری / سازه‌های بیرونی',
+    awardsDe: 'AMP 2026 — Honorable Mention (Other Exterior)',
+    awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
+    awardsFa: 'AMP 2026 — تقدیر ویژه سازه‌های بیرونی',
+    badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-black-red-gold",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
+    link: 'https://architectureprize.com/',
+    descriptionDe: 'Schwarz, Rot und Gold spiegeln sich in der Architektur des Bundespräsidialamtes in Berlin wider. Meine Serie übersetzt dies in eine abstrakte photographische Sequenz, entstanden unter demokratischen Bedingungen. Ausschnitte offenbaren die Vielfalt des Amtes durch Farbe. Trotz Überwachungskameras begann ich das Projekt mit Mut. Die Bundespolizei überprüfte kurz meine Arbeit und erkannte sie als Architekturphotographie an. Aus Respekt vor Sicherheitsbedenken stellte ich das Photographieren ein. Die Kontrolle war respektvoll – ein Tribut an die Demokratie! Alle Photographien sind unbearbeitet.',
+    descriptionEn: 'Black, red, and gold are reflected in the architecture of the Federal President’s Office in Berlin. My series translates this into an abstract photographic sequence, created under democratic conditions. Excerpts reveal the diversity of the office through color. Despite surveillance cameras, I began the project with courage. The federal police briefly checked my work and recognized it as architectural photography. Out of respect for security concerns, I stopped photographing. The control was respectful—a tribute to democracy! All photographs are unedited.',
+    descriptionFa: 'رنگ‌های سیاه، سرخ و طلایی در معماری دفتر ریاست‌جمهوری فدرال در برلین بازتاب یافته‌اند. این مجموعه ادای احترامی به دموکراسی و شفافیت مدنی است.',
+    previewImage: '/images/wetransfer/black_red_gold_01.webp',
+    galleryPhotos: [
+      {
+        id: 'black-red-gold-01',
+        src: '/images/wetransfer/black_red_gold_01.webp',
+        alt: 'Black Red Gold – Office of the Federal President 01',
+        captionDe: 'Image 01',
+        captionEn: 'Image 01',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'black-red-gold-02',
+        src: '/images/wetransfer/black_red_gold_02.webp',
+        alt: 'Black Red Gold – Office of the Federal President 02',
+        captionDe: 'Image 02',
+        captionEn: 'Image 02',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'black-red-gold-03',
+        src: '/images/wetransfer/black_red_gold_03.webp',
+        alt: 'Black Red Gold – Office of the Federal President 03',
+        captionDe: 'Image 03',
+        captionEn: 'Image 03',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'black-red-gold-04',
+        src: '/images/wetransfer/black_red_gold_04.webp',
+        alt: 'Black Red Gold – Office of the Federal President 04',
+        captionDe: 'Image 04',
+        captionEn: 'Image 04',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'black-red-gold-05',
+        src: '/images/wetransfer/black_red_gold_05.webp',
+        alt: 'Black Red Gold – Office of the Federal President 05',
+        captionDe: 'Image 05',
+        captionEn: 'Image 05',
+        captionFa: 'تصویر'
+      },
+      {
+        id: 'black-red-gold-06',
+        src: '/images/wetransfer/black_red_gold_06.webp',
+        alt: 'Black Red Gold – Office of the Federal President 06',
+        captionDe: 'Image 06',
+        captionEn: 'Image 06',
         captionFa: 'تصویر'
       }
     ]

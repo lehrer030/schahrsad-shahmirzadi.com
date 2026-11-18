@@ -407,14 +407,14 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=14668&mode=hm&compID=12821'
           },
           {
-            title: 'Mirrored III (Black & White)',
-            category: 'Exterior Architecture Photography – Other Exterior (Student)',
-            zoomUrl: 'https://architectureprize.com/winners/winner.php?id=14725&mode=hm&compID=12821'
-          },
-          {
             title: 'Mirrored II',
             category: 'Exterior Architecture Photography – Landscape / Urban Design',
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=14661&mode=hm&compID=12821'
+          },
+          {
+            title: 'Mirrored III (Black & White)',
+            category: 'Exterior Architecture Photography – Other Exterior (Student)',
+            zoomUrl: 'https://architectureprize.com/winners/winner.php?id=14725&mode=hm&compID=12821'
           },
           {
             title: 'Elegance of Structure – Black and White',
