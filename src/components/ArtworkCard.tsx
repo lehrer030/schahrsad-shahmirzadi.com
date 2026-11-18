@@ -95,17 +95,10 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
       {/* Responsive Layout: Cover image sized to match Award cards proportions! */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
         
-        {/* Left / Center Column: Image matching exact size of Award cards */}
+        {/* Left / Center Column: Image matching exact size of Award cards with corner badge overlays */}
         <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
           
-          {/* TOP ROW: AMP ALWAYS TOP-LEFT */}
-          <div className="w-full flex justify-start mb-2.5">
-            <div className="w-28 sm:w-36">
-              {renderBadgeItem(ampBadge)}
-            </div>
-          </div>
-
-          {/* MAIN COVER PHOTO: aspect-[3/4] matching Award images size */}
+          {/* MAIN COVER PHOTO: aspect-[3/4] matching Award images size with authentic corner badge overlays */}
           <div
             onClick={() => onOpenSeries(series.id)}
             className="group/img relative rounded-xl overflow-hidden bg-stone-900 border border-stone-200/90 cursor-pointer w-full aspect-[3/4] transition-all duration-300"
@@ -141,8 +134,62 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               </button>
             </div>
 
+            {/* Top-Left AMP Badge */}
+            {ampBadge && (
+              <a
+                href={ampBadge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`${ampBadge.name}: ${ampBadge.award}`}
+                onClick={(e) => e.stopPropagation()}
+                className="absolute top-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+              >
+                <img
+                  src={resolveAsset(ampBadge.badgeImage)}
+                  alt={ampBadge.name}
+                  className="h-6 sm:h-7 w-auto object-contain"
+                />
+              </a>
+            )}
+
+            {/* Bottom-Left PERSPA Badge */}
+            {perspaBadge && (
+              <a
+                href={perspaBadge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`${perspaBadge.name}: ${perspaBadge.award}`}
+                onClick={(e) => e.stopPropagation()}
+                className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+              >
+                <img
+                  src={resolveAsset(perspaBadge.badgeImage)}
+                  alt={perspaBadge.name}
+                  className="h-6 sm:h-7 w-auto object-contain"
+                />
+              </a>
+            )}
+
+            {/* Top-Right IPA Badge */}
+            {ipaBadge && (
+              <a
+                href={ipaBadge.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`${ipaBadge.name}: ${ipaBadge.award}`}
+                onClick={(e) => e.stopPropagation()}
+                className="absolute top-2.5 right-2.5 rtl:right-auto rtl:left-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 hover:scale-105 transition-transform cursor-pointer z-10"
+              >
+                <img
+                  src={resolveAsset(ipaBadge.badgeImage)}
+                  alt={ipaBadge.name}
+                  className="h-6 sm:h-7 w-auto object-contain"
+                />
+              </a>
+            )}
+
             {/* Watermark logo bottom-right (Rechtsschutzmarke direkt rechts unten auf dem Bild) */}
-            <div className="absolute bottom-2.5 right-2.5 text-[9.5px] sm:text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs">
+            <div className="absolute bottom-2.5 right-2.5 text-[9.5px] sm:text-[10px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 backdrop-blur-xs px-2 py-0.5 rounded shadow-xs z-10">
               SchirZan | Schahrsad Shahmirzadi
             </div>
           </div>

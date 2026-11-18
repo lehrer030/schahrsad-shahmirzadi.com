@@ -1060,6 +1060,22 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                     {comp.year}
                                   </span>
                                 </div>
+
+                                {/* Bottom-Left Competition Symbol Badge matching FurtherWorks */}
+                                {comp.badgeImage && (
+                                  <div className="absolute bottom-2.5 left-2.5 rtl:left-auto rtl:right-2.5 p-1 bg-white/95 backdrop-blur-xs rounded-lg shadow-md border border-stone-200/80 z-10 pointer-events-none">
+                                    <img
+                                      src={resolveAsset(comp.badgeImage)}
+                                      alt={comp.name}
+                                      className="h-6 sm:h-7 w-auto object-contain"
+                                    />
+                                  </div>
+                                )}
+
+                                {/* Watermark bottom-right */}
+                                <div className="absolute bottom-2.5 right-2.5 rtl:right-auto rtl:left-2.5 text-[9px] sm:text-[9.5px] tracking-wider text-white/95 font-serif pointer-events-none select-none bg-stone-900/60 px-1.5 py-0.5 rounded backdrop-blur-xs z-10">
+                                  SchirZan | Schahrsad Shahmirzadi
+                                </div>
                               </div>
                             ) : (
                               <div className="aspect-[4/3] bg-gradient-to-br from-amber-50 to-stone-100 flex items-center justify-center border-b border-stone-100">

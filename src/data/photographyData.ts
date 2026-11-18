@@ -498,6 +498,36 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — HM · IPA 2026 — Official Selection · Black & White Spider Awards 2025 — HM & Nominee · LICC 2025 — Official Selection',
     awardsFa: 'AMP 2026 — تقدیر · IPA 2026 — برگزیده رسمی · Spider Awards 2025 — نامزد و تقدیر · LICC 2025 — برگزیده رسمی',
     badgeNames: ['AMP 2026 HM', 'IPA 2026 OS', 'Spider Awards 2025 HM', 'LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "amp-architectural-piano",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      },
+      {
+            "id": "spider-architectural-piano",
+            "name": "Black & White Spider Awards 2025",
+            "award": "Spider Awards 2025 · Nominee",
+            "year": "2025",
+            "badgeImage": "/images/2025_12_spiderfellow20thwinner-150x150.webp",
+            "position": "bottom-left",
+            "link": "https://www.thespiderawards.com/"
+      },
+      {
+            "id": "ipa-architectural-piano",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613457-25',
     descriptionDe: 'Diese Serie abstrahiert eine moderne Fassade, deren vertikale Fenster wie die Tasten eines Pianos wirken. Rhythmus, Wiederholung und die präzise Ausrichtung der Fensterachsen erzeugen eine kraftvolle grafische Partitur, die die Struktur einer musikalischen Komposition widerspiegelt. Jedes Photo erforscht Geometrie, Licht und Schatten mit akribischer Kontrolle, während Schwarz-Weiß die Tonwertkontraste intensiviert und jede Nuance der Form offenbart. Das Gebäude wird zu visueller Musik – ein architektonisches Piano, das den Betrachter einlädt, die Resonanz der Stadt in Linien, Flächen und Variationen zu spüren und eine gewöhnliche Fassade in eine fesselnde musikalische Komposition verwandelt.',
     descriptionEn: 'This series abstracts a modern facade, where vertical windows appear like the keys of a piano. Rhythm, repetition, and the precise alignment of window axes create a powerful graphic score, echoing the structure of a musical composition. Each photo explores geometry, light, and shadow with meticulous control, while black & white intensify tonal contrasts and reveal every nuance of form. The building becomes visual music—an architectural piano that invites viewers to sense the city’s resonance in lines, surfaces, and variations, transforming an ordinary facade into a compelling musical composition.',
@@ -549,6 +579,45 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'PERSPA 2026 — Editor’s Choice · AMP 2026 — HM (Interior Details) · BIFA 2026 — HM · IPA 2026 — Official Selection',
     awardsFa: 'PERSPA 2026 — انتخاب سردبیر · AMP 2026 — تقدیر · BIFA 2026 — تقدیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['PERSPA Editor’s Choice', 'AMP 2026 HM', 'BIFA 2026 HM', 'IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "amp-elegance-of-structure-bw",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      },
+      {
+            "id": "perspa-elegance-of-structure-bw",
+            "name": "PERSPA 2026",
+            "award": "Black and White · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
+            "position": "bottom-left",
+            "link": "https://architectureperspectiveawards.com/"
+      },
+      {
+            "id": "bifa-elegance-of-structure-bw",
+            "name": "BIFA 2026",
+            "award": "Budapest International Foto Awards · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/bifa_2026_hm.png",
+            "position": "top-left",
+            "link": "https://budapestfotoawards.com/"
+      },
+      {
+            "id": "ipa-elegance-of-structure-bw",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/elegance-of-structure-black-and-white-2/',
     descriptionDe: 'Diese Photographie zeigt das Interieur der Griechischen Nationaloper in Athen, wo Licht, Materialien und Raumrhythmus präzise harmonieren. Architektur und Design verschmelzen zu einer geometrischen Komposition, in der Glasflächen, schlanke Säulen und sorgfältig durchdachte Details das Foyer in eine Bühne für Licht, Perspektive und Bewegung verwandeln. Dieser Raum übte eine geradezu magnetische Anziehungskraft auf mich aus und bleibt bis heute das eindrucksvollste Beispiel für Innenarchitektur, das ich je erlebt habe.',
     descriptionEn: 'This photograph shows the interior of the Greek National Opera in Athens, where light, materials, and spatial rhythm are precisely harmonised. Architecture and design merge into a geometric composition in which glass surfaces, slender columns, and carefully considered details transform the foyer into a stage for light, perspective, and movement. This space exerted a magnetic pull on me and remains, to this day, the most compelling example of interior architecture I have ever experienced.',
@@ -576,6 +645,27 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection · AMP 2026 — Honorable Mention',
     awardsFa: 'IPA 2026 — برگزیده رسمی · AMP 2026 — تقدیر ویژه',
     badgeNames: ['IPA 2026 OS', 'AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-elegance-of-structure-color",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      },
+      {
+            "id": "ipa-elegance-of-structure-color",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613460-25',
     descriptionDe: 'Diese Photographien zeigen das Interieur der Griechischen Nationaloper in Athen, wo Licht, Materialien und Raumrhythmus präzise harmonieren. Architektur und Design verschmelzen zu geometrischen Kompositionen, in denen Glasflächen, schlanke Säulen und sorgfältig durchdachte Details das Foyer in eine Bühne für Licht, Perspektive und Bewegung verwandeln. Diese Räume übten eine geradezu magnetische Anziehungskraft auf mich aus und bleiben bis heute die faszinierendsten Beispiele für Innenarchitektur, die ich je erlebt habe.',
     descriptionEn: 'These photographs show the interior of the Greek National Opera in Athens, where light, materials, and spatial rhythm are precisely harmonised. Architecture and design merge into geometric compositions in which glass surfaces, slender columns, and carefully considered details transform the foyer into a stage for light, perspective, and movement. These spaces exerted a magnetic pull on me and remain, to this day, the most compelling examples of interior architecture I have ever experienced.',
@@ -627,6 +717,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-cloud-mirror-architecture-i",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=14719&mode=hm&compID=12821',
     descriptionDe: '»Cloud Mirror Architecture I: Heaven’s Bridge« zeigt moderne Architektur, die sich wie eine Brücke zwischen Stadt und Himmel erhebt. Wolkenspiegelungen in der Glasfassade schaffen einen kontinuierlichen visuellen Dialog zwischen Atmosphäre und gebauter Struktur. In einer Photographie wirkt die Architektur wie eine Himmelstreppe, während im letzten Bild die gewählte Perspektive einen geraden Weg in eine sanfte Kurve verwandelt und die Raumwahrnehmung subtil verschiebt. Die Serie erforscht die Spiegelung von Architektur und Wolken als Brücke zwischen Stadt und Himmel. Gewidmet Steve Barret.',
     descriptionEn: '“Cloud Mirror Architecture I: Heaven’s Bridge” shows a piece of modern architecture that itself seems to rise like a bridge between city and sky. Reflections of clouds in the glass façade create a continuous visual dialogue between atmosphere and built structure. In one photograph, the architecture appears like a stairway to heaven, while in the final photograph the chosen perspective turns a straight path into a gentle curve, subtly shifting spatial perception. The series explores the mirroring of architecture and clouds as a bridge between city and sky. Dedicated to Steve Barret.',
@@ -705,6 +807,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-cloud-mirror-architecture-ii",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=14704&mode=hm&compID=12821',
     descriptionDe: 'In »Cloud Mirror Architecture II: Stormy Sea (B&W)« erzeugen Reflexionen und architektonische Formen die Präsenz eines Schiffes. Eine gekippte Perspektive verwandelt die Fassade in ein stürmisches Meer: Ein schiffsähnlicher Bug schneidet in einen turbulenten Himmel, die Glasfläche fängt unruhige Wolkenspiegelungen wie Wellen ein, Fensterreihen erinnern an Bullaugen und ein abschließendes Photo deutet einen Hafen an. Die Serie erforscht, wie Glasarchitektur und ihre gespiegelte Umgebung zu einem Schiff werden, das durch ein stürmisches Meer aus Himmel, Licht und Wolken zieht – und verschiebt die Wahrnehmung von einem statischen Bauwerk zu einem reisenden Objekt. Meiner Mutter gewidmet.',
     descriptionEn: 'In “Cloud Mirror Architecture II: Stormy Sea (B&W)”, reflections and architectural forms create the presence of a ship. A tilted perspective turns the façade into a stormy sea: a ship-like bow cuts into a turbulent sky, the glass surface catching restless cloud reflections like waves, rows of windows evoke portholes, and a final photograph suggests a harbour. The series explores how glass architecture and its mirrored surroundings become a vessel moving through a stormy sea of sky, light and clouds, shifting perception from static structure to travelling object. Dedicated to my mother.',
@@ -767,6 +881,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsFa: 'AMP 2026 — تقدیر ویژه سازه‌های بیرونی',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-black-red-gold",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/',
     descriptionDe: 'Schwarz, Rot und Gold spiegeln sich in der Architektur des Bundespräsidialamtes in Berlin wider. Meine Serie übersetzt dies in eine abstrakte photographische Sequenz, entstanden unter demokratischen Bedingungen. Ausschnitte offenbaren die Vielfalt des Amtes durch Farbe. Trotz Überwachungskameras begann ich das Projekt mit Mut. Die Bundespolizei überprüfte kurz meine Arbeit und erkannte sie als Architekturphotographie an. Aus Respekt vor Sicherheitsbedenken stellte ich das Photographieren ein. Die Kontrolle war respektvoll – ein Tribut an die Demokratie! Alle Photographien sind unbearbeitet.',
     descriptionEn: 'Black, red, and gold are reflected in the architecture of the Federal President’s Office in Berlin. My series translates this into an abstract photographic sequence, created under democratic conditions. Excerpts reveal the diversity of the office through color. Despite surveillance cameras, I began the project with courage. The federal police briefly checked my work and recognized it as architectural photography. Out of respect for security concerns, I stopped photographing. The control was respectful—a tribute to democracy! All photographs are unedited.',
@@ -834,6 +960,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-mirrored-single",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26',
     descriptionDe: 'Die Spiegelung transformiert die Geometrie der Architektur und verwandelt die Uferfassade in eine fast meditative Komposition. Das Photo spielt mit der Wahrnehmung, indem Wasser und Himmel nahezu vertauscht wirken und den Betrachter einladen zu hinterfragen, was festes Bauwerk und was Reflexion ist.',
     descriptionEn: 'The mirroring transforms the geometry of the architecture, turning the riverside façade into an almost meditative composition. The photograph plays with perception, as water and sky appear almost reversed, inviting the viewer to question what is solid and what is reflection.',
@@ -861,6 +999,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-mirrored-ii",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=14661&mode=hm&compID=12821',
     descriptionDe: 'Entlang der Uferpromenade spiegelt sich die Architektur in einer ruhigen Wasseroberfläche, wo Wasser, Himmel und Wolken eine klare Symmetrieachse zwischen Stadt und Atmosphäre bilden. »Mirrored II« offenbart die Beziehung zwischen gebautem Raum, Fassadenrhythmus und Baumreihen, bis Architektur und Reflexion mit dem Himmel zu einer fast grafischen, symmetrischen Struktur verschmelzen.',
     descriptionEn: 'Along the waterfront promenade, the architecture is reflected in a calm water surface where water, sky and clouds form a clear axis of symmetry between the city and the atmospheric space. „Mirrored II” reveals the relationship between built space, façade rhythm and repeating tree lines, until architecture and its reflection on the calm water surface merge with the sky into an almost graphic, symmetrical structure.',
@@ -888,6 +1038,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-mirrored-iii-bw",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=14725&mode=hm&compID=12821',
     descriptionDe: 'Entlang der Uferpromenade wird Architektur zum zentralen Motiv: Ihre klare Fassadenstruktur und der Rhythmus der Fenster spiegeln sich nahezu nahtlos im ruhigen Wasser wider. In Schwarz-Weiß gehalten, konzentriert sich »Mirrored III (Black & White)« auf die gebaute Form und ihre Spiegelung. Tonwertkontraste, Baumasse, vertikale Linien und strukturelle Details verschmelzen zu einer symmetrischen Komposition, in der das Wasser das Gebäude nicht nur spiegelt, sondern eigenständig erweitert.',
     descriptionEn: 'Along the waterfront promenade, architecture becomes the central motif: its clear façade structure and the rhythm of its windows are reflected almost seamlessly in the calm water. Presented in black and white, “Mirrored III (Black & White)” focuses on the built form and its reflection in the water. Tonal contrasts, architectural mass, vertical lines and structural details coalesce into an almost complete, symmetrical composition in which the water not only reflects the building but independently extends it.',
@@ -915,6 +1077,36 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'BIFA 2026 — Honorable Mention · PERSPA 2026 — Editor’s Choice · IPA 2026 — Official Selection',
     awardsFa: 'BIFA 2026 — تقدیر ویژه · PERSPA 2026 — انتخاب سردبیر · IPA 2026 — برگزیده رسمی',
     badgeNames: ['BIFA 2026 HM', 'PERSPA Editor’s Choice', 'IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "bifa-hephaestus-legacy",
+            "name": "BIFA 2026",
+            "award": "Budapest International Foto Awards · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/bifa_2026_hm.png",
+            "position": "top-left",
+            "link": "https://budapestfotoawards.com/"
+      },
+      {
+            "id": "perspa-hephaestus-legacy",
+            "name": "PERSPA 2026",
+            "award": "Black and White · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
+            "position": "bottom-left",
+            "link": "https://architectureperspectiveawards.com/"
+      },
+      {
+            "id": "ipa-hephaestus-legacy",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722626529-26',
     descriptionDe: 'Der Hephaistos-Tempel ist dem Gott der Schmiede und des Feuers geweiht – ein Werk der Architektur reich an Symbolik und Handwerkskunst. Diese Serie stellt die Säulen ins Zentrum, wie sie Licht und Schatten in den Raum ziehen und Stärke sowie Kraft widerspiegeln. So entsteht ein visueller Dialog zwischen antiker Technik, mythologischer Inspiration und der zeitlosen Schönheit der Steinarchitektur.',
     descriptionEn: 'The Temple of Hephaistos is dedicated to the god of blacksmiths and fire—a work of architecture rich in symbolism and craftsmanship. This series places its columns at the center as they draw light and shadow into the space, reflecting strength and power. In doing so, a visual dialogue emerges between ancient technique, mythological inspiration, and the timeless beauty of stone architecture.',
@@ -974,6 +1166,27 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2025 — Honorable Mention · PERSPA 2026 — Honorable Mention',
     awardsFa: 'AMP 2025 — تقدیر ویژه · PERSPA 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2025 HM', 'PERSPA 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-2025-steps-of-sustainability",
+            "name": "Architecture MasterPrize 2025",
+            "award": "Architecture MasterPrize 2025",
+            "year": "2025",
+            "badgeImage": "/images/2026_01_winners_badge-AMP-2025-1024x474.webp",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      },
+      {
+            "id": "perspa-steps-of-sustainability",
+            "name": "PERSPA 2026",
+            "award": "Black and White · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/perspa_2026_bw_hm.png",
+            "position": "bottom-left",
+            "link": "https://architectureperspectiveawards.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=12441&mode=hm&compID=12816',
     descriptionDe: 'Diese Serie transformiert das Treppenhaus des Ministeriums für Landwirtschaft, Umwelt und Klimaschutz (MLUK/MLEUV) des Landes Brandenburg in Potsdam in ein Paradigma nachhaltiger Architektur: Meditative Kompositionen visualisieren ökologische Verantwortung, ressourceneffizientes Bauen und architektonische Innovation. Übergänge und Brailleschrift-Details betonen das Bewusstsein für Inklusion, Klimaschutz und Wandel.',
     descriptionEn: 'This series transforms the stairwell of the Ministry of Agriculture, Food, Environment and Consumer Protection (MLEUV) of the State of Brandenburg in Potsdam into a paradigm of sustainable architecture: Meditative compositions visualize ecological responsibility, resource-efficient construction, and architectural innovation. Transitions and Braille detail highlight the impact on environmental awareness, social inclusion, and climate action. Each step represents ecological, economic, and social change in our society toward a better world.',
@@ -1041,6 +1254,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-dimensions-of-sustainability",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613455-25',
     descriptionDe: '»Dimensions of Sustainability« entstand im Treppenhaus des Umweltministeriums in Brandenburg. Die abstrakte Serie erforscht Licht, Schatten und Materialien wie Stahl und Holz und verwandelt alltägliche Durchgänge in meditative Kompositionen. Inspiriert vom UN-Konzept der drei Dimensionen der Nachhaltigkeit – ökologisch, ökonomisch und sozial – repräsentiert jedes Photo eine Säule und macht gewöhnliche Strukturen zu Symbolen gemeinsamer Verantwortung.',
     descriptionEn: '“Dimensions of Sustainability” was created in the stairwell of the Environment Ministry in Brandenburg. The abstract series explores light, shadow, and materials such as steel and wood, transforming everyday passageways into meditative compositions. Inspired by the UN concept of three dimensions of sustainability—ecological, economic, and social—each photo represents one pillar and turns ordinary structures into symbols of shared responsibility.',
@@ -1084,6 +1309,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'AMP 2026 — Honorable Mention (Other Exterior)',
     awardsFa: 'AMP 2026 — تقدیر ویژه',
     badgeNames: ['AMP 2026 HM'],
+    badges: [
+
+      {
+            "id": "amp-razor-pull-berlin",
+            "name": "Architecture MasterPrize 2026",
+            "award": "Student Photography · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/amp_2026_student_hm.png",
+            "position": "top-left",
+            "link": "https://architectureprize.com/"
+      }
+],
     link: 'https://architectureprize.com/winners/winner.php?id=14703&mode=hm&compID=12821',
     descriptionDe: '»Razor Pull Berlin« verdichtet ein gewöhnliches städtisches Straßenbild zu einem fast abstrakten visuellen Raum. Durch extreme Perspektiven konvergieren Straßenlaternen, Glasfassaden und Klinkerstrukturen zu einer eigenständigen Architekturwahrnehmung, wobei die Glasfassade selbst wie eine Klinge erscheint. Die Serie zieht den Betrachter in einen subtilen, hypnotischen Sog. »Razor Pull Berlin« lädt dazu ein, die Stadt neu zu entdecken und die stille, markante Schönheit ihrer abstrakten Geometrie zu erkennen.',
     descriptionEn: '“Razor Pull Berlin” condenses an ordinary urban streetscape into an almost abstract visual space. Through extreme perspectives, streetlights, glass facades and brick structures converge into a distinct perception of architecture, the glass facade itself appearing as a blade. The series draws the viewer into a subtle yet hypnotic pull. The circular lamp detaches from its function, becoming an abstract plane that fuses with the surrounding buildings. “Razor Pull Berlin” invites us to rediscover the city and recognize the quiet, striking beauty of its abstract geometry.',
@@ -1151,6 +1388,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-fragments-of-memory",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613512-25',
     descriptionDe: 'Die Kaiser-Wilhelm-Gedächtniskirche ist ein einzigartiger Ort der Erinnerung im Herzen Berlins. Ihr Ruinenturm erinnert an die Schrecken des Krieges, während die nach dem Anschlag von 2016 eingeführten Eingangssperren Schutz in einer offenen, aber verwundbaren Stadt symbolisieren. Dennoch strahlt die Kirche Schönheit aus: Historische Bausubstanz, leuchtende Mosaike und moderne Architektur verbinden Vergangenheit und Gegenwart. Menschen aus aller Welt versammeln sich hier in Momenten des Gedenkens, der Freude und der Hoffnung – ein lebendiges Symbol unserer Zeit.',
     descriptionEn: 'The Kaiser Wilhelm Memorial Church is a unique place of remembrance in the heart of Berlin. Its ruined tower recalls the horrors of war, while the entrance barriers introduced after the 2016 attack symbolize protection in an open yet vulnerable city. Still, the church radiates beauty: historic fabric, glowing mosaics and modern architecture connect past and present. People from all over the world gather here in moments of remembrance, joy and hope – a living symbol of our time.',
@@ -1210,6 +1459,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-symmetric-networks",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613543-25',
     descriptionDe: 'Im weiteren Kontext eines pädagogischen Außenraums verwandelt sich ein Spielplatz-Klettergerüst in eine Studie über Symmetrie, Rhythmus und räumliche Spannung – eine Form von »Spielarchitektur«, in der Gitter und Verbindungspunkte ein Netzwerk aus Ordnung und Bewegung schaffen. Durch Wiederholungen und radiale Verbindungen wird ein Nutzobjekt zu einem abstrakten Diagramm von Gleichgewicht und Fluss.',
     descriptionEn: 'Within the wider context of an educational exterior, a playground climbing frame transforms into a study of symmetry, rhythm, and spatial tension — a form of “play architecture” in which grids and junctions create a network of order and movement. Through repeating patterns and radial connections, a utilitarian object becomes an abstract diagram of balance and flow, prompting reflection on the invisible frameworks that shape our perception of space and on how designed outdoor learning environments quietly teach structure, orientation and connectivity.',
@@ -1515,6 +1776,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی (بخش ویدیو/عکس)',
     badgeNames: ['LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "licc-prismatic-berlin",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "position": "top-left",
+            "link": "https://www.licc.uk/"
+      }
+],
     link: 'http://www.licc.uk/winners/winner.php?id=2-37342-25&OS=true',
     descriptionDe: 'Diese Photoserie entschlüsselt Berlins urbane Identität durch das Prisma zeitgenössischer Architektur. Glasfassaden werden zu Leinwänden des pulsierenden Stadtlebens und spiegeln vielschichtige Abstraktionen wider. Geometrische Klarheit, lebendige Farben, Licht, Schatten und ikonische Silhouetten erzeugen neue visuelle Rhythmen. Alle Photographien sind unbearbeitet direkt aus der Kamera – authentische Momente im Fluss der Zeit.',
     descriptionEn: 'This photo series deciphers Berlin’s urban identity through the prism of contemporary architecture. Glass facades transform into canvases for vibrant city life, echoing multi-layered abstractions. Geometric clarity, vivid colors, light, shadow, and iconic silhouettes generate new visual rhythms. All photographs are unedited and taken straight from the camera—authentic moments in time. Construction and illusion blend the familiar with the unexpected, allowing Berlin to shine in ever-changing perspectives and inviting viewers to radically reimagine the city.',
@@ -1574,6 +1847,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "licc-transformer",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "position": "top-left",
+            "link": "https://www.licc.uk/"
+      }
+],
     link: 'https://www.licc.uk/winners/winner.php?id=2-37351-25&OS=true',
     descriptionDe: 'In »Transformer« werden urbane Räume durch Reflexionen und Verzerrungen transformiert: Fassaden lösen sich auf und der wiederkehrende rote Kran als zentrales Motiv verbindet abstrakte Linien und Muster als Symbol urbanen Wandels und ständiger Veränderung. Architektur scheint zu fließen; vertraute Szenerien werden zu kaleidoskopartigen Projektionen. Alle Bilder sind unbearbeitet – authentische Momente der Metamorphose.',
     descriptionEn: 'In “Transformer,” urban spaces are transformed through reflections and distortions: facades dissolve and the recurring red crane, as a central motiv, links abstract lines and patterns, symbolizing urban transformation and constant change. Architecture appears to flow; familiar settings are reimagined as kaleidoscopic, shifting projections. All images are unedited (except occasional cropping), so viewers encounter authentic moments of metamorphosis: the familiar becomes a sign of radical change, merging reality and abstraction into new perspectives on urban transformation.',
@@ -1673,6 +1958,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     awardsEn: 'Black & White Spider Awards 2025 — Nominee (Architectural)',
     awardsFa: 'Spider Awards 2025 — نامزد دریافت جایزه',
     badgeNames: ['Spider Awards 2025 Nominee'],
+    badges: [
+
+      {
+            "id": "spider-columns-here-and-now",
+            "name": "Black & White Spider Awards 2025",
+            "award": "Spider Awards 2025 · Nominee",
+            "year": "2025",
+            "badgeImage": "/images/2025_12_spiderfellow20thwinner-150x150.webp",
+            "position": "bottom-left",
+            "link": "https://www.thespiderawards.com/"
+      }
+],
     link: 'https://www.thespiderawards.com/gallery/20th/gallery.php?g=w&x=a&cid=653&fid=309240',
     descriptionDe: 'Zeitlose Präsenz im modernen Licht und Schatten: Columns in the Here and Now erforscht den zeitlosen Dialog zwischen monumentalen Säulen, scharfen Schatten und großstädtischem Licht.',
     descriptionEn: 'Timeless Presence in Modern Light and Shadow: Columns in the Here and Now explores the timeless dialogue between monumental columns, stark shadows, and metropolitan light.',
@@ -1759,6 +2056,27 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection · LICC 2025 — Official Selection',
     awardsFa: 'IPA 2026 — برگزیده رسمی · LICC 2025 — برگزیده رسمی',
     badgeNames: ['IPA 2026 OS', 'LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "licc-between-space-time",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "position": "top-left",
+            "link": "https://www.licc.uk/"
+      },
+      {
+            "id": "ipa-between-space-time",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613510-25',
     descriptionDe: 'In den Reflexionen von Pfützen verschmelzen Realität und Illusion – Stille verwebt sich mit Bewegung. Die Uhr, Symbol der Zeit, wirkt entrückt und in ihrem eigenen Zwischenraum schwebend. In den Glasfassaden eines medizinischen Zentrums spiegelt sich eine fast neue Dimension wider – eine Schwelle zwischen Krankheit und Genesung, Wahrnehmung und Wirklichkeit. Diese Photoserie erforscht die fragilen Grenzen zwischen Sehen und Erinnern, zwischen dem Greifbaren und dem, was sich im Moment des Betrachtens aufzulösen beginnt. Sie erinnert uns daran, dass Heilung sich nur durch Raum und Zeit entfaltet.',
     descriptionEn: 'In the reflections of puddles, reality and illusion merge—stillness intertwines with movement. The clock, symbol of time, appears estranged and suspended, caught within its own in-between space. Reflected in the glass façades of a medical center, an almost new dimension unfolds—a threshold between illness and recovery, perception and reality. This photo series explores the fragile boundaries between seeing and remembering, between what can be touched and what, in the very act of observation, begins to dissolve. It reminds us that healing unfolds only through space and time.',
@@ -1802,6 +2120,18 @@ export const FINE_ART_WORKS: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Shoot / Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "licc-blessed-are-those-who-mourn",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "position": "top-left",
+            "link": "https://www.licc.uk/"
+      }
+],
     link: 'http://www.licc.uk/winners/winner.php?id=2-37355-25&OS=true',
     descriptionDe: '»Blessed Are Those Who Mourn« übersetzt die Seligpreisungen in monumentale Architektur. Von Licht durchflutet, rahmen Säulen Reliefs, deren uralte Worte Trost und Gerechtigkeit verheißen. Hoffnung erwächst im Wechselspiel von Licht und Schatten und macht jede Fassade zu einem zeitlosen Zeichen. Die Architektur bildet eine Brücke zwischen biblischer Verheißung und zeitgenössischer Erfahrung und macht Trost und Hoffnung im heutigen Stadtraum sinnlich greifbar – alles genau so aufgenommen, wie gesehen, unbearbeitet und im Originalzustand: »Selig sind, die da Leid tragen, denn sie sollen getröstet werden.«',
     descriptionEn: '“Blessed Are Those Who Mourn” translates the Beatitudes into monumental architecture. Bathed in light, columns frame reliefs whose ancient words evoke comfort and justice. Hope emerges in the interplay of light and shadow, turning each façade into a timeless sign. The architecture forms a bridge between biblical promise and contemporary experience, making comfort and hope sensually tangible within today’s urban space—all captured exactly as seen, with every photograph in the series shown unedited and as originally taken, centered on: “Blessed are those who mourn, for they shall be comforted.”',
@@ -1856,6 +2186,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'BIFA 2026 — Honorable Mention (Editorial / Photo Essay)',
     awardsFa: 'BIFA 2026 — تقدیر ویژه (بخش ادیتوریال / مقاله تصویری)',
     badgeNames: ['BIFA 2026 HM'],
+    badges: [
+
+      {
+            "id": "bifa-berlin-attack-on-queer",
+            "name": "BIFA 2026",
+            "award": "Budapest International Foto Awards · Honorable Mention",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/bifa_2026_hm.png",
+            "position": "top-left",
+            "link": "https://budapestfotoawards.com/"
+      }
+],
     link: 'https://budapestfotoawards.com/winners/hm/2026/93-41283-26/',
     descriptionDe: 'Berlin ist meine Heimat, eine Stadt der Vielfalt und Freiheit. Während des Christopher Street Day (CSD) 2026 wurde ein Lieferwagen vorsätzlich in eine Menschenmenge gesteuert, und der Angreifer attackierte mit einer Machete, bevor er flüchtete. Die Behörden stuften den Täter als islamistischen Extremisten ein. Eine Frau wurde getötet, 31 Menschen verletzt. Obwohl ich nicht queer bin, stehe ich als Deutsch-Iranerin in Berlin in voller Solidarität, und dieser Anschlag hat mich tief erschüttert. Diese Photographien sind mein stiller Akt des Gedenkens für die Opfer und eine Mahnung, dass queeres Leben, Vielfalt und Freiheit gelebt und verteidigt werden müssen.',
     descriptionEn: 'Berlin is my home, a city of diversity and freedom. During Christopher Street Day (CSD) 2026, a van was deliberately driven into a crowd, and the attacker used a machete before fleeing. Authorities describe the perpetrator as an Islamist extremist. One woman was killed and 31 people were injured. Although I am not queer, as a German-Iranian living in Berlin, I stand in solidarity, and this attack affected me deeply. This series of photographs is my quiet act of remembrance for the victims. It is also a reminder that queer life, diversity and freedom must be lived and defended.',
@@ -1915,6 +2257,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection (Special / Other)',
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش ویژه)',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-life-love-freedom-iran",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722616352-26',
     descriptionDe: 'Drei Pfeiler stehen für Leben, Liebe und Freiheit – für die Menschen im Iran und im Exil. Sie erheben sich aus der Dunkelheit, jeder für sich und doch miteinander verbunden; das seitliche Licht symbolisiert die Hoffnung, die ihren Weg durch die Nacht findet. Die leere Bahre steht für die Verweigerung medizinischer Hilfe für verletzte Demonstrierende und für Ärztinnen und Ärzte, die an ihrer Arbeit gehindert oder bedroht werden. Das leuchtende Kreuz markiert den Ort, an dem Heilung möglich sein sollte, und erinnert zugleich an Hospitäler, in denen Verletzte abgewiesen oder verfolgt werden. Für die Menschen im Iran und im Exil, die nach Würde und Freiheit streben.',
     descriptionEn: 'Three pillars stand for life, love and freedom – for people in Iran and in exile. They rise from the darkness, each on its own yet still connected; the side light represents hope finding its way through the night. The empty stretcher symbolizes the denial of medical treatment for injured protesters and doctors who are hindered or threatened in their work. The glowing cross marks the place where healing should be possible, and at the same time recalls hospitals where the injured are turned away or exposed to persecution. For the people in Iran and in exile striving for dignity and freedom.',
@@ -1958,6 +2312,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'URBAN Photo Awards 2026 — Selected Photographer (Streets)',
     awardsFa: 'URBAN Photo Awards 2026 — عکاس منتخب (بخش خیابان)',
     badgeNames: ['URBAN Photo Awards 2026 Selected'],
+    badges: [
+
+      {
+            "id": "urban-in-between-spaces",
+            "name": "URBAN Photo Awards 2026",
+            "award": "URBAN 2026 · Selected Photographer",
+            "year": "2026",
+            "badgeImage": "/images/URBAN-Photo-Awards-2026-2.png",
+            "position": "top-left",
+            "link": "https://www.urbanphotoawards.com/"
+      }
+],
     link: 'https://www.urbanphotoawards.com/en/photonew/?id=333556%2Fschirzan%2Fin-between-spaces',
     descriptionDe: '»In-Between Spaces« ist eine Photographie vom Berliner Alexanderplatz: Ein Mann aus Lettland schläft am Morgen auf einer Bank, umgeben von Taschen und Unrat. Zwischen Sichtbarkeit und Unsichtbarkeit offenbart das Bild, wie nah Ausgrenzung und urbanes Leben beieinander liegen. Die Photographie ruft zu mehr Mitgefühl für wohnungslose Menschen auf und mahnt uns, ihnen mit Respekt, Würde und Menschlichkeit zu begegnen. Das ausdrückliche Einverständnis der abgebildeten Person zur Veröffentlichung liegt vor.\n\nIn-Between Spaces (Area 14): Ausgestellt bei den Trieste Photo Days 2026 (Mercato Coperto, Triest). Photographische Erkundung urbaner Schwellenräume, Übergänge und Passagen, in denen Grenzen verschwimmen.',
     descriptionEn: '“In-Between Spaces” is a photograph taken at Berlin’s Alexanderplatz: a man from Latvia sleeping on a bench in the morning, surrounded by bags and litter. Between visibility and invisibility, it reveals how closely exclusion and urban life coexist. The photograph calls for greater compassion toward people experiencing homelessness and urges us to treat them with respect, dignity and humanity. The explicit consent of the depicted person for publication has been obtained.\n\nIn-Between Spaces (Area 14): Exhibited at Trieste Photo Days 2026 (Mercato Coperto, Trieste). Photographic inquiry into urban liminal zones, transitions, and passages where boundaries dissolve.',
@@ -1985,6 +2351,18 @@ export const SOCIAL_ENVIRONMENTAL_WORKS: FurtherWork[] = [
     awardsEn: 'LICC 2025 — Official Selection (Shoot / Photo–Video)',
     awardsFa: 'LICC 2025 — برگزیده رسمی',
     badgeNames: ['LICC 2025 OS'],
+    badges: [
+
+      {
+            "id": "licc-dignity-of-animal",
+            "name": "LICC 2025",
+            "award": "London International Creative Competition · Official Selection",
+            "year": "2025",
+            "badgeImage": "/images/LICC-logo-horizontal-final-ver.png",
+            "position": "top-left",
+            "link": "https://www.licc.uk/"
+      }
+],
     link: 'http://www.licc.uk/winners/winner.php?id=2-37357-25&OS=true',
     descriptionDe: 'Diese Serie markiert eine persönliche Transformation. Bei der Begegnung mit dem Löwen im Berliner Zoo sah ich kein Ausstellungsstück, sondern ein Wesen, dessen stiller, würdevoller Blick jede Barriere durchbrach. Durch mein Objektiv nahmen Individualität und die Sehnsucht nach Freiheit Gestalt an. Diese Bilder stellen Zoos als Relikte der Kontrolle infrage und fordern einen Wandel – von Zurschaustellung hin zu Fürsorge, von Gefangenschaft hin zu echtem Artenschutz. Sein Blick bleibt: Eine Würde, die nichts einsperren kann.',
     descriptionEn: 'This series marks a personal transformation. Meeting the lion at Berlin Zoo, I saw not an exhibit but a being whose silent, dignified gaze pierced every barrier. Through my lens, individuality and longing for freedom took form. These images challenge zoos as relics of control, urging a shift—from display to care, from captivity to wild protection. His gaze remains: dignity that nothing can confine.',
@@ -2031,6 +2409,18 @@ export const PORTRAIT_WORKS: FurtherWork[] = [
     awardsEn: 'IPA 2026 — Official Selection (People / Self-Portrait)',
     awardsFa: 'IPA 2026 — برگزیده رسمی (بخش پرتره و سلف پرتره)',
     badgeNames: ['IPA 2026 OS'],
+    badges: [
+
+      {
+            "id": "ipa-kickboxing-self-portrait",
+            "name": "IPA 2026",
+            "award": "Architecture · Honorable Mention & Official Selection",
+            "year": "2026",
+            "badgeImage": "/images/badges_custom/ipa_2026_hm_new.png",
+            "position": "bottom-right",
+            "link": "https://www.photoawards.com/"
+      }
+],
     link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722619299-26',
     descriptionDe: 'Vom Kampf im Ring zum Blitzlicht im Bild: Ein kraftvolles Selbstporträt, das den Übergang von zehnfacher sportlicher Weltmeisterschaft zur kompromisslosen photographischen Disziplin und Präzision visualisiert. Ausgezeichnet als Official Selection bei den International Photography Awards (IPA 2026).',
     descriptionEn: 'From Fighting in the Ring to Lightning in the Frame: A commanding self-portrait visualizing the transition from ten-time world champion kickboxer to uncompromising photographic precision (IPA 2026 Official Selection).',
