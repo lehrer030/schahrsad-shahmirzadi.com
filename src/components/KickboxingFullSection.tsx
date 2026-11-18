@@ -809,7 +809,9 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
               {currentLang === 'fa'
                 ? 'تقدیرهای رسمی از سوی وزارت کشور، پلیس و شهرها'
-                : 'Anerkennung für herausragende sportliche Vorbildfunktion'}
+                : currentLang === 'en'
+                ? 'Recognition for Outstanding Sporting Achievements'
+                : 'Anerkennung für herausragende sportliche Leistungen'}
             </h3>
           </div>
 
