@@ -227,18 +227,54 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
 
         {/* Works Container: Either stacked untereinander or responsive 3-column grid */}
         {layout === 'stacked' ? (
-          <div className="flex flex-col space-y-8 sm:space-y-12 w-full">
+          <div className="flex flex-col space-y-6 sm:space-y-8 w-full">
             {works.map((work, idx) => (
               <article
                 key={work.id}
-                className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-6 sm:p-8 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
+                className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-                  <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                  <div className="lg:col-span-4 flex flex-col items-center w-full max-w-[280px] sm:max-w-[320px] mx-auto">
                     {renderPhotoBlock(work)}
                   </div>
-                  <div className="lg:col-span-7 flex flex-col justify-between h-full space-y-4">
+                  <div className="lg:col-span-8 flex flex-col justify-start space-y-3.5">
                     {renderDetailsBlock(work, idx, true)}
+
+                    {/* Preview-Leiste der Serien-Photos (schließt den leeren Raum sinnvoll) */}
+                    {work.galleryPhotos && work.galleryPhotos.length > 1 && (
+                      <div className="pt-1">
+                        <span className="text-[10.5px] font-mono text-stone-500 uppercase tracking-wider block mb-1.5 font-semibold">
+                          {currentLang === 'de'
+                            ? `Photos der Serie (${work.galleryPhotos.length}):`
+                            : currentLang === 'fa'
+                            ? `تصاویر مجموعه (${work.galleryPhotos.length}):`
+                            : `Series Photos (${work.galleryPhotos.length}):`}
+                        </span>
+                        <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+                          {work.galleryPhotos.map((photo, pIdx) => (
+                            <button
+                              key={photo.id || pIdx}
+                              type="button"
+                              onClick={() => {
+                                if (onOpenLightbox && work.galleryPhotos) {
+                                  onOpenLightbox(work.galleryPhotos, pIdx);
+                                }
+                              }}
+                              className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-lg overflow-hidden border border-stone-200/90 hover:border-amber-700/80 shrink-0 group/thumb cursor-pointer shadow-2xs hover:shadow-xs transition-all"
+                              title={photo.alt || `Photo ${pIdx + 1}`}
+                            >
+                              <img
+                                src={resolveAsset(photo.src)}
+                                alt={photo.alt || `Photo ${pIdx + 1}`}
+                                className="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-300 select-none protected-art"
+                                loading="lazy"
+                              />
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {renderActionBar(work)}
                   </div>
                 </div>
