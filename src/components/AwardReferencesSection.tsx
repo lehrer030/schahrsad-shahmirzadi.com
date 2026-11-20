@@ -136,6 +136,20 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
     '/images/wetransfer/hephaestus_legacy_04.webp',
     '/images/wetransfer/hephaestus_legacy_05.webp'
   ],
+  'Hephaestus‘ Legacy': [
+    '/images/wetransfer/hephaestus_legacy_01.webp',
+    '/images/wetransfer/hephaestus_legacy_02.webp',
+    '/images/wetransfer/hephaestus_legacy_03.webp',
+    '/images/wetransfer/hephaestus_legacy_04.webp',
+    '/images/wetransfer/hephaestus_legacy_05.webp'
+  ],
+  'Hephaestus\' Legacy': [
+    '/images/wetransfer/hephaestus_legacy_01.webp',
+    '/images/wetransfer/hephaestus_legacy_02.webp',
+    '/images/wetransfer/hephaestus_legacy_03.webp',
+    '/images/wetransfer/hephaestus_legacy_04.webp',
+    '/images/wetransfer/hephaestus_legacy_05.webp'
+  ],
   'Mirrored': [
     '/images/wetransfer/mirrored_01.webp',
     '/images/wetransfer/mirrored_02.webp',
@@ -173,9 +187,9 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
 
 export const getAwardWorkSeriesPhotos = (title: string): string[] | undefined => {
   if (AWARD_WORK_SERIES_PHOTOS_MAP[title]) return AWARD_WORK_SERIES_PHOTOS_MAP[title];
-  const cleanTitle = title.trim().toLowerCase();
+  const cleanTitle = title.trim().toLowerCase().replace(/[’‘`´]/g, "'");
   for (const [k, v] of Object.entries(AWARD_WORK_SERIES_PHOTOS_MAP)) {
-    const cleanKey = k.toLowerCase();
+    const cleanKey = k.toLowerCase().replace(/[’‘`´]/g, "'");
     if (cleanKey === cleanTitle || cleanTitle.includes(cleanKey) || cleanKey.includes(cleanTitle)) {
       return v;
     }
@@ -186,9 +200,9 @@ export const getAwardWorkSeriesPhotos = (title: string): string[] | undefined =>
 export const getAwardWorkImage = (title: string, itemImg?: string): string | undefined => {
   if (itemImg) return itemImg;
   if (AWARD_WORK_THUMBNAILS[title]) return AWARD_WORK_THUMBNAILS[title];
-  const cleanTitle = title.trim().toLowerCase();
+  const cleanTitle = title.trim().toLowerCase().replace(/[’‘`´]/g, "'");
   for (const [k, v] of Object.entries(AWARD_WORK_THUMBNAILS)) {
-    const cleanKey = k.toLowerCase();
+    const cleanKey = k.toLowerCase().replace(/[’‘`´]/g, "'");
     if (cleanKey === cleanTitle || cleanTitle.includes(cleanKey) || cleanKey.includes(cleanTitle)) {
       return v;
     }
@@ -633,7 +647,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             zoomUrl: 'https://perspa.fr/2026/architectural-perspective/elegance-of-structure-black-and-white-2/'
           },
           {
-            title: 'Hephaestus‘ Legacy',
+            title: 'Hephaestus’ Legacy',
             category: 'Architectural Perspective',
             zoomUrl: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/'
           }
