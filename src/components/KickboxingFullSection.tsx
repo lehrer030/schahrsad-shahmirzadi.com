@@ -867,7 +867,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                 </li>
                 <li>
                   <strong className="text-amber-800 font-semibold">Ferdinand Mack: </strong>
-                  {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ آلمان و جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'German kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Deutsche Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
+                  {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ و قهرمان چندباره جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'Kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
                 </li>
                 <li>
                   <strong className="text-amber-800 font-semibold">Gia K. & Asly A.: </strong>

@@ -299,6 +299,23 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             )}
           </p>
 
+          {/* Berufliche Tätigkeit: Umweltministerium Potsdam & LAWA */}
+          <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
+            {currentLang === 'de' ? (
+              <>
+                Seit 2024 arbeitet Schahrsad Shahmirzadi im Umweltministerium in Potsdam mit dem Schwerpunkt Wasserfragen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Neben ihrer beruflichen Tätigkeit absolviert sie berufsbegleitend ein Masterstudium der Angewandten Umweltwissenschaften an der Universität Koblenz.
+              </>
+            ) : currentLang === 'fa' ? (
+              <>
+                از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام با تمرکز بر مدیریت منابع آب و در چارچوب کارگروه مشترک آب ایالت‌ها و دولت فدرال (LAWA) فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.
+              </>
+            ) : (
+              <>
+                Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water-related issues, including work within the German Working Group on Water Issues of the Federal States and the Federal Government (LAWA). Alongside her professional role, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.
+              </>
+            )}
+          </p>
+
         {/* Official Campus Image: Universität Koblenz (ZFUW) */}
         <div className="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-2xs">
           <div className="relative aspect-[16/9] sm:aspect-[21/9] max-h-[380px] w-full overflow-hidden bg-stone-100">

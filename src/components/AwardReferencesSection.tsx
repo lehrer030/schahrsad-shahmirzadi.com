@@ -356,18 +356,21 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             title: 'Echoes of a Water Tower',
             category: 'Fine Art, Architecture – Student/Non-Pro',
             categoryFa: 'هنرهای زیبا، معماری',
+            badge: '/images/email_badges/ipa_2026_hm_ribbon.png',
             zoomUrl: 'https://www.photoawards.com/social/zoom.php?eid=8-1722625538-26'
           },
           {
             title: 'Mirrored',
             category: 'Architecture, Other – Student/Non-Pro',
             categoryFa: 'معماری، سازه‌های ویژه',
+            badge: '/images/email_badges/ipa_2026_hm_ribbon.png',
             zoomUrl: 'https://www.photoawards.com/social/zoom.php?eid=8-1722624747-26'
           },
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
             category: 'Architecture, Other – Student/Non-Pro',
             categoryFa: 'معماری، سازه‌های بیرونی',
+            badge: '/images/email_badges/ipa_2026_hm_ribbon.png',
             zoomUrl: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25'
           }
         ]
@@ -496,6 +499,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             title: 'The Solitaire as an Abstraction (Revised)',
             category: 'Exterior Architecture Photography – Other Exterior (Student)',
             categoryFa: 'عکاسی معماری خارجی – سازه‌های بیرونی',
+            badge: '/images/email_badges/amp_2026_winner.png',
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=10332'
           }
         ]
@@ -808,6 +812,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
           {
             title: 'The Solitaire as an Abstraction',
             category: 'Exterior Architecture Photography',
+            badge: '/images/email_badges/amp_2025_winner.png',
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=8533'
           }
         ]
@@ -899,6 +904,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
           {
             title: 'Black & White Solitaire',
             category: 'Abstract – Amateur',
+            badge: '/images/badges_custom/spider_awards_2025_nominee.jpg',
             zoomUrl: 'https://www.thespiderawards.com/gallery/20th/gallery.php?x=a&cid=651&g=w'
           }
         ]

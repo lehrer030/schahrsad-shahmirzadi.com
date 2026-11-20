@@ -1163,7 +1163,6 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'steps-of-sustainability',
-    themeGroup: 'sustainability',
     titleDe: 'Steps of Sustainability',
     titleEn: 'Steps of Sustainability',
     titleFa: 'Steps of Sustainability (پله‌های پایداری)',
@@ -1252,7 +1251,6 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
   },
   {
     id: 'dimensions-of-sustainability',
-    themeGroup: 'sustainability',
     titleDe: 'Dimensions of Sustainability',
     titleEn: 'Dimensions of Sustainability',
     titleFa: 'Dimensions of Sustainability (ابعاد پایداری)',
