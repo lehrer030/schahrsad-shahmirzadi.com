@@ -129,6 +129,13 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
     '/images/wetransfer/berlin_attack_queer_04.webp',
     '/images/wetransfer/berlin_attack_queer_05.webp'
   ],
+  'Hephaestus’ Legacy': [
+    '/images/wetransfer/hephaestus_legacy_01.webp',
+    '/images/wetransfer/hephaestus_legacy_02.webp',
+    '/images/wetransfer/hephaestus_legacy_03.webp',
+    '/images/wetransfer/hephaestus_legacy_04.webp',
+    '/images/wetransfer/hephaestus_legacy_05.webp'
+  ],
   'Mirrored': [
     '/images/wetransfer/mirrored_01.webp',
     '/images/wetransfer/mirrored_02.webp',
