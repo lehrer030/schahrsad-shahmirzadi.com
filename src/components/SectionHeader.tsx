@@ -47,8 +47,8 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           </span>
         </div>
 
-        {/* Prominent main title - full width so long titles stay on a single line on desktop */}
-        <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-[32px] font-serif text-stone-900 font-bold tracking-tight leading-tight lg:whitespace-nowrap">
+        {/* Prominent main title - proportional and elegant font size */}
+        <h2 className="text-lg sm:text-xl lg:text-2xl font-serif text-stone-900 font-bold tracking-tight leading-snug">
           {fullTitle}
         </h2>
 
