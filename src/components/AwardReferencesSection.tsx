@@ -643,19 +643,20 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Internationale Auszeichnung für herausragende kuratorische Bildgestaltung in der zeitgenössischen Photographie.',
     scopeEn: 'International recognition honoring outstanding curatorial vision in contemporary fine art photography.',
     scopeFa: 'تقدیر بین‌المللی برای نگاه نوآورانه در عکاسی معاصر.',
-    badgeImage: '/images/Global@LENS.png',
-    mainDirectoryUrl: 'https://globallensawards.com/',
+    badgeImage: '/images/badges_custom/globallens_2026_3rd_place.png',
+    mainDirectoryUrl: 'https://globallensawards.com/winners-gallery/2026/architecture-photography/',
     honors: [
       {
-        type: 'editor',
-        labelDe: 'Empfehlung der Redaktion (Editor’s Choice)',
-        labelEn: 'Editor’s Choice',
-        labelFa: 'انتخاب ویژه سردبیر (Editor’s Choice)',
+        type: 'winner',
+        labelDe: '3. Platz · Architecture Photography: Abstract (Third Place)',
+        labelEn: '3rd Place · Architecture Photography: Abstract',
+        labelFa: 'مقام سوم · عکاسی معماری: انتزاعی (Third Place)',
         items: [
           {
             title: 'The Solitaire as Abstraction – In Harmony with Nature',
-            category: 'Fine Art Architecture',
-            zoomUrl: 'https://globallensawards.com/'
+            category: 'Architecture Photography – Abstract',
+            badge: '/images/badges_custom/globallens_2026_3rd_place.png',
+            zoomUrl: 'https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/'
           }
         ]
       }

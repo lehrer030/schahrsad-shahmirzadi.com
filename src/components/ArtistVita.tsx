@@ -278,9 +278,9 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           fullTitleDe="Bildungsweg – Interdisziplinäre akademische Ausbildung & Werdegang"
           fullTitleEn="Education – Interdisciplinary Academic Education & Career"
           fullTitleFa="تحصیلات – تحصیلات دانشگاهی بین‌رشته‌ای و مسیر حرفه‌ای"
-          descDe="Vom Evangelischen Gymnasium Graues Kloster über Rechtswissenschaften (FU Berlin), Berliner Polizei (LKA Berlin) bis zum laufenden Masterstudium (kurz vor dem Abschluss M.Sc.) an der Universität Koblenz."
-          descEn="From Graues Kloster Gymnasium and law studies at FU Berlin, Berlin Police (LKA) to ongoing Master’s studies (nearing M.Sc. completion) at the University of Koblenz."
-          descFa="از دیپلم دبیرستان گراوئن کلوستر و تحصیلات حقوق، پلیس برلین (LKA) تا تحصیلات جاری کارشناسی ارشد (در آستانه اخذ مدرک M.Sc.) دانشگاه کوبلنتس."
+          descDe="Vom Evangelischen Gymnasium Graues Kloster über Rechtswissenschaften an der FU Berlin und die Berliner Polizei (LKA) bis zum Umweltministerium (MLEUV) in Potsdam und dem laufenden Masterstudium an der Universität Koblenz, kurz vor dem Abschluss M.Sc."
+          descEn="From Graues Kloster Gymnasium and law studies at FU Berlin, through the Berlin Police (LKA), to the Environment Ministry (MLEUV) in Potsdam and ongoing Master’s studies at the University of Koblenz, nearing M.Sc. completion."
+          descFa="از دیپلم دبیرستان گراوئن کلوستر و تحصیلات حقوق در دانشگاه آزاد برلین (FU)، پلیس برلین (LKA) تا وزارت محیط‌زیست (MLEUV) در پوتسدام و تحصیلات جاری کارشناسی ارشد (در آستانه اخذ مدرک M.Sc.) در دانشگاه کوبلنتس."
           currentLang={currentLang}
         />
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
@@ -303,15 +303,15 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
-                Seit 2024 arbeitet Schahrsad Shahmirzadi im Umweltministerium in Potsdam mit dem Schwerpunkt Wasserfragen, unter anderem im Rahmen der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Neben ihrer beruflichen Tätigkeit absolviert sie berufsbegleitend ein Masterstudium der Angewandten Umweltwissenschaften an der Universität Koblenz.
+                Seit 2024 arbeitet sie im Umweltministerium in Potsdam (MLEUV) mit dem Schwerpunkt Wasserfragen, unter anderem für die Geschäftsstelle der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Neben ihrer beruflichen Tätigkeit absolviert sie ein Studium zum Master of Science (M.Sc.) in Angewandten Umweltwissenschaften an der Universität Koblenz und befindet sich nun in den letzten Zügen des berufsbegleitenden Studiengangs.
               </>
             ) : currentLang === 'fa' ? (
               <>
-                از سال ۲۰۲۴، شهزاد شاهمیرزادی در وزارت محیط‌زیست در پوتسدام با تمرکز بر مدیریت منابع آب و در چارچوب کارگروه مشترک آب ایالت‌ها و دولت فدرال (LAWA) فعالیت می‌کند. او هم‌زمان در مقطع کارشناسی ارشد علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است.
+                از سال ۲۰۲۴، او در وزارت محیط‌زیست در پوتسدام (MLEUV) با تمرکز بر مسائل آب، از جمله برای دبیرخانه کارگروه مشترک آب ایالت‌ها و دولت فدرال (LAWA) فعالیت می‌کند. هم‌زمان با نقش حرفه‌ای، او در مقطع کارشناسی ارشد (M.Sc.) علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است و اکنون در مراحل پایانی این دوره تحصیلی قرار دارد.
               </>
             ) : (
               <>
-                Since 2024, Schahrsad Shahmirzadi has worked at the Ministry of the Environment in Potsdam, focusing on water-related issues, including work within the German Working Group on Water Issues of the Federal States and the Federal Government (LAWA). Alongside her professional role, she is pursuing a master’s degree in Applied Environmental Sciences at the University of Koblenz.
+                Since 2024, she has been working at the Environment Ministry in Potsdam, focusing on water-related matters, including work for the Secretariat of the German Working Group on Water Issues of the Federal States and the Federal Government (LAWA). Alongside her professional role, she is pursuing a Master of Science (M.Sc.) in Applied Environmental Sciences at the University of Koblenz. She is now in the final stages of completing the part-time program.
               </>
             )}
           </p>

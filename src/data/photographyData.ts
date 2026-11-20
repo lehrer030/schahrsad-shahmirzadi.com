@@ -240,6 +240,16 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   coverImage: '/images/wetransfer/solitaire_harmony_01.webp',
   badges: [
     {
+      id: 'globallens-2026-3rd',
+      name: 'Global Lens Photography Awards 2026',
+      year: '2026',
+      award: '3rd Place · Architecture: Abstract',
+      awardFa: 'مقام سوم · عکاسی معماری: انتزاعی',
+      badgeImage: '/images/badges_custom/globallens_2026_3rd_place.png',
+      link: 'https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/',
+      position: 'top-left'
+    },
+    {
       id: 'perspa-2026-hm',
       name: 'Prix de la Perspective Architecturale 2026',
       year: '2026',
@@ -2630,22 +2640,22 @@ export const PUBLICATIONS_DATA: PublicationItem[] = [
   },
   {
     id: 'globallens-editors-choice',
-    titleDe: 'Global Lens Photography Awards 2026 – Editor’s Choice',
-    titleEn: 'Global Lens Photography Awards 2026 – Editor’s Choice',
-    titleFa: 'انتخاب سردبیر جوایز جهانی عکس گلوبال لنز ۲۰۲۶',
-    subtitleDe: 'Besondere Würdigung »The Solitaire as Abstraction – In Harmony with Nature«',
-    subtitleEn: 'Recognition: "The Solitaire as Abstraction – In Harmony with Nature"',
-    subtitleFa: 'برگزیده ویژه سردبیر برای تک‌بنا در هماهنگی با طبیعت',
+    titleDe: 'Global Lens Photography Awards 2026 – 3. Platz (Third Place)',
+    titleEn: 'Global Lens Photography Awards 2026 – 3rd Place (Third Place)',
+    titleFa: 'مقام سوم جوایز بین‌المللی عکس گلوبال لنز ۲۰۲۶',
+    subtitleDe: '3. Platz in Architecture Photography (Abstract) für »The Solitaire as Abstraction – In Harmony with Nature«',
+    subtitleEn: '3rd Place in Architecture Photography (Abstract) for "The Solitaire as Abstraction – In Harmony with Nature"',
+    subtitleFa: 'مقام سوم در عکاسی معماری (انتزاعی) برای تک‌بنا در هماهنگی با طبیعت',
     publisher: 'Global Lens Photography Awards',
-    detailsDe: 'Besondere redaktionelle Auszeichnung und Feature der Serie.',
-    detailsEn: 'Special editorial recognition and feature for the Solitaire series.',
-    detailsFa: 'انتخاب ویژه هیئت داوران و سردبیر.',
+    detailsDe: 'Offizielle internationale Prämierung mit dem 3. Platz (Third Place) in der Kategorie Architecture Photography / Abstract.',
+    detailsEn: 'Official international award winning 3rd Place (Third Place) in Architecture Photography / Abstract.',
+    detailsFa: 'کسب رتبه سوم بین‌المللی در بخش عکاسی معماری انتزاعی.',
     link: 'https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/',
-    linkTextDe: 'Editor’s Choice Profil ansehen →',
-    linkTextEn: 'View Editor’s Choice Feature →',
+    linkTextDe: 'Gewinner-Profil ansehen →',
+    linkTextEn: 'View Winner Profile →',
     linkTextFa: 'مشاهده اثر در سایت گلوبال لنز ←',
     type: 'editors-choice',
-    coverImage: '/images/wetransfer/solitaire_harmony_01.webp'
+    coverImage: '/images/badges_custom/globallens_2026_3rd_place.png'
   },
   {
     id: 'perspa-editors-choice',
