@@ -1114,50 +1114,18 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
       }
 ],
     link: 'https://perspa.fr/2026/season-1-architectural-perspective/hephaestus-legacy-3/',
-    descriptionDe: 'Der Hephaistos-Tempel ist dem Gott der Schmiede und des Feuers geweiht – ein Werk der Architektur reich an Symbolik und Handwerkskunst. Diese Serie stellt die Säulen ins Zentrum, wie sie Licht und Schatten in den Raum ziehen und Stärke sowie Kraft widerspiegeln. So entsteht ein visueller Dialog zwischen antiker Technik, mythologischer Inspiration und der zeitlosen Schönheit der Steinarchitektur.',
-    descriptionEn: 'The Temple of Hephaistos is dedicated to the god of blacksmiths and fire—a work of architecture rich in symbolism and craftsmanship. This series places its columns at the center as they draw light and shadow into the space, reflecting strength and power. In doing so, a visual dialogue emerges between ancient technique, mythological inspiration, and the timeless beauty of stone architecture.',
-    descriptionFa: 'معبد هفائستوس، وقف خدای صنعتگری و آتش؛ این مجموعه ستون‌های کهن را در گفت‌وگوی ابدی نور و سایه به تصویر می‌کشد.',
+    descriptionDe: 'Der Hephaistos-Tempel ist dem Gott der Schmiede und des Feuers geweiht – ein Werk der Architektur reich an Symbolik und Handwerkskunst. Diese Fotografie stellt die Säulen ins Zentrum, wie sie Licht und Schatten in den Raum ziehen und Stärke sowie Kraft widerspiegeln. So entsteht ein visueller Dialog zwischen antiker Technik, mythologischer Inspiration und der zeitlosen Schönheit der Steinarchitektur.',
+    descriptionEn: 'The Temple of Hephaistos is dedicated to the god of blacksmiths and fire—a work of architecture rich in symbolism and craftsmanship. This photograph places its columns at the center as they draw light and shadow into the space, reflecting strength and power. In doing so, a visual dialogue emerges between ancient technique, mythological inspiration, and the timeless beauty of stone architecture.',
+    descriptionFa: 'معبد هفائستوس، وقف خدای صنعتگری و آتش؛ این اثر ستون‌های کهن را در گفت‌وگوی ابدی نور و سایه به تصویر می‌کشد.',
     previewImage: '/images/wetransfer/hephaestus_legacy_01.webp',
     galleryPhotos: [
       {
         id: 'hephaestus-01',
         src: '/images/wetransfer/hephaestus_legacy_01.webp',
-        alt: 'Hephaestus’ Legacy 01',
-        captionDe: 'Image 01',
-        captionEn: 'Image 01',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'hephaestus-02',
-        src: '/images/wetransfer/hephaestus_legacy_02.webp',
-        alt: 'Hephaestus’ Legacy 02',
-        captionDe: 'Image 02',
-        captionEn: 'Image 02',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'hephaestus-03',
-        src: '/images/wetransfer/hephaestus_legacy_03.webp',
-        alt: 'Hephaestus’ Legacy 03',
-        captionDe: 'Image 03',
-        captionEn: 'Image 03',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'hephaestus-04',
-        src: '/images/wetransfer/hephaestus_legacy_04.webp',
-        alt: 'Hephaestus’ Legacy 04',
-        captionDe: 'Image 04',
-        captionEn: 'Image 04',
-        captionFa: 'تصویر'
-      },
-      {
-        id: 'hephaestus-05',
-        src: '/images/wetransfer/hephaestus_legacy_05.webp',
-        alt: 'Hephaestus’ Legacy 05',
-        captionDe: 'Image 05',
-        captionEn: 'Image 05',
-        captionFa: 'تصویر'
+        alt: 'Hephaestus’ Legacy',
+        captionDe: 'Hephaestus’ Legacy',
+        captionEn: 'Hephaestus’ Legacy',
+        captionFa: 'Hephaestus’ Legacy'
       }
     ]
   },

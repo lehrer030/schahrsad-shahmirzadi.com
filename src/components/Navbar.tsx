@@ -271,6 +271,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const handleNavigateToItem = (item: OriginalMenuItem) => {
     setMobileMenuOpen(false);
+    document.body.style.overflow = '';
 
     if (item.isContact) {
       onOpenContact();
@@ -287,7 +288,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     const targetId = item.id === 'biography' ? 'biography-profile' : item.targetId;
     setTimeout(() => {
       scrollToElementWithOffset(targetId);
-    }, 100);
+    }, 120);
   };
 
   const getItemLabel = (item: OriginalMenuItem) => {
@@ -389,22 +390,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="text-left rtl:text-right group focus:outline-none cursor-pointer flex items-center min-w-0"
             aria-label="Zur Startseite"
           >
-            <div className="flex items-center space-x-1.5 sm:space-x-2 rtl:space-x-reverse min-w-0">
+            <div className="flex items-center space-x-1 sm:space-x-2 rtl:space-x-reverse min-w-0">
               <span
-                className={`font-serif tracking-wider sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
-                  isScrolled ? 'text-base sm:text-lg lg:text-xl' : 'text-lg sm:text-xl lg:text-2xl'
+                className={`font-serif tracking-normal sm:tracking-widest font-bold text-stone-900 group-hover:text-stone-700 transition-all shrink-0 ${
+                  isScrolled ? 'text-sm sm:text-lg lg:text-xl' : 'text-base sm:text-xl lg:text-2xl'
                 }`}
               >
                 SchirZan
               </span>
               <span className={`text-stone-300 font-light transition-all shrink-0 ${
-                isScrolled ? 'text-xs sm:text-sm' : 'text-sm sm:text-base'
+                isScrolled ? 'text-xs sm:text-sm' : 'text-xs sm:text-base'
               }`}>
                 |
               </span>
               <span
-                className={`text-stone-800 font-serif tracking-wide font-medium transition-all whitespace-nowrap overflow-hidden text-ellipsis ${
-                  isScrolled ? 'text-xs sm:text-sm lg:text-base' : 'text-xs sm:text-sm lg:text-base'
+                className={`text-stone-800 font-serif tracking-tight sm:tracking-wide font-medium transition-all whitespace-nowrap shrink-0 ${
+                  isScrolled ? 'text-[11px] sm:text-sm lg:text-base' : 'text-xs sm:text-sm lg:text-base'
                 }`}
               >
                 {currentLang === 'fa' ? 'شهرزاد شاهمیرزادی' : 'Schahrsad Shahmirzadi'}

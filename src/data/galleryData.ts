@@ -61,9 +61,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         id: 'kb-gallery-01',
         src: './images/2025_06_ssh.webp',
         alt: 'SchirZan mit dem WKU-Weltmeistergürtel',
-        locationDe: 'WKU Weltmeisterschaft · Schloss Diedersdorf',
-        locationEn: 'WKU World Championship · Diedersdorf Castle',
-        locationFa: 'قهرمانی جهان WKU · کاخ دیدرزدورف',
         captionDe: 'WKU Weltmeisterschaft',
         captionEn: 'WKU World Championship',
         captionFa: 'قهرمانی جهان WKU'
@@ -72,9 +69,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         id: 'kb-gallery-02',
         src: './images/2025_07_DSC_0701.webp',
         alt: 'SchirZan im roten Boxmantel – Photo by Steve Barret',
-        locationDe: 'Schloss Diedersdorf · Brandenburg',
-        locationEn: 'Diedersdorf Castle · Brandenburg',
-        locationFa: 'کاخ دیدرزدورف · براندنبورگ',
         captionDe: 'Photo by Steve Barret',
         captionEn: 'Photo by Steve Barret',
         captionFa: 'عکس: استیو بارت (Photo by Steve Barret)'
@@ -83,9 +77,6 @@ export const GALLERY_PAGE_DATA: GallerySectionData = {
         id: 'kb-gallery-03',
         src: './images/2025_07_ode-an-den-sport-e1753264342920.webp',
         alt: 'Filmporträt „Ode an den Sport“ – Photo by L&T Sport',
-        locationDe: 'Filmporträt „Ode an den Sport“ · Berlin',
-        locationEn: 'Film Portrait "Ode to Sports" · Berlin',
-        locationFa: 'فیلم پرتره «قصیده‌ای برای ورزش» · برلین',
         captionDe: 'Photo by L&T Sport',
         captionEn: 'Photo by L&T Sport',
         captionFa: 'عکس: L&T Sport'

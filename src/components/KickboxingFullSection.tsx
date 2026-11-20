@@ -361,8 +361,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
               {currentLang === 'fa'
-                ? 'جدول رسمی تمام مبارزات حرفه‌ای بر سر کمربند قهرمانی در کاخ تاریخی دیدرزدورف براندنبورگ با پیروزی‌های قاطع پس از ۷ و ۱۰ راند سنگین.'
-                : 'Offizielle Kampfstatistiken aller Titelkämpfe auf Schloss Diedersdorf (Brandenburg) – ungeschlagen mit einstimmigen Punktsiegen über die volle Distanz von 7 und 10 Runden.'}
+                ? 'جدول رسمی تمام مبارزات حرفه‌ای بر سر کمربند قهرمانی با پیروزی‌های قاطع پس از ۷ و ۱۰ راند سنگین.'
+                : 'Offizielle Kampfstatistiken der Profi-Titelkämpfe – ungeschlagen mit einstimmigen Punktsiegen über die volle Distanz von 7 und 10 Runden.'}
             </p>
           </div>
 
@@ -692,15 +692,9 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {/* Fight Photo 1: vs Sofia Cavallo */}
               <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
                 <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
-                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
-                      <Trophy className="w-3 h-3 text-amber-400" />
-                      <span>{currentLang === 'fa' ? 'کاخ دیدرزدورف · براندنبورگ (۲۰۱۷)' : 'Schloss Diedersdorf · Brandenburg (2017)'}</span>
-                    </span>
-                  </div>
                   <img
                     src={resolveAsset('/images/2025_11_vs-Sofia-Cavallo.webp')}
-                    alt="Schahrsad Shahmirzadi vs. Sofia Cavallo (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"
+                    alt="Schahrsad Shahmirzadi vs. Sofia Cavallo (WKU Profi-Weltmeisterschaft)"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -714,8 +708,8 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   </h5>
                   <p className="text-xs text-stone-600 leading-relaxed">
                     {currentLang === 'fa'
-                      ? 'پیروزی مقتدرانه بر سر کمربند قهرمانی جهان پس از ۱۰ راند مبارزه نفس‌گیر در کاخ دیدرزدورف.'
-                      : 'Schloss Diedersdorf, Brandenburg · Einstimmiger Punktsieg und erfolgreiche Titelverteidigung nach 10 Runden.'}
+                      ? 'پیروزی مقتدرانه بر سر کمربند قهرمانی جهان پس از ۱۰ راند مبارزه نفس‌گیر.'
+                      : 'Einstimmiger Punktsieg und erfolgreiche Titelverteidigung nach 10 Runden.'}
                   </p>
                 </div>
               </div>
@@ -723,15 +717,9 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               {/* Fight Photo 2: vs Jessica Marazzi */}
               <div className="bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-2xs group flex flex-col justify-between">
                 <div className="overflow-hidden aspect-4/3 bg-stone-100 relative">
-                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
-                      <Trophy className="w-3 h-3 text-amber-400" />
-                      <span>{currentLang === 'fa' ? 'کاخ دیدرزدورف · براندنبورگ (۲۰۱۶)' : 'Schloss Diedersdorf · Brandenburg (2016)'}</span>
-                    </span>
-                  </div>
                   <img
                     src={resolveAsset('/images/2025_11_vs.-Jessica-Marazzi.webp')}
-                    alt="Schahrsad Shahmirzadi vs. Jessica Marazzi (WKU Profi-Weltmeisterschaft Schloss Diedersdorf)"
+                    alt="Schahrsad Shahmirzadi vs. Jessica Marazzi (WKU Profi-Weltmeisterschaft)"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -746,7 +734,7 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   <p className="text-xs text-stone-600 leading-relaxed">
                     {currentLang === 'fa'
                       ? 'فتح کمربند قهرمانی حرفه‌ای جهان با پیروزی قاطع پس از ۱۰ راند مبارزه سرنوشت‌ساز.'
-                      : 'Schloss Diedersdorf, Brandenburg · Sieg und Gewinn des WKU-Weltmeistergürtels nach 10 Runden.'}
+                      : 'Sieg und Gewinn des WKU-Weltmeistergürtels nach 10 Runden.'}
                   </p>
                 </div>
               </div>
