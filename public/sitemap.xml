@@ -4,64 +4,1154 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://schirzan.com/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en" />
     <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/" />
     <image:image>
-      <image:loc>https://schirzan.com/images/2025_07_photoart.jpg</image:loc>
-      <image:title>Schahrsad Shahmirzadi (SchirZan) – Photo: Steve Barret</image:title>
-      <image:caption>Offizielles Porträt von Schahrsad Shahmirzadi (SchirZan), fotografiert von Steve Barret</image:caption>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_01.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://schirzan.com/images/2026_09_hm-03-the-solitaire-as-abstraction-in-harmony-with-nature-01-scaled.webp</image:loc>
-      <image:title>The Solitaire as Abstraction – In Harmony with Nature</image:title>
-      <image:caption>Architecture MasterPrize 2025 Winner &amp; International Photography Awards (IPA)</image:caption>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_02.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
     </image:image>
     <image:image>
-      <image:loc>https://schirzan.com/images/2026_10_amp-2026-winner-solitaire-revised-01-scaled.webp</image:loc>
-      <image:title>The Solitaire as an Abstraction (Revised)</image:title>
-      <image:caption>Architecture MasterPrize (AMP) 2026 Winner</image:caption>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_03.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_04.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_05.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_06.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_harmony_07.webp</image:loc>
+      <image:title>The Solitaire as Abstraction – In Harmony with Nature 07</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as Abstraction – In Harmony with Nature 07</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_02.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_03.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_04.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/echoes_water_tower_01.webp</image:loc>
+      <image:title>Echoes of a Water Tower</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Echoes of a Water Tower</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/architectural_piano_01.webp</image:loc>
+      <image:title>Architectural Piano 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Architectural Piano 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/architectural_piano_02.webp</image:loc>
+      <image:title>Architectural Piano 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Architectural Piano 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/architectural_piano_03.webp</image:loc>
+      <image:title>Architectural Piano 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Architectural Piano 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/architectural_piano_04.webp</image:loc>
+      <image:title>Architectural Piano 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Architectural Piano 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/elegance_structure_bw_01.webp</image:loc>
+      <image:title>Elegance of Structure – Black and White</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Elegance of Structure – Black and White</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/elegance_symphony_01.webp</image:loc>
+      <image:title>Elegance of Structure – Symphony of Light 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Elegance of Structure – Symphony of Light 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/elegance_symphony_02.webp</image:loc>
+      <image:title>Elegance of Structure – Symphony of Light 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Elegance of Structure – Symphony of Light 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/elegance_symphony_03.webp</image:loc>
+      <image:title>Elegance of Structure – Symphony of Light 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Elegance of Structure – Symphony of Light 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/elegance_symphony_04.webp</image:loc>
+      <image:title>Elegance of Structure – Symphony of Light 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Elegance of Structure – Symphony of Light 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_01.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_02.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_03.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_04.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_05.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_06.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_i_07.webp</image:loc>
+      <image:title>Cloud Mirror Architecture I: Heaven’s Bridge 07</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture I: Heaven’s Bridge 07</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_ii_bw_01.webp</image:loc>
+      <image:title>Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_ii_bw_02.webp</image:loc>
+      <image:title>Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_ii_bw_03.webp</image:loc>
+      <image:title>Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_ii_bw_04.webp</image:loc>
+      <image:title>Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/cloud_mirror_ii_bw_05.webp</image:loc>
+      <image:title>Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Cloud Mirror Architecture II: Stormy Sea (B&amp;W) 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/mirrored_01.webp</image:loc>
+      <image:title>Mirrored</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Mirrored</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/mirrored_ii_01.webp</image:loc>
+      <image:title>Mirrored II</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Mirrored II</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/mirrored_iii_bw_01.webp</image:loc>
+      <image:title>Mirrored III (Black &amp; White)</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Mirrored III (Black &amp; White)</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_01.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_02.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_03.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_04.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_05.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/black_red_gold_06.webp</image:loc>
+      <image:title>Black Red Gold – Office of the Federal President 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black Red Gold – Office of the Federal President 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/hephaestus_legacy_01.webp</image:loc>
+      <image:title>Hephaestus’ Legacy 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Hephaestus’ Legacy 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/hephaestus_legacy_02.webp</image:loc>
+      <image:title>Hephaestus’ Legacy 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Hephaestus’ Legacy 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/hephaestus_legacy_03.webp</image:loc>
+      <image:title>Hephaestus’ Legacy 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Hephaestus’ Legacy 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/hephaestus_legacy_04.webp</image:loc>
+      <image:title>Hephaestus’ Legacy 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Hephaestus’ Legacy 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/hephaestus_legacy_05.webp</image:loc>
+      <image:title>Hephaestus’ Legacy 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Hephaestus’ Legacy 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_01.webp</image:loc>
+      <image:title>Steps of Sustainability 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_02.webp</image:loc>
+      <image:title>Steps of Sustainability 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_03.webp</image:loc>
+      <image:title>Steps of Sustainability 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_04.webp</image:loc>
+      <image:title>Steps of Sustainability 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_05.webp</image:loc>
+      <image:title>Steps of Sustainability 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/steps_sustainability_06.webp</image:loc>
+      <image:title>Steps of Sustainability 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Steps of Sustainability 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/dimensions_sustainability_01.webp</image:loc>
+      <image:title>Dimensions of Sustainability 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Dimensions of Sustainability 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/dimensions_sustainability_02.webp</image:loc>
+      <image:title>Dimensions of Sustainability 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Dimensions of Sustainability 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/dimensions_sustainability_03.webp</image:loc>
+      <image:title>Dimensions of Sustainability 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Dimensions of Sustainability 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_01.webp</image:loc>
+      <image:title>Razor Pull Berlin 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_02.webp</image:loc>
+      <image:title>Razor Pull Berlin 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_03.webp</image:loc>
+      <image:title>Razor Pull Berlin 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_04.webp</image:loc>
+      <image:title>Razor Pull Berlin 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_05.webp</image:loc>
+      <image:title>Razor Pull Berlin 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/razor_pull_berlin_06.webp</image:loc>
+      <image:title>Razor Pull Berlin 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Razor Pull Berlin 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/fragments_of_memory_01.webp</image:loc>
+      <image:title>Fragments of Memory – Fragments of Time 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Fragments of Memory – Fragments of Time 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/fragments_of_memory_02.webp</image:loc>
+      <image:title>Fragments of Memory – Fragments of Time 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Fragments of Memory – Fragments of Time 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/fragments_of_memory_03.webp</image:loc>
+      <image:title>Fragments of Memory – Fragments of Time 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Fragments of Memory – Fragments of Time 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/fragments_of_memory_04.webp</image:loc>
+      <image:title>Fragments of Memory – Fragments of Time 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Fragments of Memory – Fragments of Time 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/fragments_of_memory_05.webp</image:loc>
+      <image:title>Fragments of Memory – Fragments of Time 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Fragments of Memory – Fragments of Time 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_01.webp</image:loc>
+      <image:title>Symmetric Networks 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_02.webp</image:loc>
+      <image:title>Symmetric Networks 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_03.webp</image:loc>
+      <image:title>Symmetric Networks 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_04.webp</image:loc>
+      <image:title>Symmetric Networks 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_05.webp</image:loc>
+      <image:title>Symmetric Networks 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/symmetric_networks_06.webp</image:loc>
+      <image:title>Symmetric Networks 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Symmetric Networks 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_06.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_revised/solitaire_revised_07.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Revised) 07</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Revised) 07</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_01.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction – New Perspectives 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction – New Perspectives 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_02.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction – New Perspectives 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction – New Perspectives 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_03.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction – New Perspectives 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction – New Perspectives 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_04.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction – New Perspectives 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction – New Perspectives 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_05.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction – New Perspectives 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction – New Perspectives 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/solitaire_bw_01.webp</image:loc>
+      <image:title>Black &amp; White Solitaire</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Black &amp; White Solitaire</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_01.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_02.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_03.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_04.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_05.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_06.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_07.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 07</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 07</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_08.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 08</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 08</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_09.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 09</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 09</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_ipa/solitaire_ipa_10.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (IPA 2025) – 10</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (IPA 2025) – 10</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_01.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Short Version) – 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Short Version) – 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_02.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Short Version) – 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Short Version) – 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_03.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Short Version) – 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Short Version) – 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_04.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Short Version) – 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Short Version) – 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_05.jpeg</image:loc>
+      <image:title>The Solitaire as an Abstraction (Short Version) – 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Solitaire as an Abstraction (Short Version) – 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/prismatic_berlin_01.webp</image:loc>
+      <image:title>Prismatic Berlin 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Prismatic Berlin 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/prismatic_berlin_02.webp</image:loc>
+      <image:title>Prismatic Berlin 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Prismatic Berlin 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/prismatic_berlin_03.webp</image:loc>
+      <image:title>Prismatic Berlin 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Prismatic Berlin 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/prismatic_berlin_04.webp</image:loc>
+      <image:title>Prismatic Berlin 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Prismatic Berlin 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/prismatic_berlin_05.webp</image:loc>
+      <image:title>Prismatic Berlin 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Prismatic Berlin 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_01.webp</image:loc>
+      <image:title>Transformer 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_02.webp</image:loc>
+      <image:title>Transformer 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_03.webp</image:loc>
+      <image:title>Transformer 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_04.webp</image:loc>
+      <image:title>Transformer 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_05.webp</image:loc>
+      <image:title>Transformer 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_06.webp</image:loc>
+      <image:title>Transformer 06</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 06</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_07.webp</image:loc>
+      <image:title>Transformer 07</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 07</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_08.webp</image:loc>
+      <image:title>Transformer 08</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 08</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_09.webp</image:loc>
+      <image:title>Transformer 09</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 09</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/transformer_10.webp</image:loc>
+      <image:title>Transformer 10</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Transformer 10</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2025_12_image00057-scaled.webp</image:loc>
+      <image:title>Columns in the Here and Now</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Columns in the Here and Now</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg</image:loc>
+      <image:title>Between Space and Time 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Between Space and Time 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg</image:loc>
+      <image:title>Between Space and Time 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Between Space and Time 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-10-between-space-and-time-03-scaled.jpeg</image:loc>
+      <image:title>Between Space and Time 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Between Space and Time 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/blessed_mourn_01.webp</image:loc>
+      <image:title>Blessed Are Those Who Mourn 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Blessed Are Those Who Mourn 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/blessed_mourn_02.webp</image:loc>
+      <image:title>Blessed Are Those Who Mourn 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Blessed Are Those Who Mourn 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/blessed_mourn_03.webp</image:loc>
+      <image:title>Blessed Are Those Who Mourn 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Blessed Are Those Who Mourn 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/blessed_mourn_04.webp</image:loc>
+      <image:title>Blessed Are Those Who Mourn 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Blessed Are Those Who Mourn 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/berlin_attack_queer_01.webp</image:loc>
+      <image:title>Berlin: Attack on Queer, Diversity and Freedom 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Berlin: Attack on Queer, Diversity and Freedom 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/berlin_attack_queer_02.webp</image:loc>
+      <image:title>Berlin: Attack on Queer, Diversity and Freedom 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Berlin: Attack on Queer, Diversity and Freedom 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/berlin_attack_queer_03.webp</image:loc>
+      <image:title>Berlin: Attack on Queer, Diversity and Freedom 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Berlin: Attack on Queer, Diversity and Freedom 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/berlin_attack_queer_04.webp</image:loc>
+      <image:title>Berlin: Attack on Queer, Diversity and Freedom 04</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Berlin: Attack on Queer, Diversity and Freedom 04</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/wetransfer/berlin_attack_queer_05.webp</image:loc>
+      <image:title>Berlin: Attack on Queer, Diversity and Freedom 05</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Berlin: Attack on Queer, Diversity and Freedom 05</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg</image:loc>
+      <image:title>LIFE – LOVE – FREEDOM · IRAN 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – LIFE – LOVE – FREEDOM · IRAN 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg</image:loc>
+      <image:title>LIFE – LOVE – FREEDOM · IRAN 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – LIFE – LOVE – FREEDOM · IRAN 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-01-life-love-freedom-iran-03-scaled.jpeg</image:loc>
+      <image:title>LIFE – LOVE – FREEDOM · IRAN 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – LIFE – LOVE – FREEDOM · IRAN 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_07_In-Between-Spaces-scaled.jpg</image:loc>
+      <image:title>In-Between Spaces</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – In-Between Spaces</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg</image:loc>
+      <image:title>The Dignity of the Animal is Inviolable 01</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Dignity of the Animal is Inviolable 01</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_04_f921f50c9aeb75ce30ac79453121ddda-scaled.jpeg</image:loc>
+      <image:title>The Dignity of the Animal is Inviolable 02</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Dignity of the Animal is Inviolable 02</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_04_4bacafa6404a9d91da6e9374e3feb98e-scaled.jpeg</image:loc>
+      <image:title>The Dignity of the Animal is Inviolable 03</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – The Dignity of the Animal is Inviolable 03</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://schirzan.com/images/2026_09_os-02-kickboxing-from-fighting-in-the-ring-01-scaled.jpeg</image:loc>
+      <image:title>Kickboxing – From Fighting in the Ring to Lightning in the Frame</image:title>
+      <image:caption>Photograph by Schahrsad Shahmirzadi (SchirZan) – Kickboxing – From Fighting in the Ring to Lightning in the Frame</image:caption>
+      <image:geo_location>Berlin, Germany</image:geo_location>
+      <image:license>https://schirzan.com/#contact</image:license>
     </image:image>
   </url>
   <url>
     <loc>https://schirzan.com/#architecture</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#architecture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#architecture" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#architecture" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#architecture" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#architecture" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#architecture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#architecture" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#solitaire-1</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#solitaire-1" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#solitaire-1" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#solitaire-2</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#solitaire-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#solitaire-2" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#further-architecture</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#further-architecture" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#further-architecture" />
   </url>
   <url>
     <loc>https://schirzan.com/#fine-art</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#fine-art" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#fine-art" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#fine-art" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#fine-art" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#fine-art" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#fine-art" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#fine-art" />
   </url>
   <url>
     <loc>https://schirzan.com/#social-environmental</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#social-environmental" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#social-environmental" />
   </url>
   <url>
     <loc>https://schirzan.com/#portraits</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#portraits" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#portraits" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#portraits" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#portraits" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#portraits" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#portraits" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#portraits" />
   </url>
   <url>
     <loc>https://schirzan.com/#biography</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#biography" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#biography" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#biography" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#biography" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#biography" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#biography" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#biography" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#kickboxing</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#kickboxing" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#kickboxing" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#water-protection</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#water-protection" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#water-protection" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#water-protection" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#water-protection" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#water-protection" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#water-protection" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#water-protection" />
   </url>
   <url>
     <loc>https://schirzan.com/#press</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#press" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#press" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#press" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#press" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#press" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#press" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#press" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#awards</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#awards" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#awards" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#awards" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#awards" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#awards" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#awards" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#awards" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#galerie</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#galerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#galerie" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#galerie" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#galerie" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#galerie" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#galerie" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#galerie" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#contact</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#contact" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#contact" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#contact" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#contact" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#impressum</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#impressum" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#impressum" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#impressum" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#impressum" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#impressum" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#impressum" />
+  </url>
+  <url>
+    <loc>https://schirzan.com/#datenschutz</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://schirzan.com/#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://schirzan.com/?lang=en#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="fa" href="https://schirzan.com/?lang=fa#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://schirzan.com/?lang=fr#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://schirzan.com/?lang=it#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://schirzan.com/?lang=tr#datenschutz" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://schirzan.com/#datenschutz" />
   </url>
 </urlset>
-

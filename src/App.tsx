@@ -19,6 +19,7 @@ import { BackToTop } from './components/BackToTop';
 import { FloatingContactButton } from './components/FloatingContactButton';
 import { ImageProtectionToast } from './components/ImageProtectionToast';
 import { scrollToElementWithOffset } from './utils/scrollHelper';
+import { updatePageSeo } from './utils/seoHelper';
 import {
   SOLITAIRE_SERIES_1,
   SOLITAIRE_SERIES_2,
@@ -236,6 +237,15 @@ export default function App() {
 
   // Comprehensive series map including all core and further works across all 4 categories
   const seriesMap: Record<string, PhotoSeries> = ALL_SERIES_MAP;
+  const selectedSeries = selectedSeriesId ? seriesMap[selectedSeriesId] || null : null;
+
+  // Dynamic SEO optimization for Document Head (Title, Meta Description, OpenGraph, Canonical)
+  useEffect(() => {
+    updatePageSeo({
+      lang: currentLang,
+      selectedSeries
+    });
+  }, [currentLang, selectedSeries]);
 
   const handleOpenSeries = (seriesId: string) => {
     setSelectedSeriesId(seriesId);

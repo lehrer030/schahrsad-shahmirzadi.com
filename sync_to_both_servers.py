@@ -37,6 +37,13 @@ def upload_to_server(srv):
     print("Uploading index.html...")
     sftp.put(INDEX_HTML, 'wordpress/index.html')
 
+    # Upload robots.txt, sitemap.xml, site.webmanifest if present
+    for root_file in ['robots.txt', 'sitemap.xml', 'site.webmanifest']:
+        local_p = os.path.join(DIST_DIR, root_file)
+        if os.path.exists(local_p):
+            print(f"Uploading {root_file}...")
+            sftp.put(local_p, f"wordpress/{root_file}")
+
     # Upload all assets
     for filename in os.listdir(ASSETS_DIR):
         local_file = os.path.join(ASSETS_DIR, filename)

@@ -1,8 +1,24 @@
-# Robots.txt for https://schirzan.com
+# Robots.txt for https://schirzan.com and https://schahrsad-shahmirzadi.com
 User-agent: *
 Allow: /
 Allow: /images/
 
-# Sitemap location
-Sitemap: https://schirzan.com/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Allow: /images/
 
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+
+User-agent: Applebot
+Allow: /
+Allow: /images/
+
+# Sitemaps
+Sitemap: https://schirzan.com/sitemap.xml
+Sitemap: https://schahrsad-shahmirzadi.com/sitemap.xml
