@@ -2995,3 +2995,24 @@ PORTRAIT_WORKS.forEach(w => {
     ALL_SERIES_MAP[w.id] = furtherWorkToSeries(w, 'portraits');
   }
 });
+
+export function findSeriesForPhoto(photo: PhotoItem | undefined | null): PhotoSeries | null {
+  if (!photo) return null;
+  // 1. Direct search in ALL_SERIES_MAP by photo ID or src
+  for (const s of Object.values(ALL_SERIES_MAP)) {
+    if (s.photos.some(p => (photo.id && p.id === photo.id) || (photo.src && p.src === photo.src))) {
+      return s;
+    }
+  }
+  // 2. Search by base ID (e.g. 'architectural-piano-02' -> 'architectural-piano')
+  if (photo.id) {
+    const baseId = photo.id.replace(/-\d+$/, '');
+    if (ALL_SERIES_MAP[baseId]) {
+      return ALL_SERIES_MAP[baseId];
+    }
+    if (ALL_SERIES_MAP[photo.id]) {
+      return ALL_SERIES_MAP[photo.id];
+    }
+  }
+  return null;
+}

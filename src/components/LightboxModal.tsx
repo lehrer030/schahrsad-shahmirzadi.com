@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import type { PhotoItem, Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
+import { findSeriesForPhoto } from '../data/photographyData';
 
 interface LightboxModalProps {
   photos: PhotoItem[];
@@ -33,6 +34,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 }) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isDesktopPanelOpen, setIsDesktopPanelOpen] = useState(true);
 
   // Touch swipe handling for mobile devices
   const touchStartX = useRef<number | null>(null);
@@ -98,6 +100,54 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   const currentPhoto = photos[currentIndex];
   const isRtl = currentLang === 'fa';
 
+  // Find series context and thoughts/connection of SchirZan with this artwork
+  const seriesInfo = findSeriesForPhoto(currentPhoto);
+
+  const artworkTitle =
+    (seriesInfo && (
+      currentLang === 'de'
+        ? seriesInfo.titleDe
+        : currentLang === 'fa'
+        ? seriesInfo.titleFa
+        : currentLang === 'fr'
+        ? (seriesInfo.titleFr || seriesInfo.titleEn)
+        : currentLang === 'it'
+        ? (seriesInfo.titleIt || seriesInfo.titleEn)
+        : currentLang === 'tr'
+        ? (seriesInfo.titleTr || seriesInfo.titleEn)
+        : seriesInfo.titleEn
+    )) || currentPhoto.alt || '';
+
+  const rawDescription =
+    (seriesInfo && (
+      currentLang === 'de'
+        ? seriesInfo.descriptionDe
+        : currentLang === 'fa'
+        ? seriesInfo.descriptionFa
+        : currentLang === 'fr'
+        ? (seriesInfo.descriptionFr || seriesInfo.descriptionEn)
+        : currentLang === 'it'
+        ? (seriesInfo.descriptionIt || seriesInfo.descriptionEn)
+        : currentLang === 'tr'
+        ? (seriesInfo.descriptionTr || seriesInfo.descriptionEn)
+        : seriesInfo.descriptionEn
+    )) || (currentPhoto.captionDe && !currentPhoto.captionDe.startsWith('Image 0') ? (currentLang === 'fa' ? currentPhoto.captionFa : currentLang === 'de' ? currentPhoto.captionDe : currentPhoto.captionEn) : '');
+
+  const personalNote =
+    seriesInfo && (
+      currentLang === 'de'
+        ? seriesInfo.personalNoteDe
+        : currentLang === 'fa'
+        ? seriesInfo.personalNoteFa
+        : currentLang === 'fr'
+        ? (seriesInfo.personalNoteFr || seriesInfo.personalNoteEn)
+        : currentLang === 'it'
+        ? (seriesInfo.personalNoteIt || seriesInfo.personalNoteEn)
+        : currentLang === 'tr'
+        ? (seriesInfo.personalNoteTr || seriesInfo.personalNoteEn)
+        : seriesInfo.personalNoteEn
+    );
+
   // Mobile Touch Swipe Handlers
   const handleTouchStart = (e: React.TouchEvent) => {
     if (isZoomed) return;
@@ -137,18 +187,29 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Top Left: Counter & Collection Tag */}
+      {/* Top Left: Counter & Theme des Werks */}
       <div
-        className="absolute top-2 left-2 sm:top-5 sm:left-5 z-70 flex items-center gap-2 pointer-events-auto"
+        className="absolute top-2 left-2 sm:top-5 sm:left-5 z-70 flex flex-col gap-1 pointer-events-auto max-w-[55vw] sm:max-w-md"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-2 bg-stone-950/80 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-stone-800 text-[11px] sm:text-xs font-mono text-white/90 shadow-xl">
+        <div className="flex items-center gap-2 bg-stone-950/80 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-stone-800 text-[11px] sm:text-xs font-mono text-white/90 shadow-xl self-start">
           <span className="font-bold text-amber-400">{currentIndex + 1}</span>
           <span className="text-stone-500">/</span>
           <span>{photos.length}</span>
           <span className="text-stone-600 hidden sm:inline">|</span>
           <span className="text-stone-300 hidden sm:inline">SchirZan Fine Art</span>
         </div>
+
+        {artworkTitle && (
+          <div className="hidden sm:block pl-1 pt-0.5">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400/90 font-semibold block">
+              {currentLang === 'fa' ? 'موضوع اثر:' : currentLang === 'de' ? 'Thema des Werks:' : currentLang === 'fr' ? 'Thème de l’œuvre :' : currentLang === 'it' ? 'Tema dell’opera:' : currentLang === 'tr' ? 'Eserin Teması:' : 'Artwork Theme:'}
+            </span>
+            <h3 className="text-sm sm:text-base font-serif font-bold text-white tracking-wide drop-shadow-md truncate">
+              {artworkTitle}
+            </h3>
+          </div>
+        )}
       </div>
 
       {/* Top Right: Fullscreen, Zoom, Close Controls */}
@@ -257,6 +318,96 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           aria-label="Nächstes Bild"
         >
           {isRtl ? <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />}
+        </button>
+      )}
+
+      {/* Desktop Curator Panel (rechts neben dem Bild auf dem PC - auf Mobilgeräten komplett ausgeblendet) */}
+      {(rawDescription || personalNote) && isDesktopPanelOpen && (
+        <aside
+          className="absolute right-4 xl:right-8 top-20 bottom-16 w-80 xl:w-96 hidden lg:flex flex-col justify-center z-70 pointer-events-auto"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="bg-stone-950/85 backdrop-blur-md rounded-2xl border border-stone-800/90 p-5 xl:p-6 shadow-2xl space-y-4 max-h-[80vh] overflow-y-auto no-scrollbar text-left rtl:text-right">
+            <div className="flex items-start justify-between gap-3 border-b border-stone-800/80 pb-3">
+              <div>
+                <span className="text-[10.5px] font-mono uppercase tracking-wider text-amber-400 font-bold block mb-1">
+                  {currentLang === 'de'
+                    ? 'Was SchirZan mit dem Werk verbindet'
+                    : currentLang === 'fa'
+                    ? 'پیوند هنرمند با این اثر'
+                    : currentLang === 'fr'
+                    ? 'Ce qui lie SchirZan à l’œuvre'
+                    : currentLang === 'it'
+                    ? 'Cosa lega SchirZan all’opera'
+                    : currentLang === 'tr'
+                    ? 'SchirZan’ın Eserle Olan Bağı'
+                    : 'What connects SchirZan with the work'}
+                </span>
+                <h4 className="text-base xl:text-lg font-serif font-bold text-white leading-snug">
+                  {artworkTitle}
+                </h4>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setIsDesktopPanelOpen(false)}
+                className="p-1 text-stone-400 hover:text-white rounded-lg hover:bg-stone-800 transition-colors cursor-pointer shrink-0"
+                title={currentLang === 'de' ? 'Infotext einklappen' : 'Collapse info'}
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {rawDescription && (
+              <div className="space-y-1.5">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-stone-400 block font-semibold">
+                  {currentLang === 'de'
+                    ? 'Gedanken & Bildkonzept:'
+                    : currentLang === 'fa'
+                    ? 'ایده و دیدگاه هنری:'
+                    : currentLang === 'fr'
+                    ? 'Concept & Vision :'
+                    : currentLang === 'it'
+                    ? 'Concetto & Visione:'
+                    : currentLang === 'tr'
+                    ? 'Konsept ve Sanatsal Bakış:'
+                    : 'Concept & Artistic Vision:'}
+                </span>
+                <p className="text-xs xl:text-sm text-stone-300 font-sans leading-relaxed font-normal">
+                  {rawDescription}
+                </p>
+              </div>
+            )}
+
+            {personalNote && (
+              <div className="p-3 rounded-xl bg-amber-950/40 border border-amber-800/50 text-xs xl:text-sm text-amber-200/95 italic font-serif leading-relaxed">
+                {personalNote}
+              </div>
+            )}
+
+            <div className="pt-2 border-t border-stone-800/70 flex items-center justify-between text-[11px] font-mono text-stone-400">
+              <span>{currentIndex + 1} / {photos.length}</span>
+              <span className="flex items-center gap-1 text-stone-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+                <span>SchirZan Signature Collection</span>
+              </span>
+            </div>
+          </div>
+        </aside>
+      )}
+
+      {/* Button to reopen desktop panel if collapsed */}
+      {(rawDescription || personalNote) && !isDesktopPanelOpen && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsDesktopPanelOpen(true);
+          }}
+          className="absolute right-4 xl:right-8 bottom-6 z-70 hidden lg:inline-flex items-center gap-2 px-3.5 py-2 bg-stone-950/85 hover:bg-stone-900 border border-stone-800 text-stone-200 hover:text-white rounded-full text-xs font-mono font-medium backdrop-blur-md shadow-xl transition-all cursor-pointer"
+        >
+          <span className="w-2 h-2 rounded-full bg-amber-400" />
+          <span>{currentLang === 'de' ? 'Über dieses Werk' : currentLang === 'fa' ? 'درباره این اثر' : 'About this work'}</span>
         </button>
       )}
 
