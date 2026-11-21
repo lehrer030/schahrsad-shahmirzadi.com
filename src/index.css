@@ -28,18 +28,26 @@
 
   /* Bild-Kopierschutz: Verhindert Ziehen, Textauswahl und langes Antippen auf Mobilgeräten */
   img, .protected-art {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-touch-callout: none;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-user-drag: none !important;
+    -webkit-touch-callout: none !important;
   }
 
-  /* Druckschutz: Copyright-Wasserzeichen beim Drucken */
+  /* Globaler Schutz gegen langes Drücken (iOS Kontextmenü "In Fotos sichern") */
+  * {
+    -webkit-touch-callout: none !important;
+  }
+
+  /* Druckschutz: Verhindert das Speichern als PDF oder Drucken von Bildern auf Mobilgeräten und PC */
   @media print {
+    img, .protected-art {
+      display: none !important;
+    }
     body::before {
-      content: "© Schahrsad Shahmirzadi (SchirZan) · Urheberrechtlich geschützte Werke · https://schahrsad-shahmirzadi.com";
+      content: "© Schahrsad Shahmirzadi (SchirZan) · Urheberrechtlich geschützte Werke · Kopieren & Drucken untersagt · https://schirzan.com";
       display: block;
       text-align: center;
       font-weight: bold;
