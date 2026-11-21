@@ -71,16 +71,26 @@ export const Footer: React.FC<FooterProps> = ({
             </ul>
           </div>
 
-          {/* Domains */}
+          {/* Domains & Verified Profiles */}
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono">
               {currentLang === 'de'
-                ? 'Offizielle Domains & Profile'
+                ? 'Offizielle Profile & Verifikationen'
                 : currentLang === 'fa'
-                  ? 'دامنه‌ها و نمایه‌ها'
-                  : 'Official Domains & Profiles'}
+                  ? 'نمایه‌ها و مراجع رسمی'
+                  : 'Official Profiles & Verifications'}
             </span>
             <ul className="space-y-1.5 text-[11px]">
+              <li>
+                <a
+                  href="https://schirzan.com/"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-900 font-bold"
+                  title="SchirZan · Offizielle Hauptdomain"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                  <span>schirzan.com (Hauptpräsenz)</span>
+                </a>
+              </li>
               <li>
                 <a
                   href="https://de.wikipedia.org/wiki/Schahrsad_Shahmirzadi"
@@ -89,31 +99,45 @@ export const Footer: React.FC<FooterProps> = ({
                   className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-700 font-medium"
                   title="Wikipedia: Schahrsad Shahmirzadi"
                 >
-                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800">W</span>
-                  <span>Wikipedia · {currentLang === 'fa' ? 'زندگی‌نامه' : currentLang === 'en' ? 'Biography' : 'Biografie'}</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                  <span className="font-serif font-black text-[10px] px-1.5 py-0.2 rounded bg-stone-200 text-stone-800 shrink-0">W</span>
+                  <span>Wikipedia · {currentLang === 'fa' ? 'زندگینامه رسمی' : currentLang === 'en' ? 'Biography' : 'Biografie'}</span>
+                  <ExternalLink className="w-3 h-3 text-stone-400 shrink-0" />
                 </a>
               </li>
               <li>
                 <a
-                  href="https://schahrsad-shahmirzadi.com/"
+                  href="https://architectureprize.com/winners/winner.php?id=8368&mode=hm"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-amber-800 transition-colors flex items-center gap-1 text-stone-700 font-medium"
+                  title="Architecture MasterPrize (AMP) Winners Directory"
                 >
-                  <span>schahrsad-shahmirzadi.com</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                  <span>AMP Architecture MasterPrize</span>
+                  <ExternalLink className="w-3 h-3 text-stone-400 shrink-0" />
                 </a>
               </li>
               <li>
                 <a
-                  href="http://schirzan.com/"
+                  href="https://globallensawards.com/winners-gallery/2026/architecture-photography/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-amber-800 transition-colors flex items-center gap-1 text-stone-700 font-medium"
+                  title="Global Lens Photography Awards 2026"
                 >
-                  <span>schirzan.com</span>
-                  <ExternalLink className="w-3 h-3 text-stone-400" />
+                  <span>Global Lens Awards 2026</span>
+                  <ExternalLink className="w-3 h-3 text-stone-400 shrink-0" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://photoawards.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1 text-stone-700 font-medium"
+                  title="International Photography Awards (IPA)"
+                >
+                  <span>IPA Photography Awards</span>
+                  <ExternalLink className="w-3 h-3 text-stone-400 shrink-0" />
                 </a>
               </li>
             </ul>
