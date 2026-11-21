@@ -84,11 +84,21 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <a
                   href="https://schirzan.com/"
-                  className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-900 font-bold"
-                  title="SchirZan · Offizielle Hauptdomain"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-900 font-semibold"
+                  title="schirzan.com"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                  <span>schirzan.com (Hauptpräsenz)</span>
+                  <span>schirzan.com</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://schahrsad-shahmirzadi.com/"
+                  className="hover:text-amber-800 transition-colors flex items-center gap-1.5 text-stone-900 font-semibold"
+                  title="schahrsad-shahmirzadi.com"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                  <span>schahrsad-shahmirzadi.com</span>
                 </a>
               </li>
               <li>
