@@ -1,5 +1,17 @@
-import React, { useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, ShieldCheck, Heart, ExternalLink } from 'lucide-react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ShieldCheck,
+  Heart,
+  ExternalLink,
+  Maximize2,
+  Minimize2,
+  ZoomIn,
+  ZoomOut,
+  Info
+} from 'lucide-react';
 import type { PhotoItem, Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
 
@@ -20,16 +32,59 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
   onNavigate,
   currentLang
 }) => {
+  const [isZoomed, setIsZoomed] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showCaption, setShowCaption] = useState(true);
+
+  // Touch swipe handling for mobile devices
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+
+  // Reset zoom on photo change
+  useEffect(() => {
+    setIsZoomed(false);
+  }, [currentIndex]);
+
+  // Fullscreen tracking
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
+
+  const toggleFullscreen = useCallback(() => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  }, []);
+
+  // Keyboard navigation & Shortcuts
   useEffect(() => {
     if (!isOpen) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
-      if (e.key === 'ArrowLeft') {
+      if (e.key === 'Escape') {
+        if (isZoomed) {
+          setIsZoomed(false);
+        } else {
+          onClose();
+        }
+      } else if (e.key === 'ArrowLeft') {
         onNavigate((currentIndex - 1 + photos.length) % photos.length);
-      }
-      if (e.key === 'ArrowRight') {
+      } else if (e.key === 'ArrowRight') {
         onNavigate((currentIndex + 1) % photos.length);
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      } else if (e.key === 'z' || e.key === 'Z') {
+        setIsZoomed((prev) => !prev);
+      } else if (e.key === 'i' || e.key === 'I') {
+        setShowCaption((prev) => !prev);
       }
     };
 
@@ -40,65 +95,151 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'auto';
     };
-  }, [isOpen, currentIndex, photos.length, onClose, onNavigate]);
+  }, [isOpen, currentIndex, photos.length, onClose, onNavigate, isZoomed, toggleFullscreen]);
 
   if (!isOpen || photos.length === 0) return null;
 
   const currentPhoto = photos[currentIndex];
   const isRtl = currentLang === 'fa';
 
+  // Mobile Touch Swipe Handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (isZoomed) return;
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (isZoomed || touchStartX.current === null || touchStartY.current === null) return;
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    const deltaY = e.changedTouches[0].clientY - touchStartY.current;
+
+    // Horizontal swipe threshold: 45px
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 45) {
+      if (deltaX < 0) {
+        // Swipe left -> Next photo
+        onNavigate((currentIndex + 1) % photos.length);
+      } else {
+        // Swipe right -> Prev photo
+        onNavigate((currentIndex - 1 + photos.length) % photos.length);
+      }
+    } else if (deltaY > 120 && Math.abs(deltaX) < 60) {
+      // Swipe down -> Close modal
+      onClose();
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   return (
     <div
       role="dialog"
       aria-modal="true"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-stone-950/90 backdrop-blur-md p-2 sm:p-6 animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-md select-none overflow-hidden animate-in fade-in duration-200"
       onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
-      {/* Top Bar with Counter and Close Button */}
+      {/* Top Left: Counter & Collection Tag */}
       <div
-        className="absolute top-4 left-4 right-4 flex items-center justify-between text-white z-60"
+        className="absolute top-3 left-3 sm:top-5 sm:left-5 z-70 flex items-center gap-2 pointer-events-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-2 bg-stone-900/80 px-4 py-1.5 rounded-full border border-stone-700/80 text-xs font-mono">
-          <span>{currentIndex + 1} / {photos.length}</span>
-          <span className="text-stone-500">|</span>
-          <span className="text-stone-300">SchirZan Collection</span>
+        <div className="flex items-center gap-2 bg-stone-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-stone-800 text-xs font-mono text-white/90 shadow-xl">
+          <span className="font-bold text-amber-400">{currentIndex + 1}</span>
+          <span className="text-stone-500">/</span>
+          <span>{photos.length}</span>
+          <span className="text-stone-600 hidden sm:inline">|</span>
+          <span className="text-stone-300 hidden sm:inline">SchirZan Fine Art</span>
         </div>
+      </div>
 
+      {/* Top Right: Fullscreen, Zoom, Info, Close Controls */}
+      <div
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-70 flex items-center gap-1.5 sm:gap-2 pointer-events-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Toggle Zoom (1x vs 2x) */}
         <button
+          type="button"
+          onClick={() => setIsZoomed((prev) => !prev)}
+          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
+          title={isZoomed ? 'Zoom zurücksetzen (Z)' : 'Details heranzoomen (Z)'}
+          aria-label="Zoom"
+        >
+          {isZoomed ? <ZoomOut className="w-4 h-4 sm:w-4.5 sm:h-4.5" /> : <ZoomIn className="w-4 h-4 sm:w-4.5 sm:h-4.5" />}
+        </button>
+
+        {/* Toggle Browser Native Fullscreen */}
+        <button
+          type="button"
+          onClick={toggleFullscreen}
+          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg hidden sm:flex"
+          title={isFullscreen ? 'Vollbild beenden (F)' : 'Vollbildmodus (F)'}
+          aria-label="Vollbild"
+        >
+          {isFullscreen ? <Minimize2 className="w-4 h-4 sm:w-4.5 sm:h-4.5" /> : <Maximize2 className="w-4 h-4 sm:w-4.5 sm:h-4.5" />}
+        </button>
+
+        {/* Toggle Caption visibility */}
+        <button
+          type="button"
+          onClick={() => setShowCaption((prev) => !prev)}
+          className={`p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg ${
+            showCaption ? 'text-amber-400' : 'text-stone-400 hover:text-white'
+          }`}
+          title={showCaption ? 'Bildunterschrift ausblenden (I)' : 'Bildunterschrift einblenden (I)'}
+          aria-label="Informationen"
+        >
+          <Info className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
+        </button>
+
+        {/* Close Button */}
+        <button
+          type="button"
           onClick={onClose}
-          className="p-2.5 bg-stone-900/80 hover:bg-stone-800 text-stone-300 hover:text-white rounded-full border border-stone-700/80 transition-colors cursor-pointer"
+          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
+          title="Schließen (Esc)"
           aria-label="Schließen"
         >
-          <X className="w-5 h-5" />
+          <X className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
         </button>
       </div>
 
       {/* Prev Navigation Button */}
       {photos.length > 1 && (
         <button
+          type="button"
           onClick={(e) => {
             e.stopPropagation();
             onNavigate((currentIndex - 1 + photos.length) % photos.length);
           }}
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-60 p-3 bg-stone-900/70 hover:bg-stone-800/90 text-white rounded-full border border-stone-700/80 transition-all hover:scale-105 cursor-pointer"
+          className="absolute left-1 sm:left-6 top-1/2 -translate-y-1/2 z-70 p-2.5 sm:p-4 bg-stone-950/75 hover:bg-stone-900 text-white rounded-full border border-stone-800/80 backdrop-blur-md transition-all hover:scale-110 cursor-pointer shadow-2xl"
           aria-label="Vorheriges Bild"
         >
-          {isRtl ? <ChevronRight className="w-6 h-6" /> : <ChevronLeft className="w-6 h-6" />}
+          {isRtl ? <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />}
         </button>
       )}
 
-      {/* Central Image View */}
+      {/* Central Viewport - Maximal groß was die Auflösung des Endgerätes hergibt */}
       <div
-        className="relative max-w-6xl max-h-[85vh] w-full flex flex-col items-center justify-center p-2"
-        onClick={(e) => e.stopPropagation()}
+        className={`relative w-full h-full flex items-center justify-center p-1 sm:p-2 ${
+          isZoomed ? 'overflow-auto cursor-zoom-out' : 'overflow-hidden cursor-zoom-in'
+        }`}
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsZoomed((prev) => !prev);
+        }}
       >
-        <div className="relative rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 shadow-2xl">
+        <div className="relative flex items-center justify-center max-w-full max-h-full">
           <img
             src={resolveAsset(currentPhoto.src)}
             alt={currentPhoto.alt}
             draggable={false}
-            className="max-h-[75vh] w-auto max-w-full object-contain mx-auto select-none"
+            className={`max-w-[99vw] max-h-[96vh] sm:max-w-[98vw] sm:max-h-[96vh] w-auto h-auto object-contain select-none protected-art transition-transform duration-300 ease-out ${
+              isZoomed ? 'scale-[1.8] sm:scale-[2.0]' : 'scale-100 shadow-2xl'
+            }`}
             onError={(e) => {
               const target = e.currentTarget;
               if (target.src.endsWith('.webp')) {
@@ -108,74 +249,86 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           />
 
           {/* Transparent Protective Shield against right click & drag */}
-          <div 
-            className="absolute inset-0 z-10 select-none cursor-default" 
-            onContextMenu={(e) => e.preventDefault()} 
+          <div
+            className="absolute inset-0 z-10 select-none cursor-inherit"
+            onContextMenu={(e) => e.preventDefault()}
           />
-
-          {/* Protective Watermark */}
-          <div className="absolute bottom-3 right-4 flex items-center gap-1.5 text-xs text-white/90 font-serif bg-stone-950/70 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-md">
-            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
-            <span>SchirZan | Schahrsad Shahmirzadi</span>
-          </div>
         </div>
-
-        {/* Caption & Beitext */}
-        <div className="mt-3.5 max-w-2xl px-4 text-center space-y-1">
-          {currentPhoto.alt && (
-            <h4 className="text-sm sm:text-base font-serif font-bold text-white tracking-wide">
-              {currentPhoto.alt}
-            </h4>
-          )}
-          {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
-            <p className="text-xs sm:text-sm text-stone-300 font-sans tracking-wide leading-relaxed font-normal">
-              {currentLang === 'de'
-                ? currentPhoto.captionDe
-                : currentLang === 'fa'
-                ? currentPhoto.captionFa
-                : currentPhoto.captionEn}
-            </p>
-          )}
-        </div>
-
-        {/* Optional External Donation / Fundraising Link */}
-        {currentPhoto.externalLink && (
-          <div className="mt-3 flex justify-center">
-            <a
-              href={currentPhoto.externalLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded text-xs sm:text-sm font-semibold transition-colors shadow-lg"
-            >
-              <Heart className="w-4 h-4 fill-white" />
-              <span>
-                {currentLang === 'de'
-                  ? (currentPhoto.externalLinkTextDe || 'Support the fundraising run →')
-                  : currentLang === 'fa'
-                  ? (currentPhoto.externalLinkTextFa || 'Support the fundraising run →')
-                  : (currentPhoto.externalLinkTextEn || 'Support the fundraising run →')}
-              </span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-90" />
-            </a>
-          </div>
-        )}
       </div>
 
       {/* Next Navigation Button */}
       {photos.length > 1 && (
         <button
+          type="button"
           onClick={(e) => {
             e.stopPropagation();
             onNavigate((currentIndex + 1) % photos.length);
           }}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-60 p-3 bg-stone-900/70 hover:bg-stone-800/90 text-white rounded-full border border-stone-700/80 transition-all hover:scale-105 cursor-pointer"
+          className="absolute right-1 sm:right-6 top-1/2 -translate-y-1/2 z-70 p-2.5 sm:p-4 bg-stone-950/75 hover:bg-stone-900 text-white rounded-full border border-stone-800/80 backdrop-blur-md transition-all hover:scale-110 cursor-pointer shadow-2xl"
           aria-label="Nächstes Bild"
         >
-          {isRtl ? <ChevronLeft className="w-6 h-6" /> : <ChevronRight className="w-6 h-6" />}
+          {isRtl ? <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" /> : <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />}
         </button>
+      )}
+
+      {/* Floating Bottom Caption Overlay - Schlank, dezent & maximal bildschonend */}
+      {showCaption && (
+        <div
+          className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-70 max-w-[94vw] sm:max-w-2xl w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-stone-950/85 backdrop-blur-md rounded-2xl border border-stone-800/90 text-center text-white shadow-2xl pointer-events-auto transition-all"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Work Title & Watermark */}
+          <div className="flex items-center justify-between gap-3 border-b border-stone-800/70 pb-1.5 mb-1.5">
+            <h4 className="text-xs sm:text-sm font-serif font-bold text-amber-200/95 tracking-wide text-left truncate">
+              {currentPhoto.alt || 'SchirZan Photography'}
+            </h4>
+            <div className="flex items-center gap-1 text-[10px] sm:text-xs text-stone-400 font-serif shrink-0">
+              <ShieldCheck className="w-3 h-3 text-amber-400" />
+              <span>SchirZan</span>
+            </div>
+          </div>
+
+          {/* Description / Caption */}
+          {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
+            <p className="text-[11px] sm:text-xs text-stone-300 font-sans tracking-wide leading-relaxed font-normal line-clamp-2">
+              {currentLang === 'de'
+                ? currentPhoto.captionDe
+                : currentLang === 'fa'
+                ? currentPhoto.captionFa
+                : currentLang === 'fr'
+                ? (currentPhoto.captionDe || currentPhoto.captionEn)
+                : currentLang === 'it'
+                ? (currentPhoto.captionDe || currentPhoto.captionEn)
+                : currentLang === 'tr'
+                ? (currentPhoto.captionDe || currentPhoto.captionEn)
+                : currentPhoto.captionEn}
+            </p>
+          )}
+
+          {/* Optional External Donation / Fundraising Link */}
+          {currentPhoto.externalLink && (
+            <div className="mt-2 flex justify-center">
+              <a
+                href={currentPhoto.externalLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded text-[11px] sm:text-xs font-semibold transition-colors shadow-md"
+              >
+                <Heart className="w-3 h-3 fill-white" />
+                <span>
+                  {currentLang === 'de'
+                    ? (currentPhoto.externalLinkTextDe || 'Spendenlauf unterstützen →')
+                    : currentLang === 'fa'
+                    ? (currentPhoto.externalLinkTextFa || 'حمایت از کمپین →')
+                    : (currentPhoto.externalLinkTextEn || 'Support the fundraising run →')}
+                </span>
+                <ExternalLink className="w-3 h-3 opacity-90" />
+              </a>
+            </div>
+          )}
+        </div>
       )}
     </div>
   );
 };
-
