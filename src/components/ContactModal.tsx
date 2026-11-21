@@ -43,13 +43,19 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                 ? 'Kontakt & Anfragen'
                 : currentLang === 'fa'
                 ? 'ارتباط و سفارش آثار'
+                : currentLang === 'fr'
+                ? 'Contact & Demandes'
+                : currentLang === 'it'
+                ? 'Contatti & Richieste'
+                : currentLang === 'tr'
+                ? 'İletişim & Talepler'
                 : 'Contact & Inquiries'}
             </h2>
           </div>
           <button
             onClick={onClose}
             className="p-2 text-stone-400 hover:text-stone-900 hover:bg-stone-100 rounded-full transition-colors cursor-pointer"
-            aria-label="Schließen"
+            aria-label={currentLang === 'fa' ? 'بستن' : currentLang === 'fr' ? 'Fermer' : currentLang === 'it' ? 'Chiudi' : currentLang === 'tr' ? 'Kapat' : currentLang === 'de' ? 'Schließen' : 'Close'}
           >
             <X className="w-5 h-5" />
           </button>

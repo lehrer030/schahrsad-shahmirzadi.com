@@ -36,7 +36,17 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <span className="text-xs font-semibold tracking-wider uppercase text-amber-500 font-mono">
-              {currentLang === 'de' ? 'Kategorien' : currentLang === 'fa' ? 'دسته‌بندی‌ها' : 'Categories'}
+              {currentLang === 'de'
+                ? 'Kategorien'
+                : currentLang === 'fa'
+                ? 'دسته‌بندی‌ها'
+                : currentLang === 'fr'
+                ? 'Catégories'
+                : currentLang === 'it'
+                ? 'Categorie'
+                : currentLang === 'tr'
+                ? 'Kategoriler'
+                : 'Categories'}
             </span>
             <h2 className="text-2xl font-serif text-neutral-100 mt-0.5">
               {currentLang === 'de'

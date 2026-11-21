@@ -304,6 +304,51 @@ export const Navbar: React.FC<NavbarProps> = ({
   const getItemLabel = (item: OriginalMenuItem) => {
     if (currentLang === 'de') return item.labelDe;
     if (currentLang === 'fa') return item.labelFa;
+    if (currentLang === 'fr') {
+      const map: Record<string, string> = {
+        works: 'Photographie & Beaux-Arts',
+        'award-references': 'Prix Internationaux & Références',
+        exhibitions: 'Expositions & Salons',
+        publications: 'Publications & Catalogues',
+        press: 'Presse & Médias',
+        kickboxing: '10× Championne du Monde de Kickboxing',
+        biography: 'Biographie & Parcours',
+        education: 'Formation Académique Interdisciplinaire',
+        engagement: 'Engagement pour les Droits Humains & la Paix',
+        gallery: 'Galerie: Sport, Engagement & IPA Athènes'
+      };
+      return map[item.id] || item.labelEn;
+    }
+    if (currentLang === 'it') {
+      const map: Record<string, string> = {
+        works: 'Fotografia & Fine Art',
+        'award-references': 'Premi Internazionali & Riferimenti',
+        exhibitions: 'Mostre & Esposizioni',
+        publications: 'Pubblicazioni & Cataloghi',
+        press: 'Stampa & Media',
+        kickboxing: '10× Campionessa Mondiale di Kickboxing',
+        biography: 'Biografia & Percorso',
+        education: 'Formazione Accademica Interdisciplinare',
+        engagement: 'Impegno per Diritti Umani & Pace',
+        gallery: 'Galleria: Sport, Impegno & IPA Atene'
+      };
+      return map[item.id] || item.labelEn;
+    }
+    if (currentLang === 'tr') {
+      const map: Record<string, string> = {
+        works: 'Fotoğrafçılık & Güzel Sanatlar',
+        'award-references': 'Uluslararası Ödüller & Başarılar',
+        exhibitions: 'Sergiler & Gösterimler',
+        publications: 'Yayınlar & Kitaplar',
+        press: 'Basın & Medya',
+        kickboxing: '10× Kickboks Dünya Şampiyonu',
+        biography: 'Biyografi & Kariyer',
+        education: 'Disiplinlerarası Akademik Eğitim',
+        engagement: 'İnsan Hakları, Barış & Çevre Mücadelesi',
+        gallery: 'Galeri: Spor, Mücadele & IPA Atina'
+      };
+      return map[item.id] || item.labelEn;
+    }
     return item.labelEn;
   };
 
@@ -479,7 +524,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                 isScrolled ? 'px-2.5 py-1 text-[11px]' : 'px-3.5 py-1.5 text-xs'
               }`}
             >
-              <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+              <span>
+                {currentLang === 'de'
+                  ? 'Kontakt'
+                  : currentLang === 'fa'
+                  ? 'تماس'
+                  : currentLang === 'fr'
+                  ? 'Contact'
+                  : currentLang === 'it'
+                  ? 'Contatti'
+                  : currentLang === 'tr'
+                  ? 'İletişim'
+                  : 'Contact'}
+              </span>
             </button>
           </div>
 
@@ -500,14 +557,32 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <>
                   <X className="w-4 h-4 text-white" />
                   <span className="text-xs font-semibold">
-                    {currentLang === 'fa' ? 'بستن' : currentLang === 'en' ? 'Close' : 'Schließen'}
+                    {currentLang === 'fa'
+                      ? 'بستن'
+                      : currentLang === 'de'
+                      ? 'Schließen'
+                      : currentLang === 'fr'
+                      ? 'Fermer'
+                      : currentLang === 'it'
+                      ? 'Chiudi'
+                      : currentLang === 'tr'
+                      ? 'Kapat'
+                      : 'Close'}
                   </span>
                 </>
               ) : (
                 <>
                   <Menu className="w-4 h-4 text-white" />
                   <span className="text-xs font-semibold">
-                    {currentLang === 'fa' ? 'منو' : currentLang === 'en' ? 'Menu' : 'Menü'}
+                    {currentLang === 'fa'
+                      ? 'منو'
+                      : currentLang === 'de'
+                      ? 'Menü'
+                      : currentLang === 'fr' || currentLang === 'it'
+                      ? 'Menu'
+                      : currentLang === 'tr'
+                      ? 'Menü'
+                      : 'Menu'}
                   </span>
                 </>
               )}
@@ -518,7 +593,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Row 2 on Mobile: Sticky Section Badge (Zahl + Überschrift beim Scrollen) & Schnelltools */}
         <div
           id="mobile-utility-bar"
-          className="lg:hidden w-full bg-[#f4efe8]/95 border-t border-stone-200/80 px-3 sm:px-6 py-1 flex items-center justify-between gap-2 min-h-[38px]"
+          className="lg:hidden w-full bg-[#f4efe8]/95 border-t border-stone-200/80 px-2 sm:px-6 py-1 flex items-center justify-between gap-1.5 min-h-[38px]"
         >
           {/* Oben links beim Scrollen: Rechteck mit der Zahl und der Überschrift des aktuellen Bereichs */}
           {activeMenuId !== 'home' && (() => {
@@ -531,58 +606,37 @@ export const Navbar: React.FC<NavbarProps> = ({
                   const el = document.getElementById(activeItem.targetId);
                   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }}
-                className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-stone-900 hover:bg-stone-800 text-white rounded text-[10.5px] font-mono font-bold tracking-wider uppercase shadow-xs max-w-[210px] sm:max-w-[270px] truncate cursor-pointer transition-colors shrink-0"
-                title={currentLang === 'de' ? activeItem.labelDe : currentLang === 'fa' ? activeItem.labelFa : activeItem.labelEn}
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-stone-900 hover:bg-stone-800 text-white rounded text-[10.5px] font-mono font-bold tracking-wider uppercase shadow-xs max-w-[170px] sm:max-w-[270px] truncate cursor-pointer transition-colors shrink-0"
+                title={getItemLabel(activeItem)}
               >
                 <span className="px-1.5 py-0.5 rounded bg-amber-500 text-stone-950 font-black text-[9.5px] shrink-0">
                   {activeItem.num}
                 </span>
                 <span className="truncate">
-                  {currentLang === 'de' ? activeItem.shortDe : currentLang === 'fa' ? activeItem.shortFa : activeItem.shortEn}
+                  {getHeaderItemLabel(activeItem)}
                 </span>
               </button>
             );
           })()}
 
-          {/* Trilingual Switcher (DE / EN / FA) */}
-          <div className="flex items-center bg-white border border-stone-200/90 p-0.5 rounded text-xs shadow-2xs shrink-0">
-            <Globe className="w-3 h-3 text-stone-400 ml-1 mr-1 shrink-0" />
-            <button
-              type="button"
-              onClick={() => onToggleLang('de')}
-              className={`px-2 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
-                currentLang === 'de'
-                  ? 'bg-stone-900 text-white font-semibold'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-              title="Deutsch"
-            >
-              DE
-            </button>
-            <button
-              type="button"
-              onClick={() => onToggleLang('en')}
-              className={`px-2 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
-                currentLang === 'en'
-                  ? 'bg-stone-900 text-white font-semibold'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-              title="English"
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              onClick={() => onToggleLang('fa')}
-              className={`px-2.5 py-0.5 rounded text-[10.5px] font-medium transition-all cursor-pointer ${
-                currentLang === 'fa'
-                  ? 'bg-stone-900 text-white font-semibold'
-                  : 'text-stone-600 hover:text-stone-900'
-              }`}
-              title="فارسی"
-            >
-              فارسی
-            </button>
+          {/* Multilingual Switcher (DE / EN / FA / FR / IT / TR) */}
+          <div className="flex items-center bg-white border border-stone-200/90 p-0.5 rounded text-xs shadow-2xs shrink-0 overflow-x-auto">
+            <Globe className="w-3 h-3 text-stone-400 ml-1 mr-0.5 shrink-0" />
+            {APP_LANGUAGES.map(lang => (
+              <button
+                key={lang.code}
+                type="button"
+                onClick={() => onToggleLang(lang.code)}
+                className={`px-1.5 py-0.5 rounded text-[10px] font-medium transition-all cursor-pointer shrink-0 ${
+                  currentLang === lang.code
+                    ? 'bg-stone-900 text-white font-semibold'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
+                title={lang.title}
+              >
+                {lang.label}
+              </button>
+            ))}
           </div>
 
           {/* Quick Contact Button (nur im Intro/Home sichtbar, wenn noch keine Sektion aktiv ist) */}
@@ -590,10 +644,22 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={onOpenContact}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 hover:bg-stone-800 text-white text-[11px] font-medium tracking-wide transition-all cursor-pointer shadow-2xs shrink-0"
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-stone-900 hover:bg-stone-800 text-white text-[10.5px] font-medium tracking-wide transition-all cursor-pointer shadow-2xs shrink-0"
             >
               <Mail className="w-3 h-3" />
-              <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+              <span>
+                {currentLang === 'de'
+                  ? 'Kontakt'
+                  : currentLang === 'fa'
+                  ? 'تماس'
+                  : currentLang === 'fr'
+                  ? 'Contact'
+                  : currentLang === 'it'
+                  ? 'Contatti'
+                  : currentLang === 'tr'
+                  ? 'İletişim'
+                  : 'Contact'}
+              </span>
             </button>
           )}
         </div>

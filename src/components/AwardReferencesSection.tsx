@@ -1175,13 +1175,12 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
 
                     {/* List of awarded works in generous Gallery-style Cards */}
                     <div
-                      className={`grid gap-4 sm:gap-6 ${
-                        honorGroup.items.length === 1
-                          ? 'grid-cols-1 max-w-sm'
-                          : honorGroup.items.length === 2
+                      className={`grid gap-4 sm:gap-6 ${honorGroup.items.length === 1
+                        ? 'grid-cols-1 max-w-sm'
+                        : honorGroup.items.length === 2
                           ? 'grid-cols-1 sm:grid-cols-2 max-w-2xl'
                           : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
-                      }`}
+                        }`}
                     >
                       {honorGroup.items.map((item, itemIdx) => {
                         const thumbImg = getAwardWorkImage(item.title, item.image);
@@ -1276,11 +1275,10 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
 
                             {/* Award Badges Bar: Sauber außerhalb des Bildes positioniert, um nicht vom Kunstwerk abzulenken */}
                             <div className="px-4 pt-3 pb-2 border-b border-stone-100 flex items-center justify-between gap-2 flex-wrap bg-stone-50/50">
-                              <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold tracking-tight border ${
-                                isTopHonor 
-                                  ? 'bg-amber-100 text-amber-950 border-amber-300' 
-                                  : 'bg-white text-stone-800 border-stone-200/90 shadow-2xs'
-                              }`}>
+                              <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10.5px] font-mono font-bold tracking-tight border ${isTopHonor
+                                ? 'bg-amber-100 text-amber-950 border-amber-300'
+                                : 'bg-white text-stone-800 border-stone-200/90 shadow-2xs'
+                                }`}>
                                 {isTopHonor ? <Trophy className="w-3 h-3 text-amber-700" /> : <Award className="w-3 h-3 text-stone-500" />}
                                 <span>{badgeInfo.label}</span>
                               </span>
@@ -1324,8 +1322,8 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                       {currentLang === 'de'
                                         ? `Photos der Serie (${seriesPhotos.length}):`
                                         : currentLang === 'fa'
-                                        ? `تصاویر مجموعه (${seriesPhotos.length}):`
-                                        : `Series Photos (${seriesPhotos.length}):`}
+                                          ? `تصاویر مجموعه (${seriesPhotos.length}):`
+                                          : `Series Photos (${seriesPhotos.length}):`}
                                     </span>
                                     <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
                                       {seriesPhotos.map((pSrc, pIdx) => (
@@ -1367,8 +1365,8 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                       {currentLang === 'fa'
                                         ? `مشاهده سری · ${seriesPhotos.length} اثر ←`
                                         : currentLang === 'de'
-                                        ? `Serie ansehen · ${seriesPhotos.length} Photos →`
-                                        : `View Series · ${seriesPhotos.length} Photos →`}
+                                          ? `Serie ansehen · ${seriesPhotos.length} Photos →`
+                                          : `View Series · ${seriesPhotos.length} Photos →`}
                                     </span>
                                   </button>
                                 ) : (

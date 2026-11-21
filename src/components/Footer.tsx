@@ -44,7 +44,17 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Quick Contact */}
           <div className="space-y-2">
             <span className="text-xs uppercase tracking-wider text-stone-800 font-bold font-mono">
-              {currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'ارتباط' : 'Contact'}
+              {currentLang === 'de'
+                ? 'Kontakt'
+                : currentLang === 'fa'
+                ? 'ارتباط'
+                : currentLang === 'fr'
+                ? 'Contact'
+                : currentLang === 'it'
+                ? 'Contatti'
+                : currentLang === 'tr'
+                ? 'İletişim'
+                : 'Contact'}
             </span>
             <ul className="space-y-2 text-[11px]">
               <li>
@@ -78,6 +88,12 @@ export const Footer: React.FC<FooterProps> = ({
                 ? 'Offizielle Profile & Verifikationen'
                 : currentLang === 'fa'
                   ? 'نمایه‌ها و مراجع رسمی'
+                  : currentLang === 'fr'
+                  ? 'Profils Officiels & Vérifications'
+                  : currentLang === 'it'
+                  ? 'Profili Ufficiali & Verifiche'
+                  : currentLang === 'tr'
+                  ? 'Resmi Profiller & Doğrulamalar'
                   : 'Official Profiles & Verifications'}
             </span>
             <ul className="space-y-1.5 text-[11px]">
