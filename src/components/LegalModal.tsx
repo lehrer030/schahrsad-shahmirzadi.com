@@ -59,10 +59,18 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 Angaben gemäß § 5 TMG / Information pursuant to Section 5 TMG
               </h3>
-              <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi</p>
-              <p>c/o Sammy Richter</p>
-              <p>Krummestr. 26</p>
-              <p>10627 Berlin, Deutschland / Germany</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-semibold text-stone-900">Website &amp; Technischer Betrieb / Website Administration:</p>
+                  <p className="text-stone-800">Emanuel Jurgait</p>
+                  <p>E-Mail: <a href="mailto:info@re-mint.online" className="text-amber-800 hover:underline font-medium">info@re-mint.online</a></p>
+                </div>
+                <div>
+                  <p className="font-semibold text-stone-900">Künstlerische &amp; Redaktionelle Inhalte / Content &amp; Artworks:</p>
+                  <p className="text-stone-800">Schahrsad Shahmirzadi (SchirZan)</p>
+                  <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -71,10 +79,14 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               </h3>
               <p className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-800" />
-                <span>E-Mail: <a href="mailto:contact@schahrsad-shahmirzadi.com" className="text-amber-800 hover:underline font-medium">contact@schahrsad-shahmirzadi.com</a></span>
+                <span>Inhalt / Content: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></span>
               </p>
-              <p className="mt-1">
-                Websites: <a href="https://schahrsad-shahmirzadi.com" target="_blank" rel="noopener noreferrer" className="text-amber-800 hover:underline">schahrsad-shahmirzadi.com</a> · <a href="http://schirzan.com" target="_blank" rel="noopener noreferrer" className="text-amber-800 hover:underline">schirzan.com</a>
+              <p className="flex items-center gap-2 mt-1">
+                <Mail className="w-4 h-4 text-amber-800" />
+                <span>Website / Admin: <a href="mailto:info@re-mint.online" className="text-amber-800 hover:underline font-medium">info@re-mint.online</a></span>
+              </p>
+              <p className="mt-2 text-xs text-stone-600">
+                Websites: <a href="https://schirzan.com" target="_blank" rel="noopener noreferrer" className="text-amber-800 hover:underline font-medium">schirzan.com</a> · <a href="https://schahrsad-shahmirzadi.com" target="_blank" rel="noopener noreferrer" className="text-amber-800 hover:underline font-medium">schahrsad-shahmirzadi.com</a>
               </p>
             </div>
 
@@ -82,8 +94,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <h3 className="text-base font-serif font-bold text-stone-900 mb-2">
                 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV / § 18 Abs. 2 MStV
               </h3>
-              <p>Schahrsad Shahmirzadi c/o Sammy Richter</p>
-              <p>Krummestr. 26, 10627 Berlin</p>
+              <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi (SchirZan)</p>
+              <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
             </div>
 
             <hr className="border-stone-200 my-4" />
@@ -143,11 +155,16 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                   ? '2. Data Controller'
                   : '2. Verantwortliche Stelle'}
               </h3>
-              <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi</p>
-              <p className="text-stone-600 text-xs sm:text-sm">c/o Sammy Richter, Krummestr. 26, 10627 Berlin, Deutschland / Germany</p>
-              <p className="text-stone-600 text-xs sm:text-sm mt-1">
-                E-Mail: <a href="mailto:contact@schahrsad-shahmirzadi.com" className="text-amber-800 hover:underline font-medium">contact@schahrsad-shahmirzadi.com</a>
-              </p>
+              <div className="space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div>
+                  <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi (SchirZan)</p>
+                  <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
+                </div>
+                <div>
+                  <p className="font-semibold text-stone-900">Emanuel Jurgait (Website &amp; Technische Betreuung)</p>
+                  <p>E-Mail: <a href="mailto:info@re-mint.online" className="text-amber-800 hover:underline font-medium">info@re-mint.online</a></p>
+                </div>
+              </div>
             </div>
 
             <div>
