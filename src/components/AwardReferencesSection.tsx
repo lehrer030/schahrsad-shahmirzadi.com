@@ -297,6 +297,11 @@ export const getHonorBadgeInfo = (type: string, lang: Language) => {
         label: lang === 'fa' ? 'جایزه دوم' : lang === 'en' ? '2nd Prize / Silver' : '2. Platz · Silber',
         className: 'bg-amber-700/95 text-white border-amber-300'
       };
+    case 'third':
+      return {
+        label: lang === 'fa' ? 'مقام سوم · برنز' : lang === 'en' ? '3rd Prize / Bronze' : '3. Platz · Bronze',
+        className: 'bg-amber-800/95 text-white border-amber-300'
+      };
     case 'hm':
       return {
         label: lang === 'fa' ? 'تقدیر ویژه' : lang === 'en' ? 'Honorable Mention' : 'Lobende Erwähnung',
@@ -332,7 +337,7 @@ interface CompetitionItem {
   badgeImage?: string;
   mainDirectoryUrl?: string;
   honors: {
-    type: 'winner' | 'second' | 'shortlist' | 'hm' | 'selection' | 'editor' | 'nominee';
+    type: 'winner' | 'second' | 'third' | 'shortlist' | 'hm' | 'selection' | 'editor' | 'nominee';
     labelDe: string;
     labelEn: string;
     labelFa: string;
@@ -661,7 +666,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     mainDirectoryUrl: 'https://globallensawards.com/winners-gallery/2026/architecture-photography/',
     honors: [
       {
-        type: 'winner',
+        type: 'third',
         labelDe: '3. Platz · Architecture Photography: Abstract (Third Place)',
         labelEn: '3rd Place · Architecture Photography: Abstract',
         labelFa: 'مقام سوم · عکاسی معماری: انتزاعی (Third Place)',
@@ -1135,7 +1140,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
             {/* Honors & Awarded Works Breakdown */}
             <div className="space-y-6">
               {comp.honors.map((honorGroup, hIdx) => {
-                const isTopHonor = honorGroup.type === 'winner' || honorGroup.type === 'second';
+                const isTopHonor = honorGroup.type === 'winner' || honorGroup.type === 'second' || honorGroup.type === 'third';
 
                 return (
                   <div

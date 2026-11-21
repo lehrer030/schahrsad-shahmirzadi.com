@@ -383,7 +383,84 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             </span>
           </div>
 
-          <div className="border border-stone-200 rounded-2xl overflow-hidden shadow-2xs bg-white">
+          {/* Mobile View: Clean card layout without horizontal scrolling */}
+          <div className="block md:hidden space-y-3.5">
+            {ACADEMIC_MILESTONES.map((row, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3"
+              >
+                {/* Header: Period & Milestone index */}
+                <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+                  <span className="px-2.5 py-0.5 rounded-md font-mono font-bold text-xs bg-amber-100 text-amber-900 border border-amber-300/70">
+                    {row.period}
+                  </span>
+                  <span className="font-mono text-[11px] text-stone-500 font-semibold">
+                    0{idx + 1} / 05
+                  </span>
+                </div>
+
+                {/* Field of study / Ausbildung */}
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block mb-0.5 font-bold">
+                    {currentLang === 'de'
+                      ? 'Studiengang / Ausbildung'
+                      : currentLang === 'fa'
+                        ? 'رشته / دوره آموزشی'
+                        : 'Field of Study / Training'}
+                  </span>
+                  <h5 className="font-serif font-bold text-base text-stone-900 leading-snug">
+                    {currentLang === 'de'
+                      ? row.fieldDe
+                      : currentLang === 'fa'
+                        ? row.fieldFa
+                        : row.fieldEn}
+                  </h5>
+                </div>
+
+                {/* Institution */}
+                <div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider text-stone-500 block mb-0.5 font-bold">
+                    {currentLang === 'de'
+                      ? 'Einrichtung / Institution'
+                      : currentLang === 'fa'
+                        ? 'موسسه / دانشگاه'
+                        : 'Institution'}
+                  </span>
+                  <p className="text-xs text-stone-700 font-medium">
+                    {currentLang === 'de'
+                      ? row.institutionDe
+                      : currentLang === 'fa'
+                        ? row.institutionFa
+                        : row.institutionEn}
+                  </p>
+                </div>
+
+                {/* Degree / Status */}
+                <div className="pt-1">
+                  <div className="p-2.5 rounded-xl bg-[#faf8f5] border border-stone-200/70">
+                    <span className="text-[10px] font-mono uppercase tracking-wider text-amber-900/90 block mb-1 font-bold">
+                      {currentLang === 'de'
+                        ? 'Abschluss / Stand'
+                        : currentLang === 'fa'
+                          ? 'مدرک / وضعیت تحصیلی'
+                          : 'Degree / Status'}
+                    </span>
+                    <p className="text-xs text-stone-800 leading-relaxed">
+                      {currentLang === 'de'
+                        ? row.degreeDe
+                        : currentLang === 'fa'
+                          ? row.degreeFa
+                          : row.degreeEn}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop & Tablet View: Semantic Full Table */}
+          <div className="hidden md:block border border-stone-200 rounded-2xl overflow-hidden shadow-2xs bg-white">
             <div className="overflow-x-auto">
               <table className="w-full text-left rtl:text-right border-collapse text-xs sm:text-sm">
                 <thead>
@@ -543,17 +620,19 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
 
         {/* Cohesive Main Feature: Personal Sporting Projects (Running) & ECCHR Spendenlauf */}
         <div id="spendenlauf-ecchr" className="p-6 sm:p-8 rounded-3xl bg-[#faf8f5] border border-stone-200/90 space-y-6">
-          <div className="border-b border-stone-200/80 pb-4 flex flex-wrap items-center justify-between gap-3">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-red-100 text-red-700 border border-red-200">
-                  {currentLang === 'fa' ? 'پروژه‌های ورزشی و مسابقات خیریه' : 'Personal Sporting Projects (Running)'}
+          <div className="border-b border-stone-200/80 pb-4 flex flex-wrap items-center justify-between gap-4">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-red-100 text-red-700 border border-red-200 shrink-0 whitespace-nowrap">
+                  {currentLang === 'fa' ? 'پروژه‌های ورزشی و مسابقات خیریه' : currentLang === 'de' ? 'Sportprojekte & Spendenlauf' : 'Personal Sporting Projects (Running)'}
                 </span>
-                <span className="text-xs font-mono text-stone-500">ECCHR Spendenlauf</span>
+                <span className="text-xs font-mono text-stone-500 whitespace-nowrap">ECCHR Spendenlauf</span>
               </div>
               <h4 className="text-xl sm:text-2xl font-serif font-bold text-stone-900">
                 {currentLang === 'fa'
                   ? 'نیمه‌ماراتن برلین ۲۰۲۷ – دویدن برای حقوق بشر'
+                  : currentLang === 'de'
+                  ? 'Berliner Halbmarathon 2027 – Spendenlauf für Menschenrechte'
                   : 'Berlin Half Marathon 2027 – Support the Fundraising Run'}
               </h4>
             </div>
@@ -562,10 +641,10 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
               href="https://www.ecchr.eu/jetzt-online-spenden/aktion/?tw_e=4C2D8&etitel=schirzan-running-for-human-rights"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold transition-colors shadow-2xs cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 text-white text-xs font-semibold transition-colors shadow-2xs cursor-pointer shrink-0 whitespace-nowrap"
             >
-              <span>{currentLang === 'fa' ? 'حمایت از کمپین آنلاین ECCHR' : currentLang === 'de' ? 'Spendenlauf unterstützen →' : 'Support the fundraising run →'}</span>
-              <ExternalLink className="w-3.5 h-3.5" />
+              <span>{currentLang === 'fa' ? 'حمایت از کمپین آنلاین ECCHR' : currentLang === 'de' ? 'Spendenlauf unterstützen' : 'Support the fundraising run'}</span>
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             </a>
           </div>
 
