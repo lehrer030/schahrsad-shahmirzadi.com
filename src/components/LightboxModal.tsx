@@ -139,10 +139,10 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
     >
       {/* Top Left: Counter & Collection Tag */}
       <div
-        className="absolute top-3 left-3 sm:top-5 sm:left-5 z-70 flex items-center gap-2 pointer-events-auto"
+        className="absolute top-2 left-2 sm:top-5 sm:left-5 z-70 flex items-center gap-2 pointer-events-auto"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center gap-2 bg-stone-950/80 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-stone-800 text-xs font-mono text-white/90 shadow-xl">
+        <div className="flex items-center gap-2 bg-stone-950/80 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-stone-800 text-[11px] sm:text-xs font-mono text-white/90 shadow-xl">
           <span className="font-bold text-amber-400">{currentIndex + 1}</span>
           <span className="text-stone-500">/</span>
           <span>{photos.length}</span>
@@ -151,16 +151,16 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         </div>
       </div>
 
-      {/* Top Right: Fullscreen, Zoom, Info, Close Controls */}
+      {/* Top Right: Fullscreen, Zoom, Close Controls */}
       <div
-        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-70 flex items-center gap-1.5 sm:gap-2 pointer-events-auto"
+        className="absolute top-2 right-2 sm:top-5 sm:right-5 z-70 flex items-center gap-1.5 sm:gap-2 pointer-events-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Toggle Zoom (1x vs 2x) */}
         <button
           type="button"
           onClick={() => setIsZoomed((prev) => !prev)}
-          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
+          className="p-1.5 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
           title={isZoomed ? 'Zoom zurücksetzen (Z)' : 'Details heranzoomen (Z)'}
           aria-label="Zoom"
         >
@@ -171,7 +171,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         <button
           type="button"
           onClick={toggleFullscreen}
-          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg hidden sm:flex"
+          className="p-1.5 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg hidden sm:flex"
           title={isFullscreen ? 'Vollbild beenden (F)' : 'Vollbildmodus (F)'}
           aria-label="Vollbild"
         >
@@ -182,7 +182,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         <button
           type="button"
           onClick={onClose}
-          className="p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
+          className="p-1.5 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 text-stone-200 hover:text-white rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg"
           title="Schließen (Esc)"
           aria-label="Schließen"
         >
@@ -207,7 +207,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
       {/* Central Viewport - Maximal groß was die Auflösung des Endgerätes hergibt */}
       <div
-        className={`relative w-full h-full flex items-center justify-center p-1 sm:p-2 ${
+        className={`relative w-full h-[100dvh] max-h-[100dvh] flex items-center justify-center p-0 sm:p-2 ${
           isZoomed ? 'overflow-auto cursor-zoom-out' : 'overflow-hidden cursor-zoom-in'
         }`}
         onClick={(e) => {
@@ -215,12 +215,12 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           setIsZoomed((prev) => !prev);
         }}
       >
-        <div className="relative flex items-center justify-center max-w-full max-h-full">
+        <div className="relative inline-flex items-center justify-center max-w-full max-h-full">
           <img
             src={resolveAsset(currentPhoto.src)}
             alt={currentPhoto.alt}
             draggable={false}
-            className={`max-w-[99vw] max-h-[96vh] sm:max-w-[98vw] sm:max-h-[96vh] w-auto h-auto object-contain select-none protected-art transition-transform duration-300 ease-out ${
+            className={`max-w-[100vw] max-h-[100dvh] sm:max-w-[98vw] sm:max-h-[96dvh] w-auto h-auto object-contain select-none protected-art transition-transform duration-300 ease-out ${
               isZoomed ? 'scale-[1.8] sm:scale-[2.0]' : 'scale-100 shadow-2xl'
             }`}
             onError={(e) => {
@@ -237,9 +237,9 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
             onContextMenu={(e) => e.preventDefault()}
           />
 
-          {/* Protective Watermark - direkt unten auf dem Bild wie vorher */}
-          <div className="absolute bottom-3 right-4 z-20 flex items-center gap-1.5 text-xs text-white/90 font-serif bg-stone-950/70 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-md pointer-events-none select-none">
-            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+          {/* Protective Watermark - direkt unten rechts auf dem Bild */}
+          <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-4 z-20 flex items-center gap-1 text-[10px] sm:text-xs text-white/90 font-serif bg-stone-950/75 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md backdrop-blur-xs shadow-md pointer-events-none select-none">
+            <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400" />
             <span>SchirZan | Schahrsad Shahmirzadi</span>
           </div>
         </div>
