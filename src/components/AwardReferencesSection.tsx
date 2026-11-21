@@ -513,7 +513,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
             title: 'The Solitaire as an Abstraction (Revised)',
             category: 'Exterior Architecture Photography – Other Exterior (Student)',
             categoryFa: 'عکاسی معماری خارجی – سازه‌های بیرونی',
-            badge: '/images/email_badges/amp_2026_winner.png',
+            badge: '/images/2026_10_winners_badge-AMP-2026-768x355.webp',
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=10332'
           }
         ]
@@ -827,7 +827,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
           {
             title: 'The Solitaire as an Abstraction',
             category: 'Exterior Architecture Photography',
-            badge: '/images/email_badges/amp_2025_winner.png',
+            badge: '/images/2026_01_winners_badge-AMP-2025-768x355.webp',
             zoomUrl: 'https://architectureprize.com/winners/winner.php?id=8533'
           }
         ]

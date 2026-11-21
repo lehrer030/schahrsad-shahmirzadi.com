@@ -9,7 +9,7 @@ export interface AwardBadge {
   awardFa?: string;
   badgeImage: string;
   link: string;
-  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'inline';
+  position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right' | 'inline';
 }
 
 export interface PhotoItem {
@@ -250,6 +250,16 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       position: 'top-left'
     },
     {
+      id: 'amp-2025-winner',
+      name: 'Architecture MasterPrize 2025',
+      year: '2025',
+      award: 'Student Photography Winner (Other Exterior)',
+      awardFa: 'برنده جایزه عکاسی دانشجویی (معماری بیرونی)',
+      badgeImage: '/images/2026_01_winners_badge-AMP-2025-768x355.webp',
+      link: 'https://architectureprize.com/winners/winner.php?id=8533',
+      position: 'top-right'
+    },
+    {
       id: 'perspa-2026-hm',
       name: 'Prix de la Perspective Architecturale 2026',
       year: '2026',
@@ -267,7 +277,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       awardFa: 'تقدیر ویژه ۲۰۲۶',
       badgeImage: '/images/badges_custom/bifa_2026_hm.png',
       link: 'https://budapestfotoawards.com/',
-      position: 'top-right'
+      position: 'bottom-center'
     },
     {
       id: 'ipa-2026-hm',
@@ -363,9 +373,9 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       year: '2026',
       award: 'Student Photography Winner 2026',
       awardFa: 'برنده جایزه عکاسی دانشجویی ۲۰۲۶',
-      badgeImage: '/images/email_badges/amp_2026_winner.png',
+      badgeImage: '/images/2026_10_winners_badge-AMP-2026-768x355.webp',
       link: 'https://architectureprize.com/',
-      position: 'top-left'
+      position: 'top-right'
     },
     {
       id: 'perspa-2026-2nd',
@@ -1674,8 +1684,8 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         name: 'Architecture MasterPrize 2025',
         award: 'Student Photography Winner (Other Exterior)',
         year: '2025',
-        badgeImage: '/images/docx_badges/amp_2025_hm_orange.png',
-        position: 'top-left',
+        badgeImage: '/images/2026_01_winners_badge-AMP-2025-768x355.webp',
+        position: 'top-right',
         link: 'https://architectureprize.com/winners/winner.php?id=8533'
       },
       {

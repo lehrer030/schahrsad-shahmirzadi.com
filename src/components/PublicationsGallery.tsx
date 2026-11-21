@@ -584,14 +584,14 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
   return (
     <div className="space-y-12">
       {/* =========================================================================
-          1. EDITOR'S CHOICE: GLOBAL LENS PHOTOGRAPHY AWARDS (GL) 2026
+          1. 3RD PLACE: GLOBAL LENS PHOTOGRAPHY AWARDS (GL) 2026
          ========================================================================= */}
       <div className="p-6 sm:p-8 rounded-3xl bg-[#faf8f5] border border-stone-200/90 space-y-6">
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200/80 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-amber-100 text-amber-900 border border-amber-200">
-                Editor’s Choice
+                3. Platz · Architecture: Abstract
               </span>
               <span className="text-xs font-mono text-stone-500">2026</span>
             </div>
@@ -602,12 +602,12 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
           <div className="flex flex-wrap items-center gap-2">
             <a
-              href="https://globallensawards.com/editor-choice/"
+              href="https://globallensawards.com/winners-gallery/2026/architecture-photography/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-stone-100 text-stone-800 text-xs font-medium border border-stone-300 transition-colors shadow-2xs"
             >
-              <span>{isFa ? 'فهرست برگزیدگان سردبیر' : isDe ? 'Übersicht Editor’s Choice' : 'Editor’s Choice Overview'}</span>
+              <span>{isFa ? 'گالری برندگان معماری' : isDe ? 'Übersicht Gewinner-Galerie' : 'Winners Gallery Architecture'}</span>
               <ExternalLink className="w-3.5 h-3.5 text-stone-500" />
             </a>
             <a
@@ -624,10 +624,10 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
 
         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed max-w-3xl">
           {isDe
-            ? 'Kuratierte Auszeichnung »Editor’s Choice« bei den Global Lens Photography Awards 2026 für das architektonische Hauptwerk »The Solitaire as Abstraction – In Harmony with Nature«.'
+            ? 'Internationale Prämierung mit dem 3. Platz (Third Place) in der Kategorie Architecture Photography (Abstract) bei den Global Lens Photography Awards 2026 für das architektonische Hauptwerk »The Solitaire as Abstraction – In Harmony with Nature«.'
             : isFa
-            ? 'تقدیر ویژه «انتخاب سردبیر» در جوایز جهانی عکس گلوبال لنز ۲۰۲۶ برای اثر معماری شاخص «تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت».'
-            : 'Curated "Editor’s Choice" distinction at the Global Lens Photography Awards 2026 for the architectural work "The Solitaire as Abstraction – In Harmony with Nature".'}
+            ? 'مقام سوم بین‌المللی در بخش عکاسی معماری انتزاعی در جوایز جهانی عکس گلوبال لنز ۲۰۲۶ برای اثر معماری شاخص «تک‌بنا به عنوان یک انتزاع – در هماهنگی با طبیعت».'
+            : 'Awarded 3rd Place (Third Place) in Architecture Photography (Abstract) at the Global Lens Photography Awards 2026 for the architectural work "The Solitaire as Abstraction – In Harmony with Nature".'}
         </p>
 
         {/* 3 Images Grid */}
@@ -693,23 +693,23 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
                   : '"The Solitaire as Abstraction – In Harmony with Nature"'}
               </p>
               <span className="text-[11px] font-mono text-stone-500">
-                {isDe ? 'Editor’s Choice Prämierung' : isFa ? 'برگزیده ویژه سردبیر' : 'Editor’s Choice Selection'}
+                {isDe ? '3. Platz Prämierung (Bronze)' : isFa ? 'مقام سوم (برنز)' : '3rd Place Award'}
               </span>
             </div>
           </div>
 
-          {/* Image 3: Detail / Certification */}
+          {/* Image 3: Official 3rd Place Badge / Certification */}
           <div className="group flex flex-col bg-white border border-amber-200/80 ring-1 ring-amber-100 rounded-2xl overflow-hidden shadow-2xs hover:border-amber-400 hover:shadow-md transition-all">
             <a
               href="https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block overflow-hidden bg-stone-50 aspect-3/4 sm:aspect-2/3 relative p-2 sm:p-3"
+              className="block overflow-hidden bg-stone-50 aspect-3/4 sm:aspect-2/3 relative p-4 flex items-center justify-center"
             >
               <img
-                src={resolveAsset('/images/2026_10_image00013-875x1024.webp')}
-                alt="Global Lens Awards 2026 - Detail & Winner Verification"
-                className="w-full h-full object-contain group-hover:scale-102 transition-transform duration-300 drop-shadow-xs"
+                src={resolveAsset('/images/badges_custom/globallens_2026_3rd_place.png')}
+                alt="Global Lens Photography Awards 2026 - Third Place Badge"
+                className="max-h-[85%] max-w-[85%] object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-stone-900/0 group-hover:bg-stone-900/5 transition-colors pointer-events-none" />
@@ -717,13 +717,13 @@ export const PublicationsGallery: React.FC<PublicationsGalleryProps> = ({ curren
             <div className="p-4 flex-1 flex flex-col justify-between space-y-2 border-t border-amber-100/70 bg-linear-to-b from-amber-50/20 to-white">
               <p className="text-xs text-stone-800 font-medium leading-snug">
                 {isDe
-                  ? 'Offizielles Zertifikat & Werkbestätigung Global Lens 2026'
+                  ? 'Offizielles Winner-Badge Global Lens Awards 2026 (3rd Place)'
                   : isFa
-                  ? 'گواهی رسمی و تاییدیه اثر در جوایز گلوبال لنز ۲۰۲۶'
-                  : 'Official Certificate & Work Verification Global Lens 2026'}
+                  ? 'نشان رسمی مقام سوم در جوایز گلوبال لنز ۲۰۲۶'
+                  : 'Official 3rd Place Winner Badge · Global Lens Awards 2026'}
               </p>
               <span className="text-[11px] font-mono text-amber-900/70">
-                {isDe ? 'Internationale Fachjury · Zertifikat' : isFa ? 'هیئت داوران بین‌المللی · گواهینامه رسمی' : 'International Jury · Certificate'}
+                {isDe ? 'Architecture Photography: Abstract' : isFa ? 'عکاسی معماری: انتزاعی' : 'Architecture Photography: Abstract'}
               </span>
             </div>
           </div>

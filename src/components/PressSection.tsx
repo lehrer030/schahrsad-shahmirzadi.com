@@ -166,8 +166,8 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
           fullTitleDe="Publikationen – Photography, Editor's Choice, Videos & E-Books"
           fullTitleEn="Publications – Photography, Editor's Choice, Videos & E-Books"
           fullTitleFa="نشریات – عکاسی، انتخاب‌های ویژه سردبیر، ویدیوها و کتاب‌ها"
-          descDe="Offizielle Druckausgaben mit Hardcover ISBN, kuratierte Editor’s Choice Galerien (Global Lens & PERSPA), Spider Awards Preisträgerfilme und internationale Gewinner-Jahrbücher mit Beitexten."
-          descEn="Official print editions with hardcover ISBN, curated Editor’s Choice galleries (Global Lens & PERSPA), Spider Awards winning films, and international annual compendiums."
+          descDe="Offizielle Druckausgaben mit Hardcover ISBN, kuratierte Preisträger-Galerien (Global Lens 3. Platz & PERSPA Editor’s Choice), Spider Awards Preisträgerfilme und internationale Gewinner-Jahrbücher mit Beitexten."
+          descEn="Official print editions with hardcover ISBN, curated winners galleries (Global Lens 3rd Place & PERSPA Editor’s Choice), Spider Awards winning films, and international annual compendiums."
           descFa="انتشارات رسمی چاپی با شابک، گالری‌های برگزیده سردبیر، فیلم‌های مستند جوایز اسپایدر و کتاب‌های سالانه رسمی."
           currentLang={currentLang}
         />

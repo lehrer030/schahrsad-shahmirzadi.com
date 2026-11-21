@@ -34,11 +34,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
     };
   }, [onBack]);
 
-  // Badges for Image 1 (strictly AMP top-left, IPA bottom-right)
+  // Badges for Image 1:
+  // AMP strictly top-right (höchste Auszeichnung in Blau), GL strictly top-left if present
   const badges = series.badges || [];
-  const ampBadge = badges.find(b => b.position === 'top-left' || b.name.includes('AMP'));
+  const ampBadge = badges.find(b => b.name.includes('AMP') || b.id.includes('amp') || b.position === 'top-right');
+  const glBadge = badges.find(b => b.name.includes('Global Lens') || b.id.includes('globallens') || (b.position === 'top-left' && b !== ampBadge));
   const ipaBadge = badges.find(b => b.position === 'bottom-right' || b.name.includes('IPA'));
-  const otherBadges = badges.filter(b => b !== ampBadge && b !== ipaBadge);
+  const otherBadges = badges.filter(b => b !== ampBadge && b !== glBadge && b !== ipaBadge);
   const perspaBadge = otherBadges.find(b => b.name.includes('Perspective') || b.id.includes('perspa')) || otherBadges[0] || null;
   const bifaBadge = otherBadges.find(b => b !== perspaBadge) || null;
 
@@ -189,10 +191,13 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 </span>
               </div>
 
-              {/* TOP ROW: AMP ALWAYS TOP-LEFT (OUTSIDE OF IMAGE) */}
-              {ampBadge && (
-                <div className="w-full flex justify-start mb-2">
-                  <div className="w-28 sm:w-36">
+              {/* TOP ROW: Global Lens (top-left) & AMP (strictly top-right in blau: höchste Auszeichnung) */}
+              {(ampBadge || glBadge) && (
+                <div className="w-full flex items-center justify-between mb-2 gap-2">
+                  <div className="w-28 sm:w-36 flex justify-start">
+                    {renderBadgeItem(glBadge)}
+                  </div>
+                  <div className="w-28 sm:w-36 flex justify-end">
                     {renderBadgeItem(ampBadge)}
                   </div>
                 </div>
