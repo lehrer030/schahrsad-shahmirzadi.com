@@ -106,14 +106,14 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 rel="noopener noreferrer"
                 title={`${b.name}: ${b.award}`}
                 onClick={(e) => e.stopPropagation()}
-                className="group/badge flex flex-col items-center justify-center p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-amber-700/60 rounded-lg transition-all w-full h-13 sm:h-14 cursor-pointer shadow-2xs hover:shadow-xs"
+                className="group/badge flex flex-col items-center justify-center py-2 px-2.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-amber-700/60 rounded-lg transition-all w-full min-h-[64px] sm:min-h-[70px] h-auto cursor-pointer shadow-2xs hover:shadow-xs"
               >
                 <img
                   src={resolveAsset(b.badgeImage)}
                   alt={b.name}
-                  className="max-h-7 max-w-full object-contain group-hover/badge:brightness-105 transition-all"
+                  className="h-8 max-h-8 sm:h-9 sm:max-h-9 max-w-full object-contain shrink-0 group-hover/badge:brightness-105 transition-all"
                 />
-                <span className="text-[9.5px] text-stone-500 group-hover/badge:text-stone-800 font-sans font-medium mt-0.5 truncate max-w-full text-center">
+                <span className="text-[10px] sm:text-[10.5px] text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium mt-1 truncate max-w-full text-center leading-tight">
                   {b.name}
                 </span>
               </a>

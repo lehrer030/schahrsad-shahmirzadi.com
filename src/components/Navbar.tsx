@@ -502,13 +502,37 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
         </div>
 
-        {/* Row 2 on Mobile: Utility Bar mit Sprachumschalter & Schnellkontakt */}
+        {/* Row 2 on Mobile: Sticky Section Badge (Zahl + Überschrift beim Scrollen) & Schnelltools */}
         <div
           id="mobile-utility-bar"
-          className="lg:hidden w-full bg-[#f4efe8]/95 border-t border-stone-200/80 px-3 sm:px-6 py-1 flex items-center justify-between gap-2"
+          className="lg:hidden w-full bg-[#f4efe8]/95 border-t border-stone-200/80 px-3 sm:px-6 py-1 flex items-center justify-between gap-2 min-h-[38px]"
         >
+          {/* Oben links beim Scrollen: Rechteck mit der Zahl und der Überschrift des aktuellen Bereichs */}
+          {activeMenuId !== 'home' && (() => {
+            const activeItem = ORIGINAL_11_MENU_ITEMS.find((item: OriginalMenuItem) => item.id === activeMenuId);
+            if (!activeItem) return null;
+            return (
+              <button
+                type="button"
+                onClick={() => {
+                  const el = document.getElementById(activeItem.targetId);
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-stone-900 hover:bg-stone-800 text-white rounded text-[10.5px] font-mono font-bold tracking-wider uppercase shadow-xs max-w-[210px] sm:max-w-[270px] truncate cursor-pointer transition-colors shrink-0"
+                title={currentLang === 'de' ? activeItem.labelDe : currentLang === 'fa' ? activeItem.labelFa : activeItem.labelEn}
+              >
+                <span className="px-1.5 py-0.5 rounded bg-amber-500 text-stone-950 font-black text-[9.5px] shrink-0">
+                  {activeItem.num}
+                </span>
+                <span className="truncate">
+                  {currentLang === 'de' ? activeItem.shortDe : currentLang === 'fa' ? activeItem.shortFa : activeItem.shortEn}
+                </span>
+              </button>
+            );
+          })()}
+
           {/* Trilingual Switcher (DE / EN / FA) */}
-          <div className="flex items-center bg-white border border-stone-200/90 p-0.5 rounded text-xs shadow-2xs">
+          <div className="flex items-center bg-white border border-stone-200/90 p-0.5 rounded text-xs shadow-2xs shrink-0">
             <Globe className="w-3 h-3 text-stone-400 ml-1 mr-1 shrink-0" />
             <button
               type="button"
@@ -548,15 +572,17 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
           </div>
 
-          {/* Quick Contact Button */}
-          <button
-            type="button"
-            onClick={onOpenContact}
-            className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 hover:bg-stone-800 text-white text-[11px] font-medium tracking-wide transition-all cursor-pointer shadow-2xs"
-          >
-            <Mail className="w-3 h-3" />
-            <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
-          </button>
+          {/* Quick Contact Button (nur im Intro/Home sichtbar, wenn noch keine Sektion aktiv ist) */}
+          {activeMenuId === 'home' && (
+            <button
+              type="button"
+              onClick={onOpenContact}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-stone-900 hover:bg-stone-800 text-white text-[11px] font-medium tracking-wide transition-all cursor-pointer shadow-2xs shrink-0"
+            >
+              <Mail className="w-3 h-3" />
+              <span>{currentLang === 'de' ? 'Kontakt' : currentLang === 'fa' ? 'تماس' : 'Contact'}</span>
+            </button>
+          )}
         </div>
 
         {/* Row 2: 10 Topics Navigation Bar - Desktop & Large Screens (lg:block) */}

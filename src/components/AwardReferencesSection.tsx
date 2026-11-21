@@ -150,11 +150,6 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
     '/images/wetransfer/hephaestus_legacy_04.webp',
     '/images/wetransfer/hephaestus_legacy_05.webp'
   ],
-  'Mirrored': [
-    '/images/wetransfer/mirrored_01.webp',
-    '/images/wetransfer/mirrored_02.webp',
-    '/images/wetransfer/mirrored_03.webp'
-  ],
   'Symmetric Networks': [
     '/images/wetransfer/symmetric_networks_01.webp',
     '/images/wetransfer/symmetric_networks_02.webp',
@@ -169,9 +164,7 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
   'Dimensions of Sustainability': [
     '/images/wetransfer/dimensions_sustainability_01.webp',
     '/images/wetransfer/dimensions_sustainability_02.webp',
-    '/images/wetransfer/dimensions_sustainability_03.webp',
-    '/images/wetransfer/dimensions_sustainability_04.webp',
-    '/images/wetransfer/dimensions_sustainability_05.webp'
+    '/images/wetransfer/dimensions_sustainability_03.webp'
   ],
   'Fragments of Memory – Fragments of Time': [
     '/images/wetransfer/fragments_of_memory_01.webp',
@@ -190,7 +183,7 @@ export const getAwardWorkSeriesPhotos = (title: string): string[] | undefined =>
   const cleanTitle = title.trim().toLowerCase().replace(/[’‘`´]/g, "'");
   for (const [k, v] of Object.entries(AWARD_WORK_SERIES_PHOTOS_MAP)) {
     const cleanKey = k.toLowerCase().replace(/[’‘`´]/g, "'");
-    if (cleanKey === cleanTitle || cleanTitle.includes(cleanKey) || cleanKey.includes(cleanTitle)) {
+    if (cleanKey === cleanTitle) {
       return v;
     }
   }
@@ -1338,6 +1331,9 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                             alt={`${workTitle} ${pIdx + 1}`}
                                             className="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-300 select-none protected-art"
                                             loading="lazy"
+                                            onError={(e) => {
+                                              (e.currentTarget.parentElement as HTMLElement)?.style.setProperty('display', 'none');
+                                            }}
                                           />
                                         </button>
                                       ))}

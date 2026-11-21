@@ -40,17 +40,17 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         target="_blank"
         rel="noopener noreferrer"
         title={titleHint}
-        className="group/badge flex flex-col items-center justify-center w-full h-14 sm:h-16 p-1.5 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded-lg shadow-2xs transition-all duration-200 cursor-pointer"
+        className="group/badge flex flex-col items-center justify-center w-full min-h-[64px] sm:min-h-[70px] h-auto py-2 px-2 bg-white hover:bg-stone-50 border border-stone-200 hover:border-stone-400 rounded-lg shadow-2xs transition-all duration-200 cursor-pointer"
         onClick={(e) => e.stopPropagation()}
       >
         <img
           src={`${resolveAsset(badge.badgeImage)}?v=2`}
           alt={badge.name}
-          className="max-h-8 sm:max-h-9 max-w-full object-contain filter group-hover/badge:brightness-105"
+          className="h-8 max-h-8 sm:h-9 sm:max-h-9 max-w-full object-contain shrink-0 filter group-hover/badge:brightness-105"
         />
-        <span className="text-[10px] text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium tracking-tight truncate w-full text-center mt-0.5 flex items-center justify-center gap-1">
+        <span className="text-[10px] sm:text-[10.5px] text-stone-600 group-hover/badge:text-stone-900 font-sans font-medium tracking-tight truncate w-full text-center mt-1 flex items-center justify-center gap-1 leading-tight">
           <span>{badge.year}</span>
-          <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100" />
+          <ExternalLink className="w-2.5 h-2.5 opacity-60 group-hover/badge:opacity-100 shrink-0" />
         </span>
       </a>
     );
