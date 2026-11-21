@@ -9,8 +9,7 @@ import {
   Maximize2,
   Minimize2,
   ZoomIn,
-  ZoomOut,
-  Info
+  ZoomOut
 } from 'lucide-react';
 import type { PhotoItem, Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
@@ -34,7 +33,6 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 }) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [showCaption, setShowCaption] = useState(true);
 
   // Touch swipe handling for mobile devices
   const touchStartX = useRef<number | null>(null);
@@ -83,8 +81,6 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         toggleFullscreen();
       } else if (e.key === 'z' || e.key === 'Z') {
         setIsZoomed((prev) => !prev);
-      } else if (e.key === 'i' || e.key === 'I') {
-        setShowCaption((prev) => !prev);
       }
     };
 
@@ -182,19 +178,6 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           {isFullscreen ? <Minimize2 className="w-4 h-4 sm:w-4.5 sm:h-4.5" /> : <Maximize2 className="w-4 h-4 sm:w-4.5 sm:h-4.5" />}
         </button>
 
-        {/* Toggle Caption visibility */}
-        <button
-          type="button"
-          onClick={() => setShowCaption((prev) => !prev)}
-          className={`p-2 sm:p-2.5 bg-stone-950/80 hover:bg-stone-800 rounded-full border border-stone-800 backdrop-blur-md transition-colors cursor-pointer shadow-lg ${
-            showCaption ? 'text-amber-400' : 'text-stone-400 hover:text-white'
-          }`}
-          title={showCaption ? 'Bildunterschrift ausblenden (I)' : 'Bildunterschrift einblenden (I)'}
-          aria-label="Informationen"
-        >
-          <Info className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-        </button>
-
         {/* Close Button */}
         <button
           type="button"
@@ -253,6 +236,12 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
             className="absolute inset-0 z-10 select-none cursor-inherit"
             onContextMenu={(e) => e.preventDefault()}
           />
+
+          {/* Protective Watermark - direkt unten auf dem Bild wie vorher */}
+          <div className="absolute bottom-3 right-4 z-20 flex items-center gap-1.5 text-xs text-white/90 font-serif bg-stone-950/70 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-md pointer-events-none select-none">
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span>SchirZan | Schahrsad Shahmirzadi</span>
+          </div>
         </div>
       </div>
 
@@ -271,62 +260,26 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
         </button>
       )}
 
-      {/* Floating Bottom Caption Overlay - Schlank, dezent & maximal bildschonend */}
-      {showCaption && (
-        <div
-          className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-70 max-w-[94vw] sm:max-w-2xl w-full px-4 sm:px-6 py-2.5 sm:py-3 bg-stone-950/85 backdrop-blur-md rounded-2xl border border-stone-800/90 text-center text-white shadow-2xl pointer-events-auto transition-all"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Work Title & Watermark */}
-          <div className="flex items-center justify-between gap-3 border-b border-stone-800/70 pb-1.5 mb-1.5">
-            <h4 className="text-xs sm:text-sm font-serif font-bold text-amber-200/95 tracking-wide text-left truncate">
-              {currentPhoto.alt || 'SchirZan Photography'}
-            </h4>
-            <div className="flex items-center gap-1 text-[10px] sm:text-xs text-stone-400 font-serif shrink-0">
-              <ShieldCheck className="w-3 h-3 text-amber-400" />
-              <span>SchirZan</span>
-            </div>
-          </div>
-
-          {/* Description / Caption */}
-          {(currentPhoto.captionDe || currentPhoto.captionFa || currentPhoto.captionEn) && (
-            <p className="text-[11px] sm:text-xs text-stone-300 font-sans tracking-wide leading-relaxed font-normal line-clamp-2">
+      {/* Optional External Donation / Fundraising Link */}
+      {currentPhoto.externalLink && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-70 flex justify-center pointer-events-auto">
+          <a
+            href={currentPhoto.externalLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-full text-xs font-semibold transition-colors shadow-lg"
+          >
+            <Heart className="w-3.5 h-3.5 fill-white" />
+            <span>
               {currentLang === 'de'
-                ? currentPhoto.captionDe
+                ? (currentPhoto.externalLinkTextDe || 'Spendenlauf unterstützen →')
                 : currentLang === 'fa'
-                ? currentPhoto.captionFa
-                : currentLang === 'fr'
-                ? (currentPhoto.captionDe || currentPhoto.captionEn)
-                : currentLang === 'it'
-                ? (currentPhoto.captionDe || currentPhoto.captionEn)
-                : currentLang === 'tr'
-                ? (currentPhoto.captionDe || currentPhoto.captionEn)
-                : currentPhoto.captionEn}
-            </p>
-          )}
-
-          {/* Optional External Donation / Fundraising Link */}
-          {currentPhoto.externalLink && (
-            <div className="mt-2 flex justify-center">
-              <a
-                href={currentPhoto.externalLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-600 hover:bg-red-700 text-white rounded text-[11px] sm:text-xs font-semibold transition-colors shadow-md"
-              >
-                <Heart className="w-3 h-3 fill-white" />
-                <span>
-                  {currentLang === 'de'
-                    ? (currentPhoto.externalLinkTextDe || 'Spendenlauf unterstützen →')
-                    : currentLang === 'fa'
-                    ? (currentPhoto.externalLinkTextFa || 'حمایت از کمپین →')
-                    : (currentPhoto.externalLinkTextEn || 'Support the fundraising run →')}
-                </span>
-                <ExternalLink className="w-3 h-3 opacity-90" />
-              </a>
-            </div>
-          )}
+                ? (currentPhoto.externalLinkTextFa || 'حمایت از کمپین →')
+                : (currentPhoto.externalLinkTextEn || 'Support the fundraising run →')}
+            </span>
+            <ExternalLink className="w-3 h-3 opacity-90" />
+          </a>
         </div>
       )}
     </div>
