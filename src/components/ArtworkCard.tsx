@@ -67,6 +67,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               ? series.subtitleDe
               : currentLang === 'fa'
               ? series.subtitleFa
+              : currentLang === 'fr'
+              ? (series.subtitleFr || series.subtitleEn)
+              : currentLang === 'it'
+              ? (series.subtitleIt || series.subtitleEn)
+              : currentLang === 'tr'
+              ? (series.subtitleTr || series.subtitleEn)
               : series.subtitleEn}
           </span>
           <h3 className="text-2xl sm:text-3xl font-serif text-stone-900 mt-1 font-bold">
@@ -74,6 +80,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               ? series.titleDe
               : currentLang === 'fa'
               ? series.titleFa
+              : currentLang === 'fr'
+              ? (series.titleFr || series.titleEn)
+              : currentLang === 'it'
+              ? (series.titleIt || series.titleEn)
+              : currentLang === 'tr'
+              ? (series.titleTr || series.titleEn)
               : series.titleEn}
           </h3>
         </div>
@@ -88,6 +100,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
               ? `${series.photos.length} Werke ansehen`
               : currentLang === 'fa'
               ? `مشاهده ${series.photos.length} اثر`
+              : currentLang === 'fr'
+              ? `Voir ${series.photos.length} œuvres`
+              : currentLang === 'it'
+              ? `Vedi ${series.photos.length} opere`
+              : currentLang === 'tr'
+              ? `${series.photos.length} Eseri İncele`
               : `View ${series.photos.length} Works`}
           </span>
           <ArrowUpRight className="w-4 h-4" />
@@ -133,6 +151,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
                   ? `${series.photos.length} Werke ansehen`
                   : currentLang === 'fa'
                   ? `مشاهده ${series.photos.length} اثر`
+                  : currentLang === 'fr'
+                  ? `Voir ${series.photos.length} œuvres`
+                  : currentLang === 'it'
+                  ? `Vedi ${series.photos.length} opere`
+                  : currentLang === 'tr'
+                  ? `${series.photos.length} Eseri İncele`
                   : `View ${series.photos.length} Works`}
               </span>
 
@@ -180,23 +204,45 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
         <div className="lg:col-span-7 space-y-5 bg-[#faf8f5] border border-stone-200/90 rounded-2xl p-5 sm:p-7">
           <div>
             <span className="text-[11px] font-mono uppercase tracking-widest text-stone-500 font-medium block mb-2">
-              {currentLang === 'de' ? 'Werkbeschreibung' : currentLang === 'fa' ? 'شرح اثر' : 'About the Artwork'}
+              {currentLang === 'de'
+                ? 'Werkbeschreibung'
+                : currentLang === 'fa'
+                ? 'شرح اثر'
+                : currentLang === 'fr'
+                ? 'Description de l’œuvre'
+                : currentLang === 'it'
+                ? 'Descrizione dell’opera'
+                : currentLang === 'tr'
+                ? 'Eser Açıklaması'
+                : 'About the Artwork'}
             </span>
             <p className="text-sm sm:text-base text-stone-800 leading-relaxed font-normal">
               {currentLang === 'de'
                 ? series.descriptionDe
                 : currentLang === 'fa'
                 ? series.descriptionFa
+                : currentLang === 'fr'
+                ? (series.descriptionFr || series.descriptionEn)
+                : currentLang === 'it'
+                ? (series.descriptionIt || series.descriptionEn)
+                : currentLang === 'tr'
+                ? (series.descriptionTr || series.descriptionEn)
                 : series.descriptionEn}
             </p>
           </div>
 
-          {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn) && (
+          {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn || series.personalNoteFr || series.personalNoteIt || series.personalNoteTr) && (
             <div className="p-4 bg-white rounded border border-stone-200 text-xs sm:text-sm text-stone-700 italic font-serif">
               {currentLang === 'de'
                 ? series.personalNoteDe
                 : currentLang === 'fa'
                 ? series.personalNoteFa
+                : currentLang === 'fr'
+                ? (series.personalNoteFr || series.personalNoteEn)
+                : currentLang === 'it'
+                ? (series.personalNoteIt || series.personalNoteEn)
+                : currentLang === 'tr'
+                ? (series.personalNoteTr || series.personalNoteEn)
                 : series.personalNoteEn}
             </div>
           )}
@@ -204,7 +250,17 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
           {/* Key Facts & Registry Links */}
           <div className="pt-2 border-t border-stone-200 space-y-2.5">
             <span className="text-[11px] font-mono uppercase tracking-wider text-stone-500 font-semibold block">
-              {currentLang === 'de' ? 'Internationale Registrierung' : currentLang === 'fa' ? 'ثبت رسمی در مسابقات جهانی' : 'International Registry'}
+              {currentLang === 'de'
+                ? 'Internationale Registrierung'
+                : currentLang === 'fa'
+                ? 'ثبت رسمی در مسابقات جهانی'
+                : currentLang === 'fr'
+                ? 'Enregistrement International'
+                : currentLang === 'it'
+                ? 'Registrazione Internazionale'
+                : currentLang === 'tr'
+                ? 'Uluslararası Tescil'
+                : 'International Registry'}
             </span>
             <div className="flex flex-col gap-2">
               {series.badges.map(b => (
@@ -235,6 +291,12 @@ export const ArtworkCard: React.FC<ArtworkCardProps> = ({
                 ? `${series.photos.length} Werke ansehen`
                 : currentLang === 'fa'
                 ? `مشاهده ${series.photos.length} اثر`
+                : currentLang === 'fr'
+                ? `Voir ${series.photos.length} œuvres`
+                : currentLang === 'it'
+                ? `Vedi ${series.photos.length} opere`
+                : currentLang === 'tr'
+                ? `${series.photos.length} Eseri İncele`
                 : `View ${series.photos.length} Works`}
             </button>
             <button

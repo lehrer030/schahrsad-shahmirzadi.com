@@ -179,6 +179,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
             ? `Photos der Serie (${count}):`
             : currentLang === 'fa'
             ? `تصاویر مجموعه (${count}):`
+            : currentLang === 'fr'
+            ? `Photos de la série (${count}) :`
+            : currentLang === 'it'
+            ? `Foto della serie (${count}):`
+            : currentLang === 'tr'
+            ? `Seri Fotoğrafları (${count}):`
             : `Series Photos (${count}):`}
         </span>
         <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
@@ -227,6 +233,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
               ? `مشاهده سری کامل · ${count} اثر ←`
               : currentLang === 'de'
               ? `${count === 1 ? 'Werk' : 'Serie'} ansehen · ${count} ${count === 1 ? 'Photo' : 'Photos'} →`
+              : currentLang === 'fr'
+              ? `Voir ${count === 1 ? 'l’œuvre' : 'la série'} · ${count} ${count === 1 ? 'photo' : 'photos'} →`
+              : currentLang === 'it'
+              ? `Vedi ${count === 1 ? 'l’opera' : 'la serie'} · ${count} ${count === 1 ? 'foto' : 'foto'} →`
+              : currentLang === 'tr'
+              ? `${count === 1 ? 'Eseri' : 'Seriyi'} İncele · ${count} Fotoğraf →`
               : `View ${count === 1 ? 'Work' : 'Series'} · ${count} ${count === 1 ? 'Photo' : 'Photos'} →`}
           </span>
         </button>
@@ -244,6 +256,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                 ? 'Auszeichnung ansehen'
                 : currentLang === 'fa'
                 ? 'جایزه'
+                : currentLang === 'fr'
+                ? 'Voir le prix'
+                : currentLang === 'it'
+                ? 'Vedi premio'
+                : currentLang === 'tr'
+                ? 'Ödülü İncele'
                 : 'View Award'}
             </span>
             <ExternalLink className="w-3 h-3 text-stone-400" />
@@ -282,6 +300,12 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
               ? sectionTitleDe
               : currentLang === 'fa'
               ? sectionTitleFa
+              : currentLang === 'fr'
+              ? 'Autres Œuvres'
+              : currentLang === 'it'
+              ? 'Altre Opere'
+              : currentLang === 'tr'
+              ? 'Diğer Eserler'
               : sectionTitleEn}
           </h3>
         </div>

@@ -30,6 +30,12 @@ export const Footer: React.FC<FooterProps> = ({
                 ? 'Schahrsad Shahmirzadi · Photographin & 10-fache Kickbox-Weltmeisterin'
                 : currentLang === 'fa'
                   ? 'شهزاد شاهمیرزادی · عکاس و ۱۰ بار قهرمان جهان کیک‌بوکسینگ'
+                  : currentLang === 'fr'
+                  ? 'Schahrsad Shahmirzadi · Photographe & Décuple Championne du Monde de Kickboxing'
+                  : currentLang === 'it'
+                  ? 'Schahrsad Shahmirzadi · Fotografa & 10 volte Campionessa del Mondo di Kickboxing'
+                  : currentLang === 'tr'
+                  ? 'Schahrsad Shahmirzadi · Fotoğrafçı & 10 Kez Kick Boks Dünya Şampiyonu'
                   : 'Schahrsad Shahmirzadi · Photographer & 10x Kickboxing World Champion'}
             </p>
             <p className="text-stone-700 text-[11px] leading-relaxed font-normal">
@@ -37,6 +43,12 @@ export const Footer: React.FC<FooterProps> = ({
                 ? 'Ausgezeichnete Architektur-, Fine-Art- und Dokumentarphotographie sowie sportliche Höchstleistungen.'
                 : currentLang === 'fa'
                   ? 'عکاسی فاخر برنده جوایز جهانی و دستاوردهای درخشان ورزشی در کیک‌بوکسینگ.'
+                  : currentLang === 'fr'
+                  ? 'Photographie d’architecture, beaux-arts et documentaire primée, alliée à l’excellence sportive mondiale.'
+                  : currentLang === 'it'
+                  ? 'Fotografia premiata di architettura, belle arti e documentaristica unita a prestazioni sportive d’eccellenza.'
+                  : currentLang === 'tr'
+                  ? 'Ödüllü mimari, güzel sanatlar ve belgesel fotoğrafçılığı ile dünya çapında sportif başarılar.'
                   : 'Award-winning architectural, fine art, and documentary photography alongside world-class athletic achievements.'}
             </p>
           </div>
@@ -221,6 +233,14 @@ export const Footer: React.FC<FooterProps> = ({
             <span>
               {currentLang === 'fa'
                 ? 'طراحی‌شده با دقت و استانداردهای نمایش جوایز بین‌المللی'
+                : currentLang === 'de'
+                ? 'Präzise gestaltet für die Präsentation internationaler Auszeichnungen'
+                : currentLang === 'fr'
+                ? 'Conçu avec précision pour la présentation des prix internationaux'
+                : currentLang === 'it'
+                ? 'Progettato con cura per la presentazione dei premi internazionali'
+                : currentLang === 'tr'
+                ? 'Uluslararası ödül sunumu için hassasiyetle tasarlandı'
                 : 'Designed for precision & international awards presentation'}
             </span>
             <Heart className="w-3 h-3 text-amber-700 inline" />

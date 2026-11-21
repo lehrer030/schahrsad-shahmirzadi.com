@@ -53,6 +53,12 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
                 ? activeCat?.titleDe
                 : currentLang === 'fa'
                 ? activeCat?.titleFa
+                : currentLang === 'fr'
+                ? (activeCat?.titleFr || activeCat?.titleEn)
+                : currentLang === 'it'
+                ? (activeCat?.titleIt || activeCat?.titleEn)
+                : currentLang === 'tr'
+                ? (activeCat?.titleTr || activeCat?.titleEn)
                 : activeCat?.titleEn}
             </h2>
             <p className="text-xs text-neutral-300 mt-1 max-w-xl font-normal">
@@ -60,6 +66,12 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
                 ? activeCat?.descriptionDe
                 : currentLang === 'fa'
                 ? activeCat?.descriptionFa
+                : currentLang === 'fr'
+                ? (activeCat?.descriptionFr || activeCat?.descriptionEn)
+                : currentLang === 'it'
+                ? (activeCat?.descriptionIt || activeCat?.descriptionEn)
+                : currentLang === 'tr'
+                ? (activeCat?.descriptionTr || activeCat?.descriptionEn)
                 : activeCat?.descriptionEn}
             </p>
           </div>
@@ -84,6 +96,12 @@ export const CategoryTabs: React.FC<CategoryTabsProps> = ({
                       ? cat.titleDe
                       : currentLang === 'fa'
                       ? cat.titleFa
+                      : currentLang === 'fr'
+                      ? (cat.titleFr || cat.titleEn)
+                      : currentLang === 'it'
+                      ? (cat.titleIt || cat.titleEn)
+                      : currentLang === 'tr'
+                      ? (cat.titleTr || cat.titleEn)
                       : cat.titleEn}
                   </span>
                 </button>

@@ -324,11 +324,27 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               <p>
                 {currentLang === 'fa'
                   ? 'شهزاد شاهمیرزادی از سن ۱۵ سالگی در یک سالن سنتی و معتبر در ویلمرزدورف برلین به فراگیری دفاع شخصی پرداخت. در ۱۶ سالگی علاقه و تمرکز خود را به کیک‌بوکسینگ معطوف ساخت—شوق و اشتیاقی که ابتدا به عنوان آماتور و سپس در سال‌های ۲۰۱۵ تا ۲۰۲۶ به عنوان ورزشکار حرفه‌ای دنبال شد.'
+                  : currentLang === 'fr'
+                  ? 'À l’âge de 15 ans, Schahrsad Shahmirzadi a débuté l’apprentissage de la self-défense dans un dojo traditionnel de Berlin-Wilmersdorf. Dès 16 ans, elle s’est consacrée au kickboxing — une passion vécue d’abord en amateur, puis au plus haut niveau professionnel mondial de 2015 à 2026.'
+                  : currentLang === 'it'
+                  ? 'All’età di 15 anni, Schahrsad Shahmirzadi ha iniziato a praticare l’autodifesa in un dojo tradizionale a Berlino-Wilmersdorf. A 16 anni si è dedicata al kickboxing, una passione coltivata prima a livello dilettantistico e poi da professionista d’élite dal 2015 al 2026.'
+                  : currentLang === 'tr'
+                  ? '15 yaşında Berlin-Wilmersdorf’taki köklü bir dojoda öz savunma eğitimine başlayan Schahrsad Shahmirzadi, 16 yaşında kickboksa yöneldi. Önce amatör seviyede, ardından 2015-2026 yılları arasında tam profesyonel olarak dünyanın zirvesinde bu tutkuyu sürdürdü.'
+                  : currentLang === 'en'
+                  ? 'At age 15, Schahrsad Shahmirzadi began practicing self-defense in a traditional dojo in Berlin-Wilmersdorf. At 16, she dedicated herself to kickboxing—a passion she pursued initially as an amateur and, from 2015 to 2026, as an elite professional on the world stage.'
                   : 'Mit 15 Jahren begann Schahrsad Shahmirzadi mit Selbstverteidigung in einem traditionsreichen Dojo in Berlin-Wilmersdorf. Mit 16 wandte sie sich dem Kickboxen zu – einer Leidenschaft, die sie zunächst im Amateurbereich und ab 2015 bis 2026 als Vollprofi auf höchstem internationalen Niveau lebte.'}
               </p>
               <p>
                 {currentLang === 'fa'
                   ? 'فعالیت‌های قهرمانی او از سال ۲۰۰۹ آغاز شد. در سال‌های ۲۰۱۰ تا ۲۰۱۱، او عضو کادر ملی فول‌کنتاکت فدراسیون WAKO آلمان بود، قهرمان آلمان و قهرمان بین‌المللی آلمان شد و جام معتبر گئورگ اف. بروکتر را فتح کرد.'
+                  : currentLang === 'fr'
+                  ? 'Sa carrière en compétition a débuté en 2009. De 2010 à 2011, elle a été membre de l’équipe nationale allemande de plein contact (WAKO), a été sacrée championne d’Allemagne et championne internationale, et a remporté la prestigieuse coupe Georg-F.-Brückner.'
+                  : currentLang === 'it'
+                  ? 'La sua carriera agonistica è iniziata nel 2009. Dal 2010 al 2011 è stata membro della squadra nazionale di full-contact della WAKO Germania, laureandosi campionessa tedesca e campionessa internazionale, oltre a vincere la prestigiosa coppa Georg-F.-Brückner.'
+                  : currentLang === 'tr'
+                  ? 'Müsabaka kariyeri 2009’da başladı. 2010-2011 yıllarında WAKO Almanya Full-Contact Milli Takımı üyesi olarak Almanya Şampiyonu ve Uluslararası Almanya Şampiyonu oldu ve prestijli Georg-F.-Brückner Kupası’nı kazandı.'
+                  : currentLang === 'en'
+                  ? 'Her competitive career began in 2009. From 2010 to 2011, she was a member of the German national full-contact squad (WAKO), winning both German and International German Championships and the prestigious Georg-F.-Brückner Cup.'
                   : 'Ihre Wettkampfkarriere begann 2009. Von 2010 bis 2011 war sie Mitglied im Bundeskader Vollkontakt der WAKO Deutschland, wurde Deutsche Meisterin und Internationale Deutsche Meisterin und gewann den renommierten Georg-F.-Brückner-Pokal.'}
               </p>
             </div>
@@ -337,11 +353,27 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               <p>
                 {currentLang === 'fa'
                   ? 'پس از حضور در مسابقات قهرمانی اروپا و جهان، او در سال ۲۰۱۲ به فدراسیون WKA، امروزه WKUWORLD، پیوست و همچنین در فدراسیون‌های بزرگ جهانی از جمله ISKA، IAKSA، ICO و WMAC درخشید.'
+                  : currentLang === 'fr'
+                  ? 'Après avoir disputé des championnats d’Europe et du monde, elle a rejoint en 2012 la WKA (aujourd’hui WKUWORLD) et a combattu au sein des fédérations mondiales de premier plan, notamment l’ISKA, l’IAKSA, l’ICO et la WMAC.'
+                  : currentLang === 'it'
+                  ? 'Dopo le partecipazioni a campionati europei e mondiali, nel 2012 è passata alla WKA (oggi WKUWORLD), gareggiando nelle più importanti federazioni mondiali, tra cui ISKA, IAKSA, ICO e WMAC.'
+                  : currentLang === 'tr'
+                  ? 'Avrupa ve dünya şampiyonalarındaki mücadelelerinin ardından 2012 yılında WKA’ya (bugünkü WKUWORLD) katıldı ve ardından ISKA, IAKSA, ICO ve WMAC gibi dünyanın önde gelen federasyonlarında ringe çıktı.'
+                  : currentLang === 'en'
+                  ? 'Following European and World Championships, she joined the WKA (now WKUWORLD) in 2012, competing in premier global sanctioning bodies including ISKA, IAKSA, ICO, and WMAC.'
                   : 'Nach Einsätzen bei Europa- und Weltmeisterschaften wechselte sie 2012 zur WKA, heute WKUWORLD, und kämpfte fortan in weltweit führenden Verbänden, darunter auch ISKA, IAKSA, ICO und WMAC.'}
               </p>
               <p>
                 {currentLang === 'fa'
                   ? 'او عمدتاً در اوزان ۵۵ تا ۶۰ کیلوگرم در رشته‌های فول‌کنتاکت و K-1 به مبارزه می‌پرداخت و به عنوان یکی از اندک بانوان موفق به کسب کمربند مشکی دان ۳ شد.'
+                  : currentLang === 'fr'
+                  ? 'Elle a combattu principalement entre 55 et 60 kg, se spécialisant en plein contact et K-1. Elle est titulaire du 3e Dan, ceinture noire de kickboxing – un grade que très peu de femmes atteignent.'
+                  : currentLang === 'it'
+                  ? 'Ha combattuto soprattutto nelle categorie di peso tra 55 e 60 kg, specializzandosi in full-contact e K-1. È cintura nera 3° Dan nel kickboxing, un grado raggiunto da pochissime donne.'
+                  : currentLang === 'tr'
+                  ? 'Özellikle 55 ila 60 kg ağırlık sınıflarında Full-Contact ve K-1 disiplinlerinde uzmanlaştı. Dünyada çok az kadının ulaşabildiği 3. Dan siyah kuşak derecesine sahiptir.'
+                  : currentLang === 'en'
+                  ? 'She competed primarily in the 55 to 60 kg weight classes, specializing in full contact and K-1. She holds the 3rd Dan Black Belt in kickboxing—a rank achieved by only very few women.'
                   : 'Sie kämpfte vor allem in den Gewichtsklassen zwischen 55 und 60 kg und spezialisierte sich auf Vollkontakt und K-1. Sie ist Trägerin des 3. Dan, des Schwarzen Gürtels im Kickboxen – eine Stufe, die nur wenige Frauen erreichen.'}
               </p>
             </div>
@@ -352,16 +384,42 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
         <div id="profi-fight-records" className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
           <div className="border-b border-stone-100 pb-4">
             <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
-              {currentLang === 'fa' ? 'مبارزات رسمی و رکوردهای حرفه‌ای' : 'Offizielle Profi-Kampfstatistiken'}
+              {currentLang === 'fa'
+                ? 'مبارزات رسمی و رکوردهای حرفه‌ای'
+                : currentLang === 'fr'
+                ? 'Statistiques & Palmarès Professionnel'
+                : currentLang === 'it'
+                ? 'Statistiche Ufficiali Titoli Professionistici'
+                : currentLang === 'tr'
+                ? 'Resmi Profesyonel Unvan İstatistikleri'
+                : currentLang === 'en'
+                ? 'Official Professional Fight Records'
+                : 'Offizielle Profi-Kampfstatistiken'}
             </span>
             <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
               {currentLang === 'fa'
                 ? 'مبارزات بر سر عنوان قهرمانی حرفه‌ای اروپا و جهان · فول‌کنتاکت −۵۷٫۵ کیلوگرم'
+                : currentLang === 'fr'
+                ? 'Combats Professionnels pour les Titres Européens & Mondiaux – Plein Contact (−57,5 kg)'
+                : currentLang === 'it'
+                ? 'Titoli Professionistici Europei & Mondiali – Full Contact fino a 57,5 kg'
+                : currentLang === 'tr'
+                ? 'Profesyonel Avrupa & Dünya Şampiyonluk Maçları – Full-Contact −57,5 kg'
+                : currentLang === 'en'
+                ? 'Professional European & World Title Bouts – Full Contact (−57.5 kg)'
                 : 'Profi-Europa- & Weltmeisterschaftstitelkämpfe – Vollkontakt bis 57,5 kg'}
             </h3>
             <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
               {currentLang === 'fa'
                 ? 'جدول رسمی تمام مبارزات حرفه‌ای بر سر کمربند قهرمانی با پیروزی‌های قاطع پس از ۷ و ۱۰ راند سنگین.'
+                : currentLang === 'fr'
+                ? 'Statistiques officielles des combats pour les titres mondiaux et européens — invaincue, avec des victoires unanimes aux points sur 7 et 10 rounds complets.'
+                : currentLang === 'it'
+                ? 'Statistiche ufficiali dei combattimenti per i titoli — imbattuta con vittorie all’unanimità ai punti sulla distanza di 7 e 10 round.'
+                : currentLang === 'tr'
+                ? 'Resmi unvan maçları istatistikleri — 7 ve 10 rauntluk zorlu mücadeleler sonucunda oy birliğiyle namağlup zaferler.'
+                : currentLang === 'en'
+                ? 'Official statistics of professional title bouts—undefeated with unanimous decision victories over the full 7 and 10 round distances.'
                 : 'Offizielle Kampfstatistiken der Profi-Titelkämpfe – ungeschlagen mit einstimmigen Punktsiegen über die volle Distanz von 7 und 10 Runden.'}
             </p>
           </div>

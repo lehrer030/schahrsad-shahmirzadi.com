@@ -332,6 +332,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                               ? `Aufnahme ${index + 1} von ${running.photos.length} · Vergrößern`
                               : currentLang === 'fa'
                                 ? `تصویر ${index + 1} از ${running.photos.length} · بزرگنمایی`
+                                : currentLang === 'fr'
+                                ? `Photo ${index + 1} sur ${running.photos.length} · Agrandir`
+                                : currentLang === 'it'
+                                ? `Foto ${index + 1} di ${running.photos.length} · Ingrandisci`
+                                : currentLang === 'tr'
+                                ? `Fotoğraf ${index + 1} / ${running.photos.length} · Büyüt`
                                 : `Photo ${index + 1} of ${running.photos.length} · Enlarge`}
                           </span>
                         )}
@@ -420,9 +426,15 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                           <span>
                             {currentLang === 'fa'
                               ? 'گواهی و مدال رسمی مسابقه'
-                              : currentLang === 'en'
-                                ? 'Official Award & Medal'
-                                : 'Offizielles Zertifikat & Medaille'}
+                              : currentLang === 'de'
+                              ? 'Offizielles Zertifikat & Medaille'
+                              : currentLang === 'fr'
+                              ? 'Certificat officiel & Médaille'
+                              : currentLang === 'it'
+                              ? 'Certificato ufficiale & Medaglia'
+                              : currentLang === 'tr'
+                              ? 'Resmi Sertifika & Madalya'
+                              : 'Official Award & Medal'}
                           </span>
                         </span>
                       </div>
@@ -471,6 +483,12 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                           ? `Aufnahme ${index + 1} von ${athensGala.photos.length} · Vergrößern`
                           : currentLang === 'fa'
                             ? `تصویر ${index + 1} از ${athensGala.photos.length} · بزرگنمایی`
+                            : currentLang === 'fr'
+                            ? `Photo ${index + 1} sur ${athensGala.photos.length} · Agrandir`
+                            : currentLang === 'it'
+                            ? `Foto ${index + 1} di ${athensGala.photos.length} · Ingrandisci`
+                            : currentLang === 'tr'
+                            ? `Fotoğraf ${index + 1} / ${athensGala.photos.length} · Büyüt`
                             : `Photo ${index + 1} of ${athensGala.photos.length} · Enlarge`}
                       </span>
                     </div>

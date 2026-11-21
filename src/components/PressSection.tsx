@@ -117,7 +117,17 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
 
                     <div className="p-3 bg-white rounded-xl border border-stone-200/80 text-xs text-stone-800">
                       <span className="font-semibold text-stone-900 block mb-0.5">
-                        {currentLang === 'de' ? 'Ausgestelltes Werk:' : currentLang === 'fa' ? 'اثر به نمایش درآمده:' : 'Featured Artwork:'}
+                        {currentLang === 'de'
+                          ? 'Ausgestelltes Werk:'
+                          : currentLang === 'fa'
+                          ? 'اثر به نمایش درآمده:'
+                          : currentLang === 'fr'
+                          ? 'Œuvre exposée :'
+                          : currentLang === 'it'
+                          ? 'Opera esposta:'
+                          : currentLang === 'tr'
+                          ? 'Sergilenen Eser:'
+                          : 'Featured Artwork:'}
                       </span>
                       <span className="text-amber-900 font-medium font-serif">
                         {currentLang === 'de' ? ex.featuredWorkDe : currentLang === 'fa' ? ex.featuredWorkFa : ex.featuredWorkEn}
@@ -133,7 +143,19 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-stone-900 hover:bg-stone-800 text-white rounded-lg text-xs font-medium transition-colors"
                       >
-                        <span>{currentLang === 'fa' ? 'مشاهده اثر' : currentLang === 'de' ? 'Werk ansehen' : 'View Work'}</span>
+                        <span>
+                          {currentLang === 'fa'
+                            ? 'مشاهده اثر'
+                            : currentLang === 'de'
+                            ? 'Werk ansehen'
+                            : currentLang === 'fr'
+                            ? 'Voir l’œuvre'
+                            : currentLang === 'it'
+                            ? 'Vedi opera'
+                            : currentLang === 'tr'
+                            ? 'Eseri İncele'
+                            : 'View Work'}
+                        </span>
                         <ExternalLink className="w-3.5 h-3.5 opacity-80" />
                       </a>
                     )}
@@ -144,7 +166,19 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white hover:bg-stone-100 text-stone-700 rounded-lg text-xs font-medium border border-stone-200 transition-colors"
                       >
-                        <span>{currentLang === 'fa' ? 'سایت فستیوال' : currentLang === 'de' ? 'Festival-Webseite' : 'Festival Info'}</span>
+                        <span>
+                          {currentLang === 'fa'
+                            ? 'سایت فستیوال'
+                            : currentLang === 'de'
+                            ? 'Festival-Webseite'
+                            : currentLang === 'fr'
+                            ? 'Site du festival'
+                            : currentLang === 'it'
+                            ? 'Sito del festival'
+                            : currentLang === 'tr'
+                            ? 'Festival Web Sitesi'
+                            : 'Festival Info'}
+                        </span>
                         <ExternalLink className="w-3.5 h-3.5 opacity-60" />
                       </a>
                     )}
@@ -222,7 +256,19 @@ export const PressSection: React.FC<PressSectionProps> = ({ currentLang, onOpenL
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-stone-100 text-stone-900 text-xs font-semibold rounded-full border border-stone-200 transition-colors shrink-0 self-start md:self-auto shadow-2xs cursor-pointer"
                 >
-                  <span>{currentLang === 'fa' ? 'مطالعه مقاله' : currentLang === 'de' ? 'Artikel lesen' : 'Read Article'}</span>
+                  <span>
+                    {currentLang === 'fa'
+                      ? 'مطالعه مقاله'
+                      : currentLang === 'de'
+                      ? 'Artikel lesen'
+                      : currentLang === 'fr'
+                      ? 'Lire l’article'
+                      : currentLang === 'it'
+                      ? 'Leggi l’articolo'
+                      : currentLang === 'tr'
+                      ? 'Makaleyi Oku'
+                      : 'Read Article'}
+                  </span>
                   <ExternalLink className="w-3.5 h-3.5 text-stone-500" />
                 </a>
               )}

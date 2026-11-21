@@ -53,6 +53,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   ? 'Berlin · Künstlerin, Photographin & 10× Weltmeisterin'
                   : currentLang === 'fa'
                   ? 'برلین · هنرمند، عکاس و ۱۰ دوره قهرمان جهان'
+                  : currentLang === 'fr'
+                  ? 'Berlin · Artiste, Photographe & 10× Championne du Monde'
+                  : currentLang === 'it'
+                  ? 'Berlino · Artista, Fotografa & 10× Campionessa Mondiale'
+                  : currentLang === 'tr'
+                  ? 'Berlin · Sanatçı, Fotoğrafçı & 10× Dünya Şampiyonu'
                   : 'Berlin · Artist, Photographer & 10× World Champion'}
               </span>
             </div>
@@ -70,6 +76,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? 'Photographin & Bildende Künstlerin | 10-fache Kickbox-Weltmeisterin'
                     : currentLang === 'fa'
                     ? 'عکاس و هنرمند تجسمی | ۱۰ دوره قهرمان جهان در کیک‌بوکسینگ'
+                    : currentLang === 'fr'
+                    ? 'Photographe & Artiste Visuelle | 10× Championne du Monde de Kickboxing'
+                    : currentLang === 'it'
+                    ? 'Fotografa & Artista Visiva | 10× Campionessa Mondiale di Kickboxing'
+                    : currentLang === 'tr'
+                    ? 'Fotoğrafçı & Görsel Sanatçı | 10× Kickboks Dünya Şampiyonu'
                     : 'Photographer & Visual Artist | 10-Time Kickboxing World Champion'}
                 </p>
               </div>
@@ -91,6 +103,24 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد.
                     این نام برگرفته از زبان فارسی و پیوند دو واژه است: شیر و زن — مظهر شهامت و شجاعت برای پیمودن مسیر مستقل و افتخارآفرین.
                   </>
+                ) : currentLang === 'fr' ? (
+                  <>
+                    Schahrsad Shahmirzadi présente sa photographie et son art sous son nom d’artiste{' '}
+                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong>. Ce nom persan unit deux mots :{' '}
+                    <em>Shir</em> (شیر) signifie « lion » et <em>Zan</em> (زن) signifie « femme » – la « lionne » incarnant le courage de tracer sa propre voie et de défier les conventions.
+                  </>
+                ) : currentLang === 'it' ? (
+                  <>
+                    Schahrsad Shahmirzadi presenta la sua fotografia e la sua arte con il suo nome d’arte{' '}
+                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong>. Il nome deriva dal persiano e unisce due parole:{' '}
+                    <em>Shir</em> (شیر) significa «leone» e <em>Zan</em> (زن) significa «donna» – la «leonessa» come incarnazione del coraggio di seguire la propria strada.
+                  </>
+                ) : currentLang === 'tr' ? (
+                  <>
+                    Schahrsad Shahmirzadi, fotoğraf ve sanat çalışmalarını sanatçı ismi olan{' '}
+                    <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> ile sunar. Farsça kökenli bu isim iki kelimeden oluşur:{' '}
+                    <em>Şir</em> (شیر) «aslan», <em>Zen</em> (زن) «kadın» – kendi bağımsız yolunu çizme cesaretini simgeleyen «dişi aslan».
+                  </>
                 ) : (
                   <>
                     Schahrsad Shahmirzadi presents her photography and art together with her artist name,{' '}
@@ -104,6 +134,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   ? 'Durch Photographie bewahrt sie gelebte Momente für die Ewigkeit — getragen von der Philosophie des Lichts (dem altgriechischen »Zeichnen mit Licht«), der Disziplin einer 10-fachen Weltmeisterin im Kickboxen und ihrem leidenschaftlichen Einsatz für Menschenrechte, Gleichberechtigung und den Schutz unserer Umwelt.'
                   : currentLang === 'fa'
                   ? 'او از دریچه عکاسی، لحظات زیسته را برای ابدیت ماندگار می‌سازد — با تکیه بر فلسفه اصیل نگارش با نور، روحیه مبارزه‌جوی ۱۰ دوره قهرمانی جهان در کیک‌بوکسینگ و تعهدی استوار به عدالت، حقوق بشر و حفاظت از محیط زیست.'
+                  : currentLang === 'fr'
+                  ? 'À travers la photographie, elle immortalise les moments vécus pour l’éternité — portée par la philosophie de la lumière (« dessiner avec la lumière »), la rigueur d’une décuple championne du monde de kickboxing et un engagement sans faille pour les droits humains et l’environnement.'
+                  : currentLang === 'it'
+                  ? 'Attraverso la fotografia custodisce per l’eternità frammenti di vita vissuta — guidata dalla filosofia della luce («disegnare con la luce»), dalla disciplina di una 10 volte campionessa mondiale di kickboxing e dal suo impegno per i diritti umani e l’ambiente.'
+                  : currentLang === 'tr'
+                  ? 'Fotoğraf sanatı aracılığıyla yaşanan anları sonsuzluğa taşır — ışık felsefesinden («ışıkla çizmek»), 10 kez kickboks dünya şampiyonluğunun kazandırdığı disiplinden ve insan hakları ile çevre korumaya olan derin bağlılığından ilham alır.'
                   : 'Through photography, she preserves lived experience for eternity — guided by the philosophy of light ("drawing with light"), the discipline of a 10-time world champion in kickboxing, and her profound commitment to human rights, equality, and environmental protection.'}
               </p>
             </div>
@@ -155,6 +191,21 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                       <strong className="text-stone-950 font-serif font-bold">شیرزن (SchirZan)</strong> ارائه می‌دهد
                       (شیر + زن: مظهر شهامت و شجاعت برای پیمودن مسیر مستقل).
                     </>
+                  ) : currentLang === 'fr' ? (
+                    <>
+                      Schahrsad Shahmirzadi présente sa photographie sous son nom d’artiste{' '}
+                      <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (du persan : <em>Shir</em> = lion, <em>Zan</em> = femme — la « lionne »).
+                    </>
+                  ) : currentLang === 'it' ? (
+                    <>
+                      Schahrsad Shahmirzadi presenta la sua fotografia con il suo nome d’arte{' '}
+                      <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> (dal persiano: <em>Shir</em> = leone, <em>Zan</em> = donna — «leonessa»).
+                    </>
+                  ) : currentLang === 'tr' ? (
+                    <>
+                      Schahrsad Shahmirzadi, fotoğraf ve sanat çalışmalarını sanatçı adı olan{' '}
+                      <strong className="text-stone-950 font-serif font-bold">SchirZan</strong> ile sunar (Farsça: <em>Şir</em> = aslan, <em>Zen</em> = kadın — «dişi aslan»).
+                    </>
                   ) : (
                     <>
                       Schahrsad Shahmirzadi presents her photography and art together with her artist name,{' '}
@@ -168,6 +219,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? 'Durch Photographie bewahrt sie gelebte Momente für die Ewigkeit — getragen von der Philosophie des Lichts (dem altgriechischen »Zeichnen mit Licht«), der Disziplin einer 10-fachen Weltmeisterin im Kickboxen und ihrem leidenschaftlichen Einsatz für Menschenrechte, Gleichberechtigung und den Schutz unserer Umwelt.'
                     : currentLang === 'fa'
                     ? 'او از دریچه عکاسی، لحظات زیسته را برای ابدیت ماندگار می‌سازد — با تکیه بر فلسفه اصیل نگارش با نور، روحیه مبارزه‌جوی ۱۰ دوره قهرمانی جهان در کیک‌بوکسینگ و تعهد به حقوق بشر و محیط زیست.'
+                    : currentLang === 'fr'
+                    ? 'À travers la photographie, elle immortalise les moments vécus pour l’éternité — portée par la philosophie de la lumière (« dessiner avec la lumière »), la rigueur d’une décuple championne du monde et un engagement pour les droits humains.'
+                    : currentLang === 'it'
+                    ? 'Attraverso la fotografia custodisce per l’eternità frammenti di vita vissuta — guidata dalla filosofia della luce («disegnare con la luce»), dalla disciplina di una 10 volte campionessa mondiale e dall’impegno umanitario.'
+                    : currentLang === 'tr'
+                    ? 'Fotoğraf sanatı aracılığıyla yaşanan anları sonsuzluğa taşır — ışık felsefesinden («ışıkla çizmek»), 10 kez dünya şampiyonluğunun disiplininden ve insan hakları savunuculuğundan güç alır.'
                     : 'Through photography, she preserves lived experience for eternity — guided by the philosophy of light, the discipline of a 10-time world champion in kickboxing, and her commitment to human rights and the environment.'}
                 </p>
               </div>
@@ -181,7 +238,15 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="flex items-center gap-2 text-amber-800">
                   <Camera className="w-4 h-4 shrink-0 text-amber-700" />
                   <span className="font-serif font-bold text-xs sm:text-[13px] text-stone-900">
-                    {currentLang === 'fa' ? 'عکاسی و هنر' : 'Photographie & Kunst'}
+                    {currentLang === 'fa'
+                      ? 'عکاسی و هنر'
+                      : currentLang === 'fr'
+                      ? 'Photographie & Art'
+                      : currentLang === 'it'
+                      ? 'Fotografia & Arte'
+                      : currentLang === 'tr'
+                      ? 'Fotoğrafçılık & Sanat'
+                      : 'Photographie & Kunst'}
                   </span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-stone-600 leading-relaxed font-normal">
@@ -189,6 +254,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? 'Mehrfach international prämierte Architektur- & Fine-Art-Photographie (AMP Los Angeles, IPA New York/Athen, PERSPA Bourges, BIFA Budapest).'
                     : currentLang === 'fa'
                     ? 'عکاسی معماری و تجسمی برگزیده در مسابقات جهانی از جمله AMP، IPA (نیویورک/آتن)، PERSPA (بورژ) و BIFA (بوداپست).'
+                    : currentLang === 'fr'
+                    ? 'Photographie d’architecture et de beaux-arts primée aux concours internationaux majeurs (AMP Los Angeles, IPA New York/Athènes, PERSPA Bourges, BIFA Budapest).'
+                    : currentLang === 'it'
+                    ? 'Fotografia di architettura e fine art premiata nei principali concorsi internazionali (AMP Los Angeles, IPA New York/Atene, PERSPA Bourges, BIFA Budapest).'
+                    : currentLang === 'tr'
+                    ? 'Uluslararası yarışmalarda çok sayıda ödüle layık görülen mimari ve güzel sanatlar fotoğrafçılığı (AMP Los Angeles, IPA New York/Atina, PERSPA Bourges, BIFA Budapeşte).'
                     : 'Internationally recognized architectural & fine art photography (AMP Los Angeles, IPA New York/Athens, PERSPA Bourges, BIFA Budapest).'}
                 </p>
               </div>
@@ -198,7 +269,15 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="flex items-center gap-2 text-amber-800">
                   <Trophy className="w-4 h-4 shrink-0 text-amber-700" />
                   <span className="font-serif font-bold text-xs sm:text-[13px] text-stone-900">
-                    {currentLang === 'fa' ? '۱۰ دوره قهرمانی جهان' : '10× Weltmeisterin'}
+                    {currentLang === 'fa'
+                      ? '۱۰ دوره قهرمانی جهان'
+                      : currentLang === 'fr'
+                      ? '10× Championne du Monde'
+                      : currentLang === 'it'
+                      ? '10× Campionessa Mondiale'
+                      : currentLang === 'tr'
+                      ? '10× Dünya Şampiyonu'
+                      : '10× Weltmeisterin'}
                   </span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-stone-600 leading-relaxed font-normal">
@@ -206,6 +285,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? '10-fache Weltmeisterin im Profi-Kickboxen — ein Jahrzehnt ungeschlagener Rekord und athletische Spitzenleistung.'
                     : currentLang === 'fa'
                     ? '۱۰ دوره قهرمانی جهان در کیک‌بوکسینگ حرفه‌ای — کارنامه بدون شکست و افتخارآفرین ورزشی.'
+                    : currentLang === 'fr'
+                    ? '10 fois championne du monde de kickboxing professionnel — palmarès invaincu et sommet de l’excellence athlétique.'
+                    : currentLang === 'it'
+                    ? '10 volte campionessa del mondo di kickboxing professionistico — carriera imbattuta ed eccellenza atletica assoluta.'
+                    : currentLang === 'tr'
+                    ? 'Profesyonel kickboksta 10 kez dünya şampiyonluğu — namağlup rekor ve üst düzey atletik başarı.'
                     : '10-time professional kickboxing world champion — an undefeated record and world-class athletic excellence.'}
                 </p>
               </div>
@@ -215,7 +300,15 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 <div className="flex items-center gap-2 text-amber-800">
                   <Heart className="w-4 h-4 shrink-0 text-red-600" />
                   <span className="font-serif font-bold text-xs sm:text-[13px] text-stone-900">
-                    {currentLang === 'fa' ? 'حقوق بشر و محیط زیست' : 'Engagement & Umwelt'}
+                    {currentLang === 'fa'
+                      ? 'حقوق بشر و محیط زیست'
+                      : currentLang === 'fr'
+                      ? 'Engagement & Environnement'
+                      : currentLang === 'it'
+                      ? 'Impegno & Ambiente'
+                      : currentLang === 'tr'
+                      ? 'Sosyal Mücadele & Çevre'
+                      : 'Engagement & Umwelt'}
                   </span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-stone-600 leading-relaxed font-normal">
@@ -223,6 +316,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? 'Einsatz für Menschenrechte, Spendenläufe für das ECCHR und akademischer Werdegang im Gewässer- & Umweltschutz.'
                     : currentLang === 'fa'
                     ? 'فعالیت‌های حقوق بشری، دویدن‌های خیریه برای ECCHR و پیشینه علمی در حفاظت از محیط زیست.'
+                    : currentLang === 'fr'
+                    ? 'Défense des droits humains, courses caritatives pour l’ECCHR et formation universitaire pour la protection des eaux et de l’environnement.'
+                    : currentLang === 'it'
+                    ? 'Difesa dei diritti umani, corse di beneficenza per l’ECCHR e studi universitari per la tutela delle acque e dell’ambiente.'
+                    : currentLang === 'tr'
+                    ? 'İnsan hakları savunuculuğu, ECCHR için yardım koşuları ve su kaynakları ile çevre koruma alanında akademik uzmanlık.'
                     : 'Human rights advocacy, fundraising runs for ECCHR, and an academic foundation in water and environmental protection.'}
                 </p>
               </div>
@@ -240,6 +339,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                     ? INTRO_CONTENT.artistSectionTitleDe
                     : currentLang === 'fa'
                     ? INTRO_CONTENT.artistSectionTitleFa
+                    : currentLang === 'fr'
+                    ? 'Signification du nom «SchirZan» & Philosophie de la lumière'
+                    : currentLang === 'it'
+                    ? 'Significato del nome «SchirZan» & Filosofia della luce'
+                    : currentLang === 'tr'
+                    ? '«SchirZan» İsminin Anlamı & Işık Felsefesi'
                     : INTRO_CONTENT.artistSectionTitleEn}
                 </span>
                 {showPhilosophy ? (
@@ -331,6 +436,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   ? 'Künstlername SchirZan & Zeichnen mit Licht'
                   : currentLang === 'fa'
                   ? 'نام هنری «شیرزن» و نگارش با نور'
+                  : currentLang === 'fr'
+                  ? 'Nom d’Artiste SchirZan & Dessiner avec la Lumière'
+                  : currentLang === 'it'
+                  ? 'Nome d’Arte SchirZan & Disegnare con la Luce'
+                  : currentLang === 'tr'
+                  ? 'Sanatçı Adı SchirZan & Işıkla Çizmek'
                   : 'Artist Name SchirZan & Drawing with Light'}
               </h3>
               <div className="text-stone-700 leading-relaxed space-y-4 whitespace-pre-line text-sm sm:text-base font-normal">
@@ -338,6 +449,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   ? INTRO_CONTENT.artistExplanationDe
                   : currentLang === 'fa'
                   ? INTRO_CONTENT.artistExplanationFa
+                  : currentLang === 'fr'
+                  ? INTRO_CONTENT.artistExplanationFr
+                  : currentLang === 'it'
+                  ? INTRO_CONTENT.artistExplanationIt
+                  : currentLang === 'tr'
+                  ? INTRO_CONTENT.artistExplanationTr
                   : INTRO_CONTENT.artistExplanationEn}
               </div>
             </div>
@@ -359,6 +476,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                   ? 'Werkverzeichnis, Auszeichnungen & Jurys'
                   : currentLang === 'fa'
                   ? 'کاتالوگ آثار، جوایز و داوری‌های بین‌المللی'
+                  : currentLang === 'fr'
+                  ? 'Catalogue Raisonné, Distinctions & Jurys Internationaux'
+                  : currentLang === 'it'
+                  ? 'Catalogo delle Opere, Riconoscimenti & Giurie'
+                  : currentLang === 'tr'
+                  ? 'Eser Kataloğu, Ödüller & Uluslararası Jüri Heyetleri'
                   : 'Catalog of Works, Honors & International Juror Panels'}
               </span>
             </div>
@@ -366,11 +489,25 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
               <span>
                 {currentLang === 'fa'
                   ? 'عکاسی و هنر – آثار'
+                  : currentLang === 'fr'
+                  ? 'Photographie & Art – Œuvres'
+                  : currentLang === 'it'
+                  ? 'Fotografia & Arte – Opere'
+                  : currentLang === 'tr'
+                  ? 'Fotoğrafçılık & Sanat – Eserler'
                   : 'Photography & Art – Works'}
               </span>
               <span className="text-stone-300 text-lg sm:text-2xl font-light hidden sm:inline">|</span>
               <span className="text-amber-900 text-base sm:text-xl font-sans font-semibold">
-                {currentLang === 'fa' ? 'جوایز بین‌المللی' : 'Int’l Awards'}
+                {currentLang === 'fa'
+                  ? 'جوایز بین‌المللی'
+                  : currentLang === 'fr'
+                  ? 'Prix Internationaux'
+                  : currentLang === 'it'
+                  ? 'Premi Internazionali'
+                  : currentLang === 'tr'
+                  ? 'Uluslararası Ödüller'
+                  : 'Int’l Awards'}
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-normal">
@@ -378,6 +515,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 ? 'Katalog der kuratorischen Bilderserien, Architekturobjekte und verifizierten Auszeichnungen ab Werk 01.'
                 : currentLang === 'fa'
                 ? 'مجموعه آثار عکاسی معماری، انتزاع‌های شهری و مدارک رسمی مسابقات جهانی از بخش ۰۱.'
+                : currentLang === 'fr'
+                ? 'Catalogue des séries photographiques, abstractions architecturales et distinctions vérifiées à partir de l’œuvre 01.'
+                : currentLang === 'it'
+                ? 'Catalogo delle serie d’autore, astrazioni architettoniche e riconoscimenti ufficiali a partire dall’opera 01.'
+                : currentLang === 'tr'
+                ? 'Eser 01’den itibaren küratörlü fotoğraf serileri, mimari soyutlamalar ve doğrulanmış ödüller kataloğu.'
                 : 'Catalog of curated fine art series, architectural abstractions, and verified award compendiums starting at Section 01.'}
             </p>
           </div>
@@ -389,6 +532,12 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 ? 'Prämierte Wettbewerbe & Führende Jurys:'
                 : currentLang === 'fa'
                 ? 'مسابقات برگزیده بین‌المللی و هیئت‌های داوری:'
+                : currentLang === 'fr'
+                ? 'Concours Primés & Jurys de Référence :'
+                : currentLang === 'it'
+                ? 'Concorsi Premiati & Giurie di Riferimento:'
+                : currentLang === 'tr'
+                ? 'Ödüllü Yarışmalar & Önde Gelen Jüri Heyetleri:'
                 : 'Award-Winning Competitions & Leading Juror Panels:'}
             </span>
             <div className="flex flex-wrap gap-2">

@@ -287,47 +287,146 @@ export const getHonorBadgeInfo = (type: string, lang: Language) => {
   switch (type) {
     case 'winner':
       return {
-        label: lang === 'fa' ? 'برنده رتبه اول' : lang === 'en' ? 'Winner / 1st Prize' : 'Gewinnerin · 1. Platz',
+        label:
+          lang === 'fa'
+            ? 'برنده رتبه اول'
+            : lang === 'de'
+            ? 'Gewinnerin · 1. Platz'
+            : lang === 'fr'
+            ? '1er Prix · Gagnante'
+            : lang === 'it'
+            ? '1° Premio · Vincitrice'
+            : lang === 'tr'
+            ? '1.lik Ödülü · Kazanan'
+            : 'Winner / 1st Prize',
         className: 'bg-amber-600/95 text-white border-amber-400'
       };
     case 'second':
       return {
-        label: lang === 'fa' ? 'جایزه دوم' : lang === 'en' ? '2nd Prize / Silver' : '2. Platz · Silber',
+        label:
+          lang === 'fa'
+            ? 'جایزه دوم'
+            : lang === 'de'
+            ? '2. Platz · Silber'
+            : lang === 'fr'
+            ? '2e Prix · Argent'
+            : lang === 'it'
+            ? '2° Premio · Argento'
+            : lang === 'tr'
+            ? '2.lik Ödülü · Gümüş'
+            : '2nd Prize / Silver',
         className: 'bg-amber-700/95 text-white border-amber-300'
       };
     case 'third':
       return {
-        label: lang === 'fa' ? 'مقام سوم · برنز' : lang === 'en' ? '3rd Prize / Bronze' : '3. Platz · Bronze',
+        label:
+          lang === 'fa'
+            ? 'مقام سوم · برنز'
+            : lang === 'de'
+            ? '3. Platz · Bronze'
+            : lang === 'fr'
+            ? '3e Prix · Bronze'
+            : lang === 'it'
+            ? '3° Premio · Bronzo'
+            : lang === 'tr'
+            ? '3.lük Ödülü · Bronz'
+            : '3rd Prize / Bronze',
         className: 'bg-amber-800/95 text-white border-amber-300'
       };
     case 'hm':
       return {
-        label: lang === 'fa' ? 'تقدیر ویژه' : lang === 'en' ? 'Honorable Mention' : 'Lobende Erwähnung',
+        label:
+          lang === 'fa'
+            ? 'تقدیر ویژه'
+            : lang === 'de'
+            ? 'Lobende Erwähnung'
+            : lang === 'fr'
+            ? 'Mention d’Honneur'
+            : lang === 'it'
+            ? 'Menzione d’Onore'
+            : lang === 'tr'
+            ? 'Mansiyon Ödülü'
+            : 'Honorable Mention',
         className: 'bg-stone-900/90 text-white border-white/30'
       };
     case 'selection':
       return {
-        label: lang === 'fa' ? 'منتخب رسمی' : lang === 'en' ? 'Official Selection' : 'Offizielle Auswahl',
+        label:
+          lang === 'fa'
+            ? 'منتخب رسمی'
+            : lang === 'de'
+            ? 'Offizielle Auswahl'
+            : lang === 'fr'
+            ? 'Sélection Officielle'
+            : lang === 'it'
+            ? 'Selezione Ufficiale'
+            : lang === 'tr'
+            ? 'Resmi Seçki'
+            : 'Official Selection',
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
     case 'selected-photographer':
       return {
-        label: lang === 'fa' ? 'عکاس برگزیده' : lang === 'de' ? 'Ausgewählte Photographin' : lang === 'fr' ? 'Photographe sélectionnée' : lang === 'it' ? 'Fotografa selezionata' : lang === 'tr' ? 'Seçilen Fotoğrafçı' : 'Selected Photographer',
+        label:
+          lang === 'fa'
+            ? 'عکاس برگزیده'
+            : lang === 'de'
+            ? 'Ausgewählte Photographin'
+            : lang === 'fr'
+            ? 'Photographe Sélectionnée'
+            : lang === 'it'
+            ? 'Fotografa Selezionata'
+            : lang === 'tr'
+            ? 'Seçilen Fotoğrafçı'
+            : 'Selected Photographer',
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
     case 'official-exhibition':
       return {
-        label: lang === 'fa' ? 'منتخب برای نمایشگاه رسمی' : 'Selected for Official Exhibition',
+        label:
+          lang === 'fa'
+            ? 'منتخب برای نمایشگاه رسمی'
+            : lang === 'de'
+            ? 'Ausgewählt für die offizielle Ausstellung'
+            : lang === 'fr'
+            ? 'Sélectionnée pour l’Exposition Officielle'
+            : lang === 'it'
+            ? 'Selezionata per la Mostra Ufficiale'
+            : lang === 'tr'
+            ? 'Resmi Sergi İçin Seçildi'
+            : 'Selected for Official Exhibition',
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
     case 'editor':
       return {
-        label: lang === 'fa' ? 'منتخب سردبیر' : lang === 'en' ? "Editor's Pick" : 'Editor’s Pick',
+        label:
+          lang === 'fa'
+            ? 'منتخب سردبیر'
+            : lang === 'de'
+            ? 'Editor’s Pick'
+            : lang === 'fr'
+            ? 'Choix de la Rédaction'
+            : lang === 'it'
+            ? 'Scelta della Redazione'
+            : lang === 'tr'
+            ? 'Editörün Seçimi'
+            : "Editor's Pick",
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
     default:
       return {
-        label: lang === 'fa' ? 'نامزد' : lang === 'en' ? 'Nominee' : 'Nominierung',
+        label:
+          lang === 'fa'
+            ? 'نامزد'
+            : lang === 'de'
+            ? 'Nominierung'
+            : lang === 'fr'
+            ? 'Nomination'
+            : lang === 'it'
+            ? 'Nomination'
+            : lang === 'tr'
+            ? 'Adaylık'
+            : 'Nominee',
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
   }
@@ -1040,7 +1139,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
           <div className="flex flex-wrap items-center gap-2 text-xs">
             <span className="text-stone-500 font-mono flex items-center gap-1.5 mr-1 text-[11px]">
               <Filter className="w-3.5 h-3.5 text-stone-400" />
-              <span>{currentLang === 'fa' ? 'فیلتر:' : 'Filter:'}</span>
+              <span>{currentLang === 'fa' ? 'فیلتر:' : currentLang === 'fr' ? 'Filtre :' : currentLang === 'it' ? 'Filtro:' : currentLang === 'tr' ? 'Filtre:' : 'Filter:'}</span>
             </span>
             <button
               onClick={() => setFilterYear('all')}
@@ -1049,7 +1148,17 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                 : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
                 }`}
             >
-              {currentLang === 'fa' ? 'همه (۱۱ رقابت)' : 'Alle Wettbewerbe (11)'}
+              {currentLang === 'fa'
+                ? 'همه (۱۱ رقابت)'
+                : currentLang === 'de'
+                ? 'Alle Wettbewerbe (11)'
+                : currentLang === 'fr'
+                ? 'Tous les concours (11)'
+                : currentLang === 'it'
+                ? 'Tutti i concorsi (11)'
+                : currentLang === 'tr'
+                ? 'Tüm Yarışmalar (11)'
+                : 'All Competitions (11)'}
             </button>
             <button
               onClick={() => setFilterYear('2026')}
@@ -1135,9 +1244,15 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                     <span>
                       {currentLang === 'fa'
                         ? 'سایت رسمی مسابقه'
-                        : currentLang === 'en'
-                          ? 'Official Winners Directory'
-                          : 'Offizielles Gewinner-Verzeichnis'}
+                        : currentLang === 'de'
+                        ? 'Offizielles Gewinner-Verzeichnis'
+                        : currentLang === 'fr'
+                        ? 'Répertoire officiel des lauréats'
+                        : currentLang === 'it'
+                        ? 'Elenco ufficiale dei vincitori'
+                        : currentLang === 'tr'
+                        ? 'Resmi Kazananlar Dizini'
+                        : 'Official Winners Directory'}
                     </span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
@@ -1229,7 +1344,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                               <div
                                 onClick={() => handleArtworkClick(0)}
                                 className="relative aspect-[3/4] sm:aspect-[3/4] overflow-hidden bg-stone-900 group/img flex items-center justify-center cursor-pointer select-none"
-                                title={currentLang === 'de' ? 'Klicken für Vollbild-Ansicht' : currentLang === 'fa' ? 'کلیک برای مشاهده تمام‌صفحه' : 'Click for full view'}
+                                title={currentLang === 'de' ? 'Klicken für Vollbild-Ansicht' : currentLang === 'fa' ? 'کلیک برای مشاهده تمام‌صفحه' : currentLang === 'fr' ? 'Cliquer pour agrandir' : currentLang === 'it' ? 'Clicca per ingrandire' : currentLang === 'tr' ? 'Tam ekran için tıklayın' : 'Click for full view'}
                               >
                                 <img
                                   src={resolveAsset(thumbImg)}
@@ -1246,7 +1361,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                 <div className="absolute inset-0 bg-stone-950/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
                                   <div className="bg-white/95 backdrop-blur-xs text-stone-900 rounded-full px-3 py-1.5 shadow-lg flex items-center gap-1.5 text-xs font-mono font-semibold transform translate-y-2 group-hover/img:translate-y-0 transition-transform duration-300">
                                     <Eye className="w-3.5 h-3.5 text-amber-800" />
-                                    <span>{currentLang === 'fa' ? 'مشاهده بزرگ‌تر' : currentLang === 'en' ? 'Enlarge' : 'Großansicht'}</span>
+                                    <span>{currentLang === 'fa' ? 'مشاهده بزرگ‌تر' : currentLang === 'de' ? 'Großansicht' : currentLang === 'fr' ? 'Agrandir' : currentLang === 'it' ? 'Ingrandisci' : currentLang === 'tr' ? 'Büyüt' : 'Enlarge'}</span>
                                   </div>
                                 </div>
 
@@ -1257,7 +1372,15 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                     <span>
                                       {currentLang === 'fa'
                                         ? `${seriesPhotos.length} تصویر`
-                                        : `${seriesPhotos.length} Photos`}
+                                        : currentLang === 'de'
+                                          ? `${seriesPhotos.length} Fotos`
+                                          : currentLang === 'fr'
+                                            ? `${seriesPhotos.length} Photos`
+                                            : currentLang === 'it'
+                                              ? `${seriesPhotos.length} Foto`
+                                              : currentLang === 'tr'
+                                                ? `${seriesPhotos.length} Fotoğraf`
+                                                : `${seriesPhotos.length} Photos`}
                                     </span>
                                   </div>
                                 )}
@@ -1323,7 +1446,13 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                         ? `Photos der Serie (${seriesPhotos.length}):`
                                         : currentLang === 'fa'
                                           ? `تصاویر مجموعه (${seriesPhotos.length}):`
-                                          : `Series Photos (${seriesPhotos.length}):`}
+                                          : currentLang === 'fr'
+                                            ? `Photos de la série (${seriesPhotos.length}) :`
+                                            : currentLang === 'it'
+                                              ? `Foto della serie (${seriesPhotos.length}):`
+                                              : currentLang === 'tr'
+                                                ? `Seri Fotoğrafları (${seriesPhotos.length}):`
+                                                : `Series Photos (${seriesPhotos.length}):`}
                                     </span>
                                     <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
                                       {seriesPhotos.map((pSrc, pIdx) => (
@@ -1366,7 +1495,13 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                         ? `مشاهده سری · ${seriesPhotos.length} اثر ←`
                                         : currentLang === 'de'
                                           ? `Serie ansehen · ${seriesPhotos.length} Photos →`
-                                          : `View Series · ${seriesPhotos.length} Photos →`}
+                                          : currentLang === 'fr'
+                                            ? `Voir la série · ${seriesPhotos.length} Photos →`
+                                            : currentLang === 'it'
+                                              ? `Vedi serie · ${seriesPhotos.length} Foto →`
+                                              : currentLang === 'tr'
+                                                ? `Seriyi İncele · ${seriesPhotos.length} Fotoğraf →`
+                                                : `View Series · ${seriesPhotos.length} Photos →`}
                                     </span>
                                   </button>
                                 ) : (
@@ -1383,7 +1518,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-900 hover:bg-amber-800 text-white transition-colors text-xs font-mono font-semibold shrink-0 cursor-pointer shadow-2xs"
                                     title={currentLang === 'fa' ? 'مشاهده اثر رسمی' : currentLang === 'en' ? 'View Official Entry' : 'Werk ansehen'}
                                   >
-                                    <span>{currentLang === 'fa' ? 'مشاهده' : currentLang === 'en' ? 'View' : 'Ansehen'}</span>
+                                    <span>{currentLang === 'fa' ? 'مشاهده' : currentLang === 'de' ? 'Ansehen' : currentLang === 'fr' ? 'Voir' : currentLang === 'it' ? 'Visualizza' : currentLang === 'tr' ? 'Görüntüle' : 'View'}</span>
                                     <ExternalLink className="w-3 h-3" />
                                   </a>
                                 )}

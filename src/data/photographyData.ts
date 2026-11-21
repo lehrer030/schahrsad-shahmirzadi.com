@@ -38,15 +38,27 @@ export interface PhotoSeries {
   titleDe: string;
   titleEn: string;
   titleFa: string;
+  titleFr?: string;
+  titleIt?: string;
+  titleTr?: string;
   subtitleDe: string;
   subtitleEn: string;
   subtitleFa: string;
+  subtitleFr?: string;
+  subtitleIt?: string;
+  subtitleTr?: string;
   descriptionDe: string;
   descriptionEn: string;
   descriptionFa: string;
+  descriptionFr?: string;
+  descriptionIt?: string;
+  descriptionTr?: string;
   personalNoteDe?: string;
   personalNoteEn?: string;
   personalNoteFa?: string;
+  personalNoteFr?: string;
+  personalNoteIt?: string;
+  personalNoteTr?: string;
   coverImage: string;
   photos: PhotoItem[];
   badges: AwardBadge[];
@@ -81,9 +93,15 @@ export interface CategoryInfo {
   titleDe: string;
   titleEn: string;
   titleFa: string;
+  titleFr?: string;
+  titleIt?: string;
+  titleTr?: string;
   descriptionDe: string;
   descriptionEn: string;
   descriptionFa: string;
+  descriptionFr?: string;
+  descriptionIt?: string;
+  descriptionTr?: string;
 }
 
 export const CATEGORIES: CategoryInfo[] = [
@@ -92,54 +110,90 @@ export const CATEGORIES: CategoryInfo[] = [
     titleDe: 'Architektur',
     titleEn: 'Architecture',
     titleFa: 'معماری',
+    titleFr: 'Architecture',
+    titleIt: 'Architettura',
+    titleTr: 'Mimari',
     descriptionDe: 'Prämierte Architekturphotographien mit Schwerpunkt auf solitären Bauwerken und geometrischen Strukturen.',
     descriptionEn: 'Award-winning architectural photography focusing on solitary structures and geometric forms.',
-    descriptionFa: 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.'
+    descriptionFa: 'عکس‌های برگزیده معماری با تمرکز بر تک‌بناها و ساختارهای هندسی.',
+    descriptionFr: 'Photographies d’architecture primées mettant l’accent sur les structures solitaires et les formes géométriques.',
+    descriptionIt: 'Fotografie di architettura premiate con focus su strutture solitarie e forme geometriche.',
+    descriptionTr: 'Tekil yapılar ve geometrik formlara odaklanan ödüllü mimari fotoğrafçılık.'
   },
   {
     id: 'fine-art',
     titleDe: 'Fine Art',
     titleEn: 'Fine Art',
     titleFa: 'هنرهای زیبا (فاین آرت)',
+    titleFr: 'Beaux-Arts',
+    titleIt: 'Fine Art',
+    titleTr: 'Güzel Sanatlar',
     descriptionDe: 'Photographische Arbeiten im Bereich Fine Art und Bildkomposition.',
     descriptionEn: 'Photographic works in fine art and visual composition.',
-    descriptionFa: 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.'
+    descriptionFa: 'آثار عکاسی در حوزه هنرهای زیبا و ترکیب‌بندی تصویر.',
+    descriptionFr: 'Œuvres photographiques dans le domaine des beaux-arts et de la composition visuelle.',
+    descriptionIt: 'Opere fotografiche nel campo del fine art e della composizione visiva.',
+    descriptionTr: 'Güzel sanatlar ve görsel kompozisyon alanında sanatsal fotoğraf çalışmaları.'
   },
   {
     id: 'social-environmental',
     titleDe: 'Gesellschaft & Umwelt',
     titleEn: 'Social & Environmental Themes',
     titleFa: 'مضامین اجتماعی و زیست‌محیطی',
+    titleFr: 'Société & Environnement',
+    titleIt: 'Società & Ambiente',
+    titleTr: 'Toplum & Çevre',
     descriptionDe: 'Photographische Dokumentationen zu Menschenrechten, gesellschaftlichen Themen und Tierschutz.',
     descriptionEn: 'Photographic documentation on human rights, social issues, and animal welfare.',
-    descriptionFa: 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.'
+    descriptionFa: 'مستندسازی‌های عکاسی در حوزه حقوق بشر، موضوعات اجتماعی و حمایت از حیوانات.',
+    descriptionFr: 'Documentations photographiques sur les droits humains, les questions sociales et la protection animale.',
+    descriptionIt: 'Documentazioni fotografiche su diritti umani, tematiche sociali e tutela degli animali.',
+    descriptionTr: 'İnsan hakları, toplumsal meseleler ve hayvan hakları üzerine fotoğrafik belgesel çalışmalar.'
   },
   {
     id: 'portraits',
     titleDe: 'Porträts',
     titleEn: 'Portraits',
     titleFa: 'پرتره‌ها',
+    titleFr: 'Portraits',
+    titleIt: 'Ritratti',
+    titleTr: 'Portreler',
     descriptionDe: 'Photographische Porträts und Selbstporträts.',
     descriptionEn: 'Photographic portraits and self-portraits.',
-    descriptionFa: 'پرتره‌ها و خودنگاره‌های عکاسی.'
+    descriptionFa: 'پرتره‌ها و خودنگاره‌های عکاسی.',
+    descriptionFr: 'Portraits photographiques et autoportraits artistiques.',
+    descriptionIt: 'Ritratti fotografici e autoritratti artistici.',
+    descriptionTr: 'Fotoğrafik portreler ve sanatsal otoportreler.'
   },
   {
     id: 'biography',
     titleDe: 'Vita & Engagement',
     titleEn: 'Vita & Commitment',
     titleFa: 'زندگی‌نامه و تعهدات',
+    titleFr: 'Biographie & Engagement',
+    titleIt: 'Biografia & Impegno',
+    titleTr: 'Biyografi & Sosyal Sorumluluk',
     descriptionDe: 'Biografie, akademischer Werdegang, sportliche Erfolge im Kickboxen und soziales Engagement.',
     descriptionEn: 'Biography, academic career, kickboxing achievements, and community engagement.',
-    descriptionFa: 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.'
+    descriptionFa: 'زندگی‌نامه، پیشینه دانشگاهی، موفقیت‌های ورزشی در کیک‌بوکسینگ و فعالیت‌های اجتماعی.',
+    descriptionFr: 'Biographie, parcours universitaire, succès sportifs en kickboxing et engagement social.',
+    descriptionIt: 'Biografia, carriera accademica, successi sportivi nel kickboxing e impegno sociale.',
+    descriptionTr: 'Biyografi, akademik kariyer, kickboksta dünya şampiyonlukları ve toplumsal dayanışma.'
   },
   {
     id: 'press',
     titleDe: 'Presse & Medien',
     titleEn: 'Press & Media',
     titleFa: 'رسانه‌ها و مطبوعات',
+    titleFr: 'Presse & Médias',
+    titleIt: 'Stampa & Media',
+    titleTr: 'Basın & Medya',
     descriptionDe: 'Internationale Publikationen, Medienberichte und offizielle Auszeichnungskataloge.',
     descriptionEn: 'International publications, press features, and official award catalogues.',
-    descriptionFa: 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.'
+    descriptionFa: 'انتشارات بین‌المللی، گزارش‌های رسانه‌ای و کتاب‌های برگزیدگان مسابقات.',
+    descriptionFr: 'Publications internationales, articles de presse et catalogues officiels de concours.',
+    descriptionIt: 'Pubblicazioni internazionali, articoli di stampa e cataloghi ufficiali dei concorsi.',
+    descriptionTr: 'Uluslararası yayınlar, medya haberleri ve resmi ödül katalogları.'
   }
 ];
 
@@ -222,9 +276,51 @@ Her deliberate use of the traditional German spelling "Photographie," with "ph" 
 
 از دریچه عکاسی، او می‌تواند لحظه‌ای سرشار از تجربه زیسته را برای همیشه و ابدیت ثبت و ماندگار سازد — اندیشه‌ای والا که هر بار روح او را از نو به وجد می‌آورد.
 
-واژه عکاسی (Photographie) ریشه در زبان یونانی باستان دارد: φῶς (phōs)، به معنای «نور»، و γράφειν (gráphein)، به معنای «نگاشتن یا رسم کردن». در تعبیر نمادین، این هنر به مفهوم «نقاشی و نگارش با نور» است.
+واژه عکاسی (Photographie) ریشه در زبان یونانی باستان دارد: φῶς (phōs)، به معنای «نور»، و γράفειν (gráphein)، به معنای «نگاشتن یا رسم کردن». در تعبیر نمادین، این هنر به مفهوم «نقاشی و نگارش با نور» است.
 
-انتخاب آگاهانه املای سنتی و تاریخی آلمانی «Photographie» با حروف «ph» به جای «f»، بازتابی مستقیم از این خاستگاه کهن است تا پیوند زنده با تاریخچه این رسانه همواره مشهود مانده و بر رویکرد هوشمندانه و هنرمندانه او با عنصر نور تأکید ورزد.`
+انتخاب آگاهانه املای سنتی و تاریخی آلمانی «Photographie» با حروف «ph» به جای «f»، بازتابی مستقیم از این خاستگاه کهن است تا پیوند زنده با تاریخچه این رسانه همواره مشهود مانده و بر رویکرد هوشمندانه و هنرمندانه او با عنصر نور تأکید ورزد.`,
+  artistExplanationFr: `Schahrsad Shahmirzadi présente sa photographie et son art sous son nom d'artiste SchirZan. Le nom provient du persan et associe deux mots :
+
+• Shir (شیر), signifiant « lion »
+• Zan (زن), signifiant « femme »
+
+Ensemble, « SchirZan » évoque la « femme-lionne » ou « lionne » et incarne le courage d’emprunter sa propre voie et de repousser les limites.
+
+Pour elle, « SchirZan » représente également un engagement profond à soutenir les personnes défavorisées, à donner de la visibilité à leurs voix et à défendre la justice, l'égalité et l'humanité.
+
+À travers la photographie, elle immortalise l'expérience vécue pour l'éternité — une inspiration qui renouvelle sa passion à chaque prise de vue.
+
+Le terme « photographie » puise son origine dans le grec ancien : φῶς (phōs), qui signifie « lumière », et γράφειν (gráphein), qui signifie « écrire » ou « dessiner ». Au sens propre comme figuré, il s'agit de « dessiner avec la lumière ».
+
+Son choix délibéré de l'orthographe historique « Photographie » avec « ph » plutôt que « f » témoigne de cet enracinement dans l'histoire visuelle et affirme son travail exigeant et artistique avec la lumière.`,
+  artistExplanationIt: `Schahrsad Shahmirzadi presenta la sua fotografia e la sua arte con il suo nome d'arte SchirZan. Il nome proviene dal persiano e unisce due parole:
+
+• Shir (شیر), che significa «leone»
+• Zan (زن), che significa «donna»
+
+Insieme, «SchirZan» esprime la «donna-leonessa» o «leonessa», incarnando il coraggio di forgiare il proprio cammino e sfidare le convenzioni.
+
+Per lei, «SchirZan» rappresenta anche l'impegno costante a favore dei più deboli, per dare risalto alla loro voce e sostenere la giustizia, l'uguaglianza e l'umanità.
+
+Attraverso la fotografia, preserva per l'eternità un istante di vita vissuta — una visione che la emoziona profondamente ogni volta.
+
+Il termine «fotografia» trae origine dal greco antico: φῶς (phōs), «luce», e γράφειν (gráphein), «scrivere» o «disegnare». In senso figurato, significa «disegnare con la luce».
+
+La scelta accurata della grafia storica «Photographie» con «ph» anziché «f» rispecchia questa nobile genesi, rendendo tangibile il legame con la storia dell'arte visiva e celebrando la luce come materia poetica.`,
+  artistExplanationTr: `Schahrsad Shahmirzadi, fotoğraf ve sanat çalışmalarını sanatçı ismi olan SchirZan çatısı altında sunmaktadır. Bu isim Farsçadan doğmuş olup iki sözcüğün birleşiminden oluşur:
+
+• Şir (شیر), «aslan» anlamına gelir
+• Zen (زن), «kadın» anlamına gelir
+
+Birlikte «SchirZan», «dişi aslan» veya «aslan yürekli kadın» anlamına gelerek kişinin kendi bağımsız rotasını çizme cesaretini simgeler.
+
+Sanatçı için «SchirZan», aynı zamanda toplumda dezavantajlı durumda olanların yanında durma, onların sesini görünür kılma; adalet, eşitlik ve insan onurunu savunma misyonunu temsil eder.
+
+Fotoğraf sanatı vasıtasıyla, hayatın içinden süzülen bir deneyim ânını sonsuzluğa armağan eder — bu düşünce onun her deklanşöre basışında ruhuna ilham verir.
+
+«Fotoğraf» (Photographie) kelimesi Antik Yunanca kökenlidir: φῶς (phōs - ışık) ve γράφειν (gráphein - yazmak veya çizmek). Mecazi derinliğiyle «ışıkla resmetmek» anlamını taşır.
+
+Geleneksel «ph» harfleriyle «Photographie» yazımını titizlikle sürdürmesi, sanat medyumunun köklü geçmişine olan saygısını ve ışığı bilinçli bir estetik güç olarak işleme kararlılığını vurgular.`
 };
 
 export const SOLITAIRE_SERIES_1: PhotoSeries = {
@@ -233,12 +329,21 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   titleDe: 'Der Solitär als Abstraktion – Im Einklang mit der Natur',
   titleEn: 'The Solitaire as Abstraction – In Harmony with Nature',
   titleFa: 'The Solitaire as Abstraction – In Harmony with Nature (تک‌بنا به مثابه انتزاع – در هماهنگی با طبیعت)',
+  titleFr: 'Le Solitaire comme Abstraction – En Harmonie avec la Nature',
+  titleIt: 'Il Solitario come Astrazione – In Armonia con la Natura',
+  titleTr: 'Soyutlama Olarak Tek Yapı – Doğa ile Uyum İçinde',
   subtitleDe: 'Architektur · Sonstige Außenaufnahmen · 7 Werke',
   subtitleEn: 'Architecture · Other Exterior · 7 Works',
   subtitleFa: 'معماری · سازه‌های بیرونی · ۷ اثر',
+  subtitleFr: 'Architecture · Autres Vues Extérieures · 7 Œuvres',
+  subtitleIt: 'Architettura · Altri Esterni · 7 Opere',
+  subtitleTr: 'Mimari · Diğer Dış Mekanlar · 7 Eser',
   descriptionDe: `Diese Serie transformiert eine solitäre urbane Fassade in ein abstraktes Bekenntnis zu Individualität und Harmonie mit der Natur. Jedes Bild erforscht eine andere Facette von Geometrie, Licht und Perspektive – und offenbart, wie architektonische Form mit dem Himmel und der Umgebung verschmilzt. Das Wechselspiel klarer Linien, wandernder Schatten und subtiler Reflexionen lässt den »Solitär« zwischen materieller Präzision und poetischer Abstraktion oszillieren. Durch Minimalismus und rhythmische Komposition ist der Betrachter eingeladen, nicht nur die innere Ordnung der Struktur, sondern auch ihren unerwarteten Dialog mit der natürlichen Welt zu entdecken.`,
   descriptionEn: `This series transforms a singular urban facade into an abstract statement of individuality and harmony with nature. Each image explores a different facet of geometry, light, and perspective— revealing how architectural form merges with the sky and environment. The interplay of crisp lines, shifting shadows, and subtle reflections allows the “solitaire” to oscillate between material precision and poetic abstraction. Through minimalism and rhythmic composition, the viewer is invited to discover not only the structure’s inner order but also its unexpected dialogue with the natural world.`,
   descriptionFa: `این مجموعه عکاسی، ساختار یک بنای منفرد شهری را به بیانیه‌ای انتزاعی از فردیت و هماهنگی با طبیعت بدل می‌سازد. هر اثر زاویه‌ای نو از هندسه، نور و پرسپکتیو را می‌کاود.`,
+  descriptionFr: `Cette série transforme une façade urbaine solitaire en une ode abstraite à l’individualité et à l’harmonie avec la nature. Chaque photographie explore une facette distincte de la géométrie, de la lumière et du point de vue, dévoilant comment la forme architecturale fusionne avec le ciel et le paysage environnant. Le jeu subtil de lignes précises, d’ombres mouvantes et de reflets fait osciller le « solitaire » entre rigueur plastique et poésie architecturale.`,
+  descriptionIt: `Questa serie trasforma una facciata urbana solitaria in un manifesto astratto di individualità e armonia con la natura. Ogni immagine esplora una sfaccettatura differente di geometria, luce e prospettiva, svelando come la forma architettonica si fonde con il cielo e l'ambiente. Il dialogo tra linee decise, ombre mobili e riflessi luminosi fa oscillare il «solitario» tra precisione materica e astrazione poetica.`,
+  descriptionTr: `Bu seri, tekil bir kentsel cepheyi bireysellik ve doğayla uyumun soyut bir manifestosuna dönüştürüyor. Her kare geometri, ışık ve perspektifin farklı bir katmanını keşfederek mimari yapının gökyüzü ve çevreyle nasıl kaynaştığını açığa çıkarıyor. Keskin hatların, dinamik gölgelerin ve zarif yansımaların oyunu, «tekil yapıyı» geometrik disiplin ile şiirsel soyutlama arasında buluşturuyor.`,
   coverImage: '/images/wetransfer/solitaire_harmony_01.webp',
   badges: [
     {
@@ -358,15 +463,27 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   titleDe: 'Der Solitär als Abstraktion – Überarbeitete Fassung',
   titleEn: 'The Solitaire as an Abstraction (Revised)',
   titleFa: 'The Solitaire as an Abstraction (Revised) – تک‌بنا به مثابه انتزاع، نسخه بازنگری‌شده',
+  titleFr: 'The Solitaire as an Abstraction (Version Révisée)',
+  titleIt: 'The Solitaire as an Abstraction (Versione Revisionata)',
+  titleTr: 'The Solitaire as an Abstraction (Yenilenmiş Seri)',
   subtitleDe: 'Architektur · Abstrakt · 5 Werke',
   subtitleEn: 'Architecture · Abstract · 5 Works',
   subtitleFa: 'معماری · انتزاعی · ۵ اثر',
+  subtitleFr: 'Architecture · Abstrait · 5 Œuvres',
+  subtitleIt: 'Architettura · Astratto · 5 Opere',
+  subtitleTr: 'Mimari · Soyut · 5 Eser',
   descriptionDe: `Diese Serie wurde für IPA 2026 neu überarbeitet. Sie fängt moderne urbane Architektur im Spiel von Licht und Schatten ein. Klare Linien, geometrische Strukturen und markante Perspektiven vermitteln sowohl Energie als auch Ästhetik. Reflexionen und das Zusammenspiel von Gebäude und Himmel schaffen Tiefe und laden zum Erkunden ein, während sorgfältig gewählte Blickwinkel eine Spannung zwischen Strenge und Leichtigkeit offenbaren. Die Serie, präsentiert in verschiedenen Versionen, wurde mehrfach bei internationalen Photographie-Preisen ausgezeichnet.`,
   descriptionEn: `This series has been newly reworked for IPA 2026. It captures modern urban architecture in a play of light and shadow. Clear lines, geometric structures, and distinctive perspectives convey both energy and aesthetics. Reflections and the interplay between building and sky create depth and invite exploration, while carefully chosen angles reveal a tension between rigor and lightness. The series, presented in different versions, has been honored multiple times at international photography awards.`,
   descriptionFa: `این مجموعه برای مسابقات IPA 2026 بازنگری شده است. خطوط دقیق، تقارن و بازتاب‌های آسمان، گفت‌وگویی زنده میان معماری شهری و فضای بیکران خلق می‌کنند.`,
+  descriptionFr: `Cette série a été remaniée pour l'IPA 2026. Elle capte l'architecture urbaine contemporaine dans un dialogue virtuose entre ombre et lumière. Des lignes nettes, des structures géométriques et des perspectives saisissantes expriment à la fois énergie et pureté esthétique. Les reflets et l'interaction entre l'édifice et le ciel créent une profondeur qui invite à l'exploration, tandis que les angles choisis avec rigueur révèlent une tension constante entre gravité et légèreté. Cette série a été récompensée à plusieurs reprises lors de concours photographiques internationaux majeurs.`,
+  descriptionIt: `Questa serie è stata rielaborata per l'IPA 2026. Cattura l'architettura urbana moderna nel gioco di luce e ombra. Linee chiare, strutture geometriche e prospettive marcate trasmettono al contempo energia ed estetica. I riflessi e l'interazione tra edificio e cielo creano profondità e invitano all'esplorazione, mentre gli angoli attentamente scelti svelano una tensione tra rigore e leggerezza. La serie è stata più volte premiata a livello internazionale.`,
+  descriptionTr: `Bu seri, IPA 2026 için özel olarak yeniden düzenlendi. Modern kentsel mimariyi ışık ve gölgenin büyüleyici oyununda yakalar. Net çizgiler, geometrik yapılar ve çarpıcı perspektifler hem enerjiyi hem de estetik zarafeti yansıtır. Yapı ile gökyüzü arasındaki yansımalar ve etkileşim, derinlik yaratarak izleyiciyi keşfe davet ederken, titizlikle seçilen açılar katı düzen ile hafiflik arasındaki gerilimi ortaya koyar. Seri, önde gelen uluslararası fotoğraf ödüllerinde defalarca ödüle layık görülmüştür.`,
   personalNoteDe: 'Persönliche Anmerkung: The Solitaire as an Abstraction entstand am Vatertag, dem 29. Mai 2025, in Berlin-Halensee und ist meinem Vater Kh. Shahmirzadi gewidmet.',
   personalNoteEn: 'Personal Note: The Solitaire as an Abstraction was created on Father’s Day, May 29, 2025, in Berlin-Halensee and is dedicated to my father, Kh. Shahmirzadi.',
   personalNoteFa: 'یادداشت و تقدیم شخصی: مجموعه The Solitaire as an Abstraction در روز پدر، ۲۹ مه ۲۰۲۵، در برلین-هالنزه‌ خلق شد و به پدرم خ. شاهمیرزادی تقدیم گردیده است.',
+  personalNoteFr: 'Note personnelle : The Solitaire as an Abstraction a été créée le jour de la fête des pères, le 29 mai 2025, à Berlin-Halensee et est dédiée à mon père, Kh. Shahmirzadi.',
+  personalNoteIt: 'Nota personale: The Solitaire as an Abstraction è stata creata il giorno della festa del papà, il 29 maggio 2025, a Berlino-Halensee ed è dedicata a mio padre, Kh. Shahmirzadi.',
+  personalNoteTr: 'Kişisel Not: The Solitaire as an Abstraction, 29 Mayıs 2025 Babalar Günü’nde Berlin-Halensee’de çekilmiş olup sevgili babam Kh. Shahmirzadi’ye ithaf edilmiştir.',
   coverImage: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
   badges: [
     {
@@ -2417,12 +2534,21 @@ export interface EducationMilestone {
   fieldDe: string;
   fieldEn: string;
   fieldFa: string;
+  fieldFr?: string;
+  fieldIt?: string;
+  fieldTr?: string;
   institutionDe: string;
   institutionEn: string;
   institutionFa: string;
+  institutionFr?: string;
+  institutionIt?: string;
+  institutionTr?: string;
   degreeDe: string;
   degreeEn: string;
   degreeFa: string;
+  degreeFr?: string;
+  degreeIt?: string;
+  degreeTr?: string;
 }
 
 export const ACADEMIC_MILESTONES: EducationMilestone[] = [
@@ -2431,60 +2557,105 @@ export const ACADEMIC_MILESTONES: EducationMilestone[] = [
     fieldDe: 'Abitur',
     fieldEn: 'Abitur / High School Graduation',
     fieldFa: 'دیپلم دبیرستان (Abitur)',
+    fieldFr: 'Baccalauréat (Abitur)',
+    fieldIt: 'Maturità (Abitur)',
+    fieldTr: 'Lise Diploması (Abitur)',
     institutionDe: 'Ev. Gymnasium zum Grauen Kloster Berlin',
     institutionEn: 'Evangelisches Gymnasium zum Grauen Kloster Berlin',
     institutionFa: 'کالج مشهور گراوئن کلوستر برلین',
+    institutionFr: 'Ev. Gymnasium zum Grauen Kloster Berlin',
+    institutionIt: 'Ev. Gymnasium zum Grauen Kloster Berlino',
+    institutionTr: 'Ev. Gymnasium zum Grauen Kloster Berlin',
     degreeDe: 'Abitur erfolgreich bestanden',
     degreeEn: 'Successfully graduated (Abitur)',
-    degreeFa: 'اخذ مدرک دیپلم متوسطه با موفقیت'
+    degreeFa: 'اخذ مدرک دیپلم متوسطه با موفقیت',
+    degreeFr: 'Diplôme de fin d’études secondaires obtenu avec succès',
+    degreeIt: 'Maturità conseguita con successo',
+    degreeTr: 'Abitur lise diploması başarıyla tamamlandı'
   },
   {
     period: '2005–2010',
     fieldDe: 'Rechtswissenschaften',
     fieldEn: 'Law / Jurisprudence',
     fieldFa: 'رشته حقوق و علوم قضایی',
+    fieldFr: 'Sciences Juridiques / Droit',
+    fieldIt: 'Giurisprudenza / Diritto',
+    fieldTr: 'Hukuk Eğitimi',
     institutionDe: 'Freie Universität Berlin FU',
     institutionEn: 'Free University of Berlin FU',
     institutionFa: 'دانشگاه آزاد برلین FU',
+    institutionFr: 'Université Libre de Berlin (FU)',
+    institutionIt: 'Freie Universität Berlin (FU)',
+    institutionTr: 'Berlin Özgür Üniversitesi (FU)',
     degreeDe: 'Grundstudium erfolgreich abgeschlossen, Wechsel aufgrund privater und leistungssportlicher Gründe',
     degreeEn: 'Undergraduate legal studies completed, transition due to elite sports career',
-    degreeFa: 'اتمام موفقیت‌آمیز دوره پایه حقوق و انتقال به دلیل تعهدات ورزش حرفه‌ای'
+    degreeFa: 'اتمام موفقیت‌آمیز دوره پایه حقوق و انتقال به دلیل تعهدات ورزش حرفه‌ای',
+    degreeFr: 'Premier cycle validé avec succès, transition motivée par la carrière sportive d’élite',
+    degreeIt: 'Studi universitari di base completati con successo, passaggio dovuto alla carriera sportiva d’élite',
+    degreeTr: 'Lisans temel eğitimi başarıyla tamamlandı, profesyonel spor kariyeri nedeniyle geçiş yapıldı'
   },
   {
     period: '2009–2010',
     fieldDe: 'Polizeiausbildung',
     fieldEn: 'Police Academy Training',
     fieldFa: 'دوره آموزش حرفه‌ای پلیس',
+    fieldFr: 'Formation des Cadres de Police',
+    fieldIt: 'Formazione Accademia di Polizia',
+    fieldTr: 'Polis Akademisi Eğitimi',
     institutionDe: 'Polizei Berlin',
     institutionEn: 'Berlin Police Department',
     institutionFa: 'پلیس برلین',
+    institutionFr: 'Police de Berlin',
+    institutionIt: 'Polizia di Berlino',
+    institutionTr: 'Berlin Polisi',
     degreeDe: 'Nach einjähriger Polizeiausbildung nach Bestenauslese: Wechsel zum Polizeistudium',
     degreeEn: 'After 1-year training selected on merit: transfer to police degree studies',
-    degreeFa: 'پس از یک سال آموزش بر اساس گزینش نخبگان: ورود به دوره عالی تحصیلات پلیس'
+    degreeFa: 'پس از یک سال آموزش بر اساس گزینش نخبگان: ورود به دوره عالی تحصیلات پلیس',
+    degreeFr: 'Après un an de formation par sélection des meilleurs : passage aux études supérieures de police',
+    degreeIt: 'Dopo un anno di formazione con selezione per merito: passaggio agli studi superiori di polizia',
+    degreeTr: 'Üstün başarı ve liyakatle tamamlanan bir yıllık eğitimin ardından polis lisans programına geçiş'
   },
   {
     period: '2010–2013',
     fieldDe: 'Diplomverwaltungswirtin – Polizeivollzugsdienst',
     fieldEn: 'Diploma in Public Administration – Police Service',
     fieldFa: 'دانشنامه مدیریت خدمات دولتی – نیروی انتظامی',
+    fieldFr: 'Diplôme en Administration Publique – Police Opérationnelle',
+    fieldIt: 'Laurea in Amministrazione Pubblica – Servizio Operativo di Polizia',
+    fieldTr: 'Kamu Yönetimi Diploması – Emniyet Hizmetleri',
     institutionDe: 'Hochschule für Wirtschaft und Recht Berlin HWR',
     institutionEn: 'Berlin School of Economics and Law HWR',
     institutionFa: 'دانشگاه اقتصاد و حقوق برلین HWR',
+    institutionFr: 'École Supérieure d’Économie et de Droit de Berlin (HWR)',
+    institutionIt: 'Scuola di Economia e Diritto di Berlino (HWR)',
+    institutionTr: 'Berlin Ekonomi ve Hukuk Fakültesi (HWR)',
     degreeDe: 'Diplomverwaltungswirtin im Polizeivollzugsdienst erfolgreich abgeschlossen',
     degreeEn: 'Graduated as Diplom-Verwaltungswirtin in the Police Service',
-    degreeFa: 'اخذ دانشنامه رسمی Diplomverwaltungswirtin در خدمات پلیس با موفقیت'
+    degreeFa: 'اخذ دانشنامه رسمی Diplomverwaltungswirtin در خدمات پلیس با موفقیت',
+    degreeFr: 'Diplôme d’administratrice publique dans les services de police opérationnelle obtenu avec succès',
+    degreeIt: 'Diploma di funzionario amministrativo nei servizi operativi di polizia conseguito con successo',
+    degreeTr: 'Emniyet teşkilatı kamu yöneticiliği diploması başarıyla tamamlandı'
   },
   {
     period: 'Seit 2024',
     fieldDe: 'Laufendes Masterstudium: Angewandte Umweltwissenschaften (Fernstudium)',
     fieldEn: 'Ongoing Master’s Programme: Applied Environmental Sciences (Distance Learning)',
     fieldFa: 'تحصیلات جاری کارشناسی ارشد: علوم کاربردی محیط زیست · آموزش مجازی',
+    fieldFr: 'Master en cours : Sciences Appliquées de l’Environnement (Formation à distance)',
+    fieldIt: 'Master in corso: Scienze Ambientali Applicate (Formazione a distanza)',
+    fieldTr: 'Devam Eden Yüksek Lisans: Uygulamalı Çevre Bilimleri (Uzaktan Eğitim)',
     institutionDe: 'Universität Koblenz – ZFUW: Zentrum für Fernstudien und Universitäre Weiterbildung',
     institutionEn: 'University of Koblenz – Centre for Distance Studies and Further Education ZFUW',
     institutionFa: 'دانشگاه کوبلنتس – مرکز آموزش‌های مجازی و تکمیلی دانشگاهی ZFUW',
+    institutionFr: 'Université de Coblence – Centre d’études à distance et de formation continue ZFUW',
+    institutionIt: 'Università di Coblenza – Centro per gli studi a distanza e la formazione continua ZFUW',
+    institutionTr: 'Koblenz Üniversitesi – Uzaktan Eğitim ve Üniversite İhtisas Merkezi ZFUW',
     degreeDe: 'Laufendes Studium, kurz vor dem Masterabschluss (M.Sc.) · Seit 2024 · Derzeit im 5. Semester (Stand: November 2026)',
     degreeEn: 'Ongoing studies, nearing Master’s completion (M.Sc.) · Since 2024 · Currently in 5th Semester (as of November 2026)',
-    degreeFa: 'تحصیلات جاری، در آستانه فارغ‌التحصیلی مقطع کارشناسی ارشد (M.Sc.) · از ۲۰۲۴ · در حال حاضر در ترم ۵ (نوامبر ۲۰۲۶)'
+    degreeFa: 'تحصیلات جاری، در آستانه فارغ‌التحصیلی مقطع کارشناسی ارشد (M.Sc.) · از ۲۰۲۴ · در حال حاضر در ترم ۵ (نوامبر ۲۰۲۶)',
+    degreeFr: 'Études en cours, finalisation imminente du Master (M.Sc.) · Depuis 2024 · Actuellement au 5e semestre',
+    degreeIt: 'Studi in corso, prossimo al conseguimento del Master (M.Sc.) · Dal 2024 · Attualmente al 5° semestre',
+    degreeTr: 'Eğitim devam ediyor, Master (M.Sc.) mezuniyeti aşamasında · 2024’ten beri · Şu anda 5. sömestrde'
   }
 ];
 

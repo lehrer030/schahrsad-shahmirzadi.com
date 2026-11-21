@@ -94,6 +94,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.subtitleDe
                 : currentLang === 'fa'
                 ? series.subtitleFa
+                : currentLang === 'fr'
+                ? (series.subtitleFr || series.subtitleEn)
+                : currentLang === 'it'
+                ? (series.subtitleIt || series.subtitleEn)
+                : currentLang === 'tr'
+                ? (series.subtitleTr || series.subtitleEn)
                 : series.subtitleEn}
             </span>
             <h2 className="text-base sm:text-xl font-serif text-stone-900 font-bold truncate">
@@ -101,9 +107,26 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.titleDe
                 : currentLang === 'fa'
                 ? series.titleFa
+                : currentLang === 'fr'
+                ? (series.titleFr || series.titleEn)
+                : currentLang === 'it'
+                ? (series.titleIt || series.titleEn)
+                : currentLang === 'tr'
+                ? (series.titleTr || series.titleEn)
                 : series.titleEn}{' '}
               <span className="text-stone-500 font-sans font-normal text-xs sm:text-sm">
-                · {series.photos.length} {currentLang === 'de' ? 'Werke' : currentLang === 'fa' ? 'اثر' : 'Works'}
+                · {series.photos.length}{' '}
+                {currentLang === 'de'
+                  ? 'Werke'
+                  : currentLang === 'fa'
+                  ? 'اثر'
+                  : currentLang === 'fr'
+                  ? 'Œuvres'
+                  : currentLang === 'it'
+                  ? 'Opere'
+                  : currentLang === 'tr'
+                  ? 'Eser'
+                  : 'Works'}
               </span>
             </h2>
           </div>
@@ -111,10 +134,20 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           <button
             onClick={onBack}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 bg-stone-100 hover:bg-stone-200 text-stone-800 hover:text-stone-950 rounded-full text-xs font-semibold tracking-wider transition-colors cursor-pointer shrink-0"
-            aria-label={currentLang === 'de' ? 'Zurück' : currentLang === 'fa' ? 'بازگشت' : 'Back'}
+            aria-label={currentLang === 'de' ? 'Zurück' : currentLang === 'fa' ? 'بازگشت' : currentLang === 'fr' ? 'Retour' : currentLang === 'it' ? 'Indietro' : currentLang === 'tr' ? 'Geri' : 'Back'}
           >
             <span>
-              {currentLang === 'de' ? 'Zurück' : currentLang === 'fa' ? 'بازگشت' : 'Back'}
+              {currentLang === 'de'
+                ? 'Zurück'
+                : currentLang === 'fa'
+                ? 'بازگشت'
+                : currentLang === 'fr'
+                ? 'Retour'
+                : currentLang === 'it'
+                ? 'Indietro'
+                : currentLang === 'tr'
+                ? 'Geri'
+                : 'Back'}
             </span>
             <X className="w-4 h-4" />
           </button>
@@ -130,6 +163,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.subtitleDe
                 : currentLang === 'fa'
                 ? series.subtitleFa
+                : currentLang === 'fr'
+                ? (series.subtitleFr || series.subtitleEn)
+                : currentLang === 'it'
+                ? (series.subtitleIt || series.subtitleEn)
+                : currentLang === 'tr'
+                ? (series.subtitleTr || series.subtitleEn)
                 : series.subtitleEn}
             </span>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif text-stone-900 mt-1 leading-tight font-bold">
@@ -137,6 +176,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.titleDe
                 : currentLang === 'fa'
                 ? series.titleFa
+                : currentLang === 'fr'
+                ? (series.titleFr || series.titleEn)
+                : currentLang === 'it'
+                ? (series.titleIt || series.titleEn)
+                : currentLang === 'tr'
+                ? (series.titleTr || series.titleEn)
                 : series.titleEn}
             </h1>
           </div>
@@ -148,15 +193,27 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                 ? series.descriptionDe
                 : currentLang === 'fa'
                 ? series.descriptionFa
+                : currentLang === 'fr'
+                ? (series.descriptionFr || series.descriptionEn)
+                : currentLang === 'it'
+                ? (series.descriptionIt || series.descriptionEn)
+                : currentLang === 'tr'
+                ? (series.descriptionTr || series.descriptionEn)
                 : series.descriptionEn}
             </p>
 
-            {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn) && (
+            {(series.personalNoteDe || series.personalNoteFa || series.personalNoteEn || series.personalNoteFr || series.personalNoteIt || series.personalNoteTr) && (
               <div className="pt-3 border-t border-stone-100 text-sm text-stone-700 italic font-serif">
                 {currentLang === 'de'
                   ? series.personalNoteDe
                   : currentLang === 'fa'
                   ? series.personalNoteFa
+                  : currentLang === 'fr'
+                  ? (series.personalNoteFr || series.personalNoteEn)
+                  : currentLang === 'it'
+                  ? (series.personalNoteIt || series.personalNoteEn)
+                  : currentLang === 'tr'
+                  ? (series.personalNoteTr || series.personalNoteEn)
                   : series.personalNoteEn}
               </div>
             )}
@@ -168,6 +225,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   ? 'Urheberschaft: Schahrsad Shahmirzadi · SchirZan'
                   : currentLang === 'fa'
                   ? 'مالکیت اثر: شهزاد شاهمیرزادی · شیرزن'
+                  : currentLang === 'fr'
+                  ? 'Droits d’auteur : Schahrsad Shahmirzadi · SchirZan'
+                  : currentLang === 'it'
+                  ? 'Diritti d’autore: Schahrsad Shahmirzadi · SchirZan'
+                  : currentLang === 'tr'
+                  ? 'Telif Hakkı: Schahrsad Shahmirzadi · SchirZan'
                   : 'Copyright: Schahrsad Shahmirzadi · SchirZan'}
               </span>
             </div>
@@ -184,6 +247,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                     ? 'Hauptwerk · Bild 01 · Prämiert'
                     : currentLang === 'fa'
                     ? 'اثر اصلی · تصویر ۰۱ · برنده جوایز'
+                    : currentLang === 'fr'
+                    ? 'Œuvre principale · Image 01 · Primée'
+                    : currentLang === 'it'
+                    ? 'Opera principale · Immagine 01 · Premiata'
+                    : currentLang === 'tr'
+                    ? 'Ana Eser · Görsel 01 · Ödüllü'
                     : 'Lead Work · Image 01 · Awarded'}
                 </span>
                 <span>
@@ -251,6 +320,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                       ? `Bild 0${index + 2}`
                       : currentLang === 'fa'
                       ? `تصویر ۰${index + 2}`
+                      : currentLang === 'fr'
+                      ? `Image 0${index + 2}`
+                      : currentLang === 'it'
+                      ? `Immagine 0${index + 2}`
+                      : currentLang === 'tr'
+                      ? `Görsel 0${index + 2}`
                       : `Image 0${index + 2}`}
                   </span>
                   <span>
@@ -309,6 +384,12 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   ? 'Zurück'
                   : currentLang === 'fa'
                   ? 'بازگشت'
+                  : currentLang === 'fr'
+                  ? 'Retour'
+                  : currentLang === 'it'
+                  ? 'Indietro'
+                  : currentLang === 'tr'
+                  ? 'Geri'
                   : 'Back'}
               </span>
             </button>
