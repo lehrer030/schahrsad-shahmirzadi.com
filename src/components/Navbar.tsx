@@ -22,6 +22,16 @@ interface NavbarProps {
   onOpenContact: () => void;
 }
 
+// Supported Languages in order: DE, EN, Farsi, FR, IT, TR
+export const APP_LANGUAGES: { code: Language; label: string; title: string }[] = [
+  { code: 'de', label: 'DE', title: 'Deutsch' },
+  { code: 'en', label: 'EN', title: 'English' },
+  { code: 'fa', label: 'فارسی', title: 'فارسی (Persian)' },
+  { code: 'fr', label: 'FR', title: 'Français' },
+  { code: 'it', label: 'IT', title: 'Italiano' },
+  { code: 'tr', label: 'TR', title: 'Türkçe' }
+];
+
 // Automatische Steuerung des Spendenlauf-Banners anhand des Datums:
 // Der Berliner Halbmarathon 2027 findet im April 2027 statt.
 // Sobald dieses Datum überschritten ist, blendet sich der obere rote Banner vollautomatisch aus.
@@ -300,6 +310,30 @@ export const Navbar: React.FC<NavbarProps> = ({
   const getHeaderItemLabel = (item: OriginalMenuItem) => {
     if (currentLang === 'de') return item.shortDe;
     if (currentLang === 'fa') return item.shortFa;
+    if (currentLang === 'fr') {
+      const map: Record<string, string> = {
+        works: 'Photographie', 'award-references': 'Prix', exhibitions: 'Expositions',
+        publications: 'Publications', press: 'Presse', kickboxing: 'Kickboxing',
+        biography: 'Biographie', education: 'Formation', engagement: 'Engagement', gallery: 'Galerie'
+      };
+      return map[item.id] || item.shortEn;
+    }
+    if (currentLang === 'it') {
+      const map: Record<string, string> = {
+        works: 'Fotografia', 'award-references': 'Premi', exhibitions: 'Mostre',
+        publications: 'Pubblicazioni', press: 'Stampa', kickboxing: 'Kickboxing',
+        biography: 'Biografia', education: 'Formazione', engagement: 'Impegno', gallery: 'Galleria'
+      };
+      return map[item.id] || item.shortEn;
+    }
+    if (currentLang === 'tr') {
+      const map: Record<string, string> = {
+        works: 'Fotoğrafçılık', 'award-references': 'Ödüller', exhibitions: 'Sergiler',
+        publications: 'Yayınlar', press: 'Basın', kickboxing: 'Kickboks',
+        biography: 'Biyografi', education: 'Eğitim', engagement: 'Sosyal Sorumluluk', gallery: 'Galeri'
+      };
+      return map[item.id] || item.shortEn;
+    }
     return item.shortEn;
   };
 
@@ -413,49 +447,28 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </button>
 
-          {/* Desktop Right Tools: Language Switcher (DE / EN / FA) & Contact (visible on lg+) */}
-          <div className="hidden lg:flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
-            {/* Trilingual Switcher (DE / EN / FA) */}
+          {/* Desktop Right Tools: Language Switcher (DE / EN / FA / FR / IT / TR) & Contact (visible on lg+) */}
+          <div className="hidden lg:flex items-center space-x-2 rtl:space-x-reverse shrink-0">
+            {/* Multilingual Switcher: DE, EN, Farsi, FR, IT, TR */}
             <div className={`flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs transition-all ${
               isScrolled ? 'scale-90 sm:scale-95' : 'scale-100'
             }`}>
               <Globe className="w-3.5 h-3.5 text-stone-400 ml-1.5 mr-0.5 shrink-0" />
-              <button
-                type="button"
-                onClick={() => onToggleLang('de')}
-                className={`px-2 py-0.5 rounded text-xs transition-all cursor-pointer ${
-                  currentLang === 'de'
-                    ? 'bg-stone-900 text-white font-semibold'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-                title="Deutsch"
-              >
-                DE
-              </button>
-              <button
-                type="button"
-                onClick={() => onToggleLang('en')}
-                className={`px-2 py-0.5 rounded text-xs transition-all cursor-pointer ${
-                  currentLang === 'en'
-                    ? 'bg-stone-900 text-white font-semibold'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-                title="English"
-              >
-                EN
-              </button>
-              <button
-                type="button"
-                onClick={() => onToggleLang('fa')}
-                className={`px-2.5 py-0.5 rounded text-xs transition-all cursor-pointer ${
-                  currentLang === 'fa'
-                    ? 'bg-stone-900 text-white font-semibold'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-                title="فارسی"
-              >
-                فارسی
-              </button>
+              {APP_LANGUAGES.map(lang => (
+                <button
+                  key={lang.code}
+                  type="button"
+                  onClick={() => onToggleLang(lang.code)}
+                  className={`px-1.5 py-0.5 rounded text-[11px] transition-all cursor-pointer ${
+                    currentLang === lang.code
+                      ? 'bg-stone-900 text-white font-semibold'
+                      : 'text-stone-600 hover:text-stone-900'
+                  }`}
+                  title={lang.title}
+                >
+                  {lang.label}
+                </button>
+              ))}
             </div>
 
             {/* Contact Button */}
@@ -673,39 +686,30 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
 
             {/* Language Switcher inside drawer */}
-            <div className="flex items-center justify-between bg-stone-100/90 p-2 rounded-lg border border-stone-200">
+            <div className="flex flex-col gap-2 bg-stone-100/90 p-2.5 rounded-lg border border-stone-200">
               <span className="text-xs font-medium text-stone-700 flex items-center gap-1.5">
                 <Globe className="w-3.5 h-3.5 text-stone-500" />
-                <span>{currentLang === 'fa' ? 'زبان:' : currentLang === 'en' ? 'Language:' : 'Sprache:'}</span>
+                <span>
+                  {currentLang === 'fa' ? 'زبان:' : currentLang === 'fr' ? 'Langue:' : currentLang === 'it' ? 'Lingua:' : currentLang === 'tr' ? 'Dil:' : currentLang === 'en' ? 'Language:' : 'Sprache:'}
+                </span>
               </span>
-              <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs">
-                <button
-                  type="button"
-                  onClick={() => onToggleLang('de')}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
-                    currentLang === 'de' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                  }`}
-                >
-                  DE
-                </button>
-                <button
-                  type="button"
-                  onClick={() => onToggleLang('en')}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
-                    currentLang === 'en' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                  }`}
-                >
-                  EN
-                </button>
-                <button
-                  type="button"
-                  onClick={() => onToggleLang('fa')}
-                  className={`px-2.5 py-1 rounded text-xs font-medium transition-all ${
-                    currentLang === 'fa' ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
-                  }`}
-                >
-                  فارسی
-                </button>
+              <div className="flex items-center bg-white border border-stone-200 p-0.5 rounded text-xs shadow-2xs flex-wrap gap-1">
+                {APP_LANGUAGES.map(lang => (
+                  <button
+                    key={lang.code}
+                    type="button"
+                    onClick={() => {
+                      onToggleLang(lang.code);
+                      setMobileMenuOpen(false);
+                    }}
+                    className={`px-2 py-0.5 rounded text-xs font-medium transition-all ${
+                      currentLang === lang.code ? 'bg-stone-900 text-white font-semibold' : 'text-stone-600 hover:text-stone-900'
+                    }`}
+                    title={lang.title}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
               </div>
             </div>
 

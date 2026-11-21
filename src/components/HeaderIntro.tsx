@@ -186,10 +186,10 @@ export const HeaderIntro: React.FC<HeaderIntroProps> = ({
                 </div>
                 <p className="text-[11px] sm:text-xs text-stone-600 leading-relaxed font-normal">
                   {currentLang === 'de'
-                    ? 'Mehrfach international prämierte Architektur- & Fine-Art-Photographie (AMP Los Angeles, IPA New York, PERSPA Paris, BIFA).'
+                    ? 'Mehrfach international prämierte Architektur- & Fine-Art-Photographie (AMP Los Angeles, IPA New York/Athen, PERSPA Bourges, BIFA Budapest).'
                     : currentLang === 'fa'
-                    ? 'عکاسی معماری و تجسمی برگزیده در مسابقات جهانی از جمله AMP، IPA، PERSPA و BIFA.'
-                    : 'Internationally recognized architectural & fine art photography (AMP Los Angeles, IPA New York, PERSPA Paris, BIFA).'}
+                    ? 'عکاسی معماری و تجسمی برگزیده در مسابقات جهانی از جمله AMP، IPA (نیویورک/آتن)، PERSPA (بورژ) و BIFA (بوداپست).'
+                    : 'Internationally recognized architectural & fine art photography (AMP Los Angeles, IPA New York/Athens, PERSPA Bourges, BIFA Budapest).'}
                 </p>
               </div>
 

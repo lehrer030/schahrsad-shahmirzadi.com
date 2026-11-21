@@ -1,4 +1,4 @@
-export type Language = 'de' | 'en' | 'fa';
+export type Language = 'de' | 'en' | 'fa' | 'fr' | 'it' | 'tr';
 
 export interface AwardBadge {
   id: string;
@@ -156,6 +156,7 @@ export const INTRO_CONTENT = {
     'Prix de la Perspective Architecturale (PERSPA - France) 2026',
     'Budapest International Foto Awards (BIFA) 2026',
     'URBAN Photo Awards 2026',
+    'Global Lens Photography Awards (GL) 2026',
     'Architecture MasterPrize (AMP) 2025',
     'International Photography Awards (IPA) 2025',
     'ND Awards 2025',
@@ -168,6 +169,7 @@ export const INTRO_CONTENT = {
     { name: 'Prix de la Perspective Architecturale (PERSPA - France) 2026', url: 'https://perspa.fr/' },
     { name: 'Budapest International Foto Awards (BIFA) 2026', url: 'https://budapestfotoawards.com/' },
     { name: 'URBAN Photo Awards 2026', url: 'https://www.urbanphotoawards.com/' },
+    { name: 'Global Lens Photography Awards (GL) 2026', url: 'https://globallensawards.com/winners-gallery/2026/architecture-photography/' },
     { name: 'Architecture MasterPrize (AMP) 2025', url: 'https://architectureprize.com/' },
     { name: 'International Photography Awards (IPA) 2025', url: 'https://www.photoawards.com/' },
     { name: 'ND Awards 2025', url: 'https://ndawards.net/' },
@@ -240,6 +242,16 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
   coverImage: '/images/wetransfer/solitaire_harmony_01.webp',
   badges: [
     {
+      id: 'ipa-2026-hm',
+      name: 'International Photography Awards 2026',
+      year: '2026',
+      award: 'Honorable Mention & Official Selection',
+      awardFa: 'تقدیر ویژه و برگزیده رسمی',
+      badgeImage: '/images/email_badges/ipa_2026_hm_ribbon.png',
+      link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25',
+      position: 'top-left'
+    },
+    {
       id: 'globallens-2026-3rd',
       name: 'Global Lens Photography Awards 2026',
       year: '2026',
@@ -247,7 +259,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       awardFa: 'مقام سوم · عکاسی معماری: انتزاعی',
       badgeImage: '/images/badges_custom/globallens_2026_3rd_place.png',
       link: 'https://globallensawards.com/2026/schirzan-schahrsad-shahmirzadi/the-solitaire-as-abstraction-in-harmony-with-nature/',
-      position: 'top-left'
+      position: 'top-right'
     },
     {
       id: 'amp-2025-winner',
@@ -257,7 +269,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       awardFa: 'برنده جایزه عکاسی دانشجویی (معماری بیرونی)',
       badgeImage: '/images/2026_01_winners_badge-AMP-2025-768x355.webp',
       link: 'https://architectureprize.com/winners/winner.php?id=8533',
-      position: 'top-right'
+      position: 'bottom-left'
     },
     {
       id: 'perspa-2026-hm',
@@ -267,7 +279,7 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       awardFa: 'تقدیر ویژه و انتخاب سردبیر',
       badgeImage: '/images/2026_10_perspa-awards-2026-honourable-mention-abstract-300x300.webp',
       link: 'https://perspa.fr/winners/architectural-perspective/#work-132',
-      position: 'bottom-left'
+      position: 'bottom-center'
     },
     {
       id: 'bifa-2026-hm',
@@ -277,16 +289,6 @@ export const SOLITAIRE_SERIES_1: PhotoSeries = {
       awardFa: 'تقدیر ویژه ۲۰۲۶',
       badgeImage: '/images/badges_custom/bifa_2026_hm.png',
       link: 'https://budapestfotoawards.com/',
-      position: 'bottom-center'
-    },
-    {
-      id: 'ipa-2026-hm',
-      name: 'International Photography Awards 2026',
-      year: '2026',
-      award: 'Honorable Mention & Official Selection',
-      awardFa: 'تقدیر ویژه و برگزیده رسمی',
-      badgeImage: '/images/email_badges/ipa_2026_hm_ribbon.png',
-      link: 'https://www.photoawards.com/social/zoom.php?eid=8-1722613449-25',
       position: 'bottom-right'
     }
   ],
@@ -356,9 +358,9 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   titleDe: 'Der Solitär als Abstraktion – Überarbeitete Fassung',
   titleEn: 'The Solitaire as an Abstraction (Revised)',
   titleFa: 'The Solitaire as an Abstraction (Revised) – تک‌بنا به مثابه انتزاع، نسخه بازنگری‌شده',
-  subtitleDe: 'Architektur · Abstrakt · 7 Werke',
-  subtitleEn: 'Architecture · Abstract · 7 Works',
-  subtitleFa: 'معماری · انتزاعی · ۷ اثر',
+  subtitleDe: 'Architektur · Abstrakt · 5 Werke',
+  subtitleEn: 'Architecture · Abstract · 5 Works',
+  subtitleFa: 'معماری · انتزاعی · ۵ اثر',
   descriptionDe: `Diese Serie wurde für IPA 2026 neu überarbeitet. Sie fängt moderne urbane Architektur im Spiel von Licht und Schatten ein. Klare Linien, geometrische Strukturen und markante Perspektiven vermitteln sowohl Energie als auch Ästhetik. Reflexionen und das Zusammenspiel von Gebäude und Himmel schaffen Tiefe und laden zum Erkunden ein, während sorgfältig gewählte Blickwinkel eine Spannung zwischen Strenge und Leichtigkeit offenbaren. Die Serie, präsentiert in verschiedenen Versionen, wurde mehrfach bei internationalen Photographie-Preisen ausgezeichnet.`,
   descriptionEn: `This series has been newly reworked for IPA 2026. It captures modern urban architecture in a play of light and shadow. Clear lines, geometric structures, and distinctive perspectives convey both energy and aesthetics. Reflections and the interplay between building and sky create depth and invite exploration, while carefully chosen angles reveal a tension between rigor and lightness. The series, presented in different versions, has been honored multiple times at international photography awards.`,
   descriptionFa: `این مجموعه برای مسابقات IPA 2026 بازنگری شده است. خطوط دقیق، تقارن و بازتاب‌های آسمان، گفت‌وگویی زنده میان معماری شهری و فضای بیکران خلق می‌کنند.`,
@@ -374,7 +376,7 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       award: 'Student Photography Winner 2026',
       awardFa: 'برنده جایزه عکاسی دانشجویی ۲۰۲۶',
       badgeImage: '/images/2026_10_winners_badge-AMP-2026-768x355.webp',
-      link: 'https://architectureprize.com/',
+      link: 'https://architectureprize.com/winners/winner.php?id=10332',
       position: 'top-right'
     },
     {
@@ -438,22 +440,6 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
       captionDe: 'Image 05',
       captionEn: 'Image 05',
       captionFa: 'تصویر ۰۵'
-    },
-    {
-      id: 'solitaire-revised-06',
-      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_06.jpeg',
-      alt: 'The Solitaire as an Abstraction (Revised) 06',
-      captionDe: 'Image 06',
-      captionEn: 'Image 06',
-      captionFa: 'تصویر ۰۶'
-    },
-    {
-      id: 'solitaire-revised-07',
-      src: '/images/series_solitaire/solitaire_revised/solitaire_revised_07.jpeg',
-      alt: 'The Solitaire as an Abstraction (Revised) 07',
-      captionDe: 'Image 07',
-      captionEn: 'Image 07',
-      captionFa: 'تصویر ۰۷'
     }
   ]
 };

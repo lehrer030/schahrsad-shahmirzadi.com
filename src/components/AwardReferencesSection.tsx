@@ -69,9 +69,7 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
     '/images/series_solitaire/solitaire_revised/solitaire_revised_02.jpeg',
     '/images/series_solitaire/solitaire_revised/solitaire_revised_03.jpeg',
     '/images/series_solitaire/solitaire_revised/solitaire_revised_04.jpeg',
-    '/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg',
-    '/images/series_solitaire/solitaire_revised/solitaire_revised_06.jpeg',
-    '/images/series_solitaire/solitaire_revised/solitaire_revised_07.jpeg'
+    '/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg'
   ],
   'The Solitaire as an Abstraction – New Perspectives': [
     '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_01.jpeg',
@@ -312,6 +310,16 @@ export const getHonorBadgeInfo = (type: string, lang: Language) => {
         label: lang === 'fa' ? 'منتخب رسمی' : lang === 'en' ? 'Official Selection' : 'Offizielle Auswahl',
         className: 'bg-stone-900/90 text-stone-200 border-stone-600'
       };
+    case 'selected-photographer':
+      return {
+        label: lang === 'fa' ? 'عکاس برگزیده' : lang === 'de' ? 'Ausgewählte Photographin' : lang === 'fr' ? 'Photographe sélectionnée' : lang === 'it' ? 'Fotografa selezionata' : lang === 'tr' ? 'Seçilen Fotoğrafçı' : 'Selected Photographer',
+        className: 'bg-stone-900/90 text-stone-200 border-stone-600'
+      };
+    case 'official-exhibition':
+      return {
+        label: lang === 'fa' ? 'منتخب برای نمایشگاه رسمی' : 'Selected for Official Exhibition',
+        className: 'bg-stone-900/90 text-stone-200 border-stone-600'
+      };
     case 'editor':
       return {
         label: lang === 'fa' ? 'منتخب سردبیر' : lang === 'en' ? "Editor's Pick" : 'Editor’s Pick',
@@ -337,7 +345,7 @@ interface CompetitionItem {
   badgeImage?: string;
   mainDirectoryUrl?: string;
   honors: {
-    type: 'winner' | 'second' | 'third' | 'shortlist' | 'hm' | 'selection' | 'editor' | 'nominee';
+    type: 'winner' | 'second' | 'third' | 'shortlist' | 'hm' | 'selection' | 'selected-photographer' | 'official-exhibition' | 'editor' | 'nominee';
     labelDe: string;
     labelEn: string;
     labelFa: string;
@@ -694,7 +702,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     mainDirectoryUrl: 'https://www.urbanphotoawards.com/en/photonew/?id=333556%2Fschirzan%2Fin-between-spaces',
     honors: [
       {
-        type: 'winner',
+        type: 'selected-photographer',
         labelDe: 'Ausgewählte Photographin · Sparte STREETS',
         labelEn: 'Selected Photographer · STREETS',
         labelFa: 'عکاس برگزیده بخش خیابانی · Selected Photographer',
@@ -707,7 +715,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
         ]
       },
       {
-        type: 'selection',
+        type: 'official-exhibition',
         labelDe: 'Gruppenausstellungen 2026 – Triest, Italien',
         labelEn: 'Group Exhibitions 2026 – Trieste, Italy',
         labelFa: 'نمایشگاه‌های گروهی ۲۰۲۶ – تریست ایتالیا',

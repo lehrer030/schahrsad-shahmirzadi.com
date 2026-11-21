@@ -1,6 +1,6 @@
 import React from 'react';
 import { ACADEMIC_MILESTONES, type Language } from '../data/photographyData';
-import { ExternalLink, Sparkles, Trophy, GraduationCap, MapPin, Camera, Compass, Heart } from 'lucide-react';
+import { ExternalLink, Sparkles, Trophy, GraduationCap, Camera, Compass, Heart } from 'lucide-react';
 import { resolveAsset } from '../utils/resolveAsset';
 import { SectionHeader } from './SectionHeader';
 
@@ -299,19 +299,31 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             )}
           </p>
 
-          {/* Berufliche Tätigkeit: Umweltministerium Potsdam & LAWA */}
+          {/* Berufliche Tätigkeit & Weiterbildung: Umweltministerium Potsdam, LAWA & Universität Koblenz */}
           <p className="text-sm sm:text-base text-stone-700 font-normal max-w-3xl leading-relaxed">
             {currentLang === 'de' ? (
               <>
-                Seit 2024 arbeitet sie im Umweltministerium in Potsdam (MLEUV) mit dem Schwerpunkt Wasserfragen. Zunächst war sie in den Jahren 2024 und 2025 für die Geschäftsstelle der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA) tätig. Neben ihrer beruflichen Tätigkeit absolviert sie ein Studium zum Master of Science (M.Sc.) in Angewandten Umweltwissenschaften an der Universität Koblenz und befindet sich nun in den letzten Zügen des berufsbegleitenden Studiengangs.
+                Seit 2024 arbeitet sie im Umweltministerium in Potsdam (MLEUV) mit dem Schwerpunkt Wasserfragen. Zunächst war sie in den Jahren 2024 und 2025 für die Geschäftsstelle der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA) tätig. Neben ihrer beruflichen Tätigkeit absolviert sie im Fernstudium an der Universität Koblenz (ZFUW) den Master of Science (M.Sc.) in Applied Environmental Sciences. Sie befindet sich derzeit im 5. Fachsemester.
               </>
             ) : currentLang === 'fa' ? (
               <>
-                از سال ۲۰۲۴، او در وزارت محیط‌زیست در پوتسدام (MLEUV) با تمرکز بر مسائل آب فعالیت می‌کند. وی در ابتدا در سال‌های ۲۰۲۴ و ۲۰۲۵ در دبیرخانه کارگروه مشترک آب ایالت‌ها و دولت فدرال (LAWA) مشغول به کار بود. هم‌زمان با نقش حرفه‌ای، او در مقطع کارشناسی ارشد (M.Sc.) علوم محیط‌زیست کاربردی در دانشگاه کوبلنتس مشغول به تحصیل است و اکنون در مراحل پایانی این دوره تحصیلی قرار دارد.
+                از سال ۲۰۲۴، او در وزارت محیط‌زیست در پوتسدام (MLEUV) با تمرکز بر مسائل آب فعالیت می‌کند. وی در ابتدا در سال‌های ۲۰۲۴ و ۲۰۲۵ در دبیرخانه کارگروه مشترک آب ایالت‌ها و دولت فدرال (LAWA) مشغول به کار بود. هم‌زمان با فعالیت حرفه‌ای، او در قالب دوره آموزش مجازی دانشگاه کوبلنتس (ZFUW) در مقطع کارشناسی ارشد (M.Sc.) علوم محیط‌زیست کاربردی مشغول به تحصیل است و در حال حاضر در پنجمین ترم تحصیلی خود قرار دارد.
+              </>
+            ) : currentLang === 'fr' ? (
+              <>
+                Depuis 2024, elle travaille au ministère de l’Environnement à Potsdam (MLEUV), axé sur les questions de l'eau. En parallèle de son activité professionnelle, elle prépare un Master of Science (M.Sc.) en sciences appliquées de l'environnement à l’Université de Coblence (ZFUW) et en est actuellement à son cinquième semestre.
+              </>
+            ) : currentLang === 'it' ? (
+              <>
+                Dal 2024 lavora presso il Ministero dell'Ambiente a Potsdam (MLEUV), con particolare attenzione alle risorse idriche. Parallelamente alla sua attività professionale, sta completando un Master of Science (M.Sc.) in Scienze Ambientali Applicate presso l'Università di Coblenza (ZFUW), frequentando attualmente il quinto semestre.
+              </>
+            ) : currentLang === 'tr' ? (
+              <>
+                2024'ten bu yana Potsdam Çevre Bakanlığı'nda (MLEUV) su kaynakları odaklı çalışmaktadır. Mesleki kariyerinin yanı sıra Koblenz Üniversitesi'nde (ZFUW) Uygulamalı Çevre Bilimleri alanında Master of Science (M.Sc.) uzaktan eğitimine devam etmekte olup şu anda 5. sömestrindedir.
               </>
             ) : (
               <>
-                Since 2024, she has been working at the Environment Ministry in Potsdam, focusing on water-related matters. She initially worked for the Coordination Office of the German Working Group on Water Issues of the Federal States and the Federal Government (LAWA) in 2024 and 2025. Alongside her professional role, she is pursuing a Master of Science (M.Sc.) in Applied Environmental Sciences at the University of Koblenz. She is now in the final stages of completing the part-time program.
+                Alongside her professional work, she is pursuing a Master of Science (M.Sc.) in Applied Environmental Sciences through a distance-learning program at the University of Koblenz (ZFUW). She is currently in her fifth semester.
               </>
             )}
           </p>
@@ -352,10 +364,16 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             <div className="flex flex-col sm:items-end gap-1 text-left sm:text-right rtl:sm:text-left">
               <span className="font-mono text-[11px] font-semibold text-amber-900 bg-amber-50 border border-amber-200/80 px-2.5 py-0.5 rounded-full inline-block">
                 {currentLang === 'de'
-                  ? 'Laufendes Masterstudium · Kurz vor dem Abschluss (M.Sc.)'
+                  ? 'Laufendes Masterstudium (M.Sc.)'
                   : currentLang === 'fa'
-                  ? 'تحصیلات جاری کارشناسی ارشد · در آستانه فارغ‌التحصیلی (M.Sc.)'
-                  : 'Ongoing Master’s programme · Nearing completion (M.Sc.)'}
+                  ? 'تحصیلات جاری کارشناسی ارشد (M.Sc.)'
+                  : currentLang === 'fr'
+                  ? 'Programme de Master en cours (M.Sc.)'
+                  : currentLang === 'it'
+                  ? 'Corso di Laurea Magistrale in corso (M.Sc.)'
+                  : currentLang === 'tr'
+                  ? 'Devam Eden Yüksek Lisans Programı (M.Sc.)'
+                  : 'Ongoing Master’s programme (M.Sc.)'}
               </span>
               <span className="text-[10px] font-mono text-stone-500 block">
                 {currentLang === 'de'
@@ -601,15 +619,9 @@ export const ArtistVita: React.FC<ArtistVitaProps> = ({ currentLang }) => {
             <div className="md:col-span-4">
               <div className="group bg-[#faf8f5] rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs">
                 <div className="aspect-3/4 overflow-hidden bg-stone-100 relative">
-                  <div className="absolute top-2.5 left-2.5 z-20 pointer-events-none">
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-stone-900/85 text-white rounded text-[10px] font-mono font-medium shadow-md tracking-wider backdrop-blur-xs">
-                      <MapPin className="w-3 h-3 text-amber-400" />
-                      <span>{currentLang === 'fa' ? 'برلین · برای صلح و محیط‌زیست' : 'Berlin · Für Frieden & Umweltschutz'}</span>
-                    </span>
-                  </div>
                   <img
                     src={resolveAsset('/images/2025_07_image00001-768x1366.webp')}
-                    alt="SchirZan – Halbmarathons & Marathon Berlin für Frieden und Umweltschutz"
+                    alt="SchirZan – Halbmarathons & Marathon Berlin"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
                     loading="lazy"
                   />

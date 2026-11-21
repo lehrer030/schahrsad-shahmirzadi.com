@@ -61,14 +61,17 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               </h3>
               <div className="space-y-3">
                 <div>
+                  <p className="font-semibold text-stone-900">Künstlerin &amp; Urheberin / Artist &amp; Creator:</p>
+                  <p className="text-stone-800">Schahrsad Shahmirzadi (SchirZan)</p>
+                  <p className="text-stone-700">c/o Sammy Richter</p>
+                  <p className="text-stone-700">Krummestr. 26</p>
+                  <p className="text-stone-700">10627 Berlin, Deutschland / Germany</p>
+                  <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
+                </div>
+                <div>
                   <p className="font-semibold text-stone-900">Website &amp; Technischer Betrieb / Website Administration:</p>
                   <p className="text-stone-800">Emanuel Jurgait</p>
                   <p>E-Mail: <a href="mailto:info@re-mint.online" className="text-amber-800 hover:underline font-medium">info@re-mint.online</a></p>
-                </div>
-                <div>
-                  <p className="font-semibold text-stone-900">Künstlerische &amp; Redaktionelle Inhalte / Content &amp; Artworks:</p>
-                  <p className="text-stone-800">Schahrsad Shahmirzadi (SchirZan)</p>
-                  <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
                 </div>
               </div>
             </div>
@@ -95,6 +98,8 @@ export const LegalModal: React.FC<LegalModalProps> = ({
                 Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV / § 18 Abs. 2 MStV
               </h3>
               <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi (SchirZan)</p>
+              <p className="text-stone-700">c/o Sammy Richter</p>
+              <p className="text-stone-700">Krummestr. 26, 10627 Berlin, Deutschland</p>
               <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
             </div>
 
@@ -158,6 +163,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({
               <div className="space-y-2 text-stone-700 text-xs sm:text-sm">
                 <div>
                   <p className="font-semibold text-stone-900">Schahrsad Shahmirzadi (SchirZan)</p>
+                  <p className="text-stone-600">c/o Sammy Richter, Krummestr. 26, 10627 Berlin, Deutschland</p>
                   <p>E-Mail: <a href="mailto:contact@schirzan.com" className="text-amber-800 hover:underline font-medium">contact@schirzan.com</a></p>
                 </div>
                 <div>

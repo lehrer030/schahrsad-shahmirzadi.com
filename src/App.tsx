@@ -34,15 +34,15 @@ import {
 
 const getInitialLanguage = (): Language => {
   if (typeof window !== 'undefined') {
-    // 1. URL search parameter (?lang=de / ?lang=en / ?lang=fa)
+    // 1. URL search parameter (?lang=de / ?lang=en / ?lang=fa / ?lang=fr / ?lang=it / ?lang=tr)
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang');
-    if (urlLang === 'de' || urlLang === 'en' || urlLang === 'fa') {
-      return urlLang;
+    if (['de', 'en', 'fa', 'fr', 'it', 'tr'].includes(urlLang || '')) {
+      return urlLang as Language;
     }
     // 2. Saved user selection in localStorage
     const saved = localStorage.getItem('schirzan_preferred_lang');
-    if (saved === 'de' || saved === 'en' || saved === 'fa') {
+    if (['de', 'en', 'fa', 'fr', 'it', 'tr'].includes(saved || '')) {
       return saved as Language;
     }
     // 3. Autonomous detection from browser / system language
@@ -51,6 +51,9 @@ const getInitialLanguage = (): Language => {
       const lower = lang.toLowerCase();
       if (lower.startsWith('fa')) return 'fa';
       if (lower.startsWith('de')) return 'de';
+      if (lower.startsWith('fr')) return 'fr';
+      if (lower.startsWith('it')) return 'it';
+      if (lower.startsWith('tr')) return 'tr';
       if (lower.startsWith('en')) return 'en';
     }
   }
@@ -140,6 +143,9 @@ export default function App() {
         const lower = lang.toLowerCase();
         if (lower.startsWith('fa')) { setCurrentLang('fa'); return; }
         if (lower.startsWith('de')) { setCurrentLang('de'); return; }
+        if (lower.startsWith('fr')) { setCurrentLang('fr'); return; }
+        if (lower.startsWith('it')) { setCurrentLang('it'); return; }
+        if (lower.startsWith('tr')) { setCurrentLang('tr'); return; }
         if (lower.startsWith('en')) { setCurrentLang('en'); return; }
       }
     };
