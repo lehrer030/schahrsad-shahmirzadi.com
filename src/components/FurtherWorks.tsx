@@ -317,11 +317,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
               block.isThemePair ? (
                 <div
                   key={block.items.map((item) => item.work.id).join('-')}
-                  className={`grid ${
-                    block.items.length >= 3
-                      ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-                      : 'grid-cols-1 lg:grid-cols-2'
-                  } gap-6 w-full`}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full"
                 >
                   {block.items.map(({ work, idx }) => (
                     <article
@@ -329,7 +325,7 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-2xs hover:shadow-md flex flex-col justify-between"
                     >
                       <div className="space-y-4">
-                        <div className="w-full max-w-[280px] sm:max-w-[300px] mx-auto">
+                        <div className="w-full max-w-xs sm:max-w-sm mx-auto">
                           {renderPhotoBlock(work)}
                         </div>
                         <div className="space-y-3">
@@ -350,10 +346,10 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
                       className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
                     >
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-                        <div className="lg:col-span-4 flex flex-col items-center w-full max-w-[280px] sm:max-w-[320px] mx-auto">
+                        <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
                           {renderPhotoBlock(work)}
                         </div>
-                        <div className="lg:col-span-8 flex flex-col justify-start space-y-3.5">
+                        <div className="lg:col-span-7 flex flex-col justify-start space-y-3.5">
                           {renderDetailsBlock(work, idx, true)}
                           {renderThumbnailStrip(work)}
                           {renderActionBar(work)}

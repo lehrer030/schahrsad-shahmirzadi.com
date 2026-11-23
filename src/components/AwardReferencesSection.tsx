@@ -834,6 +834,35 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     ]
   },
   {
+    id: 'nd-2026',
+    year: '2026',
+    name: 'ND Awards 2026 – Neutral Density Photography Awards',
+    host: 'International',
+    hostFa: 'بین‌المللی',
+    scopeDe: 'Global renommierter Fotowettbewerb mit einer internationalen Fachjury führender Galerist:innen, Kurator:innen und Bildredakteur:innen.',
+    scopeEn: 'Highly respected international photography contest juried by leading gallery owners, publishers, and photography editors.',
+    scopeFa: 'مسابقه معتبر بین‌المللی عکاسی با داوری مدیران گالری‌ها، کیوریتورها و سردبیران برجسته جهان.',
+    badgeImage: '/images/badges_custom/nd_awards_hm_2026.png',
+    mainDirectoryUrl: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/honorable-mentions/',
+    honors: [
+      {
+        type: 'hm',
+        labelDe: 'Lobende Erwähnung · Architektur: Sonstige (Honorable Mention)',
+        labelEn: 'Honorable Mention · Architecture: Other (Non-Professional)',
+        labelFa: 'تقدیر ویژه در بخش معماری: سایر (غیرحرفه‌ای)',
+        items: [
+          {
+            title: 'The Solitaire as an Abstraction (Revised)',
+            category: 'Architecture: Other – Non-Professional',
+            categoryFa: 'معماری: سایر – بخش غیرحرفه‌ای',
+            badge: '/images/badges_custom/nd_awards_hm_2026.png',
+            zoomUrl: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/other/hm/24280/'
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'bifa-2026',
     year: '2026',
     name: 'Budapest International Foto Awards (BIFA) 2026',
@@ -1149,16 +1178,16 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                 }`}
             >
               {currentLang === 'fa'
-                ? 'همه (۱۱ رقابت)'
+                ? 'همه (۱۲ رقابت)'
                 : currentLang === 'de'
-                ? 'Alle Wettbewerbe (11)'
+                ? 'Alle Wettbewerbe (12)'
                 : currentLang === 'fr'
-                ? 'Tous les concours (11)'
+                ? 'Tous les concours (12)'
                 : currentLang === 'it'
-                ? 'Tutti i concorsi (11)'
+                ? 'Tutti i concorsi (12)'
                 : currentLang === 'tr'
-                ? 'Tüm Yarışmalar (11)'
-                : 'All Competitions (11)'}
+                ? 'Tüm Yarışmalar (12)'
+                : 'All Competitions (12)'}
             </button>
             <button
               onClick={() => setFilterYear('2026')}
@@ -1167,7 +1196,7 @@ export const AwardReferencesSection: React.FC<AwardReferencesSectionProps> = ({ 
                 : 'bg-white text-stone-700 border-stone-200 hover:bg-stone-50'
                 }`}
             >
-              2026 (6)
+              2026 (7)
             </button>
             <button
               onClick={() => setFilterYear('2025')}

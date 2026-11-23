@@ -916,8 +916,32 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   {currentLang === 'fa' ? 'اسطوره کیک‌بوکسینگ و قهرمان چندباره جهان، مربی و راهنمای او در تمام پیروزی‌های بزرگ (۲۰۰۹–۲۰۱۸)' : currentLang === 'en' ? 'Kickboxing legend and multiple world champion; accompanied her from 2009 to 2018 as mentor and coach through all her triumphs.' : 'Kickbox-Legende und mehrfacher Weltmeister; begleitete sie von 2009 bis 2018 als Mentor und Trainer bei all ihren Triumphen.'}
                 </li>
                 <li>
-                  <strong className="text-amber-800 font-semibold">Gia K. & Asly A.: </strong>
-                  {currentLang === 'fa' ? 'همراهان و حریفان تمرینی دیرینه در مسیر رقابت‌های قهرمانی' : currentLang === 'en' ? 'Long-standing athletic sparring and training partners.' : 'Als langjährige sportliche Trainingspartner.'}
+                  <strong className="text-amber-800 font-semibold">Gia Khudoev: </strong>
+                  {currentLang === 'fa'
+                    ? 'همراه و حریف تمرینی دیرینه و مبارز حرفه‌ای سابق'
+                    : currentLang === 'en'
+                    ? 'Long-standing training partner and former professional fighter.'
+                    : currentLang === 'fr'
+                    ? 'Partenaire d’entraînement de longue date et ancien combattant professionnel.'
+                    : currentLang === 'it'
+                    ? 'Partner di allenamento di lunga data ed ex atleta professionista.'
+                    : currentLang === 'tr'
+                    ? 'Uzun yıllar antrenman partneri ve eski profesyonel dövüşçü.'
+                    : 'Langjähriger Trainingspartner und ehemaliger Profikämpfer.'}
+                </li>
+                <li>
+                  <strong className="text-amber-800 font-semibold">Asly Aguilar: </strong>
+                  {currentLang === 'fa'
+                    ? 'همراه و حریف تمرینی دیرینه، بعدها رستوران‌دار موفق و سرآشپز برجسته'
+                    : currentLang === 'en'
+                    ? 'Long-standing training partner, later successful restaurateur and chef.'
+                    : currentLang === 'fr'
+                    ? 'Partenaire d’entraînement de longue date, plus tard restaurateur à succès et chef cuisinier.'
+                    : currentLang === 'it'
+                    ? 'Partner di allenamento di lunga data, successivamente ristoratore di successo e chef.'
+                    : currentLang === 'tr'
+                    ? 'Uzun yıllar antrenman partneri, daha sonra başarılı bir restoran işletmecisi ve şef.'
+                    : 'Langjähriger Trainingspartner, später erfolgreicher Restaurantbesitzer und Koch.'}
                 </li>
                 <li>
                   <strong className="text-amber-800 font-semibold">Steve Barret: </strong>

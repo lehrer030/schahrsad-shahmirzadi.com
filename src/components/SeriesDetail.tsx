@@ -240,7 +240,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
           <div className="pt-2 space-y-14">
             
             {/* PHOTO 1: SURROUNDED BY ALL AWARDS MATCHING HER EMAIL MOCKUP */}
-            <div className="space-y-4 max-w-xl mx-auto">
+            <div className="space-y-4 max-w-2xl sm:max-w-3xl mx-auto">
               <div className="flex items-center justify-between text-xs text-stone-500 font-mono">
                 <span className="uppercase tracking-wider text-amber-800 font-bold">
                   {currentLang === 'de'
@@ -313,7 +313,7 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
 
             {/* SUBSEQUENT PHOTOS: EXACT MATCHING ASPECT-[3/4] UNIFORM SIZE (die Bilder unter 1) */}
             {subsequentPhotos.map((photo, index) => (
-              <div key={photo.id} className="space-y-4 pt-8 border-t border-stone-200 max-w-xl mx-auto">
+              <div key={photo.id} className="space-y-4 pt-8 border-t border-stone-200 max-w-2xl sm:max-w-3xl mx-auto">
                 <div className="flex items-center justify-between text-xs text-stone-500 font-mono">
                   <span className="font-semibold text-amber-800">
                     {currentLang === 'de'
@@ -356,8 +356,8 @@ export const SeriesDetail: React.FC<SeriesDetailProps> = ({
                   </div>
                 </div>
 
-                {(photo.captionDe || photo.captionFa) && photo.captionDe !== 'Image 01' && (
-                  <div className="max-w-xl mx-auto p-2.5 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
+                {(photo.captionDe || photo.captionFa) && !photo.captionDe?.startsWith('Image ') && (
+                  <div className="max-w-2xl sm:max-w-3xl mx-auto p-2.5 bg-white border border-stone-200/90 rounded-xl text-center shadow-2xs">
                     <p className="text-xs sm:text-sm text-stone-900 font-medium leading-snug">
                       {currentLang === 'de'
                         ? photo.captionDe
