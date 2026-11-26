@@ -57,6 +57,8 @@ export const AWARD_WORK_THUMBNAILS: Record<string, string> = {
   'The Solitaire as Abstraction – In Harmony with Nature': '/images/wetransfer/solitaire_harmony_01.webp',
   'The Solitaire as an Abstraction': '/images/series_solitaire/solitaire_ipa/solitaire_ipa_01.jpeg',
   'The Solitaire as an Abstraction (Revised)': '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
+  'The Solitaire as an Abstraction (ND Awards 2026)': '/images/wetransfer/solitaire_nd_awards_01.webp',
+  'The Solitaire as an Abstraction (LICC 2025 Shortlist)': '/images/wetransfer/solitaire_harmony_01.webp',
   'The Solitaire as an Abstraction (Short Version)': '/images/series_solitaire/solitaire_nd_short/solitaire_nd_short_01.jpeg',
   'The Solitaire as an Abstraction – New Perspectives': '/images/series_solitaire/solitaire_new_perspectives/solitaire_new_perspectives_01.jpeg',
   'Transformer': '/images/wetransfer/transformer_01.webp'
@@ -167,12 +169,73 @@ export const AWARD_WORK_SERIES_PHOTOS_MAP: Record<string, string[]> = {
   'Fragments of Memory – Fragments of Time': [
     '/images/wetransfer/fragments_of_memory_01.webp',
     '/images/wetransfer/fragments_of_memory_02.webp',
-    '/images/wetransfer/fragments_of_memory_03.webp'
+    '/images/wetransfer/fragments_of_memory_03.webp',
+    '/images/wetransfer/fragments_of_memory_04.webp',
+    '/images/wetransfer/fragments_of_memory_05.webp'
   ],
   'Black Red Gold – Office of the Federal President of Germany': [
     '/images/wetransfer/black_red_gold_01.webp',
     '/images/wetransfer/black_red_gold_02.webp',
     '/images/wetransfer/black_red_gold_03.webp'
+  ],
+  'LIFE – LOVE – FREEDOM · IRAN': [
+    '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+    '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+    '/images/2026_09_os-01-life-love-freedom-iran-03-scaled.jpeg'
+  ],
+  'LIFE – LOVE – FREEDOM · IRAN – Leben, Liebe, Freiheit': [
+    '/images/2026_09_os-01-life-love-freedom-iran-01-scaled.jpeg',
+    '/images/2026_09_os-01-life-love-freedom-iran-02-scaled.jpeg',
+    '/images/2026_09_os-01-life-love-freedom-iran-03-scaled.jpeg'
+  ],
+  'The Solitaire as an Abstraction (ND Awards 2026)': [
+    '/images/wetransfer/solitaire_nd_awards_01.webp',
+    '/images/wetransfer/solitaire_nd_awards_02.webp',
+    '/images/wetransfer/solitaire_nd_awards_03.webp',
+    '/images/wetransfer/solitaire_nd_awards_04.webp',
+    '/images/wetransfer/solitaire_nd_awards_05.webp'
+  ],
+  'The Solitaire as an Abstraction (LICC 2025 Shortlist)': [
+    '/images/wetransfer/solitaire_harmony_01.webp',
+    '/images/wetransfer/solitaire_harmony_02.webp',
+    '/images/wetransfer/solitaire_harmony_03.webp',
+    '/images/wetransfer/solitaire_harmony_04.webp',
+    '/images/wetransfer/solitaire_harmony_05.webp',
+    '/images/wetransfer/solitaire_harmony_06.webp',
+    '/images/wetransfer/solitaire_harmony_07.webp'
+  ],
+  'Cloud Mirror Architecture II: Stormy Sea (Black & White)': [
+    '/images/wetransfer/cloud_mirror_ii_bw_01.webp',
+    '/images/wetransfer/cloud_mirror_ii_bw_02.webp',
+    '/images/wetransfer/cloud_mirror_ii_bw_03.webp',
+    '/images/wetransfer/cloud_mirror_ii_bw_04.webp',
+    '/images/wetransfer/cloud_mirror_ii_bw_05.webp'
+  ],
+  'Prismatic Berlin': [
+    '/images/wetransfer/prismatic_berlin_01.webp',
+    '/images/wetransfer/prismatic_berlin_02.webp',
+    '/images/wetransfer/prismatic_berlin_03.webp',
+    '/images/wetransfer/prismatic_berlin_04.webp',
+    '/images/wetransfer/prismatic_berlin_05.webp'
+  ],
+  'Between Space and Time': [
+    '/images/2026_09_os-10-between-space-and-time-01-scaled.jpeg',
+    '/images/2026_09_os-10-between-space-and-time-02-scaled.jpeg',
+    '/images/2026_09_os-10-between-space-and-time-03-scaled.jpeg'
+  ],
+  'Blessed Are Those Who Mourn': [
+    '/images/wetransfer/blessed_mourn_01.webp',
+    '/images/wetransfer/blessed_mourn_02.webp',
+    '/images/wetransfer/blessed_mourn_03.webp',
+    '/images/wetransfer/blessed_mourn_04.webp'
+  ],
+  'The Dignity of the Animal is Inviolable': [
+    '/images/2026_04_59097f0d6c9eece89abc78e06350bb1f-scaled.jpeg',
+    '/images/2026_04_d397635678cb8c962b14421aa6c4644a-scaled.jpeg',
+    '/images/2026_04_da18083a2157a3e0f065184b267fe878-scaled.jpeg'
+  ],
+  'Elegance of Structure – Black and White': [
+    '/images/wetransfer/elegance_structure_bw_01.webp'
   ]
 };
 
@@ -246,6 +309,8 @@ export const getAwardWorkTitle = (title: string, lang: Language): string => {
 
   const deTitleMap: Record<string, string> = {
     'The Solitaire as an Abstraction (Revised)': 'Der Solitär als Abstraktion – Überarbeitete Fassung',
+    'The Solitaire as an Abstraction (ND Awards 2026)': 'Der Solitär als Abstraktion (ND Awards 2026)',
+    'The Solitaire as an Abstraction (LICC 2025 Shortlist)': 'Der Solitär als Abstraktion (LICC 2025 Shortlist)',
     'The Solitaire as Abstraction – In Harmony with Nature': 'Der Solitär als Abstraktion – Im Einklang mit der Natur',
     'The Solitaire as an Abstraction': 'Der Solitär als Abstraktion',
     'The Solitaire as an Abstraction (Short Version)': 'Der Solitär als Abstraktion – Kurzfassung',
@@ -605,7 +670,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
     scopeDe: 'Führender US-amerikanischer Architekturpreis. Eine internationale Fachjury bewertet photographische Arbeiten aus mehreren tausend Einreichungen aus über 94 Ländern.',
     scopeEn: 'Premier US architecture awards program. An esteemed international jury evaluates architectural photography from thousands of entries across 94+ countries.',
     scopeFa: 'معتبرترین جایزه معماری ایالات متحده آمریکا با ارزیابی هیئت داوران بین‌المللی از بیش از ۹۴ کشور.',
-    badgeImage: '/images/docx_badges/amp_2026_student_hm_orange.png',
+    badgeImage: '/images/2026_10_winners_badge-AMP-2026-768x355.webp',
     mainDirectoryUrl: 'https://architectureprize.com/winners/2026_photo_s.php',
     honors: [
       {
@@ -852,7 +917,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
         labelFa: 'تقدیر ویژه در بخش معماری: سایر (غیرحرفه‌ای)',
         items: [
           {
-            title: 'The Solitaire as an Abstraction (Revised)',
+            title: 'The Solitaire as an Abstraction (ND Awards 2026)',
             category: 'Architecture: Other – Non-Professional',
             categoryFa: 'معماری: سایر – بخش غیرحرفه‌ای',
             badge: '/images/badges_custom/nd_awards_hm_2026.png',
@@ -1079,7 +1144,7 @@ export const AWARD_COMPETITIONS: CompetitionItem[] = [
         labelFa: '۲ اثر در فهرست نهایی · Shortlisted',
         items: [
           {
-            title: 'The Solitaire as an Abstraction (Revised)',
+            title: 'The Solitaire as an Abstraction (LICC 2025 Shortlist)',
             category: 'Shoot (Photo/Video)',
             badge: '/images/docx_badges/licc_2025_shortlist.png',
             zoomUrl: 'https://www.licc.uk/winners/winner.php?id=125857'

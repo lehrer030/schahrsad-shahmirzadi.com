@@ -298,8 +298,8 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
             onContextMenu={(e) => e.preventDefault()}
           />
 
-          {/* Protective Watermark - direkt zentriert unten auf dem Bild wie im Original */}
-          <div className="absolute bottom-2.5 sm:bottom-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 text-[10.5px] sm:text-xs text-amber-100/90 font-serif bg-stone-950/80 px-3 py-1 rounded-full border border-stone-800/80 backdrop-blur-xs shadow-lg pointer-events-none select-none whitespace-nowrap">
+          {/* Protective Watermark - rechtsbündig unten auf dem Bild per Kundenanweisung */}
+          <div className="absolute bottom-2.5 sm:bottom-3.5 right-3 sm:right-6 rtl:right-auto rtl:left-3 sm:rtl:left-6 z-20 flex items-center gap-1.5 text-[10.5px] sm:text-xs text-amber-100/90 font-serif bg-stone-950/80 px-3 py-1 rounded-full border border-stone-800/80 backdrop-blur-xs shadow-lg pointer-events-none select-none whitespace-nowrap">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
             <span>SchirZan | Schahrsad Shahmirzadi</span>
           </div>

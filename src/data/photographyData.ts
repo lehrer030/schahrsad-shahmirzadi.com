@@ -488,16 +488,6 @@ export const SOLITAIRE_SERIES_2: PhotoSeries = {
   coverImage: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
   badges: [
     {
-      id: 'nd-2026-solitaire-revised',
-      name: 'ND Awards 2026',
-      year: '2026',
-      award: 'Honorable Mention',
-      awardFa: 'تقدیر ویژه (Honorable Mention)',
-      badgeImage: '/images/badges_custom/nd_awards_hm_2026.png',
-      link: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/other/hm/24280/',
-      position: 'top-left'
-    },
-    {
       id: 'amp-2026-winner',
       name: 'Architecture MasterPrize 2026',
       year: '2026',
@@ -1668,17 +1658,17 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
     ]
   },
   {
-    id: 'solitaire-revised-licc',
+    id: 'solitaire-nd-awards-2026',
     themeGroup: 'solitaire-2025',
-    titleDe: 'The Solitaire as an Abstraction (Revised)',
-    titleEn: 'The Solitaire as an Abstraction (Revised)',
-    titleFa: 'The Solitaire as an Abstraction (Revised)',
+    titleDe: 'The Solitaire as an Abstraction (ND Awards 2026)',
+    titleEn: 'The Solitaire as an Abstraction (ND Awards 2026)',
+    titleFa: 'The Solitaire as an Abstraction (ND Awards 2026) – تک‌بنا به مثابه انتزاع',
     category: 'Architecture / Abstract',
     categoryFa: 'معماری / انتزاعی',
-    awardsDe: 'ND Awards 2026 — Honorable Mention · LICC 2025 — Shortlist',
-    awardsEn: 'ND Awards 2026 — Honorable Mention · LICC 2025 — Shortlist',
-    awardsFa: 'ND Awards 2026 — تقدیر ویژه · LICC 2025 — فهرست کوتاه (Shortlisted)',
-    badgeNames: ['ND Awards 2026 HM', 'LICC 2025 Shortlisted'],
+    awardsDe: 'ND Awards 2026 — Honorable Mention (Architecture: Other)',
+    awardsEn: 'ND Awards 2026 — Honorable Mention (Architecture: Other)',
+    awardsFa: 'ND Awards 2026 — تقدیر ویژه (Honorable Mention)',
+    badgeNames: ['ND Awards 2026 HM'],
     badges: [
       {
         id: 'nd-revised-2026',
@@ -1688,28 +1678,57 @@ export const FURTHER_WORKS_ARCHITECTURE: FurtherWork[] = [
         badgeImage: '/images/badges_custom/nd_awards_hm_2026.png',
         position: 'top-left',
         link: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/other/hm/24280/'
-      },
+      }
+    ],
+    link: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/other/hm/24280/',
+    descriptionDe: 'Internationale Auszeichnung bei den Neutral Density Photography Awards (ND Awards 2026) mit Honorable Mention in der Kategorie Architecture: Other für die 5-teilige Solitär-Werkserie.',
+    descriptionEn: 'International recognition at the Neutral Density Photography Awards (ND Awards 2026) with an Honorable Mention in Architecture: Other for the 5-work Solitaire series.',
+    descriptionFa: 'تقدیر ویژه در مسابقات بین‌المللی عکاسی ND Awards 2026 در بخش معماری برای مجموعه ۵ اثری تک‌بنا.',
+    previewImage: '/images/wetransfer/solitaire_nd_awards_01.webp',
+    galleryPhotos: [
+      { id: 'solitaire-nd-awards-01', src: '/images/wetransfer/solitaire_nd_awards_01.webp', alt: 'The Solitaire as an Abstraction (ND Awards 2026) 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تک‌بنا به مثابه انتزاع (ND Awards 2026) ۰۱' },
+      { id: 'solitaire-nd-awards-02', src: '/images/wetransfer/solitaire_nd_awards_02.webp', alt: 'The Solitaire as an Abstraction (ND Awards 2026) 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تک‌بنا به مثابه انتزاع (ND Awards 2026) ۰۲' },
+      { id: 'solitaire-nd-awards-03', src: '/images/wetransfer/solitaire_nd_awards_03.webp', alt: 'The Solitaire as an Abstraction (ND Awards 2026) 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تک‌بنا به مثابه انتزاع (ND Awards 2026) ۰۳' },
+      { id: 'solitaire-nd-awards-04', src: '/images/wetransfer/solitaire_nd_awards_04.webp', alt: 'The Solitaire as an Abstraction (ND Awards 2026) 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تک‌بنا به مثابه انتزاع (ND Awards 2026) ۰۴' },
+      { id: 'solitaire-nd-awards-05', src: '/images/wetransfer/solitaire_nd_awards_05.webp', alt: 'The Solitaire as an Abstraction (ND Awards 2026) 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تک‌بنا به مثابه انتزاع (ND Awards 2026) ۰۵' }
+    ]
+  },
+  {
+    id: 'solitaire-licc-2025',
+    themeGroup: 'solitaire-2025',
+    titleDe: 'The Solitaire as an Abstraction (LICC 2025 Shortlist)',
+    titleEn: 'The Solitaire as an Abstraction (LICC 2025 Shortlist)',
+    titleFa: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) – تک‌بنا به مثابه انتزاع',
+    category: 'Architecture / Abstract',
+    categoryFa: 'معماری / انتزاعی',
+    awardsDe: 'LICC 2025 — Shortlist (Architecture / Abstract)',
+    awardsEn: 'LICC 2025 — Shortlist (Architecture / Abstract)',
+    awardsFa: 'LICC 2025 — فهرست کوتاه (Shortlisted)',
+    badgeNames: ['LICC 2025 Shortlisted'],
+    badges: [
       {
         id: 'licc-revised',
         name: 'London International Creative Competition 2025',
         award: 'Shortlist',
         year: '2025',
         badgeImage: '/images/docx_badges/licc_2025_shortlist.png',
-        position: 'top-right',
+        position: 'top-left',
         link: 'https://www.licc.uk/winners/winner.php?id=125857'
       }
     ],
-    link: 'https://ndawards.net/winners-gallery/nd-awards-2026/non-professional/other/hm/24280/',
-    descriptionDe: 'Internationale Auszeichnung bei den ND Awards 2026 (Honorable Mention in Architecture: Other) sowie den London International Creative Competition (LICC 2025) für die 5-teilige überarbeitete Solitär-Serie.',
-    descriptionEn: 'International recognition at ND Awards 2026 (Honorable Mention in Architecture: Other) and London International Creative Competition (LICC 2025) for the 5-work revised Solitaire series.',
-    descriptionFa: 'تقدیر ویژه در مسابقات بین‌المللی ND Awards 2026 و برگزیده رسمی LICC 2025 برای مجموعه ۵ اثری بازنگری‌شده تک‌بنا.',
-    previewImage: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg',
+    link: 'https://www.licc.uk/winners/winner.php?id=125857',
+    descriptionDe: 'Offizielle Auszeichnung auf der Shortlist der London International Creative Competition (LICC 2025) in der Kategorie Architecture: 7-teilige Werkserie über Lichtbrechungen, architektonische Geometrie und solitäre Ästhetik.',
+    descriptionEn: 'Official recognition on the Shortlist of the London International Creative Competition (LICC 2025) in Architecture: 7-work series exploring light refraction, geometric purity, and solitary aesthetics.',
+    descriptionFa: 'برگزیده رسمی در فهرست کوتاه رقابت بین‌المللی خلاقیت لندن (LICC 2025) در بخش معماری برای مجموعه ۷ اثری تک‌بنا.',
+    previewImage: '/images/wetransfer/solitaire_harmony_01.webp',
     galleryPhotos: [
-      { id: 'solitaire-revised-licc-01', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_01.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۱' },
-      { id: 'solitaire-revised-licc-02', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_02.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۲' },
-      { id: 'solitaire-revised-licc-03', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_03.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۳' },
-      { id: 'solitaire-revised-licc-04', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_04.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۴' },
-      { id: 'solitaire-revised-licc-05', src: '/images/series_solitaire/solitaire_revised/solitaire_revised_05.jpeg', alt: 'The Solitaire as an Abstraction (Revised) 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تک‌بنا به مثابه انتزاع (نسخه بازنگری‌شده) ۰۵' }
+      { id: 'solitaire-licc-01', src: '/images/wetransfer/solitaire_harmony_01.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 01', captionDe: 'Image 01', captionEn: 'Image 01', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۱' },
+      { id: 'solitaire-licc-02', src: '/images/wetransfer/solitaire_harmony_02.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 02', captionDe: 'Image 02', captionEn: 'Image 02', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۲' },
+      { id: 'solitaire-licc-03', src: '/images/wetransfer/solitaire_harmony_03.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 03', captionDe: 'Image 03', captionEn: 'Image 03', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۳' },
+      { id: 'solitaire-licc-04', src: '/images/wetransfer/solitaire_harmony_04.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 04', captionDe: 'Image 04', captionEn: 'Image 04', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۴' },
+      { id: 'solitaire-licc-05', src: '/images/wetransfer/solitaire_harmony_05.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 05', captionDe: 'Image 05', captionEn: 'Image 05', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۵' },
+      { id: 'solitaire-licc-06', src: '/images/wetransfer/solitaire_harmony_06.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 06', captionDe: 'Image 06', captionEn: 'Image 06', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۶' },
+      { id: 'solitaire-licc-07', src: '/images/wetransfer/solitaire_harmony_07.webp', alt: 'The Solitaire as an Abstraction (LICC 2025 Shortlist) 07', captionDe: 'Image 07', captionEn: 'Image 07', captionFa: 'تک‌بنا به مثابه انتزاع (LICC 2025) ۰۷' }
     ]
   },
   {

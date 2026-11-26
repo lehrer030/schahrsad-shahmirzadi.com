@@ -11,7 +11,8 @@ import {
   Sparkles,
   Calendar,
   MapPin,
-  Heart
+  Heart,
+  Download
 } from 'lucide-react';
 import type { Language } from '../data/photographyData';
 import { resolveAsset } from '../utils/resolveAsset';
@@ -214,6 +215,36 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
       url: 'https://issuu.com/budoweb/docs/kampfkunst_budo_international_277-_',
       source: 'Kampfkunst-International',
       date: 'Magazin'
+    },
+    {
+      title: currentLang === 'en'
+        ? 'WKU World: Majesty of Prussia 2017 – World Title Defence vs. Sofia Cavallo'
+        : currentLang === 'fa'
+          ? 'فدراسیون جهانی WKU: مسابقات Majesty of Prussia 2017 – دفاع از کمربند قهرمانی جهان در برابر سوفیا کاوالو'
+          : 'WKU World: Majesty of Prussia 2017 – Weltmeisterschaftstitelverteidigung vs. Sofia Cavallo',
+      url: 'https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/',
+      source: 'WKU World',
+      date: '2017'
+    },
+    {
+      title: currentLang === 'en'
+        ? 'WKU World: Majesty of Prussia 2016 – World Championship Title Bout vs. Jessica Marazzi'
+        : currentLang === 'fa'
+          ? 'فدراسیون جهانی WKU: مسابقات Majesty of Prussia 2016 – مبارزه قهرمانی جهان در برابر جسیکا مارازی'
+          : 'WKU World: Majesty of Prussia 2016 – Weltmeisterschaftstitelkampf vs. Jessica Marazzi',
+      url: 'https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/',
+      source: 'WKU World',
+      date: '2016'
+    },
+    {
+      title: currentLang === 'en'
+        ? 'WKU World: Majesty of Prussia 2014 – European Titles Schloss Diedersdorf'
+        : currentLang === 'fa'
+          ? 'فدراسیون جهانی WKU: مسابقات Majesty of Prussia 2014 – مبارزه قهرمانی اروپا در کاخ دیدرس‌دورف'
+          : 'WKU World: Majesty of Prussia 2014 – Europameisterschaftstitel Schloss Diedersdorf',
+      url: 'https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/',
+      source: 'WKU World',
+      date: '2014'
     }
   ];
 
@@ -380,6 +411,248 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
           </div>
         </div>
 
+        {/* Offizielle WKU-Dokumente & Weltranglisten */}
+        <div className="bg-[#faf8f5] border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="border-b border-stone-200/80 pb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+              {currentLang === 'fa'
+                ? 'اسناد رسمی و رتبه‌بندی‌های جهانی WKU'
+                : currentLang === 'en'
+                ? 'Official WKU Tournament Documents & Rankings'
+                : currentLang === 'fr'
+                ? 'Documents Officiels des Tournois & Classements WKU'
+                : currentLang === 'it'
+                ? 'Documenti Ufficiali Tornei & Classifiche WKU'
+                : currentLang === 'tr'
+                ? 'Resmi WKU Turnuva Belgeleri ve Dünya Sıralaması'
+                : 'Offizielle WKU-Turnierdokumente & Weltranglisten'}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
+              {currentLang === 'fa'
+                ? 'اسناد مسابقات، احکام قهرمانی و فهرست رتبه‌بندی جهانی (PDF)'
+                : currentLang === 'en'
+                ? 'Official Championship Results & World Ranking Lists (PDF)'
+                : currentLang === 'fr'
+                ? 'Résultats Officiels & Classements Mondiaux WKU (PDF)'
+                : currentLang === 'it'
+                ? 'Risultati Ufficiali & Classifiche Mondiali WKU (PDF)'
+                : currentLang === 'tr'
+                ? 'Resmi Şampiyona Sonuçları ve Dünya Sıralama Listesi (PDF)'
+                : 'Offizielle Turnier-Ergebnislisten & Weltranglisten des Weltverbands (PDF)'}
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              {currentLang === 'fa'
+                ? 'اسناد معتبر فدراسیون جهانی WKU تاییدکننده مقام اول در مسابقات قهرمانی جهان ۲۰۱۳ در کرت و جایگاه نخست در رنکینگ حرفه‌ای بانوان در دسامبر ۲۰۱۶.'
+                : currentLang === 'en'
+                ? 'Official tournament documents issued by the World Kickboxing and Karate Union (WKU): 1st place at the 2013 World Championships in Crete and ranked #1 World Champion in the Women’s Professional Ranking (Dec 2016).'
+                : currentLang === 'fr'
+                ? 'Documents officiels de la World Kickboxing and Karate Union (WKU) : 1ère place aux Championnats du Monde 2013 en Crète et N° 1 mondiale au classement professionnel féminin (décembre 2016).'
+                : currentLang === 'it'
+                ? 'Documenti ufficiali della World Kickboxing and Karate Union (WKU): 1° posto ai Campionati Mondiali 2013 a Creta e N. 1 nel ranking mondiale professionistico femminile (dicembre 2016).'
+                : currentLang === 'tr'
+                ? 'World Kickboxing and Karate Union (WKU) resmi turnuva belgeleri: 2013 Girit Dünya Şampiyonası 1.liği ve Aralık 2016 Profesyonel Kadınlar Dünya 1 numarası unvanı.'
+                : 'Offizielle Turnier- und Verbandsdokumente der World Kickboxing and Karate Union (WKU): 1. Platz bei der Weltmeisterschaft 2013 auf Kreta sowie Platz 1 und amtierende Weltmeisterin in der offiziellen Profi-Weltrangliste der Damen (Stand Dez. 2016).'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Document 1: WKU WM 2013 Ergebnisliste */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Trophy className="w-3 h-3 text-amber-800" />
+                    <span>WKU WM 2013 · Kreta</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 75 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'فهرست رسمی نتایج مسابقات قهرمانی جهان ۲۰۱۳ (WKU World Championships Crete)'
+                    : currentLang === 'en'
+                    ? 'Official Results: WKU World Championships 2013 (Crete, Greece)'
+                    : currentLang === 'fr'
+                    ? 'Résultats Officiels : Championnats du Monde WKU 2013 (Crète)'
+                    : currentLang === 'it'
+                    ? 'Risultati Ufficiali: Campionati Mondiali WKU 2013 (Creta)'
+                    : currentLang === 'tr'
+                    ? 'Resmi Sonuç Listesi: WKU Dünya Şampiyonası 2013 (Girit)'
+                    : 'Offizielle Ergebnisliste: WKU Weltmeisterschaft 2013 (Kreta)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند ۱۸ صفحه‌ای رسمی فدراسیون WKU شامل مدال طلا و مقام اول در Vollkontakt بانوان منهای ۵۵ کیلوگرم (DEU 56462).'
+                    : currentLang === 'en'
+                    ? 'Official 18-page WKU tournament document confirming 1st Place & Gold in Full Contact Women −55 kg (DEU 56462).'
+                    : currentLang === 'fr'
+                    ? 'Document officiel WKU de 18 pages attestant la 1ère place et la médaille d’or en Plein Contact −55 kg.'
+                    : currentLang === 'it'
+                    ? 'Documento ufficiale WKU di 18 pagine che certifica il 1° posto e la medaglia d’oro nel Full Contact −55 kg.'
+                    : currentLang === 'tr'
+                    ? '18 sayfalık resmi WKU turnuva belgesi: Kadınlar Full Contact −55 kg kategorisinde 1.lik ve altın madalya.'
+                    : 'Offizielles 18-seitiges WKU-Turnierdokument: Bestätigung des 1. Platzes (Goldmedaille) im Vollkontakt der Damen bis 55 kg (DEU 56462).'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  download="wku_wm_2013_results_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Document 2: WKU Pro Ranking Women Dez 2016 */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Shield className="w-3 h-3 text-amber-800" />
+                    <span>WKU Pro Ranking · Stand 10.12.2016</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 246 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'رتبه‌بندی حرفه‌ای بانوان WKU (WKU Pro Ranking Women · دسامبر ۲۰۱۶)'
+                    : currentLang === 'en'
+                    ? 'Official WKU Women’s Professional Ranking (As of 10 Dec 2016)'
+                    : currentLang === 'fr'
+                    ? 'Classement Professionnel Féminin WKU (au 10 déc. 2016)'
+                    : currentLang === 'it'
+                    ? 'Ranking Professionistico Femminile WKU (al 10 dic. 2016)'
+                    : currentLang === 'tr'
+                    ? 'WKU Kadınlar Profesyonel Dünya Sıralaması (10 Aralık 2016)'
+                    : 'Offizielle WKU Pro-Rangliste Damen (Stand 10.12.2016)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند رسمی رده‌بندی جهانی حرفه‌ای WKU: درج شکوهمند شهزاد شاهمیرزادی به عنوان قهرمان بلامنازع جهان (World Champion) و رتبه ۱ در وزن −۵۷٫۵ کیلوگرم.'
+                    : currentLang === 'en'
+                    ? 'Official WKU world ranking list: Schahrsad Shahmirzadi listed as reigning World Champion and Rank #1 in Full Contact (−57.5 kg).'
+                    : currentLang === 'fr'
+                    ? 'Liste officielle WKU : Schahrsad Shahmirzadi enregistrée comme Championne du Monde en titre et N° 1 en Plein Contact (−57,5 kg).'
+                    : currentLang === 'it'
+                    ? 'Graduatoria ufficiale WKU: Schahrsad Shahmirzadi elencata come Campionessa Mondiale in carica e N. 1 nel Full Contact (−57,5 kg).'
+                    : currentLang === 'tr'
+                    ? 'Resmi WKU dünya sıralaması: Schahrsad Shahmirzadi, Full Contact (−57,5 kg) kategorisinde unvan sahibi Dünya Şampiyonu ve 1 numara olarak kayıtlıdır.'
+                    : 'Offizielle Weltrangliste des Profi-Weltverbands WKU: Schahrsad Shahmirzadi als amtierende Weltmeisterin (World Champion) und Platz 1 im Vollkontakt (−57,5 kg) geführt.'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  download="wku_pro_ranking_women_dezember_2016_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Links zu offiziellen WKU-Artikeln */}
+          <div className="pt-4 border-t border-stone-200/80 space-y-3">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 block">
+              {currentLang === 'fa'
+                ? 'گزارش‌های رسمی مسابقات در پورتال فدراسیون جهانی WKU (WKU World)'
+                : currentLang === 'en'
+                ? 'Official Fight Reports on WKU World Headquarters'
+                : 'Offizielle Kampfberichte auf WKU World'}
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
+                href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2017</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2017
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Titelverteidigung vs. Sofia Cavallo (Majesty of Prussia 2017)
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2016</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2016
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Weltmeisterschaftstitelkampf vs. Jessica Marazzi
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2014</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro EM Fight 2014
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Europameisterschaftstitelkampf Schloss Diedersdorf
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Section B: Profi-Titelkämpfe (Schloss Diedersdorf & Offizielle Kampftabellen) */}
         <div id="profi-fight-records" className="bg-white border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-8">
           <div className="border-b border-stone-100 pb-4">
@@ -485,9 +758,20 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   </div>
                 </div>
 
-                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
-                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                <div className="text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-stone-100">
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                    <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                  </div>
+                  <a
+                    href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 font-semibold underline underline-offset-2"
+                  >
+                    <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               </div>
 
@@ -532,9 +816,20 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   </div>
                 </div>
 
-                <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
-                  <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                  <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                <div className="text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-stone-100">
+                  <div className="flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                    <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                  </div>
+                  <a
+                    href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 font-semibold underline underline-offset-2"
+                  >
+                    <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -565,7 +860,16 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                       Schloss Diedersdorf, Brandenburg
                     </td>
                     <td className="py-3.5 px-4 text-stone-800 font-medium">
-                      WKU Professional World Title Defence
+                      <div>WKU Professional World Title Defence</div>
+                      <a
+                        href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 hover:underline mt-0.5"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                      </a>
                     </td>
                     <td className="py-3.5 px-4 text-center">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -593,7 +897,16 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                       Schloss Diedersdorf, Brandenburg
                     </td>
                     <td className="py-3.5 px-4 text-stone-800 font-medium">
-                      WKU Professional World Championship
+                      <div>WKU Professional World Championship</div>
+                      <a
+                        href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 hover:underline mt-0.5"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                      </a>
                     </td>
                     <td className="py-3.5 px-4 text-center">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -672,9 +985,20 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                     </div>
                   </div>
 
-                  <div className="text-xs text-stone-600 flex items-center gap-1.5 pt-1.5 border-t border-stone-100">
-                    <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
-                    <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                  <div className="text-xs text-stone-600 flex flex-wrap items-center justify-between gap-2 pt-1.5 border-t border-stone-100">
+                    <div className="flex items-center gap-1.5">
+                      <MapPin className="w-3.5 h-3.5 text-stone-400 shrink-0" />
+                      <span className="text-[11px]">Schloss Diedersdorf, Brandenburg</span>
+                    </div>
+                    <a
+                      href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 font-semibold underline underline-offset-2"
+                    >
+                      <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -705,7 +1029,16 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                         Schloss Diedersdorf, Brandenburg
                       </td>
                       <td className="py-3.5 px-4 text-stone-800 font-medium">
-                        WKU European Championship
+                        <div>WKU European Championship</div>
+                        <a
+                          href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-[11px] font-mono text-amber-800 hover:text-amber-950 hover:underline mt-0.5"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          <span>{currentLang === 'fa' ? 'گزارش رسمی WKU' : currentLang === 'en' ? 'Official WKU Report' : 'Offizieller WKU-Bericht'}</span>
+                        </a>
                       </td>
                       <td className="py-3.5 px-4 text-center">
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -796,6 +1129,490 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Offizielle WKU-Dokumente & Weltranglisten */}
+        <div className="bg-[#faf8f5] border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="border-b border-stone-200/80 pb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+              {currentLang === 'fa'
+                ? 'اسناد رسمی و رتبه‌بندی‌های جهانی WKU'
+                : currentLang === 'en'
+                ? 'Official WKU Tournament Documents & Rankings'
+                : currentLang === 'fr'
+                ? 'Documents Officiels des Tournois & Classements WKU'
+                : currentLang === 'it'
+                ? 'Documenti Ufficiali Tornei & Classifiche WKU'
+                : currentLang === 'tr'
+                ? 'Resmi WKU Turnuva Belgeleri ve Dünya Sıralaması'
+                : 'Offizielle WKU-Turnierdokumente & Weltranglisten'}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
+              {currentLang === 'fa'
+                ? 'اسناد مسابقات، احکام قهرمانی و فهرست رتبه‌بندی جهانی (PDF)'
+                : currentLang === 'en'
+                ? 'Official Championship Results & World Ranking Lists (PDF)'
+                : currentLang === 'fr'
+                ? 'Résultats Officiels & Classements Mondiaux WKU (PDF)'
+                : currentLang === 'it'
+                ? 'Risultati Ufficiali & Classifiche Mondiali WKU (PDF)'
+                : currentLang === 'tr'
+                ? 'Resmi Şampiyona Sonuçları ve Dünya Sıralama Listesi (PDF)'
+                : 'Offizielle Turnier-Ergebnislisten & Weltranglisten des Weltverbands (PDF)'}
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              {currentLang === 'fa'
+                ? 'اسناد معتبر فدراسیون جهانی WKU تاییدکننده مقام اول در مسابقات قهرمانی جهان ۲۰۱۳ در کرت و جایگاه نخست در رنکینگ حرفه‌ای بانوان در دسامبر ۲۰۱۶.'
+                : currentLang === 'en'
+                ? 'Official tournament documents issued by the World Kickboxing and Karate Union (WKU): 1st place at the 2013 World Championships in Crete and ranked #1 World Champion in the Women’s Professional Ranking (Dec 2016).'
+                : currentLang === 'fr'
+                ? 'Documents officiels de la World Kickboxing and Karate Union (WKU) : 1ère place aux Championnats du Monde 2013 en Crète et N° 1 mondiale au classement professionnel féminin (décembre 2016).'
+                : currentLang === 'it'
+                ? 'Documenti ufficiali della World Kickboxing and Karate Union (WKU): 1° posto ai Campionati Mondiali 2013 a Creta e N. 1 nel ranking mondiale professionistico femminile (dicembre 2016).'
+                : currentLang === 'tr'
+                ? 'World Kickboxing and Karate Union (WKU) resmi turnuva belgeleri: 2013 Girit Dünya Şampiyonası 1.liği ve Aralık 2016 Profesyonel Kadınlar Dünya 1 numarası unvanı.'
+                : 'Offizielle Turnier- und Verbandsdokumente der World Kickboxing and Karate Union (WKU): 1. Platz bei der Weltmeisterschaft 2013 auf Kreta sowie Platz 1 und amtierende Weltmeisterin in der offiziellen Profi-Weltrangliste der Damen (Stand Dez. 2016).'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Document 1: WKU WM 2013 Ergebnisliste */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Trophy className="w-3 h-3 text-amber-800" />
+                    <span>WKU WM 2013 · Kreta</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 75 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'فهرست رسمی نتایج مسابقات قهرمانی جهان ۲۰۱۳ (WKU World Championships Crete)'
+                    : currentLang === 'en'
+                    ? 'Official Results: WKU World Championships 2013 (Crete, Greece)'
+                    : currentLang === 'fr'
+                    ? 'Résultats Officiels : Championnats du Monde WKU 2013 (Crète)'
+                    : currentLang === 'it'
+                    ? 'Risultati Ufficiali: Campionati Mondiali WKU 2013 (Creta)'
+                    : currentLang === 'tr'
+                    ? 'Resmi Sonuç Listesi: WKU Dünya Şampiyonası 2013 (Girit)'
+                    : 'Offizielle Ergebnisliste: WKU Weltmeisterschaft 2013 (Kreta)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند ۱۸ صفحه‌ای رسمی فدراسیون WKU شامل مدال طلا و مقام اول در Vollkontakt بانوان منهای ۵۵ کیلوگرم (DEU 56462).'
+                    : currentLang === 'en'
+                    ? 'Official 18-page WKU tournament document confirming 1st Place & Gold in Full Contact Women −55 kg (DEU 56462).'
+                    : currentLang === 'fr'
+                    ? 'Document officiel WKU de 18 pages attestant la 1ère place et la médaille d’or en Plein Contact −55 kg.'
+                    : currentLang === 'it'
+                    ? 'Documento ufficiale WKU di 18 pages che certifica il 1° posto e la medaglia d’oro nel Full Contact −55 kg.'
+                    : currentLang === 'tr'
+                    ? '18 sayfalık resmi WKU turnuva belgesi: Kadınlar Full Contact −55 kg kategorisinde 1.lik ve altın madalya.'
+                    : 'Offizielles 18-seitiges WKU-Turnierdokument: Bestätigung des 1. Platzes (Goldmedaille) im Vollkontakt der Damen bis 55 kg (DEU 56462).'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  download="wku_wm_2013_results_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Document 2: WKU Pro Ranking Women Dez 2016 */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Shield className="w-3 h-3 text-amber-800" />
+                    <span>WKU Pro Ranking · Stand 10.12.2016</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 246 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'رتبه‌بندی حرفه‌ای بانوان WKU (WKU Pro Ranking Women · دسامبر ۲۰۱۶)'
+                    : currentLang === 'en'
+                    ? 'Official WKU Women’s Professional Ranking (As of 10 Dec 2016)'
+                    : currentLang === 'fr'
+                    ? 'Classement Professionnel Féminin WKU (au 10 déc. 2016)'
+                    : currentLang === 'it'
+                    ? 'Ranking Professionistico Femminile WKU (al 10 dic. 2016)'
+                    : currentLang === 'tr'
+                    ? 'WKU Kadınlar Profesyonel Dünya Sıralaması (10 Aralık 2016)'
+                    : 'Offizielle WKU Pro-Rangliste Damen (Stand 10.12.2016)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند رسمی رده‌بندی جهانی حرفه‌ای WKU: درج شکوهمند شهزاد شاهمیرزادی به عنوان قهرمان بلامنازع جهان (World Champion) و رتبه ۱ در وزن −۵۷٫۵ کیلوگرم.'
+                    : currentLang === 'en'
+                    ? 'Official WKU world ranking list: Schahrsad Shahmirzadi listed as reigning World Champion and Rank #1 in Full Contact (−57.5 kg).'
+                    : currentLang === 'fr'
+                    ? 'Liste officielle WKU : Schahrsad Shahmirzadi enregistrée comme Championne du Monde en titre et N° 1 en Plein Contact (−57,5 kg).'
+                    : currentLang === 'it'
+                    ? 'Graduatoria ufficiale WKU: Schahrsad Shahmirzadi elencata come Campionessa Mondiale in carica e N. 1 nel Full Contact (−57,5 kg).'
+                    : currentLang === 'tr'
+                    ? 'Resmi WKU dünya sıralaması: Schahrsad Shahmirzadi, Full Contact (−57,5 kg) kategorisinde unvan sahibi Dünya Şampiyonu ve 1 numara olarak kayıtlıdır.'
+                    : 'Offizielle Weltrangliste des Profi-Weltverbands WKU: Schahrsad Shahmirzadi als amtierende Weltmeisterin (World Champion) und Platz 1 im Vollkontakt (−57,5 kg) geführt.'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  download="wku_pro_ranking_women_dezember_2016_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Links zu offiziellen WKU-Artikeln */}
+          <div className="pt-4 border-t border-stone-200/80 space-y-3">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 block">
+              {currentLang === 'fa'
+                ? 'گزارش‌های رسمی مسابقات در پورتال فدراسیون جهانی WKU (WKU World)'
+                : currentLang === 'en'
+                ? 'Official Fight Reports on WKU World Headquarters'
+                : 'Offizielle Kampfberichte auf WKU World'}
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
+                href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2017</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2017
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Titelverteidigung vs. Sofia Cavallo (Majesty of Prussia 2017)
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2016</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2016
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Weltmeisterschaftstitelkampf vs. Jessica Marazzi
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2014</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro EM Fight 2014
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Europameisterschaftstitelkampf Schloss Diedersdorf
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Offizielle WKU-Dokumente & Weltranglisten */}
+        <div className="bg-[#faf8f5] border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="border-b border-stone-200/80 pb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+              {currentLang === 'fa'
+                ? 'اسناد رسمی و رتبه‌بندی‌های جهانی WKU'
+                : currentLang === 'en'
+                ? 'Official WKU Tournament Documents & Rankings'
+                : currentLang === 'fr'
+                ? 'Documents Officiels des Tournois & Classements WKU'
+                : currentLang === 'it'
+                ? 'Documenti Ufficiali Tornei & Classifiche WKU'
+                : currentLang === 'tr'
+                ? 'Resmi WKU Turnuva Belgeleri ve Dünya Sıralaması'
+                : 'Offizielle WKU-Turnierdokumente & Weltranglisten'}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
+              {currentLang === 'fa'
+                ? 'اسناد مسابقات، احکام قهرمانی و فهرست رتبه‌بندی جهانی (PDF)'
+                : currentLang === 'en'
+                ? 'Official Championship Results & World Ranking Lists (PDF)'
+                : currentLang === 'fr'
+                ? 'Résultats Officiels & Classements Mondiaux WKU (PDF)'
+                : currentLang === 'it'
+                ? 'Risultati Ufficiali & Classifiche Mondiali WKU (PDF)'
+                : currentLang === 'tr'
+                ? 'Resmi Şampiyona Sonuçları ve Dünya Sıralama Listesi (PDF)'
+                : 'Offizielle Turnier-Ergebnislisten & Weltranglisten des Weltverbands (PDF)'}
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              {currentLang === 'fa'
+                ? 'اسناد معتبر فدراسیون جهانی WKU تاییدکننده مقام اول در مسابقات قهرمانی جهان ۲۰۱۳ در کرت و جایگاه نخست در رنکینگ حرفه‌ای بانوان در دسامبر ۲۰۱۶.'
+                : currentLang === 'en'
+                ? 'Official tournament documents issued by the World Kickboxing and Karate Union (WKU): 1st place at the 2013 World Championships in Crete and ranked #1 World Champion in the Women’s Professional Ranking (Dec 2016).'
+                : currentLang === 'fr'
+                ? 'Documents officiels de la World Kickboxing and Karate Union (WKU) : 1ère place aux Championnats du Monde 2013 en Crète et N° 1 mondiale au classement professionnel féminin (décembre 2016).'
+                : currentLang === 'it'
+                ? 'Documenti ufficiali della World Kickboxing and Karate Union (WKU): 1° posto ai Campionati Mondiali 2013 a Creta e N. 1 nel ranking mondiale professionistico femminile (dicembre 2016).'
+                : currentLang === 'tr'
+                ? 'World Kickboxing and Karate Union (WKU) resmi turnuva belgeleri: 2013 Girit Dünya Şampiyonası 1.liği ve Aralık 2016 Profesyonel Kadınlar Dünya 1 numarası unvanı.'
+                : 'Offizielle Turnier- und Verbandsdokumente der World Kickboxing and Karate Union (WKU): 1. Platz bei der Weltmeisterschaft 2013 auf Kreta sowie Platz 1 und amtierende Weltmeisterin in der offiziellen Profi-Weltrangliste der Damen (Stand Dez. 2016).'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Document 1: WKU WM 2013 Ergebnisliste */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Trophy className="w-3 h-3 text-amber-800" />
+                    <span>WKU WM 2013 · Kreta</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 75 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'فهرست رسمی نتایج مسابقات قهرمانی جهان ۲۰۱۳ (WKU World Championships Crete)'
+                    : currentLang === 'en'
+                    ? 'Official Results: WKU World Championships 2013 (Crete, Greece)'
+                    : currentLang === 'fr'
+                    ? 'Résultats Officiels : Championnats du Monde WKU 2013 (Crète)'
+                    : currentLang === 'it'
+                    ? 'Risultati Ufficiali: Campionati Mondiali WKU 2013 (Creta)'
+                    : currentLang === 'tr'
+                    ? 'Resmi Sonuç Listesi: WKU Dünya Şampiyonası 2013 (Girit)'
+                    : 'Offizielle Ergebnisliste: WKU Weltmeisterschaft 2013 (Kreta)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند ۱۸ صفحه‌ای رسمی فدراسیون WKU شامل مدال طلا و مقام اول در Vollkontakt بانوان منهای ۵۵ کیلوگرم (DEU 56462).'
+                    : currentLang === 'en'
+                    ? 'Official 18-page WKU tournament document confirming 1st Place & Gold in Full Contact Women −55 kg (DEU 56462).'
+                    : currentLang === 'fr'
+                    ? 'Document officiel WKU de 18 pages attestant la 1ère place et la médaille d’or en Plein Contact −55 kg.'
+                    : currentLang === 'it'
+                    ? 'Documento ufficiale WKU di 18 pagine che certifica il 1° posto e la medaglia d’oro nel Full Contact −55 kg.'
+                    : currentLang === 'tr'
+                    ? '18 sayfalık resmi WKU turnuva belgesi: Kadınlar Full Contact −55 kg kategorisinde 1.lik ve altın madalya.'
+                    : 'Offizielles 18-seitiges WKU-Turnierdokument: Bestätigung des 1. Platzes (Goldmedaille) im Vollkontakt der Damen bis 55 kg (DEU 56462).'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  download="wku_wm_2013_results_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Document 2: WKU Pro Ranking Women Dez 2016 */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Shield className="w-3 h-3 text-amber-800" />
+                    <span>WKU Pro Ranking · Stand 10.12.2016</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 246 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'رتبه‌بندی حرفه‌ای بانوان WKU (WKU Pro Ranking Women · دسامبر ۲۰۱۶)'
+                    : currentLang === 'en'
+                    ? 'Official WKU Women’s Professional Ranking (As of 10 Dec 2016)'
+                    : currentLang === 'fr'
+                    ? 'Classement Professionnel Féminin WKU (au 10 déc. 2016)'
+                    : currentLang === 'it'
+                    ? 'Ranking Professionistico Femminile WKU (al 10 dic. 2016)'
+                    : currentLang === 'tr'
+                    ? 'WKU Kadınlar Profesyonel Dünya Sıralaması (10 Aralık 2016)'
+                    : 'Offizielle WKU Pro-Rangliste Damen (Stand 10.12.2016)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند رسمی رده‌بندی جهانی حرفه‌ای WKU: درج شکوهمند شهزاد شاهمیرزادی به عنوان قهرمان بلامنازع جهان (World Champion) و رتبه ۱ در وزن −۵۷٫۵ کیلوگرم.'
+                    : currentLang === 'en'
+                    ? 'Official WKU world ranking list: Schahrsad Shahmirzadi listed as reigning World Champion and Rank #1 in Full Contact (−57.5 kg).'
+                    : currentLang === 'fr'
+                    ? 'Liste officielle WKU : Schahrsad Shahmirzadi enregistrée comme Championne du Monde en titre et N° 1 en Plein Contact (−57,5 kg).'
+                    : currentLang === 'it'
+                    ? 'Graduatoria ufficiale WKU: Schahrsad Shahmirzadi elencata come Campionessa Mondiale in carica e N. 1 nel Full Contact (−57,5 kg).'
+                    : currentLang === 'tr'
+                    ? 'Resmi WKU dünya sıralaması: Schahrsad Shahmirzadi, Full Contact (−57,5 kg) kategorisinde unvan sahibi Dünya Şampiyonu ve 1 numara olarak kayıtlıdır.'
+                    : 'Offizielle Weltrangliste des Profi-Weltverbands WKU: Schahrsad Shahmirzadi als amtierende Weltmeisterin (World Champion) und Platz 1 im Vollkontakt (−57,5 kg) geführt.'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  download="wku_pro_ranking_women_dezember_2016_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Links zu offiziellen WKU-Artikeln */}
+          <div className="pt-4 border-t border-stone-200/80 space-y-3">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 block">
+              {currentLang === 'fa'
+                ? 'گزارش‌های رسمی مسابقات در پورتال فدراسیون جهانی WKU (WKU World)'
+                : currentLang === 'en'
+                ? 'Official Fight Reports on WKU World Headquarters'
+                : 'Offizielle Kampfberichte auf WKU World'}
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
+                href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2017</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2017
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Titelverteidigung vs. Sofia Cavallo (Majesty of Prussia 2017)
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2016</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2016
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Weltmeisterschaftstitelkampf vs. Jessica Marazzi
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2014</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro EM Fight 2014
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Europameisterschaftstitelkampf Schloss Diedersdorf
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -1084,6 +1901,248 @@ export const KickboxingFullSection: React.FC<KickboxingFullSectionProps> = ({ cu
               <div className="text-[10px] text-stone-400 mt-0.5">
                 {currentLang === 'fa' ? 'یکی از معدود بانوان این رتبه' : 'Höchste meisterliche Reife'}
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Offizielle WKU-Dokumente & Weltranglisten */}
+        <div className="bg-[#faf8f5] border border-stone-200/90 rounded-3xl p-6 sm:p-10 shadow-xs space-y-6">
+          <div className="border-b border-stone-200/80 pb-4">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-800 font-bold">
+              {currentLang === 'fa'
+                ? 'اسناد رسمی و رتبه‌بندی‌های جهانی WKU'
+                : currentLang === 'en'
+                ? 'Official WKU Tournament Documents & Rankings'
+                : currentLang === 'fr'
+                ? 'Documents Officiels des Tournois & Classements WKU'
+                : currentLang === 'it'
+                ? 'Documenti Ufficiali Tornei & Classifiche WKU'
+                : currentLang === 'tr'
+                ? 'Resmi WKU Turnuva Belgeleri ve Dünya Sıralaması'
+                : 'Offizielle WKU-Turnierdokumente & Weltranglisten'}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 mt-1">
+              {currentLang === 'fa'
+                ? 'اسناد مسابقات، احکام قهرمانی و فهرست رتبه‌بندی جهانی (PDF)'
+                : currentLang === 'en'
+                ? 'Official Championship Results & World Ranking Lists (PDF)'
+                : currentLang === 'fr'
+                ? 'Résultats Officiels & Classements Mondiaux WKU (PDF)'
+                : currentLang === 'it'
+                ? 'Risultati Ufficiali & Classifiche Mondiali WKU (PDF)'
+                : currentLang === 'tr'
+                ? 'Resmi Şampiyona Sonuçları ve Dünya Sıralama Listesi (PDF)'
+                : 'Offizielle Turnier-Ergebnislisten & Weltranglisten des Weltverbands (PDF)'}
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+              {currentLang === 'fa'
+                ? 'اسناد معتبر فدراسیون جهانی WKU تاییدکننده مقام اول در مسابقات قهرمانی جهان ۲۰۱۳ در کرت و جایگاه نخست در رنکینگ حرفه‌ای بانوان در دسامبر ۲۰۱۶.'
+                : currentLang === 'en'
+                ? 'Official tournament documents issued by the World Kickboxing and Karate Union (WKU): 1st place at the 2013 World Championships in Crete and ranked #1 World Champion in the Women’s Professional Ranking (Dec 2016).'
+                : currentLang === 'fr'
+                ? 'Documents officiels de la World Kickboxing and Karate Union (WKU) : 1ère place aux Championnats du Monde 2013 en Crète et N° 1 mondiale au classement professionnel féminin (décembre 2016).'
+                : currentLang === 'it'
+                ? 'Documenti ufficiali della World Kickboxing and Karate Union (WKU): 1° posto ai Campionati Mondiali 2013 a Creta e N. 1 nel ranking mondiale professionistico femminile (dicembre 2016).'
+                : currentLang === 'tr'
+                ? 'World Kickboxing and Karate Union (WKU) resmi turnuva belgeleri: 2013 Girit Dünya Şampiyonası 1.liği ve Aralık 2016 Profesyonel Kadınlar Dünya 1 numarası unvanı.'
+                : 'Offizielle Turnier- und Verbandsdokumente der World Kickboxing and Karate Union (WKU): 1. Platz bei der Weltmeisterschaft 2013 auf Kreta sowie Platz 1 und amtierende Weltmeisterin in der offiziellen Profi-Weltrangliste der Damen (Stand Dez. 2016).'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Document 1: WKU WM 2013 Ergebnisliste */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Trophy className="w-3 h-3 text-amber-800" />
+                    <span>WKU WM 2013 · Kreta</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 75 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'فهرست رسمی نتایج مسابقات قهرمانی جهان ۲۰۱۳ (WKU World Championships Crete)'
+                    : currentLang === 'en'
+                    ? 'Official Results: WKU World Championships 2013 (Crete, Greece)'
+                    : currentLang === 'fr'
+                    ? 'Résultats Officiels : Championnats du Monde WKU 2013 (Crète)'
+                    : currentLang === 'it'
+                    ? 'Risultati Ufficiali: Campionati Mondiali WKU 2013 (Creta)'
+                    : currentLang === 'tr'
+                    ? 'Resmi Sonuç Listesi: WKU Dünya Şampiyonası 2013 (Girit)'
+                    : 'Offizielle Ergebnisliste: WKU Weltmeisterschaft 2013 (Kreta)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند ۱۸ صفحه‌ای رسمی فدراسیون WKU شامل مدال طلا و مقام اول در Vollkontakt بانوان منهای ۵۵ کیلوگرم (DEU 56462).'
+                    : currentLang === 'en'
+                    ? 'Official 18-page WKU tournament document confirming 1st Place & Gold in Full Contact Women −55 kg (DEU 56462).'
+                    : currentLang === 'fr'
+                    ? 'Document officiel WKU de 18 pages attestant la 1ère place et la médaille d’or en Plein Contact −55 kg.'
+                    : currentLang === 'it'
+                    ? 'Documento ufficiale WKU di 18 pagine che certifica il 1° posto e la medaglia d’oro nel Full Contact −55 kg.'
+                    : currentLang === 'tr'
+                    ? '18 sayfalık resmi WKU turnuva belgesi: Kadınlar Full Contact −55 kg kategorisinde 1.lik ve altın madalya.'
+                    : 'Offizielles 18-seitiges WKU-Turnierdokument: Bestätigung des 1. Platzes (Goldmedaille) im Vollkontakt der Damen bis 55 kg (DEU 56462).'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_wm_2013_results.pdf')}
+                  download="wku_wm_2013_results_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Document 2: WKU Pro Ranking Women Dez 2016 */}
+            <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between space-y-4 hover:border-amber-700/40 transition-colors">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-amber-100 text-amber-900 border border-amber-200">
+                    <Shield className="w-3 h-3 text-amber-800" />
+                    <span>WKU Pro Ranking · Stand 10.12.2016</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-stone-400">PDF · 246 KB</span>
+                </div>
+                <h4 className="font-serif font-bold text-stone-900 text-base">
+                  {currentLang === 'fa'
+                    ? 'رتبه‌بندی حرفه‌ای بانوان WKU (WKU Pro Ranking Women · دسامبر ۲۰۱۶)'
+                    : currentLang === 'en'
+                    ? 'Official WKU Women’s Professional Ranking (As of 10 Dec 2016)'
+                    : currentLang === 'fr'
+                    ? 'Classement Professionnel Féminin WKU (au 10 déc. 2016)'
+                    : currentLang === 'it'
+                    ? 'Ranking Professionistico Femminile WKU (al 10 dic. 2016)'
+                    : currentLang === 'tr'
+                    ? 'WKU Kadınlar Profesyonel Dünya Sıralaması (10 Aralık 2016)'
+                    : 'Offizielle WKU Pro-Rangliste Damen (Stand 10.12.2016)'}
+                </h4>
+                <p className="text-xs text-stone-600 leading-relaxed">
+                  {currentLang === 'fa'
+                    ? 'سند رسمی رده‌بندی جهانی حرفه‌ای WKU: درج شکوهمند شهزاد شاهمیرزادی به عنوان قهرمان بلامنازع جهان (World Champion) و رتبه ۱ در وزن −۵۷٫۵ کیلوگرم.'
+                    : currentLang === 'en'
+                    ? 'Official WKU world ranking list: Schahrsad Shahmirzadi listed as reigning World Champion and Rank #1 in Full Contact (−57.5 kg).'
+                    : currentLang === 'fr'
+                    ? 'Liste officielle WKU : Schahrsad Shahmirzadi enregistrée comme Championne du Monde en titre et N° 1 en Plein Contact (−57,5 kg).'
+                    : currentLang === 'it'
+                    ? 'Graduatoria ufficiale WKU: Schahrsad Shahmirzadi elencata come Campionessa Mondiale in carica e N. 1 nel Full Contact (−57,5 kg).'
+                    : currentLang === 'tr'
+                    ? 'Resmi WKU dünya sıralaması: Schahrsad Shahmirzadi, Full Contact (−57,5 kg) kategorisinde unvan sahibi Dünya Şampiyonu ve 1 numara olarak kayıtlıdır.'
+                    : 'Offizielle Weltrangliste des Profi-Weltverbands WKU: Schahrsad Shahmirzadi als amtierende Weltmeisterin (World Champion) und Platz 1 im Vollkontakt (−57,5 kg) geführt.'}
+                </p>
+              </div>
+
+              <div className="pt-2 border-t border-stone-100 flex items-center justify-between gap-3">
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-mono text-xs font-semibold shadow-xs transition-colors"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>{currentLang === 'fa' ? 'مشاهده سند (PDF)' : currentLang === 'en' ? 'View Document (PDF)' : 'Dokument ansehen (PDF)'}</span>
+                </a>
+                <a
+                  href={resolveAsset('/documents/wku_pro_ranking_women_dezember_2016.pdf')}
+                  download="wku_pro_ranking_women_dezember_2016_schahrsad_shahmirzadi.pdf"
+                  className="inline-flex items-center gap-1 text-stone-500 hover:text-stone-900 text-xs font-mono transition-colors"
+                  title="Download"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Links zu offiziellen WKU-Artikeln */}
+          <div className="pt-4 border-t border-stone-200/80 space-y-3">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-800 block">
+              {currentLang === 'fa'
+                ? 'گزارش‌های رسمی مسابقات در پورتال فدراسیون جهانی WKU (WKU World)'
+                : currentLang === 'en'
+                ? 'Official Fight Reports on WKU World Headquarters'
+                : 'Offizielle Kampfberichte auf WKU World'}
+            </span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a
+                href="https://www.wkuworld.com/2017/10/12/majesty-of-prussia-2017-dalibor-music-wku-world-title-shahmirzadi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2017</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2017
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Titelverteidigung vs. Sofia Cavallo (Majesty of Prussia 2017)
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2016/10/18/majesty-of-prussia-2016-shahmirzadi-wku-world-title-full-contact/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2016</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro WM Fight 2016
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Weltmeisterschaftstitelkampf vs. Jessica Marazzi
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
+
+              <a
+                href="https://www.wkuworld.com/2014/10/17/majesty-of-prussia-2014-diedersdorf-wku-european-titles/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3.5 rounded-xl bg-white border border-stone-200/80 hover:border-amber-800/50 hover:shadow-xs transition-all flex flex-col justify-between group"
+              >
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-stone-400 block">WKU World · 2014</span>
+                  <strong className="text-xs text-stone-900 group-hover:text-amber-900 transition-colors block">
+                    Pro EM Fight 2014
+                  </strong>
+                  <p className="text-[11px] text-stone-500 leading-tight">
+                    Europameisterschaftstitelkampf Schloss Diedersdorf
+                  </p>
+                </div>
+                <div className="pt-2 mt-2 border-t border-stone-100 flex items-center justify-between text-[11px] font-mono text-amber-800 group-hover:text-amber-950 font-semibold">
+                  <span>WKU-Bericht lesen</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </a>
             </div>
           </div>
         </div>

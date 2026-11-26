@@ -310,56 +310,26 @@ export const FurtherWorks: React.FC<FurtherWorksProps> = ({
           </h3>
         </div>
 
-        {/* Works Container: Stacked horizontal presentation with side-by-side pairing for series of the same theme/location */}
+        {/* Works Container: Einheitliche, elegante horizontale Präsentation für jede einzelne Serie */}
         {layout === 'stacked' ? (
           <div className="flex flex-col space-y-6 sm:space-y-8 w-full">
-            {groupedBlocks.map((block) =>
-              block.isThemePair ? (
-                <div
-                  key={block.items.map((item) => item.work.id).join('-')}
-                  className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 w-full"
-                >
-                  {block.items.map(({ work, idx }) => (
-                    <article
-                      key={work.id}
-                      className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-2xs hover:shadow-md flex flex-col justify-between"
-                    >
-                      <div className="space-y-4">
-                        <div className="w-full max-w-xs sm:max-w-sm mx-auto">
-                          {renderPhotoBlock(work)}
-                        </div>
-                        <div className="space-y-3">
-                          {renderDetailsBlock(work, idx, false)}
-                          {renderThumbnailStrip(work)}
-                        </div>
-                      </div>
-                      {renderActionBar(work)}
-                    </article>
-                  ))}
+            {works.map((work, idx) => (
+              <article
+                key={work.id}
+                className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                  <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
+                    {renderPhotoBlock(work)}
+                  </div>
+                  <div className="lg:col-span-7 flex flex-col justify-start space-y-3.5">
+                    {renderDetailsBlock(work, idx, true)}
+                    {renderThumbnailStrip(work)}
+                    {renderActionBar(work)}
+                  </div>
                 </div>
-              ) : (
-                (() => {
-                  const { work, idx } = block.items[0];
-                  return (
-                    <article
-                      key={work.id}
-                      className="group bg-white hover:bg-stone-50/70 border border-stone-200/90 hover:border-amber-700/60 rounded-2xl p-5 sm:p-6 lg:p-7 transition-all duration-300 shadow-2xs hover:shadow-md w-full"
-                    >
-                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
-                        <div className="lg:col-span-5 flex flex-col items-center w-full max-w-xs sm:max-w-sm mx-auto">
-                          {renderPhotoBlock(work)}
-                        </div>
-                        <div className="lg:col-span-7 flex flex-col justify-start space-y-3.5">
-                          {renderDetailsBlock(work, idx, true)}
-                          {renderThumbnailStrip(work)}
-                          {renderActionBar(work)}
-                        </div>
-                      </div>
-                    </article>
-                  );
-                })()
-              )
-            )}
+              </article>
+            ))}
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 w-full">
