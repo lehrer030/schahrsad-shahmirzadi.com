@@ -10,12 +10,12 @@ const BASE_URL = 'https://schirzan.com';
 
 const DEFAULT_METAS: Record<Language, { title: string; description: string; locale: string }> = {
   de: {
-    title: 'SchirZan | Schahrsad Shahmirzadi · Photographie & Auszeichnungen',
+    title: 'SchirZan | Schahrsad Shahmirzadi · Photographie',
     description: 'Offizielles Portfolio & Werkverzeichnis von Schahrsad Shahmirzadi (SchirZan). International prämierte Architektur- & Fine-Art-Photographie (AMP, IPA, BIFA).',
     locale: 'de_DE'
   },
   en: {
-    title: 'SchirZan | Schahrsad Shahmirzadi · Photography & Awards',
+    title: 'SchirZan | Schahrsad Shahmirzadi · Photography',
     description: 'Official portfolio & catalog of Schahrsad Shahmirzadi (SchirZan). Internationally awarded architecture & fine art photography (AMP, IPA, BIFA).',
     locale: 'en_US'
   },
